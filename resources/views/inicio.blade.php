@@ -36,28 +36,24 @@ window.alert('Se envia comprobante de manera correcta, vuelva a validar su gesti
     <div id="main_slider" class="carousel slide banner-main" data-ride="carousel">
              <img class="first-slide" src="{{ asset('images/a.jpg') }}" alt="First slide">
     </div>
-
  </section>
-  <div class="choose_bg">
-    <div class="container">
-       <div class="row">
-          <div class="col-md-7 offset-md-3">
-       <section class="slider_section">
-          <div id="main_slider" class="carousel slide banner-main" data-ride="carousel">
-                   <img class="fifth-slide" src="{{ asset('images/b1.jpg')}}" alt="First slide">
-             </div>
 
-          </div>
 
-       </section>
-  </div>
- </div>
-</div>
-</div>
+  <div class="choose_bg" class="et_pb_text_inner">
+    <div class="container-max-widths">
+        <div style="max-width:350px;">
+            <div id="main_slider" class="carousel center">
+            <img src="{{ asset('images/b1.jpg')}}" class="rounded" class="mx-auto d-block">
+            </div>
+            
+        </div>
+        </div>
+    </div>
+
 
 <style>
     label{
-        color: #000;
+        color: rgb(0, 0, 0);
     }
 </style>
 
@@ -69,7 +65,7 @@ window.alert('Se envia comprobante de manera correcta, vuelva a validar su gesti
         <div class="row">
             <div class="col-md-7 offset-md-3">
             <div class="title">
-                <h2>Más información<strong class="black"></strong></h2>
+                <h1 class="fs-1" style="color:rgb(61, 67, 155) ">MÁS INFORMACIÓN</h1>	
                 <span style="color:black">Si necesita conocernos, porfavor ingrese la siguiente informacion, y en la brevedad posible nos comunicaremos.</span>
             </div>
             </div>
