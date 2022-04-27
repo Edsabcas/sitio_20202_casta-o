@@ -39,12 +39,15 @@ window.alert('Se envia comprobante de manera correcta, vuelva a validar su gesti
  </section>
 
 
-  <div class="choose_bg" class="et_pb_text_inner">
+ <div class="choose_bg" class="et_pb_text_inner">
     <div class="container-max-widths">
-        <div style="max-width:350px;">
+        <div style="max-width:450px;" class="mx-auto d-block">
             <div id="main_slider" class="carousel center">
-            <img src="{{ asset('images/b1.jpg')}}" class="rounded" class="mx-auto d-block">
+            <img src="{{ asset('images/img.21.jpg')}}" class="rounded">
             </div>
+        </div>
+    </div>
+  </div>
             
         </div>
         </div>
