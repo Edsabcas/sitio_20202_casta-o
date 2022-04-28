@@ -19,10 +19,10 @@
 
 <!-- Modal -->
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-<div class="modal-dialog">
+<div class="modal-dialog modal-lg">
   <div class="modal-content">
     <div class="modal-header">
-      <h5 class="modal-title text-center" id="staticBackdropLabel" style="color:rgb(0, 0, 0)">Validar Codigo MINEDUC</h5>
+      <h5 class="modal-title text-center" id="staticBackdropLabel" style="color:rgb(0, 0, 0)"><b>Validar Codigo MINEDUC</b></h5>
       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
     </div>
     <div class="modal-body">
@@ -43,60 +43,56 @@
 <div class="row">
 @if($val==null)
 
-   <div class="col-md-9 offset-md-4">
-        <div class="container bootstrap snippets bootdeys">
-           <div class="row">
-            <div class="col-md-6 col-sm-6 content-card">
-              <div class="card-big-shadow">
-                  <div class="card card-just-text" data-background="color" data-color="green" data-radius="none">
-                      <div class="content" style="text-align: justify;" >
-                        <h6 class="category text-center"  ><b>Importante</b></h6>
-                        <p class="description py-2  font-size: 35px"> Inicia tu proceso si tienes los siguientes datos:</p>
-                        
-                          <h3 class="description py-2">*Datos encargado.</h3>
-                          <p class="description py-2">*Datos generales alumno.</p>
-                          <p class="description py-2">*No CUI alumno.</p>
-                          <p class="description py-2">*Codigo Personal alumno.
-                                                           
-                           <a type="button" class="btn btn-warning"  data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                              ?
-                          </a>
-                           </p> 
-                           <p  class="description py-2"> </p>
-                           <p class="text-center">
-                              <button style="color:white; width:100%; display:block;"type="button" class="btn buy me-md-1; font-size: 25px" wire:click="va1l()">Pre-inscribir</button>
-                          </p>
-                      
-                         </div>
-                  </div> <!-- end card -->
-              </div>
-          </div>
-
-             </div>
-           </div>
+<div class="col-md-9 offset-md-4">
+  <div class="col-md-6 col-sm-6 card text-center" style="background-color:#a4cb39">
+    <br>
+    <div class="text-center">
+      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="white" class="bi bi-exclamation-triangle-fill" viewBox="0 0 16 16">
+        <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/> 
+      </svg>
+      <div class="content">
+        <h2 class="category text-center text-white"><b>¡IMPORTANTE!</b></h2>
+        <h4 class="description py-3  font-size: 35px" style="color:white"> Inicia tu proceso si tienes los siguientes datos:</h4>
+          <p class="description py-2" style="color:white">• Datos generales del Alumno.</p>
+          <p class="description py-2" style="color:white">• Datos del Encargado.</p>
+          <p class="description py-2" style="color:white">• Número CUI del alumno.</p>
+          <p class="description py-2" style="color:white">• Código Personal del alumno.                               
+          <a type="button" class="btn text-white" style="background-color:#3a3e7b" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+              ?
+            </a>
+          </p> 
         </div>
-   
+    </div>
+    <div class="footer bg-transparent border-transparent">
+      <div class="d-grid gap-3 col-8 mx-auto">
+        <button class="btn text-white" style="background-color:#3a3e7b" type="button" wire:click="va1l()">Pre-Inscribir</button>
+      </div>
+    </div>
+    <br>
+  </div>
+</div>
+
 @else
 <div class="accordion accordion-flush" id="accordionFlushExample">
 <div class="accordion-item">
   <h2 class="accordion-header" id="flush-headingOne">
     @if($gradoin!=null)
-    <button class="accordion-button collapsed list-group-item-success" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOn" aria-expanded="false" aria-controls="flush-collapseOn">
+    <button class="accordion-button collapsed" style="background-color:#d6e7a6; border:6px solid #a4cb39" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOn" aria-expanded="false" aria-controls="flush-collapseOn">
       <h4 class="font-weight-bolder">
         @if($gradoin)
         Grado seleccionado: <b class="text-center"> {{$gradoin}}</b>
         @else
-        Seleccionar Grado
+        Seleccione un grado
         @endif
       </h4>
     </button>
     @else
-    <button class="accordion-button collapsed list-group-item-danger" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOn" aria-expanded="false" aria-controls="flush-collapseOn">
+    <button class="accordion-button collapsed" style="background-color:#a6a8c3; border:6px solid #3a3e7b" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOn" aria-expanded="false" aria-controls="flush-collapseOn">
       <h4 class="font-weight-bolder text-center">
         @if($gradoin)
         Grado seleccionado: <b> {{$gradoin}}</b>
         @else
-        Seleccionar Grado
+        Seleccione un grado
         @endif
       </h4>
     </button>
@@ -119,14 +115,14 @@
                 <li class="list-group-item list-group-item-action"  for="flexRadioGrado01">
                   <input class="form-check-input me-1" type="radio"  wire:model="gradoin" value="PRE-KINDER" aria-label="..." id="flexRadioGrado01">
                   <label class="form-check-label" for="flexRadioGrado01" style="font-size: 15px; color:#000000;">
-                  PRE-KINDER
+                  PRE-KÍNDER
                   </label>
                   
                 </li>
                 <li class="list-group-item list-group-item-action">
                   <input class="form-check-input me-1" type="radio"  wire:model="gradoin" value="KINDER" aria-label="..."  id="flexRadioGrado02">
                   <label class="form-check-label" for="flexRadioGrado02" style="font-size: 15px; color:#000000;">
-                    KINDER
+                    KÍNDER
                     </label>
                 
                 </li>
@@ -182,7 +178,7 @@
                 <li class="list-group-item list-group-item-action">
                   <input class="form-check-input me-1"  type="radio" wire:model="gradoin" value="SEPTIMO GRADO" aria-label="..."  id="flexRadioGrado7">
                   <label class="form-check-label" for="flexRadioGrado7" style="font-size: 15px; color:#000000;">
-                    SEPTIMO GRADO
+                    SÉPTIMO GRADO
                     </label>
                 
                 </li>
@@ -203,7 +199,7 @@
                 <li class="list-group-item list-group-item-action">
                   <input class="form-check-input me-1"  type="radio"  wire:model="gradoin" value="DECIMO GRADO" aria-label="..."  id="flexRadioGrado10">
                   <label class="form-check-label" for="flexRadioGrado10" style="font-size: 15px; color:#000000;">
-                    DECIMO GRADO
+                    DÉCIMO GRADO
                     </label>
                 
                 </li>
@@ -223,12 +219,12 @@
   <div class="accordion-item">
     <h2 class="accordion-header" id="flush-headingOne">
       @if($a!=null && $a==2)
-      <button class="accordion-button collapsed list-group-item-success" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFOR22" aria-expanded="false" aria-controls="flush-collapseFOR22">
-        <h4 class="font-weight-bolder">  <b>Datos Estudiante:</b>   </h4>
+      <button class="accordion-button collapsed" style="background-color:#d6e7a6; border:6px solid #a4cb39" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFOR22" aria-expanded="false" aria-controls="flush-collapseFOR22">
+        <h4 class="font-weight-bolder">  <b>Datos del Estudiante:</b>   </h4>
       </button>
       @else
-      <button class="accordion-button collapsed list-group-item-danger" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFOR22" aria-expanded="false" aria-controls="flush-collapseFOR22">
-        <h4 class="font-weight-bolder">  <b>Datos Estudiante:</b>   </h4>
+      <button class="accordion-button collapsed" style="background-color:#a6a8c3; border:6px solid #3a3e7b" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFOR22" aria-expanded="false" aria-controls="flush-collapseFOR22">
+        <h4 class="font-weight-bolder">  <b>Datos del Estudiante:</b>   </h4>
       </button>
       @endif
 
@@ -258,27 +254,25 @@
             </div>
             
             <div class="col-md">
-                <label for="inputApellidos" style="font-size: 15px; color:#000000;">Genero:</label>
-                <br>
-                <div class="form-check form-check-inline ">
-                  <input class="form-check-input"  wire:model='genero' value="Masculino"  type="radio" wire:model="genero_es" id="flexRadioDefault1">
-                  <label class="form-check-label" for="flexRadioDefault1" style="font-size: 15px; color:#000000;">
+              <label for="inputApellidos" style="font-size: 15px; color:#000000;">Género:</label>
+              <br>
+              <div class="form-check form-check-inline ">
+                <input class="form-check-input"  wire:model='genero' value="Masculino"  type="radio" wire:model="genero_es" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1" style="font-size: 15px; color:#000000;">
                   Masculino
-                  </label>
-                </div>
-                <div class="form-check form-check-inline " >
-                  <input class="form-check-input"  wire:model='genero' value="Femenino" type="radio" wire:model="genero_es" id="flexRadioDefault2">
-                  <label class="form-check-label" for="flexRadioDefault2" style="font-size: 15px; color:#000000;">
-                    Femenino
-                  </label>
-                </div>
+                </label>
+              </div>
+              <div class="form-check form-check-inline " >
+                <input class="form-check-input"  wire:model='genero' value="Femenino" type="radio" wire:model="genero_es" id="flexRadioDefault2">
+                <label class="form-check-label" for="flexRadioDefault2" style="font-size: 15px; color:#000000;">
+                  Femenino
+                </label>
                 @error('genero_es')
                 <div class="alert alert-warning" role="alert">
-                 Pendiente
+                  Pendiente
                 </div>
                 @enderror
               </div>
-             
             </div>
 
             <div class="row g-3">
@@ -293,21 +287,20 @@
           </div>
 
           <div class="col-md">
-            <label for="inputInstitucion" style="font-size: 15px; color:#000000;">Codigo Personal (Mineduc):
+            <label for="inputInstitucion" style="font-size: 15px; color:#000000;">Código Personal (Mineduc):
 
                   <!-- Button trigger modal -->
-                <a class="btn btn-outline-danger"  data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                <a class="btn" style="background-color:#a4cb39" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 ?
                 </a>
             </label>
             <input type='text' placeholder=""  wire:model="codigo_pe_es" class="form-control " required>
-        </div>
-        @error('codigo_pe_es')
-        <div class="alert alert-warning" role="alert">
-         Pendiente
-        </div>
-        @enderror
-      </div>
+            @error('codigo_pe_es')
+            <div class="alert alert-warning" role="alert">
+              Pendiente
+            </div>
+            @enderror
+          </div>
         
       <div class="row g-3">
         <div class="col-md">
@@ -331,24 +324,25 @@
       </div>
       <div class="row g-3">
         <div class="col-md">
-        <label for="inputInstitucion" style="font-size: 15px; color:#000000;">Telefono Casa:</label>
-        <input type='number' placeholder=""  wire:model="tel_es" class="form-control " required>
-    </div>
-    @error('tel_es')
-    <div class="alert alert-warning" role="alert">
-     Pendiente
-    </div>
-    @enderror
-    <div class="col-md">
-      <label for="inputInstitucion" style="font-size: 15px; color:#000000;">Telefono Celular:</label>
-      <input type='number' placeholder=""  wire:model="cel_es" class="form-control " required>
-  </div>
-  @error('cel_es')
-  <div class="alert alert-warning" role="alert">
-   Pendiente
-  </div>
-  @enderror
-</div>
+          <label for="inputInstitucion" style="font-size: 15px; color:#000000;">Teléfono de Casa:</label>
+          <input type='number' placeholder=""  wire:model="tel_es" class="form-control " required>
+          @error('tel_es')
+          <div class="alert alert-warning" role="alert">
+            Pendiente
+          </div>
+          @enderror
+        </div>
+        
+        <div class="col-md">
+          <label for="inputInstitucion" style="font-size: 15px; color:#000000;">Teléfono Celular:</label>
+          <input type='number' placeholder=""  wire:model="cel_es" class="form-control " required>
+          @error('cel_es')
+          <div class="alert alert-warning" role="alert">
+            Pendiente
+          </div>
+          @enderror
+        </div>
+      </div>
 
     <div class="row g-3">
     <div class="col-md">
@@ -366,7 +360,7 @@
         <div class="form-check form-check-inline">
           <input class="form-check-input" type="radio" value="Catolica" wire:model="religion_es" id="flexRadioDefault20">
           <label class="form-check-label" for="flexRadioDefault20" style="font-size: 15px; color:#000000;">
-            Catolica
+            Católica
           </label>
         </div>
         <div class="form-check form-check-inline">
@@ -378,7 +372,7 @@
         <div class="form-check form-check-inline">
           <input class="form-check-input" type="radio" value="Evangelica" wire:model="religion_es" id="flexRadioDefault22">
           <label class="form-check-label" for="flexRadioDefault22" style="font-size: 15px; color:#000000;">
-            Evangelica
+            Evangélica
           </label>
         </div>
 
@@ -388,7 +382,7 @@
       Pendiente
       </div>
       @enderror 
-      <a wire:click='val2' data-bs-toggle="collapse"  class="btn btn-outline-warning">Validar</a>
+      <a wire:click='val2' data-bs-toggle="collapse"  class="btn btn-outline-success">Validar</a>
 
   
     </div>
@@ -404,11 +398,11 @@
   <h2 class="accordion-header" id="flush-headingOn">
 
     @if($val!=null && $val==2)
-    <button class="accordion-button collapsed list-group-item-success" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFOR221" aria-expanded="false" aria-controls="flush-collapseFOR221">
+    <button class="accordion-button collapsed" style="background-color:#d6e7a6; border:6px solid #a4cb39" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFOR221" aria-expanded="false" aria-controls="flush-collapseFOR221">
       <h4 class="font-weight-bolder">  <b>Datos Encargado:</b>   </h4>
     </button>
     @else
-    <button class="accordion-button collapsed list-group-item-danger" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFOR221" aria-expanded="false" aria-controls="flush-collapseFOR221">
+    <button class="accordion-button collapsed" style="background-color:#a6a8c3; border:6px solid #3a3e7b" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFOR221" aria-expanded="false" aria-controls="flush-collapseFOR221">
       <h4 class="font-weight-bolder">  <b>Datos Encargado:</b>   </h4>
     </button>
     @endif
@@ -558,18 +552,18 @@ Pendiente
     
 </div>
 @if($val1==2)
-<div class="row g-3">
+<div class="row g-5">
 <a wire:click='val3' data-bs-toggle="collapse"  class="btn btn-outline-warning">Validar</a>
 </div>
 <br>
-<div class="row g-3">
+<div class="row g-5">
 <button type="button" id="val"  class="btn btn-success">Confirmar Información</button>
 </div>
 @include('modals.modalinfo')
 @include('modals.modalval')
 @else
-<div class="row g-3">
-<a wire:click='val3' data-bs-toggle="collapse"  class="btn btn-outline-warning">Validar</a>
+<div class="row g-5">
+<a wire:click='val3' data-bs-toggle="collapse"  class="btn btn-outline-success">Validar</a>
 </div>
 @endif
 
@@ -664,7 +658,7 @@ Pendiente
      text-decoration: none;
  }
 
- /*======== COLORS ===========*/
+ /======== COLORS ===========/
  .card[data-color="blue"] {
      background: #b8d8d8;
  }

@@ -73,7 +73,7 @@
                                         <b>Validar Gestión</b>
                                     </a>
                                 </li>
-                                <li ><a target="_blank" type="button" class="btn buy me-md-1; font-size: 25px" href="https://colegioelcastano.edu.gt/portal/index.php">Casys</a> </li>
+                                <li ><a target="_blank" type="button" class="btn buy me-md-1; font-size: 25px" href="https://colegioelcastano.edu.gt/portal/index.php"><b>Casys</b></a> </li> 
                            </ul>
                         </nav>
                      </div>
@@ -130,7 +130,7 @@
           </div>
              <div class="col-xs-8 col-md-4 text-center">
              <div class="contact">
-               <br>
+               
                 <h3 class="text-xs text-light">Atención al cliente</h3>
                 <span> Horarios</span><br>
                 <span>Lunes - Viernes</span><br>
@@ -159,7 +159,11 @@
         </p>
       </div>
 
-    </div>
+      <a class="scroll-to-top rounded" href="#page-top" style="display: inline;">
+         <i class="fas fa-angle-up"></i>
+      </a>
+
+
        <div class="copyright">
            <div class="row">
                 <div class="col-xs-12">
@@ -172,6 +176,7 @@
                 </div>
               </div>
            </div>
+   
            <p style="color:black">Copyright, 2021 All Right Reserved, El Castaño TI <a href="https://html.design/"></p>
 
        </div>
