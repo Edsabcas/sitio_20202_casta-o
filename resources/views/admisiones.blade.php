@@ -375,7 +375,12 @@
             Evangélica
           </label>
         </div>
-
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" value="Otra" wire:model="religion_es" id="flexRadioDefault2111q">
+          <label class="form-check-label" for="flexRadioDefault2111q" style="font-size: 15px; color:#000000;">
+            Otra
+          </label>
+        </div>
       </div>
       @error('religion_es')
       <div class="alert alert-warning" role="alert">
@@ -534,6 +539,12 @@ Pendiente
         <div class="form-check form-check-inline">
           <input class="form-check-input" type="radio" wire:model="religion_en" value="Protestante" id="flexRadioReligionen2">
           <label class="form-check-label" for="flexRadioReligionen2" style="font-size: 15px; color:#000000;">
+            Protestante
+          </label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" wire:model="religion_en" value="Protestante" id="flexRadioReligionen23">
+          <label class="form-check-label" for="flexRadioReligionen23" style="font-size: 15px; color:#000000;">
             Protestante
           </label>
         </div>
