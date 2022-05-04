@@ -23,4 +23,14 @@ class InstController extends Controller
         $op=4;
         return view('home', compact("op"));
     }
+
+    public function soportecnico(){
+        $op=6;
+        return view('home', compact("op"));
+    }
+
+    public function restablecerusuario(){
+        $op=7;
+        return view('home', compact("op"));
+    }
 }

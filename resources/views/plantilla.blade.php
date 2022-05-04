@@ -1,4 +1,4 @@
-<!DOCTYPE html> K
+<!DOCTYPE html>
 <html lang="en">
    <head>
       <!-- basic -->
@@ -74,7 +74,8 @@
                                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                    <li><a class="dropdown-item" href="{{ url('/val') }}">Pre-inscripción</a></li>
                                    <li><a class="dropdown-item" href="{{ url('/conducta') }}">Carta de conducta</a></li>
-                                   <li><a class="dropdown-item" href="#"> else </a></li>
+                                   <li><a class="dropdown-item" href="{{ url('/soportecnico') }}">Soporte técnico </a></li>
+                                   <li><a class="dropdown-item" href="{{ url('/restablecerusuario') }}">Restablecer Usuario </a></li>
                                  </ul>
                                </li>                       
                                 <li ><a target="_blank" type="button" class="btn buy me-md-1; font-size: 25px" href="https://colegioelcastano.edu.gt/portal/index.php"><b>Casys</b></a> </li> 
