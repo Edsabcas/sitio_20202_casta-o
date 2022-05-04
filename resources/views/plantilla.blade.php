@@ -11,8 +11,7 @@
       <!-- site metas -->
       <title>Colegio Bilingüe El Castaño</title>
       <link rel="shortcut icon" href="{{ asset('img/lo.png')}}" />
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  
       <!-- style css -->
       <link rel="stylesheet" href="{{ asset('css/style.css')}}">
       <link rel="stylesheet" href="{{ asset('css/responsive.css')}}">
@@ -23,7 +22,31 @@
       <link rel="icon" href="{{ asset('images/fevicon.png" type="image/gif')}}" />
 
       <!-- fonts -->
-      
+       <!-- bootstrap css -->
+
+       <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css')}}">
+
+       <!-- style css -->
+ 
+       <link rel="stylesheet" href="{{ asset('css/style.css')}}">
+ 
+       <link rel="stylesheet" href="{{ asset('css/responsive.css')}}">
+ 
+       <!-- fevicon -->
+ 
+       <link rel="icon" href="{{ asset('images/fevicon.png" type="image/gif')}}" />
+ 
+       <!-- Scrollbar Custom CSS -->
+ 
+       <link rel="stylesheet" href="{{ asset('css/jquery.mCustomScrollbar.min.css')}}">
+ 
+       <!-- Tweaks for older IEs-->
+ 
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+ 
+       <link rel="stylesheet" type="text/css" href="{{ asset('css/animate.min.css')}}">
+ 
+       <link rel="stylesheet" href="css/style_step.css"/>
 
         @livewireStyles
    </head>
@@ -50,43 +73,46 @@
                         </ul>
                     </div>
                   </div>
-               </div>
+               </div> 
             </div>
          </div>
-         <div class="container">
-            <div class="row">
-               <div class="col-xs-12">
-                  <div class="menu-area">
-                     <div class="limit-box">
-                        <nav class="main-menu">
-                            <ul class="menu-area-main">
-                                <li> <a href="{{ url('/') }}" font face="Century Gothic" font size=27><b>Inicio</b></a> </li>
-                                <li> <a href="{{ url('/nosotros') }}" font face="Century Gothic" font size=27> <b> Nosotros</b></a> </li>
-                                <li>
-                                    <a href="/adm" font face="Century Gothic" font size=35>
-                                        <b>Admisiones 2023</b>
-                                    </a>
-                                </li>
-                                <li class="nav-item dropdown">
-                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <b>Validar Gestión</b>
-                                 </a>
-                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                   <li><a class="dropdown-item" href="{{ url('/val') }}">Pre-inscripción</a></li>
-                                   <li><a class="dropdown-item" href="{{ url('/conducta') }}">Carta de conducta</a></li>
-                                   <li><a class="dropdown-item" href="{{ url('/soportecnico') }}">Soporte técnico </a></li>
-                                   <li><a class="dropdown-item" href="{{ url('/restablecerusuario') }}">Restablecer Usuario </a></li>
-                                 </ul>
-                               </li>                       
-                                <li ><a target="_blank" type="button" class="btn buy me-md-1; font-size: 25px" href="https://colegioelcastano.edu.gt/portal/index.php"><b>Casys</b></a> </li> 
-                           </ul>
-                        </nav>
-                     </div>
-                  </div>
-               </div>
-         </div>
-         </div>
+
+
+         <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="{{ url('/') }}">Inicio</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="{{ url('/nosotros') }}"><b>Nosotros</b></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/adm">admisiones 2023</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      validar gestión
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="{{ url('/val') }}">Pre-Inscripción</a></li>
+                      <li><a class="dropdown-item" href="{{ url('/conducta') }}">Carta de Conducta</a></li>
+                      <li><a class="dropdown-item" href="{{ url('/soportecnico') }}">Soporte Técnico</a></li>
+                      <li><a class="dropdown-item" href="{{ url('/restablecerusuario') }}">Restablecer Usuario</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                     <li ><a target="_blank" type="button" class="btn buy me-md-1; font-size: 25px" href="https://colegioelcastano.edu.gt/portal/index.php"><b>Casys</b></a> </li> 
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
       </div>
+
+
       
          <!-- end header inner -->
       </header>
@@ -101,7 +127,6 @@
       <!-- end footer -->
       <!-- Javascript files-->
       <script src="{{ asset('js/jquery.min.js') }}"></script>
-      <script src="{{ asset('js/bootstrap.min.js') }}"></script>
 
       <!-- sidebar -->
 
