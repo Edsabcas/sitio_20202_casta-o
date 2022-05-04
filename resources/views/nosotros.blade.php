@@ -8,10 +8,10 @@
     <div class="container" >
         <!-- CONÓCENOS-->
         <br>
-        <h1 class="page-section-heading text-center text-uppercase" style="font-size: 30px; color:#ffff;" data-aos="fade-up">¡Conócenos!</h1>
+        <h1 class="page-section-heading text-center text-uppercase" style="font-size: 40px; color:#ffff;" data-aos="fade-up">¡Conócenos!</h1>
         <!-- ESTRELLA-->
-        <div class="divider-custom divider-light">
-            <div class="divider-custom-icon text-center"><i class="fas fa-star"></i></div>
+        <div class="divider-custom">
+            <div class="divider-custom-icon text-center" style="color: #3a3e7b"><i class="fas fa-star"></i></div>
         </div>
         <br>
         <!-- TEXTO-->
@@ -27,61 +27,74 @@
     <div class="container" style="color: #a4cb39">
         <br>
         <!-- Misión y Visión-->
-        <h1 class="page-section-heading text-center text-uppercase" style="font-size: 30px; color:#a4cb39;" data-aos="fade-up">Misión y Visión</h1>
+        <h1 class="page-section-heading text-center text-uppercase" style="font-size: 40px; color:#3a3e7b;" data-aos="fade-up">Misión y Visión</h1>
         <!-- ESTRELLA -->
         <div class="divider-custom divider-success">
             <div class="divider-custom-icon text-center "><i class="fas fa-star"></i></div>
         </div>
         <br>
+
         <div class="row">
-            <div class="col-lg-6 ms-auto" data-aos="fade-up"><p class="lead">Nuestra misión es dirigir a los niños y jóvenes hacia una educación formativa e integral desde sus primeros años, creándoles hábitos de estudio, lectura e investigación; así como el perfeccionamiento de destrezas individuales, tecnológicas, valores morales y de disciplina en un ambiente bilingüe (español - inglés).</p></div>
-            <div class="col-lg-6 me-auto" data-aos="fade-up"><p class="lead">Nuestra visión es ser una Institucion educativa, laica, bilingüe con altos estándares de formación integral fundamentada en competencias pedagógicas, que fomente los valores de convivencia, la comunicación asertiva, la superación personal y el servicio a la sociedad. Utilizando, el  pensamiento crítico, la creatividad y la apropiación de la tecnología como herramientas de autoaprendizaje y adaptabilidad para el desarrollo personal y social así como  la resolución de problemas.</p></div>
-        </div>
-    </div>
+            <div class="col-sm-6">
+              <div class="card border-light" style="border-color: transparent; outline-color: transparent; background-color:transparent">
+                <div class="card-body">
+                  <h2 class="card-title" style="color:#3a3e7b;" data-aos="fade-up"><b>MISIÓN</b></h2>
+                  <p class="card-text" data-aos="fade-up">Dirigir a los niños y jóvenes hacia una educación formativa e integral desde sus primeros años, creándoles hábitos de estudio, lectura e investigación; así como el perfeccionamiento de destrezas individuales, tecnológicas, valores morales y de disciplina en un ambiente bilingüe (español - inglés).</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="card" style="border-color: transparent; outline-color: transparent; background-color:transparent">
+                <div class="card-body">
+                  <h2 class="card-title" style="color:#3a3e7b;" data-aos="fade-up"><b>VISIÓN</b></h2>
+                  <p class="card-text" data-aos="fade-up">Ser una institución educativa, laica y bilingüe; con altos estándares de formación integral fundamentada en competencias pedagógicas, que fomente los valores de convivencia, la comunicación asertiva, la superación personal y el servicio a la sociedad. Utilizando, el  pensamiento crítico, la creatividad y la apropiación de la tecnología como herramientas de autoaprendizaje y adaptabilidad para el desarrollo personal y social así como  la resolución de problemas.</p>
+                </div>
+              </div>
+            </div>
+          </div>
     <br>
     <br>
 </section>
-
 <div class="card" style="background-color:#a4cb39">
     <div class="container">
         <!-- About Section Heading-->
         <br>
-        <h1 class="page-section-heading text-center text-uppercase" style="font-size: 30px; color:#ffff;" data-aos="fade-up">Objetivos</h1>
+        <h1 class="page-section-heading text-center text-uppercase" style="font-size: 40px; color:#ffff;" data-aos="fade-up">Objetivos</h1>
         <!-- About Section Content-->
-        <div class="divider-custom divider-success">
-            <div class="divider-custom-icon text-center "><i class="fas fa-star"></i></div>
+        <div class="divider-custom">
+            <div class="divider-custom-icon text-center" style="color: #3a3e7b"><i class="fas fa-star"></i></div>
         </div>
         <br>
-        <div class="row">
-            <h6 class="col-lg-4 ms-auto text-white" data-aos="fade-up"><strong>ADMINISTRATIVO</strong></h6>
-            <h6 class="col-lg-4 ms-auto text-white" data-aos="fade-up"><strong>TÉCNICO – PEDAGÓGICO</strong></h6>
-            <h6 class="col-lg-4 ms-auto text-white" data-aos="fade-up"><strong>CULTURAL, CÍVICO y DEPORTIVO</strong></h6>
-            <div class="col-lg-4 me-auto"><p class="text-white text-start lead" data-aos="fade-up">
-                • Atender los requerimientos del Ministerio de Educación. <br>
-                • Organizar las actividades generales programadas en el organigrama. <br>
-                • Supervisar que toda las actividades se realicen en orden para su mejor aprovechamiento. <br>
-                • Mantener de la mejor forma posible los fondos disponibles y evitar gastos superfluos. <br>
-            </p></div>
-            <br>
-            <br>
-            <div class="col-lg-4 me-auto"><p class="text-white lead" data-aos="fade-up">
-                • Capacitar constantemente al personal en diversas ramas. <br>
-                • Evaluar el nivel educativo del establecimiento. <br>
-                • Lograr un mejor desarrollo del proceso enseñanza-aprendizaje. <br>
-                • Proporcionar al personal los recursos necesarios para el desarrollo de su labor. <br>
-                • Proveer un ambiente bilingüe, español-inglés. <br>
-            </p></div>
-            <br>
-            <br>
-            <div class="col-lg-4 me-auto"><p class="text-white lead" data-aos="fade-up">
-                • Estimular las relaciones humanas. <br>
-                • Fomentar el compañerismo y socialización entre los miembros de la comunidad educativa. <br>
-                • Valorar las actitudes artísticas. <br>
-                •  Educar integralmente para que adquieran una personalidad fuerte y responsable, desarrollando sus facultades y participe pro activamente en la construcción de la sociedad. <br>
-            </p></div>
+        <div class="card-group">
+            <div class="card" style="border-color: transparent; outline-color: transparent; background-color:transparent">
+              <div class="card-body">
+                <h2 class="card-title" style="color:#ffff;" data-aos="fade-up"><b>ADMINISTRATIVO</b></h2>
+                <p class="card-text text-white" data-aos="fade-up">• Atender los requerimientos del Ministerio de Educación. <br>
+                    • Organizar las actividades generales programadas en el organigrama. <br>
+                    • Supervisar que toda las actividades se realicen en orden para su mejor aprovechamiento. <br>
+                    • Mantener de la mejor forma posible los fondos disponibles y evitar gastos superfluos. <br></p>
+              </div>
             </div>
-        </div>
-    <br>
+            <div class="card" style="border-color: transparent; outline-color: transparent; background-color:transparent">
+              <div class="card-body">
+                <h2 class="card-title" style="color:#ffff;" data-aos="fade-up"><b>TÉCNICO – PEDAGÓGICO</b></h2>
+                <p class="card-text text-white" data-aos="fade-up">• Capacitar constantemente al personal en diversas ramas. <br>
+                    • Evaluar el nivel educativo del establecimiento. <br>
+                    • Lograr un mejor desarrollo del proceso enseñanza-aprendizaje. <br>
+                    • Proporcionar al personal los recursos necesarios para el desarrollo de su labor. <br>
+                    • Proveer un ambiente bilingüe, español-inglés. <br></p>
+              </div>
+            </div>
+            <div class="card" style="border-color: transparent; outline-color: transparent; background-color:transparent">
+              <div class="card-body">
+                <h2 class="card-title" style="color:#ffff;" data-aos="fade-up"><b>CULTURAL, CÍVICO y DEPORTIVO</b></h2>
+                <p class="card-text text-white" data-aos="fade-up">• Estimular las relaciones humanas. <br>
+                    • Fomentar el compañerismo y socialización entre los miembros de la comunidad educativa. <br>
+                    • Valorar las actitudes artísticas. <br>
+                    •  Educar integralmente para que adquieran una personalidad fuerte y responsable, desarrollando sus facultades y participe pro activamente en la construcción de la sociedad.</p>
+              </div>
+            </div>
+          </div>
     <br>
     </div>
 </div>
