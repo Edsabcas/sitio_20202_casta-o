@@ -12,8 +12,7 @@
       <title>Colegio Bilingüe El Castaño</title>
       <link rel="shortcut icon" href="{{ asset('img/lo.png')}}" />
   <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
       <!-- style css -->
       <link rel="stylesheet" href="{{ asset('css/style.css')}}">
       <link rel="stylesheet" href="{{ asset('css/responsive.css')}}">
@@ -68,11 +67,16 @@
                                         <b>Admisiones 2023</b>
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="{{ url('/val') }}" font face="Century Gothic" font size=35>
-                                        <b>Validar Gestión</b>
-                                    </a>
-                                </li>
+                                <li class="nav-item dropdown">
+                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <b>Validar Gestión</b>
+                                 </a>
+                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                   <li><a class="dropdown-item" href="{{ url('/val') }}">Pre-inscripción</a></li>
+                                   <li><a class="dropdown-item" href="{{ url('/conducta') }}">Carta de conducta</a></li>
+                                   <li><a class="dropdown-item" href="#"> else </a></li>
+                                 </ul>
+                               </li>                       
                                 <li ><a target="_blank" type="button" class="btn buy me-md-1; font-size: 25px" href="https://colegioelcastano.edu.gt/portal/index.php"><b>Casys</b></a> </li> 
                            </ul>
                         </nav>
@@ -102,13 +106,13 @@
 
       <script src="{{ asset('js/custom.js') }}"></script>
       {{-- <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script> --}}
-
       <br>
-   @livewireScripts
    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   <script>
     AOS.init();
   </script>
+   @livewireScripts
    </body>
    <footer>
     <div class="footer">

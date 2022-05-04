@@ -113,12 +113,12 @@ button:hover {
   </script>
 @endif
   @endisset
+  
+
   <form id="regForm" action="/valr" method="post" enctype="multipart/form-data" >
   <div class="form-row" >
     @csrf
-  <!-- One "tab" for each step in the form: -->
-  
-    
+  <!-- One "tab" for each step in the form: -->  
           <h2 style="text-align:center;">Validación Proceso Pre-Inscripción</h2>
             <span class="text-black" style="font-size: 15px; color:#2e117e;" style="text-align:center;">Datos Requeridos:</span>
             <div class="form-group col-xs-12">
@@ -147,6 +147,7 @@ button:hover {
     <span class="step"></span>
   </div>
 </form>
+
 <section>
 <script>
 var currentTab = 0; // Current tab is set to be the first tab (0)
