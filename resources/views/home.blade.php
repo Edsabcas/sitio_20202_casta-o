@@ -15,6 +15,11 @@
 @include('validar')
 @endif
 
+@if($op==5)
+@include('validaciones.cartadeconducta')
+@endif
+
+
 @else
 @include('inicio')
 @endif
