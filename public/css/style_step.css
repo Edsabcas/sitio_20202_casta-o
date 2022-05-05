@@ -224,7 +224,7 @@ body {
     right: 8%;
     font-size: 18px;
     cursor: pointer;
-    color: #666;
+    color: rgb(153, 19, 19);
 }
 .actions {
 	margin: 20px 80px 60px;

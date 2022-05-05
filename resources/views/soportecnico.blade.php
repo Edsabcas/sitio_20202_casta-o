@@ -51,7 +51,15 @@
             <label for="number" style="color: #3a3e7b" data-aos="fade"><b>Sección</b></label><br>
             <input class="form-control me-2 input100"id='telefono'name="telefono"type="tel"pattern="[0-9]{​​​​​10}​​​​​"class="validate"required>
         </div>
-        <div class="col-md-12">
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+            <label for="select" style="color: #3a3e7b" data-aos="fade"><b>Tipo de problema</b></label><br>
+            <select class="form-control me-2 input100" id='select'name="plataforma" type="select" class="validate" required>
+              <option selected style="color: #000000">Seleccionar:</option>
+              <option value="1" style="color: #000000">Problema con el Equipo (Hardware)</option>
+              <option value="2" style="color: #000000">Problema con el sistema (Software)</option>
+            </select>
+          </div>
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
             <label for="message" style="color: #3a3e7b" data-aos="fade"><b>Descripción del problema</b></label><br>
             <textarea class="form-control me-2 input100"id="mensaje" rows="50" name="mensaje"data-length="240"></textarea>
         </div>

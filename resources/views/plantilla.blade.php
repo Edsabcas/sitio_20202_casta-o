@@ -80,33 +80,41 @@
 
          <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-              <a class="navbar-brand" href="{{ url('/') }}">Inicio</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="{{ url('/nosotros') }}"><b>Nosotros</b></a>
+               <ul class="navbar-nav">
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                     <span class="navbar-toggler-icon"></span>
+                  </button>
+               
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <li>
+                     <a class="nav-link" href="{{ url('/') }}" style="color: #000000" style="font-family: Century Gothic"><b>Inicio</b></a>
                   </li>
+                  <p></p>
                   <li class="nav-item">
-                    <a class="nav-link" href="/adm">admisiones 2023</a>
+                    <a class="nav-link"  href="{{ url('/nosotros') }}" style="color: #000000" style="font-family: Century Gothic"><b>Nosotros</b></a>
                   </li>
+                  <p></p>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/adm" style="color: #000000" style="font-family: Century Gothic"><b>Admisiones 2023</b></a>
+                  </li>
+                  <p></p>
                   <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      validar gestión
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: #000000" style="font-family: Century Gothic">
+                     <b>Validar Gestión</b>
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="{{ url('/val') }}">Pre-Inscripción</a></li>
-                      <li><a class="dropdown-item" href="{{ url('/conducta') }}">Carta de Conducta</a></li>
-                      <li><a class="dropdown-item" href="{{ url('/soportecnico') }}">Soporte Técnico</a></li>
-                      <li><a class="dropdown-item" href="{{ url('/restablecerusuario') }}">Restablecer Usuario</a></li>
+                      <li><a class="dropdown-item" href="{{ url('/val') }}" style="color: #000000" style="font-family: Century Gothic">Pre-Inscripción</a></li>
+                      <li><a class="dropdown-item" href="{{ url('/conducta') }}" style="color: #000000" style="font-family: Century Gothic">Carta de Conducta</a></li>
+                      <li><a class="dropdown-item" href="{{ url('/soportecnico') }}" style="color: #000000" style="font-family: Century Gothic">Soporte Técnico</a></li>
+                      <li><a class="dropdown-item" href="{{ url('/restablecerusuario') }}" style="color: #000000" style="font-family: Century Gothic">Restablecer Usuario</a></li>
                     </ul>
                   </li>
+                  <p></p>
                   <li class="nav-item">
-                     <li ><a target="_blank" type="button" class="btn buy me-md-1; font-size: 25px" href="https://colegioelcastano.edu.gt/portal/index.php"><b>Casys</b></a> </li> 
+                     <a class="nav-link" target="_blank" type="button" class="btn buy me-md-1; font-size: 25px" style="color: #000000" href="https://colegioelcastano.edu.gt/portal/index.php"><b>Casys</b></a>
                   </li>
-                </ul>
+               </ul>
+               </ul>
               </div>
             </div>
           </nav>

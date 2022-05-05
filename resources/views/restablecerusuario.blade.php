@@ -45,14 +45,24 @@
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
             <option></option>
             <label for="email" style="color: #3a3e7b" data-aos="fade"><b>Grado</b></label><br>
-            <input class="form-control me-2 input100"id='email'name="email"type="email"class="validate"required>
+            <input class="form-control me-2 input100" id='email'name="email"type="email"class="validate"required>
         </div>
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
             <option></option>
             <label for="number" style="color: #3a3e7b" data-aos="fade"><b>Sección</b></label><br>
             <input class="form-control me-2 input100"id='telefono'name="telefono"type="tel"pattern="[0-9]{​​​​​10}​​​​​"class="validate"required>
         </div>
-        <div class="col-md-12">
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+            <label for="select" style="color: #3a3e7b" data-aos="fade"><b>Plataforma</b></label><br>
+            <select class="form-control me-2 input100" id='select'name="plataforma" type="select" class="validate" required>
+              <option selected style="color: #000000">Seleccionar:</option>
+              <option value="1" style="color: #000000">Teams</option>
+              <option value="2" style="color: #000000">Geducar</option>
+              <option value="3" style="color: #000000">Progrentis</option>
+              <option value="4" style="color: #000000">MyOn</option>
+            </select>
+          </div>
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
             <label for="message" style="color: #3a3e7b" data-aos="fade"><b>Usuario</b></label><br>
             <input class="form-control me-2 input100" id='usuario' name="usuario" type="tel" class="validate" required>
         </div>
