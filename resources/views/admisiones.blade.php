@@ -52,10 +52,14 @@
       </svg>
       <div class="content">
         <h2 class="category text-center text-white"><b>¡IMPORTANTE!</b></h2>
-        <h4 class="description py-3  font-size: 35px" style="color:white"> Inicia tu proceso si tienes los siguientes datos:</h4>
-          <p class="description py-2" style="color:white">• Datos generales del Alumno.</p>
-          <p class="description py-2" style="color:white">• Datos del Encargado.</p>
-          <p class="description py-2" style="color:white">• Número CUI del alumno.</p>
+        <h4 class="description py-3  font-size: 35px" style="color:white"> Toma en cuenta que debes tener los siguientes datos para iniciar tu proceso de pre-inscripción:</h4>
+        <p class="description py-3" style="color:white"><strong>DATOS DEL ENCARGADO:</strong></p>
+          <p class="description py-2" style="color:white">• DPI.</p>
+          <p class="description py-2" style="color:white">• Correo electrónico.</p>
+          <p class="description py-2" style="color:white">• No. de teléfono.</p><br>
+          <p class="description py-3" style="color:white">DATOS DEL ESTUDIANTE:</p>
+          <p class="description py-2" style="color:white">• Datos generales del alumno.</p>
+          <p class="description py-2" style="color:white">• No. CUI.</p>
           <p class="description py-2" style="color:white">• Código Personal del alumno.                               
           <a type="button" class="btn text-white" style="background-color:#3a3e7b" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
               ?
