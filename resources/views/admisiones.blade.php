@@ -44,7 +44,7 @@
 @if($val==null)
 
 <div class="col-md-25 offset-md-3">
-  <div class="col-md-6 col-sm-6 card text-center" style="background-color:#a4cb39">
+  <div class="col-md-6 col-sm-10 card text-center" style="background-color:#a4cb39">
     <br>
     <div class="text-center">
       <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="white" class="bi bi-exclamation-triangle-fill" viewBox="0 0 16 16">
@@ -54,7 +54,7 @@
         <h2 class="category text-center text-white"><b>¡IMPORTANTE!</b></h2>
         <h4 class="description py-3  font-size: 35px" style="color:white"> Toma en cuenta que debes tener los siguientes datos para iniciar tu proceso de pre-inscripción:</h4>
         
-        <div class="row">
+        <div class="row mx-auto justify-content-evenly">
           <div class="col-sm-6">
             <div class="card" style="border-color: #ffff; outline-color: transparent; background-color:transparent">
               <div class="card-body">
@@ -74,537 +74,509 @@
                   • Código Personal.                               
                             <a type="button" class="btn text-white" style="background-color:#3a3e7b" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                                 ?
-                              </a></p>
+                 </a></p>
               </div>
             </div>
           </div>
         </div>
     <div class="footer bg-transparent border-transparent">
       <div class="d-grid gap-3 col-8 mx-auto">
-        <button class="btn text-white" style="background-color:#3a3e7b" type="button" wire:click="va1l()">Pre-Inscribir</button>
+        <button class="btn btn-pre text-white" type="button" wire:click="va1l()">Pre-Inscribir</button>
       </div>
     </div>
     <br>
   </div>
 </div>
+</div>
+</div>
+<style>
+  .btn-pre {
+    display: inline-block;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    cursor: pointer;
+    padding: 10px 20px;
+    border: none;
+    -webkit-border-radius: 12px;
+    border-radius: 12px;
+    font: normal 16px/normal "Century Gothic", Times, serif;
+    color: rgba(255,255,255,0.9);
+    -o-text-overflow: clip;
+    text-overflow: clip;
+    background: -webkit-linear-gradient(-90deg, #3a3e7b 0, #3a3e7b);
+    background: -moz-linear-gradient(180deg, #3a3e7b 0, #3a3e7b);
+    background: linear-gradient(180deg, #3a3e7b 0, #3a3e7b);
+    background-position: 50% 50%;
+    -webkit-background-origin: padding-box;
+    background-origin: padding-box;
+    -webkit-background-clip: border-box;
+    background-clip: border-box;
+    -webkit-background-size: auto auto;
+    background-size: auto auto;
+    -webkit-box-shadow: 2px 2px 2px 0 rgba(58,228,0,0.2) ;
+    box-shadow: 2px 2px 2px 0 rgba(58,228,0,0.2) ;
+    text-shadow: -1px -1px 0 rgba(15,73,168,0.66) ;
+    -webkit-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+    -moz-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+    -o-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+    transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  }
+  
+  .btn-pre:hover {
+    border: 0px solid #33a506;
+    -webkit-border-radius: 12px;
+    border-radius: 12px;
+    background: -webkit-linear-gradient(-90deg,  #626bdd 0,  #6269cc 100%);
+    background: -moz-linear-gradient(180deg,  #626bdd 0,  #6269cc 100%);
+    background: linear-gradient(180deg, r #626bdd 0,  #6269cc 100%);
+    background-position: 50% 50%;
+    -webkit-background-origin: padding-box;
+    background-origin: padding-box;
+    -webkit-background-clip: border-box;
+    background-clip: border-box;
+    -webkit-background-size: auto auto;
+    background-size: auto auto;
+  }
+  
+  .btn-pre:active {
+    -webkit-border-radius: 17px;
+    border-radius: 12px;
+    background: -webkit-linear-gradient(-90deg, #3a3e7b 0,  #3a3e7b 100%);
+    background: -moz-linear-gradient(180deg,  #3a3e7b 0,  #3a3e7b 100%);
+    background: linear-gradient(180deg,  #3a3e7b 0,  #3a3e7b 100%);
+    background-position: 50% 50%;
+    -webkit-background-origin: padding-box;
+    background-origin: padding-box;
+    -webkit-background-clip: border-box;
+    background-clip: border-box;
+    -webkit-background-size: auto auto;
+    background-size: auto auto;
+  }
+  </style>
 
 @else
-<div class="accordion accordion-flush" id="accordionFlushExample">
-<div class="accordion-item">
-  <h2 class="accordion-header" id="flush-headingOne">
-    @if($gradoin!=null)
-    <button class="accordion-button collapsed" style="background-color:#d6e7a6; border:6px solid #a4cb39" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOn" aria-expanded="false" aria-controls="flush-collapseOn">
-      <h4 class="font-weight-bolder">
-        @if($gradoin)
-        Grado seleccionado: <b class="text-center"> {{$gradoin}}</b>
-        @else
-        Seleccione un grado
-        @endif
-      </h4>
-    </button>
-    @else
-    <button class="accordion-button collapsed" style="background-color:#a6a8c3; border:6px solid #3a3e7b" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOn" aria-expanded="false" aria-controls="flush-collapseOn">
-      <h4 class="font-weight-bolder text-center">
-        @if($gradoin)
-        Grado seleccionado: <b> {{$gradoin}}</b>
-        @else
-        Seleccione un grado
-        @endif
-      </h4>
-    </button>
-    @endif
-  </h2>
-  <div id="flush-collapseOn" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-    <div class="accordion-body">
-        <div class="row">
-          <div class="col-md">
-            <div class="tab">
-                  
-              @error('gradoin') 
-              <div class="alert alert-danger d-flex align-items-center" role="alert">
-                <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
-                
-                  <span>Debe seleccionar un grado</span>
-                 </div> @enderror
+<div class="accordion" id="accordionPanelsStayOpenExample">
 
-              <ul class="list-group">
-                <li class="list-group-item list-group-item-action"  for="flexRadioGrado01">
-                  <input class="form-check-input me-1" type="radio"  wire:model="gradoin" value="PRE-KINDER" aria-label="..." id="flexRadioGrado01">
-                  <label class="form-check-label" for="flexRadioGrado01" style="font-size: 15px; color:#000000;">
-                  PRE-KÍNDER
-                  </label>
-                  
-                </li>
-                <li class="list-group-item list-group-item-action">
-                  <input class="form-check-input me-1" type="radio"  wire:model="gradoin" value="KINDER" aria-label="..."  id="flexRadioGrado02">
-                  <label class="form-check-label" for="flexRadioGrado02" style="font-size: 15px; color:#000000;">
-                    KÍNDER
-                    </label>
-                
-                </li>
-                <li class="list-group-item list-group-item-action">
-                  <input class="form-check-input me-1" type="radio" wire:model="gradoin" value="PREPARATORIA" aria-label="..."  id="flexRadioGrado03">
-                  <label class="form-check-label" for="flexRadioGrado03" style="font-size: 15px; color:#000000;">
-                    PREPARATORIA
-                    </label>
-                
-                </li>
-                <li class="list-group-item list-group-item-action">
-                  <input class="form-check-input me-1" type="radio"  wire:model="gradoin"  value="PRIMER GRADO" aria-label="..."  id="flexRadioGrado1">
-                  <label class="form-check-label" for="flexRadioGrado1" style="font-size: 15px; color:#000000;">
-                    PRIMER GRADO
-                    </label>
-                
-                </li>
-                <li class="list-group-item list-group-item-action">
-                  <input class="form-check-input me-1" type="radio"   wire:model="gradoin" value="SEGUNDO GRADO" aria-label="..."  id="flexRadioGrado2">
-                  <label class="form-check-label" for="flexRadioGrado2" style="font-size: 15px; color:#000000;">
-                    SEGUNDO GRADO
-                    </label>
-                  
-                </li>
-                <li class="list-group-item list-group-item-action">
-                  <input class="form-check-input me-1" type="radio"  wire:model="gradoin" value="TERCER GRADO" aria-label="..."  id="flexRadioGrado3">
-                  <label class="form-check-label" for="flexRadioGrado3" style="font-size: 15px; color:#000000;">
-                    TERCER GRADO
-                    </label>
-                
-                </li>
-                <li class="list-group-item list-group-item-action">
-                  <input class="form-check-input me-1"  type="radio" wire:model="gradoin" value="CUARTO GRADO" aria-label="..."  id="flexRadioGrado4">
-                  <label class="form-check-label" for="flexRadioGrado4" style="font-size: 15px; color:#000000;">
-                    CUARTO GRADO
-                    </label>
-                
-                </li>
-                <li class="list-group-item list-group-item-action">
-                  <input class="form-check-input me-1"  type="radio"  wire:model="gradoin" value="QUINTO GRADO" aria-label="..."  id="flexRadioGrado5">
-                  <label class="form-check-label" for="flexRadioGrado5" style="font-size: 15px; color:#000000;">
-                    QUINTO GRADO
-                    </label>
-                
-                </li>
-                <li class="list-group-item list-group-item-action">
-                  <input class="form-check-input me-1"  type="radio" wire:model="gradoin" value="SEXTO GRADO" aria-label="..."  id="flexRadioGrado6">
-                  <label class="form-check-label" for="flexRadioGrado6" style="font-size: 15px; color:#000000;">
-                    SEXTO GRADO
-                    </label>
-                
-                </li>
-                <li class="list-group-item list-group-item-action">
-                  <input class="form-check-input me-1"  type="radio" wire:model="gradoin" value="SEPTIMO GRADO" aria-label="..."  id="flexRadioGrado7">
-                  <label class="form-check-label" for="flexRadioGrado7" style="font-size: 15px; color:#000000;">
-                    SÉPTIMO GRADO
-                    </label>
-                
-                </li>
-                <li class="list-group-item list-group-item-action">
-                  <input class="form-check-input me-1"  type="radio" wire:model="gradoin" value="OCTAVO GRADO" aria-label="..."  id="flexRadioGrado8">
-                  <label class="form-check-label" for="flexRadioGrado8" style="font-size: 15px; color:#000000;">
-                    OCTAVO GRADO
-                    </label>
-                
-                </li>
-                <li class="list-group-item list-group-item-action">
-                  <input class="form-check-input me-1"  type="radio" wire:model="gradoin" value="NOVENO GRADO" aria-label="..."  id="flexRadioGrado9">
-                  <label class="form-check-label" for="flexRadioGrado9" style="font-size: 15px; color:#000000;">
-                    NOVENO GRADO
-                    </label>
-                  
-                </li>
-                <li class="list-group-item list-group-item-action">
-                  <input class="form-check-input me-1"  type="radio"  wire:model="gradoin" value="DECIMO GRADO" aria-label="..."  id="flexRadioGrado10">
-                  <label class="form-check-label" for="flexRadioGrado10" style="font-size: 15px; color:#000000;">
-                    DÉCIMO GRADO
-                    </label>
-                
-                </li>
-              </ul>
-             
-          </div>
-       
-            </div>
-          </div>
-          </div>
-  </div>
-</div>
-
-
-
-  @if($gradoin!==null)
   <div class="accordion-item">
-    <h2 class="accordion-header" id="flush-headingOne">
+    <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+      @if($gradoin!=null)
+      <button class="accordion-button" type="button" style="background-color:#d6e7a6; border:6px solid #a4cb39" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+      <h4 class="font-weight-bolder">
+          @if($gradoin)
+          Grado seleccionado: <b class="text-center"> {{$gradoin}}</b>
+          @else
+          Seleccione un grado
+          @endif
+        </h4>
+      </button>
+      @else
+      <button class="accordion-button" type="button" style="background-color:#a6a8c3; border:6px solid #3a3e7b" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+       <h4 class="font-weight-bolder text-center">
+          @if($gradoin)
+          Grado seleccionado: <b> {{$gradoin}}</b>
+          @else
+          Seleccione un grado
+          @endif
+        </h4>
+      </button>
+      @endif
+    </h2>
+    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+      <div class="accordion-body">
+        <div class="tab">
+                  
+          @error('gradoin') 
+          <div class="alert alert-danger d-flex align-items-center" role="alert">
+            <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
+            
+              <span>Debe seleccionar un grado</span>
+             </div> @enderror
+
+          <ul class="list-group">
+            <li class="list-group-item list-group-item-action"  for="flexRadioGrado01">
+              <input class="form-check-input me-1" type="radio"  wire:model="gradoin" value="PRE-KINDER" aria-label="..." id="flexRadioGrado01">
+              <label class="form-check-label" for="flexRadioGrado01" style="font-size: 15px; color:#000000;">
+              PRE-KÍNDER
+              </label>
+              
+            </li>
+          </ul>
+         
+      </div>
+      </div>
+    </div>
+  </div>
+
+  @if($gradoin!=null)
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
       @if($a!=null && $a==2)
-      <button class="accordion-button collapsed" style="background-color:#d6e7a6; border:6px solid #a4cb39" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFOR22" aria-expanded="false" aria-controls="flush-collapseFOR22">
+      <button class="accordion-button collapsed" style="background-color:#d6e7a6; border:6px solid #a4cb39" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
         <h4 class="font-weight-bolder">  <b>Datos del Estudiante:</b>   </h4>
       </button>
       @else
-      <button class="accordion-button collapsed" style="background-color:#a6a8c3; border:6px solid #3a3e7b" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFOR22" aria-expanded="false" aria-controls="flush-collapseFOR22">
-        <h4 class="font-weight-bolder">  <b>Datos del Estudiante:</b>   </h4>
+      <button class="accordion-button collapsed" style="background-color:#a6a8c3; border:6px solid #3a3e7b" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+      <h4 class="font-weight-bolder">  <b>Datos del Estudiante:</b>   </h4>
       </button>
       @endif
-
     </h2>
-    <div id="flush-collapseFOR22" class="accordion-collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapsed" aria-labelledby="panelsStayOpen-headingTwo">
       <div class="accordion-body">
-            <form wire:submit.prevent="savep3()" class="form-floating">
+                 <form wire:submit.prevent="" class="form-floating">
+                    <div class="col-md">
+                      <label for="inputNombres" style="font-size: 15px; color:#000000;">Nombre Completo:
+                      </label>
+                      <input  wire:model="nombre_es" class="form-control " required>
+                      @error('nombre_es')
+                      <div class="alert alert-warning" role="alert">
+                       Pendiente
+                      </div>
+                      @enderror
+                  </div>
+                  <div class="row g-3">
+                    <div class="col-md">
+                      <label for="inputApellidos" style="font-size: 15px; color:#000000;">Fecha de Nacimiento:</label>
+                      <input type="date"  wire:model="f_nacimiento_es" class="form-control " required>
+                      @error('f_nacimiento_es')
+                      <div class="alert alert-warning" role="alert">
+                       Pendiente
+                      </div>
+                      @enderror
+                  </div>
+                  
+                  <div class="col-md">
+                    <label for="inputApellidos" style="font-size: 15px; color:#000000;">Género:</label>
+                    <br>
+                    <div class="form-check form-check-inline ">
+                      <input class="form-check-input"  wire:model='genero' value="Masculino"  type="radio" wire:model="genero_es" id="flexRadioDefault1">
+                      <label class="form-check-label" for="flexRadioDefault1" style="font-size: 15px; color:#000000;">
+                        Masculino
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline " >
+                      <input class="form-check-input"  wire:model='genero' value="Femenino" type="radio" wire:model="genero_es" id="flexRadioDefault2">
+                      <label class="form-check-label" for="flexRadioDefault2" style="font-size: 15px; color:#000000;">
+                        Femenino
+                      </label>
+                      @error('genero_es')
+                      <div class="alert alert-warning" role="alert">
+                        Pendiente
+                      </div>
+                      @enderror
+                    </div>
+                  </div>
+      
+                  <div class="row g-3">
+                    <div class="col-md">
+                    <label for="inputDireccion" style="font-size: 15px; color:#000000;">CUI:</label>
+                    <input type='number' placeholder=""  wire:model="cui_es" class="form-control " required>
+                    @error('cui_es')
+                    <div class="alert alert-warning" role="alert">
+                     Pendiente
+                    </div>
+                    @enderror
+                </div>
+      
+                <div class="col-md">
+                  <label for="inputInstitucion" style="font-size: 15px; color:#000000;">Código Personal (Mineduc):
+      
+                        <!-- Button trigger modal -->
+                      <a class="btn" style="background-color:#a4cb39" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                      ?
+                      </a>
+                  </label>
+                  <input type='text' placeholder=""  wire:model="codigo_pe_es" class="form-control " required>
+                  @error('codigo_pe_es')
+                  <div class="alert alert-warning" role="alert">
+                    Pendiente
+                  </div>
+                  @enderror
+                </div>
+              
+            <div class="row g-3">
               <div class="col-md">
-                <label for="inputNombres" style="font-size: 15px; color:#000000;">Nombre Completo:
-                </label>
-                <input  wire:model="nombre_es" class="form-control " required>
-                @error('nombre_es')
+                    <label for="inputInstitucion" style="font-size: 15px; color:#000000;">Nacionalidad:</label>
+                    <input type='text' placeholder=""  wire:model="nac_es" class="form-control " required>
+                </div>
+                @error('nac_es')
                 <div class="alert alert-warning" role="alert">
                  Pendiente
                 </div>
                 @enderror
+                <div class="col-md">
+                  <label for="inputInstitucion" style="font-size: 15px; color:#000000;">Lugar Nacimiento (País):</label>
+                  <input type='text' placeholder="" wire:model="lug_nac_es" class="form-control " required>
+              </div>
+              @error('lug_nac_es')
+              <div class="alert alert-warning" role="alert">
+               Pendiente
+              </div>
+              @enderror
             </div>
             <div class="row g-3">
               <div class="col-md">
-                <label for="inputApellidos" style="font-size: 15px; color:#000000;">Fecha de Nacimiento:</label>
-                <input type="date"  wire:model="f_nacimiento_es" class="form-control " required>
-                @error('f_nacimiento_es')
+                <label for="inputInstitucion" style="font-size: 15px; color:#000000;">Teléfono de Casa:</label>
+                <input type='number' placeholder=""  wire:model="tel_es" class="form-control " required>
+                @error('tel_es')
                 <div class="alert alert-warning" role="alert">
-                 Pendiente
+                  Pendiente
                 </div>
                 @enderror
-            </div>
-            
-            <div class="col-md">
-              <label for="inputApellidos" style="font-size: 15px; color:#000000;">Género:</label>
-              <br>
-              <div class="form-check form-check-inline ">
-                <input class="form-check-input"  wire:model='genero' value="Masculino"  type="radio" wire:model="genero_es" id="flexRadioDefault1">
-                <label class="form-check-label" for="flexRadioDefault1" style="font-size: 15px; color:#000000;">
-                  Masculino
-                </label>
               </div>
-              <div class="form-check form-check-inline " >
-                <input class="form-check-input"  wire:model='genero' value="Femenino" type="radio" wire:model="genero_es" id="flexRadioDefault2">
-                <label class="form-check-label" for="flexRadioDefault2" style="font-size: 15px; color:#000000;">
-                  Femenino
-                </label>
-                @error('genero_es')
+              
+              <div class="col-md">
+                <label for="inputInstitucion" style="font-size: 15px; color:#000000;">Teléfono Celular:</label>
+                <input type='number' placeholder=""  wire:model="cel_es" class="form-control " required>
+                @error('cel_es')
                 <div class="alert alert-warning" role="alert">
                   Pendiente
                 </div>
                 @enderror
               </div>
             </div>
-
-            <div class="row g-3">
-              <div class="col-md">
-              <label for="inputDireccion" style="font-size: 15px; color:#000000;">CUI:</label>
-              <input type='number' placeholder=""  wire:model="cui_es" class="form-control " required>
-              @error('cui_es')
-              <div class="alert alert-warning" role="alert">
-               Pendiente
-              </div>
-              @enderror
-          </div>
-
+      
+          <div class="row g-3">
           <div class="col-md">
-            <label for="inputInstitucion" style="font-size: 15px; color:#000000;">Código Personal (Mineduc):
-
-                  <!-- Button trigger modal -->
-                <a class="btn" style="background-color:#a4cb39" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                ?
-                </a>
-            </label>
-            <input type='text' placeholder=""  wire:model="codigo_pe_es" class="form-control " required>
-            @error('codigo_pe_es')
-            <div class="alert alert-warning" role="alert">
-              Pendiente
+            <label for="inputInstitucion" style="font-size: 15px; color:#000000;">Dirección de domicilio:</label>
+            <input type='text' placeholder=""  wire:model="direccion_es" class="form-control" required>
+          </div>
+          @error('direccion_es')
+          <div class="alert alert-warning" role="alert">
+          Pendiente
+          </div>
+          @enderror
+            <div class="col-md">
+              <label for="inputApellidos" style="font-size: 15px; color:#000000;">Religión:</label>
+              <br>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" value="Catolica" wire:model="religion_es" id="flexRadioDefault20">
+                <label class="form-check-label" for="flexRadioDefault20" style="font-size: 15px; color:#000000;">
+                  Católica
+                </label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" value="Protestante" wire:model="religion_es" id="flexRadioDefault21">
+                <label class="form-check-label" for="flexRadioDefault21" style="font-size: 15px; color:#000000;">
+                  Protestante
+                </label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" value="Evangelica" wire:model="religion_es" id="flexRadioDefault22">
+                <label class="form-check-label" for="flexRadioDefault22" style="font-size: 15px; color:#000000;">
+                  Evangélica
+                </label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" value="Otra" wire:model="religion_es" id="flexRadioDefault2111q">
+                <label class="form-check-label" for="flexRadioDefault2111q" style="font-size: 15px; color:#000000;">
+                  Otra
+                </label>
+              </div>
             </div>
-            @enderror
+            @error('religion_es')
+            <div class="alert alert-warning" role="alert">
+            Pendiente
+            </div>
+            @enderror 
+            <a wire:click='val2' class="btn btn-outline-success">Validar</a>
+            
           </div>
-        
-      <div class="row g-3">
-        <div class="col-md">
-              <label for="inputInstitucion" style="font-size: 15px; color:#000000;">Nacionalidad:</label>
-              <input type='text' placeholder=""  wire:model="nac_es" class="form-control " required>
+        </form>
+      </div>
+    </div>
+  </div>
+  @endif
+
+
+  @if($gradoin!=null && $a==2)
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+      @if($val!=null && $val==2)
+      <button class="accordion-button collapsed" style="background-color:#d6e7a6; border:6px solid #a4cb39"  type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+     <h4 class="font-weight-bolder">  <b>Datos Encargado:</b>   </h4>
+      </button>
+      @else
+      <button class="accordion-button collapsed" style="background-color:#a6a8c3; border:6px solid #3a3e7b" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+      <h4 class="font-weight-bolder">  <b>Datos Encargado:</b>   </h4>
+      </button>
+      @endif
+    </h2>
+    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+      <div class="accordion-body">
+        <div class="table-responsive">
+          <form wire:submit.prevent="val3()" class="form-floating">
+            <div class="form-group col-xs-12">
+              <label for="inputNombres" style="font-size: 15px; color:#000000;">Nombre Completo:</label>
+              <input type="text" placeholder=""  wire:model="nombre_en" class="form-control " required>
           </div>
-          @error('nac_es')
+          @error('nombre_en')
           <div class="alert alert-warning" role="alert">
            Pendiente
           </div>
           @enderror
-          <div class="col-md">
-            <label for="inputInstitucion" style="font-size: 15px; color:#000000;">Lugar Nacimiento (País):</label>
-            <input type='text' placeholder="" wire:model="lug_nac_es" class="form-control " required>
+          <div class="row g-3">
+            <div class="col-md">>
+            <label for="fnacimiento_en" style="font-size: 15px; color:#000000;">Fecha Nacimiento:</label>
+            <input type="date" placeholder=""   wire:model="fnacimiento_en" class="form-control " required>
         </div>
-        @error('lug_nac_es')
+        @error('fnacimiento_en')
         <div class="alert alert-warning" role="alert">
          Pendiente
         </div>
         @enderror
-      </div>
-      <div class="row g-3">
+      
         <div class="col-md">
-          <label for="inputInstitucion" style="font-size: 15px; color:#000000;">Teléfono de Casa:</label>
-          <input type='number' placeholder=""  wire:model="tel_es" class="form-control " required>
-          @error('tel_es')
+              <label for="inputDPI" style="font-size: 15px; color:#000000;">DPI:</label>
+              <input type="number" placeholder="" type="number"   wire:model="dpi_en" class="form-control " required>
+          </div>
+          @error('dpi_en')
           <div class="alert alert-warning" role="alert">
-            Pendiente
+           Pendiente
           </div>
           @enderror
         </div>
-        
+          <div class="row g-3">
+            <div class="col-md">
+            <label for="inputNombres" style="font-size: 15px; color:#000000;">Extendido en:</label>
+            <input type="text" placeholder=""  wire:model="extentido_en" class="form-control " required>
+        </div>
+        @error('extentido_en')
+        <div class="alert alert-warning" role="alert">
+         Pendiente
+        </div>
+        @enderror
         <div class="col-md">
-          <label for="inputInstitucion" style="font-size: 15px; color:#000000;">Teléfono Celular:</label>
-          <input type='number' placeholder=""  wire:model="cel_es" class="form-control " required>
-          @error('cel_es')
-          <div class="alert alert-warning" role="alert">
-            Pendiente
+          <label for="inputApellidos" style="font-size: 15px; color:#000000;">Estado Civil:</label>
+          <br>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input"  type="radio" wire:model="es_civil_en" value="Casado" id="flexRadioEstado1">
+            <label class="form-check-label" for="flexRadioEstado1" style="font-size: 15px; color:#000000;">
+            Casado
+            </label>
           </div>
-          @enderror
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" wire:model="es_civil_en" value="Soltero" id="flexRadioEstado2">
+            <label class="form-check-label" for="flexRadioEstado2" style="font-size: 15px; color:#000000;">
+              Soltero
+            </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" wire:model="es_civil_en"  value="Viuda" id="flexRadioEstado3">
+            <label class="form-check-label" for="flexRadioEstado3" style="font-size: 15px; color:#000000;">
+              Viuda/o
+            </label>
+          </div>
         </div>
-      </div>
-
-    <div class="row g-3">
-    <div class="col-md">
-      <label for="inputInstitucion" style="font-size: 15px; color:#000000;">Dirección de domicilio:</label>
-      <input type='text' placeholder=""  wire:model="direccion_es" class="form-control" required>
-    </div>
-    @error('direccion_es')
-    <div class="alert alert-warning" role="alert">
-    Pendiente
-    </div>
-    @enderror
-      <div class="col-md">
-        <label for="inputApellidos" style="font-size: 15px; color:#000000;">Religión:</label>
-        <br>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" value="Catolica" wire:model="religion_es" id="flexRadioDefault20">
-          <label class="form-check-label" for="flexRadioDefault20" style="font-size: 15px; color:#000000;">
-            Católica
-          </label>
+        @error('es_civil_en')
+        <div class="alert alert-warning" role="alert">
+         Pendiente
         </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" value="Protestante" wire:model="religion_es" id="flexRadioDefault21">
-          <label class="form-check-label" for="flexRadioDefault21" style="font-size: 15px; color:#000000;">
-            Protestante
-          </label>
+        @enderror
         </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" value="Evangelica" wire:model="religion_es" id="flexRadioDefault22">
-          <label class="form-check-label" for="flexRadioDefault22" style="font-size: 15px; color:#000000;">
-            Evangélica
-          </label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" value="Otra" wire:model="religion_es" id="flexRadioDefault2111q">
-          <label class="form-check-label" for="flexRadioDefault2111q" style="font-size: 15px; color:#000000;">
-            Otra
-          </label>
-        </div>
-      </div>
-      @error('religion_es')
-      <div class="alert alert-warning" role="alert">
-      Pendiente
-      </div>
-      @enderror 
-      <a wire:click='val2' data-bs-toggle="collapse"  class="btn btn-outline-success">Validar</a>
-
-  
-    </div>
-  </form>
-</div>
-    </div>
-  </div>
-@endif
-       
-
-@if($a!=null && $a==2)
-<div class="accordion-item">
-  <h2 class="accordion-header" id="flush-headingOn">
-
-    @if($val!=null && $val==2)
-    <button class="accordion-button collapsed" style="background-color:#d6e7a6; border:6px solid #a4cb39" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFOR221" aria-expanded="false" aria-controls="flush-collapseFOR221">
-      <h4 class="font-weight-bolder">  <b>Datos Encargado:</b>   </h4>
-    </button>
-    @else
-    <button class="accordion-button collapsed" style="background-color:#a6a8c3; border:6px solid #3a3e7b" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFOR221" aria-expanded="false" aria-controls="flush-collapseFOR221">
-      <h4 class="font-weight-bolder">  <b>Datos Encargado:</b>   </h4>
-    </button>
-    @endif
-
-  </h2>
-  <div id="flush-collapseFOR221" class="accordion-collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-    <div class="accordion-body">
-      <div class="table-responsive">
-      <form wire:submit.prevent="val3()" class="form-floating">
+    
         <div class="form-group col-xs-12">
-          <label for="inputNombres" style="font-size: 15px; color:#000000;">Nombre Completo:</label>
-          <input type="text" placeholder=""  wire:model="nombre_en" class="form-control " required>
+          <label for="inputApellidos" style="font-size: 15px; color:#000000;">Direccion de domicilio:</label>
+          <input type="text" placeholder="" type="email" wire:model="direccion_en" class="form-control " required>
       </div>
-      @error('nombre_en')
-      <div class="alert alert-warning" role="alert">
-       Pendiente
-      </div>
-      @enderror
-      <div class="row g-3">
-        <div class="col-md">>
-        <label for="fnacimiento_en" style="font-size: 15px; color:#000000;">Fecha Nacimiento:</label>
-        <input type="date" placeholder=""   wire:model="fnacimiento_en" class="form-control " required>
-    </div>
-    @error('fnacimiento_en')
-    <div class="alert alert-warning" role="alert">
-     Pendiente
-    </div>
-    @enderror
-  
-    <div class="col-md">
-          <label for="inputDPI" style="font-size: 15px; color:#000000;">DPI:</label>
-          <input type="number" placeholder="" type="number"   wire:model="dpi_en" class="form-control " required>
-      </div>
-      @error('dpi_en')
-      <div class="alert alert-warning" role="alert">
-       Pendiente
-      </div>
-      @enderror
-    </div>
-      <div class="row g-3">
-        <div class="col-md">
-        <label for="inputNombres" style="font-size: 15px; color:#000000;">Extendido en:</label>
-        <input type="text" placeholder=""  wire:model="extentido_en" class="form-control " required>
-    </div>
-    @error('extentido_en')
-    <div class="alert alert-warning" role="alert">
-     Pendiente
-    </div>
-    @enderror
-    <div class="col-md">
-      <label for="inputApellidos" style="font-size: 15px; color:#000000;">Estado Civil:</label>
-      <br>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input"  type="radio" wire:model="es_civil_en" value="Casado" id="flexRadioEstado1">
-        <label class="form-check-label" for="flexRadioEstado1" style="font-size: 15px; color:#000000;">
-        Casado
-        </label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" wire:model="es_civil_en" value="Soltero" id="flexRadioEstado2">
-        <label class="form-check-label" for="flexRadioEstado2" style="font-size: 15px; color:#000000;">
-          Soltero
-        </label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" wire:model="es_civil_en"  value="Viuda" id="flexRadioEstado3">
-        <label class="form-check-label" for="flexRadioEstado3" style="font-size: 15px; color:#000000;">
-          Viuda/o
-        </label>
-      </div>
-    </div>
-    @error('es_civil_en')
-    <div class="alert alert-warning" role="alert">
-     Pendiente
-    </div>
-    @enderror
-    </div>
-
-    <div class="form-group col-xs-12">
-      <label for="inputApellidos" style="font-size: 15px; color:#000000;">Direccion de domicilio:</label>
-      <input type="text" placeholder="" type="email" wire:model="direccion_en" class="form-control " required>
-  </div>
-  @error('direccion_en')
-  <div class="alert alert-warning" role="alert">
-   Pendiente
-  </div>
-  @enderror
-
-  <div class="row g-3">
-    <div class="col-md">
-    <label for="inputApellidos" style="font-size: 15px; color:#000000;">Telefono de casa:</label>
-    <input placeholder="" type="number"  wire:model="tel_casa_en" class="form-control " required>
-</div>
-@error('tel_casa_en')
-<div class="alert alert-warning" role="alert">
- Pendiente
-</div>
-@enderror
-  <div class="col-md">
-  <label for="inputApellidos" style="font-size: 15px; color:#000000;">Telefono celular:</label>
-  <input placeholder="" type="number"  wire:model="cel_en" class="form-control " required>
-</div>
-@error('cel_en')
-<div class="alert alert-warning" role="alert">
-Pendiente
-</div>
-@enderror
-  </div>
-
-<div class="row g-3">
-<div class="col-md">
-          <label for="inputApellidos" style="font-size: 15px; color:#000000;">Correo electronico:</label>
-          <input placeholder="" type="email"  wire:model="correo_en" class="form-control " required>
-      </div>
-      @error('correo_en')
-      <div class="alert alert-warning" role="alert">
-       Pendiente
-      </div>
-      @enderror
-      <div class="col-md">
-        <label for="inputApellidos" style="font-size: 15px; color:#000000;">Religión:</label>
-        <br>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input"  type="radio" wire:model="religion_en" value="Catolica" id="flexRadioReligionen222" >
-          <label class="form-check-label" for="flexRadioReligionen222" style="font-size: 15px; color:#000000;">
-          Catolica
-          </label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" wire:model="religion_en" value="Protestante" id="flexRadioReligionen2">
-          <label class="form-check-label" for="flexRadioReligionen2" style="font-size: 15px; color:#000000;">
-            Protestante
-          </label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" wire:model="religion_en" value="Protestante" id="flexRadioReligionen23">
-          <label class="form-check-label" for="flexRadioReligionen23" style="font-size: 15px; color:#000000;">
-            Protestante
-          </label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" wire:model="religion_en" value="Evangelica" id="flexRadioReligionen3">
-          <label class="form-check-label" for="flexRadioReligionen3" style="font-size: 15px; color:#000000;">
-            Evangelica
-          </label>
-        </div>
-      </div>
-      @error('religion_en')
+      @error('direccion_en')
       <div class="alert alert-warning" role="alert">
        Pendiente
       </div>
       @enderror
     
-</div>
-@if($val1==2)
-<div class="row g-5">
-<a wire:click='val3' data-bs-toggle="collapse"  class="btn btn-outline-warning">Validar</a>
-</div>
-<br>
-<div class="row g-5">
-<button type="button" id="val"  class="btn btn-success">Confirmar Información</button>
-</div>
-@include('modals.modalinfo')
-@include('modals.modalval')
-@else
-<div class="row g-5">
-<a wire:click='val3' data-bs-toggle="collapse"  class="btn btn-outline-success">Validar</a>
-</div>
-@endif
-
-      </form>
+      <div class="row g-3">
+        <div class="col-md">
+        <label for="inputApellidos" style="font-size: 15px; color:#000000;">Telefono de casa:</label>
+        <input placeholder="" type="number"  wire:model="tel_casa_en" class="form-control " required>
+    </div>
+    @error('tel_casa_en')
+    <div class="alert alert-warning" role="alert">
+     Pendiente
+    </div>
+    @enderror
+      <div class="col-md">
+      <label for="inputApellidos" style="font-size: 15px; color:#000000;">Telefono celular:</label>
+      <input placeholder="" type="number"  wire:model="cel_en" class="form-control " required>
+    </div>
+    @error('cel_en')
+    <div class="alert alert-warning" role="alert">
+    Pendiente
+    </div>
+    @enderror
+      </div>
+    
+    <div class="row g-3">
+    <div class="col-md">
+              <label for="inputApellidos" style="font-size: 15px; color:#000000;">Correo electronico:</label>
+              <input placeholder="" type="email"  wire:model="correo_en" class="form-control " required>
+          </div>
+          @error('correo_en')
+          <div class="alert alert-warning" role="alert">
+           Pendiente
+          </div>
+          @enderror
+          <div class="col-md">
+            <label for="inputApellidos" style="font-size: 15px; color:#000000;">Religión:</label>
+            <br>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input"  type="radio" wire:model="religion_en" value="Catolica" id="flexRadioReligionen222" >
+              <label class="form-check-label" for="flexRadioReligionen222" style="font-size: 15px; color:#000000;">
+              Catolica
+              </label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" wire:model="religion_en" value="Protestante" id="flexRadioReligionen2">
+              <label class="form-check-label" for="flexRadioReligionen2" style="font-size: 15px; color:#000000;">
+                Protestante
+              </label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" wire:model="religion_en" value="Protestante" id="flexRadioReligionen23">
+              <label class="form-check-label" for="flexRadioReligionen23" style="font-size: 15px; color:#000000;">
+                Protestante
+              </label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" wire:model="religion_en" value="Evangelica" id="flexRadioReligionen3">
+              <label class="form-check-label" for="flexRadioReligionen3" style="font-size: 15px; color:#000000;">
+                Evangelica
+              </label>
+            </div>
+          </div>
+          @error('religion_en')
+          <div class="alert alert-warning" role="alert">
+           Pendiente
+          </div>
+          @enderror
+        
+    </div>
+    @if($val1==2)
+    <div class="row g-5">
+    <a wire:click='val3' data-bs-toggle="collapse"  class="btn btn-outline-warning">Validar</a>
+    </div>
+    <br>
+    <div class="row g-5">
+    <button type="button" id="val"  class="btn btn-success">Confirmar Información</button>
+    </div>
+    @include('modals.modalinfo')
+    @include('modals.modalval')
+    @else
+    <div class="row g-5">
+    <a wire:click='val3' data-bs-toggle="collapse"  class="btn btn-outline-success">Validar</a>
+    </div>
+    @endif
+    
+          </form>
+        </div>
+     </div>
     </div>
   </div>
-  </div>
+  @endif
 </div>
+
 @endif
 
-</div>
-@endif
-</div>
-</div>
 <hr>
 <style type="text/css">
 
@@ -745,5 +717,5 @@ Pendiente
  </style>
 
 
-
+</div>
 </div>

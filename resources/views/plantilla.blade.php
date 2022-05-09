@@ -11,43 +11,20 @@
       <!-- site metas -->
       <title>Colegio Bilingüe El Castaño</title>
       <link rel="shortcut icon" href="{{ asset('img/lo.png')}}" />
-  
       <!-- style css -->
       <link rel="stylesheet" href="{{ asset('css/style.css')}}">
       <link rel="stylesheet" href="{{ asset('css/responsive.css')}}">
       <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-      
-
       <!-- fevicon -->
       <link rel="icon" href="{{ asset('images/fevicon.png" type="image/gif')}}" />
-
       <!-- fonts -->
        <!-- bootstrap css -->
-
        <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css')}}">
-
-       <!-- style css -->
- 
-       <link rel="stylesheet" href="{{ asset('css/style.css')}}">
- 
-       <link rel="stylesheet" href="{{ asset('css/responsive.css')}}">
- 
-       <!-- fevicon -->
- 
-       <link rel="icon" href="{{ asset('images/fevicon.png" type="image/gif')}}" />
- 
        <!-- Scrollbar Custom CSS -->
- 
        <link rel="stylesheet" href="{{ asset('css/jquery.mCustomScrollbar.min.css')}}">
- 
        <!-- Tweaks for older IEs-->
- 
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
- 
-       <link rel="stylesheet" type="text/css" href="{{ asset('css/animate.min.css')}}">
- 
        <link rel="stylesheet" href="css/style_step.css"/>
-
         @livewireStyles
    </head>
    <!-- body -->
@@ -76,48 +53,135 @@
                </div> 
             </div>
          </div>
+         <div class="col-xs-12">
+            <div class="container-fluid px-0">
+               <nav class="navbar navbar-expand-lg navbar-light">
+                   <div class="d-flex">
+                       <button class="navbar-toggler justify-content-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                           <span class="navbar-toggler-icon"></span>
+                       </button>
+                   </div>
+                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                     <div class="navbar-nav w-50 p-6 mx-auto justify-content-evenly" style="width: 200px;">
+                      <a class="nav-item nav-link enojoy2-css2" href="{{ url('/') }}" style="color: #a000000"style="font-family: Century Gothic"><b>Inicio</b></a>
+                      <a class="nav-item nav-link enojoy2-css2" href="{{ url('/nosotros') }}"style="color: #a000000"  style="font-family: Century Gothic"><b>Nosotros</b></a>
+                      <a class="nav-item nav-link enojoy2-css2" href="/adm"style="color: #a000000" style="font-family: Century Gothic"><b>Admisiones 2023</b></a>
+                      <li class="nav-item dropdown enojoy2-css2">
+                         <a class="nav-item nav-link dropdown-toggle enojoy2-css2" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: #a000000" style="font-family: Century Gothic">
+                          <b>Validar Gestión</b>
+                         </a>
+                         <ul class="dropdown-menu btn-outline-light enojoy2-css2"  aria-labelledby="navbarDropdown">
+                           <li><a class="dropdown-item enojoy2-css2" href="{{ url('/val') }}" style="color: #a000000" style="font-family: Century Gothic">Pre-Inscripción</a></li>
+                           <li><a class="dropdown-item enojoy2-css2" href="{{ url('/conducta') }}" style="color: #a000000" style="font-family: Century Gothic">Carta de Conducta</a></li>
+                           <li><a class="dropdown-item enojoy2-css2" href="{{ url('/soportecnico') }}" style="color: #a000000" style="font-family: Century Gothic">Soporte Técnico</a></li>
+                           <li><a class="dropdown-item enojoy2-css2" href="{{ url('/restablecerusuario') }}" style="color: #a000000" style="font-family: Century Gothic">Restablecer Usuario</a></li>
+                         </ul>
+                       </li>
+                       <a class="nav-item nav-link enjoy-css" target="_blank" href="https://colegioelcastano.edu.gt/portal/index.php"style="font-family: Century Gothic"><b>&nbsp;&nbsp;Casys&nbsp;&nbsp;</b></a>                 
+                     </div>
+                 </div>
+               </nav>
+           </div>
+         </div>
+         <style>
+.enjoy-css {
+  display: inline-block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  cursor: pointer;
+  padding: 10px 20px;
+  border: none;
+  -webkit-border-radius: 12px;
+  border-radius: 12px;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: -webkit-linear-gradient(-90deg, #a4cb39 0, #a4cb39);
+  background: -moz-linear-gradient(180deg, #a4cb39 0, #a4cb39);
+  background: linear-gradient(180deg, #a4cb39 0, r#a4cb39);
+  background-position: 50% 50%;
+  -webkit-background-origin: padding-box;
+  background-origin: padding-box;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  -webkit-background-size: auto auto;
+  background-size: auto auto;
+  -webkit-box-shadow: 2px 2px 2px 0 rgba(58,228,0,0.2) ;
+  box-shadow: 2px 2px 2px 0 rgba(58,228,0,0.2) ;
+  text-shadow: -1px -1px 0 rgba(15,73,168,0.66) ;
+  -webkit-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.enjoy-css:hover {
+  border: 0px solid #33a506;
+  -webkit-border-radius: 12px;
+  border-radius: 12px;
+  background: -webkit-linear-gradient(-90deg, rgba(206,239,139,1) 0, rgba(124,188,10,1) 100%);
+  background: -moz-linear-gradient(180deg, rgba(206,239,139,1) 0, rgba(124,188,10,1) 100%);
+  background: linear-gradient(180deg, rgba(206,239,139,1) 0, rgba(124,188,10,1) 100%);
+  background-position: 50% 50%;
+  -webkit-background-origin: padding-box;
+  background-origin: padding-box;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  -webkit-background-size: auto auto;
+  background-size: auto auto;
+}
+
+.enjoy-css:active {
+  -webkit-border-radius: 17px;
+  border-radius: 12px;
+  background: -webkit-linear-gradient(-90deg, rgb(182, 233, 79) 0, rgb(183, 231, 99) 100%);
+  background: -moz-linear-gradient(180deg, rgb(182, 233, 79) 0, rgb(183, 231, 99) 100%);
+  background: linear-gradient(180deg, rgb(182, 233, 79) 0, rgb(183, 231, 99) 100%);
+  background-position: 50% 50%;
+  -webkit-background-origin: padding-box;
+  background-origin: padding-box;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  -webkit-background-size: auto auto;
+  background-size: auto auto;
+}
+
+.enojoy2-css2:hover {
+   font: normal 16px/normal "Century Gothic", Times, serif;
+  border: 0px solid #33a506;
+  color:#a4cb39 !important;
+  -webkit-border-radius: 12px;
+  border-radius: 12px;
+  background: -webkit-linear-gradient(-90deg, rgb(255, 255, 255) 0, rgb(255, 255, 255) 100%);
+  background: -moz-linear-gradient(180deg, rgb(255, 255, 255) 0, rgb(255, 255, 255) 100%);
+  background: linear-gradient(180deg, rgb(255, 255, 255) 0, rgb(255, 255, 255) 100%);
+  background-position: 50% 50%;
+  -webkit-background-origin: padding-box;
+  background-origin: padding-box;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  -webkit-background-size: auto auto;
+  background-size: auto auto;
+}
 
 
-         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-               <ul class="navbar-nav">
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                     <span class="navbar-toggler-icon"></span>
-                  </button>
-               
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <li>
-                     <a class="nav-link" href="{{ url('/') }}" style="color: #000000" style="font-family: Century Gothic"><b>Inicio</b></a>
-                  </li>
-                  <p></p>
-                  <li class="nav-item">
-                    <a class="nav-link"  href="{{ url('/nosotros') }}" style="color: #000000" style="font-family: Century Gothic"><b>Nosotros</b></a>
-                  </li>
-                  <p></p>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/adm" style="color: #000000" style="font-family: Century Gothic"><b>Admisiones 2023</b></a>
-                  </li>
-                  <p></p>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: #000000" style="font-family: Century Gothic">
-                     <b>Validar Gestión</b>
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="{{ url('/val') }}" style="color: #000000" style="font-family: Century Gothic">Pre-Inscripción</a></li>
-                      <li><a class="dropdown-item" href="{{ url('/conducta') }}" style="color: #000000" style="font-family: Century Gothic">Carta de Conducta</a></li>
-                      <li><a class="dropdown-item" href="{{ url('/soportecnico') }}" style="color: #000000" style="font-family: Century Gothic">Soporte Técnico</a></li>
-                      <li><a class="dropdown-item" href="{{ url('/restablecerusuario') }}" style="color: #000000" style="font-family: Century Gothic">Restablecer Usuario</a></li>
-                    </ul>
-                  </li>
-                  <p></p>
-                  <li class="nav-item">
-                     <a class="nav-link" target="_blank" type="button" class="btn buy me-md-1; font-size: 25px" style="color: #000000" href="https://colegioelcastano.edu.gt/portal/index.php"><b>Casys</b></a>
-                  </li>
-               </ul>
-               </ul>
-              </div>
-            </div>
-          </nav>
+.enojoy2-css2:active {
+  -webkit-border-radius: 17px;
+  border-radius: 12px;
+  color:#a4cb39 !important;
+  background: -webkit-linear-gradient(-90deg, rgb(236, 236, 236) 0, rgb(255, 255, 255) 100%);
+  background: -moz-linear-gradient(180deg,rgb(236, 236, 236) 0, rgb(255, 255, 255) 100%);
+  background: linear-gradient(180deg, rgb(236, 236, 236) 0, rgb(255, 255, 255) 100%);
+  background-position: 50% 50%;
+  -webkit-background-origin: padding-box;
+  background-origin: padding-box;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  -webkit-background-size: auto auto;
+  background-size: auto auto;
+}
+
+         </style>
       </div>
 
 
@@ -142,6 +206,7 @@
       {{-- <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script> --}}
       <br>
    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+   
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   <script>
     AOS.init();
@@ -205,7 +270,7 @@
        <div class="copyright">
            <div class="row">
                 <div class="col-xs-12">
-                   <div class="top-box; float-right" >
+                   <div class="top-box" style="float: center;">
                     <ul class="sociel_link">
                      <li> <a href="https://www.facebook.com/colegioelcastano" target="_blank"><i style="font-size: 30px;"class="fa fa-facebook"></i></a></li>
                      <li> <a href="https://api.whatsapp.com/send?phone=50246432931" target="_blank"><i style="font-size: 30px;"class="fa fa-whatsapp"></i></a></li>
