@@ -1,8 +1,12 @@
 <section class="slider_section">
 
   <div id="main_slider" class="carousel slide banner-main" data-ride="carousel">
-        <img class="first-slide" src="{{ asset('images/a.jpg') }}" alt="First slide">
+        <img class="first-slide" src="{{ asset('img/banner-gmail.png') }}" alt="First slide">
   </div>
+  <br>
+  <br>
+  <br>
+  <br>
 </section>
 <div class="container col-12">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>

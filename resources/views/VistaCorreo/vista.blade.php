@@ -8,12 +8,11 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    <title>GestionCastanio</title>
+    <title>GestionCastano</title>
   </head>
   <body style="background-color: #e0e9c6; border:3px solid #d6e7a6; border-radius: 60px 60px 60px 60px;">
-            <h2 class="card-title text-center"  style="color:#2a2caf; text-align:center;">
-                <i>  Gracias por Iniciar su proceso de Pre-Inscripción</i>
-              </h2>
+            <img src="img/banner-gmail.png" alt="pre-inscripcion">
+    
               <p class="card-title text-center" style="background-color: color:#3739b3; text-align:center; "> <b> <i>
                 Se detalle información y pasos a seguir:
               </i>

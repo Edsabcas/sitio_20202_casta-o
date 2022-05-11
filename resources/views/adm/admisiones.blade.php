@@ -42,7 +42,7 @@
                                     </a>
                                      </p> 
                                      
-                                     <hr>
+                                     <br>
                                     <p class="text-center">
                                         <a style="color:white; width:100%; display:block;"type="button" class="btn buy me-md-1; font-size: 25px" href="{{url('/ing')}}">Pre-inscribir</a>
                                     </p>
@@ -72,7 +72,7 @@
             </div>
        </div>
 
-<hr>
+<br>
 <style type="text/css">
 
 
