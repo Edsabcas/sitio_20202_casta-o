@@ -1,7 +1,7 @@
 
 
 <!-- Modal -->
-<div wire:ignore.self id="valinfo" class="modal fade" role="dialog" tabindex="-1" aria-labelledby="valinfo" aria-hidden="true">
+<div wire:ignore.self id="valinfo" style="border-radius: 60px 60px 60px 60px;" class="modal fade" role="dialog" tabindex="-1" aria-labelledby="valinfo" aria-hidden="true">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">
@@ -14,8 +14,8 @@
               <div class="carousel-item active" >
                 <div class="card text-dark mb-10" style="background-color:#d6e7a6; border:6px solid #a4cb39" style="max-width: 50rem;">
                   <div class="card-header text-center">Grado de Pre-inscripción: </div>
-                  <div class="card-body">
-                    <div class="table-responsive">
+                  <div class="card-body" style="border-radius: 60px 60px 60px 60px;">
+                    <div class="table-responsive" style="border-radius: 60px 60px 60px 60px;">
                       <table class="table text-center">
                         <thead>
                           
@@ -166,7 +166,7 @@
                     </div>
   
                     <div class="row g-3">
-                      <button id="valpedido" data-bs-dismiss="modal" class="btn btn-warning">Enviar Información</button>
+                      <button id="valpedido" data-bs-dismiss="modal" style="border-radius: 60px 60px 60px 60px;" class="btn btn-warning">Enviar Información</button>
                     </div>
   
                    </div>
@@ -182,7 +182,7 @@
         </div>
         <div class="modal-footer">
   
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Regresar</button>
+          <button type="button" class="btn btn-secondary" style="border-radius: 60px 60px 60px 60px;" data-bs-dismiss="modal">Regresar</button>
           
         </div>
       </div>

@@ -10,9 +10,14 @@
 
     <title>GestionCastanio</title>
   </head>
-  <body style="background-color: #d6e7a6; border:3px solid #a4cb39; border-radius: 5px 30px 45px 60px;">
-            <h2 class="card-title text-center"  style="color:#2a2caf; text-align:center;">Gracias por Iniciar su proceso de Pre-Inscripción</h2>
-              <p class="card-title text-center" style="background-color: #d6e7a6; border:3px solid #a4cb39; color:#3739b3; text-align:center;"> <b>Se detalle información y pasos a seguir:</b> </p>
+  <body style="background-color: #e0e9c6; border:3px solid #d6e7a6; border-radius: 60px 60px 60px 60px;">
+            <h2 class="card-title text-center"  style="color:#2a2caf; text-align:center;">
+                <i>  Gracias por Iniciar su proceso de Pre-Inscripción</i>
+              </h2>
+              <p class="card-title text-center" style="background-color: color:#3739b3; text-align:center; "> <b> <i>
+                Se detalle información y pasos a seguir:
+              </i>
+                 </b> </p>
               <div class="table-responsive">
                   <div class="card text-center">
                  <h1 style="color:#6a62d6;">

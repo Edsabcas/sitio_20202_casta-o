@@ -134,8 +134,8 @@
       </button>
       @endif
     </h2>
-    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
-      <div class="accordion-body">
+    <div id="panelsStayOpen-collapseOne" style="border-radius: 60px 60px 60px 60px;" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+      <div class="accordion-body" style="border-radius: 60px 60px 60px 60px;">
         <div class="tab">
                   
           @error('gradoin') 
@@ -145,7 +145,7 @@
               <span>Debe seleccionar un grado</span>
              </div> @enderror
           
-          <ul class="list-group">
+          <ul class="list-group" style="border-radius: 60px 60px 60px 60px;">
             @foreach($grados as $grado)
             <li class="list-group-item list-group-item-action"  for="flexRadioGrado{{$grado->ID_GR}}">
               <input class="form-check-input me-1" type="radio" wire:click='selgrado("{{$grado->ID_GR}}","{{$grado->GRADO}}")' name="grado" value="{{$grado->ID_GR}}" aria-label="..." id="flexRadioGrado{{$grado->ID_GR}}">
@@ -177,8 +177,8 @@
       </button>
       @endif
     </h2>
-    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingTwo">
-      <div class="accordion-body">
+    <div id="panelsStayOpen-collapseTwo"style="border-radius: 60px 60px 60px 60px;" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingTwo">
+      <div class="accordion-body" style="border-radius: 60px 60px 60px 60px;">
                  <form wire:submit.prevent="" class="form-floating">
                     <div class="col-md">
                       <label for="inputNombres" style="font-size: 15px; color:#000000;">Nombre Completo:
@@ -335,7 +335,7 @@
             Pendiente
             </div>
             @enderror 
-            <a class="btn btn-outline-success"  type="button" wire:click='val2' >Validar</a>
+            <a class="btn btn-outline-success" style="border-radius: 60px 60px 60px 60px;"  type="button" wire:click='val2' >Validar</a>
             
           </div>
         </form>
@@ -361,8 +361,8 @@
       </button>
       @endif
     </h2>
-    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingThree">
-      <div class="accordion-body">
+    <div id="panelsStayOpen-collapseThree" style="border-radius: 60px 60px 60px 60px;"class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingThree">
+      <div class="accordion-body" style="border-radius: 60px 60px 60px 60px;">
         <div class="table-responsive">
           <form wire:submit.prevent="val3()" class="form-floating">
             <div class="form-group col-xs-12">
@@ -491,9 +491,9 @@
               </label>
             </div>
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" wire:model="religion_en" value="Protestante" id="flexRadioReligionen23">
+              <input class="form-check-input" type="radio" wire:model="religion_en" value="Otra" id="flexRadioReligionen23">
               <label class="form-check-label" for="flexRadioReligionen23" style="font-size: 15px; color:#000000;">
-                Protestante
+                Otra
               </label>
             </div>
             <div class="form-check form-check-inline">
@@ -511,9 +511,9 @@
         
     </div>
     <br>
-    <div class="row g-4">
+    <div class="row g-4" style="border-radius: 60px 60px 60px 60px;">
       
-    <a wire:click='val3' type="button"  class="btn btn-warning">Validar</a>
+    <a wire:click='val3' type="button" style="border-radius: 60px 60px 60px 60px;" class="btn btn-warning">Validar</a>
     </div>
     <br>
 
@@ -525,7 +525,7 @@
   @if($val1==2)
   <br>
   <div class="d-grid gap-2">
-  <button id="val"  class="btn btn-pre">Confirmar Información</button>
+  <button id="val" style="border-radius: 60px 60px 60px 60px;" class="btn btn-pre">Confirmar Información</button>
   </div>
   @include('modals.modalinfo')
   @include('modals.modalval')
