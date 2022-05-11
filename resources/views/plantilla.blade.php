@@ -18,6 +18,8 @@
       <link rel="stylesheet" href="{{ asset('css/style.css')}}">
       <link rel="stylesheet" href="{{ asset('css/responsive.css')}}">
       <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+      
       
 
       <!-- fevicon -->
@@ -73,6 +75,16 @@
                                         <b>Validar Gestión</b>
                                     </a>
                                 </li>
+                                <li>
+                                 <a href="{{ url('/soportecnico') }}" font face="Century Gothic" font size=35>
+                                     <b>SOPORTE (TEMPORAL)</b>
+                                 </a>
+                                </li>
+                                <li>
+                                 <a href="{{ url('/restablecerusuario') }}" font face="Century Gothic" font size=35>
+                                     <b>RESTABLECER USUARIO (TEMPORAL)</b>
+                                 </a>
+                                 </li>
                                 <li ><a target="_blank" type="button" class="btn buy me-md-1; font-size: 25px" href="https://colegioelcastano.edu.gt/portal/index.php"><b>Casys</b></a> </li> 
                            </ul>
                         </nav>

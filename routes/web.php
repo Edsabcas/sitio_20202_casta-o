@@ -26,3 +26,7 @@ Route::get('/adm', [InstController::class, 'admisiones']);
 Route::post('/adm', [InsComponent::class, 'val2']);
 
 Route::get('/val', [InstController::class, 'val']);
+
+Route::get('/soportecnico', [InstController::class, 'soportecnico']);
+
+Route::get('/restablecerusuario', [InstController::class, 'restablecerusuario']);

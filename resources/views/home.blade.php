@@ -15,6 +15,14 @@
 @include('validar')
 @endif
 
+@if($op==6)
+@include('soportecnico')
+@endif
+
+@if ($op==7)
+@include('restablecerusuario')    
+@endif
+
 @else
 @include('inicio')
 @endif
