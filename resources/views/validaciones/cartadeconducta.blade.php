@@ -33,7 +33,7 @@
           <option></option>
           <label for="name" style="color: #3a3e7b" data-aos="fade"><b>Nombre</b></label><br>
           <div>
-              <input class="form-control input100" id="nombre" name="nombre" type="text" class="validate" required>
+              <input class="form-control input100 rounded-pill" id="nombre" name="nombre" type="text" class="validate" required>
               <span></span>
           </div>
       </div>
@@ -43,17 +43,17 @@
           <br>
     
           <label for="lastname" style="color: #3a3e7b" data-aos="fade"><b>CUI</b></label>
-          <input class="form-control me-2 input100" id="apellido" name="apellido" type="number" class="validate" required>
+          <input class="form-control me-2 input100 rounded-pill" id="apellido" name="apellido" type="number" class="validate" required>
       </div>
       <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
           <option></option>
           <label for="email" style="color: #3a3e7b" data-aos="fade"><b>Grado</b></label><br>
-          <input class="form-control me-2 input100"id='email'name="email"type="text"class="validate"required>
+          <input class="form-control me-2 input100 rounded-pill"id='email'name="email"type="text"class="validate"required>
       </div>
       <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
           <option></option>
           <label for="number" style="color: #3a3e7b" data-aos="fade"><b>fecha de nacimiento </b></label><br>
-          <input class="form-control me-2 input100"id='telefono'name="telefono"type="date"pattern="[0-9]{​​​​​10}​​​​​"class="validate"required>
+          <input class="form-control me-2 input100 rounded-pill"id='telefono'name="telefono"type="date"pattern="[0-9]{​​​​​10}​​​​​"class="validate"required>
       </div>
         
       <span class="text-black" style="font-size: 15px; color:#2e117e;" data-aos="fade">Datos del encargado requeridos:</span>
@@ -62,21 +62,21 @@
         <option></option>
         <label for="name" style="color: #3a3e7b" data-aos="fade"><b>Nombre</b></label><br>
         <div>
-            <input class="form-control input100" id="nombre" name="nombre" type="text" class="validate" required>
+            <input class="form-control input100 rounded-pill" id="nombre" name="nombre" type="text" class="validate" required>
             <span></span>
         </div>
     </div>
     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
         <option></option>
         <label for="lastname" style="color: #3a3e7b" data-aos="fade"><b>DPI</b></label>
-        <input class="form-control me-2 input100" id="apellido" name="apellido" type="number" class="validate" required>
+        <input class="form-control me-2 input100 rounded-pill" id="apellido" name="apellido" type="number" class="validate" required>
     </div>
     <div class="col-md-12">
         <option></option>
         <label for="number" style="color: #3a3e7b" data-aos="fade"><b>Fecha de nacimiento </b></label><br>
-        <input class="form-control me-2 input100"id='telefono'name="telefono"type="date"pattern="[0-9]{​​​​​10}​​​​​"class="validate"required>
+        <input class="form-control me-2 input100 rounded-pill"id='telefono'name="telefono"type="date"pattern="[0-9]{​​​​​10}​​​​​"class="validate"required>
     </div>
-    <input type="submit"class="btn btn-outline-success input100"onclick="enviarFormulario()"value="Enviar">
+    <input type="submit"class="btn btn-outline-success input100 rounded-pill"onclick="enviarFormulario()"value="Enviar">
     <p style= "float:right; max-width:5000px; margin-top: -7px;"class="green-text"id="enviado"></p>
 </div>
 
