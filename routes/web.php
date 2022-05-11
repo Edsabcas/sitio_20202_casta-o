@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\InstController;
+use App\Http\Controllers\valController;
 use App\Http\Livewire\InsComponent;
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +27,8 @@ Route::get('/adm', [InstController::class, 'admisiones']);
 Route::post('/adm', [InsComponent::class, 'val2']);
 
 Route::get('/val', [InstController::class, 'val']);
+
+Route::get('/conducta', [valController::class, 'conducta']);
 
 Route::get('/soportecnico', [InstController::class, 'soportecnico']);
 

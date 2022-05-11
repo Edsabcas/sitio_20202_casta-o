@@ -30,7 +30,7 @@
     <div class="row">
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
             <option></option>
-            <label for="name" style="color: #3a3e7b" data-aos="fade-up"><b>Nombre del Alumno</b></label><br>
+            <label for="name" style="color: #3a3e7b" data-aos="fade"><b>Nombre del Alumno</b></label><br>
             <div>
                 <input class="form-control input100" id="nombre" name="nombre" type="text" class="validate" required>
                 <span></span>
@@ -38,21 +38,29 @@
         </div>
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
             <option></option>
-            <label for="lastname" style="color: #3a3e7b" data-aos="fade-up"><b>CUI del Alumno</b></label>
+            <label for="lastname" style="color: #3a3e7b" data-aos="fade"><b>CUI del Alumno</b></label>
             <input class="form-control me-2 input100" id="apellido" name="apellido" type="text" class="validate" required>
         </div>
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
             <option></option>
-            <label for="email" style="color: #3a3e7b" data-aos="fade-up"><b>Grado</b></label><br>
+            <label for="email" style="color: #3a3e7b" data-aos="fade"><b>Grado</b></label><br>
             <input class="form-control me-2 input100"id='email'name="email"type="email"class="validate"required>
         </div>
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
             <option></option>
-            <label for="number" style="color: #3a3e7b" data-aos="fade-up"><b>Sección</b></label><br>
+            <label for="number" style="color: #3a3e7b" data-aos="fade"><b>Sección</b></label><br>
             <input class="form-control me-2 input100"id='telefono'name="telefono"type="tel"pattern="[0-9]{​​​​​10}​​​​​"class="validate"required>
         </div>
-        <div class="col-md-12">
-            <label for="message" style="color: #3a3e7b" data-aos="fade-up"><b>Descripción del problema</b></label><br>
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+            <label for="select" style="color: #3a3e7b" data-aos="fade"><b>Tipo de problema</b></label><br>
+            <select class="form-control me-2 input100" id='select'name="plataforma" type="select" class="validate" required>
+              <option selected style="color: #000000">Seleccionar:</option>
+              <option value="1" style="color: #000000">Problema con el Equipo (Hardware)</option>
+              <option value="2" style="color: #000000">Problema con el sistema (Software)</option>
+            </select>
+          </div>
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+            <label for="message" style="color: #3a3e7b" data-aos="fade"><b>Descripción del problema</b></label><br>
             <textarea class="form-control me-2 input100"id="mensaje" rows="50" name="mensaje"data-length="240"></textarea>
         </div>
         <input type="submit"class="btn btn-outline-success input100"onclick="enviarFormulario()"value="Enviar">

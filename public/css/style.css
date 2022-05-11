@@ -2825,7 +2825,7 @@ dos bordes con color y que giramos con transform: rotate(-45deg);
 	height: 16px;
 	display: block;
 	border-left:4px solid #26bb3f;
-	border-bottom:4px solid #26bb3f;
+	border-bottom:4px solid #ff0000;
 	transform: rotate(-45deg); /* Giramos el cuadrado */
 	transition: all 0.25s ease;
 }

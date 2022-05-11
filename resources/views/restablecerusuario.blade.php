@@ -9,7 +9,11 @@
         <div class="row">
             <div class="col-md-7 offset-md-3">
             <div class="title">
+<<<<<<< HEAD
                 <h1 class="fs-1" style="color: #3a3e7b">Restablecer Usuario</h1>
+=======
+                <h1 class="fs-1" style="color: #3a3e7b" data-aos="fade-up">RESTABLECER USUARIO</h1>
+>>>>>>> 4e49917ecbfbf311a8159cb5e8e75bfef26de189
 
                 <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="#a4cb39" class="bi bi-person-workspace" viewBox="0 0 16 16">
                     <path d="M4 16s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H4Zm4-5.95a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/>
@@ -31,7 +35,7 @@
     <div class="row">
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
             <option></option>
-            <label for="name" style="color: #3a3e7b"><b>Nombre</b></label><br>
+            <label for="name" style="color: #3a3e7b" data-aos="fade"><b>Nombre</b></label><br>
             <div>
                 <input class="form-control input100" id="nombre" name="nombre" type="text" class="validate" required>
                 <span></span>
@@ -39,21 +43,31 @@
         </div>
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
             <option></option>
-            <label for="lastname" style="color: #3a3e7b"><b>CUI</b></label>
+            <label for="lastname" style="color: #3a3e7b" data-aos="fade"><b>CUI</b></label>
             <input class="form-control me-2 input100" id="apellido" name="apellido" type="text" class="validate" required>
         </div>
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
             <option></option>
-            <label for="email" style="color: #3a3e7b"><b>Grado</b></label><br>
-            <input class="form-control me-2 input100"id='email'name="email"type="email"class="validate"required>
+            <label for="email" style="color: #3a3e7b" data-aos="fade"><b>Grado</b></label><br>
+            <input class="form-control me-2 input100" id='email'name="email"type="email"class="validate"required>
         </div>
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
             <option></option>
-            <label for="number" style="color: #3a3e7b"><b>Sección</b></label><br>
+            <label for="number" style="color: #3a3e7b" data-aos="fade"><b>Sección</b></label><br>
             <input class="form-control me-2 input100"id='telefono'name="telefono"type="tel"pattern="[0-9]{​​​​​10}​​​​​"class="validate"required>
         </div>
-        <div class="col-md-12">
-            <label for="message" style="color: #3a3e7b"><b>Usuario</b></label><br>
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+            <label for="select" style="color: #3a3e7b" data-aos="fade"><b>Plataforma</b></label><br>
+            <select class="form-control me-2 input100" id='select'name="plataforma" type="select" class="validate" required>
+              <option selected style="color: #000000">Seleccionar:</option>
+              <option value="1" style="color: #000000">Teams</option>
+              <option value="2" style="color: #000000">Geducar</option>
+              <option value="3" style="color: #000000">Progrentis</option>
+              <option value="4" style="color: #000000">MyOn</option>
+            </select>
+          </div>
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+            <label for="message" style="color: #3a3e7b" data-aos="fade"><b>Usuario</b></label><br>
             <input class="form-control me-2 input100" id='usuario' name="usuario" type="tel" class="validate" required>
         </div>
         <input type="submit"class="btn btn-outline-success input100"onclick="enviarFormulario()"value="Enviar">
