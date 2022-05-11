@@ -39,7 +39,20 @@
 </div>
 
 <div class="container">
-
+@if($mensaje!=null  && $mensaje==1)
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+  <strong>Su gestión ha sido ingresada satisfactoriamente.</strong><br>
+  Puede validar el correo de encargado, y encontrará su gestión y los pasos a realizar.
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+@elseif($mensaje!=null && $mensaje==2)
+<div class="alert alert-danger d-flex align-items-center" role="alert">
+  <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+  <div>
+    Intente en unos minutos, no se logro enviar su información.
+  </div>
+</div>
+@endif
 <div class="row">
 @if($val==null)
 
@@ -89,92 +102,31 @@
 </div>
 </div>
 </div>
-<style>
-  .btn-pre {
-    display: inline-block;
-    -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
-    cursor: pointer;
-    padding: 10px 20px;
-    border: none;
-    -webkit-border-radius: 12px;
-    border-radius: 12px;
-    font: normal 16px/normal "Century Gothic", Times, serif;
-    color: rgba(255,255,255,0.9);
-    -o-text-overflow: clip;
-    text-overflow: clip;
-    background: -webkit-linear-gradient(-90deg, #3a3e7b 0, #3a3e7b);
-    background: -moz-linear-gradient(180deg, #3a3e7b 0, #3a3e7b);
-    background: linear-gradient(180deg, #3a3e7b 0, #3a3e7b);
-    background-position: 50% 50%;
-    -webkit-background-origin: padding-box;
-    background-origin: padding-box;
-    -webkit-background-clip: border-box;
-    background-clip: border-box;
-    -webkit-background-size: auto auto;
-    background-size: auto auto;
-    -webkit-box-shadow: 2px 2px 2px 0 rgba(58,228,0,0.2) ;
-    box-shadow: 2px 2px 2px 0 rgba(58,228,0,0.2) ;
-    text-shadow: -1px -1px 0 rgba(15,73,168,0.66) ;
-    -webkit-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
-    -moz-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
-    -o-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
-    transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
-  }
-  
-  .btn-pre:hover {
-    border: 0px solid #33a506;
-    -webkit-border-radius: 12px;
-    border-radius: 12px;
-    background: -webkit-linear-gradient(-90deg,  #626bdd 0,  #6269cc 100%);
-    background: -moz-linear-gradient(180deg,  #626bdd 0,  #6269cc 100%);
-    background: linear-gradient(180deg, r #626bdd 0,  #6269cc 100%);
-    background-position: 50% 50%;
-    -webkit-background-origin: padding-box;
-    background-origin: padding-box;
-    -webkit-background-clip: border-box;
-    background-clip: border-box;
-    -webkit-background-size: auto auto;
-    background-size: auto auto;
-  }
-  
-  .btn-pre:active {
-    -webkit-border-radius: 17px;
-    border-radius: 12px;
-    background: -webkit-linear-gradient(-90deg, #3a3e7b 0,  #3a3e7b 100%);
-    background: -moz-linear-gradient(180deg,  #3a3e7b 0,  #3a3e7b 100%);
-    background: linear-gradient(180deg,  #3a3e7b 0,  #3a3e7b 100%);
-    background-position: 50% 50%;
-    -webkit-background-origin: padding-box;
-    background-origin: padding-box;
-    -webkit-background-clip: border-box;
-    background-clip: border-box;
-    -webkit-background-size: auto auto;
-    background-size: auto auto;
-  }
-  </style>
 
 @else
-<div class="accordion" id="accordionPanelsStayOpenExample">
+<br>
+<h2 class="card-title" style="color:#3a3e7b;" data-aos="fade-up">
+  Ingrese la siguiente información importante para iniciar su proceso de pre-inscripción</h2>
+                
 
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+<div wire:ignore.self class="accordion" id="accordionPanelsStayOpenExample">
+  <div style="border-radius: 60px 60px 60px 60px;" class="accordion-item">
+    <h2 style="border-radius: 60px 60px 60px 60px;" class="accordion-header" id="panelsStayOpen-headingOne">
       @if($gradoin!=null)
-      <button class="accordion-button" type="button" style="background-color:#d6e7a6; border:6px solid #a4cb39" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+      <button class="accordion-button" type="button" style="background-color:#d6e7a6; border:6px solid #a4cb39; border-radius: 60px 60px 60px 60px;" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
       <h4 class="font-weight-bolder">
-          @if($gradoin)
-          Grado seleccionado: <b class="text-center"> {{$gradoin}}</b>
+          @if($gradose)
+          Grado seleccionado: <b class="text-center"> {{$gradose}}</b>
           @else
           Seleccione un grado
           @endif
         </h4>
       </button>
       @else
-      <button class="accordion-button" type="button" style="background-color:#a6a8c3; border:6px solid #3a3e7b" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+      <button class="accordion-button" type="button" style="background-color:#a6a8c3; border:6px solid #3a3e7b; border-radius: 60px 60px 60px 60px;" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
        <h4 class="font-weight-bolder text-center">
-          @if($gradoin)
-          Grado seleccionado: <b> {{$gradoin}}</b>
+          @if($gradose)
+          Grado seleccionado: <b> {{$gradose}}</b>
           @else
           Seleccione un grado
           @endif
@@ -192,36 +144,40 @@
             
               <span>Debe seleccionar un grado</span>
              </div> @enderror
-
+          
           <ul class="list-group">
-            <li class="list-group-item list-group-item-action"  for="flexRadioGrado01">
-              <input class="form-check-input me-1" type="radio"  wire:model="gradoin" value="PRE-KINDER" aria-label="..." id="flexRadioGrado01">
-              <label class="form-check-label" for="flexRadioGrado01" style="font-size: 15px; color:#000000;">
-              PRE-KÍNDER
+            @foreach($grados as $grado)
+            <li class="list-group-item list-group-item-action"  for="flexRadioGrado{{$grado->ID_GR}}">
+              <input class="form-check-input me-1" type="radio" wire:click='selgrado("{{$grado->ID_GR}}","{{$grado->GRADO}}")' name="grado" value="{{$grado->ID_GR}}" aria-label="..." id="flexRadioGrado{{$grado->ID_GR}}">
+              <label class="form-check-label" for="flexRadioGrado{{$grado->ID_GR}}" style="font-size: 15px; color:#000000;">
+            {{$grado->GRADO}}
               </label>
               
             </li>
+            @endforeach
+          
           </ul>
          
       </div>
       </div>
     </div>
   </div>
-
+</div>
   @if($gradoin!=null)
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+<div wire:ignore.self class="accordion" id="accordionPanelsStayOpenExample2">
+  <div style="border-radius: 60px 60px 60px 60px;" class="accordion-item">
+    <h2 style="border-radius: 60px 60px 60px 60px;" class="accordion-header" id="panelsStayOpen-headingTwo">
       @if($a!=null && $a==2)
-      <button class="accordion-button collapsed" style="background-color:#d6e7a6; border:6px solid #a4cb39" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+      <button class="accordion-button collapsed" style="background-color:#d6e7a6; border:6px solid #a4cb39; border-radius: 60px 60px 60px 60px;" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
         <h4 class="font-weight-bolder">  <b>Datos del Estudiante:</b>   </h4>
       </button>
       @else
-      <button class="accordion-button collapsed" style="background-color:#a6a8c3; border:6px solid #3a3e7b" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+      <button class="accordion-button collapsed" style="background-color:#a6a8c3; border:6px solid #3a3e7b; border-radius: 60px 60px 60px 60px;" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
       <h4 class="font-weight-bolder">  <b>Datos del Estudiante:</b>   </h4>
       </button>
       @endif
     </h2>
-    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapsed" aria-labelledby="panelsStayOpen-headingTwo">
+    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingTwo">
       <div class="accordion-body">
                  <form wire:submit.prevent="" class="form-floating">
                     <div class="col-md">
@@ -350,25 +306,25 @@
               <label for="inputApellidos" style="font-size: 15px; color:#000000;">Religión:</label>
               <br>
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" value="Catolica" wire:model="religion_es" id="flexRadioDefault20">
+                <input class="form-check-input" type="radio" name="rel" value="Catolica" wire:model="religion_es" id="flexRadioDefault20">
                 <label class="form-check-label" for="flexRadioDefault20" style="font-size: 15px; color:#000000;">
                   Católica
                 </label>
               </div>
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" value="Protestante" wire:model="religion_es" id="flexRadioDefault21">
+                <input class="form-check-input" type="radio" name="rel"value="Protestante" wire:model="religion_es" id="flexRadioDefault21">
                 <label class="form-check-label" for="flexRadioDefault21" style="font-size: 15px; color:#000000;">
                   Protestante
                 </label>
               </div>
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" value="Evangelica" wire:model="religion_es" id="flexRadioDefault22">
+                <input class="form-check-input" type="radio" name="rel" value="Evangelica" wire:model="religion_es" id="flexRadioDefault22">
                 <label class="form-check-label" for="flexRadioDefault22" style="font-size: 15px; color:#000000;">
                   Evangélica
                 </label>
               </div>
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" value="Otra" wire:model="religion_es" id="flexRadioDefault2111q">
+                <input class="form-check-input" type="radio" name="rel" value="Otra" wire:model="religion_es" id="flexRadioDefault2111q">
                 <label class="form-check-label" for="flexRadioDefault2111q" style="font-size: 15px; color:#000000;">
                   Otra
                 </label>
@@ -379,30 +335,33 @@
             Pendiente
             </div>
             @enderror 
-            <a wire:click='val2' class="btn btn-outline-success">Validar</a>
+            <a class="btn btn-outline-success"  type="button" wire:click='val2' >Validar</a>
             
           </div>
         </form>
       </div>
     </div>
   </div>
+
+</div>
   @endif
 
 
   @if($gradoin!=null && $a==2)
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="panelsStayOpen-headingThree">
-      @if($val!=null && $val==2)
-      <button class="accordion-button collapsed" style="background-color:#d6e7a6; border:6px solid #a4cb39"  type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+  <div class="accordion" id="accordionPanelsStayOpenExample3">
+  <div style="border-radius: 60px 60px 60px 60px;" class="accordion-item">
+    <h2  style="border-radius: 60px 60px 60px 60px;" class="accordion-header" id="panelsStayOpen-headingThree">
+      @if($val1!=null && $val1==2)
+      <button class="accordion-button collapsed" style="background-color:#d6e7a6; border:6px solid #a4cb39; border-radius: 60px 60px 60px 60px;"  type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
      <h4 class="font-weight-bolder">  <b>Datos Encargado:</b>   </h4>
       </button>
       @else
-      <button class="accordion-button collapsed" style="background-color:#a6a8c3; border:6px solid #3a3e7b" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+      <button class="accordion-button collapsed" style="background-color:#a6a8c3; border:6px solid #3a3e7b; border-radius: 60px 60px 60px 60px;" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
       <h4 class="font-weight-bolder">  <b>Datos Encargado:</b>   </h4>
       </button>
       @endif
     </h2>
-    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingThree">
       <div class="accordion-body">
         <div class="table-responsive">
           <form wire:submit.prevent="val3()" class="form-floating">
@@ -416,7 +375,7 @@
           </div>
           @enderror
           <div class="row g-3">
-            <div class="col-md">>
+            <div class="col-md">
             <label for="fnacimiento_en" style="font-size: 15px; color:#000000;">Fecha Nacimiento:</label>
             <input type="date" placeholder=""   wire:model="fnacimiento_en" class="form-control " required>
         </div>
@@ -474,7 +433,7 @@
         </div>
         @enderror
         </div>
-    
+        <div class="row g-3">
         <div class="form-group col-xs-12">
           <label for="inputApellidos" style="font-size: 15px; color:#000000;">Direccion de domicilio:</label>
           <input type="text" placeholder="" type="email" wire:model="direccion_en" class="form-control " required>
@@ -484,7 +443,7 @@
        Pendiente
       </div>
       @enderror
-    
+    </div>
       <div class="row g-3">
         <div class="col-md">
         <label for="inputApellidos" style="font-size: 15px; color:#000000;">Telefono de casa:</label>
@@ -551,31 +510,100 @@
           @enderror
         
     </div>
-    @if($val1==2)
-    <div class="row g-5">
-    <a wire:click='val3' data-bs-toggle="collapse"  class="btn btn-outline-warning">Validar</a>
+    <br>
+    <div class="row g-4">
+      
+    <a wire:click='val3' type="button"  class="btn btn-warning">Validar</a>
     </div>
     <br>
-    <div class="row g-5">
-    <button type="button" id="val"  class="btn btn-success">Confirmar Información</button>
-    </div>
-    @include('modals.modalinfo')
-    @include('modals.modalval')
-    @else
-    <div class="row g-5">
-    <a wire:click='val3' data-bs-toggle="collapse"  class="btn btn-outline-success">Validar</a>
-    </div>
-    @endif
-    
+
           </form>
         </div>
      </div>
     </div>
   </div>
+  @if($val1==2)
+  <br>
+  <div class="d-grid gap-2">
+  <button id="val"  class="btn btn-pre">Confirmar Información</button>
+  </div>
+  @include('modals.modalinfo')
+  @include('modals.modalval')
+  @endif
+  
+</div>
+
+
+
   @endif
 </div>
 
 @endif
+<style>
+  .btn-pre {
+    display: inline-block;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    cursor: pointer;
+    padding: 10px 20px;
+    border: none;
+    -webkit-border-radius: 12px;
+    border-radius: 12px;
+    font: normal 16px/normal "Century Gothic", Times, serif;
+    color: rgba(255,255,255,0.9);
+    -o-text-overflow: clip;
+    text-overflow: clip;
+    background: -webkit-linear-gradient(-90deg, #3a3e7b 0, #3a3e7b);
+    background: -moz-linear-gradient(180deg, #3a3e7b 0, #3a3e7b);
+    background: linear-gradient(180deg, #3a3e7b 0, #3a3e7b);
+    background-position: 50% 50%;
+    -webkit-background-origin: padding-box;
+    background-origin: padding-box;
+    -webkit-background-clip: border-box;
+    background-clip: border-box;
+    -webkit-background-size: auto auto;
+    background-size: auto auto;
+    -webkit-box-shadow: 2px 2px 2px 0 rgba(58,228,0,0.2) ;
+    box-shadow: 2px 2px 2px 0 rgba(58,228,0,0.2) ;
+    text-shadow: -1px -1px 0 rgba(15,73,168,0.66) ;
+    -webkit-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+    -moz-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+    -o-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+    transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  }
+  
+  .btn-pre:hover {
+    border: 0px solid #33a506;
+    -webkit-border-radius: 12px;
+    border-radius: 12px;
+    background: -webkit-linear-gradient(-90deg,  #626bdd 0,  #6269cc 100%);
+    background: -moz-linear-gradient(180deg,  #626bdd 0,  #6269cc 100%);
+    background: linear-gradient(180deg, r #626bdd 0,  #6269cc 100%);
+    background-position: 50% 50%;
+    -webkit-background-origin: padding-box;
+    background-origin: padding-box;
+    -webkit-background-clip: border-box;
+    background-clip: border-box;
+    -webkit-background-size: auto auto;
+    background-size: auto auto;
+  }
+  
+  .btn-pre:active {
+    -webkit-border-radius: 17px;
+    border-radius: 12px;
+    background: -webkit-linear-gradient(-90deg, #3a3e7b 0,  #3a3e7b 100%);
+    background: -moz-linear-gradient(180deg,  #3a3e7b 0,  #3a3e7b 100%);
+    background: linear-gradient(180deg,  #3a3e7b 0,  #3a3e7b 100%);
+    background-position: 50% 50%;
+    -webkit-background-origin: padding-box;
+    background-origin: padding-box;
+    -webkit-background-clip: border-box;
+    background-clip: border-box;
+    -webkit-background-size: auto auto;
+    background-size: auto auto;
+  }
+  </style>
 
 <hr>
 <style type="text/css">

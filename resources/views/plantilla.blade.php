@@ -180,8 +180,7 @@
   -webkit-background-size: auto auto;
   background-size: auto auto;
 }
-
-         </style>
+</style>
       </div>
 
 

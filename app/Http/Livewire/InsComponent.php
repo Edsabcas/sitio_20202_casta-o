@@ -3,38 +3,30 @@
 namespace App\Http\Livewire;
 
 use Livewire\Component;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
 
 class InsComponent extends Component
 {
     public $gradoin,$nombre_es,$f_nacimiento_es,$genero,$cui_es,$codigo_pe_es,$nac_es,$lug_nac_es,$tel_es,$cel_es,$direccion_es,$religion_es;
     public $nombre_en,$fnacimiento_en,$dpi_en,$extentido_en,$es_civil_en,$direccion_en,$tel_casa_en,$cel_en,$correo_en,$religion_en;
-    public $a;
-    public $val,$val1;
+    public $a,$mensaje,$gradose;
+    public $val,$val1,$gestion;
     public function render()
     {
-        if($this->val1==2){
-            if($this->nombre_en=="" or $this->fnacimiento_en==""
-            or $this->dpi_en=="" or $this->extentido_en==""
-            or $this->es_civil_en=="" or $this->direccion_en==""
-            or $this->tel_casa_en=="" or $this->cel_en==""
-            or $this->correo_en=="" or $this->religion_en==""
-                ){
-                //$mensaje="no encontrado";
-               //session(['message' => 'no encontrado']);
-               $this->val1=0;
-              // return  back()->withErrors(['mensaje'=>'Validar el input vacio']);
-            }else{
-               // $this->a=3;
-                $this->val1=2;
-            }
-        }
-        return view('livewire.ins-component');
+        $sql="SELECT ID_GR,GRADO FROM tb_grados";
+        $grados=DB::select($sql);
+        return view('livewire.ins-component', compact('grados'));
     }
 
     public function va1l(){
         $this->val=1;
+        unset($this->mensaje);
     }
-    
+    public function selgrado($id,$gra){
+        $this->gradose=$gra;
+        $this->gradoin=$id;
+    }
     public function asigrad($gra){
         $this->gradoin=="";
         $this->gradoin=$gra;
@@ -75,7 +67,6 @@ class InsComponent extends Component
             return  back()->withErrors(['mensaje'=>'Validar el input vacio']);
         }else{
             $this->a=2;
-            
         }
     }
     public function val3(){
@@ -127,7 +118,71 @@ class InsComponent extends Component
            session(['message' => 'no encontrado']);
             return  back()->withErrors(['mensaje'=>'Validar el input vacio']);
         }else{
-           
+
+            DB::beginTransaction();
+            $caracteres = '0123456789';
+            $aleatoria="";
+            for($x = 0; $x < 10; $x++){
+                $aleatoria = substr(str_shuffle($caracteres), 0, 6);
+               // echo $aleatoria . "\n";
+            }
+            $no_gestion=$aleatoria;
+            $this->gestion=$no_gestion;
+            $pre=DB::table('TB_PRE_INS')->insert(
+                [
+                    'NOMBRE_ES'=> $this->nombre_es,
+                    'FEC_NAC'=> $this->f_nacimiento_es,
+                    'GENERO'=> $this->genero,
+                    'CUI_ES'=> $this->cui_es,
+                    'CODIGO_PER'=> $this->codigo_pe_es,
+                    'NACIONALIDAD_ES'=> $this->nac_es,
+                    'LUGAR_NAC_ES'=> $this->lug_nac_es,
+                    'CELULAR_ES'=> $this->cel_es,
+                    'DIRECCION_RES_ES'=> $this->direccion_es,
+                    'RELIGION_ES'=> $this->religion_es,
+                    'NOMBRE_ENCARGADO_ES'=> $this->nombre_en,
+                    'FEC_NAC_EN_ES'=> $this->fnacimiento_en,
+                    'DPI_EN_ES'=> $this->dpi_en,
+                    'EXTENDIDO_DPI_EN_ES'=> $this->extentido_en,
+                    'ESTADO_CIVIL_EN_ES'=> $this->es_civil_en,
+                    'DIRECCION_EN_ES'=> $this->direccion_en,
+                    'TEL_EN_ES'=> $this->tel_casa_en,
+                    'CEL_EN_ES'=> $this->cel_en,
+                    'CORREO_EN_ES'=> $this->correo_en,
+                    'RELIGION_EN_ES'=> $this->religion_en,
+                    'GRADO_ING_ES'=> $this->gradoin,
+                    'ESTADO_PAGO'=> 0,
+                    'ESTADO_PRE_INS'=>1,
+                    'NO_GESTION'=> $no_gestion,
+                    'FECHA_REGISTRO'=>  date("Y-m-d H:i:s"),
+                    'FECHA_CAMBIOS_REG'=>  date("Y-m-d H:i:s"),
+                ]
+            );
+
+                   if($pre){
+
+            DB::commit();   
+            $subject = "No responder (Notificación Pre-Ins.Castaño)";
+            $for = $this->correo_en;
+            $arreglo= array($this->nombre_es,$this->codigo_pe_es,$this->gradose,$this->gestion);
+            Mail::send('VistaCorreo.vista',compact('arreglo'), function($msj) use($subject,$for){
+                $msj->from("ingresos@colegioelcastano.edu.gt","ColegioElCastaño");
+                $msj->subject($subject);
+                $msj->to($for);
+              //  $msj->attach('images/a.jpg');
+               
+            });
+
+            $this->reset();
+
+            $this->mensaje=1;
+            
+        }
+        else{
+            //$this->reset();
+            DB::rollback();
+            $this->mensaje=2;
+        }
         }
     }
 }

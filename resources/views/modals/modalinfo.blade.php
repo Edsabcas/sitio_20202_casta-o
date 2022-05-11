@@ -5,14 +5,14 @@
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title text-center" id="staticBackdropLabel1">Validar Datos</h5>
+          <h5 class="modal-title text-center"  style="color:#3a3e7b;" id="staticBackdropLabel1">Verifique la información ingresada</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <div id="carouselExampleInterval" class="carousel slide" data-bs-touch="false" data-bs-interval="false" data-bs-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active" >
-                <div class="card text-dark bg-light mb-10" style="max-width: 50rem;">
+                <div class="card text-dark mb-10" style="background-color:#d6e7a6; border:6px solid #a4cb39" style="max-width: 50rem;">
                   <div class="card-header text-center">Grado de Pre-inscripción: </div>
                   <div class="card-body">
                     <div class="table-responsive">
@@ -23,7 +23,7 @@
                         <tbody>
                           <th>Grado:</th>
                           <th>
-                            <b>{{$gradoin}}</b>
+                            <b>{{$gradose}}</b>
                           </th>
                         </tbody>
                       </table>
@@ -33,7 +33,7 @@
                 </div>
               </div>
               <div class="carousel-item">
-                <div class="card text-dark bg-light mb-10" style="max-width: 50rem;">
+                <div class="card text-dark mb-10" style="background-color:#d6e7a6; border:6px solid #a4cb39" style="max-width: 50rem;">
                   <div class="card-header text-center"> <b>Datos Estudiante</b> </div>
                   <div class="card-body">
                     <h5 class="card-title text-center">Validar información</h5>
@@ -101,7 +101,7 @@
                 </div>
               </div>
               <div class="carousel-item">
-                <div class="card text-dark bg-light mb-10" style="max-width: 50rem;">
+                <div class="card text-dark mb-10" style="background-color:#d6e7a6; border:6px solid #a4cb39" style="max-width: 50rem;">
                   <div class="card-header text-center"> <b>Datos Encargado</b></div>
                   <div class="card-body">
                     <h5 class="card-title text-center">Validar información</h5>
@@ -173,10 +173,7 @@
                 </div>
               </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
+
             <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Next</span>

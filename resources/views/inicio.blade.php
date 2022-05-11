@@ -65,50 +65,55 @@ window.alert('Se envia comprobante de manera correcta, vuelva a validar su gesti
 <!-- contact -->
 <div class="contact">
     <div class="container">
-        <div class="row">
+        <div class="row enjoy3-css3"  style="border-radius: 60px 60px 60px 60px;">
             <div class="col-md-7 offset-md-3">
             <div class="title">
-                <h1 class="fs-1" style="color:rgb(61, 67, 155) ">MÁS INFORMACIÓN</h1>	
-                <span style="color:black">Si necesita conocernos, porfavor ingrese la siguiente informacion, y en la brevedad posible nos comunicaremos.</span>
+                <br>
+                <br>
+                <h1 class="fs-1" style="color:rgb(61, 67, 155) "><b>PARA MÁS INFORMACIÓN</b> </h1>	
+                <span style="color:black;">
+                    <i> No dude en comunicarse con nosotros llenando los siguientes campos; y en la brevedad posible nos estaremos comunicando.</i>
+                   </span>
             </div>
             </div>
 
-    <form action="email/contactar" method="POST" style= "float:right; max-width:5000px; margin-top: -7px;"class="formulario formulario-eliminar">
+    <form action="email/contactar" method="POST" style= "float:right; max-width:5000px; margin-top: -7px;" class="formulario formulario-eliminar">
     @csrf
     @method('GET')
-    <form method="post">
     <div class="row">
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
             <option></option>
-            <label for="nombre">Nombre</label><br>
+            <label for="nombre"> <b>Nombre</b> </label><br>
             <div class="wrap-input100">
-                <input class="form-control input100"id="nombre"name="nombre"type="text"class="validate"required>
+                <input  style="border-radius: 60px 60px 60px 60px;" class="form-control"id="nombre"name="nombre"type="text"class="validate"required>
                 <span class="focus-input100"></span>
             </div>
         </div>
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
             <option></option>
-            <label for="apellido">Apellido</label>
-            <input class="form-control me-2 input100"id='apellido'name='apellido'type="text"class="validate"required>
+            <label for="apellido"> <b>Apellido</b> </label>
+            <input style="border-radius: 60px 60px 60px 60px;" class="form-control me-2"id='apellido'name='apellido'type="text"class="validate"required>
         </div>
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
             <option></option>
-            <label for="email">Email</label><br>
-            <input class="form-control me-2 input100"id='email'name="email"type="email"class="validate"required>
+            <label for="email"> <b>Email</b> </label><br>
+            <input style="border-radius: 60px 60px 60px 60px;" class="form-control me-2"id='email'name="email"type="email"class="validate"required>
         </div>
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
             <option></option>
-            <label for="apellido">Telefono</label><br>
-            <input class="form-control me-2 input100"id='telefono'name="telefono"type="tel"pattern="[0-9]{​​​​​10}​​​​​"class="validate"required>
+            <label for="apellido"> <b>Telefono</b> </label><br>
+            <input style="border-radius: 60px 60px 60px 60px;" class="form-control me-2 "id='telefono'name="telefono"type="tel"pattern="[0-9]{​​​​​10}​​​​​"class="validate"required>
         </div>
         <div class="col-md-12">
-            <label for="textarea1">Mensaje</label><br>
-            <textarea class="form-control me-2 input100"id="mensaje" rows="50" name="mensaje"data-length="240"></textarea>
+            <label for="textarea1"> <b>Mensaje</b> </label><br>
+            <textarea style="border-radius: 30px 30px 30px 30px;" class="form-control me-2 "id="mensaje" rows="5" name="mensaje"data-length="240"></textarea>
         </div>
-        <input type="submit"class="btn btn-outline-success input100"onclick="enviarFormulario()"value="Enviar">
+        <input style="border-radius: 60px 60px 60px 60px;" type="submit"class="btn btn-outline-success" onclick="enviarFormulario()"value="Enviar">
         <p style= "float:right; max-width:5000px; margin-top: -7px;"class="green-text"id="enviado"></p>
     </div>
- 
+    <br>
+    <br>
+    <br>
     </form>
 </div>
          </div>
