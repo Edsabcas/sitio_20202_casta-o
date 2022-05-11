@@ -63,11 +63,11 @@
                    </div>
                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
                      <div class="navbar-nav w-50 p-6 mx-auto justify-content-evenly" style="width: 200px;">
-                      <a class="nav-item nav-link enojoy2-css2" href="{{ url('/') }}" style="color: #a000000"style="font-family: Century Gothic"><b>Inicio</b></a>
-                      <a class="nav-item nav-link enojoy2-css2" href="{{ url('/nosotros') }}"style="color: #a000000"  style="font-family: Century Gothic"><b>Nosotros</b></a>
-                      <a class="nav-item nav-link enojoy2-css2" href="/adm"style="color: #a000000" style="font-family: Century Gothic"><b>Admisiones 2023</b></a>
+                      <a class="nav-item nav-link enojoy2-css2" href="{{ url('/') }}" style="font-size: 20px; color:rgb(0, 0, 0)" style="font-family: Century Gothic"><b>Inicio</b></a>
+                      <a class="nav-item nav-link enojoy2-css2" href="{{ url('/nosotros') }}" style="font-size: 20px; color: #000000"  style="font-family: Century Gothic"><b>Nosotros</b></a>
+                      <a class="nav-item nav-link enojoy2-css2" href="/adm" style="font-size: 20px; color: #000000" style="font-family: Century Gothic"><b>Admisiones 2023</b></a>
                       <li class="nav-item dropdown enojoy2-css2">
-                         <a class="nav-item nav-link dropdown-toggle enojoy2-css2" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: #a000000" style="font-family: Century Gothic">
+                         <a class="nav-item nav-link dropdown-toggle enojoy2-css2" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-size: 20px; color: #000000" style="font-family: Century Gothic">
                           <b>Validar Gestión</b>
                          </a>
                          <ul class="dropdown-menu btn-outline-light enojoy2-css2"  aria-labelledby="navbarDropdown">
@@ -77,7 +77,7 @@
                            <li><a class="dropdown-item enojoy2-css2" href="{{ url('/restablecerusuario') }}" style="color: #a000000" style="font-family: Century Gothic">Restablecer Usuario</a></li>
                          </ul>
                        </li>
-                       <a class="nav-item nav-link enjoy-css" target="_blank" href="https://colegioelcastano.edu.gt/portal/index.php"style="font-family: Century Gothic"><b>&nbsp;&nbsp;Casys&nbsp;&nbsp;</b></a>                 
+                       <a class="nav-item nav-link enjoy-css" target="_blank" href="https://colegioelcastano.edu.gt/portal/index.php" style="font-size: 20px; color: #000000" style="font-family: Century Gothic"><b>&nbsp;&nbsp;Casys&nbsp;&nbsp;</b></a>                 
                      </div>
                  </div>
                </nav>
@@ -108,7 +108,6 @@
   background-size: auto auto;
   -webkit-box-shadow: 2px 2px 2px 0 rgba(58,228,0,0.2) ;
   box-shadow: 2px 2px 2px 0 rgba(58,228,0,0.2) ;
-  text-shadow: -1px -1px 0 rgba(15,73,168,0.66) ;
   -webkit-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
   -moz-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
   -o-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
