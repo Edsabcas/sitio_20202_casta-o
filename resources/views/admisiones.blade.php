@@ -1,7 +1,7 @@
 <section class="slider_section">
 
   <div id="main_slider" class="carousel slide banner-main" data-ride="carousel">
-        <img class="first-slide" src="{{ asset('img/banner-gmail.png') }}" alt="First slide">
+        <img class="first-slide" src="{{ asset('images/banner-gmail.jpg') }}" alt="First slide">
   </div>
   <br>
   <br>

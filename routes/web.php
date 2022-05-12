@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\InstController;
 use App\Http\Controllers\valController;
+use App\Http\Controllers\ValidacionController;
 use App\Http\Livewire\InsComponent;
 /*
 |--------------------------------------------------------------------------
