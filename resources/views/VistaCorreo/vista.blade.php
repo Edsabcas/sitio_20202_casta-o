@@ -7,6 +7,7 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
+<<<<<<< HEAD
   </head>
   <body style=" background-color: #d6e7a6; border:3px solid #a4cb39; border-radius: 20px 20px 40px 40px;">
             <h2 class="card-title text-center"  style="color:#2a2caf; text-align:center;">
@@ -14,6 +15,15 @@
               </h2>
               <p class="card-title text-center" style="background-color: color:#000000; text-align:center; "> <b> <i>
                 Se detalla información y pasos a seguir:
+=======
+    <title>GestionCastano</title>
+  </head>
+  <body style="background-color: #e0e9c6; border:3px solid #d6e7a6; border-radius: 60px 60px 60px 60px;">
+            <img src="img/banner-gmail.png" alt="pre-inscripcion">
+    
+              <p class="card-title text-center" style="background-color: color:#3739b3; text-align:center; "> <b> <i>
+                Se detalle información y pasos a seguir:
+>>>>>>> 8390e5287847a5951cc8ed8047fbb17aa2c86e5d
               </i>
                  </b> </p>
               <div class="table-responsive">

@@ -12,7 +12,7 @@
 @endif
 
 @if($op==4)
-@include('validar')
+@livewire('validacion-component')
 @endif
 
 @if($op==5)
@@ -25,6 +25,10 @@
 
 @if ($op==7)
 @include('restablecerusuario')    
+@endif
+
+@if ($op=="valpre")
+
 @endif
 
 @else
