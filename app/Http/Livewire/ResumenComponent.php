@@ -23,7 +23,7 @@ class ResumenComponent extends Component
         $sql="SELECT * FROM TB_PREGUNTAS";
         $preguntas=DB::select($sql);
 
-        $sql="SELECT * FROM TB_RESPUESTAS_PRINCIPAL";
+        $sql="SELECT * FROM TB_RESPUESTAS_PRINCIPAL ORDER BY ID_RESPUESTA DESC LIMIT 30";
         $respuestas=DB::select($sql);
         $sql="SELECT * FROM TB_RESPUESTAS_DETALLE";
         $resdetalles=DB::select($sql);

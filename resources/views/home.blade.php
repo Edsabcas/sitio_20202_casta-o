@@ -27,6 +27,19 @@
 @include('restablecerusuario')    
 @endif
 
+@if($op=='form')
+@livewire('form1305-componnet')
+@endif
+
+@if($op=='resumen')
+@livewire('resumen-component')
+@endif
+
+@if ($op=="valpre")
+
+@endif
+
+
 @else
 @include('inicio')
 @endif

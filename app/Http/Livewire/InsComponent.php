@@ -11,14 +11,29 @@ class InsComponent extends Component
     public $gradoin,$nombre_es,$f_nacimiento_es,$genero,$cui_es,$codigo_pe_es,$nac_es,$lug_nac_es,$tel_es,$cel_es,$direccion_es,$religion_es;
     public $nombre_en,$fnacimiento_en,$dpi_en,$extentido_en,$es_civil_en,$direccion_en,$tel_casa_en,$cel_en,$correo_en,$religion_en;
     public $a,$mensaje,$gradose;
-    public $val,$val1,$gestion;
+    public $val,$val1,$gestion,$errorfecha;
     public function render()
     {
+        if($this->f_nacimiento_es!=null)
+        {
+            $valores = explode('/', $this->f_nacimiento_es);
+            if(count($valores) == 3 && checkdate($valores[1], $valores[0], $valores[2])){
+                unset($this->errorfecha);
+                //return true;
+            }else{
+                $this->errorfecha=1;
+               // return false;
+            }
+           
+        }
         $sql="SELECT ID_GR,GRADO FROM tb_grados";
         $grados=DB::select($sql);
         return view('livewire.ins-component', compact('grados'));
     }
 
+    public function valfecha(){
+        
+    }
     public function va1l(){
         $this->val=1;
         unset($this->mensaje);
