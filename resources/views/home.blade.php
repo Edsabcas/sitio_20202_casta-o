@@ -12,7 +12,7 @@
 @endif
 
 @if($op==4)
-@include('validar')
+@livewire('validacion-component')
 @endif
 
 @if($op==5)
@@ -27,9 +27,18 @@
 @include('restablecerusuario')    
 @endif
 
-@if ($op==8)
-@include('estadoproceso')    
+@if($op=='form')
+@livewire('form1305-componnet')
 @endif
+
+@if($op=='resumen')
+@livewire('resumen-component')
+@endif
+
+@if ($op=="valpre")
+
+@endif
+
 
 @else
 @include('inicio')

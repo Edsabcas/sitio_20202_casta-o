@@ -10,10 +10,13 @@ class valController extends Controller
         $op=1;
         return view('home', compact("op"));
     }
-    
-    
+
     public function conducta(){
         $op=5;
+        return view('home', compact("op"));
+    }
+    public function preinscripcion(){
+        $op="valpre";
         return view('home', compact("op"));
     }
 }

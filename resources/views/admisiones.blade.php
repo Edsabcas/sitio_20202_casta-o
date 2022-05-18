@@ -1,7 +1,7 @@
 <section class="slider_section">
 
   <div id="main_slider" class="carousel slide banner-main" data-ride="carousel">
-        <img class="first-slide" src="{{ asset('images/banner-gmail.jpg') }}" alt="First slide">
+        <img class="first-slide" src="{{ asset('images/imgadmin.png') }}" alt="First slide">
   </div>
   <br>
   <br>
@@ -44,11 +44,17 @@
 
 <div class="container">
 @if($mensaje!=null  && $mensaje==1)
-<div class="alert alert-success alert-dismissible fade show" role="alert">
-  <strong>Su gestión ha sido ingresada satisfactoriamente.</strong><br>
-  Puede validar el correo de encargado, y encontrará su gestión y los pasos a realizar.
-  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+<br>
+<br><br>
+<br>
+<div class="row">
+  <div class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Su gestión ha sido ingresada satisfactoriamente.</strong><br>
+    Puede validar el correo de encargado, y encontrará su gestión y los pasos a realizar.
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div> 
 </div>
+
 @elseif($mensaje!=null && $mensaje==2)
 <div class="alert alert-danger d-flex align-items-center" role="alert">
   <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg>
@@ -82,16 +88,23 @@
               </div>
             </div>
           </div>
+          <script>
+                var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+                var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                  return new bootstrap.Tooltip(tooltipTriggerEl)
+                })
+            </script>
+            
           <div class="col-sm-6">
             <div class="card" style="border-color: #ffff; outline-color: transparent; background-color:transparent">
               <div class="card-body">
                 <h3 class="card-title" style="color:#3a3e7b;"><b>DATOS DEL ESTUDIANTE:</b></h3>
                 <p class="card-text text-white">• Datos generales. <br>
                   • No. CUI. <br>
-                  • Código Personal.                               
-                            <a type="button" class="btn text-white" style="background-color:#3a3e7b" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                  • Código Personal.                    
+                        <button class="btn-pre text-white" style="background-color:#3a3e7b" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                                 ?
-                 </a></p>
+                 </button></p>
               </div>
             </div>
           </div>
@@ -197,19 +210,25 @@
                   <div class="row g-3">
                     <div class="col-md">
                       <label for="inputApellidos" style="font-size: 15px; color:#000000;">Fecha de Nacimiento:</label>
-                      <input type="date"  wire:model="f_nacimiento_es" class="form-control " required>
+                      <input type="date"  wire:model="f_nacimiento_es" class="form-control " min="2000-01-01" max="2020-12-31" required>
                       @error('f_nacimiento_es')
                       <div class="alert alert-warning" role="alert">
                        Pendiente
                       </div>
                       @enderror
+                      @if($errorfecha!=null)
+                      <div class="alert alert-warning" role="alert">
+                        Debe de agregar una fecha correcta.
+                       </div>
+                    
+                      @endif
                   </div>
                   
                   <div class="col-md">
                     <label for="inputApellidos" style="font-size: 15px; color:#000000;">Género:</label>
                     <br>
                     <div class="form-check form-check-inline ">
-                      <input class="form-check-input"  wire:model='genero' value="Masculino"  type="radio" wire:model="genero_es" id="flexRadioDefault1">
+                      <input class="form-check-input"  wire:model='genero' value="Masculino" wire:click="valfecha"  type="radio" wire:model="genero_es" id="flexRadioDefault1">
                       <label class="form-check-label" for="flexRadioDefault1" style="font-size: 15px; color:#000000;">
                         Masculino
                       </label>
@@ -309,30 +328,7 @@
             <div class="col-md">
               <label for="inputApellidos" style="font-size: 15px; color:#000000;">Religión:</label>
               <br>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="rel" value="Catolica" wire:model="religion_es" id="flexRadioDefault20">
-                <label class="form-check-label" for="flexRadioDefault20" style="font-size: 15px; color:#000000;">
-                  Católica
-                </label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="rel"value="Protestante" wire:model="religion_es" id="flexRadioDefault21">
-                <label class="form-check-label" for="flexRadioDefault21" style="font-size: 15px; color:#000000;">
-                  Protestante
-                </label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="rel" value="Evangelica" wire:model="religion_es" id="flexRadioDefault22">
-                <label class="form-check-label" for="flexRadioDefault22" style="font-size: 15px; color:#000000;">
-                  Evangélica
-                </label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="rel" value="Otra" wire:model="religion_es" id="flexRadioDefault2111q">
-                <label class="form-check-label" for="flexRadioDefault2111q" style="font-size: 15px; color:#000000;">
-                  Otra
-                </label>
-              </div>
+              <input type='text' placeholder=""  wire:model="religion_es" class="form-control" required>
             </div>
             @error('religion_es')
             <div class="alert alert-warning" role="alert">

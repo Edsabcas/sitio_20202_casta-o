@@ -15,7 +15,7 @@
       <div class="row">
           <div class="col-md-7 offset-md-3">
           <div class="title">
-              <h1 class="fs-1" style="color: #3a3e7b" data-aos="fade-up">VALIDACIÓN PROCESO PRE-INSCRIPCIÓN</h1>
+              <h1 class="fs-1" style="color: #3a3e7b" >VALIDACIÓN PROCESO PRE-INSCRIPCIÓN</h1>
 
               <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="#a4cb39" class="bi bi-clipboard-check" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
@@ -31,30 +31,41 @@
 
           
 
-  <form action="/estadoproceso" method="POST" style= "float:right; max-width:5000px; margin-top: -7px;"class="formulario formulario-eliminar">
-  @csrf
-  @method('GET')
-  <form method="post">
+  <form  style= "float:right; max-width:5000px; margin-top: -7px;"class="formulario formulario-eliminar">
+
+  <form wire:submit.prevent="">
   <div class="row">
+    @if($mensaje!=null)
+    <div class="alert alert-danger" role="alert">
+     No se encontro la gestión consultada.
+    </div>
+    @endif
       <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
           <option></option>
-          <label for="name" style="color: #3a3e7b" data-aos="fade"><b>No. Gestión</b></label><br>
+          <label for="name" style="color: #3a3e7b"><b>No. Gestión</b></label><br>
           <div>
-              <input class="form-control input100 rounded-pill" id="nombre" name="nombre" type="text" class="validate" required>
+              <input class="form-control input100 rounded-pill" wire:model="nogestion" type="number" class="validate" required>
               <span></span>
           </div>
       </div>
       <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
           <option></option>
-          <label for="lastname" style="color: #3a3e7b" data-aos="fade"><b>DPI</b></label>
-          <input class="form-control me-2 input100 rounded-pill" id="apellido" name="apellido" type="text" class="validate" required>
+          <label for="lastname" style="color: #3a3e7b" ><b>DPI Encargado</b></label>
+          <input class="form-control me-2 input100 rounded-pill" wire:model="dpi" type="number" class="validate" required>
       </div>
       <div class="col-md-12">
           <option></option>
+<<<<<<< HEAD
           <label for="date" style="color: #3a3e7b" data-aos="fade"><b>Fecha Nacimiento Encargado</b></label><br>
           <input class="form-control me-2 input100 rounded-pill"id='email'name="email"type="date"class="validate"required>
       </div>
       <input type="submit" class="btn btn-outline-success input100 rounded-pill" onclick="nextPrev(1)" value="Validar">
+=======
+          <label for="date" style="color: #3a3e7b"><b>Fecha Nacimiento Encargado</b></label><br>
+          <input class="form-control me-2 input100 rounded-pill" wire:model="fehencargado"type="date"class="validate"required>
+      </div>
+      <input wire:click='buspre()' class="btn btn-outline-success input100 rounded-pill" value="Consultar">
+>>>>>>> 499470bc6337504d394b48c0582860045e364ea3
       <p style= "float:right; max-width:5000px; margin-top: -7px;"class="green-text"id="enviado"></p>
   </div>
 
