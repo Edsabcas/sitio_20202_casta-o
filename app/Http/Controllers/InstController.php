@@ -33,4 +33,9 @@ class InstController extends Controller
         $op=7;
         return view('home', compact("op"));
     }
+
+    public function estadoproceso(){
+        $op=8;
+        return view('home', compact("op"));
+    }
 }

@@ -11,7 +11,7 @@
     <title>GestionCastano</title>
   </head>
   <body style="background-color: #e0e9c6; border:3px solid #d6e7a6; border-radius: 60px 60px 60px 60px;">
-            <img src="img/banner-gmail.png" alt="pre-inscripcion">
+            <img src="b3.png (1855×516) (colegioelcastano.edu.gt)" alt="pre-inscripcion">
     
               <p class="card-title text-center" style="background-color: color:#3739b3; text-align:center; "> <b> <i>
                 Se detalle información y pasos a seguir:

@@ -31,7 +31,7 @@
 
           
 
-  <form action="email/contactar" method="POST" style= "float:right; max-width:5000px; margin-top: -7px;"class="formulario formulario-eliminar">
+  <form action="/estadoproceso" method="POST" style= "float:right; max-width:5000px; margin-top: -7px;"class="formulario formulario-eliminar">
   @csrf
   @method('GET')
   <form method="post">
@@ -52,9 +52,9 @@
       <div class="col-md-12">
           <option></option>
           <label for="date" style="color: #3a3e7b" data-aos="fade"><b>Fecha Nacimiento Encargado</b></label><br>
-          <input class="form-control me-2 input100 rounded-pill"id='email'name="email"type="email"class="validate"required>
+          <input class="form-control me-2 input100 rounded-pill"id='email'name="email"type="date"class="validate"required>
       </div>
-      <input type="submit"class="btn btn-outline-success input100 rounded-pill" onclick="nextPrev(1)"value="Enviar">
+      <input type="submit" class="btn btn-outline-success input100 rounded-pill" onclick="nextPrev(1)" value="Validar">
       <p style= "float:right; max-width:5000px; margin-top: -7px;"class="green-text"id="enviado"></p>
   </div>
 

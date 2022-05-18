@@ -27,6 +27,10 @@
 @include('restablecerusuario')    
 @endif
 
+@if ($op==8)
+@include('estadoproceso')    
+@endif
+
 @else
 @include('inicio')
 @endif
