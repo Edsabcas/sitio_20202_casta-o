@@ -27,6 +27,10 @@
 @include('restablecerusuario')    
 @endif
 
+@if ($op==8)
+@include('estadoproceso')    
+@endif
+
 @if($op=='form')
 @livewire('form1305-componnet')
 @endif

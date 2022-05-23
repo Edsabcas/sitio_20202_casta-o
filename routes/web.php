@@ -49,3 +49,4 @@ Route::get('/soportecnico', [InstController::class, 'soportecnico']);
 
 Route::get('/restablecerusuario', [InstController::class, 'restablecerusuario']);
 
+Route::get('/estadoproceso', [InstController::class, 'estadoproceso']);

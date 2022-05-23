@@ -55,17 +55,10 @@
       </div>
       <div class="col-md-12">
           <option></option>
-<<<<<<< HEAD
           <label for="date" style="color: #3a3e7b" data-aos="fade"><b>Fecha Nacimiento Encargado</b></label><br>
           <input class="form-control me-2 input100 rounded-pill"id='email'name="email"type="date"class="validate"required>
       </div>
       <input type="submit" class="btn btn-outline-success input100 rounded-pill" onclick="nextPrev(1)" value="Validar">
-=======
-          <label for="date" style="color: #3a3e7b"><b>Fecha Nacimiento Encargado</b></label><br>
-          <input class="form-control me-2 input100 rounded-pill" wire:model="fehencargado"type="date"class="validate"required>
-      </div>
-      <input wire:click='buspre()' class="btn btn-outline-success input100 rounded-pill" value="Consultar">
->>>>>>> 499470bc6337504d394b48c0582860045e364ea3
       <p style= "float:right; max-width:5000px; margin-top: -7px;"class="green-text"id="enviado"></p>
   </div>
 
