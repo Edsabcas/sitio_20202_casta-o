@@ -28,7 +28,47 @@
     width: 650px !important;
   }
 
+<<<<<<< HEAD
+    <title>GestionCastano</title>
+  </head>
+  <body style="background-color: #e0e9c6; border:3px solid #d6e7a6; border-radius: 60px 60px 60px 60px;">
+            <img src="b3.png (1855×516) (colegioelcastano.edu.gt)" alt="pre-inscripcion">
+    
+              <p class="card-title text-center" style="background-color: color:#3739b3; text-align:center; "> <b> <i>
+                Se detalle información y pasos a seguir:
+              </i>
+                 </b> </p>
+              <div class="table-responsive">
+                  <div class="card text-center">
+                 <h1 style="color:#6a62d6;">
+                    Gestión:
+                    <b > # {{$arreglo[3]}}</b>
+                 </h1> 
+                  </div>
+                  <h2 style="color:#2a2caf;">Datos estudiante: </h2>
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                <tbody > 
+                    <tr style="background-color: #3a3e7b; ">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr style="background-color: #3a3e7b;">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr style="background-color: #d6e7a6; border:6px solid #a4cb39; color:#2a2caf;">
+=======
 }
+>>>>>>> 499470bc6337504d394b48c0582860045e364ea3
 
 @media (max-width: 670px) {
   .u-row-container {
