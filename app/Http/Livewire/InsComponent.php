@@ -16,9 +16,10 @@ class InsComponent extends Component
     {
         if($this->f_nacimiento_es!=null)
         {
-            $valores = explode('/', $this->f_nacimiento_es);
-            if(count($valores) == 3 && checkdate($valores[1], $valores[0], $valores[2])){
-                unset($this->errorfecha);
+            $valores = explode('-', $this->f_nacimiento_es);
+            if(count($valores) == 3 && checkdate($valores[1], $valores[2], $valores[0]))
+            {
+                $this->errorfecha=0;
                 //return true;
             }else{
                 $this->errorfecha=1;

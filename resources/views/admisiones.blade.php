@@ -216,9 +216,10 @@
                        Pendiente
                       </div>
                       @enderror
-                      @if($errorfecha!=null)
+                      @if($errorfecha!=null && $errorfecha==1)
                       <div class="alert alert-warning" role="alert">
                         Debe de agregar una fecha correcta.
+                        {{$f_nacimiento_es}}
                        </div>
                     
                       @endif
