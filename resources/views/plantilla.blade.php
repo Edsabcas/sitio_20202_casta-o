@@ -165,7 +165,7 @@
 
 
 .enojoy2-css2:active {
-  -webkit-border-radius: 17px;
+  -webkit-border-radius: 16px;
   border-radius: 12px;
   color:#a4cb39 !important;
   background: -webkit-linear-gradient(-90deg, rgb(236, 236, 236) 0, rgb(255, 255, 255) 100%);
