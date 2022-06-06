@@ -212,7 +212,7 @@
    @livewireScripts
    </body>
    <footer>
-    <div class="footer">
+    <div class="footer" style="color:#3a3e7b">
        <div class="container">
     <div class="row">
           <div class="col-xs-12 col-md-6 text-center">
