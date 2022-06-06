@@ -8,6 +8,8 @@ use App\Http\Livewire\InsComponent;
 use App\Http\Controllers\Form1305Controller;
 use App\Http\Controllers\ResumenController;
 use App\Http\Controllers\ExportarController;
+use App\Http\Controllers\MensajesController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -36,6 +38,10 @@ Route::get('/forminfo', [Form1305Controller::class, 'index']);
 //Resumen
 Route::get('/resumen', [ResumenController::class, 'index']);
 
+//Envio de mensajes
+Route::get('/mensaje', [MensajesController::class, 'mensaje']);
+
+
 //Exportar Excel
 Route::get('/exp', [ExportarController::class, 'export']);
 
@@ -49,3 +55,4 @@ Route::get('/soportecnico', [InstController::class, 'soportecnico']);
 
 Route::get('/restablecerusuario', [InstController::class, 'restablecerusuario']);
 
+Route::get('/estadoproceso', [InstController::class, 'estadoproceso']);

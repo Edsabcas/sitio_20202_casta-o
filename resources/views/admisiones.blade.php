@@ -22,7 +22,7 @@
   </script>
 
 <!-- Modal -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div  wire:ignore.self class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
 <div class="modal-dialog modal-lg">
   <div class="modal-content">
     <div class="modal-header">
@@ -151,8 +151,8 @@
       </button>
       @endif
     </h2>
-    <div id="panelsStayOpen-collapseOne" style="border-radius: 60px 60px 60px 60px;" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
-      <div class="accordion-body" style="border-radius: 60px 60px 60px 60px;">
+    <div  wire:ignore.self id="panelsStayOpen-collapseOne" style="border-radius: 60px 60px 60px 60px;" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+      <div  wire:ignore.self class="accordion-body" style="border-radius: 60px 60px 60px 60px;">
         <div class="tab">
                   
           @error('gradoin') 
@@ -194,8 +194,8 @@
       </button>
       @endif
     </h2>
-    <div id="panelsStayOpen-collapseTwo"style="border-radius: 60px 60px 60px 60px;" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingTwo">
-      <div class="accordion-body" style="border-radius: 60px 60px 60px 60px;">
+    <div  wire:ignore.self id="panelsStayOpen-collapseTwo"style="border-radius: 60px 60px 60px 60px;" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingTwo">
+      <div  wire:ignore.self class="accordion-body" style="border-radius: 60px 60px 60px 60px;">
                  <form wire:submit.prevent="" class="form-floating">
                     <div class="col-md">
                       <label for="inputNombres" style="font-size: 15px; color:#000000;">Nombre Completo:
@@ -216,9 +216,10 @@
                        Pendiente
                       </div>
                       @enderror
-                      @if($errorfecha!=null)
+                      @if($errorfecha!=null && $errorfecha==1)
                       <div class="alert alert-warning" role="alert">
                         Debe de agregar una fecha correcta.
+                        {{$f_nacimiento_es}}
                        </div>
                     
                       @endif
@@ -261,8 +262,8 @@
                   <label for="inputInstitucion" style="font-size: 15px; color:#000000;">Código Personal (Mineduc):
       
                         <!-- Button trigger modal -->
-                      <a class="btn" style="background-color:#a4cb39" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                      ?
+                      <a class="btn" type="button" style="background-color:#a4cb39" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    <b>!</b>  
                       </a>
                   </label>
                   <input type='text' placeholder=""  wire:model="codigo_pe_es" class="form-control " required>
@@ -294,15 +295,6 @@
               @enderror
             </div>
             <div class="row g-3">
-              <div class="col-md">
-                <label for="inputInstitucion" style="font-size: 15px; color:#000000;">Teléfono de Casa:</label>
-                <input type='number' placeholder=""  wire:model="tel_es" class="form-control " required>
-                @error('tel_es')
-                <div class="alert alert-warning" role="alert">
-                  Pendiente
-                </div>
-                @enderror
-              </div>
               
               <div class="col-md">
                 <label for="inputInstitucion" style="font-size: 15px; color:#000000;">Teléfono Celular:</label>
@@ -361,8 +353,8 @@
       </button>
       @endif
     </h2>
-    <div id="panelsStayOpen-collapseThree" style="border-radius: 60px 60px 60px 60px;"class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingThree">
-      <div class="accordion-body" style="border-radius: 60px 60px 60px 60px;">
+    <div  wire:ignore.self id="panelsStayOpen-collapseThree" style="border-radius: 60px 60px 60px 60px;"class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingThree">
+      <div  wire:ignore.self class="accordion-body" style="border-radius: 60px 60px 60px 60px;">
         <div class="table-responsive">
           <form wire:submit.prevent="val3()" class="form-floating">
             <div class="form-group col-xs-12">
