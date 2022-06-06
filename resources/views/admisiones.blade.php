@@ -295,15 +295,6 @@
               @enderror
             </div>
             <div class="row g-3">
-              <div class="col-md">
-                <label for="inputInstitucion" style="font-size: 15px; color:#000000;">Teléfono de Casa:</label>
-                <input type='number' placeholder=""  wire:model="tel_es" class="form-control " required>
-                @error('tel_es')
-                <div class="alert alert-warning" role="alert">
-                  Pendiente
-                </div>
-                @enderror
-              </div>
               
               <div class="col-md">
                 <label for="inputInstitucion" style="font-size: 15px; color:#000000;">Teléfono Celular:</label>
