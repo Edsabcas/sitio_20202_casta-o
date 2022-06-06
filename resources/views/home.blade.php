@@ -28,7 +28,7 @@
 @endif
 
 @if ($op==8)
-@include('estadoproceso')    
+@include('estadoproceso')
 @endif
 
 @if($op=='form')
