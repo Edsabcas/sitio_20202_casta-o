@@ -19,6 +19,7 @@
               <br>
               <br>
 
+
               <span style="color:black">Ingrese los siguientes datos requeridos.</span>
           </div>
           </div>
@@ -72,7 +73,7 @@
       <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
         <option></option>
         <label for="date" style="color: #3a3e7b"><b>&nbsp;&nbsp;&nbsp;</label><br>
-      <button class="btn btn-outline-warning input100 rounded-pill" wire:click="buspre" >Validar</button>
+      <button class="btn btn-pre input100 rounded-pill" wire:click="buspre" >Validar</button>
     </div>
     {{$op}}
   </div>

@@ -84,6 +84,72 @@
            </div>
          </div>
          <style>
+            .btn-pre {
+              display: inline-block;
+              -webkit-box-sizing: content-box;
+              -moz-box-sizing: content-box;
+              box-sizing: content-box;
+              cursor: pointer;
+              padding: 10px 20px;
+              border: none;
+              -webkit-border-radius: 12px;
+              border-radius: 12px;
+              font: normal 16px/normal "Century Gothic", Times, serif;
+              color: rgba(255,255,255,0.9);
+              -o-text-overflow: clip;
+              text-overflow: clip;
+              background: -webkit-linear-gradient(-90deg, #3a3e7b 0, #3a3e7b);
+              background: -moz-linear-gradient(180deg, #3a3e7b 0, #3a3e7b);
+              background: linear-gradient(180deg, #3a3e7b 0, #3a3e7b);
+              background-position: 50% 50%;
+              -webkit-background-origin: padding-box;
+              background-origin: padding-box;
+              -webkit-background-clip: border-box;
+              background-clip: border-box;
+              -webkit-background-size: auto auto;
+              background-size: auto auto;
+              -webkit-box-shadow: 2px 2px 2px 0 rgba(58,228,0,0.2) ;
+              box-shadow: 2px 2px 2px 0 rgba(58,228,0,0.2) ;
+              text-shadow: -1px -1px 0 rgba(15,73,168,0.66) ;
+              -webkit-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+              -moz-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+              -o-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+              transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+            }
+            
+            .btn-pre:hover {
+              border: 0px solid #33a506;
+              -webkit-border-radius: 12px;
+              border-radius: 12px;
+              background: -webkit-linear-gradient(-90deg,  #626bdd 0,  #6269cc 100%);
+              background: -moz-linear-gradient(180deg,  #626bdd 0,  #6269cc 100%);
+              background: linear-gradient(180deg, r #626bdd 0,  #6269cc 100%);
+              background-position: 50% 50%;
+              -webkit-background-origin: padding-box;
+              background-origin: padding-box;
+              -webkit-background-clip: border-box;
+              background-clip: border-box;
+              -webkit-background-size: auto auto;
+              background-size: auto auto;
+            }
+            
+            .btn-pre:active {
+              -webkit-border-radius: 17px;
+              border-radius: 12px;
+              background: -webkit-linear-gradient(-90deg, #3a3e7b 0,  #3a3e7b 100%);
+              background: -moz-linear-gradient(180deg,  #3a3e7b 0,  #3a3e7b 100%);
+              background: linear-gradient(180deg,  #3a3e7b 0,  #3a3e7b 100%);
+              background-position: 50% 50%;
+              -webkit-background-origin: padding-box;
+              background-origin: padding-box;
+              -webkit-background-clip: border-box;
+              background-clip: border-box;
+              -webkit-background-size: auto auto;
+              background-size: auto auto;
+            }
+            </style>
+          
+         <style>
 .enjoy-css {
   display: inline-block;
   -webkit-box-sizing: content-box;
@@ -212,7 +278,8 @@
    @livewireScripts
    </body>
    <footer>
-    <div class="footer" style="color:#3a3e7b">
+
+    <div class="footer" style="background-color:#13164c">
        <div class="container">
     <div class="row">
           <div class="col-xs-12 col-md-6 text-center">
@@ -243,6 +310,7 @@
 
        </div>
       </div>
+ 
        <div class="contact text-center">
 
           <h3 class="text-xs text-light">Ubicación</h3>
@@ -255,15 +323,8 @@
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.0995604467653!2d-90.5839736856792!3d14.650289479785926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8589a0226e5847b5%3A0x97abf4d970bd6fac!2sColegio%20Biling%C3%BCe%20El%20Casta%C3%B1o!5e0!3m2!1ses!2sgt!4v1619627593600!5m2!1ses!2sgt" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         
          </div>
-        
-
         </p>
       </div>
-
-      <a class="scroll-to-top rounded" href="#page-top" style="display: inline;">
-         <i class="fas fa-angle-up"></i>
-      </a>
-
 
        <div class="copyright">
            <div class="row">
@@ -277,9 +338,9 @@
                 </div>
               </div>
            </div>
-   
            <p style="color:black">Copyright, 2021 All Right Reserved, El Castaño TI <a href="https://html.design/"></p>
-
        </div>
+      </div>
+
  </footer>
 </html>

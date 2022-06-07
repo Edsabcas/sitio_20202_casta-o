@@ -28,47 +28,7 @@
     width: 650px !important;
   }
 
-<<<<<<< HEAD
-    <title>GestionCastano</title>
-  </head>
-  <body style="background-color: #e0e9c6; border:3px solid #d6e7a6; border-radius: 60px 60px 60px 60px;">
-            <img src="b3.png (1855×516) (colegioelcastano.edu.gt)" alt="pre-inscripcion">
-    
-              <p class="card-title text-center" style="background-color: color:#3739b3; text-align:center; "> <b> <i>
-                Se detalle información y pasos a seguir:
-              </i>
-                 </b> </p>
-              <div class="table-responsive">
-                  <div class="card text-center">
-                 <h1 style="color:#6a62d6;">
-                    Gestión:
-                    <b > # {{$arreglo[3]}}</b>
-                 </h1> 
-                  </div>
-                  <h2 style="color:#2a2caf;">Datos estudiante: </h2>
-                <table class="table table-hover">
-                    <thead>
-                        <tr>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                <tbody > 
-                    <tr style="background-color: #3a3e7b; ">
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr style="background-color: #3a3e7b;">
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr style="background-color: #d6e7a6; border:6px solid #a4cb39; color:#2a2caf;">
-=======
 }
->>>>>>> 499470bc6337504d394b48c0582860045e364ea3
 
 @media (max-width: 670px) {
   .u-row-container {
@@ -195,7 +155,7 @@ table, td { color: #000000; } a { color: #0000ee; text-decoration: underline; } 
     <tr>
       <td style="overflow-wrap:break-word;word-break:break-word;padding:20px 10px 10px;font-family:arial,helvetica,sans-serif;" align="left">
         
-  <h1 style="margin: 0px; color: #a4cb39; line-height: 120%; text-align: center; word-wrap: break-word; font-weight: normal; font-family: trebuchet ms,geneva; font-size: 27px;">
+  <h1 style="margin: 0px; color: #3a3e7b; line-height: 120%; text-align: center; word-wrap: break-word; font-weight: normal; font-family: trebuchet ms,geneva; font-size: 27px;">
     Proceso de Pre-inscripci&oacute;n
   </h1>
 
@@ -413,17 +373,12 @@ table, td { color: #000000; } a { color: #0000ee; text-decoration: underline; } 
   </tbody>
 </table>
 
-  <!--[if (!mso)&(!IE)]><!--></div><!--<![endif]-->
-  </div>
-</div>
-<!--[if (mso)|(IE)]></td><![endif]-->
-      <!--[if (mso)|(IE)]></tr></table></td></tr></table><![endif]-->
-    </div>
-  </div>
-</div>
 
 
 
+
+
+        
 <div class="u-row-container" style="padding: 0px;background-color: #3a3e7b">
   <div class="u-row" style="Margin: 0 auto;min-width: 320px;max-width: 650px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: transparent;">
     <div style="border-collapse: collapse;display: table;width: 100%;background-color: #3a3e7b;">
@@ -432,21 +387,22 @@ table, td { color: #000000; } a { color: #0000ee; text-decoration: underline; } 
 <!--[if (mso)|(IE)]><td align="center" width="650" style="width: 650px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius: 0px;" valign="top"><![endif]-->
 <div class="u-col u-col-100" style="max-width: 320px;min-width: 650px;display: table-cell;vertical-align: top;">
   <div style="width: 100% !important;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius: 0px;">
-  <!--[if (!mso)&(!IE)]><!--><div style="padding: 0px;border-top: 0px solid #3a3e7b;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius: 0px;"><!--<![endif]-->
+  <!--[if (!mso)&(!IE)]><!-->
+    <div style="padding: 0px;border-top: 0px solid #3a3e7b;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius: 0px;"><!--<![endif]-->
   
 <table style="font-family:arial,helvetica,sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
   <tbody>
     <tr>
       <td style="overflow-wrap:break-word;word-break:break-word;padding:0px;font-family:arial,helvetica,sans-serif;" align="left">
-        
-
-
       </td>
     </tr>
   </tbody>
   <table class="es-wrapper" width="100%" cellspacing="0" cellpadding="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;padding:0;Margin:0;width:100%;height:100%;background-repeat:repeat;background-position:center top"> 
     <tr style="border-collapse:collapse"> 
-     <td valign="top" style="padding:0;Margin:0"> 
+     <td valign="top" style="padding:0;Margin:0">
+      
+      
+
       <table class="es-content" cellspacing="0" cellpadding="0" align="center" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width:100%"> 
         <tr style="border-collapse:collapse"></tr> 
         <tr style="border-collapse:collapse"> 
@@ -478,18 +434,24 @@ table, td { color: #000000; } a { color: #0000ee; text-decoration: underline; } 
           </table></td> 
         </tr> 
       </table> 
+
+
+
       <table class="es-content" cellspacing="0" cellpadding="0" align="center" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width:100%"> 
         <tr style="border-collapse:collapse"> 
          <td align="center" style="padding:0;Margin:0"> 
           <table class="es-content-body" cellspacing="0" cellpadding="0" bgcolor="#a4cb39" align="center" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:#a4cb39;width:640px"> 
             <tr style="border-collapse:collapse"> 
              <td align="left" bgcolor="#3a3e7b" style="Margin:0;padding-top:20px;padding-left:20px;padding-right:20px;padding-bottom:40px;background-color:#3a3e7b"><!--[if mso]><table style="width:600px" cellpadding="0" cellspacing="0"><tr><td style="width:210px"><![endif]--> 
+             
+             
+             
               <table class="es-left" cellspacing="0" cellpadding="0" align="left" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;float:left"> 
                 <tr style="border-collapse:collapse"> 
                  <td class="es-m-p20b" align="left" style="padding:0;Margin:0;width:190px"> 
                   <table width="100%" cellspacing="0" cellpadding="0" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px"> 
                     <tr style="border-collapse:collapse"> 
-                     <td align="center" style="padding:0;Margin:0;font-size:0px"><img src="images/telephone_iconiconscom_70849.png" alt="Icon" style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic" title="Icon" width="40"></td> 
+                     <td align="center" style="padding:0;Margin:0;font-size:0px"><img src="https://colegioelcastano.edu.gt/images/telefono.png" alt="Icon" style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic" title="Icon" width="40"></td> 
                     </tr> 
                     <tr style="border-collapse:collapse"> 
                      <td align="center" style="padding:0;Margin:0;padding-bottom:10px;padding-top:20px"><h3 style="Margin:0;line-height:19px;mso-line-height-rule:exactly;font-family:'open sans', 'helvetica neue', helvetica, arial, sans-serif;font-size:16px;font-style:normal;font-weight:bold;color:#ffffff">Contáctanos</h3></td> 
@@ -501,12 +463,15 @@ table, td { color: #000000; } a { color: #0000ee; text-decoration: underline; } 
                  <td class="es-hidden" style="padding:0;Margin:0;width:20px"></td> 
                 </tr> 
               </table><!--[if mso]></td><td style="width:185px"><![endif]--> 
+              </td> 
+                <td></td>
+            <td> 
               <table class="es-left" cellspacing="0" cellpadding="0" align="left" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;float:left"> 
                 <tr style="border-collapse:collapse"> 
                  <td class="es-m-p20b" align="left" style="padding:0;Margin:0;width:185px"> 
                   <table width="100%" cellspacing="0" cellpadding="0" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px"> 
                     <tr style="border-collapse:collapse"> 
-                     <td align="center" style="padding:0;Margin:0;font-size:0px"><img src="images/clock_time_5025.png" alt="Icon" style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic" title="Icon" width="40"></td> 
+                     <td align="center" style="padding:0;Margin:0;font-size:0px"><img src="https://colegioelcastano.edu.gt/images/reloj.png" alt="Icon" style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic" title="Icon" width="40"></td> 
                     </tr> 
                     <tr style="border-collapse:collapse"> 
                      <td align="center" style="padding:0;Margin:0;padding-bottom:10px;padding-top:20px"><h3 style="Margin:0;line-height:19px;mso-line-height-rule:exactly;font-family:'open sans', 'helvetica neue', helvetica, arial, sans-serif;font-size:16px;font-style:normal;font-weight:bold;color:#ffffff">Atención al cliente</h3></td> 
@@ -517,53 +482,62 @@ table, td { color: #000000; } a { color: #0000ee; text-decoration: underline; } 
                   </table></td> 
                 </tr> 
               </table><!--[if mso]></td><td style="width:20px"></td><td style="width:185px"><![endif]--> 
-              <table class="es-right" cellspacing="0" cellpadding="0" align="right" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;float:right"> 
-                <tr style="border-collapse:collapse"> 
-                 <td class="es-m-p20b" align="left" style="padding:0;Margin:0;width:185px"> 
-                  <table width="100%" cellspacing="0" cellpadding="0" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px"> 
-                    <tr style="border-collapse:collapse"> 
-                     <td align="center" style="padding:0;Margin:0;font-size:0px"><img src="images/place_90615.png" alt="Icon" style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic" title="Icon" width="50"></td> 
-                    </tr> 
-                    <tr style="border-collapse:collapse"> 
-                     <td align="center" style="padding:0;Margin:0;padding-bottom:10px;padding-top:20px"><h3 style="Margin:0;line-height:19px;mso-line-height-rule:exactly;font-family:'open sans', 'helvetica neue', helvetica, arial, sans-serif;font-size:16px;font-style:normal;font-weight:bold;color:#ffffff">Ubicación</h3></td> 
-                    </tr> 
-                    <tr style="border-collapse:collapse"> 
-                     <td align="center" style="padding:0;Margin:0;padding-top:10px;padding-bottom:15px"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:'open sans', 'helvetica neue', helvetica, arial, sans-serif;line-height:20px;color:#ffffff;font-size:13px">&nbsp;0 av b 1-45 zona 4 Montserrat 1 01057-Mixco, Guatemala.</p></td> 
-                    </tr> 
-                  </table></td> 
-                </tr> 
-              </table><!--[if mso]></td></tr></table><![endif]--></td> 
+              </td>
+           
+
             </tr> 
-          </table></td> 
+            <tr>
+              <td></td>
+              <td> 
+                <table class="es-right" cellspacing="0" cellpadding="0" align="right" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;float:right"> 
+                  <tr style="border-collapse:collapse"> 
+                   <td class="es-m-p20b" align="left" style="padding:0;Margin:0;width:185px"> 
+                    <table width="100%" cellspacing="0" cellpadding="0" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px"> 
+                      <tr style="border-collapse:collapse"> 
+                       <td align="center" style="padding:0;Margin:0;font-size:0px"><img src="https://colegioelcastano.edu.gt/images/place.png" alt="Icon" style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic" title="Icon" width="50"></td> 
+                      </tr> 
+                      <tr style="border-collapse:collapse"> 
+                       <td align="center" style="padding:0;Margin:0;padding-bottom:10px;padding-top:20px"><h3 style="Margin:0;line-height:19px;mso-line-height-rule:exactly;font-family:'open sans', 'helvetica neue', helvetica, arial, sans-serif;font-size:16px;font-style:normal;font-weight:bold;color:#ffffff">Ubicación</h3></td> 
+                      </tr> 
+                      <tr style="border-collapse:collapse"> 
+                       <td align="center" style="padding:0;Margin:0;padding-top:10px;padding-bottom:15px"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:'open sans', 'helvetica neue', helvetica, arial, sans-serif;line-height:20px;color:#ffffff;font-size:13px">&nbsp;0 av b 1-45 zona 4 Montserrat 1 01057-Mixco, Guatemala.</p></td> 
+                      </tr> 
+                    </table>
+                  </td> 
+                  </tr> 
+                </table><!--[if mso]></td></tr></table><![endif]-->
+              </td>
+              <td></td>
+            </tr>
+          </table>
+
+
+
+        </td> 
         </tr> 
-      </table></td> 
+      </table>
+    
+    </td> 
     </tr> 
   </table> 
+
+
+
+</td> 
+    </tr> 
+  </table> 
+</table>
+
     <!--[if (mso)|(IE)]></td><![endif]-->
     
     
     <!--[if (mso)|(IE)]></tr></table></td></tr></table><![endif]-->
   </div>
 </div>
-
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-<table style="font-family:arial,helvetica,sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
-  <tbody>
-    <tr>
-      <td style="overflow-wrap:break-word;word-break:break-word;padding:10px 10px 30px;font-family:arial,helvetica,sans-serif;" align="left">
-        
-  <div style="color: #ffffff; line-height: 190%; text-align: center; word-wrap: break-word;">
-    <p style="font-size: 14px; line-height: 190%;">Copyright, 2021 All Right Reserved, El Casta&ntilde;o TI</p>
-  </div>
-
-      </td>
-    </tr>
-  </tbody>
-</table>
+</div>
+</div>
+</div>
+</div>
 
   <!--[if (!mso)&(!IE)]><!--></div><!--<![endif]-->
   </div>
@@ -572,14 +546,44 @@ table, td { color: #000000; } a { color: #0000ee; text-decoration: underline; } 
       <!--[if (mso)|(IE)]></tr></table></td></tr></table><![endif]-->
     </div>
   </div>
+
+
+
+
 </div>
 
 
-    <!--[if (mso)|(IE)]></td></tr></table><![endif]-->
-    </td>
-  </tr>
+
+      </td>
+    </tr>
+    <tr>
+      <td>
+
+
+      </td>
+    </tr>
   </tbody>
-  </table>
+</table>
+
+
+
+<table style="font-family:arial,helvetica,sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
+  <tbody>
+    <tr>
+      <td style="overflow-wrap:break-word;word-break:break-word;padding:10px 10px 30px;font-family:arial,helvetica,sans-serif;" align="left">
+        
+  <div style="color: #3a3e7b; line-height: 190%; text-align: center; word-wrap: break-word;">
+    <p style="font-size: 14px; line-height: 190%;">Copyright, 2021 All Right Reserved, El Casta&ntilde;o TI</p>
+  </div>
+
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
   <!--[if mso]></div><![endif]-->
   <!--[if IE]></div><![endif]-->
 </body>

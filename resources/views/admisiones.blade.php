@@ -99,12 +99,14 @@
             <div class="card" style="border-color: #ffff; outline-color: transparent; background-color:transparent">
               <div class="card-body">
                 <h3 class="card-title" style="color:#3a3e7b;"><b>DATOS DEL ESTUDIANTE:</b></h3>
-                <p class="card-text text-white">• Datos generales. <br>
+                <p class="text-white">• Datos generales. <br>
                   • No. CUI. <br>
                   • Código Personal.                    
-                        <button class="btn-pre text-white" style="background-color:#3a3e7b" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        <a
+                        class="btn-pre text-white" style="background-color:#3a3e7b" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                                 ?
-                 </button></p>
+                </a>
+                </p>
               </div>
             </div>
           </div>
@@ -531,71 +533,6 @@
 </div>
 
 @endif
-<style>
-  .btn-pre {
-    display: inline-block;
-    -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
-    cursor: pointer;
-    padding: 10px 20px;
-    border: none;
-    -webkit-border-radius: 12px;
-    border-radius: 12px;
-    font: normal 16px/normal "Century Gothic", Times, serif;
-    color: rgba(255,255,255,0.9);
-    -o-text-overflow: clip;
-    text-overflow: clip;
-    background: -webkit-linear-gradient(-90deg, #3a3e7b 0, #3a3e7b);
-    background: -moz-linear-gradient(180deg, #3a3e7b 0, #3a3e7b);
-    background: linear-gradient(180deg, #3a3e7b 0, #3a3e7b);
-    background-position: 50% 50%;
-    -webkit-background-origin: padding-box;
-    background-origin: padding-box;
-    -webkit-background-clip: border-box;
-    background-clip: border-box;
-    -webkit-background-size: auto auto;
-    background-size: auto auto;
-    -webkit-box-shadow: 2px 2px 2px 0 rgba(58,228,0,0.2) ;
-    box-shadow: 2px 2px 2px 0 rgba(58,228,0,0.2) ;
-    text-shadow: -1px -1px 0 rgba(15,73,168,0.66) ;
-    -webkit-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
-    -moz-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
-    -o-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
-    transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
-  }
-  
-  .btn-pre:hover {
-    border: 0px solid #33a506;
-    -webkit-border-radius: 12px;
-    border-radius: 12px;
-    background: -webkit-linear-gradient(-90deg,  #626bdd 0,  #6269cc 100%);
-    background: -moz-linear-gradient(180deg,  #626bdd 0,  #6269cc 100%);
-    background: linear-gradient(180deg, r #626bdd 0,  #6269cc 100%);
-    background-position: 50% 50%;
-    -webkit-background-origin: padding-box;
-    background-origin: padding-box;
-    -webkit-background-clip: border-box;
-    background-clip: border-box;
-    -webkit-background-size: auto auto;
-    background-size: auto auto;
-  }
-  
-  .btn-pre:active {
-    -webkit-border-radius: 17px;
-    border-radius: 12px;
-    background: -webkit-linear-gradient(-90deg, #3a3e7b 0,  #3a3e7b 100%);
-    background: -moz-linear-gradient(180deg,  #3a3e7b 0,  #3a3e7b 100%);
-    background: linear-gradient(180deg,  #3a3e7b 0,  #3a3e7b 100%);
-    background-position: 50% 50%;
-    -webkit-background-origin: padding-box;
-    background-origin: padding-box;
-    -webkit-background-clip: border-box;
-    background-clip: border-box;
-    -webkit-background-size: auto auto;
-    background-size: auto auto;
-  }
-  </style>
 
 <hr>
 <style type="text/css">
