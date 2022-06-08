@@ -9,9 +9,12 @@ class ValidacionComponent extends Component
 {
     public $op;
     public $nogestion, $dpi, $fehencargado,$mensaje;
+    public $validar1, $confi, $val, $grados_selecionados, $grados_mostrar;
     public function render()
     {
-        return view('livewire.validacion-component');        
+        $sql= 'SELECT * FROM tb_grados';
+        $grados=DB::select($sql);
+        return view('livewire.validacion-component', compact('grados'));        
     }
     public function buspre() {
         if($this->validate([
@@ -38,5 +41,22 @@ class ValidacionComponent extends Component
 
         }
 
+    }
+
+    public function ver_form_ins($validar){
+        $this->validar1 = $validar;
+    }
+
+    public function confirmar_hermano($conf){
+        $this->confi=$conf;
+
+
+    }
+
+    public function insertar_grados_hermanos($grado, $gradomostrar){
+        $this->grados_selecionados=$this->grados_selecionados.";".$grado;
+        $this->grados_mostrar=$this->grados_mostrar.";".$gradomostrar;
+
+        
     }
 }
