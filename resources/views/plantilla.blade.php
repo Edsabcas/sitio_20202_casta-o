@@ -84,6 +84,72 @@
            </div>
          </div>
          <style>
+            .btn-pre {
+              display: inline-block;
+              -webkit-box-sizing: content-box;
+              -moz-box-sizing: content-box;
+              box-sizing: content-box;
+              cursor: pointer;
+              padding: 10px 20px;
+              border: none;
+              -webkit-border-radius: 12px;
+              border-radius: 12px;
+              font: normal 16px/normal "Century Gothic", Times, serif;
+              color: rgba(255,255,255,0.9);
+              -o-text-overflow: clip;
+              text-overflow: clip;
+              background: -webkit-linear-gradient(-90deg, #3a3e7b 0, #3a3e7b);
+              background: -moz-linear-gradient(180deg, #3a3e7b 0, #3a3e7b);
+              background: linear-gradient(180deg, #3a3e7b 0, #3a3e7b);
+              background-position: 50% 50%;
+              -webkit-background-origin: padding-box;
+              background-origin: padding-box;
+              -webkit-background-clip: border-box;
+              background-clip: border-box;
+              -webkit-background-size: auto auto;
+              background-size: auto auto;
+              -webkit-box-shadow: 2px 2px 2px 0 rgba(58,228,0,0.2) ;
+              box-shadow: 2px 2px 2px 0 rgba(58,228,0,0.2) ;
+              text-shadow: -1px -1px 0 rgba(15,73,168,0.66) ;
+              -webkit-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+              -moz-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+              -o-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+              transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+            }
+            
+            .btn-pre:hover {
+              border: 0px solid #33a506;
+              -webkit-border-radius: 12px;
+              border-radius: 12px;
+              background: -webkit-linear-gradient(-90deg,  #626bdd 0,  #6269cc 100%);
+              background: -moz-linear-gradient(180deg,  #626bdd 0,  #6269cc 100%);
+              background: linear-gradient(180deg, r #626bdd 0,  #6269cc 100%);
+              background-position: 50% 50%;
+              -webkit-background-origin: padding-box;
+              background-origin: padding-box;
+              -webkit-background-clip: border-box;
+              background-clip: border-box;
+              -webkit-background-size: auto auto;
+              background-size: auto auto;
+            }
+            
+            .btn-pre:active {
+              -webkit-border-radius: 17px;
+              border-radius: 12px;
+              background: -webkit-linear-gradient(-90deg, #3a3e7b 0,  #3a3e7b 100%);
+              background: -moz-linear-gradient(180deg,  #3a3e7b 0,  #3a3e7b 100%);
+              background: linear-gradient(180deg,  #3a3e7b 0,  #3a3e7b 100%);
+              background-position: 50% 50%;
+              -webkit-background-origin: padding-box;
+              background-origin: padding-box;
+              -webkit-background-clip: border-box;
+              background-clip: border-box;
+              -webkit-background-size: auto auto;
+              background-size: auto auto;
+            }
+            </style>
+          
+         <style>
 .enjoy-css {
   display: inline-block;
   -webkit-box-sizing: content-box;
@@ -212,7 +278,12 @@
    @livewireScripts
    </body>
    <footer>
+<<<<<<< HEAD
     <div class="footer" style="background-color: #272b61">
+=======
+
+    <div class="footer" style="background-color:#4f4f52">
+>>>>>>> eb17255f4f7dd0d1e418332fdb3213827a31195b
        <div class="container">
          <div class="row">
             <div class="col text-center">
@@ -247,16 +318,34 @@
                   <span>Lunes - Viernes</span><br>
                   <span><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-alarm-fill" viewBox="0 0 16 16">
                      <path d="M6 .5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1H9v1.07a7.001 7.001 0 0 1 3.274 12.474l.601.602a.5.5 0 0 1-.707.708l-.746-.746A6.97 6.97 0 0 1 8 16a6.97 6.97 0 0 1-3.422-.892l-.746.746a.5.5 0 0 1-.707-.708l.602-.602A7.001 7.001 0 0 1 7 2.07V1h-.5A.5.5 0 0 1 6 .5zm2.5 5a.5.5 0 0 0-1 0v3.362l-1.429 2.38a.5.5 0 1 0 .858.515l1.5-2.5A.5.5 0 0 0 8.5 9V5.5zM.86 5.387A2.5 2.5 0 1 1 4.387 1.86 8.035 8.035 0 0 0 .86 5.387zM11.613 1.86a2.5 2.5 0 1 1 3.527 3.527 8.035 8.035 0 0 0-3.527-3.527z"/>
+<<<<<<< HEAD
                   </svg> 7:00 a.m - 14:00 p.m.</span>
                </div>
             </div>
          </div>
+=======
+                   </svg> 7:00 a.m - 14:00 p.m.</span>
+             </div>
+          </div>
+
+       </div>
       </div>
+ 
+       <div class="contact text-center">
 
-      <a class="scroll-to-top rounded" href="#page-top" style="display: inline;">
-         <i class="fas fa-angle-up"></i>
-      </a>
+          <h3 class="text-xs text-light">Ubicación</h3>
+        <p style="color:white"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+         <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+       </svg> 0 av b 1-45 zona 4 Montserrat 1 01057-Mixco, Guatemala.</p><br>
+        <p>
+         <div class="map-responsive">
 
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.0995604467653!2d-90.5839736856792!3d14.650289479785926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8589a0226e5847b5%3A0x97abf4d970bd6fac!2sColegio%20Biling%C3%BCe%20El%20Casta%C3%B1o!5e0!3m2!1ses!2sgt!4v1619627593600!5m2!1ses!2sgt" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        
+         </div>
+        </p>
+>>>>>>> eb17255f4f7dd0d1e418332fdb3213827a31195b
+      </div>
 
        <div class="copyright">
            <div class="row">
@@ -270,9 +359,9 @@
                 </div>
               </div>
            </div>
-   
            <p style="color:black">Copyright, 2021 All Right Reserved, El Castaño TI <a href="https://html.design/"></p>
-
        </div>
+      </div>
+
  </footer>
 </html>

@@ -2,21 +2,15 @@
   <div id="main_slider" class="carousel slide banner-main" data-ride="carousel">
            <img class="first-slide" src="{{ asset('images/a.jpg') }}" alt="First slide">
   </div>
-  @isset($var)
-  @if(empty($myvar))
-  <script>
- window.alert('Datos no encontrados');
-  </script>
-@endif
-  @endisset
+
 
 <div class="contact">
   <div class="container">
       <div class="row">
           <div class="col-md-7 offset-md-3">
           <div class="title">
-              <h1 class="fs-1" style="color: #3a3e7b" >VALIDACIÓN PROCESO PRE-INSCRIPCIÓN</h1>
-
+              <h1 class="fs-1" style="color: #3a3e7b" >VALIDACIÓN PROCESO</h1>
+              <h1 class="fs-1" style="color: #3a3e7b" >PRE-INSCRIPCIÓN</h1>
               <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="#a4cb39" class="bi bi-clipboard-check" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
                 <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
@@ -25,21 +19,24 @@
               <br>
               <br>
 
-              <span style="color:black">Ingresa los datos requeridos y valida el proceso de la Pre-Inscripción.</span>
+
+              <span style="color:black">Ingrese los siguientes datos requeridos.</span>
           </div>
           </div>
 
           
-
-  <form  style= "float:right; max-width:5000px; margin-top: -7px;"class="formulario formulario-eliminar">
-
-  <form wire:submit.prevent="">
+          @if($mensaje!=null && $mensaje==1)
+          <div class="alert alert-danger d-flex align-items-center" role="alert">
+            <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+            <div>
+              # de gestión no encontrada.
+            </div>
+          </div>
+        
+          @endif
+        
+          
   <div class="row">
-    @if($mensaje!=null)
-    <div class="alert alert-danger" role="alert">
-     No se encontro la gestión consultada.
-    </div>
-    @endif
       <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
           <option></option>
           <label for="name" style="color: #3a3e7b"><b>No. Gestión</b></label><br>
@@ -47,24 +44,42 @@
               <input class="form-control input100 rounded-pill" wire:model="nogestion" type="number" class="validate" required>
               <span></span>
           </div>
+          @error('nogestion')
+          <div class="alert alert-warning" role="alert">
+           Pendiente
+          </div>
+          @enderror
       </div>
       <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
           <option></option>
           <label for="lastname" style="color: #3a3e7b" ><b>DPI Encargado</b></label>
           <input class="form-control me-2 input100 rounded-pill" wire:model="dpi" type="number" class="validate" required>
+          @error('dpi')
+          <div class="alert alert-warning" role="alert">
+           Pendiente
+          </div>
+          @enderror
       </div>
-      <div class="col-md-12">
+      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
           <option></option>
-          <label for="date" style="color: #3a3e7b" data-aos="fade"><b>Fecha Nacimiento Encargado</b></label><br>
-          <input class="form-control me-2 input100 rounded-pill"id='email'name="email"type="date"class="validate"required>
+          <label for="date" style="color: #3a3e7b"><b>Fecha Nacimiento Encargado</b></label><br>
+          <input class="form-control me-2 input100 rounded-pill"id='email' wire:model="fehencargado"type="date"class="validate"required>
+          @error('fehencargado')
+          <div class="alert alert-warning" role="alert">
+           Pendiente
+          </div>
+          @enderror
       </div>
-      <input type="submit" class="btn btn-outline-success input100 rounded-pill" onclick="nextPrev(1)" value="Validar">
-      <p style= "float:right; max-width:5000px; margin-top: -7px;"class="green-text"id="enviado"></p>
+      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+        <option></option>
+        <label for="date" style="color: #3a3e7b"><b>&nbsp;&nbsp;&nbsp;</label><br>
+      <button class="btn btn-pre input100 rounded-pill" wire:click="buspre" >Validar</button>
+    </div>
+    {{$op}}
   </div>
-
-  </form>
 </div>
        </div>
    </div>
+  </section>
   
 
