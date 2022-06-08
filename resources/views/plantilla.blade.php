@@ -279,7 +279,7 @@
    </body>
    <footer>
 
-    <div class="footer" style="background-color:#13164c">
+    <div class="footer" style="background-color:#4f4f52">
        <div class="container">
     <div class="row">
           <div class="col-xs-12 col-md-6 text-center">
