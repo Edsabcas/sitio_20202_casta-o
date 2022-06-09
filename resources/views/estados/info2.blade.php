@@ -126,6 +126,81 @@
                         <p>Genera el pago de tu inscripción.</p></div>
                 </div>
             </li>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Launch demo modal
+              </button>
+
+
+              <div wire:ignore.self class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel"><p>Metodo de Pago</p></h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      
+                        <p>Eligue tu metodo de pago</p>
+                        <br>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Metodo de pago:</label>
+                            <select class="form-select" aria-label="Default select example" wire:model="metodo">
+                              <option selected>Seleccionar:</option>
+                                <option value="1">Efectivo</option>
+                                <option value="2">Transferencia</option>
+                            </select>
+                          </div>
+
+                          <div class="form-group row">
+                            <label for="exampleInputPassword1" class="form-label" style="font-size:20px">Subir comprobante de pago</label>
+                            <div class="mb-3">
+                              <input type="file" id="archivo"  wire:model="archivo_perfil">
+                            </div> 
+                          </div>
+
+                          <div class="mb-3">
+                            <div wire:loading wire:target="archivo_perfil" class="alert alert-warning" role="alert">
+                              <strong class="font-bold">¡Imagen cargando!</strong>
+                                <span class="block sm:inlone">Espere un momento hasta que la imagen se haya procesado.</span>
+                              <div class="spinner-border text-warning" role="status">
+                              </div>
+                            </div>
+                            @if($tipo==1)
+                            <h3 class="form-label">Visualización de Imagen</h3>
+                            <img src="{{$archivo_perfil->temporaryURL()}}" height="200" weight="200"  alt="...">
+                            @endif
+                            @if($mensaje24 != null)
+                                          <div class="alert alert-success d-flex align-items-center" role="alert">
+                                            <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
+                                                <div>{{$mensaje24}}
+                                                </div>
+                                              </div>
+                                            @endif
+                                          @if($mensaje25 != null)
+                                          <div class="alert alert-danger d-flex align-items-center" role="alert">
+                                            <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
+                                                <div>{{$mensaje25}}
+                                                </div>
+                                              </div>
+                                            @endif
+                                            </div>
+
+                          <div class="mb-3">
+                            <label for="message-text" class="col-form-label">Observación:</label>
+                            <textarea class="form-control" id="message-text" wire:model="observacion"></textarea>
+                          </div>
+
+
+
+
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary" wire:click="actualizar_metodo()">Save changes</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
          
         </ul>
     </div>

@@ -4,10 +4,13 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use Illuminate\Support\Facades\DB;
+use Livewire\WithFileUploads;
 
 class ValidacionComponent extends Component
 {
+    public $mensaje3,$mensaje4,$mensaje24,$mensaje25,$archivo_perfil,$img,$tipo,$metodo,$observacion,$id_pre;  
     public $op;
+<<<<<<< HEAD
     public $nogestion, $dpi, $fehencargado,$mensaje, $gradoprimeringreso, $grado_primer_ingreso, $nombrepadre;
     public $validar1, $confi, $val, $grados_selecionados, $grados_mostrar, $año_ingreso, $añoingreso, $nombre_padre;
     public $nacimientopadre, $nacimiento_padre, $nacionalidadpadre, $nacionalidad_padre;
@@ -15,6 +18,13 @@ class ValidacionComponent extends Component
     public $celular_padre, $celularpadre, $telefono_padre, $telefonopadre, $direccion_residencia, $direccionresidencia;
     public $correo_padre, $correopadre, $profesionpadre, $profesion_padre, $grado_hermano, $gradohermano;
 
+=======
+    public $nogestion, $dpi, $fehencargado,$mensaje;
+
+    use WithFileUploads;
+
+    public $validar1, $confi, $val, $grados_selecionados, $grados_mostrar;
+>>>>>>> 19bb7196e09121291d461af15f2210bfa3f55b0a
     public function render()
     {
         $sql= 'SELECT * FROM tb_grados';
@@ -45,6 +55,65 @@ class ValidacionComponent extends Component
             }
 
         }
+
+    }
+    public function actualizar_metodo(){
+
+        
+        $metodo=$this->metodo;
+        $observacion=$this->observacion;
+
+        DB::beginTransaction();
+
+        $metodo=DB::table('TB_PRE_INS')->where('ID_PRE'.$id_pre)->update(
+            [
+                'TIPO_PAGO'=>$metodo,
+                'OBSERVACION_COMP'=>$observacion,
+            ]);
+            if($metodo){
+                DB::commit();
+                $this->reset();
+                $this->mensaje3='Editado Correctamente';
+            }
+            else{
+                DB::rollback();
+                unset($this->mensaje3);
+                $this->mensaje4='No fue posible editar correctamente';
+            }    
+
+            
+            $archivo_perfil="";
+        if($this->archivo_perfil!=null){
+            if($this->archivo_perfil->getClientOriginalExtension()=="jpg" or $this->archivo_perfil->getClientOriginalExtension()=="png" or $this->archivo_perfil->getClientOriginalExtension()=="jpeg"){
+                $archivo_perfil = "img".time().".".$this->archivo_perfil->getClientOriginalExtension();
+                $this->img=$archivo_perfil;
+                $this->archivo_perfil->storeAS('public/comprobantes/', $this->img,'public_up');
+            }
+            if($this->archivo_perfil->getClientOriginalExtension()=="jpg" or $this->archivo_perfil->getClientOriginalExtension()=="png" or $this->archivo_perfil->getClientOriginalExtension()=="jpeg"){
+                $this->tipo=1;
+            }
+            DB::beginTransaction();
+                    $foto=DB::table('TB_PRE_INS')
+                    ->where('ID_PRE',auth()->user()->id)
+                    ->update ([
+                        
+                        'COMPROBANTE_PAGO'=>$this->img
+                     ]);
+
+                     if($foto){
+                        DB::commit();
+                        $this->mensaje24="Foto de perfil actualizada";
+                    }
+                    else{
+                        DB::rollback();
+                        $this->mensaje25="No se logró actualizar";
+                    }
+        }
+    }
+
+    public function comprobante(){
+
+        
 
     }
 
