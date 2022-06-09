@@ -1,3 +1,21 @@
+<script>
+            
+    $(document).on('click', '#Cerrar', function() {
+  
+  $('#ModalInscripcion').modal('show');
+  
+  });
+  
+  
+  
+  $(document).on('click', '#cerar2', function() {
+  
+  $('#exampleModal1').modal('show');
+  
+  });
+  
+  </script>
+
 <section class="slider_section">
     <div id="main_slider" class="carousel slide banner-main" data-ride="carousel">
              <img class="first-slide" src="{{ asset('images/a.jpg') }}" alt="First slide">
@@ -126,10 +144,10 @@
                         <br>
                         <p>Inscripción de pago realizada correctamente.</p></div>
                 </div> 
-                <button type="button" class="btn btn-primary" wire:click="ver_form_ins('1')" >Rellene los datos de inscripción</button>
-                @if($validar1==1)
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalInscripcion" wire:click="ver_form_ins('1')" >
+                    Rellene los datos de inscripción</button>
                 @include('estados.forms.info3_form')
-                @endif
+                
             </li>
          
         </ul>
