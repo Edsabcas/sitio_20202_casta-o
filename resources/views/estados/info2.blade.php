@@ -118,7 +118,7 @@
                         <h4 style="color: #3a3e7b"><strong>PAGO</strong></h4>
                     </div>
                     <div class="timeline-body">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#a4cb39" class="bi bi-credit-card" viewBox="0 0 16 16">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#c20000" class="bi bi-credit-card" viewBox="0 0 16 16">
                             <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1H2zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V7z"/>
                             <path d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1z"/>
                         </svg>
@@ -127,20 +127,102 @@
                 </div>
             </li>
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                Launch demo modal
+                Generar
               </button>
 
 
               <div wire:ignore.self class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
+                <div class="modal-dialog modal-xl">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLabel"><p>Metodo de Pago</p></h5>
+                      <h5 class="modal-title" id="exampleModalLabel">Metodo de Pago</h5>
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">      
-                        <p>Eligue tu metodo de pago</p>
+                        <h3>CUENTAS BANCARIAS</h3>
                         <br>
+                        <h5>COLEGIATURAS 2023</h5>
+                          <div class="container">
+                            <div class="row">
+                              <div class="col">
+                                <div class="card" style="width: 18rem;">
+                                  <div class="card-header">
+                                    BANCO INDUSTRIAL
+                                  </div>
+                                  <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Cuenta monetaria: 027-007109-5</li>
+                                    <li class="list-group-item">A nombre de: Colegio Bilingüe El Castaño</li>
+                                  </ul>
+                                </div>
+                              </div>
+                              <div class="col">
+                                <div class="card" style="width: 18rem;">
+                                  <div class="card-header">
+                                    BANRURAL
+                                  </div>
+                                  <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Cuenta monetaria: 3445387086</li>
+                                    <li class="list-group-item">A nombre de: Colegio Bilingüe El Castaño</li>
+                                  </ul>
+                                </div>
+                              </div>                              
+                              <div class="col">
+                                <div class="card" style="width: 18rem;">
+                                  <div class="card-header">
+                                    BAM
+                                  </div>
+                                  <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Cuenta monetaria: 49-0112346-9</li>
+                                    <li class="list-group-item">A nombre de: Colegio Bilingüe El Castaño</li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <br>
+                          <div class="container">
+                            <div class="row">
+                              <div class="col">
+                                <h5>INSCRIPCIONES 2023</h5>
+                                <div class="card" style="width: 18rem;">
+                                  <div class="card-header">
+                                    BAM
+                                  </div>
+                                  <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Cuenta monetaria: 40-60023216</li>
+                                    <li class="list-group-item">A nombre de: Colegio Bilingüe El Castaño</li>
+                                  </ul>
+                                </div>
+                              </div>
+                              <div class="col">
+                                <h5>PAQUETES DIDÁCTICOS 2023</h5>
+                                <div class="card" style="width: 18rem;">
+                                  <div class="card-header">
+                                    BAM
+                                  </div>
+                                  <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Cuenta monetaria: 90-189310-7</li>
+                                    <li class="list-group-item">A nombre de: Colegio Bilingüe El Castaño</li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <br>  
+                          @isset($mensaje24)
+                          @if ($mensaje24!=null)
+                              <div class="alert alert-success" role="alert">
+                              Agregado Correctamente!
+                              </div>
+                          @endif
+                      @endisset
+                      @isset($mensaje25)
+                          @if($mensaje25!=null)
+                              <div class="alert alert-danger" role="alert">
+                              No se logro insetar datos
+                              </div>
+                          @endif 
+                        @endisset 
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Metodo de pago:</label>
                             <select class="form-select" aria-label="Default select example" wire:model="metodo">
@@ -148,21 +230,8 @@
                                 <option value="1">Efectivo</option>
                                 <option value="2">Transferencia</option>
                             </select>
-                        @if ($metodo == "0")
-                            
-                        
-                        
+                        @if ($metodo == "0")                     
                             @elseif($metodo == "1")
-                                
-                                <div class="mb-3">
-                                  <label for="message-text" class="col-form-label">Observación:</label>
-                                  <textarea class="form-control" id="message-text" wire:model="observacion"></textarea>
-                                </div>
-                       
-                            
-                                @elseif($metodo == "2")
-                                    
-                                
                             <div class="form-group row">
                               <label for="exampleInputPassword1" class="form-label" style="font-size:20px">Subir comprobante de pago</label>
                               <div class="mb-3">
@@ -201,77 +270,64 @@
                                                 </div>
                                               @endif
                                               </div>
+                                
+                                <div class="mb-3">
+                                  <label for="message-text" class="col-form-label">Observación:</label>
+                                  <textarea class="form-control" id="message-text" wire:model="observacion"></textarea>
+                                </div>
+                       
+                            
+                                @elseif($metodo == "2")
+                                    
+                                
+                            <div class="form-group row">
+                              <label for="exampleInputPassword1" class="form-label" style="font-size:20px">Subir comprobante de pago</label>
+                              <div class="mb-3">
+                                <input type="file" id="archivo"  wire:model="archivo_comprobante">
+                              </div> 
+                            </div>
+                            <div class="mb-3">
+                              <div wire:loading wire:target="archivo_comprobante" class="alert alert-warning" role="alert">
+                                <strong class="font-bold">¡Imagen cargando!</strong>
+                                  <span class="block sm:inlone">Espere un momento hasta que la imagen se haya procesado.</span>
+                                <div class="spinner-border text-warning" role="status">
+                                </div>
+                              </div>
+                              @if($tipo==1)
+                              <h3 class="form-label">Visualización de Imagen</h3>
+                              <img src="{{$archivo_comprobante->temporaryURL()}}" height="100" weight="100"  alt="...">
+                              @endif
+                              
+                             
+                              {{-- @if($tipo==3)
+                              <h3 class="form-label">Visualización de PDF</h3>
+                                <iframe width="400" height="400" src="/public/pdf/{{$img}}" frameborder="0"></iframe>
+                              @endif --}}
+                              @if($mensaje24 != null)
+                                <div class="alert alert-success d-flex align-items-center" role="alert">
+                                  <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
+                                  <div>{{$mensaje24}}
+                                  </div>
+                                </div>
+                              @endif
+                              @if($mensaje25 != null)
+                                <div class="alert alert-danger d-flex align-items-center" role="alert">
+                                  <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
+                                  <div>{{$mensaje25}}
+                                  </div>
+                                </div>
+                              @endif
+                            </div>
                               <div class="mb-3">
                                 <label for="message-text" class="col-form-label">Observación:</label>
                                 <textarea class="form-control" id="message-text" wire:model="observacion"></textarea>
-                              </div>
-
-                              <h5>Cuentas Bancarias</h5>
-                              <button class="btn btn-primary" data-bs-target="#staticBackdrop12" data-bs-toggle="modal">Cuentas Bancarias</button>
-
-                              
-                              <!-- Modal Cuentas Bancarias-->
-                              <div wire:ignore.self class="modal fade" id="staticBackdrop12" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                  <div class="modal-content">
-                                    <div class="modal-header">
-                                      <h5 class="modal-title" id="staticBackdropLabel">CUENTAS BANCARIAS</h5>
-                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                      <h3>Colegiaturas 2023</h3>
-                                      <h4>Banco Industrial</h4>
-                                      <p>
-                                        Cuenta monetaria: 027-007109-5
-                                      </p>
-                                      <p>
-                                        A nombre de: Colegio Bilingüe El Castaño
-                                      </p>
-                                      <h3>Colegiaturas 2023</h3>
-                                      <h4>Banrural</h4>
-                                      <p>
-                                        Cuenta monetaria: 3445387086
-                                      </p>
-                                      <p>
-                                        A nombre de: Colegio Bilingüe El Castaño
-                                      </p>
-                                      <h3>Colegiaturas 2023</h3>
-                                      <h4>Bam</h4>
-                                      <p>
-                                        Cuenta monetaria: 49-0112346-9
-                                      </p>
-                                      <p>
-                                        A nombre de: Colegio Bilingüe El Castaño
-                                      </p>
-                                      <h3>Inscripción 2023</h3>
-                                      <h4>Bam</h4>
-                                      <p>
-                                        Cuenta monetaria: 40-60023216
-                                      </p>
-                                      <p>
-                                        A nombre de: Colegio Bilingüe El Castaño
-                                      </p>
-                                      <h3>Paquetes Didácticos 2023</h3>
-                                      <h4>Bam</h4>
-                                      <p>
-                                        Cuenta monetaria: 90-189310-7
-                                      </p>
-                                      <p>
-                                        A nombre de: Colegio Bilingüe El Castaño
-                                      </p>
-                                    </div>
-                                    <div class="modal-footer">
-                                      <a class="btn btn-primary" data-bs-toggle="modal" href="#staticBackdrop" data-bs-dismiss="modal" role="button">Regresar</a>
-                                    </div>
-                                  </div>
-                                </div>
                               </div>
                             @endif
                           </div>    
                     </div>
                     <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                      <button type="button" class="btn btn-primary" wire:click="update_comprobante_p()">Guardar</button>
+                      {{-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button> --}}
+                      <button type="button" class="btn btn-primary" wire:click="update_comprobante_p()" data-bs-dismiss="modal">Guardar y salir</button>
                     </div>
                   </div>
                 </div>
