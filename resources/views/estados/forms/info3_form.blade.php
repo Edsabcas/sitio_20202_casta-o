@@ -604,18 +604,18 @@
                 <div  wire:ignore.self class="accordion-body" style="border-radius: 60px 60px 60px 60px;">
                 <div class="tab">
                   <div class="row">
-                  <strong><label for="exampleInputPassword1" class="form-label">¿El alumno tiene alguna alergia?</label></strong>
+                  <strong><label for="exampleInputPassword1" class="form-label">¿El alumno tiene alguna enfermedad o alergia?</label></strong>
                   <center>
                   <div style="width: 12rem;">
                   <div class="form-check">
-                      <input class="form-check-input" type="radio" name="alumnoasegurado" id="alumnoasegurado1" wire:click="tiene_alergia('1')">
-                      <label class="form-check-label" for="alumnoasegurado1">
+                      <input class="form-check-input" type="radio" name="alergia" id="alergia1" wire:click="tiene_alergia('1')">
+                      <label class="form-check-label" for="alergia1">
                         Si
                       </label>
                   </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="alumnoasegurado" id="alumnoasegurado2" wire:click="tiene_alergia('0')">
-                      <label class="form-check-label" for="alumnoasegurado1">
+                      <input class="form-check-input" type="radio" name="alergia" id="alergia2" wire:click="tiene_alergia('0')">
+                      <label class="form-check-label" for="alergia1">
                         No
                       </label>
                     </div>

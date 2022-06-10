@@ -197,7 +197,7 @@
                         </div>
                         <p>Genere su contrato para rellenarlo</p>
                 </div>
-                <a href="/Descargar_constancia" type="button" class="btn btn-primary" wire:click="ver_form_ins('1')" >
+                <a href="/Descargar_constancia" target="_blank" type="button" class="btn btn-primary" wire:click="ver_form_ins('1')" >
                     Verifique el contrato</a>
                     <br>
                     <div class="col-sm-12">
@@ -216,7 +216,7 @@
                         @endif
                         @if($formato==3)
                         <h3 class="form-label">Visualización de PDF</h3>
-                          <iframe width="400" height="400" src="/imagen/temporalpdf/{{$arch}}" frameborder="0"></iframe>
+                          <iframe width="400" height="400" src="/images/temporalpdf/{{$arch}}" frameborder="0"></iframe>
                         @endif
                         @error('archivo')
                         <div class="alert alert-danger d-flex align-items-center rounded-pill" role="alert">
