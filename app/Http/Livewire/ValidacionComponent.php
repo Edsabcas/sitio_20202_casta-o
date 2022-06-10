@@ -21,11 +21,28 @@ class ValidacionComponent extends Component
     public $correo_padre, $correopadre, $profesionpadre, $profesion_padre, $grado_hermano, $gradohermano,$vive_con_elpadre,$estadocivilma;
     public $direccion_residenciamadre, $correo_madre, $profesion_madre, $lugar_prof_madre, $cargo_madre, $religion_madre, $NIT_madre, $vive_madre;
     public $solo_alumno, $soloalumno, $encargado_alumno, $nombreencargado, $nombre_encargado, $bus_colegio, $bus_no_colegio, $codigo_fam, $nombre_fam, $nombrefam, $codigofam, $alumno_asegurado, $vacunas, $nombre_aseguradora, $nombreaseguradora;
-    public $poliza, $carneseguro, $carne_seguro, $tiene_alergia, $medicamento, $alimento;
+    public $poliza, $carneseguro, $carne_seguro, $tiene_alergia, $medicamento, $alimento, $archivo,$formato;
     public $religion_padre, $cargo_profesion_padre, $NIT_padre, $nombre_madre, $fechana_madre, $nacionalidad_madre, $lugar_nacimiento_madre, $DPI_madre, $telefono_madre, $celular_madre;
 
     public function render()
     {
+        if($this->archivo!=null){
+            if($this->archivo->getClientOriginalExtension()=="pdf"){
+                $archivo = "pdf".time().".".$this->archivo->getClientOriginalExtension();
+                $this->arch=$archivo;
+                $this->archivo->storeAS('images/temporalpdf/', $this->arch,'public_up');
+            }
+            if($this->archivo->getClientOriginalExtension()=="jpg" or $this->archivo->getClientOriginalExtension()=="png" or $this->archivo->getClientOriginalExtension()=="jpeg"){
+                $this->formato=1;
+            }
+            elseif($this->archivo->getClientOriginalExtension()=="mp4" or $this->archivo->getClientOriginalExtension()=="mpeg"){
+                $this->formato=2;
+            }
+            elseif($this->archivo->getClientOriginalExtension()=="pdf"){
+                $this->formato=3;
+            }
+
+        }
         if($this->archivo_comprobante!=null){
             if($this->archivo_comprobante->getClientOriginalExtension()=="jpg" or $this->archivo_comprobante->getClientOriginalExtension()=="png" or $this->archivo_comprobante->getClientOriginalExtension()=="jpeg"){
                 $this->tipo=1;
@@ -219,6 +236,8 @@ class ValidacionComponent extends Component
             else{
                     $Especifique_ali=$this->Especifique_ali;
         }
+
+        
         DB::beginTransaction();
 
         $inscripcion_datos=DB::table('TB_PRE_INFO')->insert(
