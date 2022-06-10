@@ -72,7 +72,7 @@
 
         <br>
 
-        <ul class="timeline text-center">
+        <div class="timeline text-center">
             <br>
             <br>
             <li>
@@ -144,37 +144,38 @@
                         <br>
                         <p>Inscripción de pago realizada correctamente.</p></div>
                 </div> 
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalInscripcion" wire:click="ver_form_ins('1')" >
-                    Rellene los datos de inscripción</button>
-                @include('estados.forms.info3_form')
+                
                 
             </li>
-
-            <li class="timeline">
-                <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" fill="#a4cb39" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
-                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+            <br>
+            <br>
+            <li class="timeline text-center">
+                <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" fill="#f7d547" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a"/>
                   </svg>
                 </div>
                   <br>
                 <div class="timeline-panel">
                     <div class="timeline-heading">
-                        <h4 style="color: #3a3e7b"><strong>REGISTRO DE DATOS</strong></h4>
+                        <h4 style="color: #3a3e7b"><strong>REGISTRO DE DATOS DE INSCRIPCIÓN</strong></h4>
                     </div>
                     <div class="timeline-body">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#a4cb39" class="bi bi-credit-card" viewBox="0 0 16 16">
-                            <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1H2zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V7z"/>
-                            <path d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1z"/>
-                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#a4cb39" class="bi bi-clipboard-check" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+                            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                        </svg>  
                         <br>
-                        <p>Los datos se registraron correctamente.</p></div>
-                </div> 
-                <a class="btn btn-primary"  wire:click="ver_form_ins('1')" >
-                    El siguiente paso es generar tu contrato</a>
-                
-                
+                        <br>
+                        
+                        </div>
+                        <p>Sus datos se encuentran pendientes de validación</p>
+                </div>
+
             </li>
-         
-        </ul>
+            <br>
+            <br>
+        </div>
     </div>
 </section>
 </div>
