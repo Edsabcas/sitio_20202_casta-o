@@ -307,6 +307,16 @@
                 </div>
                 @enderror
               </div>
+              <div class="col-md">
+                <label for="inputApellidos" style="font-size: 15px; color:#000000;">Religión:</label>
+                <br>
+                <input type='text' placeholder=""  wire:model="religion_es" class="form-control" required>
+              </div>
+              @error('religion_es')
+              <div class="alert alert-warning" role="alert">
+              Pendiente
+              </div>
+              @enderror 
             </div>
       
           <div class="row g-3">
@@ -319,17 +329,8 @@
           Pendiente
           </div>
           @enderror
-            <div class="col-md">
-              <label for="inputApellidos" style="font-size: 15px; color:#000000;">Religión:</label>
-              <br>
-              <input type='text' placeholder=""  wire:model="religion_es" class="form-control" required>
-            </div>
-            @error('religion_es')
-            <div class="alert alert-warning" role="alert">
-            Pendiente
-            </div>
-            @enderror 
-            <a class="btn btn-outline-success" style="border-radius: 60px 60px 60px 60px;"  type="button" wire:click='val2' >Validar</a>
+          
+            <a class="btn btn-pre" style="border-radius: 60px 60px 60px 60px;"  type="button" wire:click='val2' >Validar datos</a>
             
           </div>
         </form>
@@ -472,31 +473,14 @@
           <div class="col-md">
             <label for="inputApellidos" style="font-size: 15px; color:#000000;">Religión:</label>
             <br>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input"  type="radio" wire:model="religion_en" value="Catolica" id="flexRadioReligionen222" >
-              <label class="form-check-label" for="flexRadioReligionen222" style="font-size: 15px; color:#000000;">
-              Catolica
-              </label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" wire:model="religion_en" value="Protestante" id="flexRadioReligionen2">
-              <label class="form-check-label" for="flexRadioReligionen2" style="font-size: 15px; color:#000000;">
-                Protestante
-              </label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" wire:model="religion_en" value="Otra" id="flexRadioReligionen23">
-              <label class="form-check-label" for="flexRadioReligionen23" style="font-size: 15px; color:#000000;">
-                Otra
-              </label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" wire:model="religion_en" value="Evangelica" id="flexRadioReligionen3">
-              <label class="form-check-label" for="flexRadioReligionen3" style="font-size: 15px; color:#000000;">
-                Evangelica
-              </label>
-            </div>
+            <input type='text' placeholder=""  wire:model="religion_en" class="form-control" required>
           </div>
+          @error('religion_en')
+          <div class="alert alert-warning" role="alert">
+          Pendiente
+          </div>
+          @enderror 
+
           @error('religion_en')
           <div class="alert alert-warning" role="alert">
            Pendiente
@@ -507,7 +491,7 @@
     <br>
     <div class="row g-4" style="border-radius: 60px 60px 60px 60px;">
       
-    <a wire:click='val3' type="button" style="border-radius: 60px 60px 60px 60px;" class="btn btn-warning">Validar</a>
+    <a wire:click='val3' type="button" style="border-radius: 60px 60px 60px 60px;" class="btn btn-warning">Validar Información</a>
     </div>
     <br>
 
