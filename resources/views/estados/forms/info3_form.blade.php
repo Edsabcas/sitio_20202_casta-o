@@ -362,44 +362,6 @@
                 <div  wire:ignore.self class="accordion-body" style="border-radius: 60px 60px 60px 60px;">
                   <div class="tab">
                     <div class="row">
-                        <div class="col-md-6">
-                            <strong><label  for="Labelnombremadre" class="form-label">Ingrese la dirección de la residencia de la madre</label></strong>
-                            <input  type="text" class="form-control"  wire:model="direccion_residenciamadre">
-                          </div>
-                          @error('direccion_residenciamadre')
-                          <div class="alert alert-danger d-flex align-items-center rounded-pill" role="alert">
-                            <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
-                            <div>
-                                Es necesario que llenes este campo para envíar la información
-                            </div>
-                          </div>
-                          @enderror
-                        <div class="col-md-6">
-                            <strong><label  for="Labelnombremadre" class="form-label">Ingrese el correo electrónico de la madre</label></strong>
-                            <input  type="text" class="form-control"  wire:model="correo_madre">
-                          </div>
-                          @error('correo_madre')
-                          <div class="alert alert-danger d-flex align-items-center rounded-pill" role="alert">
-                            <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
-                            <div>
-                                Es necesario que llenes este campo para envíar la información
-                            </div>
-                          </div>
-                          @enderror
-                        <div class="col-md-6">
-                            <strong><label  for="Labelnombremadre" class="form-label">Ingrese la profesión a la que se decica la madre <label></strong>
-                            <input  type="text" class="form-control"  wire:model="profesion_madre">
-                          </div>
-                          @error('profesion_madre')
-                          <div class="alert alert-danger d-flex align-items-center rounded-pill" role="alert">
-                            <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
-                            <div>
-                              Es necesario que llenes este campo para envíar la información
-                            </div>
-                          </div>
-                          @enderror
-
-                    
                     <div class="col-md-6">
                       <strong><label  for="Labelnombrepadre" class="form-label">Ingrese el nombre de la madre</label></strong>
                       <input  type="text" class="form-control"  wire:model="nombre_madre">
@@ -517,74 +479,110 @@
                   </div>
                   @enderror
 
+                  <div class="col-md-6">
+                    <strong><label  for="Labelnombremadre" class="form-label">Ingrese la dirección de la residencia de la madre</label></strong>
+                    <input  type="text" class="form-control"  wire:model="direccion_residenciamadre">
                   </div>
-
-                          <div class="col-md-6">
-                            <strong><label  for="Labelnombremadre" class="form-label">Ingrese el lugar donde la madre ejerce su profesion <label></strong>
-                            <input  type="text" class="form-control"  wire:model="lugar_prof_madre">
-                          </div>
-                          @error('lugar_prof_madre')
-                          <div class="alert alert-danger d-flex align-items-center rounded-pill" role="alert">
-                            <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
-                            <div>
-                              Es necesario que llenes este campo para envíar la información
-                            </div>
-                          </div>
-                          @enderror
-                          <div class="col-md-6">
-                            <strong><label  for="Labelnombremadre" class="form-label">Ingrese cual es el cargo que la madre ocupa en su profesion <label></strong>
-                            <input  type="text" class="form-control"  wire:model="cargo_madre">
-                          </div>
-                          @error('cargo_madre')
-                          <div class="alert alert-danger d-flex align-items-center rounded-pill" role="alert">
-                            <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
-                            <div>
-                              Es necesario que llenes este campo para envíar la información
-                            </div>
-                          </div>
-                          @enderror
-                          <div class="col-md-6">
-                            <strong><label  for="Labelnombremadre" class="form-label">Ingrese cual es la religion que la madre profesa<label></strong>
-                            <input  type="text" class="form-control"  wire:model="religion_madre">
-                          </div>
-                          @error('religion_madre')
-                          <div class="alert alert-danger d-flex align-items-center rounded-pill" role="alert">
-                            <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
-                            <div>
-                              Es necesario que llenes este campo para envíar la información
-                            </div>
-                          </div>
-                          @enderror
-                          <div class="col-md-6">
-                            <strong><label  for="Labelnombremadre" class="form-label">Ingrese el NIT de la madre(por favor no utilice ningun signo solo ingerese numeros)<label></strong>
-                            <input  type="number" class="form-control"  wire:model="NIT_madre">
-                          </div>
-                          @error('NIT_madre')
-                          <div class="alert alert-danger d-flex align-items-center rounded-pill" role="alert">
-                            <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
-                            <div>
-                              Es necesario que llenes este campo para envíar la información
-                            </div>
-                          </div>
-                          @enderror
-                                <strong><label  for="Labelnombremadre" class="form-label">¿El alumno vive con la madre?</label></strong>
-                                <div class="col-md">
-                                    <div class="form-check">
-                                        <input class="form-check form-check-inline"type="radio" name="flexRadioDefault"  wire:click="vive_con_la_madre('1')">
-                                        <label class="form-check-label" for="flexRadioDefault1">
-                                          Si
-                                        </label>
-                                      </div>
-                                <div class="col-md">
-                                  <div class="form-check">
-                                      <input class="form-check form-check-inline" type="radio" name="flexRadioDefault"  wire:click="vive_con_la_madre('2')">
-                                      <label class="form-check-label" for="flexRadioDefault1">
-                                        No
-                                      </label>
-                                    </div>
-                              </div>
-                            <br>                          
+                  @error('direccion_residenciamadre')
+                  <div class="alert alert-danger d-flex align-items-center rounded-pill" role="alert">
+                    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+                    <div>
+                        Es necesario que llenes este campo para envíar la información
                     </div>
+                  </div>
+                  @enderror
+                <div class="col-md-6">
+                    <strong><label  for="Labelnombremadre" class="form-label">Ingrese el correo electrónico de la madre</label></strong>
+                    <input  type="text" class="form-control"  wire:model="correo_madre">
+                  </div>
+                  @error('correo_madre')
+                  <div class="alert alert-danger d-flex align-items-center rounded-pill" role="alert">
+                    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+                    <div>
+                        Es necesario que llenes este campo para envíar la información
+                    </div>
+                  </div>
+                  @enderror
+                <div class="col-md-6">
+                    <strong><label  for="Labelnombremadre" class="form-label">Ingrese la profesión a la que se decica la madre <label></strong>
+                    <input  type="text" class="form-control"  wire:model="profesion_madre">
+                  </div>
+                  @error('profesion_madre')
+                  <div class="alert alert-danger d-flex align-items-center rounded-pill" role="alert">
+                    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+                    <div>
+                      Es necesario que llenes este campo para envíar la información
+                    </div>
+                  </div>
+                  @enderror
+
+                  <div class="col-md-6">
+                    <strong><label  for="Labelnombremadre" class="form-label">Ingrese el lugar donde la madre ejerce su profesion <label></strong>
+                    <input  type="text" class="form-control"  wire:model="lugar_prof_madre">
+                  </div>
+                  @error('lugar_prof_madre')
+                  <div class="alert alert-danger d-flex align-items-center rounded-pill" role="alert">
+                    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+                    <div>
+                      Es necesario que llenes este campo para envíar la información
+                    </div>
+                  </div>
+                  @enderror
+                  <div class="col-md-6">
+                    <strong><label  for="Labelnombremadre" class="form-label">Ingrese cual es el cargo que la madre ocupa en su profesion <label></strong>
+                    <input  type="text" class="form-control"  wire:model="cargo_madre">
+                  </div>
+                  @error('cargo_madre')
+                  <div class="alert alert-danger d-flex align-items-center rounded-pill" role="alert">
+                    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+                    <div>
+                      Es necesario que llenes este campo para envíar la información
+                    </div>
+                  </div>
+                  @enderror
+                  <div class="col-md-6">
+                    <strong><label  for="Labelnombremadre" class="form-label">Ingrese cual es la religion que la madre profesa<label></strong>
+                    <input  type="text" class="form-control"  wire:model="religion_madre">
+                  </div>
+                  @error('religion_madre')
+                  <div class="alert alert-danger d-flex align-items-center rounded-pill" role="alert">
+                    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+                    <div>
+                      Es necesario que llenes este campo para envíar la información
+                    </div>
+                  </div>
+                  @enderror
+                  <div class="col-md-6">
+                    <strong><label  for="Labelnombremadre" class="form-label">Ingrese el NIT de la madre(por favor no utilice ningun signo solo ingerese numeros)<label></strong>
+                    <input  type="number" class="form-control"  wire:model="NIT_madre">
+                  </div>
+                  @error('NIT_madre')
+                  <div class="alert alert-danger d-flex align-items-center rounded-pill" role="alert">
+                    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+                    <div>
+                      Es necesario que llenes este campo para envíar la información
+                    </div>
+                  </div>
+                  @enderror
+                        <strong><label  for="Labelnombremadre" class="form-label">¿El alumno vive con la madre?</label></strong>
+                        <div class="col-md">
+                            <div class="form-check">
+                                <input class="form-check form-check-inline"type="radio" name="flexRadioDefault"  wire:click="vive_con_la_madre('1')">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                  Si
+                                </label>
+                              </div>
+                        <div class="col-md">
+                          <div class="form-check">
+                              <input class="form-check form-check-inline" type="radio" name="flexRadioDefault"  wire:click="vive_con_la_madre('2')">
+                              <label class="form-check-label" for="flexRadioDefault1">
+                                No
+                              </label>
+                            </div>
+                      </div>
+                    <br>                          
+            </div>
+                  </div>
                 </div>
                 </div>
               </div>
