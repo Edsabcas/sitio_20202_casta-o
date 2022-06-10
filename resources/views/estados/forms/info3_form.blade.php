@@ -63,8 +63,9 @@
                         
                         </ul>
                         <br>
-                        @endif  
                         <h5>Grados escogidos {{$grados_mostrar}}</h5>
+                        @endif  
+                        
                         <br>
                         <div class="row">
                             <div class="col-md-6">
@@ -598,10 +599,47 @@
                       </h4>
                     </button>
               </h2>
-          <div  wire:ignore.self id="panelsStayOpen-collapseOne" style="border-radius: 60px 60px 60px 60px;" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
-            <div  wire:ignore.self class="accordion-body" style="border-radius: 60px 60px 60px 60px;">
-              <div class="tab">
-                <div class="row">
+            
+              <div wire:ignore.self id="panelsStayOpen-alumnoasegurado" style="border-radius: 60px 60px 60px 60px;" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                <div  wire:ignore.self class="accordion-body" style="border-radius: 60px 60px 60px 60px;">
+                <div class="tab">
+                  <div class="row">
+                  <strong><label for="exampleInputPassword1" class="form-label">¿El alumno tiene alguna alergia?</label></strong>
+                  <center>
+                  <div style="width: 12rem;">
+                  <div class="form-check">
+                      <input class="form-check-input" type="radio" name="alumnoasegurado" id="alumnoasegurado1" wire:click="tiene_alergia('1')">
+                      <label class="form-check-label" for="alumnoasegurado1">
+                        Si
+                      </label>
+                  </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="alumnoasegurado" id="alumnoasegurado2" wire:click="tiene_alergia('0')">
+                      <label class="form-check-label" for="alumnoasegurado1">
+                        No
+                      </label>
+                    </div>
+                  </div>
+              </center>
+              @if($tiene_alergia==1)
+             <center>
+            <div class="col-md-6">
+             <strong><label  for="Labelnombreaseguradora" class="form-label">IEspecifique cuales</label></strong>
+             <input  type="text" class="form-control"  wire:model="Especifique_alerg">
+            </div>
+             </center>
+              @endif
+             @error('Especifique_alerg')
+            <div class="alert alert-danger d-flex align-items-center rounded-pill" role="alert">
+              <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+              <div>
+                  Es necesario que llenes este campo para envíar la información
+              </div>
+            </div>
+            @enderror
+              </div>
+            </div>
+          </div>                     
                     
                   <div  wire:ignore.self id="panelsStayOpen-vacunas" style="border-radius: 60px 60px 60px 60px;" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
                     <div  wire:ignore.self class="accordion-body" style="border-radius: 60px 60px 60px 60px;">
@@ -693,13 +731,9 @@
                   </div>
                   @enderror
             </div>
-
-                </div>
             </div>
             </div>
-          </div>
-        </div>
-      </div> 
+            </div>
 
       <div wire:ignore.self class="accordion" id="accordionDatossalida"> 
         <div style="border-radius: 60px 60px 60px 60px;" class="accordion-item">
@@ -822,9 +856,9 @@
     </div>
 
   </div>
+</div>
 
   </div>
-</div>
 
 
   <div wire:ignore.self class="accordion" id="accordionDatosusuarios">
@@ -867,9 +901,10 @@
 
   </div>
   </div>
+</div>
 
 
-        </div>
+
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
@@ -879,4 +914,4 @@
     </div>
   </div>
 
- 
+
