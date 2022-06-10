@@ -80,6 +80,7 @@ class ValidacionComponent extends Component
 
     public function vive_con_la_madre($vive_madre){
         $this->vive_madre=$this->vive_madre;
+    }
 
     public function insertar_datos(){
         if($this->validate([
@@ -191,7 +192,8 @@ class ValidacionComponent extends Component
                 'CARGO_MADRE'=>$this->cargo_madre,
                 'RELIGION_MADRE'=>$this->religion_madre,
                 'NIT_MADRE'=>$this->NIT_madre,
-            ]
+            
+                ]
             );
             if($inscripcion_datos){
                 DB::commit();
