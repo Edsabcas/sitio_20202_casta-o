@@ -63,8 +63,9 @@
                         
                         </ul>
                         <br>
-                        @endif  
                         <h5>Grados escogidos {{$grados_mostrar}}</h5>
+                        @endif  
+                        
                         <br>
                         <div class="row">
                             <div class="col-md-6">
