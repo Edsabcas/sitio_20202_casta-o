@@ -218,10 +218,21 @@
                         <h3 class="form-label">Visualización de PDF</h3>
                           <iframe width="400" height="400" src="/imagen/temporalpdf/{{$arch}}" frameborder="0"></iframe>
                         @endif
+                        @error('archivo')
+                        <div class="alert alert-danger d-flex align-items-center rounded-pill" role="alert">
+                        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+                        <div>
+                            Es necesario que llenes este campo para envíar la información
+                        </div>
+                        </div>
+                        @enderror
                        </div>
                     </div> 
                     </div>
-                    
+                    <button type="submit" class="btn btn-primary" wire:click="ins_contrato()"> Enviar</button>
+                    @if ()
+                        
+                    @endif
 
             </li>
         </div>

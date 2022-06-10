@@ -35,7 +35,23 @@
         
           @endif
         
-          
+          <div class="modal-body">
+            @isset($mensaje_diaco)
+            @if($mensaje_diaco!=null)
+            
+            <div class="alert alert-success" role="alert">
+                Agregado Correctamente!
+              </div>
+            @endif
+            @endisset
+            @isset($mensaje_diaco1)
+              @if($mensaje_diaco1!=null)
+              <div class="alert alert-success" role="alert">
+                No fue agregado Correctamente!
+              </div>
+              @endif
+            @endisset
+           </div>     
   <div class="row">
       <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
           <option></option>

@@ -22,7 +22,7 @@ class ValidacionComponent extends Component
     public $direccion_residenciamadre, $correo_madre, $profesion_madre, $lugar_prof_madre, $cargo_madre, $religion_madre, $NIT_madre, $vive_madre;
     public $solo_alumno, $soloalumno, $encargado_alumno, $nombreencargado, $nombre_encargado, $bus_colegio, $bus_no_colegio, $codigo_fam, $nombre_fam, $nombrefam, $codigofam, $alumno_asegurado, $vacunas, $nombre_aseguradora, $nombreaseguradora;
     public $poliza, $carneseguro, $carne_seguro, $tiene_alergia, $medicamento, $alimento, $archivo,$formato;
-    public $religion_padre, $cargo_profesion_padre, $NIT_padre, $nombre_madre, $fechana_madre, $nacionalidad_madre, $lugar_nacimiento_madre, $DPI_madre, $telefono_madre, $celular_madre;
+    public $religion_padre, $cargo_profesion_padre, $NIT_padre, $nombre_madre, $fechana_madre, $nacionalidad_madre, $lugar_nacimiento_madre, $DPI_madre, $telefono_madre, $celular_madre,$id_pre_ins,$id_no_gest,$mensaje_diaco,$mensaje_diaco1;
 
     public function render()
     {
@@ -78,6 +78,7 @@ class ValidacionComponent extends Component
             else{
                 $this->mensaje=1;
             }
+            $this->obt_id_pre($this->id_pre,$this->op);
 
         }
 
@@ -379,5 +380,56 @@ class ValidacionComponent extends Component
 
     public function alumno_asegurado($alumno_asegurado){
         $this->alumno_asegurado=$alumno_asegurado;
+    }
+
+    Public function obt_id_pre($id,$no){
+        $id_pre=$id;
+        $id_gest=$no;
+        $sql='SELECT * FROM TB_PRE_INS WHERE ID_PRE=?';
+        $estactr=DB:: select($sql, array($id_pre));
+        if($estactr !=null){
+            foreach($estactr as $estac)
+            {
+                $this->id_pre_ins=$estac->ID_PRE;
+                $this->id_no_gest=$estac->NO_GESTION;
+            }
+        }  
+    }
+
+    public function ins_contrato(){
+        if($this->validate([
+            'archivo' => 'required',         
+        ])==false){
+            $error="no encontrado";
+            session(['message'=>'no encontrado']);
+            return back()->withErrors(['error' => 'Validar el input vacio']);
+        }
+        else{
+        $archivo=$this->archivo;
+        $id_pre_ins=$this->id_pre_ins;
+        $id_no_gest=$this->id_no_gest;
+
+
+        DB::beginTransaction();
+
+        $contrato_diaco=DB::table('tb_pre_diaco')->insert(
+            [
+                'ID_PRE'=>$id_pre_ins,
+                'CONTRATO'=>$archivo,
+                'NO_GESTION'=>$id_no_gest,
+            
+                ]
+            );
+            if($contrato_diaco){
+                DB::commit();
+                $this->mensaje_diaco='Insertado correctamente';
+                $this->op=null;
+
+            }
+            else{
+                DB::rollback();
+                $this->mensaje_diaco1='No se inserto correctamente';
+            }
+        }
     }
 }
