@@ -21,7 +21,7 @@ class ValidacionComponent extends Component
     public $correo_padre, $correopadre, $profesionpadre, $profesion_padre, $grado_hermano, $gradohermano,$vive_con_elpadre,$estadocivilma;
     public $direccion_residenciamadre, $correo_madre, $profesion_madre, $lugar_prof_madre, $cargo_madre, $religion_madre, $NIT_madre, $vive_madre;
     public $solo_alumno, $soloalumno, $encargado_alumno, $nombreencargado, $nombre_encargado, $bus_colegio, $bus_no_colegio, $codigo_fam, $nombre_fam, $nombrefam, $codigofam, $alumno_asegurado, $vacunas, $nombre_aseguradora, $nombreaseguradora;
-    public $poliza, $carneseguro, $carne_seguro, $tiene_alergia;
+    public $poliza, $carneseguro, $carne_seguro, $tiene_alergia, $medicamento, $alimento;
     public $religion_padre, $cargo_profesion_padre, $NIT_padre, $nombre_madre, $fechana_madre, $nacionalidad_madre, $lugar_nacimiento_madre, $DPI_madre, $telefono_madre, $celular_madre;
 
     public function render()
@@ -103,6 +103,14 @@ class ValidacionComponent extends Component
         $this->tiene_alergia=$tiene_alergias;
     }
 
+    public function medicamento($medicamento){
+        $this->medicamento=$medicamento;
+    }
+
+    public function alimento($alimento){
+        $this->alimento=$alimento;
+    }
+
     public function insertar_datos(){
         if($this->validate([
             'año_ingreso' => 'required',
@@ -136,7 +144,6 @@ class ValidacionComponent extends Component
             'cargo_madre' =>'required',
             'religion_madre' =>'required',
             'NIT_madre' =>'required',
-            'nombre_encargado' => 'required',
             'poliza' => 'required',
             'carne_seguro' => 'required',
             'codigo_fam' => 'required',
@@ -250,6 +257,8 @@ class ValidacionComponent extends Component
                 'PROFECION_MADRE'=>$rofesion_madre,
                 'LUGAR_TRABAJO_M'=>$lugar_prof_madre,
                 'CARGO_MADRE'=>$cargo_madre,
+                'ALERG_MEDICAMENTO'=>$this->medicamento,
+                'ALERG_ALIMENTO'=>$this->alimento,
                 'RELIGION_MADRE'=>$religion_madre,
                 'NIT_MADRE'=>$NIT_madre,
                 'ESPECIFICAR_ALERG_AL'=>$this->Especifique_ali,
