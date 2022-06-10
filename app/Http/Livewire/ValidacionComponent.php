@@ -136,7 +136,6 @@ class ValidacionComponent extends Component
             'cargo_madre' =>'required',
             'religion_madre' =>'required',
             'NIT_madre' =>'required',
-            'nombre_aseguradora' => 'required',
             'nombre_encargado' => 'required',
             'poliza' => 'required',
             'carne_seguro' => 'required',
