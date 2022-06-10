@@ -6,7 +6,7 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal"  id="val" aria-label="Close"></button>
           </div>
             <div class="modal-body">
-              <h4 class="modal-title" style="color:#3a3e7b;"style="border-radius: 60px 60px 60px 60px;" >¿Confirme enviar la información?</h4>
+              <h4 class="modal-title" style="color:#3a3e7b;"style="border-radius: 60px 60px 60px 60px;" >Enviar información</h4>
 </div>
 <div class="modal-footer">
     <input class="form-control btn btn-pre" type="button" style="border-radius: 60px 60px 60px 60px;" value="Si" data-bs-dismiss="modal" wire:click="crearpreins()"/>

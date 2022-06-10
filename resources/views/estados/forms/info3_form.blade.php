@@ -629,18 +629,80 @@
             </div>
              </center>
               @endif
-             @error('Especifique_alerg')
-            <div class="alert alert-danger d-flex align-items-center rounded-pill" role="alert">
-              <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
-              <div>
-                  Es necesario que llenes este campo para envíar la información
-              </div>
-            </div>
-            @enderror
+             
               </div>
             </div>
           </div>                     
+          <div wire:ignore.self id="panelsStayOpen-medicamento" style="border-radius: 60px 60px 60px 60px;" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+            <div  wire:ignore.self class="accordion-body" style="border-radius: 60px 60px 60px 60px;">
+            <div class="tab">
+              <div class="row">
+              <strong><label for="exampleInputPassword1" class="form-label">¿El alumno es alergico a un medicamento?</label></strong>
+              <center>
+              <div style="width: 12rem;">
+              <div class="form-check">
+                  <input class="form-check-input" type="radio" name="medicamento" id="medicamento1" wire:click="medicamento('1')">
+                  <label class="form-check-label" for="medicamento1">
+                    Si
+                  </label>
+              </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="medicamento" id="medicamento2" wire:click="medicamento('0')">
+                  <label class="form-check-label" for="medicamento1">
+                    No
+                  </label>
+                </div>
+              </div>
+          </center>
+          @if($medicamento==1)
+         <center>
+        <div class="col-md-6">
+         <strong><label  for="labelmedicamento" class="form-label">Especifique cuales</label></strong>
+         <input  type="text" class="form-control"  wire:model="Especifique_medi">
+        </div>
+         </center>
+          @endif
+          </div>
+        </div>
+      </div>
+
+      <div wire:ignore.self id="panelsStayOpen-alimento" style="border-radius: 60px 60px 60px 60px;" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+        <div  wire:ignore.self class="accordion-body" style="border-radius: 60px 60px 60px 60px;">
+        <div class="tab">
+          <div class="row">
+          <strong><label for="exampleInputPassword1" class="form-label">¿El alumno es alergico a un alimento?</label></strong>
+          <center>
+          <div style="width: 12rem;">
+          <div class="form-check">
+              <input class="form-check-input" type="radio" name="alimento" id="alimento1" wire:click="alimento('1')">
+              <label class="form-check-label" for="alimento1">
+                Si
+              </label>
+          </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="alimento" id="alimento2" wire:click="alimento('0')">
+              <label class="form-check-label" for="alimento1">
+                No
+              </label>
+            </div>
+          </div>
+          </center>
+           @if($alimento==1)
+          <center>
+         <div class="col-md-6">
+        <strong><label  for="labelalimento" class="form-label">Especifique cuales</label></strong>
+        <input  type="text" class="form-control"  wire:model="Especifique_ali">
+        </div>
+        </center>
+        @endif
+       </div>
+      </div>
+      </div>
+
+
+
                     
+                  
                   <div  wire:ignore.self id="panelsStayOpen-vacunas" style="border-radius: 60px 60px 60px 60px;" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
                     <div  wire:ignore.self class="accordion-body" style="border-radius: 60px 60px 60px 60px;">
                       <div class="tab">
@@ -693,14 +755,7 @@
                 </div>
                  </center>
                   @endif
-                 @error('nombre_aseguradora')
-                <div class="alert alert-danger d-flex align-items-center rounded-pill" role="alert">
-                  <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
-                  <div>
-                      Es necesario que llenes este campo para envíar la información
-                  </div>
-                </div>
-                @enderror
+                
                   </div>
                 </div>
               </div>
@@ -710,26 +765,12 @@
                     <strong><label  for="Labelpoliza" class="form-label">Ingrese la poliza de seguro</label></strong>
                     <input  type="text" class="form-control"  wire:model="poliza">
                   </div>
-                  @error('poliza')
-                  <div class="alert alert-danger d-flex align-items-center rounded-pill" role="alert">
-                    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
-                    <div>
-                        Es necesario que llenes este campo para envíar la información
-                    </div>
-                  </div>
-                  @enderror
+                  
                 <div class="col-md-6">
                     <strong><label  for="Labelcarneseguro" class="form-label">Ingrese el número del carné de seguro</label></strong>
                     <input  type="number" class="form-control"  wire:model="carne_seguro">
                   </div>
-                  @error('carne_seguro')
-                  <div class="alert alert-danger d-flex align-items-center rounded-pill" role="alert">
-                    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
-                    <div>
-                        Es necesario que llenes este campo para envíar la información
-                    </div>
-                  </div>
-                  @enderror
+                  
             </div>
             </div>
             </div>
@@ -796,14 +837,7 @@
           </div>
          </center>
           @endif
-          @error('nombre_encargado')
-                <div class="alert alert-danger d-flex align-items-center rounded-pill" role="alert">
-                  <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
-                  <div>
-                      Es necesario que llenes este campo para envíar la información
-                  </div>
-                </div>
-          @enderror
+          
           </div>
          </div>
        </div>
