@@ -393,7 +393,6 @@
                                           Si
                                         </label>
                                       </div>
-                                </div>
                                 <div class="col-md">
                                   <div class="form-check">
                                       <input class="form-check form-check-inline" type="radio" name="flexRadioDefault"  wire:click="vive_con_la_madre('2')">

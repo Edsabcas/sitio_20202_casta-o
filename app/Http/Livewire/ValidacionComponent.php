@@ -14,6 +14,7 @@ class ValidacionComponent extends Component
     public $lugar_nacimiento_padre, $lugarnacimientopadre, $estadocivil, $estado_civil, $DPIpadre, $DPI_padre;
     public $celular_padre, $celularpadre, $telefono_padre, $telefonopadre, $direccion_residencia, $direccionresidencia;
     public $correo_padre, $correopadre, $profesionpadre, $profesion_padre, $grado_hermano, $gradohermano;
+    public $direccion_residenciamadre, $correo_madre, $profesion_madre, $lugar_prof_madre, $cargo_madre, $religion_madre, $NIT_madre, $vive_madre;
 
     public function render()
     {
@@ -68,6 +69,10 @@ class ValidacionComponent extends Component
         $this->estadocivil=$this->estado_civil;
     }
 
+    public function vive_con_la_madre($vive_madre){
+        $this->vive_madre=$this->vive_madre;
+    }
+
     public function insertar_datos(){
         if($this->validate([
             'año_ingreso' => 'required',
@@ -82,13 +87,20 @@ class ValidacionComponent extends Component
             'direccion_residencia' => 'required',
             'correo_padre' => 'required',
             'profesion_padre' => 'required',
+            'direccion_residenciamadre'=> 'requiered',
+            'correo_madre'=> 'requiered',
+            'profesion_madre' =>'requiered',
+            'lugar_prof_madre' =>'requiered',
+            'cargo_madre' =>'requiered',
+            'religion_madre' =>'requiered',
+            'NIT_madre' =>'requiered',
         ])==false){
             $error="no encontrado";
             session(['message'=>'no encontrado']);
             return back()->withErrors(['error' => 'Validar el input vacio']);
         }
         else{
-            $this->añoingreso=$this->año_ingreso;
+        $this->añoingreso=$this->año_ingreso;
         $this->gradoprimeringreso=$this->grado_primer_ingreso;
         $this->nombrepadre = $this->nombre_padre;
         $this->nacimientopadre =$this->nacimiento_padre;
@@ -100,6 +112,14 @@ class ValidacionComponent extends Component
         $this->direccionresidencia=$this->direccion_residencia;
         $this->correopadre=$this->correo_padre;
         $this->profesionpadre=$this->profesion_padre;
+        $this->direccion_residenciamadre=$this->direccion_residenciamadre; 
+        $this->correo_madre=$this->correo_madre;
+        $this->rofesion_madre=$this->profesion_madre;
+        $this->lugar_prof_madre=$this->lugar_prof_madre;
+        $this->cargo_madre=$this->cargo_madre; 
+        $this->religion_madre=$this->religion_madre;
+        $this->NIT_madre=$this->NIT_madre;
+
 
         DB::beginTransaction();
 
@@ -114,12 +134,20 @@ class ValidacionComponent extends Component
                 'NACIONALIDAD_PADRE'=>$idiomamaestro,
                 'LUGAR_NACIMIENTO_PADRE'=>$this->lugarnacimientopadre,
                 'ESTADO_CIVIL_P'=> $this->estadocivil,
+                'VIVE_CON_LA_MADRE'=> $this->vive_madre,
                 'DPI_PADRE'=>$this->DPIpadre,
                 'TELEFONO_PADRE'=>$this->telefonopadre,
                 'CELULAR_PADRE'=>$this->celularpadre,
                 'DIRECCION_RECIDENCIA_P'=>$this->direccionresidencia,
                 'CORREO_PADRE'=>$this->correopadre,
                 'PROFECION_PADRE'=>$this->profesionpadre,
+                'DIRECCION_RECIDENCIA_M'=>$this->direccion_residenciamadre, 
+                'CORREO_MADRE'=>$this->correo_madre,
+                'PROFECION_MADRE'=>$this->rofesion_madre,
+                'LUGAR_TRABAJO_M'=>$this->lugar_prof_madre,
+                'CARGO_MADRE'=>$this->cargo_madre,
+                'RELIGION_MADRE'=>$this->religion_madre,
+                'NIT_MADRE'=>$this->NIT_madre,
 
             ]
             );
