@@ -169,7 +169,7 @@
                         <p>Los datos se registraron correctamente.</p></div>
                 </div> 
                 <a href="/Descargar_constancia" type="button" class="btn btn-primary" wire:click="ver_form_ins('1')" >
-                    Rellene los datos de inscripción</a>
+                    Verifique el contrato</a>
                 
 
             </li>
