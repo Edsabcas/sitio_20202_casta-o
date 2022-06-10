@@ -20,8 +20,9 @@ class ValidacionComponent extends Component
     public $id_pre,$metodo,$archivo_comprobante,$img,$tipo,$mensaje24,$mensaje25,$observacion;
     public $correo_padre, $correopadre, $profesionpadre, $profesion_padre, $grado_hermano, $gradohermano,$vive_con_elpadre,$estadocivilma;
     public $direccion_residenciamadre, $correo_madre, $profesion_madre, $lugar_prof_madre, $cargo_madre, $religion_madre, $NIT_madre, $vive_madre;
-    public $solo_alumno, $soloalumno, $encargado_alumno, $nombreencargado, $nombre_encargado, $bus_colegio, $bus_no_colegio, $codigo_fam, $nombre_fam, $alumno_asegurado, $vacunas, $nombre_aseguradora, $nombreaseguradora;
-    public $poliza, $carneseguro, $carne_seguro, $tiene_alergia,$Especifique_alerg;
+    public $solo_alumno, $soloalumno, $encargado_alumno, $nombreencargado, $nombre_encargado, $bus_colegio, $bus_no_colegio, $codigo_fam, $nombre_fam, $nombrefam, $codigofam, $alumno_asegurado, $vacunas, $nombre_aseguradora, $nombreaseguradora;
+    public $poliza, $carneseguro, $carne_seguro;
+    public $religion_padre, $cargo_profesion_padre, $NIT_padre, $nombre_madre, $fechana_madre, $nacionalidad_madre, $lugar_nacimiento_madre, $DPI_madre, $telefono_madre, $celular_madre;
 
     public function render()
     {
@@ -33,7 +34,9 @@ class ValidacionComponent extends Component
 
         $sql= 'SELECT * FROM tb_grados';
         $grados=DB::select($sql);
-        return view('livewire.validacion-component', compact('grados'));        
+        $sql= 'SELECT * FROM TB_PRE_INFO';
+        $inscripcion_datos=DB::select($sql);
+        return view('livewire.validacion-component', compact('grados','inscripcion_datos'));        
     }
     public function buspre() {
         if($this->validate([
