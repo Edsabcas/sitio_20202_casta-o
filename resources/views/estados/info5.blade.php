@@ -197,7 +197,7 @@
                         </div>
                         <p>Genere su contrato para rellenarlo</p>
                 </div>
-                <a href="/Descargar_constancia" type="button" class="btn btn-primary" wire:click="ver_form_ins('1')" >
+                <a href="/Descargar_constancia" target="_blank" type="button" class="btn btn-primary" wire:click="ver_form_ins('1')" >
                     Verifique el contrato</a>
                     <br>
                     <div class="col-sm-12">
