@@ -22,7 +22,7 @@ class ValidacionComponent extends Component
     public $direccion_residenciamadre, $correo_madre, $profesion_madre, $lugar_prof_madre, $cargo_madre, $religion_madre, $NIT_madre, $vive_madre;
     public $solo_alumno, $soloalumno, $encargado_alumno, $nombreencargado, $nombre_encargado, $bus_colegio, $bus_no_colegio, $codigo_fam, $nombre_fam, $nombrefam, $codigofam, $alumno_asegurado, $vacunas, $nombre_aseguradora, $nombreaseguradora;
     public $poliza, $carneseguro, $carne_seguro, $tiene_alergia, $medicamento, $alimento, $archivo,$formato;
-    public $religion_padre, $cargo_profesion_padre, $NIT_padre, $nombre_madre, $fechana_madre, $nacionalidad_madre, $lugar_nacimiento_madre, $DPI_madre, $telefono_madre, $celular_madre,$id_pre_ins,$id_no_gest,$mensaje_diaco,$mensaje_diaco1;
+    public $religion_padre, $cargo_profesion_padre, $NIT_padre, $nombre_madre, $fechana_madre, $nacionalidad_madre, $lugar_nacimiento_madre, $DPI_madre, $telefono_madre, $celular_madre,$id_pre_ins,$id_no_gest,$mensaje_diaco,$mensaje_diaco1,$archivo_cdiaco,$id_pre_ins_arch,$id_no_gest_arch;
 
     public function render()
     {
@@ -79,6 +79,7 @@ class ValidacionComponent extends Component
                 $this->mensaje=1;
             }
             $this->obt_id_pre($this->id_pre,$this->op);
+            $this->obt_arch_contrato($this->id_pre,$this->op);
 
         }
 
@@ -431,5 +432,20 @@ class ValidacionComponent extends Component
                 $this->mensaje_diaco1='No se inserto correctamente';
             }
         }
+    }
+
+    Public function obt_arch_contrato($id,$no){
+        $id_pre=$id;
+        $id_gest=$no;
+        $sql='SELECT * FROM tb_pre_diaco WHERE ID_PRE=?';
+        $estactr=DB:: select($sql, array($id_pre));
+        if($estactr !=null){
+            foreach($estactr as $estac)
+            {
+                $this->id_pre_ins_arch=$estac->ID_PRE;
+                $this->id_no_gest_arch=$estac->NO_GESTION;
+                $this->archivo_cdiaco=$estac->CONTRATO;
+            }
+        }  
     }
 }
