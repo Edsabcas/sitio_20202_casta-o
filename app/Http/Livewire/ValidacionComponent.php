@@ -181,8 +181,18 @@ class ValidacionComponent extends Component
         $this->cargo_madre=$this->cargo_madre; 
         $this->religion_madre=$this->religion_madre;
         $this->NIT_madre=$this->NIT_madre;
-        $this->Especifique_alerg=$this->Especifique_alerg;
-        $this->nombreaseguradora=$this->nombre_aseguradora;
+        if($this->Especifique_alerg==""){
+            $this->Especifique_alerg=null;  
+        }
+            else{
+                $this->Especifique_alerg=$this->Especifique_alerg;
+        }
+        if($this->nombreaseguradora==""){
+                $this->nombreaseguradora=null;  
+            }
+            else{
+                    $this->nombreaseguradora=$this->nombreaseguradora;
+        }
         $this->nombreencargado=$this->nombre_encargado;
         $this->poliza=$this->poliza;
         $this->carneseguro=$this->carne_seguro;
