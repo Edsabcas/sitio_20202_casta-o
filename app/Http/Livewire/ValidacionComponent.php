@@ -10,10 +10,10 @@ class ValidacionComponent extends Component
     public $op;
     public $nogestion, $dpi, $fehencargado,$mensaje, $gradoprimeringreso, $grado_primer_ingreso, $nombrepadre;
     public $validar1, $confi, $val, $grados_selecionados, $grados_mostrar, $año_ingreso, $añoingreso, $nombre_padre;
-    public $nacimientopadre, $nacimiento_padre, $nacionalidadpadre, $nacionalidad_padre;
+    public $nacimientopadre, $nacimiento_padre, $nacionalidadpadre, $nacionalidad_padre,$lugar_profesion_padre;
     public $lugar_nacimiento_padre, $lugarnacimientopadre, $estadocivil, $estado_civil, $DPIpadre, $DPI_padre;
     public $celular_padre, $celularpadre, $telefono_padre, $telefonopadre, $direccion_residencia, $direccionresidencia;
-    public $correo_padre, $correopadre, $profesionpadre, $profesion_padre, $grado_hermano, $gradohermano;
+    public $correo_padre, $correopadre, $profesionpadre, $profesion_padre, $grado_hermano, $gradohermano,$vive_con_elpadre,$estadocivilma;
 
     public function render()
     {
@@ -68,6 +68,14 @@ class ValidacionComponent extends Component
         $this->estadocivil=$this->estado_civil;
     }
 
+    public function confirmar_vive_padre($vive_con_padre){
+        $this->vive_con_elpadre=$vive_con_padre;
+    }
+
+    public function estado_civil_madre($est){
+        $this->estadocivilma=$est;
+    }
+
     public function insertar_datos(){
         if($this->validate([
             'año_ingreso' => 'required',
@@ -82,6 +90,17 @@ class ValidacionComponent extends Component
             'direccion_residencia' => 'required',
             'correo_padre' => 'required',
             'profesion_padre' => 'required',
+            'lugar_profesion_padre' => 'required',
+            'cargo_profesion_padre' => 'required',
+            'religion_padre' => 'required',
+            'NIT_padre' => 'required',
+            'nombre_madre' => 'required',
+            'fechana_madre' => 'required',
+            'nacionalidad_madre' => 'required',
+            'lugar_nacimiento_madre' => 'required',
+            'DPI_madre' => 'required',
+            'telefono_madre' => 'required',
+            'celular_madre' => 'required',
         ])==false){
             $error="no encontrado";
             session(['message'=>'no encontrado']);
@@ -100,6 +119,19 @@ class ValidacionComponent extends Component
         $this->direccionresidencia=$this->direccion_residencia;
         $this->correopadre=$this->correo_padre;
         $this->profesionpadre=$this->profesion_padre;
+        $this->lugar_profesion_padre=$this->lugar_profesion_padre;
+        $this->cargo_profesion_padre=$this->cargo_profesion_padre;
+        $this->religion_padre=$this->religion_padre;
+        $this->NIT_padre=$this->NIT_padre;
+        $this->vive_con_elpadre=$this->vive_con_elpadre;
+        $this->nombre_madre=$this->nombre_madre;
+        $this->fechana_madre=$this->fechana_madre;
+        $this->nacionalidad_madre=$this->nacionalidad_madre;
+        $this->lugar_nacimiento_madre=$this->lugar_nacimiento_madre;
+        $this->estadocivilma=$this->estadocivilma;
+        $this->DPI_madre=$this->DPI_madre;
+        $this->telefono_madre=$this->telefono_madre;
+        $this->celular_madre=$this->celular_madre;
 
         DB::beginTransaction();
 
@@ -120,6 +152,19 @@ class ValidacionComponent extends Component
                 'DIRECCION_RECIDENCIA_P'=>$this->direccionresidencia,
                 'CORREO_PADRE'=>$this->correopadre,
                 'PROFECION_PADRE'=>$this->profesionpadre,
+                'LUGAR_TRABAJO_P'=>$this->lugar_profesion_padre,
+                'CARGO_PADRE'=>$this->cargo_profesion_padre,
+                'RELIGION_PADRE'=>$this->religion_padre,
+                'NIT_PADRE'=>$this->NIT_padre,
+                'VIVE_CON_EL_PADRE'=>$this->vive_con_elpadre,
+                'NOMB_MADRE'=>$this->nombre_madre,
+                'FECHA_N_MADRE'=>$this->fechana_madre,
+                'NACIONALIDAD_MADRE'=>$this->nacionalidad_madre,
+                'LUGAR_NACIMIENTO_MADRE'=>$this->lugar_nacimiento_madre,
+                'ESTADO_CIVIL_M'=>$this->estadocivilma,
+                'DPI_MADRE'=>$this->DPI_madre,
+                'TELEFONO_MADRE'=>$this->telefono_madre,
+                'CELULAR_MADRE'=>$this->celular_madre,
 
             ]
             );
