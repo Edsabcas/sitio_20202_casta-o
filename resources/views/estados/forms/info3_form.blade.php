@@ -280,13 +280,179 @@
                               </div>
                               @enderror
                         </div>
-                          
-                       
-                    </div>
+                      </div>
+                    </div>   
                     </div>
                   </div>
+                  </div>
+
+                  <div wire:ignore.self class="accordion" id="accordionDatossalida"> 
+                    <div style="border-radius: 60px 60px 60px 60px;" class="accordion-item">
+                      <h2 style="border-radius: 60px 60px 60px 60px;" class="accordion-header" id="panelsStayOpen-headingOne3">
+                        <button class="accordion-button" type="button" style="background-color:#d6e7a6; border:6px solid #a4cb39; border-radius: 60px 60px 60px 60px;" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                            <h4 class="font-weight-bolder">
+                                DATOS DE SALIDA
+                              </h4>
+                            </button>
+                      </h2>
+
+                      <div  wire:ignore.self id="panelsStayOpen-solo" style="border-radius: 60px 60px 60px 60px;" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                        <div  wire:ignore.self class="accordion-body" style="border-radius: 60px 60px 60px 60px;">
+                          <div class="tab">
+                            <strong><label for="exampleInputPassword1" class="form-label">¿El alumno se retira solo?</label></strong>
+                            <center>
+                            <div style="width: 12rem;">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="solo" id="solo1" wire:click="solo_alumno('1')">
+                                <label class="form-check-label" for="solo1">
+                                  Si
+                                </label>
+                            </div>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="solo" id="solo2" wire:click="solo_alumno('0')">
+                                <label class="form-check-label" for="solo1">
+                                  No
+                                </label>
+                            </div>
+                            </center>
+                         </div>
+                       </div>
+                    </div> 
+
+                    <div  wire:ignore.self id="panelsStayOpen-encargado" style="border-radius: 60px 60px 60px 60px;" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                      <div  wire:ignore.self class="accordion-body" style="border-radius: 60px 60px 60px 60px;">
+                        <div class="tab">
+                          <strong><label for="exampleInputPassword1" class="form-label">¿El alumno se retira con un encargado?</label></strong>
+                          <center>
+                          <div style="width: 12rem;">
+                          <div class="form-check">
+                              <input class="form-check-input" type="radio" name="encargado" id="encargado1" wire:click="encargado_alumno('1')">
+                              <label class="form-check-label" for="encargado1">
+                                Si
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="encargado" id="encargado2" wire:click="encargado_alumno('0')">
+                              <label class="form-check-label" for="encargado1">
+                                No
+                              </label>
+                            </div>
+                          </div>
+                       </center>
+                       @if($encargado_alumno==1)
+                       <center>
+                      <div class="col-md-6">
+                        <strong><label  for="Labelnombrepadre" class="form-label">Ingrese el nombre del encargado</label></strong>
+                        <input  type="text" class="form-control"  wire:model="nombre_encargado">
+                      </div>
+                     </center>
+                      @endif
+                      @error('nombre_encargado')
+                            <div class="alert alert-danger d-flex align-items-center rounded-pill" role="alert">
+                              <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+                              <div>
+                                  Es necesario que llenes este campo para envíar la información
+                              </div>
+                            </div>
+                      @enderror
+                      </div>
+                     </div>
+                   </div>
+
+                  <div  wire:ignore.self id="panelsStayOpen-buscolegio" style="border-radius: 60px 60px 60px 60px;" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                    <div  wire:ignore.self class="accordion-body" style="border-radius: 60px 60px 60px 60px;">
+                      <div class="tab">
+                        <strong><label for="exampleInputPassword1" class="form-label">¿El alumno se retira en bus del colegio?</label></strong>
+                        <center>
+                        <div style="width: 12rem;">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="buscolegio" id="buscolegio1" wire:click="bus_colegio('1')">
+                            <label class="form-check-label" for="buscolegio1">
+                              Si
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="buscolegio" id="buscolegio2" wire:click="bus_colegio('0')">
+                            <label class="form-check-label" for="buscolegio1">
+                              No
+                            </label>
+                          </div>
+                        </div>
+                    </center>
+                    </div>
+                   </div>
+                  </div>
+
+                  <div wire:ignore.self id="panelsStayOpen-busnocolegio" style="border-radius: 60px 60px 60px 60px;" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                    <div  wire:ignore.self class="accordion-body" style="border-radius: 60px 60px 60px 60px;">
+                    <div class="tab">
+                      <strong><label for="exampleInputPassword1" class="form-label">¿El alumno se retira en bus ajeno al colegio?</label></strong>
+                      <center>
+                      <div style="width: 12rem;">
+                      <div class="form-check">
+                          <input class="form-check-input" type="radio" name="busnocolegio" id="busnocolegio1" wire:click="bus_no_colegio('1')">
+                          <label class="form-check-label" for="busnocolegio1">
+                            Si
+                          </label>
+                      </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="busnocolegio" id="busnocolegio2" wire:click="bus_no_colegio('0')">
+                          <label class="form-check-label" for="busnocolegio1">
+                            No
+                          </label>
+                        </div>
+                      </div>
+                  </center>
+                  </div>
                 </div>
-              </div> 
+              </div>
+
+              </div>
+            </div>
+
+            
+              <div wire:ignore.self class="accordion" id="accordionDatosusuarios">
+                  <div style="border-radius: 60px 60px 60px 60px;" class="accordion-item">
+                    <h2 style="border-radius: 60px 60px 60px 60px;" class="accordion-header" id="panelsStayOpen-headingOne4">
+                      <button class="accordion-button" type="button" style="background-color:#d6e7a6; border:6px solid #a4cb39; border-radius: 60px 60px 60px 60px;" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                          <h4 class="font-weight-bolder">
+                              DATOS DE USUARIOS
+                            </h4>
+                          </button>
+                    </h2>
+
+                    <div class="row">
+                      <div class="col-md-6">
+                          <strong><label  for="Labelcodigodefamilia" class="form-label">Ingrese el codigo de familia</label></strong>
+                          <input  type="text" class="form-control"  wire:model="codigo_fam">
+                        </div>
+                        @error('codigo_fam')
+                        <div class="alert alert-danger d-flex align-items-center rounded-pill" role="alert">
+                          <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+                          <div>
+                              Es necesario que llenes este campo para envíar la información
+                          </div>
+                        </div>
+                        @enderror
+
+                      <div class="col-md-6">
+                          <strong><label  for="Labelnombrefam" class="form-label">Ingrese el nombre de la familia</label></strong>
+                          <input  type="text" class="form-control"  wire:model="nombre_fam">
+                        </div>
+                        @error('nombre_fam')
+                        <div class="alert alert-danger d-flex align-items-center rounded-pill" role="alert">
+                          <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+                          <div>
+                              Es necesario que llenes este campo para envíar la información
+                          </div>
+                        </div>
+                        @enderror
+                  </div>
+
+              </div>
+              </div>
+                
+                 
 
         </div>
         <div class="modal-footer">

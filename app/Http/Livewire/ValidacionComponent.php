@@ -14,6 +14,7 @@ class ValidacionComponent extends Component
     public $lugar_nacimiento_padre, $lugarnacimientopadre, $estadocivil, $estado_civil, $DPIpadre, $DPI_padre;
     public $celular_padre, $celularpadre, $telefono_padre, $telefonopadre, $direccion_residencia, $direccionresidencia;
     public $correo_padre, $correopadre, $profesionpadre, $profesion_padre, $grado_hermano, $gradohermano;
+    public $solo_alumno, $soloalumno, $encargado_alumno, $nombreencargado, $nombre_encargado, $bus_colegio, $bus_no_colegio, $codigo_fam, $nombre_fam;
 
     public function render()
     {
@@ -82,6 +83,11 @@ class ValidacionComponent extends Component
             'direccion_residencia' => 'required',
             'correo_padre' => 'required',
             'profesion_padre' => 'required',
+
+            'nombre_encargado' => 'required',
+            'codigo_fam' => 'required',
+            'nombre_fam' => 'required',
+
         ])==false){
             $error="no encontrado";
             session(['message'=>'no encontrado']);
@@ -100,6 +106,10 @@ class ValidacionComponent extends Component
         $this->direccionresidencia=$this->direccion_residencia;
         $this->correopadre=$this->correo_padre;
         $this->profesionpadre=$this->profesion_padre;
+
+        $this->nombreencargado=$this->nombre_encargado;
+        $this->codigofam=$this->codigo_fam;
+        $this->nombrefam=$this->nombre_fam;
 
         DB::beginTransaction();
 
@@ -121,6 +131,15 @@ class ValidacionComponent extends Component
                 'CORREO_PADRE'=>$this->correopadre,
                 'PROFECION_PADRE'=>$this->profesionpadre,
 
+                'SALIDA_SOLO'=>$this->soloalumno,
+                'SALIDA_CON_ENCARGADO'=>$this->encargado_alumno,
+                'NOMBRE_ENCARGADO'=>$this->nombreencargado,
+                'SALIDA_BUS_COLEGIO'=>$this->bus_colegio,
+                'SALIDA_BUS_AJENO'=>$this->bus_no_colegio,
+                'CODIGO_FAMILIA'=>$this->codigo_fam,
+                'NOMBRE_FAMILIA'=>$this->nombre_fam,
+
+
             ]
             );
             if($inscripcion_datos){
@@ -133,5 +152,21 @@ class ValidacionComponent extends Component
             }
         }
         
+    }
+
+    public function solo_alumno($solo_alumno){
+        $this->soloalumno=$this->solo_alumno;
+    }
+
+    public function encargado_alumno($encargado_alumno){
+        $this->encargado_alumno=$encargado_alumno;
+    }
+
+    public function bus_colegio($bus_colegio){
+        $this->bus_colegio=$bus_colegio;
+    }
+
+    public function bus_no_colegio($bus_no_colegio){
+        $this->bus_no_colegio=$bus_no_colegio;
     }
 }
