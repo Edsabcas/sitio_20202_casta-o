@@ -1,21 +1,3 @@
-<script>
-            
-    $(document).on('click', '#Cerrar', function() {
-  
-  $('#ModalInscripcion').modal('show');
-  
-  });
-  
-  
-  
-  $(document).on('click', '#cerar2', function() {
-  
-  $('#exampleModal1').modal('show');
-  
-  });
-  
-  </script>
-
 <section class="slider_section">
     <div id="main_slider" class="carousel slide banner-main" data-ride="carousel">
              <img class="first-slide" src="{{ asset('images/a.jpg') }}" alt="First slide">
@@ -127,10 +109,9 @@
             <br>
 
             <li class="timeline">
-                <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" fill="#a4cb39" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
-                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
-                  </svg>
-                </div>
+                <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" fill="#c20000" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
+                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
+                  </svg></div>
                   <br>
                 <div class="timeline-panel">
                     <div class="timeline-heading">
@@ -142,14 +123,9 @@
                             <path d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1z"/>
                         </svg>
                         <br>
-                        <p>Inscripción de pago realizada correctamente.</p></div>
-                </div> 
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalInscripcion" wire:click="ver_form_ins('1')" >
-                    Rellene los datos de inscripción</button>
-                @include('estados.forms.info3_form')
-                
-            </li>
-         
+                        <p>Genera el pago de tu inscripción.</p></div>
+                </div>
+            </li>        
         </ul>
     </div>
 </section>

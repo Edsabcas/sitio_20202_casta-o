@@ -168,7 +168,7 @@ class InsComponent extends Component
                     'RELIGION_EN_ES'=> $this->religion_en,
                     'GRADO_ING_ES'=> $this->gradoin,
                     'ESTADO_PAGO'=> 0,
-                    'ESTADO_PRE_INS'=>1,
+                    'ESTADO_PRE_INS'=>0,
                     'NO_GESTION'=> $no_gestion,
                     'FECHA_REGISTRO'=>  date("Y-m-d H:i:s"),
                     'FECHA_CAMBIOS_REG'=>  date("Y-m-d H:i:s"),
@@ -201,4 +201,6 @@ class InsComponent extends Component
         }
         }
     }
+
+   
 }
