@@ -590,7 +590,7 @@
             </div>
           </div> 
 
-          <div wire:ignore.self class="accordion" id="accordionPanelsStayOpenExample2">
+          <div wire:ignore.self class="accordion" id="accordiondatosmedicos">
             <div style="border-radius: 60px 60px 60px 60px;" class="accordion-item">
               <h2 style="border-radius: 60px 60px 60px 60px;" class="accordion-header" id="panelsStayOpen-headingOne">
                 <button class="accordion-button" type="button" style="background-color:#d6e7a6; border:6px solid #a4cb39; border-radius: 60px 60px 60px 60px;" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
