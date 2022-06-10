@@ -287,7 +287,66 @@
                   </div>
                 </div>
               </div> 
-
+              <div wire:ignore.self class="accordion" id="accordionPanelsStayOpenExample2">
+                <div style="border-radius: 60px 60px 60px 60px;" class="accordion-item">
+                  <h2 style="border-radius: 60px 60px 60px 60px;" class="accordion-header" id="panelsStayOpen-headingOne">
+                    <button class="accordion-button" type="button" style="background-color:#d6e7a6; border:6px solid #a4cb39; border-radius: 60px 60px 60px 60px;" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                        <h4 class="font-weight-bolder">
+                            DATOS DE LA MADRE
+                          </h4>
+                        </button>
+                  </h2>
+              <div  wire:ignore.self id="panelsStayOpen-collapseOne" style="border-radius: 60px 60px 60px 60px;" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                <div  wire:ignore.self class="accordion-body" style="border-radius: 60px 60px 60px 60px;">
+                  <div class="tab">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <strong><label  for="Labelnombremadre" class="form-label">Ingrese la dirección de la residencia de la madre</label></strong>
+                            <input  type="text" class="form-control"  wire:model="direccion_residenciamadre">
+                          </div>
+                          @error('direccion_residenciamadre')
+                          <div class="alert alert-danger d-flex align-items-center rounded-pill" role="alert">
+                            <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+                            <div>
+                                Es necesario que llenes este campo para envíar la información
+                            </div>
+                          </div>
+                          @enderror
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <strong><label  for="Labelnombremadre" class="form-label">Ingrese el correo electrónico de la madre</label></strong>
+                            <input  type="text" class="form-control"  wire:model="correo_madre">
+                          </div>
+                          @error('correo_madre')
+                          <div class="alert alert-danger d-flex align-items-center rounded-pill" role="alert">
+                            <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+                            <div>
+                                Es necesario que llenes este campo para envíar la información
+                            </div>
+                          </div>
+                          @enderror
+                        <div class="col-md-6">
+                            <strong><label  for="Labelnombremadre" class="form-label">Ingrese la profesión a la que se decica la madre <label></strong>
+                            <input  type="text" class="form-control"  wire:model="profesion_madre">
+                          </div>
+                          @error('profesion_madre')
+                          <div class="alert alert-danger d-flex align-items-center rounded-pill" role="alert">
+                            <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+                            <div>
+                              Es necesario que llenes este campo para envíar la información
+                            </div>
+                          </div>
+                          @enderror
+                    </div>
+                      
+                   
+                </div>
+                </div>
+              </div>
+            </div>
+          </div> 
+        </div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
