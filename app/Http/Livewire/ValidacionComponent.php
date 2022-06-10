@@ -34,7 +34,9 @@ class ValidacionComponent extends Component
 
         $sql= 'SELECT * FROM tb_grados';
         $grados=DB::select($sql);
-        return view('livewire.validacion-component', compact('grados'));        
+        $sql= 'SELECT * FROM TB_PRE_INFO';
+        $inscripcion_datos=DB::select($sql);
+        return view('livewire.validacion-component', compact('grados','inscripcion_datos'));        
     }
     public function buspre() {
         if($this->validate([
