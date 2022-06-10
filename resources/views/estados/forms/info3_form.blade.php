@@ -602,8 +602,98 @@
             <div  wire:ignore.self class="accordion-body" style="border-radius: 60px 60px 60px 60px;">
               <div class="tab">
                 <div class="row">
-                    desde aqui trabaja
-                        <br>                          
+                    
+                  <div  wire:ignore.self id="panelsStayOpen-vacunas" style="border-radius: 60px 60px 60px 60px;" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                    <div  wire:ignore.self class="accordion-body" style="border-radius: 60px 60px 60px 60px;">
+                      <div class="tab">
+                        <strong><label for="exampleInputPassword1" class="form-label">¿El alumno tiene todas las vacunas?</label></strong>
+                        <center>
+                        <div style="width: 12rem;">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="vacunas" id="vacunas1" wire:click="vacunas('1')">
+                            <label class="form-check-label" for="vacunas1">
+                              Si
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="vacunas" id="vacunas2" wire:click="vacunas('0')">
+                            <label class="form-check-label" for="vacunas1">
+                              No
+                            </label>
+                          </div>
+                        </div>
+                    </center>
+                    </div>
+                   </div>
+                  </div>
+            
+                  <div wire:ignore.self id="panelsStayOpen-alumnoasegurado" style="border-radius: 60px 60px 60px 60px;" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                    <div  wire:ignore.self class="accordion-body" style="border-radius: 60px 60px 60px 60px;">
+                    <div class="tab">
+                      <strong><label for="exampleInputPassword1" class="form-label">¿El alumno esta asegurado?</label></strong>
+                      <center>
+                      <div style="width: 12rem;">
+                      <div class="form-check">
+                          <input class="form-check-input" type="radio" name="alumnoasegurado" id="alumnoasegurado1" wire:click="alumno_asegurado('1')">
+                          <label class="form-check-label" for="alumnoasegurado1">
+                            Si
+                          </label>
+                      </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="alumnoasegurado" id="alumnoasegurado2" wire:click="alumno_asegurado('0')">
+                          <label class="form-check-label" for="alumnoasegurado1">
+                            No
+                          </label>
+                        </div>
+                      </div>
+                  </center>
+                  @if($alumno_asegurado==1)
+                 <center>
+                <div class="col-md-6">
+                 <strong><label  for="Labelnombreaseguradora" class="form-label">Ingrese el nombre de la aseguradora</label></strong>
+                 <input  type="text" class="form-control"  wire:model="nombre_aseguradora">
+                </div>
+                 </center>
+                  @endif
+                 @error('nombre_aseguradora')
+                <div class="alert alert-danger d-flex align-items-center rounded-pill" role="alert">
+                  <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+                  <div>
+                      Es necesario que llenes este campo para envíar la información
+                  </div>
+                </div>
+                @enderror
+                  </div>
+                </div>
+              </div>
+              
+              <div class="row">
+                <div class="col-md-6">
+                    <strong><label  for="Labelpoliza" class="form-label">Ingrese la poliza de seguro</label></strong>
+                    <input  type="text" class="form-control"  wire:model="poliza">
+                  </div>
+                  @error('poliza')
+                  <div class="alert alert-danger d-flex align-items-center rounded-pill" role="alert">
+                    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+                    <div>
+                        Es necesario que llenes este campo para envíar la información
+                    </div>
+                  </div>
+                  @enderror
+                <div class="col-md-6">
+                    <strong><label  for="Labelcarneseguro" class="form-label">Ingrese el número del carné de seguro</label></strong>
+                    <input  type="number" class="form-control"  wire:model="carne_seguro">
+                  </div>
+                  @error('carne_seguro')
+                  <div class="alert alert-danger d-flex align-items-center rounded-pill" role="alert">
+                    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+                    <div>
+                        Es necesario que llenes este campo para envíar la información
+                    </div>
+                  </div>
+                  @enderror
+            </div>
+
                 </div>
             </div>
             </div>

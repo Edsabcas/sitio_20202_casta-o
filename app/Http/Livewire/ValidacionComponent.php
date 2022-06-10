@@ -15,7 +15,8 @@ class ValidacionComponent extends Component
     public $celular_padre, $celularpadre, $telefono_padre, $telefonopadre, $direccion_residencia, $direccionresidencia;
     public $correo_padre, $correopadre, $profesionpadre, $profesion_padre, $grado_hermano, $gradohermano,$vive_con_elpadre,$estadocivilma;
     public $direccion_residenciamadre, $correo_madre, $profesion_madre, $lugar_prof_madre, $cargo_madre, $religion_madre, $NIT_madre, $vive_madre;
-    public $solo_alumno, $soloalumno, $encargado_alumno, $nombreencargado, $nombre_encargado, $bus_colegio, $bus_no_colegio, $codigo_fam, $nombre_fam;
+    public $solo_alumno, $soloalumno, $encargado_alumno, $nombreencargado, $nombre_encargado, $bus_colegio, $bus_no_colegio, $codigo_fam, $nombre_fam, $alumno_asegurado, $vacunas, $nombre_aseguradora, $nombreaseguradora;
+    public $poliza, $carneseguro, $carne_seguro;
 
     public function render()
     {
@@ -115,7 +116,10 @@ class ValidacionComponent extends Component
             'cargo_madre' =>'requiered',
             'religion_madre' =>'requiered',
             'NIT_madre' =>'requiered',
+            'nombre_aseguradora' => 'required',
             'nombre_encargado' => 'required',
+            'poliza' => 'required',
+            'carne_seguro' => 'required',
             'codigo_fam' => 'required',
             'nombre_fam' => 'required',
 
@@ -157,7 +161,10 @@ class ValidacionComponent extends Component
         $this->cargo_madre=$this->cargo_madre; 
         $this->religion_madre=$this->religion_madre;
         $this->NIT_madre=$this->NIT_madre;
+        $this->nombreaseguradora=$this->nombre_aseguradora;
         $this->nombreencargado=$this->nombre_encargado;
+        $this->poliza=$this->poliza;
+        $this->carneseguro=$this->carne_seguro;
         $this->codigofam=$this->codigo_fam;
         $this->nombrefam=$this->nombre_fam;
         DB::beginTransaction();
@@ -200,6 +207,11 @@ class ValidacionComponent extends Component
                 'CARGO_MADRE'=>$this->cargo_madre,
                 'RELIGION_MADRE'=>$this->religion_madre,
                 'NIT_MADRE'=>$this->NIT_madre,
+                'VACUNAS'=>$this->$vacunas,
+                'ALUMNO_ASEGURADO'=>$this->alumno_asegurado,
+                'ASEGURADORA'=>$this->nombre_aseguradora,
+                'POLIZA_SEGURO'=>$this->poliza,
+                'NO_CARNET_SEGURO'=>$this->carne_seguro,
                 'SALIDA_SOLO'=>$this->soloalumno,
                 'SALIDA_CON_ENCARGADO'=>$this->encargado_alumno,
                 'NOMBRE_ENCARGADO'=>$this->nombreencargado,
@@ -236,5 +248,13 @@ class ValidacionComponent extends Component
 
     public function bus_no_colegio($bus_no_colegio){
         $this->bus_no_colegio=$bus_no_colegio;
+    }
+
+    public function vacunas($vacunas){
+        $this->vacunas=$vacunas;
+    }
+
+    public function alumno_asegurado($alumno_asegurado){
+        $this->alumno_asegurado=$alumno_asegurado;
     }
 }
