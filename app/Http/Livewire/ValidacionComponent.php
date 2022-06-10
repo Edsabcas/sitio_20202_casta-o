@@ -21,7 +21,7 @@ class ValidacionComponent extends Component
     public $correo_padre, $correopadre, $profesionpadre, $profesion_padre, $grado_hermano, $gradohermano,$vive_con_elpadre,$estadocivilma;
     public $direccion_residenciamadre, $correo_madre, $profesion_madre, $lugar_prof_madre, $cargo_madre, $religion_madre, $NIT_madre, $vive_madre;
     public $solo_alumno, $soloalumno, $encargado_alumno, $nombreencargado, $nombre_encargado, $bus_colegio, $bus_no_colegio, $codigo_fam, $nombre_fam, $alumno_asegurado, $vacunas, $nombre_aseguradora, $nombreaseguradora;
-    public $poliza, $carneseguro, $carne_seguro;
+    public $poliza, $carneseguro, $carne_seguro, $tiene_alergia,$Especifique_alerg;
 
     public function render()
     {
@@ -96,6 +96,10 @@ class ValidacionComponent extends Component
         $this->vive_madre=$this->vive_madre;
     }
 
+    public function tiene_alergia($tiene_alergia){
+        $this->tiene_alergia=$this->tiene_alergia;
+    }
+
     public function insertar_datos(){
         if($this->validate([
             'año_ingreso' => 'required',
@@ -114,6 +118,7 @@ class ValidacionComponent extends Component
             'cargo_profesion_padre' => 'required',
             'religion_padre' => 'required',
             'NIT_padre' => 'required',
+            'tiene_alergia'=> 'required',
             'nombre_madre' => 'required',
             'fechana_madre' => 'required',
             'nacionalidad_madre' => 'required',
@@ -173,6 +178,7 @@ class ValidacionComponent extends Component
         $this->cargo_madre=$this->cargo_madre; 
         $this->religion_madre=$this->religion_madre;
         $this->NIT_madre=$this->NIT_madre;
+        $this->Especifique_alerg=$this->Especifique_alerg;
         $this->nombreaseguradora=$this->nombre_aseguradora;
         $this->nombreencargado=$this->nombre_encargado;
         $this->poliza=$this->poliza;
@@ -219,6 +225,8 @@ class ValidacionComponent extends Component
                 'CARGO_MADRE'=>$this->cargo_madre,
                 'RELIGION_MADRE'=>$this->religion_madre,
                 'NIT_MADRE'=>$this->NIT_madre,
+                'ENFERMEDADES_ALERGIAS'=>$this->tiene_alergia,
+                'ESPECIFICACION_ENF_O_ALERG'=>$this->Especifique_alerg,
                 'VACUNAS'=>$this->$vacunas,
                 'ALUMNO_ASEGURADO'=>$this->alumno_asegurado,
                 'ASEGURADORA'=>$this->nombre_aseguradora,
