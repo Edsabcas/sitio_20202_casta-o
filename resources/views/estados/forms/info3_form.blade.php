@@ -11,7 +11,7 @@
             <!-- FORM DENTRO DE LA MODAL -->
             <h2 class="card-title" style="color:#3a3e7b;" >
                 Ingrese la siguiente información importante para continuar con su proceso de inscripción</h2>
-            
+              <form action="" wire:submit.prevent='' enctype="multipart/form-data" method="POST">
                <div wire:ignore.self class="accordion" id="accordionDatosVarios">
                 <div style="border-radius: 60px 60px 60px 60px;" class="accordion-item">
                   <h2 style="border-radius: 60px 60px 60px 60px;" class="accordion-header" id="panelsStayOpen-headingOne">
@@ -937,7 +937,7 @@
   </div>
 
 
-
+      </form>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
           <button type="button" class="btn btn-primary" wire:click='insertar_datos()'>Envíar Información</button>.
