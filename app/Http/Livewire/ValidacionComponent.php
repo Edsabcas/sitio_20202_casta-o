@@ -23,6 +23,7 @@ class ValidacionComponent extends Component
     public $solo_alumno, $soloalumno, $encargado_alumno, $nombreencargado, $nombre_encargado, $bus_colegio, $bus_no_colegio, $codigo_fam, $nombre_fam, $nombrefam, $codigofam, $alumno_asegurado, $vacunas, $nombre_aseguradora, $nombreaseguradora;
     public $poliza, $carneseguro, $carne_seguro, $tiene_alergia, $medicamento, $alimento, $archivo,$formato;
     public $religion_padre, $cargo_profesion_padre, $NIT_padre, $nombre_madre, $fechana_madre, $nacionalidad_madre, $lugar_nacimiento_madre, $DPI_madre, $telefono_madre, $celular_madre,$id_pre_ins,$id_no_gest,$mensaje_diaco,$mensaje_diaco1,$archivo_cdiaco,$id_pre_ins_arch,$id_no_gest_arch;
+    public $prueba_ingreso, $validar_info, $entro_aca, $Especifique_alerg, $Especifique_medi, $Especifique_ali;
 
     public function render()
     {
@@ -131,49 +132,8 @@ class ValidacionComponent extends Component
     }
 
     public function insertar_datos(){
-        if($this->validate([
-            'año_ingreso' => 'required',
-            'grado_primer_ingreso' => 'required',
-            'nombre_padre' => 'required',
-            'nacimiento_padre' => 'required',
-            'nacionalidad_padre' => 'required',
-            'lugar_nacimiento_padre' => 'required',
-            'DPI_padre' => 'required',
-            'celular_padre' => 'required',
-            'telefono_padre' => 'required',
-            'direccion_residencia' => 'required',
-            'correo_padre' => 'required',
-            'profesion_padre' => 'required',
-            'lugar_profesion_padre' => 'required',
-            'cargo_profesion_padre' => 'required',
-            'religion_padre' => 'required',
-            'NIT_padre' => 'required',
-            'tiene_alergia'=> 'required',
-            'nombre_madre' => 'required',
-            'fechana_madre' => 'required',
-            'nacionalidad_madre' => 'required',
-            'lugar_nacimiento_madre' => 'required',
-            'DPI_madre' => 'required',
-            'telefono_madre' => 'required',
-            'celular_madre' => 'required',
-            'direccion_residenciamadre'=> 'required',
-            'correo_madre'=> 'required',
-            'profesion_madre' =>'required',
-            'lugar_prof_madre' =>'required',
-            'cargo_madre' =>'required',
-            'religion_madre' =>'required',
-            'NIT_madre' =>'required',
-            'poliza' => 'required',
-            'carne_seguro' => 'required',
-            'codigo_fam' => 'required',
-            'nombre_fam' => 'required',
-
-        ])==false){
-            $error="no encontrado";
-            session(['message'=>'no encontrado']);
-            return back()->withErrors(['error' => 'Validar el input vacio']);
-        }
-        else{
+        
+            $this->prueba_ingreso=1;
         $añoingreso=$this->año_ingreso;
         $gradoprimeringreso=$this->grado_primer_ingreso;
         $nombrepadre = $this->nombre_padre;
@@ -213,7 +173,7 @@ class ValidacionComponent extends Component
             $this->Especifique_alerg=null;  
         }
             else{
-                $Especifique_alerg=$this->Especifique_alerg;
+                $this->Especifique_alerg=$this->Especifique_alerg;
         }
         if($this->nombreaseguradora==""){
                 $this->nombreaseguradora=null;  
@@ -221,18 +181,18 @@ class ValidacionComponent extends Component
             else{
                     $nombreaseguradora=$this->nombreaseguradora;
         }
-        $nombreencargado=$this->nombre_encargado;
+        $this->nombreencargado=$this->nombre_encargado;
         $poliza=$this->poliza;
         $carneseguro=$this->carne_seguro;
         $codigofam=$this->codigo_fam;
         $nombrefam=$this->nombre_fam;
-        if($Especifique_medi==""){
+        if($this->Especifique_medi==""){
             $this->Especifique_medi=null;  
         }
             else{
                 $Especifique_medi=$this->Especifique_medi;
         }
-        if($Especifique_ali==""){
+        if($this->Especifique_ali==""){
                 $this->Especifique_ali=null;  
             }
             else{
@@ -244,13 +204,13 @@ class ValidacionComponent extends Component
 
         $inscripcion_datos=DB::table('TB_PRE_INFO')->insert(
             [
-                'HERMANOS_COLE '=>$confi,
-                'GRADO_HERMANOS_COLE '=>$grados_selecionados,
+                'HERMANOS_COLE'=>$this->confi,
+                'GRADO_HERMANOS_COLE'=>$this->grados_selecionados,
                 'AÑO_1R_INGRESO'=>$añoingreso,
                 'GRADO_1R_INGRESO'=>$gradoprimeringreso,
                 'NOMB_PADRE'=>$nombrepadre,
                 'FECHA_N_PADRE'=>$nacimientopadre,
-                'NACIONALIDAD_PADRE'=>$idiomamaestro,
+                'NACIONALIDAD_PADRE'=>$nacionalidadpadre,
                 'LUGAR_NACIMIENTO_PADRE'=>$lugarnacimientopadre,
                 'ESTADO_CIVIL_P'=> $this->estadocivil,
                 'VIVE_CON_LA_MADRE'=> $this->vive_madre,
@@ -282,21 +242,21 @@ class ValidacionComponent extends Component
                 'ALERG_ALIMENTO'=>$this->alimento,
                 'RELIGION_MADRE'=>$religion_madre,
                 'NIT_MADRE'=>$NIT_madre,
-                'ESPECIFICAR_ALERG_AL'=>$this->Especifique_ali,
+                'ESPECIFICACION_ALERG_AL'=>$this->Especifique_ali,
                 'ENFERMEDADES_ALERGIAS'=>$this->tiene_alergia,
-                'ESPECIFICACION_ENF_O_ALERG'=>$Especifique_alerg,
-                'VACUNAS'=>$$vacunas,
-                'ALUMNO_ASEGURADO'=>$alumno_asegurado,
-                'ASEGURADORA'=>$nombre_aseguradora,
+                'ESPECIFICACION_ENF_O_ALERG'=>$this->Especifique_alerg,
+                'VACUNAS'=>$this->vacunas,
+                'ALUMNO_ASEGURADO'=>$this->alumno_asegurado,
+                'ASEGURADORA'=>$this->nombre_aseguradora,
                 'POLIZA_SEGURO'=>$poliza,
-                'NO_CARNET_SEGURO'=>$carne_seguro,
-                'SALIDA_SOLO'=>$soloalumno,
-                'SALIDA_CON_ENCARGADO'=>$encargado_alumno,
-                'NOMBRE_ENCARGADO'=>$nombreencargado,
-                'SALIDA_BUS_COLEGIO'=>$bus_colegio,
-                'SALIDA_BUS_AJENO'=>$bus_no_colegio,
-                'CODIGO_FAMILIA'=>$codigo_fam,
-                'NOMBRE_FAMILIA'=>$nombre_fam,
+                'NO_CARNET_SEGURO'=>$this->carne_seguro,
+                'SALIDA_SOLO'=>$this->soloalumno,
+                'SALIDA_CON_ENCARGADO'=>$this->encargado_alumno,
+                'NOMBRE_ENCARGADO'=>$this->nombreencargado,
+                'SALIDA_BUS_COLEGIO'=>$this->bus_colegio,
+                'SALIDA_BUS_AJENO'=>$this->bus_no_colegio,
+                'CODIGO_FAMILIA'=>$this->codigo_fam,
+                'NOMBRE_FAMILIA'=>$this->nombre_fam,
             
                 ]
             );
@@ -310,7 +270,8 @@ class ValidacionComponent extends Component
             }
         }
         
-    }           
+     
+
         public function update_comprobante_p(){
             $archivo_comprobante="";
             if($this->archivo_comprobante!=null){
