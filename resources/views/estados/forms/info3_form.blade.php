@@ -29,14 +29,14 @@
                         <center>
                         <div style="width: 12rem;">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" wire:click="confirmar_hermano('1')">
-                            <label class="form-check-label" for="flexRadioDefault1">
+                            <input class="form-check-input" type="radio" name="hermano" id="hermano1" wire:click="confirmar_hermano('1')">
+                            <label class="form-check-label" for="hermano1">
                               Si
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" wire:click="confirmar_hermano('0')">
-                            <label class="form-check-label" for="flexRadioDefault1">
+                            <input class="form-check-input" type="radio" name="hermano" id="hermano2" wire:click="confirmar_hermano('0')">
+                            <label class="form-check-label" for="hermano1">
                               No
                             </label>
                           </div>
@@ -176,24 +176,24 @@
                                 <strong><label  for="Labelnombrepadre" class="form-label">Ingrese el estado civil del padre</label></strong>
                                 <div class="col-md-4">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault"  wire:click="estado_civil_padre('1')">
-                                        <label class="form-check-label" for="flexRadioDefault1">
+                                        <input class="form-check-input" type="radio" name="estadocivilp"  wire:click="estado_civil_padre('1')">
+                                        <label class="form-check-label" for="estadocivilp1">
                                           Casado(a)
                                         </label>
                                       </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault"  wire:click="estado_civil_padre('2')">
-                                        <label class="form-check-label" for="flexRadioDefault1">
+                                        <input class="form-check-input" type="radio" name="estadocivilp"  wire:click="estado_civil_padre('2')">
+                                        <label class="form-check-label" for="estadocivilp1">
                                           Separado(a)
                                         </label>
                                       </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault"  wire:click="estado_civil_padre('3')">
-                                        <label class="form-check-label" for="flexRadioDefault1">
+                                        <input class="form-check-input" type="radio" name="estadocivilp"  wire:click="estado_civil_padre('3')">
+                                        <label class="form-check-label" for="estadocivilp1">
                                           Soltero(a)
                                         </label>
                                       </div>
@@ -268,6 +268,18 @@
                                 </div>
                               </div>
                               @enderror
+                              <div class="col-md-6">
+                                <strong><label  for="Labelprofesionpadre" class="form-label">Ingrese la profesion del padre</label></strong>
+                                <input  type="text" class="form-control"  wire:model="profesion_padre">
+                              </div>
+                              @error('profesion_padre')
+                              <div class="alert alert-danger d-flex align-items-center rounded-pill" role="alert">
+                                <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+                                <div>
+                                  Es necesario que llenes este campo para envíar la información
+                                </div>
+                              </div>
+                              @enderror
                             <div class="col-md-6">
                                 <strong><label  for="Labelnombrepadre" class="form-label">Ingrese el lugar de trabajo del padre</label></strong>
                                 <input  type="text" class="form-control"  wire:model="lugar_profesion_padre">
@@ -305,7 +317,7 @@
                               </div>
                               @enderror
                               <div class="col-md-6">
-                                <strong><label  for="Labelnombrepadre" class="form-label">Ingrese el NIT del padre</label></strong>
+                                <strong><label  for="Labelnombrepadre" class="form-label">Ingrese el NIT del padre(por favor no utilice ningun signo solo ingerese números)</label></strong>
                                 <input  type="number" class="form-control"  wire:model="NIT_padre">
                               </div>
                               @error('NIT_padre')
@@ -323,16 +335,16 @@
                                     <div style="width: 12rem;">
                                     <div class="col-md-7">
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault"  wire:click="confirmar_vive_padre('1')">
-                                            <label class="form-check-label" for="flexRadioDefault1">
+                                            <input class="form-check-input" type="radio" name="vivepadre"  wire:click="confirmar_vive_padre('1')">
+                                            <label class="form-check-label" for="vivepadre1">
                                               Si
                                             </label>
                                           </div>
                                     </div>
                                     <div class="col-md-7">
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault"  wire:click="confirmar_vive_padre('2')">
-                                            <label class="form-check-label" for="flexRadioDefault1">
+                                            <input class="form-check-input" type="radio" name="vivepadre"  wire:click="confirmar_vive_padre('2')">
+                                            <label class="form-check-label" for="vivepadre1">
                                               No
                                             </label>
                                           </div>
@@ -554,7 +566,7 @@
                   </div>
                   @enderror
                   <div class="col-md-6">
-                    <strong><label  for="Labelnombremadre" class="form-label">Ingrese el NIT de la madre(por favor no utilice ningun signo solo ingerese numeros)<label></strong>
+                    <strong><label  for="Labelnombremadre" class="form-label">Ingrese el NIT de la madre(por favor no utilice ningun signo solo ingerese números)<label></strong>
                     <input  type="number" class="form-control"  wire:model="NIT_madre">
                   </div>
                   @error('NIT_madre')

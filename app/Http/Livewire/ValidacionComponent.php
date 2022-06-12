@@ -15,12 +15,12 @@ class ValidacionComponent extends Component
     public $nogestion, $dpi, $fehencargado,$mensaje, $gradoprimeringreso, $grado_primer_ingreso, $nombrepadre;
     public $validar1, $confi, $val, $grados_selecionados, $grados_mostrar, $año_ingreso, $añoingreso, $nombre_padre;
     public $nacimientopadre, $nacimiento_padre, $nacionalidadpadre, $nacionalidad_padre,$lugar_profesion_padre;
-    public $lugar_nacimiento_padre, $lugarnacimientopadre, $estadocivil, $estado_civil, $DPIpadre, $DPI_padre;
+    public $lugar_nacimiento_padre, $lugarnacimientopadre, $estadocivil, $DPIpadre, $DPI_padre;
     public $celular_padre, $celularpadre, $telefono_padre, $telefonopadre, $direccion_residencia, $direccionresidencia;
     public $id_pre,$metodo,$archivo_comprobante,$img,$tipo,$mensaje24,$mensaje25,$observacion;
     public $correo_padre, $correopadre, $profesionpadre, $profesion_padre, $grado_hermano, $gradohermano,$vive_con_elpadre,$estadocivilma;
     public $direccion_residenciamadre, $correo_madre, $profesion_madre, $lugar_prof_madre, $cargo_madre, $religion_madre, $NIT_madre, $vive_madre;
-    public $solo_alumno, $soloalumno, $encargado_alumno, $nombreencargado, $nombre_encargado, $bus_colegio, $bus_no_colegio, $codigo_fam, $nombre_fam, $nombrefam, $codigofam, $alumno_asegurado, $vacunas, $nombre_aseguradora, $nombreaseguradora;
+    public $solo_alumno, $encargado_alumno, $nombreencargado, $nombre_encargado, $bus_colegio, $bus_no_colegio, $codigo_fam, $nombre_fam, $nombrefam, $codigofam, $alumno_asegurado, $vacunas, $nombre_aseguradora, $nombreaseguradora;
     public $poliza, $carneseguro, $carne_seguro, $tiene_alergia, $medicamento, $alimento, $archivo,$formato;
     public $religion_padre, $cargo_profesion_padre, $NIT_padre, $nombre_madre, $fechana_madre, $nacionalidad_madre, $lugar_nacimiento_madre, $DPI_madre, $telefono_madre, $celular_madre,$id_pre_ins,$id_no_gest,$mensaje_diaco,$mensaje_diaco1,$archivo_cdiaco,$id_pre_ins_arch,$id_no_gest_arch;
     public $prueba_ingreso, $validar_info, $entro_aca, $Especifique_alerg, $Especifique_medi, $Especifique_ali;
@@ -103,7 +103,7 @@ class ValidacionComponent extends Component
     }
 
     public function estado_civil_padre($estado_civil){
-        $this->estadocivil=$this->estado_civil;
+        $this->estadocivil=$estado_civil;
     }
 
 
@@ -140,13 +140,12 @@ class ValidacionComponent extends Component
         $nacimientopadre =$this->nacimiento_padre;
         $nacionalidadpadre=$this->nacionalidad_padre;
         $lugarnacimientopadre=$this->lugar_nacimiento_padre;
-        $this->estadocivil=$this->estadocivil;
         $DPIpadre=$this->DPI_padre;
         $celularpadre=$this->celular_padre;
         $telefonopadre=$this->telefono_padre;
         $direccionresidencia=$this->direccion_residencia;
         $correopadre=$this->correo_padre;
-        $profesionpadre=$this->profesion_padre;
+        $this->profesionpadre=$this->profesion_padre;
         $lugar_profesion_padre=$this->lugar_profesion_padre;
         $cargo_profesion_padre=$this->cargo_profesion_padre;
         $religion_padre=$this->religion_padre;
@@ -219,7 +218,7 @@ class ValidacionComponent extends Component
                 'CELULAR_PADRE'=>$celularpadre,
                 'DIRECCION_RECIDENCIA_P'=>$direccionresidencia,
                 'CORREO_PADRE'=>$correopadre,
-                'PROFECION_PADRE'=>$profesionpadre,
+                'PROFECION_PADRE'=>$this->profesionpadre,
                 'LUGAR_TRABAJO_P'=>$lugar_profesion_padre,
                 'CARGO_PADRE'=>$cargo_profesion_padre,
                 'RELIGION_PADRE'=>$religion_padre,
@@ -242,6 +241,7 @@ class ValidacionComponent extends Component
                 'ALERG_ALIMENTO'=>$this->alimento,
                 'RELIGION_MADRE'=>$religion_madre,
                 'NIT_MADRE'=>$NIT_madre,
+                'ESPECIFICAR_ALERG_ME'=>$this->Especifique_medi,
                 'ESPECIFICACION_ALERG_AL'=>$this->Especifique_ali,
                 'ENFERMEDADES_ALERGIAS'=>$this->tiene_alergia,
                 'ESPECIFICACION_ENF_O_ALERG'=>$this->Especifique_alerg,
@@ -250,7 +250,7 @@ class ValidacionComponent extends Component
                 'ASEGURADORA'=>$this->nombre_aseguradora,
                 'POLIZA_SEGURO'=>$poliza,
                 'NO_CARNET_SEGURO'=>$this->carne_seguro,
-                'SALIDA_SOLO'=>$this->soloalumno,
+                'SALIDA_SOLO'=>$this->solo_alumno,
                 'SALIDA_CON_ENCARGADO'=>$this->encargado_alumno,
                 'NOMBRE_ENCARGADO'=>$this->nombreencargado,
                 'SALIDA_BUS_COLEGIO'=>$this->bus_colegio,
@@ -321,7 +321,7 @@ class ValidacionComponent extends Component
     
     
     public function solo_alumno($solo_alumno){
-        $this->soloalumno=$this->solo_alumno;
+        $this->solo_alumno=$solo_alumno;
     }
 
     public function encargado_alumno($encargado_alumno){
