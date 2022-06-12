@@ -14,15 +14,15 @@
               <form action="" wire:submit.prevent='' enctype="multipart/form-data" method="POST">
                <div wire:ignore.self class="accordion" id="accordionDatosVarios">
                 <div style="border-radius: 60px 60px 60px 60px;" class="accordion-item">
-                  <h2 style="border-radius: 60px 60px 60px 60px;" class="accordion-header" id="panelsStayOpen-headingOne">
-                    <button class="accordion-button" type="button" style="background-color:#d6e7a6; border:6px solid #a4cb39; border-radius: 60px 60px 60px 60px;" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                  <h2 style="border-radius: 60px 60px 60px 60px;" class="accordion-header" id="panelsStayOpen-headingOnedatosvarios">
+                    <button class="accordion-button" type="button" style="background-color:#d6e7a6; border:6px solid #a4cb39; border-radius: 60px 60px 60px 60px;" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-datosvarios" aria-expanded="true" aria-controls="panelsStayOpen-datosvarios">
                         <h4 class="font-weight-bolder">
                             DATOS VARIOS
                           </h4>
                         </button>
                   </h2>
                   
-                  <div  wire:ignore.self id="panelsStayOpen-collapseOne" style="border-radius: 60px 60px 60px 60px;" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                  <div  wire:ignore.self id="panelsStayOpen-datosvarios" style="border-radius: 60px 60px 60px 60px;" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
                     <div  wire:ignore.self class="accordion-body" style="border-radius: 60px 60px 60px 60px;">
                       <div class="tab">
                         <strong><label for="exampleInputPassword1" class="form-label">¿Tiene hermanos en colegio?</label></strong>
@@ -81,7 +81,7 @@
                               </div>
                               @enderror
                               <div class="col-md-6">
-                                <strong><label for="exampleInputPassword1" class="form-label" >Coloque el año de primer ingreso</label></strong>
+                                <strong><label for="exampleInputPassword1" class="form-label" >Coloque el grado de primer ingreso</label></strong>
                                 <select class="form-select" aria-label="Default select example" wire:model="grado_primer_ingreso">
                                   <option selected >Elige el grado de primer ingreso</option>
                                   @foreach($grados as $grado)
@@ -105,18 +105,18 @@
                   </div>
                 </div>
               </div> 
-
+              <br>
               <div wire:ignore.self class="accordion" id="accordionDatosdelpadre">
                 <div style="border-radius: 60px 60px 60px 60px;" class="accordion-item">
-                  <h2 style="border-radius: 60px 60px 60px 60px;" class="accordion-header" id="panelsStayOpen-headingOne">
-                    <button class="accordion-button" type="button" style="background-color:#d6e7a6; border:6px solid #a4cb39; border-radius: 60px 60px 60px 60px;" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                  <h2 style="border-radius: 60px 60px 60px 60px;" class="accordion-header" id="panelsStayOpen-headingOnedatospadre">
+                    <button class="accordion-button" type="button" style="background-color:#d6e7a6; border:6px solid #a4cb39; border-radius: 60px 60px 60px 60px;" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-padre" aria-expanded="true" aria-controls="panelsStayOpen-padre">
                         <h4 class="font-weight-bolder">
                             DATOS DEL PADRE
                           </h4>
                         </button>
                   </h2>
                   
-                  <div  wire:ignore.self id="panelsStayOpen-collapseOne" style="border-radius: 60px 60px 60px 60px;" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                  <div  wire:ignore.self id="panelsStayOpen-padre" style="border-radius: 60px 60px 60px 60px;" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
                     <div  wire:ignore.self class="accordion-body" style="border-radius: 60px 60px 60px 60px;">
                       <div class="tab">
                         <div class="row">
@@ -347,19 +347,19 @@
                     </div>
                   </div>
                   </div>
-
+                  <br>
                    
               <div wire:ignore.self class="accordion" id="accordionDatosdelamadre">
 
                 <div style="border-radius: 60px 60px 60px 60px;" class="accordion-item">
                   <h2 style="border-radius: 60px 60px 60px 60px;" class="accordion-header" id="panelsStayOpen-headingOneDatosdelamadre">
-                    <button class="accordion-button" type="button" style="background-color:#d6e7a6; border:6px solid #a4cb39; border-radius: 60px 60px 60px 60px;" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                    <button class="accordion-button" type="button" style="background-color:#d6e7a6; border:6px solid #a4cb39; border-radius: 60px 60px 60px 60px;" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-madre" aria-expanded="true" aria-controls="panelsStayOpen-madre">
                         <h4 class="font-weight-bolder">
                             DATOS DE LA MADRE
                           </h4>
                         </button>
                   </h2>
-              <div  wire:ignore.self id="panelsStayOpen-collapseOne" style="border-radius: 60px 60px 60px 60px;" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+              <div  wire:ignore.self id="panelsStayOpen-madre" style="border-radius: 60px 60px 60px 60px;" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
                 <div  wire:ignore.self class="accordion-body" style="border-radius: 60px 60px 60px 60px;">
                   <div class="tab">
                     <div class="row">
@@ -589,19 +589,20 @@
               </div>
             </div>
           </div> 
+     <br>
 
-          <div wire:ignore.self class="accordion" id="accordiondatosmedicos">
-            <div style="border-radius: 60px 60px 60px 60px;" class="accordion-item">
-              <h2 style="border-radius: 60px 60px 60px 60px;" class="accordion-header" id="panelsStayOpen-headingOne">
-                <button class="accordion-button" type="button" style="background-color:#d6e7a6; border:6px solid #a4cb39; border-radius: 60px 60px 60px 60px;" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                    <h4 class="font-weight-bolder">
-                        DATOS MEDICOS
-                      </h4>
-                    </button>
-              </h2>
+  <div wire:ignore.self class="accordion" id="accordiondatosmedicos">
+    <div style="border-radius: 60px 60px 60px 60px;" class="accordion-item">
+      <h2 style="border-radius: 60px 60px 60px 60px;" class="accordion-header" id="panelsStayOpen-headingOnedatosmedicos  ">
+        <button class="accordion-button" type="button" style="background-color:#d6e7a6; border:6px solid #a4cb39; border-radius: 60px 60px 60px 60px;" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-medicos" aria-expanded="true" aria-controls="panelsStayOpen-medicos">
+          <h4 class="font-weight-bolder">
+            DATOS MEDICOS
+          </h4>
+        </button>
+      </h2>
             
-              <div wire:ignore.self id="panelsStayOpen-alumnoasegurado" style="border-radius: 60px 60px 60px 60px;" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
-                <div  wire:ignore.self class="accordion-body" style="border-radius: 60px 60px 60px 60px;">
+      <div wire:ignore.self id="panelsStayOpen-medicos" style="border-radius: 60px 60px 60px 60px;" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+      <div  wire:ignore.self class="accordion-body" style="border-radius: 60px 60px 60px 60px;">
                 <div class="tab">
                   <div class="row">
                   <strong><label for="exampleInputPassword1" class="form-label">¿El alumno tiene alguna enfermedad o alergia?</label></strong>
@@ -632,9 +633,7 @@
              
               </div>
             </div>
-          </div>                     
-          <div wire:ignore.self id="panelsStayOpen-medicamento" style="border-radius: 60px 60px 60px 60px;" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
-            <div  wire:ignore.self class="accordion-body" style="border-radius: 60px 60px 60px 60px;">
+                
             <div class="tab">
               <div class="row">
               <strong><label for="exampleInputPassword1" class="form-label">¿El alumno es alergico a un medicamento?</label></strong>
@@ -664,10 +663,7 @@
           @endif
           </div>
         </div>
-      </div>
-
-      <div wire:ignore.self id="panelsStayOpen-alimento" style="border-radius: 60px 60px 60px 60px;" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
-        <div  wire:ignore.self class="accordion-body" style="border-radius: 60px 60px 60px 60px;">
+      
         <div class="tab">
           <div class="row">
           <strong><label for="exampleInputPassword1" class="form-label">¿El alumno es alergico a un alimento?</label></strong>
@@ -697,120 +693,108 @@
         @endif
        </div>
       </div>
-      </div>
 
-
-
-                    
-                  
-                  <div  wire:ignore.self id="panelsStayOpen-vacunas" style="border-radius: 60px 60px 60px 60px;" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
-                    <div  wire:ignore.self class="accordion-body" style="border-radius: 60px 60px 60px 60px;">
-                      <div class="tab">
-                        <strong><label for="exampleInputPassword1" class="form-label">¿El alumno tiene todas las vacunas?</label></strong>
-                        <center>
-                        <div style="width: 12rem;">
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="vacunas" id="vacunas1" wire:click="vacunas('1')">
-                            <label class="form-check-label" for="vacunas1">
-                              Si
-                            </label>
-                          </div>
-                          <div class="form-check">
-                            <input class="form-check-input" type="radio" name="vacunas" id="vacunas2" wire:click="vacunas('0')">
-                            <label class="form-check-label" for="vacunas1">
-                              No
-                            </label>
-                          </div>
-                        </div>
-                    </center>
-                    </div>
-                   </div>
-                  </div>
-            
-                  <div wire:ignore.self id="panelsStayOpen-alumnoasegurado" style="border-radius: 60px 60px 60px 60px;" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
-                    <div  wire:ignore.self class="accordion-body" style="border-radius: 60px 60px 60px 60px;">
-                    <div class="tab">
-                      <strong><label for="exampleInputPassword1" class="form-label">¿El alumno esta asegurado?</label></strong>
-                      <center>
-                      <div style="width: 12rem;">
-                      <div class="form-check">
-                          <input class="form-check-input" type="radio" name="alumnoasegurado" id="alumnoasegurado1" wire:click="alumno_asegurado('1')">
-                          <label class="form-check-label" for="alumnoasegurado1">
-                            Si
-                          </label>
-                      </div>
-                        <div class="form-check">
-                          <input class="form-check-input" type="radio" name="alumnoasegurado" id="alumnoasegurado2" wire:click="alumno_asegurado('0')">
-                          <label class="form-check-label" for="alumnoasegurado1">
-                            No
-                          </label>
-                        </div>
-                      </div>
-                  </center>
-                  @if($alumno_asegurado==1)
-                 <center>
-                <div class="col-md-6">
-                 <strong><label  for="Labelnombreaseguradora" class="form-label">Ingrese el nombre de la aseguradora</label></strong>
-                 <input  type="text" class="form-control"  wire:model="nombre_aseguradora">
-                </div>
-                 </center>
-                  @endif
-                
-                  </div>
-                </div>
-              </div>
-              
-              <div class="row">
-                <div class="col-md-6">
-                    <strong><label  for="Labelpoliza" class="form-label">Ingrese la poliza de seguro</label></strong>
-                    <input  type="text" class="form-control"  wire:model="poliza">
-                  </div>
-                  
-                <div class="col-md-6">
-                    <strong><label  for="Labelcarneseguro" class="form-label">Ingrese el número del carné de seguro</label></strong>
-                    <input  type="number" class="form-control"  wire:model="carne_seguro">
-                  </div>
-                  
-            </div>
-            </div>
-            </div>
-            </div>
-
-      <div wire:ignore.self class="accordion" id="accordionDatossalida"> 
-        <div style="border-radius: 60px 60px 60px 60px;" class="accordion-item">
-          <h2 style="border-radius: 60px 60px 60px 60px;" class="accordion-header" id="panelsStayOpen-headingOne3">
-            <button class="accordion-button" type="button" style="background-color:#d6e7a6; border:6px solid #a4cb39; border-radius: 60px 60px 60px 60px;" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                <h4 class="font-weight-bolder">
-                    DATOS DE SALIDA
-                  </h4>
-                </button>
-          </h2>
-
-          <div  wire:ignore.self id="panelsStayOpen-solo" style="border-radius: 60px 60px 60px 60px;" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
-            <div  wire:ignore.self class="accordion-body" style="border-radius: 60px 60px 60px 60px;">
-              <div class="tab">
-                <strong><label for="exampleInputPassword1" class="form-label">¿El alumno se retira solo?</label></strong>
-                <center>
+          <div class="tab">
+            <strong><label for="exampleInputPassword1" class="form-label">¿El alumno tiene todas las vacunas?</label></strong>
+              <center>
                 <div style="width: 12rem;">
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="solo" id="solo1" wire:click="solo_alumno('1')">
-                    <label class="form-check-label" for="solo1">
-                      Si
-                    </label>
-                </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="solo" id="solo2" wire:click="solo_alumno('0')">
-                    <label class="form-check-label" for="solo1">
+                    <input class="form-check-input" type="radio" name="vacunas" id="vacunas1" wire:click="vacunas('1')">
+                      <label class="form-check-label" for="vacunas1">
+                        Si
+                      </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="vacunas" id="vacunas2" wire:click="vacunas('0')">
+                      <label class="form-check-label" for="vacunas1">
+                        No
+                      </label>
+                    </div>
+                </div>
+              </center>
+          </div>
+            
+      
+          <div class="tab">
+            <strong><label for="exampleInputPassword1" class="form-label">¿El alumno esta asegurado?</label></strong>
+              <center>
+                <div style="width: 12rem;">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="alumnoasegurado" id="alumnoasegurado1" wire:click="alumno_asegurado('1')">
+                      <label class="form-check-label" for="alumnoasegurado1">
+                        Si
+                      </label>
+                  </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="alumnoasegurado" id="alumnoasegurado2" wire:click="alumno_asegurado('0')">
+                    <label class="form-check-label" for="alumnoasegurado1">
                       No
                     </label>
                 </div>
+                </div>
                 </center>
-             </div>
-           </div>
-        </div> 
+                  @if($alumno_asegurado==1)
+                <center>
+                  <div class="col-md-6">
+                    <strong><label  for="Labelnombreaseguradora" class="form-label">Ingrese el nombre de la aseguradora</label></strong>
+                      <input  type="text" class="form-control"  wire:model="nombre_aseguradora">
+                  </div>
+                </center>
+                  @endif
 
-        <div  wire:ignore.self id="panelsStayOpen-encargado" style="border-radius: 60px 60px 60px 60px;" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+          </div>
+
+              
+      <div class="row">
+        <div class="col-md-6">
+          <strong><label  for="Labelpoliza" class="form-label">Ingrese la poliza de seguro</label></strong>
+            <input  type="text" class="form-control"  wire:model="poliza">
+        </div>
+                  
+        <div class="col-md-6">
+            <strong><label  for="Labelcarneseguro" class="form-label">Ingrese el número del carné de seguro</label></strong>
+              <input  type="number" class="form-control"  wire:model="carne_seguro">
+        </div>
+                  
+      </div>
+    </div>
+   </div>
+  </div>
+</div>
+
+  <br>
+
+  <div wire:ignore.self class="accordion" id="accordionDatossalida"> 
+    <div style="border-radius: 60px 60px 60px 60px;" class="accordion-item">
+        <h2 style="border-radius: 60px 60px 60px 60px;" class="accordion-header" id="panelsStayOpen-headingOnedatossalida">
+          <button class="accordion-button" type="button" style="background-color:#d6e7a6; border:6px solid #a4cb39; border-radius: 60px 60px 60px 60px;" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-salida" aria-expanded="true" aria-controls="panelsStayOpen-salida">
+            <h4 class="font-weight-bolder">
+            DATOS DE SALIDA
+            </h4>
+          </button>
+        </h2>
+
+        <div  wire:ignore.self id="panelsStayOpen-salida" style="border-radius: 60px 60px 60px 60px;" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
           <div  wire:ignore.self class="accordion-body" style="border-radius: 60px 60px 60px 60px;">
+            <div class="tab">
+              <strong><label for="exampleInputPassword1" class="form-label">¿El alumno se retira solo?</label></strong>
+                <center>
+            <div style="width: 12rem;">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="solo" id="solo1" wire:click="solo_alumno('1')">
+                <label class="form-check-label" for="solo1">
+                 Si
+                </label>
+            </div>
+            <div class="form-check">
+            <input class="form-check-input" type="radio" name="solo" id="solo2" wire:click="solo_alumno('0')">
+              <label class="form-check-label" for="solo1">
+                No
+              </label>
+            </div>
+            </center>
+          </div>
+
             <div class="tab">
               <strong><label for="exampleInputPassword1" class="form-label">¿El alumno se retira con un encargado?</label></strong>
               <center>
@@ -839,11 +823,7 @@
           @endif
           
           </div>
-         </div>
-       </div>
 
-      <div  wire:ignore.self id="panelsStayOpen-buscolegio" style="border-radius: 60px 60px 60px 60px;" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
-        <div  wire:ignore.self class="accordion-body" style="border-radius: 60px 60px 60px 60px;">
           <div class="tab">
             <strong><label for="exampleInputPassword1" class="form-label">¿El alumno se retira en bus del colegio?</label></strong>
             <center>
@@ -863,11 +843,7 @@
             </div>
         </center>
         </div>
-       </div>
-      </div>
 
-      <div wire:ignore.self id="panelsStayOpen-busnocolegio" style="border-radius: 60px 60px 60px 60px;" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
-        <div  wire:ignore.self class="accordion-body" style="border-radius: 60px 60px 60px 60px;">
         <div class="tab">
           <strong><label for="exampleInputPassword1" class="form-label">¿El alumno se retira en bus ajeno al colegio?</label></strong>
           <center>
@@ -885,26 +861,27 @@
               </label>
             </div>
           </div>
-      </center>
-      </div>
-    </div>
-
+          </center>
+        </div>
+        </div>
+        </div>
   </div>
+
 </div>
 
-  </div>
-
-
+<br>
   <div wire:ignore.self class="accordion" id="accordionDatosusuarios">
       <div style="border-radius: 60px 60px 60px 60px;" class="accordion-item">
-        <h2 style="border-radius: 60px 60px 60px 60px;" class="accordion-header" id="panelsStayOpen-headingOne4">
-          <button class="accordion-button" type="button" style="background-color:#d6e7a6; border:6px solid #a4cb39; border-radius: 60px 60px 60px 60px;" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+        <h2 style="border-radius: 60px 60px 60px 60px;" class="accordion-header" id="panelsStayOpen-headingOnedatosusuarios">
+          <button class="accordion-button" type="button" style="background-color:#d6e7a6; border:6px solid #a4cb39; border-radius: 60px 60px 60px 60px;" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-usuario" aria-expanded="true" aria-controls="panelsStayOpen-usuario">
               <h4 class="font-weight-bolder">
                   DATOS DE USUARIOS
                 </h4>
               </button>
         </h2>
 
+        <div  wire:ignore.self id="panelsStayOpen-usuario" style="border-radius: 60px 60px 60px 60px;" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+        <div  wire:ignore.self class="accordion-body" style="border-radius: 60px 60px 60px 60px;">
         <div class="row">
           <div class="col-md-6">
               <strong><label  for="Labelcodigodefamilia" class="form-label">Ingrese el codigo de familia</label></strong>
@@ -963,6 +940,8 @@
 
   </div>
   </div>
+</div>
+</div>
 
 
       </form>
