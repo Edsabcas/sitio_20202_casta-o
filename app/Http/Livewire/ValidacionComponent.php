@@ -24,6 +24,7 @@ class ValidacionComponent extends Component
     public $poliza, $carneseguro, $carne_seguro, $tiene_alergia, $medicamento, $alimento, $archivo,$formato;
     public $religion_padre, $cargo_profesion_padre, $NIT_padre, $nombre_madre, $fechana_madre, $nacionalidad_madre, $lugar_nacimiento_madre, $DPI_madre, $telefono_madre, $celular_madre,$id_pre_ins,$id_no_gest,$mensaje_diaco,$mensaje_diaco1,$archivo_cdiaco,$id_pre_ins_arch,$id_no_gest_arch;
     public $prueba_ingreso, $validar_info, $entro_aca, $Especifique_alerg, $Especifique_medi, $Especifique_ali;
+    public $estado_elevado;
 
     public function render()
     {
@@ -246,6 +247,7 @@ class ValidacionComponent extends Component
 
         $inscripcion_datos=DB::table('TB_PRE_INFO')->insert(
             [
+                'ID_PRE'=>$this->id_pre_ins,
                 'HERMANOS_COLE'=>$this->confi,
                 'GRADO_HERMANOS_COLE'=>$this->grados_selecionados,
                 'AÑO_1R_INGRESO'=>$añoingreso,
@@ -305,7 +307,22 @@ class ValidacionComponent extends Component
             );
             if($inscripcion_datos){
                 DB::commit();
+                $nuevo_estado=4;
+                $elevar=DB::table('TB_PRE_INS')
+                ->where('TB_PRE_INS', $this->id_pre_ins)
+                ->update(
+                    [
+ 
+                     'ESTADO_PRE_INS' => $nuevo_estado,
+ 
+                    ]);
                 $this->validar_info = 1;
+                if($elevar){
+                    $this->estado_elevado=1;
+                }
+                else{
+                    $this->estado_elevado=0;
+                }
             }
             else{
                 DB::rollback();
