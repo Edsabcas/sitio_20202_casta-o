@@ -376,7 +376,7 @@
                               @enderror
                               <div class="row">
                                 <div class="row">
-                                    <strong><label  for="Labelnombrepadre" class="form-label">¿Vive con el padre?</label></strong>
+                                    <strong><label  for="Labelnombrepadre" class="form-label">¿El alumno vive con el padre?</label></strong>
                                     <center>
                                     <div style="width: 12rem;">
                                     <div class="col-md-7">
@@ -488,24 +488,24 @@
                           <strong><label  for="Labelnombrepadre" class="form-label">Ingrese el estado civil de la madre</label></strong>
                           <div class="col-md-4">
                               <div class="form-check">
-                                  <input class="form-check-input" type="radio" name="flexRadioDefault"  wire:click="estado_civil_madre('1')">
-                                  <label class="form-check-label" for="flexRadioDefault1">
+                                  <input class="form-check-input" type="radio" name="estadocivilm"  wire:click="estado_civil_madre('1')">
+                                  <label class="form-check-label" for="estadocivilm1">
                                     Casado(a)
                                   </label>
                                 </div>
                           </div>
                           <div class="col-md-4">
                               <div class="form-check">
-                                  <input class="form-check-input" type="radio" name="flexRadioDefault"  wire:click="estado_civil_madre('2')">
-                                  <label class="form-check-label" for="flexRadioDefault1">
+                                  <input class="form-check-input" type="radio" name="estadocivilm"  wire:click="estado_civil_madre('2')">
+                                  <label class="form-check-label" for="estadocivilm1">
                                     Separado(a)
                                   </label>
                                 </div>
                           </div>
                           <div class="col-md-4">
                               <div class="form-check">
-                                  <input class="form-check-input" type="radio" name="flexRadioDefault"  wire:click="estado_civil_madre('3')">
-                                  <label class="form-check-label" for="flexRadioDefault1">
+                                  <input class="form-check-input" type="radio" name="estadocivilm"  wire:click="estado_civil_madre('3')">
+                                  <label class="form-check-label" for="estadocivilm1">
                                     Soltero(a)
                                   </label>
                                 </div>
@@ -672,24 +672,31 @@
                   </div>
                   </div>
                   @enderror
+                  <div class="row">
+                    <div class="row">
                         <strong><label  for="Labelnombremadre" class="form-label">¿El alumno vive con la madre?</label></strong>
-                        <div class="col-md">
+                        <center>
+                        <div style="width: 12rem;">
+                        <div class="col-md-7">
                             <div class="form-check">
-                                <input class="form-check form-check-inline"type="radio" name="flexRadioDefault"  wire:click="vive_con_la_madre('1')">
-                                <label class="form-check-label" for="flexRadioDefault1">
+                                <input class="form-check-input" type="radio" name="vivemadre"  wire:click="vive_con_la_madre('1')">
+                                <label class="form-check-label" for="vivemadre1">
                                   Si
                                 </label>
                               </div>
-                        <div class="col-md">
-                          <div class="form-check">
-                              <input class="form-check form-check-inline" type="radio" name="flexRadioDefault"  wire:click="vive_con_la_madre('2')">
-                              <label class="form-check-label" for="flexRadioDefault1">
-                                No
-                              </label>
-                            </div>
-                      </div>
-                    <br>                          
-            </div>
+                        </div>
+                        <div class="col-md-7">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="vivemadre"  wire:click="vive_con_la_madre('2')">
+                                <label class="form-check-label" for="vivemadre1">
+                                  No
+                                </label>
+                              </div>
+                        </div>
+                    </div>
+                  </center>
+                  </div>
+                </div>
                   </div>
                 </div>
                 </div>
