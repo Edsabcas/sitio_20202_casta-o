@@ -309,7 +309,7 @@ class ValidacionComponent extends Component
                 DB::commit();
                 $nuevo_estado=4;
                 $elevar=DB::table('TB_PRE_INS')
-                ->where('TB_PRE_INS', $this->id_pre_ins)
+                ->where('ID_PRE', $this->id_pre_ins)
                 ->update(
                     [
  
