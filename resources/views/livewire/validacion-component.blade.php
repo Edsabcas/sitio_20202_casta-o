@@ -11,6 +11,8 @@
     @include('estados.info4')
     @elseif($op!="" && $op==5)
     @include('estados.info5')
+    @elseif($op!="" && $op==6)
+    @include('estados.info6')
    @else
    @include('validar')
    @endif
