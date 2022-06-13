@@ -74,7 +74,7 @@
                               </div>
                               @error('año_ingreso')
                               <div class="alert alert-danger d-flex align-items-center rounded-pill" role="alert">
-                                <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+                                <svg class="bi flex-shrink-0 me-2" width="12" height="12" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
                                 <div>
                                     Es necesario que llenes este campo para envíar la información
                                 </div>
@@ -91,7 +91,7 @@
                               </div>
                               @error('grado_primer_ingreso')
                               <div class="alert alert-danger d-flex align-items-center rounded-pill" role="alert">
-                                <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+                                <svg class="bi flex-shrink-0 me-2" width="12" height="12" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
                                 <div>
                                     Es necesario que llenes este campo para envíar la información
                                 </div>
@@ -762,11 +762,27 @@
           <strong><label  for="Labelpoliza" class="form-label">Ingrese la poliza de seguro</label></strong>
             <input  type="text" class="form-control"  wire:model="poliza">
         </div>
+        @error('poliza')
+            <div class="alert alert-danger d-flex align-items-center rounded-pill" role="alert">
+              <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+               <div>
+                 Es necesario que llenes este campo para envíar la información
+               </div>
+            </div>
+          @enderror
                   
         <div class="col-md-6">
             <strong><label  for="Labelcarneseguro" class="form-label">Ingrese el número del carné de seguro</label></strong>
               <input  type="number" class="form-control"  wire:model="carne_seguro">
         </div>
+        @error('carne_seguro')
+            <div class="alert alert-danger d-flex align-items-center rounded-pill" role="alert">
+              <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+               <div>
+                 Es necesario que llenes este campo para envíar la información
+               </div>
+            </div>
+          @enderror
                   
       </div>
     </div>

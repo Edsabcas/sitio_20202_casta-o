@@ -130,8 +130,51 @@ class ValidacionComponent extends Component
     public function alimento($alimento){
         $this->alimento=$alimento;
     }
-
+    
     public function insertar_datos(){
+
+        $this->entro_aca=1;
+        if($this->validate([
+            'año_ingreso' => 'required',
+            'grado_primer_ingreso' => 'required',
+            'nombre_padre' => 'required',
+            'nacimiento_padre' => 'required',
+            'nacionalidad_padre' => 'required',
+            'lugar_nacimiento_padre' => 'required',
+            'DPI_padre' => 'required',
+            'celular_padre' => 'required',
+            'telefono_padre' => 'required',
+            'direccion_residencia' => 'required',
+            'correo_padre' => 'required',
+            'profesion_padre' => 'required',
+            'lugar_profesion_padre' => 'required',
+            'cargo_profesion_padre' => 'required',
+            'religion_padre' => 'required',
+            'NIT_padre' => 'required',
+            'nombre_madre' => 'required',
+            'fechana_madre' => 'required',
+            'nacionalidad_madre' => 'required',
+            'lugar_nacimiento_madre' => 'required',
+            'DPI_madre' => 'required',
+            'telefono_madre' => 'required',
+            'celular_madre' => 'required',
+            'direccion_residenciamadre'=> 'required',
+            'correo_madre'=> 'required',
+            'profesion_madre' =>'required',
+            'lugar_prof_madre' =>'required',
+            'cargo_madre' =>'required',
+            'religion_madre' =>'required',
+            'NIT_madre' =>'required',
+            'poliza' => 'required',
+            'carne_seguro' => 'required',
+            'codigo_fam' => 'required',
+            'nombre_fam' => 'required',
+
+        ])==false){
+            $error="no encontrado";
+            session(['message'=>'no encontrado']);
+            return back()->withErrors(['error' => 'Validar el input vacio']);
+        }
         
             $this->prueba_ingreso=1;
         $añoingreso=$this->año_ingreso;
