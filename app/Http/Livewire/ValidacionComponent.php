@@ -171,6 +171,7 @@ class ValidacionComponent extends Component
             'codigo_fam' => 'required',
             'nombre_fam' => 'required',
 
+
         ])==false){
             $error="no encontrado";
             session(['message'=>'no encontrado']);
@@ -261,7 +262,7 @@ class ValidacionComponent extends Component
                 'DPI_PADRE'=>$DPIpadre,
                 'TELEFONO_PADRE'=>$telefonopadre,
                 'CELULAR_PADRE'=>$celularpadre,
-                'DIRECCION_RECIDENCIA_P'=>$direccionresidencia,
+                'DIRECCION_RESIDENCIA_P'=>$direccionresidencia,
                 'CORREO_PADRE'=>$correopadre,
                 'PROFECION_PADRE'=>$this->profesionpadre,
                 'LUGAR_TRABAJO_P'=>$lugar_profesion_padre,
@@ -277,7 +278,7 @@ class ValidacionComponent extends Component
                 'DPI_MADRE'=>$DPI_madre,
                 'TELEFONO_MADRE'=>$telefono_madre,
                 'CELULAR_MADRE'=>$celular_madre,
-                'DIRECCION_RECIDENCIA_M'=>$direccion_residenciamadre, 
+                'DIRECCION_RESIDENCIA_M'=>$direccion_residenciamadre, 
                 'CORREO_MADRE'=>$correo_madre,
                 'PROFECION_MADRE'=>$rofesion_madre,
                 'LUGAR_TRABAJO_M'=>$lugar_prof_madre,
