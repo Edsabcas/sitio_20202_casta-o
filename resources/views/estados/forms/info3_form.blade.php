@@ -739,7 +739,7 @@
               @if($tiene_alergia==1)
              <center>
             <div class="col-md-6">
-             <strong><label  for="Labelnombreaseguradora" class="form-label">IEspecifique cuales</label></strong>
+             <strong><label  for="Labelnombreaseguradora" class="form-label">Especifique cuales</label></strong>
              <input  type="text" class="form-control"  wire:model="Especifique_alerg">
             </div>
              </center>
