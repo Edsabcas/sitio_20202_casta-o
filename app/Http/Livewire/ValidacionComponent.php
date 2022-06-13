@@ -308,6 +308,7 @@ class ValidacionComponent extends Component
             );
             if($inscripcion_datos){
                 DB::commit();
+                $this->op=null;
                 $nuevo_estado=4;
                 $elevar=DB::table('TB_PRE_INS')
                 ->where('ID_PRE', $this->id_pre_ins)

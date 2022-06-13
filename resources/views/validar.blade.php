@@ -51,6 +51,23 @@
               </div>
               @endif
             @endisset
+
+            
+            @isset($validar_info)
+            @if($validar_info==1)
+            
+            <div class="alert alert-success" role="alert">
+                Agregado Correctamente!
+              </div>
+            @endif
+            @endisset
+            @isset($validar_info)
+              @if($validar_info==0)
+              <div class="alert alert-success" role="alert">
+                No fue agregado Correctamente!
+              </div>
+              @endif
+            @endisset
            </div>     
   <div class="row">
       <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
