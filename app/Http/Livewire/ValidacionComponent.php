@@ -446,8 +446,23 @@ class ValidacionComponent extends Component
             );
             if($contrato_diaco){
                 DB::commit();
-                $this->mensaje_diaco='Insertado correctamente';
+                
                 $this->op=null;
+                $nuevo_estado=6;
+                $elevar=DB::table('TB_PRE_INS')
+                ->where('ID_PRE', $this->id_pre_ins)
+                ->update(
+                    [
+ 
+                     'ESTADO_PRE_INS' => $nuevo_estado,
+ 
+                    ]);
+                    if($elevar){
+                        $this->mensaje_diaco='Insertado correctamente';
+                    }
+                    else{
+                        $this->mensaje_diaco1='No se inserto correctamente';
+                    }
 
             }
             else{
