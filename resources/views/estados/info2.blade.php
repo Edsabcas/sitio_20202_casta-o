@@ -273,7 +273,7 @@
                             <div class="mb-3">
                               <div wire:loading wire:target="archivo_comprobante" class="alert alert-warning" role="alert">
                                 <strong class="font-bold">¡Imagen cargando!</strong>
-                                  <span class="block sm:inlone">Espere un momento hasta que la imagen se haya procesado.</span>
+                                  <span class="block sm:inlone">Espere un momento hasta que la imagen se haya procesado completamente.</span>
                                 <div class="spinner-border text-warning" role="status">
                                 </div>
                               </div>
