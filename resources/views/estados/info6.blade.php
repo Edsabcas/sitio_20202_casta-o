@@ -86,7 +86,7 @@
                 <br>
                 <div class="timeline-panel">
                     <div class="timeline-heading">
-                        <h4 style="color: #3a3e7b"><strong>PRE-INSCRIPCIÓN</strong></h4>
+                        <h4 style="color: #3a3e7b"><strong>1. PRE-INSCRIPCIÓN</strong></h4>
                     </div>
                     <div class="timeline-body">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#a4cb39" class="bi bi-pencil-square" viewBox="0 0 16 16">
@@ -95,7 +95,7 @@
                         </svg> 
                         <br> 
                         <br>                        
-                        <p><strong>Su pre-inscripción fue enviada con exito.</strong></p>
+                        <p><strong>Su pre-inscripción fue enviada con éxito.</strong></p>
                     </div>
                 </div>
             </li>
@@ -111,7 +111,7 @@
                   <br>
                 <div class="timeline-panel">
                     <div class="timeline-heading">
-                        <h4 style="color: #3a3e7b"><strong>VALIDACIÓN DE PRE-INSCRIPCIÓN</strong></h4>
+                        <h4 style="color: #3a3e7b"><strong>2. VALIDACIÓN DE PRE-INSCRIPCIÓN</strong></h4>
                     </div>
                     <div class="timeline-body">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#a4cb39" class="bi bi-clipboard-check" viewBox="0 0 16 16">
@@ -122,7 +122,7 @@
                         <br> 
                         <br> 
                         <br>                        
-                        <p><strong>Su información fue recíbida y validada con exito, favor realice el siguiente paso habilitado.</strong></p>
+                        <p><strong>Su información fue recibida y validada con éxito, por favor realice el siguiente paso habilitado.</strong></p>
                     </div>
                 </div>
             </li>
@@ -138,7 +138,7 @@
                   <br>
                 <div class="timeline-panel">
                     <div class="timeline-heading">
-                        <h4 style="color: #3a3e7b"><strong>PAGO</strong></h4>
+                        <h4 style="color: #3a3e7b"><strong>3. PAGO</strong></h4>
                     </div>
                     <div class="timeline-body">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#a4cb39" class="bi bi-credit-card" viewBox="0 0 16 16">
@@ -146,7 +146,7 @@
                             <path d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1z"/>
                         </svg>
                         <br>
-                        <p><strong>Inscripción de pago realizada correctamente.</strong></p>
+                        <p><strong>Su pago de inscripción ha sido realizado correctamente.</strong></p>
                     </div>
                 </div> 
                 
@@ -162,7 +162,7 @@
                   <br>
                 <div class="timeline-panel">
                     <div class="timeline-heading">
-                        <h4 style="color: #3a3e7b"><strong>REGISTRO DE DATOS DE INSCRIPCIÓN</strong></h4>
+                        <h4 style="color: #3a3e7b"><strong>4. REGISTRO DE DATOS DE INSCRIPCIÓN</strong></h4>
                     </div>
                     <div class="timeline-body">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#a4cb39" class="bi bi-clipboard-check" viewBox="0 0 16 16">
@@ -174,7 +174,7 @@
                         <br>
                         
                         </div>
-                        <p><strong>Sus datos han sido validados</strong></p>
+                        <p><strong>Sus datos han sido validados.</strong></p>
                 </div>
 
             </li>
@@ -188,7 +188,7 @@
                       <br>
                     <div class="timeline-panel">
                         <div class="timeline-heading">
-                            <h4 style="color: #3a3e7b"><strong>CONTRATO ESTUDIANTIL DIACO</strong></h4>
+                            <h4 style="color: #3a3e7b"><strong>5. CONTRATO ESTUDIANTIL DIACO</strong></h4>
                         </div>
                         <div class="timeline-body">
                             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#a4cb39" class="bi bi-clipboard-check" viewBox="0 0 16 16">
@@ -200,7 +200,7 @@
                             <br>
                             
                             </div>
-                            <p><strong>Su contrato ha sido recibido y se encuentra en proceso de validación</strong></p>
+                            <p><strong>Su contrato ha sido recibido y se encuentra en proceso de validación.</strong></p>
                     </div>
                    
             </li>

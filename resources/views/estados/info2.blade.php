@@ -69,7 +69,7 @@
                 <br>
                 <div class="timeline-panel">
                     <div class="timeline-heading">
-                        <h4 style="color: #3a3e7b"><strong>PRE-INSCRIPCIÓN</strong></h4>
+                        <h4 style="color: #3a3e7b"><strong>1. PRE-INSCRIPCIÓN</strong></h4>
                     </div>
                     <div class="timeline-body">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#a4cb39" class="bi bi-pencil-square" viewBox="0 0 16 16">
@@ -78,7 +78,7 @@
                         </svg> 
                         <br> 
                         <br>                        
-                        <p><strong>Su pre-inscripción fue enviada con exito.</strong></p>
+                        <p><strong>Su pre-inscripción fue enviada con éxito.</strong></p>
                       </div>
                 </div>
             </li>
@@ -94,7 +94,7 @@
                   <br>
                 <div class="timeline-panel">
                     <div class="timeline-heading">
-                        <h4 style="color: #3a3e7b"><strong>VALIDACIÓN DE PRE-INSCRIPCIÓN</strong></h4>
+                        <h4 style="color: #3a3e7b"><strong>2. VALIDACIÓN DE PRE-INSCRIPCIÓN</strong></h4>
                     </div>
                     <div class="timeline-body">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#a4cb39" class="bi bi-clipboard-check" viewBox="0 0 16 16">
@@ -105,7 +105,7 @@
                         <br> 
                         <br> 
                         <br>                        
-                        <p><strong>Su información fue recíbida y validada con exito, favor realice el siguiente paso habilitado.</strong></p>
+                        <p><strong>Su información fue recibida y validada con éxito, favor realice el siguiente paso habilitado.</strong></p>
                     </div>
                 </div>
             </li>
@@ -121,7 +121,7 @@
                   <br>
                 <div class="timeline-panel">
                     <div class="timeline-heading">
-                        <h4 style="color: #3a3e7b"><strong>PAGO</strong></h4>
+                        <h4 style="color: #3a3e7b"><strong>3. PAGO</strong></h4>
                     </div>
                     <div class="timeline-body">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#c20000" class="bi bi-credit-card" viewBox="0 0 16 16">
@@ -129,7 +129,7 @@
                             <path d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1z"/>
                         </svg>
                         <br>
-                        <p><strong>Genera el pago de tu inscripción.</strong></p>
+                        <p><strong>Genere el pago de su inscripción.</strong></p>
                       </div>
                 </div>
             </li>

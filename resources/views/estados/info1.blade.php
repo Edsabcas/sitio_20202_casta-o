@@ -69,7 +69,7 @@
                 <br>
                 <div class="timeline-panel">
                     <div class="timeline-heading">
-                        <h4 style="color: #3a3e7b"><strong>PRE-INSCRIPCIÓN</strong></h4>
+                        <h4 style="color: #3a3e7b"><strong>1. PRE-INSCRIPCIÓN</strong></h4>
                     </div>
                     <div class="timeline-body">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#a4cb39" class="bi bi-pencil-square" viewBox="0 0 16 16">
@@ -78,7 +78,7 @@
                         </svg> 
                         <br> 
                         <br>                        
-                        <p><strong>Su pre-inscripción fue enviada con exito.</strong></p>
+                        <p><strong>Su pre-inscripción fue enviada con éxito.</strong></p>
                     </div>
                 </div>
             </li>
@@ -94,7 +94,7 @@
                   <br>
                 <div class="timeline-panel">
                     <div class="timeline-heading">
-                        <h4 style="color: #3a3e7b"><strong>VALIDACIÓN DE PRE-INSCRIPCIÓN</strong></h4>
+                        <h4 style="color: #3a3e7b"><strong>2. VALIDACIÓN DE PRE-INSCRIPCIÓN</strong></h4>
                     </div>
                     <div class="timeline-body">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#a4cb39" class="bi bi-clipboard-check" viewBox="0 0 16 16">
@@ -105,7 +105,7 @@
                         <br> 
                         <br> 
                         <br>                        
-                        <p><strong>Su información fue recíbida; en la brevedad posible su información será procesada y se notificara por correo.</strong></p>
+                        <p><strong>Su información fue recibida, en la brevedad posible su información será procesada y se notificará por correo.</strong></p>
                     </div>
                 </div>
             </li>
