@@ -381,16 +381,16 @@
                                     <div style="width: 12rem;">
                                     <div class="col-md-7">
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="vivepadre"  wire:click="confirmar_vive_padre('1')">
-                                            <label class="form-check-label" for="vivepadre1">
+                                          <input class="form-check-input" type="radio" name="vivepadre"  wire:click="confirmar_vive_padre('1')">
+                                          <label class="form-check-label" for="vivepadre1">
                                               Si
                                             </label>
                                           </div>
                                     </div>
                                     <div class="col-md-7">
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="vivepadre"  wire:click="confirmar_vive_padre('2')">
-                                            <label class="form-check-label" for="vivepadre1">
+                                          <input class="form-check-input" type="radio" name="vivepadre"  wire:click="confirmar_vive_padre('2')">
+                                          <label class="form-check-label" for="vivepadre1">
                                               No
                                             </label>
                                           </div>
@@ -1070,7 +1070,7 @@
 
       </form>
         <div class="modal-footer">
-          <button type="button" class="btn btn-pre2" wire:click='insertar_datos()'>Envíar Información</button>.
+          <button type="button" class="btn btn-pre2" wire:click='insertar_datos()' data-bs-dismiss="modal">Envíar Información</button>.
         </div>
       </div>
     </div>

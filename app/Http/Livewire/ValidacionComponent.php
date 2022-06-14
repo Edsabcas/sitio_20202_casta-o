@@ -21,7 +21,7 @@ class ValidacionComponent extends Component
     public $correo_padre, $correopadre, $profesionpadre, $profesion_padre, $grado_hermano, $gradohermano,$vive_con_elpadre,$estadocivilma;
     public $direccion_residenciamadre, $correo_madre, $profesion_madre, $lugar_prof_madre, $cargo_madre, $religion_madre, $NIT_madre, $vive_madre;
     public $solo_alumno, $encargado_alumno, $nombreencargado, $nombre_encargado, $bus_colegio, $bus_no_colegio, $codigo_fam, $nombre_fam, $nombrefam, $codigofam, $alumno_asegurado, $vacunas, $nombre_aseguradora, $nombreaseguradora;
-    public $poliza, $carneseguro, $carne_seguro, $tiene_alergia, $medicamento, $alimento, $archivo,$formato;
+    public $poliza, $carneseguro, $carne_seguro, $tiene_alergia, $medicamento, $alimento, $archivo,$formato, $arch;
     public $religion_padre, $cargo_profesion_padre, $NIT_padre, $nombre_madre, $fechana_madre, $nacionalidad_madre, $lugar_nacimiento_madre, $DPI_madre, $telefono_madre, $celular_madre,$id_pre_ins,$id_no_gest,$mensaje_diaco,$mensaje_diaco1,$archivo_cdiaco,$id_pre_ins_arch,$id_no_gest_arch;
     public $prueba_ingreso, $validar_info, $entro_aca, $Especifique_alerg, $Especifique_medi, $Especifique_ali;
     public $estado_elevado;
@@ -429,7 +429,27 @@ class ValidacionComponent extends Component
             return back()->withErrors(['error' => 'Validar el input vacio']);
         }
         else{
-        $archivo=$this->archivo;
+            $archivo="";
+            if($this->archivo!=null){
+                if($this->archivo->getClientOriginalExtension()=="jpg" or $this->archivo->getClientOriginalExtension()=="png" or $this->archivo->getClientOriginalExtension()=="jpeg"){
+                    $archivo = "img".time().".".$this->archivo->getClientOriginalExtension();
+                    $this->arch=$archivo;
+                    $this->archivo->storeAS('imagen/pdf_diaco/', $this->arch,'public_up');
+                    $this->formato=1;
+                }
+                elseif($this->archivo->getClientOriginalExtension()=="mp4" or $this->archivo->getClientOriginalExtension()=="mpeg"){
+                    $archivo = "vid".time().".".$this->archivo->getClientOriginalExtension();
+                    $this->arch=$archivo;
+                    $this->archivo->storeAS('imagen/pdf_diaco/', $this->arch,'public_up');
+                    $this->formato=2;
+                }
+                elseif($this->archivo->getClientOriginalExtension()=="pdf"){
+                    $archivo = "pdf".time().".".$this->archivo->getClientOriginalExtension();
+                    $this->arch=$archivo;
+                    $this->archivo->storeAS('imagen/pdf_diaco/', $this->arch,'public_up');
+                    $this->formato=3;
+                }
+            }
         $id_pre_ins=$this->id_pre_ins;
         $id_no_gest=$this->id_no_gest;
 
