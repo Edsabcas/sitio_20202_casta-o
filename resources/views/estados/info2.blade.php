@@ -141,20 +141,23 @@
               <div wire:ignore.self class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-xl">
                   <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLabel">Metodo de Pago</h5>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div class="modal-header text-center" style="background:#a4cb39;color:rgb(255, 255, 255)">
+                      <h5 class="modal-title text-center" style="color:rgb(255, 255, 255)"><strong>Generación de pagos</strong></h5>
+                      <button type="button" class="btn btn-close" style="color:rgb(255, 255, 255)"  data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="modal-body">      
-                        <h3>CUENTAS BANCARIAS</h3>
+                    <div class="modal-body"> 
+                      <br>     
+                        <h3 style="color: #3a3e7b"><strong>CUENTAS BANCARIAS</strong></h3>
                         <br>
-                        <h5>COLEGIATURAS 2023</h5>
+                        <hr>
+                        <br>
+                        <h5 style="color: #3a3e7b"><strong>COLEGIATURAS 2023</strong></h5>
                           <div class="container">
                             <div class="row">
                               <div class="col">
                                 <div class="card" style="width: 18rem;">
-                                  <div class="card-header">
-                                    BANCO INDUSTRIAL
+                                  <div class="card-header" style="background-color: #a4cb39; color:rgb(255, 255, 255)">
+                                    <strong>BANCO INDUSTRIAL</strong>
                                   </div>
                                   <ul class="list-group list-group-flush">
                                     <li class="list-group-item">Cuenta monetaria: 027-007109-5</li>
@@ -164,8 +167,8 @@
                               </div>
                               <div class="col">
                                 <div class="card" style="width: 18rem;">
-                                  <div class="card-header">
-                                    BANRURAL
+                                  <div class="card-header" style="background-color: #a4cb39; color:rgb(255, 255, 255)">
+                                    <strong>BANRURAL</strong>
                                   </div>
                                   <ul class="list-group list-group-flush">
                                     <li class="list-group-item">Cuenta monetaria: 3445387086</li>
@@ -175,8 +178,8 @@
                               </div>                              
                               <div class="col">
                                 <div class="card" style="width: 18rem;">
-                                  <div class="card-header">
-                                    BAM
+                                  <div class="card-header" style="background-color: #a4cb39; color:rgb(255, 255, 255)">
+                                    <strong>BAM</strong>
                                   </div>
                                   <ul class="list-group list-group-flush">
                                     <li class="list-group-item">Cuenta monetaria: 49-0112346-9</li>
@@ -190,9 +193,9 @@
                           <div class="container">
                             <div class="row">
                               <div class="col">
-                                <h5>INSCRIPCIONES 2023</h5>
-                                <div class="card" style="width: 18rem;">
-                                  <div class="card-header">
+                                <h5 style="color: #3a3e7b"><strong>INSCRIPCIONES 2023</strong></h5>
+                                <div class="card text-center" style="width: 18rem;">
+                                  <div class="card-header" style="background-color: #a4cb39; color:rgb(255, 255, 255)">
                                     BAM
                                   </div>
                                   <ul class="list-group list-group-flush">
@@ -202,9 +205,9 @@
                                 </div>
                               </div>
                               <div class="col">
-                                <h5>PAQUETES DIDÁCTICOS 2023</h5>
-                                <div class="card" style="width: 18rem;">
-                                  <div class="card-header">
+                                <h5 style="color:#3a3e7b"><strong>PAQUETES DIDÁCTICOS 2023</strong></h5>
+                                <div class="card text-center" style="width: 18rem;">
+                                  <div class="card-header" style="background-color: #a4cb39; color:rgb(255, 255, 255)">
                                     BAM
                                   </div>
                                   <ul class="list-group list-group-flush">
@@ -230,11 +233,13 @@
                               </div>
                           @endif 
                         @endisset 
+
+                        <br>
                         <div class="row g-3">
                           <div class="col-md">
-                            <label for="fpago" style="font-size: 15px; color:#000000;">Forma de Pago:</label>
-                            <select class="form-select" wire:model="fpago" aria-label="Default select example">
-                              <option selected>Seleccionar:</option>
+                            <label for="fpago"><h5 style="color: #3a3e7b"><strong>FORMA DE PAGO</strong></h5></label>
+                            <select class="form-select rounded-pill" wire:model="fpago" aria-label="Default select example">
+                              <option selected>Seleccionar</option>
                               @isset($formasdepago)
                                 @foreach ($formasdepago as $forma)
                                   <option value="{{$forma->ID_F_PAGO}}">{{$forma->DESCRIPCION}}</option>
@@ -243,9 +248,9 @@
                             </select>
                           </div>
                           <div class="col-md">
-                            <label for="exampleInputEmail1" class="form-label">Metodo de pago:</label>
-                            <select class="form-select" aria-label="Default select example" wire:model="metodo">
-                              <option selected>Seleccionar:</option>
+                            <label for="exampleInputEmail1" class="form-label"><h5 style="color: #3a3e7b"><strong>MÉTODO DE PAGO</strong></h5></label>
+                            <select class="form-select rounded-pill" aria-label="Default select example" wire:model="metodo">
+                              <option selected>Seleccionar</option>
                                 @isset($metododepago)
                                   @foreach ($metododepago as $metodo)
                                     <option value="{{$metodo->ID_T_D_PAGO}}">{{$metodo->DESCRIPCION}}</option>
@@ -254,10 +259,11 @@
                             </select>
                           </div>
                         </div>
+                        <br>
                         <div class="row g-3">
                           <div class="col-md">
                             <div class="form-group row">
-                              <label for="exampleInputPassword1" class="form-label" style="font-size:20px">Subir comprobante de pago</label>
+                              <label for="exampleInputPassword1" class="form-label"><h5 style="color: #3a3e7b"><strong>SUBIR COMPROBANTE DE PAGO</strong></h5></label>
                               <div class="mb-3">
                                 <input type="file" id="archivo"  wire:model="archivo_comprobante">
                               </div> 
@@ -295,7 +301,7 @@
                                           @endif
                             </div>
                             <div class="col-md">
-                            <label for="message-text" class="col-form-label">Observación:</label>
+                            <label for="message-text" class="col-form-label"><h5 style="color: #3a3e7b"><strong>OBSERVACIÓN</strong></h5></label>
                               <textarea class="form-control" id="message-text" wire:model="observacion"></textarea>
                           </div>              
                         </div>  

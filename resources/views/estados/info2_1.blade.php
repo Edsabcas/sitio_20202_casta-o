@@ -137,25 +137,26 @@
             <br>
             <br>
 
-            <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" fill="#f7d547" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
-                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
-              </svg>
-            </div> 
-            </div>
-              <br>
-                <div class="timeline-panel">
-                    <div class="timeline-heading">
-                        <h4 style="color: #3a3e7b"><strong>3. PAGO | SEGUNDA FASE</strong></h4>
-                    </div>
-                    <div class="timeline-body">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#f7d547" class="bi bi-credit-card" viewBox="0 0 16 16">
-                            <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1H2zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V7z"/>
-                            <path d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1z"/>
-                        </svg>
-                        <br>
-                        <p><strong>Su validación de pago está pendiente de realizar.</strong></p>
-                    </div>
+            <li class="timeline text-center">
+                <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" fill="#f7d547" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                </svg>
+                </div> 
                 </div>
+                <br>
+                    <div class="timeline-panel text-center">
+                        <div class="timeline-heading">
+                            <h4 style="color: #3a3e7b"><strong>3. PAGO | SEGUNDA FASE</strong></h4>
+                        </div>
+                        <div class="timeline-body">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#f7d547" class="bi bi-credit-card" viewBox="0 0 16 16">
+                                <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1H2zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V7z"/>
+                                <path d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1z"/>
+                            </svg>
+                            <br>
+                            <p><strong>Su validación de pago está pendiente de realizar.</strong></p>
+                        </div>
+                    </div>
             </li> 
         </ul>
     </div>
