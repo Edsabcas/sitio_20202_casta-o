@@ -133,7 +133,7 @@
                       </div>
                 </div>
             </li>
-            <button type="button" class="btn btn-pre" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <button type="button" class="btn btn-pre2" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 Generar
               </button>
 
@@ -230,21 +230,40 @@
                               </div>
                           @endif 
                         @endisset 
-                        <div class="mb-3">
+                        <div class="row g-3">
+                          <div class="col-md">
+                            <label for="fpago" style="font-size: 15px; color:#000000;">Forma de Pago:</label>
+                            <select class="form-select" wire:model="fpago" aria-label="Default select example">
+                              <option selected>Seleccionar:</option>
+                              @isset($formasdepago)
+                                @foreach ($formasdepago as $forma)
+                                  <option value="{{$forma->ID_F_PAGO}}">{{$forma->DESCRIPCION}}</option>
+                                @endforeach              
+                              @endisset
+                            </select>
+                          </div>
+                          <div class="col-md">
                             <label for="exampleInputEmail1" class="form-label">Metodo de pago:</label>
                             <select class="form-select" aria-label="Default select example" wire:model="metodo">
                               <option selected>Seleccionar:</option>
-                                <option value="1">Efectivo</option>
-                                <option value="2">Transferencia</option>
+                                @isset($metododepago)
+                                  @foreach ($metododepago as $metodo)
+                                    <option value="{{$metodo->ID_T_D_PAGO}}">{{$metodo->DESCRIPCION}}</option>
+                                  @endforeach              
+                                @endisset
                             </select>
-                        @if ($metodo == "0")                     
-                            @elseif($metodo == "1")
+                          </div>
+                        </div>
+                        <div class="row g-3">
+                          <div class="col-md">
                             <div class="form-group row">
                               <label for="exampleInputPassword1" class="form-label" style="font-size:20px">Subir comprobante de pago</label>
                               <div class="mb-3">
                                 <input type="file" id="archivo"  wire:model="archivo_comprobante">
                               </div> 
                             </div>
+                          </div>
+                          
                             <div class="mb-3">
                               <div wire:loading wire:target="archivo_comprobante" class="alert alert-warning" role="alert">
                                 <strong class="font-bold">¡Imagen cargando!</strong>
@@ -253,88 +272,37 @@
                                 </div>
                               </div>
                               @if($tipo==1)
-                              <h3 class="form-label">Visualización de Imagen</h3>
-                              <img src="{{$archivo_comprobante->temporaryURL()}}" height="100" weight="100"  alt="...">
+                                <h3 class="form-label">Visualización de Imagen</h3>
+                                <img src="{{$archivo_comprobante->temporaryURL()}}" height="100" weight="100"  alt="...">
                               @endif
-                              
-                             
                               {{-- @if($tipo==3)
                               <h3 class="form-label">Visualización de PDF</h3>
                                 <iframe width="400" height="400" src="/public/pdf/{{$img}}" frameborder="0"></iframe>
                               @endif --}}
-                              @if($mensaje24 != null)
+                                          @if($mensaje24 != null)
                                             <div class="alert alert-success d-flex align-items-center" role="alert">
                                               <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
-                                                  <div>{{$mensaje24}}
-                                                  </div>
-                                                </div>
-                                              @endif
-                                            @if($mensaje25 != null)
+                                              <div>{{$mensaje24}}
+                                              </div>
+                                            </div>
+                                          @endif
+                                          @if($mensaje25 != null)
                                             <div class="alert alert-danger d-flex align-items-center" role="alert">
                                               <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
-                                                  <div>{{$mensaje25}}
-                                                  </div>
+                                                <div>{{$mensaje25}}
                                                 </div>
-                                              @endif
-                                              </div>
-                                
-                                <div class="mb-3">
-                                  <label for="message-text" class="col-form-label">Observación:</label>
-                                  <textarea class="form-control" id="message-text" wire:model="observacion"></textarea>
-                                </div>
-                       
-                            
-                                @elseif($metodo == "2")
-                                    
-                                
-                            <div class="form-group row">
-                              <label for="exampleInputPassword1" class="form-label" style="font-size:20px">Subir comprobante de pago</label>
-                              <div class="mb-3">
-                                <input type="file" id="archivo"  wire:model="archivo_comprobante">
-                              </div> 
+                                            </div>
+                                          @endif
                             </div>
-                            <div class="mb-3">
-                              <div wire:loading wire:target="archivo_comprobante" class="alert alert-warning" role="alert">
-                                <strong class="font-bold">¡Imagen cargando!</strong>
-                                  <span class="block sm:inlone">Espere un momento hasta que la imagen se haya procesado.</span>
-                                <div class="spinner-border text-warning" role="status">
-                                </div>
-                              </div>
-                              @if($tipo==1)
-                              <h3 class="form-label">Visualización de Imagen</h3>
-                              <img src="{{$archivo_comprobante->temporaryURL()}}" height="100" weight="100"  alt="...">
-                              @endif
-                              
-                             
-                              {{-- @if($tipo==3)
-                              <h3 class="form-label">Visualización de PDF</h3>
-                                <iframe width="400" height="400" src="/public/pdf/{{$img}}" frameborder="0"></iframe>
-                              @endif --}}
-                              @if($mensaje24 != null)
-                                <div class="alert alert-success d-flex align-items-center" role="alert">
-                                  <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
-                                  <div>{{$mensaje24}}
-                                  </div>
-                                </div>
-                              @endif
-                              @if($mensaje25 != null)
-                                <div class="alert alert-danger d-flex align-items-center" role="alert">
-                                  <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
-                                  <div>{{$mensaje25}}
-                                  </div>
-                                </div>
-                              @endif
-                            </div>
-                              <div class="mb-3">
-                                <label for="message-text" class="col-form-label">Observación:</label>
-                                <textarea class="form-control" id="message-text" wire:model="observacion"></textarea>
-                              </div>
-                            @endif
-                          </div>    
+                            <div class="col-md">
+                            <label for="message-text" class="col-form-label">Observación:</label>
+                              <textarea class="form-control" id="message-text" wire:model="observacion"></textarea>
+                          </div>              
+                        </div>  
                     </div>
                     <div class="modal-footer">
                       {{-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button> --}}
-                      <button type="button" class="btn btn-primary" wire:click="update_comprobante_p()" data-bs-dismiss="modal">Guardar y salir</button>
+                      <button type="button" class="btn btn-pre2" wire:click="update_comprobante_p()" data-bs-dismiss="modal">Guardar y salir</button>
                     </div>
                   </div>
                 </div>

@@ -177,7 +177,7 @@
                         </div>
                         <p>Rellene los datos de inscripción</p>
                 </div>
-                <button type="button" class="btn btn-pre" data-bs-toggle="modal" data-bs-target="#ModalInscripcion" wire:click="ver_form_ins('1')" >
+                <button type="button" class="btn btn-pre2" data-bs-toggle="modal" data-bs-target="#ModalInscripcion" wire:click="ver_form_ins('1')" >
                    Formulario datos de inscripción</button>
                 @include('estados.forms.info3_form')
 

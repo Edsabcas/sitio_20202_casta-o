@@ -203,23 +203,13 @@
                         </div>
                         <p><strong>Genere su contrato para rellenarlo</strong></p>
                 </div>
-                <a href="/Descargar_constancia" target="_blank" type="button" class="btn btn-primary" wire:click="ver_form_ins('1')" >
+                <a href="/Descargar_constancia" target="_blank" type="button" class="btn btn-pre2" wire:click="ver_form_ins('1')" >
                     Verifique el contrato</a>
                     <br>
                     <div class="col-sm-12">
                       <label for="exampleInputPassword1" class="form-label " style="font-size:20px">Adjunte un archivo </label>
                       <input type="file" class="form-control " wire:model='archivo'  style="border:2px solid rgba(86, 95, 76, 0.466);" id="exampleInputPassword1">
                        <div class="col-sm-10">
-                        @if($formato==1)
-                        <h3 class="form-label">Visualización de Imagen</h3>
-                        <img src="{{$archivo->temporaryURL()}}" height="200" weight="200"  alt="...">
-                        @endif
-                        @if($formato==2)
-                        <h3 class="form-label">Visualización de Video</h3>
-                        <video height="500" weight="500" class="card-img-top" alt="..." controls>
-                          <source src="{{$archivo->temporaryURL()}}"  type="video/mp4">
-                        </video>
-                        @endif
                         @if($formato==3)
                         <h3 class="form-label">Visualización de PDF</h3>
                           <iframe width="400" height="400" src="/images/temporalpdf/{{$arch}}" frameborder="0"></iframe>
@@ -235,7 +225,7 @@
                        </div>
                     </div> 
                     </div>
-                    <button type="submit" class="btn btn-pre" wire:click="ins_contrato()"> Enviar</button>
+                    <button type="submit" class="btn btn-pre2" wire:click="ins_contrato()"> Enviar</button>
             </li>
         </div>
     </div>
