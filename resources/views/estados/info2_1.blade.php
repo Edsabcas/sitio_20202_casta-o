@@ -26,40 +26,44 @@
 
         <br>
         <br>
+        <hr>
         <br>
 
         <div class="container text-center">
             <div class="row">
-              <div class="col">
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#a4cb39" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
-                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
-                  </svg>
-                  <strong>Completada</strong>
-              </div>
-              <div class="col">
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#f7d547" class="bi bi-circle-fill" viewBox="0 0 16 16">
+              <div class="col col-sm-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#a4cb39" class="bi bi-circle-fill" viewBox="0 0 16 16">
                     <circle cx="8" cy="8" r="8"/>
                 </svg>
-                <strong>En proceso</strong>
+                  <strong>Paso Completado</strong>
               </div>
-              <div class="col">
+              <div class="col col-sm-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#f7d547" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                </svg>
+                <strong>Paso en proceso</strong>
+              </div>
+              <div class="col col-sm-4">
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#c20000" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
                     <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
                 </svg>
-                <strong>Sin realizar</strong>
+                <strong>Paso sin realizar</strong>
               </div>
             </div>
           </div>
           
 
         <br>
+        <hr>
+        <br>
+        <br>
 
         <ul class="timeline text-center">
             <br>
             <br>
             <li>
-                <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" fill="#a4cb39" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
-                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" fill=" #a4cb39" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                    <circle cx="8" cy="8" r="8"/>
                   </svg>
                 </div>
                 <br>
@@ -74,16 +78,17 @@
                         </svg> 
                         <br> 
                         <br>                        
-                        <p>Su pre-inscripción fue enviada con exito.</p></div>
+                        <p><strong>Su pre-inscripción fue enviada con exito.</strong></p>
+                    </div>
                 </div>
             </li>
 
             <br>
             <br>
 
-            <li class="timeline">
-                <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" fill="#a4cb39" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
-                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+            <li class="timeline text-center">
+                <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" fill=" #a4cb39" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                    <circle cx="8" cy="8" r="8"/>
                   </svg>
                 </div>
                   <br>
@@ -100,7 +105,7 @@
                         <br> 
                         <br> 
                         <br>                        
-                        <p>Su información fue recíbida y validada con exito, favor realice el siguiente paso habilitado.</p>
+                        <p><strong>Su información fue recíbida y validada con exito, favor realice el siguiente paso habilitado.</strong></p>
                     </div>
                 </div>
             </li>
@@ -108,9 +113,9 @@
             <br>
             <br>
 
-            <li class="timeline">
-                <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" fill="#a4cb39" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
-                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+            <li class="timeline text-center">
+                <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" fill=" #a4cb39" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                    <circle cx="8" cy="8" r="8"/>
                   </svg>
                 </div>
                   <br>
@@ -124,7 +129,8 @@
                             <path d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1z"/>
                         </svg>
                         <br>
-                        <p>Genera el pago de tu inscripción.</p></div>
+                        <p><strong>Genera el pago de tu inscripción.</strong></p>
+                    </div>
                 </div>
             </li>
 
@@ -132,8 +138,9 @@
             <br>
 
             <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" fill="#f7d547" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
-                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a"/>
+                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
               </svg>
+            </div> 
             </div>
               <br>
                 <div class="timeline-panel">
@@ -146,7 +153,8 @@
                             <path d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1z"/>
                         </svg>
                         <br>
-                        <p>Validación de pago, pendiente de realizar.</p></div>
+                        <p><strong>Validación de pago, pendiente de realizar.</strong></p>
+                    </div>
                 </div>
             </li> 
         </ul>
