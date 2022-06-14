@@ -15,14 +15,14 @@
                <div wire:ignore.self class="accordion" id="accordionDatosVarios">
                 <div style="border-radius: 60px 60px 60px 60px;" class="accordion-item">
                   <h2 style="border-radius: 60px 60px 60px 60px;" class="accordion-header" id="panelsStayOpen-headingOnedatosvarios">
-                    <button class="accordion-button" type="button" style="background-color:#d6e7a6; border:6px solid #a4cb39; border-radius: 60px 60px 60px 60px;" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-datosvarios" aria-expanded="true" aria-controls="panelsStayOpen-datosvarios">
+                    <button class="accordion-button collapsed" type="button" style="background-color:#d6e7a6; border:6px solid #a4cb39; border-radius: 60px 60px 60px 60px;" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-datosvarios" aria-expanded="false" aria-controls="panelsStayOpen-datosvarios">
                         <h4 class="font-weight-bolder">
                             DATOS VARIOS
                           </h4>
                         </button>
                   </h2>
                   
-                  <div  wire:ignore.self id="panelsStayOpen-datosvarios" style="border-radius: 60px 60px 60px 60px;" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                  <div  wire:ignore.self id="panelsStayOpen-datosvarios" style="border-radius: 60px 60px 60px 60px;" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingOne">
                     <div  wire:ignore.self class="accordion-body" style="border-radius: 60px 60px 60px 60px;">
                       <div class="tab">
                         <strong><label for="exampleInputPassword1" class="form-label">¿Tiene hermanos en colegio?</label></strong>
@@ -117,24 +117,24 @@
               <div wire:ignore.self class="accordion" id="accordionDatosdelpadre">
                 <div style="border-radius: 60px 60px 60px 60px;" class="accordion-item">
                   <h2 style="border-radius: 60px 60px 60px 60px;" class="accordion-header" id="panelsStayOpen-headingOnedatospadre">
-                    <button class="accordion-button" type="button" style="background-color:#d6e7a6; border:6px solid #a4cb39; border-radius: 60px 60px 60px 60px;" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-padre" aria-expanded="true" aria-controls="panelsStayOpen-padre">
+                    <button class="accordion-button collapsed" type="button" style="background-color:#d6e7a6; border:6px solid #a4cb39; border-radius: 60px 60px 60px 60px;" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-padre" aria-expanded="false" aria-controls="panelsStayOpen-padre">
                         <h4 class="font-weight-bolder">
                             DATOS DEL PADRE
                           </h4>
                         </button>
                   </h2>
                   
-                  <div  wire:ignore.self id="panelsStayOpen-padre" style="border-radius: 60px 60px 60px 60px;" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                  <div  wire:ignore.self id="panelsStayOpen-padre" style="border-radius: 60px 60px 60px 60px;" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingOne">
                     <div  wire:ignore.self class="accordion-body" style="border-radius: 60px 60px 60px 60px;">
                       <div class="tab">
                         <div class="row">
                             <div class="col-md-6">
-                                <strong><label  for="Labelnombrepadre" class="form-label">Ingrese el nombre del padre</label></strong>
+                                <strong><label  for="Labelnombrepadre" class="form-label">Nombre del padre</label></strong>
                                 <input  type="text" class="form-control"  wire:model="nombre_padre">
                               </div>
                               
                               <div class="col-md-6">
-                                <strong><label  for="Labelnombrepadre" class="form-label">Ingrese la fecha de nacimiento del padre</label></strong>
+                                <strong><label  for="Labelnombrepadre" class="form-label">Fecha de nacimiento del padre</label></strong>
                                 <input  type="date" class="form-control"  wire:model="nacimiento_padre">
                               </div>
                               @error('nombre_padre')
@@ -160,12 +160,12 @@
                         </div>
                         <div class="row">
                             <div class="col-md-6">
-                                <strong><label  for="Labelnombrepadre" class="form-label">Ingrese la nacionalidad del padre</label></strong>
+                                <strong><label  for="Labelnombrepadre" class="form-label">Nacionalidad del padre</label></strong>
                                 <input  type="text" class="form-control"  wire:model="nacionalidad_padre">
                               </div>
                               
                             <div class="col-md-6">
-                                <strong><label  for="Labelnombrepadre" class="form-label">Ingrese el lugar de nacimiento del padre</label></strong>
+                                <strong><label  for="Labelnombrepadre" class="form-label">Lugar de nacimiento del padre</label></strong>
                                 <input  type="text" class="form-control"  wire:model="lugar_nacimiento_padre">
                               </div>
                               @error('nacionalidad_padre')
@@ -191,7 +191,7 @@
                         </div>
                         <div class="row">
                             <div class="row">
-                                <strong><label  for="Labelnombrepadre" class="form-label">Ingrese el estado civil del padre</label></strong>
+                                <strong><label  for="Labelnombrepadre" class="form-label">Estado civil del padre</label></strong>
                                 <div class="col-md-4">
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="estadocivilp"  wire:click="estado_civil_padre('1')">
@@ -223,12 +223,12 @@
                         <br>
                         <div class="row">
                             <div class="col-md-6">
-                                <strong><label  for="Labelnombrepadre" class="form-label">Ingrese el número de DPI del padre</label></strong>
+                                <strong><label  for="Labelnombrepadre" class="form-label">Número de DPI del padre</label></strong>
                                 <input  type="number" class="form-control"  wire:model="DPI_padre">
                               </div>
                               
                             <div class="col-md-6">
-                                <strong><label  for="Labelnombrepadre" class="form-label">Ingrese el número de celular del padre</label></strong>
+                                <strong><label  for="Labelnombrepadre" class="form-label">Número de celular del padre</label></strong>
                                 <input  type="number" class="form-control"  wire:model="celular_padre">
                               </div>
 
@@ -255,12 +255,12 @@
                         </div>
                         <div class="row">
                             <div class="col-md-6">
-                                <strong><label  for="Labelnombrepadre" class="form-label">Ingrese el número de casa del padre</label></strong>
+                                <strong><label  for="Labelnombrepadre" class="form-label">Número de casa del padre</label></strong>
                                 <input  type="number" class="form-control"  wire:model="telefono_padre">
                               </div>
                              
                             <div class="col-md-6">
-                                <strong><label  for="Labelnombrepadre" class="form-label">Ingrese la dirección de la residencia del padre</label></strong>
+                                <strong><label  for="Labelnombrepadre" class="form-label">Dirección de la residencia del padre</label></strong>
                                 <input  type="text" class="form-control"  wire:model="direccion_residencia">
                               </div>
                               @error('telefono_padre')
@@ -286,12 +286,12 @@
                         </div>
                         <div class="row">
                             <div class="col-md-6">
-                                <strong><label  for="Labelnombrepadre" class="form-label">Ingrese el correo electrónico del padre</label></strong>
+                                <strong><label  for="Labelnombrepadre" class="form-label">Correo electrónico del padre</label></strong>
                                 <input  type="text" class="form-control"  wire:model="correo_padre">
                               </div>
                               
                               <div class="col-md-6">
-                                <strong><label  for="Labelprofesionpadre" class="form-label">Ingrese la profesion del padre</label></strong>
+                                <strong><label  for="Labelprofesionpadre" class="form-label">Profesión del padre</label></strong>
                                 <input  type="text" class="form-control"  wire:model="profesion_padre">
                               </div>
                               @error('correo_padre')
@@ -315,12 +315,12 @@
                               </div>
                               @enderror
                             <div class="col-md-6">
-                                <strong><label  for="Labelnombrepadre" class="form-label">Ingrese el lugar de trabajo del padre</label></strong>
+                                <strong><label  for="Labelnombrepadre" class="form-label">Lugar de trabajo del padre</label></strong>
                                 <input  type="text" class="form-control"  wire:model="lugar_profesion_padre">
                               </div>
                               
                               <div class="col-md-6">
-                                <strong><label  for="Labelnombrepadre" class="form-label">Ingrese el cargo de trabajo que ocupa el padre</label></strong>
+                                <strong><label  for="Labelnombrepadre" class="form-label">Cargo de trabajo que ocupa el padre</label></strong>
                                 <input  type="text" class="form-control"  wire:model="cargo_profesion_padre">
                               </div>
 
@@ -345,12 +345,12 @@
                               </div>
                               @enderror
                               <div class="col-md-6">
-                                <strong><label  for="Labelnombrepadre" class="form-label">Ingrese la religion que profesa el padre</label></strong>
+                                <strong><label  for="Labelnombrepadre" class="form-label">Religión que profesa el padre</label></strong>
                                 <input  type="text" class="form-control"  wire:model="religion_padre">
                               </div>
                               
                               <div class="col-md-6">
-                                <strong><label  for="Labelnombrepadre" class="form-label">Ingrese el NIT del padre(por favor no utilice ningun signo solo ingerese números)</label></strong>
+                                <strong><label  for="Labelnombrepadre" class="form-label">NIT del padre (por favor no utilice ningun signo)</label></strong>
                                 <input  type="number" class="form-control"  wire:model="NIT_padre">
                               </div>
 
@@ -411,23 +411,23 @@
 
                 <div style="border-radius: 60px 60px 60px 60px;" class="accordion-item">
                   <h2 style="border-radius: 60px 60px 60px 60px;" class="accordion-header" id="panelsStayOpen-headingOneDatosdelamadre">
-                    <button class="accordion-button" type="button" style="background-color:#d6e7a6; border:6px solid #a4cb39; border-radius: 60px 60px 60px 60px;" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-madre" aria-expanded="true" aria-controls="panelsStayOpen-madre">
+                    <button class="accordion-button collapsed" type="button" style="background-color:#d6e7a6; border:6px solid #a4cb39; border-radius: 60px 60px 60px 60px;" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-madre" aria-expanded="false" aria-controls="panelsStayOpen-madre">
                         <h4 class="font-weight-bolder">
                             DATOS DE LA MADRE
                           </h4>
                         </button>
                   </h2>
-              <div  wire:ignore.self id="panelsStayOpen-madre" style="border-radius: 60px 60px 60px 60px;" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+              <div  wire:ignore.self id="panelsStayOpen-madre" style="border-radius: 60px 60px 60px 60px;" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingOne">
                 <div  wire:ignore.self class="accordion-body" style="border-radius: 60px 60px 60px 60px;">
                   <div class="tab">
                     <div class="row">
                     <div class="col-md-6">
-                      <strong><label  for="Labelnombrepadre" class="form-label">Ingrese el nombre de la madre</label></strong>
+                      <strong><label  for="Labelnombrepadre" class="form-label">Nombre de la madre</label></strong>
                       <input  type="text" class="form-control"  wire:model="nombre_madre">
                     </div>
                     
                     <div class="col-md-6">
-                      <strong><label  for="Labelnombrepadre" class="form-label">Ingrese la fecha de nacimiento de la madre</label></strong>
+                      <strong><label  for="Labelnombrepadre" class="form-label">Fecha de nacimiento de la madre</label></strong>
                       <input  type="date" class="form-control"  wire:model="fechana_madre">
                     </div>
 
@@ -453,12 +453,12 @@
                     </div>
                     @enderror
                     <div class="col-md-6">
-                      <strong><label  for="Labelnombrepadre" class="form-label">Ingrese la nacionalidad de la madre</label></strong>
+                      <strong><label  for="Labelnombrepadre" class="form-label">Nacionalidad de la madre</label></strong>
                       <input  type="text" class="form-control"  wire:model="nacionalidad_madre">
                     </div>
                     
                     <div class="col-md-6">
-                      <strong><label  for="Labelnombrepadre" class="form-label">Ingrese el lugar de nacimiento de la madre</label></strong>
+                      <strong><label  for="Labelnombrepadre" class="form-label">Lugar de nacimiento de la madre</label></strong>
                       <input  type="text" class="form-control"  wire:model="lugar_nacimiento_madre">
                     </div>
 
@@ -485,7 +485,7 @@
                     @enderror
                     <div class="row">
                       <div class="row">
-                          <strong><label  for="Labelnombrepadre" class="form-label">Ingrese el estado civil de la madre</label></strong>
+                          <strong><label  for="Labelnombrepadre" class="form-label">Estado civil de la madre</label></strong>
                           <div class="col-md-4">
                               <div class="form-check">
                                   <input class="form-check-input" type="radio" name="estadocivilm"  wire:click="estado_civil_madre('1')">
@@ -515,13 +515,14 @@
                       
                   </div>
                   <br>
+                  <br>
                   <div class="col-md-6">
-                    <strong><label  for="Labelnombrepadre" class="form-label">Ingrese el DPI de la madre</label></strong>
+                    <strong><label  for="Labelnombrepadre" class="form-label">DPI de la madre</label></strong>
                     <input  type="number" class="form-control"  wire:model="DPI_madre">
                   </div>
                   
                   <div class="col-md-6">
-                    <strong><label  for="Labelnombrepadre" class="form-label">Ingrese el telefono de la madre</label></strong>
+                    <strong><label  for="Labelnombrepadre" class="form-label">Teléfono de la madre</label></strong>
                     <input  type="number" class="form-control"  wire:model="telefono_madre">
                   </div>
 
@@ -547,13 +548,13 @@
                   </div>
                   @enderror
                   <div class="col-md-6">
-                    <strong><label  for="Labelnombrepadre" class="form-label">Ingrese el celular de la madre</label></strong>
+                    <strong><label  for="Labelnombrepadre" class="form-label">Celular de la madre</label></strong>
                     <input  type="number" class="form-control"  wire:model="celular_madre">
                   </div>
 
 
                   <div class="col-md-6">
-                    <strong><label  for="Labelnombremadre" class="form-label">Ingrese la dirección de la residencia de la madre</label></strong>
+                    <strong><label  for="Labelnombremadre" class="form-label">Dirección de la residencia de la madre</label></strong>
                     <input  type="text" class="form-control"  wire:model="direccion_residenciamadre">
                   </div>
 
@@ -580,12 +581,12 @@
                   </div>
                   @enderror
                 <div class="col-md-6">
-                    <strong><label  for="Labelnombremadre" class="form-label">Ingrese el correo electrónico de la madre</label></strong>
+                    <strong><label  for="Labelnombremadre" class="form-label">Correo electrónico de la madre</label></strong>
                     <input  type="text" class="form-control"  wire:model="correo_madre">
                   </div>
                   
                 <div class="col-md-6">
-                    <strong><label  for="Labelnombremadre" class="form-label">Ingrese la profesión a la que se decica la madre <label></strong>
+                    <strong><label  for="Labelnombremadre" class="form-label">Profesión a la que se decica la madre <label></strong>
                     <input  type="text" class="form-control"  wire:model="profesion_madre">
                   </div>
 
@@ -612,12 +613,12 @@
                   @enderror
 
                   <div class="col-md-6">
-                    <strong><label  for="Labelnombremadre" class="form-label">Ingrese el lugar donde la madre ejerce su profesion <label></strong>
+                    <strong><label  for="Labelnombremadre" class="form-label">Lugar donde la madre ejerce su profesión <label></strong>
                     <input  type="text" class="form-control"  wire:model="lugar_prof_madre">
                   </div>
                   
                   <div class="col-md-6">
-                    <strong><label  for="Labelnombremadre" class="form-label">Ingrese cual es el cargo que la madre ocupa en su profesion <label></strong>
+                    <strong><label  for="Labelnombremadre" class="form-label">Cargo que la madre ocupa en su profesión <label></strong>
                     <input  type="text" class="form-control"  wire:model="cargo_madre">
                   </div>
                   @error('lugar_prof_madre')
@@ -643,12 +644,12 @@
                   @enderror
 
                   <div class="col-md-6">
-                    <strong><label  for="Labelnombremadre" class="form-label">Ingrese cual es la religion que la madre profesa<label></strong>
+                    <strong><label  for="Labelnombremadre" class="form-label">Religión que la madre profesa<label></strong>
                     <input  type="text" class="form-control"  wire:model="religion_madre">
                   </div>
                   
                   <div class="col-md-6">
-                    <strong><label  for="Labelnombremadre" class="form-label">Ingrese el NIT de la madre(por favor no utilice ningun signo solo ingerese números)<label></strong>
+                    <strong><label  for="Labelnombremadre" class="form-label">NIT de la madre (por favor no utilice ningun signo)<label></strong>
                     <input  type="number" class="form-control"  wire:model="NIT_madre">
                   </div>
                   @error('religion_madre')
@@ -708,14 +709,14 @@
   <div wire:ignore.self class="accordion" id="accordiondatosmedicos">
     <div style="border-radius: 60px 60px 60px 60px;" class="accordion-item">
       <h2 style="border-radius: 60px 60px 60px 60px;" class="accordion-header" id="panelsStayOpen-headingOnedatosmedicos  ">
-        <button class="accordion-button" type="button" style="background-color:#d6e7a6; border:6px solid #a4cb39; border-radius: 60px 60px 60px 60px;" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-medicos" aria-expanded="true" aria-controls="panelsStayOpen-medicos">
+        <button class="accordion-button collapsed" type="button" style="background-color:#d6e7a6; border:6px solid #a4cb39; border-radius: 60px 60px 60px 60px;" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-medicos" aria-expanded="false" aria-controls="panelsStayOpen-medicos">
           <h4 class="font-weight-bolder">
-            DATOS MEDICOS
+            DATOS MÉDICOS
           </h4>
         </button>
       </h2>
             
-      <div wire:ignore.self id="panelsStayOpen-medicos" style="border-radius: 60px 60px 60px 60px;" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+      <div wire:ignore.self id="panelsStayOpen-medicos" style="border-radius: 60px 60px 60px 60px;" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingOne">
       <div  wire:ignore.self class="accordion-body" style="border-radius: 60px 60px 60px 60px;">
                 <div class="tab">
                   <div class="row">
@@ -750,7 +751,7 @@
                 
             <div class="tab">
               <div class="row">
-              <strong><label for="exampleInputPassword1" class="form-label">¿El alumno es alergico a un medicamento?</label></strong>
+              <strong><label for="exampleInputPassword1" class="form-label">¿El alumno es alérgico a un medicamento?</label></strong>
               <center>
               <div style="width: 12rem;">
               <div class="form-check">
@@ -780,7 +781,7 @@
       
         <div class="tab">
           <div class="row">
-          <strong><label for="exampleInputPassword1" class="form-label">¿El alumno es alergico a un alimento?</label></strong>
+          <strong><label for="exampleInputPassword1" class="form-label">¿El alumno es alérgico a un alimento?</label></strong>
           <center>
           <div style="width: 12rem;">
           <div class="form-check">
@@ -850,7 +851,7 @@
                   @if($alumno_asegurado==1)
                 <center>
                   <div class="col-md-6">
-                    <strong><label  for="Labelnombreaseguradora" class="form-label">Ingrese el nombre de la aseguradora</label></strong>
+                    <strong><label  for="Labelnombreaseguradora" class="form-label">Nombre de la aseguradora</label></strong>
                       <input  type="text" class="form-control"  wire:model="nombre_aseguradora">
                   </div>
                 </center>
@@ -861,13 +862,13 @@
               
       <div class="row">
         <div class="col-md-6">
-          <strong><label  for="Labelpoliza" class="form-label">Ingrese la poliza de seguro</label></strong>
+          <strong><label  for="Labelpoliza" class="form-label">Póliza de seguro</label></strong>
             <input  type="text" class="form-control"  wire:model="poliza">
         </div>
         
                   
         <div class="col-md-6">
-            <strong><label  for="Labelcarneseguro" class="form-label">Ingrese el número del carné de seguro</label></strong>
+            <strong><label  for="Labelcarneseguro" class="form-label">Número del carné de seguro</label></strong>
               <input  type="number" class="form-control"  wire:model="carne_seguro">
         </div>
 
@@ -903,14 +904,14 @@
   <div wire:ignore.self class="accordion" id="accordionDatossalida"> 
     <div style="border-radius: 60px 60px 60px 60px;" class="accordion-item">
         <h2 style="border-radius: 60px 60px 60px 60px;" class="accordion-header" id="panelsStayOpen-headingOnedatossalida">
-          <button class="accordion-button" type="button" style="background-color:#d6e7a6; border:6px solid #a4cb39; border-radius: 60px 60px 60px 60px;" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-salida" aria-expanded="true" aria-controls="panelsStayOpen-salida">
+          <button class="accordion-button collapsed" type="button" style="background-color:#d6e7a6; border:6px solid #a4cb39; border-radius: 60px 60px 60px 60px;" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-salida" aria-expanded="false" aria-controls="panelsStayOpen-salida">
             <h4 class="font-weight-bolder">
             DATOS DE SALIDA
             </h4>
           </button>
         </h2>
 
-        <div  wire:ignore.self id="panelsStayOpen-salida" style="border-radius: 60px 60px 60px 60px;" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+        <div  wire:ignore.self id="panelsStayOpen-salida" style="border-radius: 60px 60px 60px 60px;" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingOne">
           <div  wire:ignore.self class="accordion-body" style="border-radius: 60px 60px 60px 60px;">
             <div class="tab">
               <strong><label for="exampleInputPassword1" class="form-label">¿El alumno se retira solo?</label></strong>
@@ -952,7 +953,7 @@
            @if($encargado_alumno==1)
            <center>
           <div class="col-md-6">
-            <strong><label  for="Labelnombrepadre" class="form-label">Ingrese el nombre del encargado</label></strong>
+            <strong><label  for="Labelnombrepadre" class="form-label">Nombre del encargado</label></strong>
             <input  type="text" class="form-control"  wire:model="nombre_encargado">
           </div>
          </center>
@@ -1009,24 +1010,24 @@
   <div wire:ignore.self class="accordion" id="accordionDatosusuarios">
       <div style="border-radius: 60px 60px 60px 60px;" class="accordion-item">
         <h2 style="border-radius: 60px 60px 60px 60px;" class="accordion-header" id="panelsStayOpen-headingOnedatosusuarios">
-          <button class="accordion-button" type="button" style="background-color:#d6e7a6; border:6px solid #a4cb39; border-radius: 60px 60px 60px 60px;" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-usuario" aria-expanded="true" aria-controls="panelsStayOpen-usuario">
+          <button class="accordion-button collapsed" type="button" style="background-color:#d6e7a6; border:6px solid #a4cb39; border-radius: 60px 60px 60px 60px;" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-usuario" aria-expanded="false" aria-controls="panelsStayOpen-usuario">
               <h4 class="font-weight-bolder">
                   DATOS DE USUARIOS
                 </h4>
               </button>
         </h2>
 
-        <div  wire:ignore.self id="panelsStayOpen-usuario" style="border-radius: 60px 60px 60px 60px;" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+        <div  wire:ignore.self id="panelsStayOpen-usuario" style="border-radius: 60px 60px 60px 60px;"class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingOne">
         <div  wire:ignore.self class="accordion-body" style="border-radius: 60px 60px 60px 60px;">
         <div class="row">
           <div class="col-md-6">
-              <strong><label  for="Labelcodigodefamilia" class="form-label">Ingrese el codigo de familia</label></strong>
+              <strong><label  for="Labelcodigodefamilia" class="form-label">Código de familia</label></strong>
               <input  type="text" class="form-control"  wire:model="codigo_fam">
             </div>
            
 
           <div class="col-md-6">
-              <strong><label  for="Labelnombrefam" class="form-label">Ingrese el nombre de la familia</label></strong>
+              <strong><label  for="Labelnombrefam" class="form-label">Nombre de la familia</label></strong>
               <input  type="text" class="form-control"  wire:model="nombre_fam">
             </div>
 
