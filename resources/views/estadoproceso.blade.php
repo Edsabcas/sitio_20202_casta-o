@@ -34,8 +34,7 @@
         <div class="container text-center">
             <div class="row">
               <div class="col">
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#a4cb39" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
-                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#a4cb39" class="bi bi-circle-fill" viewBox="0 0 16 16">
                   </svg>
                   <strong>Paso Completado</strong>
               </div>
@@ -64,8 +63,7 @@
             <br>
             <br>
             <li>
-                <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" fill="#a4cb39" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
-                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" fill="#a4cb39" class="bi bi-circle-fill" viewBox="0 0 16 16">
                   </svg>
                 </div>
                 <br>
@@ -87,8 +85,7 @@
             <br>
 
             <li class="timeline">
-                <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" fill="#a4cb39" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
-                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" fill="#a4cb39" class="bi bi-circle-fill" viewBox="0 0 16 16">
                   </svg></div>
                   <br>
                 <div class="timeline-panel">
@@ -110,8 +107,7 @@
             <br>
 
             <li class="timeline">
-                <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" fill="#a4cb39" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
-                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" fill="#a4cb39" class="bi bi-circle-fill" viewBox="0 0 16 16">
                   </svg></div>
                   <br>
                 <div class="timeline-panel">
@@ -132,8 +128,7 @@
             <br>
 
             <li class="timeline">
-                <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" fill="#a4cb39" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
-                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" fill="#a4cb39" class="bi bi-circle-fill" viewBox="0 0 16 16">
                   </svg></div>
                   <br>
                 <div class="timeline-panel">
@@ -206,7 +201,7 @@
                         <h4 style="color: #3a3e7b"><strong>¡PROCESO COMPLETO!</strong></h4>
                     </div>
                     <div class="timeline-body">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#a4cb39" class="bi bi-check2-circle" viewBox="0 0 16 16">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#a4cb39" class="bi bi-circle" viewBox="0 0 16 16">
                             <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"/>
                             <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"/>
                         </svg>

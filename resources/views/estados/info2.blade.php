@@ -126,7 +126,7 @@
                         <p>Genera el pago de tu inscripción.</p></div>
                 </div>
             </li>
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <button type="button" class="btn btn-pre2" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 Generar
               </button>
 
@@ -327,7 +327,7 @@
                     </div>
                     <div class="modal-footer">
                       {{-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button> --}}
-                      <button type="button" class="btn btn-primary" wire:click="update_comprobante_p()" data-bs-dismiss="modal">Guardar y salir</button>
+                      <button type="button" class="btn btn-pre2" wire:click="update_comprobante_p()" data-bs-dismiss="modal">Guardar y salir</button>
                     </div>
                   </div>
                 </div>
