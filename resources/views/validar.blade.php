@@ -111,6 +111,21 @@
     {{$op}}
   </div>
 </div>
+
+@isset($mensaje24)
+@if ($mensaje24!=null)
+  <div class="alert alert-success" role="alert">
+    ¡Actualizado correctamente!
+  </div>
+@endif
+@endisset
+@isset($mensaje25)
+@if($mensaje25!=null)
+  <div class="alert alert-danger" role="alert">
+    ¡No fue posible actualizar correctamente!
+  </div>
+@endif
+@endisset
        </div>
    </div>
   </section>
