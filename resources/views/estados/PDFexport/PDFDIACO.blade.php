@@ -142,5 +142,131 @@
             legales y reglamentarias vigentes, pues en caso contrario serán nulas y no obligarán al Representante del 
             Educando.
             </p>
+        <p><strong><p>SEPTIMA. DE LAS CUOTAS.</p></strong>Como padre de familia o representante legal me comprometo a efectuar únicamente
+        los siguientes pagos, sin necesidad de cobro ni requerimiento alguno: 
+        </p>
+        <table border="1px">
+
+            <tr>
+            <td> EN CONCEPTO DE: </td>
+            <td> LA CANTIDAD DE: </td>   
+            </tr>
+
+            <tr>            
+            <td> <strong> a) INSCRIPCION POR EDUCANDO</strong> <br> (solo un pago anual) </td>
+            <td> <strong>Q.</strong></td>
+            </tr>
+            
+            <tr>
+            <td> <strong>b) COLEGIATURA MENSUAL:</strong> <br> (10 Cuotas en los meses de Enero a Octubre)</td>
+            <td><strong>Q.</strong></td>            
+            </tr>
+        
+        </table>
+
+            <p>Cuotas autorizadas según Resolución(es) No. 0204-99-E.P. con fecha 13 de marzo de 1999; No. 707-2001-I.C. Con
+                fecha 20 de diciembre de 2001, emitidas por la Direcciòn Departamental de Guatemala, misma (s) que se tiene(n) a
+                la vista y se detallan a continuación.
+            </p>
+
+        <table border="1px">
+            <tr>
+                <td> NIVEL DE EDUCACIÓN </td>
+                <td> INSCRIPCIÓN <br>
+                    (PAGO UNICO EN EL AÑO) </td>   
+                <td> COLEGIATURA MENSUAL <br>
+                    (10 Cuotas en los mese de Enero a
+                    Octubre)
+                </td>   
+            </tr>
+
+            <tr>            
+                <td>Preprimaria <br>             
+                    Primaria <br>
+                    Ciclo Básico</td>
+                <td> Q, 1,000.00 <br>
+                    Q, 1,000.00 <br>
+                    Q, 1,000.00</td>
+                <td> Q, 1,000.00 <br>
+                    Q, 1,000.00 <br>
+                    Q, 1,000.00</td>
+                </tr>
+
+                
+        </table> 
+
+        <p>Para el pago de las cuotas ambas partes acordamos que sea en forma anticipada, debiendo efectuar el pago durante
+            los primeros 5 días de cada mes.
+            </p>
+
+        <p><strong><p>OCTAVA. DEL INCUMPLIMIENTO DEL PAGO.</p></strong>En caso que el padre de familia o representante legal del educando
+        se atrase o incumpla en los pagos normados en la cláusula anterior, dará lugar al cobro de intereses moratorios los
+        que serán fijados de conformidad con la tasa de interés legal, de conformidad con lo establecido en los artículos 1946
+        y 1947 del Código Civil (Decreto Ley Número 106) o las disposiciones legales aplicables que se encuentren vigentes
+        al momento de la generación del cobro de dicho interés. 
+        </p>
+        <p>El cobro del interés moratorio será permitido siempre y cuando se hayan dejado de efectuar los pagos convenidos
+            por uno o más meses y no será motivo para establecer una cuota diaria o mensual por mora, sujetándose las
+            autoridades del centro educativo a las sanciones que correspondan.</p>
+        <p><strong><p>NOVENA. DE LOS CHEQUES RECHAZADOS. </p></strong>Por concepto de cheques rechazados el centro educativo podrá
+        cobrar como máximo el valor que por tal motivo debita o cobra el Banco que rechazó el pago del mismo. 
+        </p>
+        <p><strong><p>DECIMA. DEL TRASLADO O RETIRO DEL EDUCANDO. </p></strong>De conformidad con lo establecido por el artículo 38 del
+        Acuerdo Gubernativo número 52-2015 o cualquier otra disposición legal aplicable que se encuentre vigente en el
+        país, el traslado o retiro de educandos o estudiantes podrá realizarse en cualquier momento del ciclo escolar a
+        cualquier otro centro educativo ya sea privado, público o un centro educativo oficial, siempre y cuando cumpla con
+        las regulaciones que para el efecto emita la autoridad competente. 
+        </p>
+        <p>El traslado o retiro de educandos o estudiantes, podrá realizarse por parte del Centro Educativo, el padre de familia o
+            el representante legal del educando -este último de forma voluntaria y definitiva-, debiendo para el efecto cumplir las
+            partes con:
+        </p>
+        
+        <p>1. <strong> El Centro Educativo:</strong> </p>
+        <p>a. El visto bueno de la autoridad distrital, para lo cual se deberán realizar las gestiones correspondientes que
+            estén establecidas; y, <br>
+            b. Cualquier otra regulación o disposición que en tal sentido emita la autoridad competente.
+        </p>
+        <p>2. <strong> El Padre de Familia o Representante del Educando:</strong> </p>
+        <p>a. Enviar aviso por escrito a las autoridades del Centro Educativo; y, <br>
+            b. Pagar la cuota mensual hasta el mes en que efectivamente sea retirado el educando del plantel educativo.
+            Sin que esto sea motivo o justificación para retener el expediente.</p>
+        
+        <p>En todo momento, el centro educativo deberá: (i) cumplir con las regulaciones que para el efecto emita la autoridad
+            competente; (ii) agotar los procedimientos conciliatorios y de mediación que tengan establecidos o puedan establecer
+            los Centros Educativos con los padres de familia o representantes del educando; y, (iii) respetar los derechos del
+            educando, garantizando su integridad física y psíquica en todo momento.</p>
+        
+        <p> <strong>EL TRASLADO O RETIRO DE UN EDUCANDO, NO LIBERARA AL RESPONSABLE DE ESTE DE LA
+            OBLIGACION DE EFECTUAR EL PAGO DE LAS COLEGIATURAS QUE ESTUVIEREN PENDIENTES</strong>, tal cual lo
+            regula el segundo párrafo del artículo 43 de la Ley de Protección Integral de la Niñez y Adolescencia o cualquier otra
+            disposición legal aplicable que se encuentre vigente.
+        </p>
+        <p> <strong>DECIMA PRIMERA. DE LOS DERECHOS Y OBLIGACIONES DEL PROVEEDOR DEL SERVICIO EDUCATIVO.</strong>La
+            autoridad del centro educativo tendrá derecho a percibir las ganancias o utilidades que por la prestación del servicio
+            educativo le correspondan; asimismo exigir al padre de familia o representante legal del educando el cumplimiento
+            del presente contrato y también podrá cuando sea necesario, acudir a los órganos administrativos o judiciales para:
+            (i) la solución de conflictos que surjan por la prestación del servicio contratado; y, (ii) denunciar la violación de
+            cualesquiera de los derechos de sus educandos aun cuando los mismos sean producidos por sus padres,
+            responsables u otros menores.
+        </p>
+        <p>El presente contrato constituirá título ejecutivo suficiente para realizar el cobro ante los órganos judiciales, en caso de
+            incumplimiento en el pago de las colegiaturas por parte del Responsable del educando, debiendo acompañar para el
+            efecto la certificación contable en la que conste el saldo adeudado, de conformidad con lo regulado en el artículo 327
+            del Código Procesal Civil y Mercantil (Decreto Ley Número 107) o cualquier otra disposición legal aplicable que se
+            encuentre vigente al momento de realizar la ejecución correspondiente.</p>
+        <p>Ambas partes acuerdan que la legalización de las firmas del presente contrato, correrán por cuenta del Centro
+            Educativo.
+        </p>
+        <p> <strong>DECIMA SEGUNDA. DE LA COPIA DEL CONTRATO.</strong> Del presente contrato queda el original en poder de la
+            autoridad del centro educativo y se le entregará una copia fiel al padre de familia o representante legal, esto con el
+            propósito de que cada parte esté enterada de sus derechos y obligaciones para que las ejercite y cumpla de
+            conformidad con lo establecido en el presente contrato. La copia será entregada al padre de familia o representante
+            legal al momento de firmar el contrato. </p>
+        <p> <strong>DECIMA TERCERA. DE LA ACEPTACION.</strong> Nosotros los comparecientes damos lectura al presente contrato,
+            quienes enterados de su contenido, objeto, validez y demás efectos legales, lo ratificamos, aceptamos y firmamos. </p>
+        <p> <strong>f)_____________________________</strong> <br> Virginia Yomara Gonzalez Calderon de Siliezar
+            Propietaria</p> <p> <strong>f)_____________________________ </strong> <br> Nombre
+                Padre de familia y/o Representante Legal del educando </p>
         </body>
 </html>
