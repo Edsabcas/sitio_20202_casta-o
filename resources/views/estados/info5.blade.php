@@ -232,7 +232,7 @@
                         @enderror
                        </div>
                     </div> 
-                    </div>
+                
                     <button type="submit" class="btn btn-pre2" wire:click="ins_contrato()"> Enviar</button>
             </li>
         </div>

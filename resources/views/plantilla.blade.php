@@ -16,7 +16,7 @@
       <link rel="stylesheet" href="{{ asset('css/responsive.css')}}">
       <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
       <!-- fevicon -->
-      <link rel="icon" href="{{ asset('images/fevicon.png" type="image/gif')}}" />
+      <link rel="icon" href="{{ asset('img/lo.png')}}"/>
       <!-- fonts -->
        <!-- bootstrap css -->
        <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css')}}">
