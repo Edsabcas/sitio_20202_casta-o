@@ -125,14 +125,15 @@
                         <br>
                         <p>Genera el pago de tu inscripción.</p></div>
                 </div>
-            </li>
-            <button type="button" class="btn btn-pre2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            </li>   
+            {{-- <button type="button" class="btn btn-pre2" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 Generar
-              </button>
+              </button> --}}
+              <a class="btn btn-pre2" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Generar</a>
 
 
-              <div wire:ignore.self class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-xl">
+              <div wire:ignore.self class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered modal-xl">
                   <div class="modal-content">
                     <div class="modal-header">
                       <h5 class="modal-title" id="exampleModalLabel">Metodo de Pago</h5>
@@ -208,21 +209,7 @@
                               </div>
                             </div>
                           </div>
-                          <br>  
-                          @isset($mensaje24)
-                          @if ($mensaje24!=null)
-                              <div class="alert alert-success" role="alert">
-                              Agregado Correctamente!
-                              </div>
-                          @endif
-                      @endisset
-                      @isset($mensaje25)
-                          @if($mensaje25!=null)
-                              <div class="alert alert-danger" role="alert">
-                              No se logro insetar datos
-                              </div>
-                          @endif 
-                        @endisset 
+                          <br> 
                         <div class="row g-3">
                           <div class="col-md">
                             <label for="fpago" style="font-size: 15px; color:#000000;">Forma de Pago:</label>
@@ -266,7 +253,7 @@
                               </div>
                               @if($tipo==1)
                                 <h3 class="form-label">Visualización de Imagen</h3>
-                                <img src="{{$archivo_comprobante->temporaryURL()}}" height="100" weight="100"  alt="...">
+                                <img src="{{$archivo_comprobante->temporaryURL()}}" height="50" weight="50"  alt="...">
                               @endif
                               {{-- @if($tipo==3)
                               <h3 class="form-label">Visualización de PDF</h3>
@@ -294,13 +281,28 @@
                         </div>  
                     </div>
                     <div class="modal-footer">
-                      {{-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button> --}}
-                      <button type="button" class="btn btn-pre2" wire:click="update_comprobante_p()" data-bs-dismiss="modal">Guardar y salir</button>
+                      <button class="btn btn-pre2" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Siguiente</button>
                     </div>
                   </div>
                 </div>
               </div>
-         
+              <div wire:ignore.self class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      ¿Está seguro(a) que ingresó correctamente los datos solicitados? 
+                    </div>
+                    <div class="modal-footer">
+                      <button class="btn btn-pre2" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Regresar</button>
+                      <button type="button" class="btn btn-pre2" wire:click="update_comprobante_p()" data-bs-dismiss="modal">Guardar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
         </ul>
     </div>
 </section>
