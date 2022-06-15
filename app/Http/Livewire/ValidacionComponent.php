@@ -24,7 +24,7 @@ class ValidacionComponent extends Component
     public $poliza, $carneseguro, $carne_seguro, $tiene_alergia, $medicamento, $alimento, $archivo,$formato, $arch;
     public $religion_padre, $cargo_profesion_padre, $NIT_padre, $nombre_madre, $fechana_madre, $nacionalidad_madre, $lugar_nacimiento_madre, $DPI_madre, $telefono_madre, $celular_madre,$id_pre_ins,$id_no_gest,$mensaje_diaco,$mensaje_diaco1,$archivo_cdiaco,$id_pre_ins_arch,$id_no_gest_arch;
     public $prueba_ingreso, $validar_info, $entro_aca, $Especifique_alerg, $Especifique_medi, $Especifique_ali;
-    public $estado_elevado;
+    public $estado_elevado, $matricula_bus_aj;
 
     public function render()
     {
@@ -173,6 +173,7 @@ class ValidacionComponent extends Component
             'carne_seguro' => 'required',
             'codigo_fam' => 'required',
             'nombre_fam' => 'required',
+            'matricula_bus_aj' => 'required',
 
 
         ])==false){
@@ -233,6 +234,7 @@ class ValidacionComponent extends Component
         $carneseguro=$this->carne_seguro;
         $codigofam=$this->codigo_fam;
         $nombrefam=$this->nombre_fam;
+        $matriculabusaj=$this->matricula_bus_aj;
         if($this->Especifique_medi==""){
             $this->Especifique_medi=null;  
         }
