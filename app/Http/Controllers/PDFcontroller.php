@@ -19,4 +19,10 @@ class PDFcontroller extends Controller
         return $pdf->stream();
         return view('estados.PDFexport.PDFDIACO');
     }
+
+    public function PDF_export2(){
+        $pdf = PDF::loadView('estados.PDFexport.PDFReglas');
+        return $pdf->stream();
+        return view('estados.PDFexport.PDFReglas');
+    }
 }
