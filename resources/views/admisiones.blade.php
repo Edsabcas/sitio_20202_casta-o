@@ -43,26 +43,6 @@
 </div>
 
 <div class="container">
-@if($mensaje!=null  && $mensaje==1)
-<br>
-<br><br>
-<br>
-<div class="row">
-  <div class="alert alert-success alert-dismissible fade show" role="alert">
-    <strong>Su gestión ha sido ingresada satisfactoriamente.</strong><br>
-    Puede validar el correo de encargado, y encontrará su gestión y los pasos a realizar.
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-  </div> 
-</div>
-
-@elseif($mensaje!=null && $mensaje==2)
-<div class="alert alert-danger d-flex align-items-center" role="alert">
-  <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg>
-  <div>
-    Intente en unos minutos, no se logro enviar su información.
-  </div>
-</div>
-@endif
 <div class="row">
 @if($val==null)
 
@@ -307,6 +287,16 @@
                 </div>
                 @enderror
               </div>
+              <div class="col-md">
+                <label for="inputApellidos" style="font-size: 15px; color:#000000;">Religión:</label>
+                <br>
+                <input type='text' placeholder=""  wire:model="religion_es" class="form-control" required>
+              </div>
+              @error('religion_es')
+              <div class="alert alert-warning" role="alert">
+              Pendiente
+              </div>
+              @enderror 
             </div>
       
           <div class="row g-3">
@@ -319,17 +309,8 @@
           Pendiente
           </div>
           @enderror
-            <div class="col-md">
-              <label for="inputApellidos" style="font-size: 15px; color:#000000;">Religión:</label>
-              <br>
-              <input type='text' placeholder=""  wire:model="religion_es" class="form-control" required>
-            </div>
-            @error('religion_es')
-            <div class="alert alert-warning" role="alert">
-            Pendiente
-            </div>
-            @enderror 
-            <a class="btn btn-outline-success" style="border-radius: 60px 60px 60px 60px;"  type="button" wire:click='val2' >Validar</a>
+          
+            <a class="btn btn-pre" style="border-radius: 60px 60px 60px 60px;"  type="button" wire:click='val2' >Validar datos</a>
             
           </div>
         </form>
@@ -457,6 +438,16 @@
     Pendiente
     </div>
     @enderror
+    <div class="col-md">
+      <label for="inputApellidos" style="font-size: 15px; color:#000000;">Religión:</label>
+      <br>
+      <input type='text' placeholder=""  wire:model="religion_en" class="form-control" required>
+    </div>
+    @error('religion_en')
+    <div class="alert alert-warning" role="alert">
+    Pendiente
+    </div>
+    @enderror 
       </div>
     
     <div class="row g-3">
@@ -469,45 +460,17 @@
            Pendiente
           </div>
           @enderror
+        
           <div class="col-md">
-            <label for="inputApellidos" style="font-size: 15px; color:#000000;">Religión:</label>
-            <br>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input"  type="radio" wire:model="religion_en" value="Catolica" id="flexRadioReligionen222" >
-              <label class="form-check-label" for="flexRadioReligionen222" style="font-size: 15px; color:#000000;">
-              Catolica
-              </label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" wire:model="religion_en" value="Protestante" id="flexRadioReligionen2">
-              <label class="form-check-label" for="flexRadioReligionen2" style="font-size: 15px; color:#000000;">
-                Protestante
-              </label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" wire:model="religion_en" value="Otra" id="flexRadioReligionen23">
-              <label class="form-check-label" for="flexRadioReligionen23" style="font-size: 15px; color:#000000;">
-                Otra
-              </label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" wire:model="religion_en" value="Evangelica" id="flexRadioReligionen3">
-              <label class="form-check-label" for="flexRadioReligionen3" style="font-size: 15px; color:#000000;">
-                Evangelica
-              </label>
-            </div>
-          </div>
-          @error('religion_en')
-          <div class="alert alert-warning" role="alert">
-           Pendiente
-          </div>
-          @enderror
+            <label for="inputApellidos" style="font-size: 15px; color:#000000;">Segundo correo electronico (opcional):</label>
+            <input placeholder="" type="email2"  wire:model="correo_en2" class="form-control " required>
+        </div>
         
     </div>
     <br>
     <div class="row g-4" style="border-radius: 60px 60px 60px 60px;">
       
-    <a wire:click='val3' type="button" style="border-radius: 60px 60px 60px 60px;" class="btn btn-warning">Validar</a>
+    <a wire:click='val3' type="button" style="border-radius: 60px 60px 60px 60px;" class="btn btn-warning">Validar Información</a>
     </div>
     <br>
 
@@ -675,4 +638,24 @@
 
 
 </div>
+@if($mensaje!=null  && $mensaje==1)
+<br>
+<br><br>
+<br>
+<div class="row">
+  <div class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Su gestión ha sido ingresada satisfactoriamente.</strong><br>
+    Puede validar el correo de encargado, y encontrará su gestión y los pasos a realizar.
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div> 
+</div>
+
+@elseif($mensaje!=null && $mensaje==2)
+<div class="alert alert-danger d-flex align-items-center" role="alert">
+  <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+  <div>
+    Intente en unos minutos, no se logro enviar su información.
+  </div>
+</div>
+@endif
 </div>

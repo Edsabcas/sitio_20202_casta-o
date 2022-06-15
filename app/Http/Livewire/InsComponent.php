@@ -10,7 +10,7 @@ class InsComponent extends Component
 {
     public $gradoin,$nombre_es,$f_nacimiento_es,$genero,$cui_es,$codigo_pe_es,$nac_es,$lug_nac_es,$tel_es,$cel_es,$direccion_es,$religion_es;
     public $nombre_en,$fnacimiento_en,$dpi_en,$extentido_en,$es_civil_en,$direccion_en,$tel_casa_en,$cel_en,$correo_en,$religion_en;
-    public $a,$mensaje,$gradose;
+    public $a,$mensaje,$gradose,$correo_en2;
     public $val,$val1,$gestion,$errorfecha;
     public function render()
     {
@@ -165,6 +165,7 @@ class InsComponent extends Component
                     'TEL_EN_ES'=> $this->tel_casa_en,
                     'CEL_EN_ES'=> $this->cel_en,
                     'CORREO_EN_ES'=> $this->correo_en,
+                    'CORREO_EN_ES2'=> $this->correo_en2,
                     'RELIGION_EN_ES'=> $this->religion_en,
                     'GRADO_ING_ES'=> $this->gradoin,
                     'ESTADO_PAGO'=> 0,
@@ -177,7 +178,7 @@ class InsComponent extends Component
 
                    if($pre){
 
-            DB::commit();   
+             
             $subject = "No responder (Notificación Pre-Ins.Castaño)";
             $for = $this->correo_en;
             $arreglo= array($this->nombre_es,$this->codigo_pe_es,$this->gradose,$this->gestion);
@@ -189,6 +190,22 @@ class InsComponent extends Component
                
             });
 
+            if($this->correo_en2!=null && $this->correo_en2!="" && $this->correo_en2!="."){
+                if(false !== strpos($this->correo_en2, "@") && false !== strpos($this->correo_en2, ".")){
+                    $subject = "No responder (Notificación Pre-Ins.Castaño)";
+                    $for = $this->correo_en2;
+                    $arreglo= array($this->nombre_es,$this->codigo_pe_es,$this->gradose,$this->gestion);
+                    Mail::send('VistaCorreo.vista',compact('arreglo'), function($msj) use($subject,$for){
+                        $msj->from("ingresos@colegioelcastano.edu.gt","ColegioElCastaño");
+                        $msj->subject($subject);
+                        $msj->to($for);
+                      //  $msj->attach('images/a.jpg');
+                       
+                    });
+                }
+    
+            }
+            DB::commit();  
             $this->reset();
 
             $this->mensaje=1;

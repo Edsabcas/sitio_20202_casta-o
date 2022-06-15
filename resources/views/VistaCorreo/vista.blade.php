@@ -249,7 +249,7 @@ table, td { color: #000000; } a { color: #0000ee; text-decoration: underline; } 
       <td style="overflow-wrap:break-word;word-break:break-word;padding:10px 10px 30px;font-family:arial,helvetica,sans-serif;" align="left">
         
   <h1 style="margin: 0px; color: #3a3e7b; line-height: 140%; text-align: center; word-wrap: break-word; font-weight: normal; font-family: 'Open Sans',sans-serif; font-size: 20px;">
-    Para validar el estado de su procerso de inscripci&oacute;n; <br />por favor realice los siguientes pasos:
+    Para validar el estado de su procerso de inscripci&oacute;n; <br /> realice los siguientes pasos:
   </h1>
 
       </td>
@@ -260,41 +260,11 @@ table, td { color: #000000; } a { color: #0000ee; text-decoration: underline; } 
 <table style="font-family:arial,helvetica,sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
   <tbody>
     <tr>
-      <td style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:arial,helvetica,sans-serif;" align="left">
-        
-  <div style="line-height: 140%; text-align: left; word-wrap: break-word;">
-    <p style="font-size: 14px; line-height: 140%;">1. Ingrese al sitio web del establecimeinto: <a rel="noopener" href="https://colegioelcastano.edu.gt/" target="_blank">https://colegioelcastano.edu.gt/</a></p>
-<p style="font-size: 14px; line-height: 140%;">2. Busque la opci&oacute;n "Validar Gesti&oacute;n" y presione "Pre-Inscripci&oacute;n"</p>
-<p style="font-size: 14px; line-height: 140%;">3. Ingrese los datos solicitados para validar el estado de su gesti&oacute;n.</p>
-  </div>
+        <td>
+            <p style="font-size: 14px; line-height: 140%;"> <b>1.</b>  Ingrese al sitio web del establecimeinto: <a rel="noopener" href="https://colegioelcastano.edu.gt/" target="_blank">https://colegioelcastano.edu.gt/</a></p>
 
-      </td>
+        </td>
     </tr>
-  </tbody>
-</table>
-
-<table style="font-family:arial,helvetica,sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
-  <tbody>
-    <tr>
-      <td style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:arial,helvetica,sans-serif;" align="left">
-        
-<table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr>
-    <td style="padding-right: 0px;padding-left: 0px;" align="center">
-      
-      <img align="center" border="0" src="https://colegioelcastano.edu.gt/images/opcion.png" alt="" title="" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 100%;max-width: 630px;" width="630" class="v-src-width v-src-max-width"/>
-      
-    </td>
-  </tr>
-</table>
-
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-<table style="font-family:arial,helvetica,sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
-  <tbody>
     <tr>
       <td style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:arial,helvetica,sans-serif;" align="left">
         
@@ -315,6 +285,12 @@ table, td { color: #000000; } a { color: #0000ee; text-decoration: underline; } 
 
 <table style="font-family:arial,helvetica,sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
   <tbody>
+    <tr>
+        <td>
+            <p style="font-size: 14px; line-height: 140%;"> <b>2.</b>  Busque la opci&oacute;n "Validar Gesti&oacute;n" y presione "Pre-Inscripci&oacute;n"</p>
+
+        </td>
+    </tr>
     <tr>
       <td style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:arial,helvetica,sans-serif;" align="left">
         
@@ -356,6 +332,11 @@ table, td { color: #000000; } a { color: #0000ee; text-decoration: underline; } 
 <table style="font-family:arial,helvetica,sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
   <tbody>
     <tr>
+        <td>
+            <p style="font-size: 14px; line-height: 140%;"><b>3.</b>  Ingrese los datos solicitados para validar el estado de su gesti&oacute;n.</p>
+        </td>
+    </tr>
+    <tr>
       <td style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:arial,helvetica,sans-serif;" align="left">
         
 <table width="100%" cellpadding="0" cellspacing="0" border="0">
@@ -372,6 +353,8 @@ table, td { color: #000000; } a { color: #0000ee; text-decoration: underline; } 
     </tr>
   </tbody>
 </table>
+
+
 
 
 

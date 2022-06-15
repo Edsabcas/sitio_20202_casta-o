@@ -117,6 +117,39 @@
               transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
             }
             
+            .btn-pre2 {
+          border: 0px solid #3a3e7b;
+          -webkit-border-radius: 12px;
+          border-radius: 12px;
+          color:#ffffff;
+          background: -webkit-linear-gradient(-90deg,  #3a3e7b 0,  #3a3e7b 100%);
+          background: -moz-linear-gradient(180deg,  #3a3e7b 0,  #3a3e7b 100%);
+          background: linear-gradient(180deg, r #3a3e7b 0,  #3a3e7b 100%);
+          background-position: 50% 50%;
+          -webkit-background-origin: padding-box;
+          background-origin: padding-box;
+          -webkit-background-clip: border-box;
+          background-clip: border-box;
+          -webkit-background-size: auto auto;
+          background-size: auto auto;
+        }
+        .btn-pre2:hover {
+          border: 0px solid #8b91e4;
+          color:#ffffff; 
+          -webkit-border-radius: 12px;
+          border-radius: 12px;
+          background: -webkit-linear-gradient(-90deg,  #8b91e4 0,  #8b91e4 100%);
+          background: -moz-linear-gradient(180deg,  #8b91e4 0,  #8b91e4 100%);
+          background: linear-gradient(180deg, r #8b91e4 0,  #8b91e4 100%);
+          background-position: 50% 50%;
+          -webkit-background-origin: padding-box;
+          background-origin: padding-box;
+          -webkit-background-clip: border-box;
+          background-clip: border-box;
+          -webkit-background-size: auto auto;
+          background-size: auto auto;
+        }
+            
             .btn-pre:hover {
               border: 0px solid #33a506;
               -webkit-border-radius: 12px;

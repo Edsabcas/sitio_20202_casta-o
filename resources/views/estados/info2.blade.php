@@ -26,46 +26,50 @@
 
         <br>
         <br>
+        <hr>
         <br>
 
         <div class="container text-center">
             <div class="row">
-              <div class="col">
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#a4cb39" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
-                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
-                  </svg>
-                  <strong>Completada</strong>
-              </div>
-              <div class="col">
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#f7d547" class="bi bi-circle-fill" viewBox="0 0 16 16">
+              <div class="col col-sm-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#a4cb39" class="bi bi-circle-fill" viewBox="0 0 16 16">
                     <circle cx="8" cy="8" r="8"/>
                 </svg>
-                <strong>En proceso</strong>
+                  <strong>Paso Completado</strong>
               </div>
-              <div class="col">
+              <div class="col col-sm-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#f7d547" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                </svg>
+                <strong>Paso en proceso</strong>
+              </div>
+              <div class="col col-sm-4">
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#c20000" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
                     <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
                 </svg>
-                <strong>Sin realizar</strong>
+                <strong>Paso sin realizar</strong>
               </div>
             </div>
           </div>
           
 
         <br>
+        <hr>
+        <br>
+        <br>
 
         <ul class="timeline text-center">
             <br>
             <br>
             <li>
-                <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" fill="#a4cb39" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
-                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
-                  </svg>
-                </div>
+              <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" fill=" #a4cb39" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="8" cy="8" r="8"/>
+                </svg>
+            </div>
                 <br>
                 <div class="timeline-panel">
                     <div class="timeline-heading">
-                        <h4 style="color: #3a3e7b"><strong>PRE-INSCRIPCIÓN</strong></h4>
+                        <h4 style="color: #3a3e7b"><strong>1. PRE-INSCRIPCIÓN</strong></h4>
                     </div>
                     <div class="timeline-body">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#a4cb39" class="bi bi-pencil-square" viewBox="0 0 16 16">
@@ -74,7 +78,8 @@
                         </svg> 
                         <br> 
                         <br>                        
-                        <p>Su pre-inscripción fue enviada con exito.</p></div>
+                        <p><strong>Su pre-inscripción fue enviada con éxito.</strong></p>
+                      </div>
                 </div>
             </li>
 
@@ -82,14 +87,14 @@
             <br>
 
             <li class="timeline">
-                <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" fill="#a4cb39" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
-                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
-                  </svg>
-                </div>
+              <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" fill=" #a4cb39" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                  <circle cx="8" cy="8" r="8"/>
+                </svg>
+              </div>
                   <br>
                 <div class="timeline-panel">
                     <div class="timeline-heading">
-                        <h4 style="color: #3a3e7b"><strong>VALIDACIÓN DE PRE-INSCRIPCIÓN</strong></h4>
+                        <h4 style="color: #3a3e7b"><strong>2. VALIDACIÓN DE PRE-INSCRIPCIÓN</strong></h4>
                     </div>
                     <div class="timeline-body">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#a4cb39" class="bi bi-clipboard-check" viewBox="0 0 16 16">
@@ -100,7 +105,7 @@
                         <br> 
                         <br> 
                         <br>                        
-                        <p>Su información fue recíbida y validada con exito, favor realice el siguiente paso habilitado.</p>
+                        <p><strong>Su información fue recibida y validada con éxito, favor realice el siguiente paso habilitado.</strong></p>
                     </div>
                 </div>
             </li>
@@ -111,11 +116,12 @@
             <li class="timeline">
                 <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" fill="#c20000" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
                     <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
-                  </svg></div>
+                  </svg>
+                </div>
                   <br>
                 <div class="timeline-panel">
                     <div class="timeline-heading">
-                        <h4 style="color: #3a3e7b"><strong>PAGO</strong></h4>
+                        <h4 style="color: #3a3e7b"><strong>3. PAGO</strong></h4>
                     </div>
                     <div class="timeline-body">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#c20000" class="bi bi-credit-card" viewBox="0 0 16 16">
@@ -123,10 +129,11 @@
                             <path d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1z"/>
                         </svg>
                         <br>
-                        <p>Genera el pago de tu inscripción.</p></div>
+                        <p><strong>Genere el pago de su inscripción.</strong></p>
+                      </div>
                 </div>
             </li>
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <button type="button" class="btn btn-pre2" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 Generar
               </button>
 
@@ -134,20 +141,23 @@
               <div wire:ignore.self class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-xl">
                   <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLabel">Metodo de Pago</h5>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div class="modal-header text-center" style="background:#a4cb39;color:rgb(255, 255, 255)">
+                      <h5 class="modal-title text-center" style="color:rgb(255, 255, 255)"><strong>Generación de pagos</strong></h5>
+                      <button type="button" class="btn btn-close" style="color:rgb(255, 255, 255)"  data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="modal-body">      
-                        <h3>CUENTAS BANCARIAS</h3>
+                    <div class="modal-body"> 
+                      <br>     
+                        <h3 style="color: #3a3e7b"><strong>CUENTAS BANCARIAS</strong></h3>
                         <br>
-                        <h5>COLEGIATURAS 2023</h5>
+                        <hr>
+                        <br>
+                        <h5 style="color: #3a3e7b"><strong>COLEGIATURAS 2023</strong></h5>
                           <div class="container">
                             <div class="row">
                               <div class="col">
                                 <div class="card" style="width: 18rem;">
-                                  <div class="card-header">
-                                    BANCO INDUSTRIAL
+                                  <div class="card-header" style="background-color: #a4cb39; color:rgb(255, 255, 255)">
+                                    <strong>BANCO INDUSTRIAL</strong>
                                   </div>
                                   <ul class="list-group list-group-flush">
                                     <li class="list-group-item">Cuenta monetaria: 027-007109-5</li>
@@ -157,8 +167,8 @@
                               </div>
                               <div class="col">
                                 <div class="card" style="width: 18rem;">
-                                  <div class="card-header">
-                                    BANRURAL
+                                  <div class="card-header" style="background-color: #a4cb39; color:rgb(255, 255, 255)">
+                                    <strong>BANRURAL</strong>
                                   </div>
                                   <ul class="list-group list-group-flush">
                                     <li class="list-group-item">Cuenta monetaria: 3445387086</li>
@@ -168,8 +178,8 @@
                               </div>                              
                               <div class="col">
                                 <div class="card" style="width: 18rem;">
-                                  <div class="card-header">
-                                    BAM
+                                  <div class="card-header" style="background-color: #a4cb39; color:rgb(255, 255, 255)">
+                                    <strong>BAM</strong>
                                   </div>
                                   <ul class="list-group list-group-flush">
                                     <li class="list-group-item">Cuenta monetaria: 49-0112346-9</li>
@@ -183,9 +193,9 @@
                           <div class="container">
                             <div class="row">
                               <div class="col">
-                                <h5>INSCRIPCIONES 2023</h5>
-                                <div class="card" style="width: 18rem;">
-                                  <div class="card-header">
+                                <h5 style="color: #3a3e7b"><strong>INSCRIPCIONES 2023</strong></h5>
+                                <div class="card text-center" style="width: 18rem;">
+                                  <div class="card-header" style="background-color: #a4cb39; color:rgb(255, 255, 255)">
                                     BAM
                                   </div>
                                   <ul class="list-group list-group-flush">
@@ -195,9 +205,9 @@
                                 </div>
                               </div>
                               <div class="col">
-                                <h5>PAQUETES DIDÁCTICOS 2023</h5>
-                                <div class="card" style="width: 18rem;">
-                                  <div class="card-header">
+                                <h5 style="color:#3a3e7b"><strong>PAQUETES DIDÁCTICOS 2023</strong></h5>
+                                <div class="card text-center" style="width: 18rem;">
+                                  <div class="card-header" style="background-color: #a4cb39; color:rgb(255, 255, 255)">
                                     BAM
                                   </div>
                                   <ul class="list-group list-group-flush">
@@ -223,111 +233,82 @@
                               </div>
                           @endif 
                         @endisset 
-                        <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Metodo de pago:</label>
-                            <select class="form-select" aria-label="Default select example" wire:model="metodo">
-                              <option selected>Seleccionar:</option>
-                                <option value="1">Efectivo</option>
-                                <option value="2">Transferencia</option>
+
+                        <br>
+                        <div class="row g-3">
+                          <div class="col-md">
+                            <label for="fpago"><h5 style="color: #3a3e7b"><strong>FORMA DE PAGO</strong></h5></label>
+                            <select class="form-select rounded-pill" wire:model="fpago" aria-label="Default select example">
+                              <option selected>Seleccionar</option>
+                              @isset($formasdepago)
+                                @foreach ($formasdepago as $forma)
+                                  <option value="{{$forma->ID_F_PAGO}}">{{$forma->DESCRIPCION}}</option>
+                                @endforeach              
+                              @endisset
                             </select>
-                        @if ($metodo == "0")                     
-                            @elseif($metodo == "1")
+                          </div>
+                          <div class="col-md">
+                            <label for="exampleInputEmail1" class="form-label"><h5 style="color: #3a3e7b"><strong>MÉTODO DE PAGO</strong></h5></label>
+                            <select class="form-select rounded-pill" aria-label="Default select example" wire:model="metodo">
+                              <option selected>Seleccionar</option>
+                                @isset($metododepago)
+                                  @foreach ($metododepago as $metodo)
+                                    <option value="{{$metodo->ID_T_D_PAGO}}">{{$metodo->DESCRIPCION}}</option>
+                                  @endforeach              
+                                @endisset
+                            </select>
+                          </div>
+                        </div>
+                        <br>
+                        <div class="row g-3">
+                          <div class="col-md">
                             <div class="form-group row">
-                              <label for="exampleInputPassword1" class="form-label" style="font-size:20px">Subir comprobante de pago</label>
+                              <label for="exampleInputPassword1" class="form-label"><h5 style="color: #3a3e7b"><strong>SUBIR COMPROBANTE DE PAGO</strong></h5></label>
                               <div class="mb-3">
                                 <input type="file" id="archivo"  wire:model="archivo_comprobante">
                               </div> 
                             </div>
+                          </div>
+                          
                             <div class="mb-3">
                               <div wire:loading wire:target="archivo_comprobante" class="alert alert-warning" role="alert">
                                 <strong class="font-bold">¡Imagen cargando!</strong>
-                                  <span class="block sm:inlone">Espere un momento hasta que la imagen se haya procesado.</span>
+                                  <span class="block sm:inlone">Espere un momento hasta que la imagen se haya procesado completamente.</span>
                                 <div class="spinner-border text-warning" role="status">
                                 </div>
                               </div>
                               @if($tipo==1)
-                              <h3 class="form-label">Visualización de Imagen</h3>
-                              <img src="{{$archivo_comprobante->temporaryURL()}}" height="100" weight="100"  alt="...">
+                                <h3 class="form-label">Visualización de Imagen</h3>
+                                <img src="{{$archivo_comprobante->temporaryURL()}}" height="100" weight="100"  alt="...">
                               @endif
-                              
-                             
                               {{-- @if($tipo==3)
                               <h3 class="form-label">Visualización de PDF</h3>
                                 <iframe width="400" height="400" src="/public/pdf/{{$img}}" frameborder="0"></iframe>
                               @endif --}}
-                              @if($mensaje24 != null)
+                                          @if($mensaje24 != null)
                                             <div class="alert alert-success d-flex align-items-center" role="alert">
                                               <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
-                                                  <div>{{$mensaje24}}
-                                                  </div>
-                                                </div>
-                                              @endif
-                                            @if($mensaje25 != null)
+                                              <div>{{$mensaje24}}
+                                              </div>
+                                            </div>
+                                          @endif
+                                          @if($mensaje25 != null)
                                             <div class="alert alert-danger d-flex align-items-center" role="alert">
                                               <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
-                                                  <div>{{$mensaje25}}
-                                                  </div>
+                                                <div>{{$mensaje25}}
                                                 </div>
-                                              @endif
-                                              </div>
-                                
-                                <div class="mb-3">
-                                  <label for="message-text" class="col-form-label">Observación:</label>
-                                  <textarea class="form-control" id="message-text" wire:model="observacion"></textarea>
-                                </div>
-                       
-                            
-                                @elseif($metodo == "2")
-                                    
-                                
-                            <div class="form-group row">
-                              <label for="exampleInputPassword1" class="form-label" style="font-size:20px">Subir comprobante de pago</label>
-                              <div class="mb-3">
-                                <input type="file" id="archivo"  wire:model="archivo_comprobante">
-                              </div> 
+                                            </div>
+                                          @endif
                             </div>
-                            <div class="mb-3">
-                              <div wire:loading wire:target="archivo_comprobante" class="alert alert-warning" role="alert">
-                                <strong class="font-bold">¡Imagen cargando!</strong>
-                                  <span class="block sm:inlone">Espere un momento hasta que la imagen se haya procesado.</span>
-                                <div class="spinner-border text-warning" role="status">
-                                </div>
-                              </div>
-                              @if($tipo==1)
-                              <h3 class="form-label">Visualización de Imagen</h3>
-                              <img src="{{$archivo_comprobante->temporaryURL()}}" height="100" weight="100"  alt="...">
-                              @endif
-                              
-                             
-                              {{-- @if($tipo==3)
-                              <h3 class="form-label">Visualización de PDF</h3>
-                                <iframe width="400" height="400" src="/public/pdf/{{$img}}" frameborder="0"></iframe>
-                              @endif --}}
-                              @if($mensaje24 != null)
-                                <div class="alert alert-success d-flex align-items-center" role="alert">
-                                  <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
-                                  <div>{{$mensaje24}}
-                                  </div>
-                                </div>
-                              @endif
-                              @if($mensaje25 != null)
-                                <div class="alert alert-danger d-flex align-items-center" role="alert">
-                                  <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
-                                  <div>{{$mensaje25}}
-                                  </div>
-                                </div>
-                              @endif
-                            </div>
-                              <div class="mb-3">
-                                <label for="message-text" class="col-form-label">Observación:</label>
-                                <textarea class="form-control" id="message-text" wire:model="observacion"></textarea>
-                              </div>
-                            @endif
-                          </div>    
+                            <div class="col-md">
+                            <label for="message-text" class="col-form-label"><h5 style="color: #3a3e7b"><strong>OBSERVACIÓN</strong></h5></label>
+                              <textarea class="form-control" id="message-text" wire:model="observacion"></textarea>
+                          </div>              
+                        </div>  
                     </div>
                     <div class="modal-footer">
                       {{-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button> --}}
-                      <button type="button" class="btn btn-primary" wire:click="update_comprobante_p()" data-bs-dismiss="modal">Guardar y salir</button>
+                      <button type="button" class="btn btn-pre2" wire:click="update_comprobante_p()" data-bs-dismiss="modal">Guardar y salir</button>
                     </div>
                   </div>
                 </div>

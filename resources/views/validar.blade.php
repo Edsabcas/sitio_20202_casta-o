@@ -35,7 +35,40 @@
         
           @endif
         
-          
+          <div class="modal-body">
+            @isset($mensaje_diaco)
+            @if($mensaje_diaco!=null)
+            
+            <div class="alert alert-success" role="alert">
+                Agregado Correctamente!
+              </div>
+            @endif
+            @endisset
+            @isset($mensaje_diaco1)
+              @if($mensaje_diaco1!=null)
+              <div class="alert alert-success" role="alert">
+                No fue agregado Correctamente!
+              </div>
+              @endif
+            @endisset
+
+            
+            @isset($validar_info)
+            @if($validar_info==1)
+            
+            <div class="alert alert-success" role="alert">
+                Agregado Correctamente!
+              </div>
+            @endif
+            @endisset
+            @isset($validar_info)
+              @if($validar_info==0)
+              <div class="alert alert-success" role="alert">
+                No fue agregado Correctamente!
+              </div>
+              @endif
+            @endisset
+           </div>     
   <div class="row">
       <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
           <option></option>
@@ -78,6 +111,21 @@
     {{$op}}
   </div>
 </div>
+
+@isset($mensaje24)
+@if ($mensaje24!=null)
+  <div class="alert alert-success" role="alert">
+    ¡Actualizado correctamente!
+  </div>
+@endif
+@endisset
+@isset($mensaje25)
+@if($mensaje25!=null)
+  <div class="alert alert-danger" role="alert">
+    ¡No fue posible actualizar correctamente!
+  </div>
+@endif
+@endisset
        </div>
    </div>
   </section>
