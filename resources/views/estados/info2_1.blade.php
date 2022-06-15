@@ -67,7 +67,7 @@
                   </svg>
                 </div>
                 <br>
-                <div class="timeline-panel">
+                <div class="timeline-panel text-center">
                     <div class="timeline-heading">
                         <h4 style="color: #3a3e7b"><strong>1. PRE-INSCRIPCIÓN</strong></h4>
                     </div>
@@ -92,7 +92,7 @@
                   </svg>
                 </div>
                   <br>
-                <div class="timeline-panel">
+                <div class="timeline-panel text-center">
                     <div class="timeline-heading">
                         <h4 style="color: #3a3e7b"><strong>2. VALIDACIÓN DE PRE-INSCRIPCIÓN</strong></h4>
                     </div>
@@ -119,7 +119,7 @@
                   </svg>
                 </div>
                   <br>
-                <div class="timeline-panel">
+                <div class="timeline-panel text-center">
                     <div class="timeline-heading">
                         <h4 style="color: #3a3e7b"><strong>3. PAGO | PRIMERA FASE</strong></h4>
                     </div>

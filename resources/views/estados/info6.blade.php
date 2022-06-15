@@ -84,7 +84,7 @@
                   </svg>
                 </div>
                 <br>
-                <div class="timeline-panel">
+                <div class="timeline-panel text-center">
                     <div class="timeline-heading">
                         <h4 style="color: #3a3e7b"><strong>1. PRE-INSCRIPCIÓN</strong></h4>
                     </div>
@@ -103,13 +103,13 @@
             <br>
             <br>
 
-            <li class="timeline">
+            <li class="timeline text-center">
                 <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" fill=" #a4cb39" class="bi bi-circle-fill" viewBox="0 0 16 16">
                     <circle cx="8" cy="8" r="8"/>
                   </svg>
                 </div>
                   <br>
-                <div class="timeline-panel">
+                <div class="timeline-panel text-center">
                     <div class="timeline-heading">
                         <h4 style="color: #3a3e7b"><strong>2. VALIDACIÓN DE PRE-INSCRIPCIÓN</strong></h4>
                     </div>
@@ -130,13 +130,13 @@
             <br>
             <br>
 
-            <li class="timeline">
+            <li class="timeline text-center">
                 <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" fill=" #a4cb39" class="bi bi-circle-fill" viewBox="0 0 16 16">
                     <circle cx="8" cy="8" r="8"/>
                   </svg>
                 </div>
                   <br>
-                <div class="timeline-panel">
+                <div class="timeline-panel text-center">
                     <div class="timeline-heading">
                         <h4 style="color: #3a3e7b"><strong>3. PAGO</strong></h4>
                     </div>
@@ -160,7 +160,7 @@
                   </svg>
                 </div>
                   <br>
-                <div class="timeline-panel">
+                <div class="timeline-panel text-center">
                     <div class="timeline-heading">
                         <h4 style="color: #3a3e7b"><strong>4. REGISTRO DE DATOS DE INSCRIPCIÓN</strong></h4>
                     </div>
@@ -186,7 +186,7 @@
                       </svg>
                     </div> 
                       <br>
-                    <div class="timeline-panel">
+                    <div class="timeline-panel text-center">
                         <div class="timeline-heading">
                             <h4 style="color: #3a3e7b"><strong>5. CONTRATO ESTUDIANTIL DIACO</strong></h4>
                         </div>
