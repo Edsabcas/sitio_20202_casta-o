@@ -4,10 +4,11 @@
     </div>
 </section>
 <br>
-<div class="card o-hidden border-0 shadow-lg my-5">
-<section class="page-section" id="about">
+<div class="d-flex justify-content-center">
+<div class="col-sm-9 border-0 shadow-lg my-5">
     <div class="container">
         <div class="text-center">
+            <br>
             <h1 class="fs-1" style="color: #3a3e7b" data-aos="fade-up"><strong>PROCESO DE INSCRIPCIÓN</strong></h1>
             <br>
                 <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="#a4cb39" class="bi bi-clipboard2-check" viewBox="0 0 16 16">
@@ -44,13 +45,13 @@
                                     </svg>
                                     <br>
                                     <strong>Paso Completado</strong>
-                                    <center>
+                                    <div class="d-flex justify-content-center">
                                         <hr class="text-center" style=" height:8vh;
                                         width:.2vw;
                                         border-width:0;
                                         color:#a4cb39;
                                         background-color:#a4cb39;">
-                                    </center>
+                                    </div>
                                 </div>
                                 
                                 <div class="">
@@ -59,13 +60,13 @@
                                     </svg>
                                     <br>
                                     <strong>Paso en proceso</strong>
-                                    <center>
+                                    <div class="d-flex justify-content-center">
                                         <hr class="text-center" style=" height:8vh;
                                         width:.2vw;
                                         border-width:0;
                                         color:#a4cb39;
                                         background-color:#a4cb39;">
-                                    </center>
+                                    </div>
                                 </div>
                                 
                                 <div class="">
@@ -97,7 +98,7 @@
                                 <br>
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
-                                        <h4 style="color: #3a3e7b"><strong>1. PRE-INSCRIPCIÓN</strong></h4>
+                                        <h4 style="color: #3a3e7b; font-size: 16px;"><strong>1. PRE-INSCRIPCIÓN</strong></h4>
                                     </div>
                                     <div class="timeline-body">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="#a4cb39" class="bi bi-pencil-square" viewBox="0 0 16 16">
@@ -106,11 +107,17 @@
                                         </svg> 
                                         <br> 
                                         <br>                        
-                                        <p><strong>Su pre-inscripción fue enviada con éxito.</strong></p>
+                                        <p><strong style="font-size: 12px;">Su pre-inscripción fue enviada con éxito.</strong></p>
                                     </div>
                                 </div>
                             </li>
-
+                            <div class="d-flex justify-content-center">
+                                <hr class="text-center"style=" height:5vh; 
+                                width:.2vw;
+                                border-width:0;
+                                color:#a4cb39;
+                                background-color:#a4cb39;">
+                            </div>
                             <li class="timeline text-center">
                                 <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" fill=" #f7d547" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
                                     <{{-- circle cx="8" cy="8" r="8"/> --}}
@@ -148,5 +155,5 @@
         <br>
         <hr>
     </div>
-</section>
+</div>
 </div>
