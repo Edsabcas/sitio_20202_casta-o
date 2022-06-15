@@ -171,9 +171,7 @@ class ValidacionComponent extends Component
             'NIT_madre' =>'required',
             'poliza' => 'required',
             'carne_seguro' => 'required',
-            'codigo_fam' => 'required',
-            'nombre_fam' => 'required',
-            'matricula_bus_aj' => 'required',
+
 
 
         ])==false){
@@ -232,9 +230,12 @@ class ValidacionComponent extends Component
         $this->nombreencargado=$this->nombre_encargado;
         $poliza=$this->poliza;
         $carneseguro=$this->carne_seguro;
-        $codigofam=$this->codigo_fam;
-        $nombrefam=$this->nombre_fam;
-        $matriculabusaj=$this->matricula_bus_aj;
+        if($this->matricula_bus_aj==""){
+            $this->matricula_bus_aj=null;  
+        }
+        else{
+                $matricula_bus_aj=$this->matricula_bus_aj;
+    }
         if($this->Especifique_medi==""){
             $this->Especifique_medi=null;  
         }
@@ -306,8 +307,8 @@ class ValidacionComponent extends Component
                 'NOMBRE_ENCARGADO'=>$this->nombreencargado,
                 'SALIDA_BUS_COLEGIO'=>$this->bus_colegio,
                 'SALIDA_BUS_AJENO'=>$this->bus_no_colegio,
-                'CODIGO_FAMILIA'=>$this->codigo_fam,
-                'NOMBRE_FAMILIA'=>$this->nombre_fam,
+                'Matricula_bus_aj'=>$this->matricula_bus_aj,
+
             
                 ]
             );
