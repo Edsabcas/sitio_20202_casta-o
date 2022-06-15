@@ -67,7 +67,7 @@
                 </svg>
             </div>
                 <br>
-                <div class="timeline-panel text-center">
+                <div class="timeline-panel">
                     <div class="timeline-heading">
                         <h4 style="color: #3a3e7b"><strong>1. PRE-INSCRIPCIÓN</strong></h4>
                     </div>
@@ -86,13 +86,13 @@
             <br>
             <br>
 
-            <li class="timeline text-center">
+            <li class="timeline">
               <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" fill=" #a4cb39" class="bi bi-circle-fill" viewBox="0 0 16 16">
                   <circle cx="8" cy="8" r="8"/>
                 </svg>
               </div>
                   <br>
-                <div class="timeline-panel text-center">
+                <div class="timeline-panel">
                     <div class="timeline-heading">
                         <h4 style="color: #3a3e7b"><strong>2. VALIDACIÓN DE PRE-INSCRIPCIÓN</strong></h4>
                     </div>
@@ -113,13 +113,13 @@
             <br>
             <br>
 
-            <li class="timeline text-center">
+            <li class="timeline">
                 <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" fill="#c20000" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
                     <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
                   </svg>
                 </div>
                   <br>
-                <div class="timeline-panel text-center">
+                <div class="timeline-panel">
                     <div class="timeline-heading">
                         <h4 style="color: #3a3e7b"><strong>3. PAGO</strong></h4>
                     </div>
@@ -161,7 +161,7 @@
                                     <strong>BANCO INDUSTRIAL</strong>
                                   </div>
                                   <ul class="list-group list-group-flush">
-                                    <li class="list-group-item"  style="font-size: 15px;">Cuenta monetaria: 027-007109-5</li>
+                                    <li class="list-group-item">Cuenta monetaria: 027-007109-5</li>
                                     <li class="list-group-item">A nombre de: Colegio Bilingüe El Castaño</li>
                                   </ul>
                                 </div>
@@ -183,7 +183,7 @@
                                     <strong>BAM</strong>
                                   </div>
                                   <ul class="list-group list-group-flush">
-                                    <li class="list-group-item" style="font-size: 15px;">Cuenta monetaria: 49-0112346-9</li>
+                                    <li class="list-group-item">Cuenta monetaria: 49-0112346-9</li>
                                     <li class="list-group-item">A nombre de: Colegio Bilingüe El Castaño</li>
                                   </ul>
                                 </div>
@@ -197,7 +197,7 @@
                                 <h5 style="color: #3a3e7b"><strong>INSCRIPCIONES 2023</strong></h5>
                                 <div class="card text-center" style="width: 18rem;">
                                   <div class="card-header" style="background-color: #a4cb39; color:rgb(255, 255, 255)">
-                                    <strong>BAM</strong>
+                                    BAM
                                   </div>
                                   <ul class="list-group list-group-flush">
                                     <li class="list-group-item">Cuenta monetaria: 40-60023216</li>
@@ -209,7 +209,7 @@
                                 <h5 style="color:#3a3e7b"><strong>PAQUETES DIDÁCTICOS 2023</strong></h5>
                                 <div class="card text-center" style="width: 18rem;">
                                   <div class="card-header" style="background-color: #a4cb39; color:rgb(255, 255, 255)">
-                                    <strong>BAM</strong>
+                                    BAM
                                   </div>
                                   <ul class="list-group list-group-flush">
                                     <li class="list-group-item">Cuenta monetaria: 90-189310-7</li>
@@ -301,14 +301,14 @@
                 <div class="modal-dialog modal-dialog-centered">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalToggleLabel2" style="color: #3a3e7b">Confirmación</h5>
+                      <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                       ¿Está seguro(a) que ingresó correctamente los datos solicitados? 
                     </div>
                     <div class="modal-footer">
-                      <button class="btn btn-secondary" style="border-radius: 12px;" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Regresar</button>
+                      <button class="btn btn-pre2" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Regresar</button>
                       <button type="button" class="btn btn-pre2" wire:click="update_comprobante_p()" data-bs-dismiss="modal">Guardar</button>
                     </div>
                   </div>
