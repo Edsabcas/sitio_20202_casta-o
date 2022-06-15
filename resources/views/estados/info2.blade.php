@@ -161,7 +161,7 @@
                                     <strong>BANCO INDUSTRIAL</strong>
                                   </div>
                                   <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">Cuenta monetaria: 027-007109-5</li>
+                                    <li class="list-group-item"  style="font-size: 15px;">Cuenta monetaria: 027-007109-5</li>
                                     <li class="list-group-item">A nombre de: Colegio Bilingüe El Castaño</li>
                                   </ul>
                                 </div>
@@ -183,7 +183,7 @@
                                     <strong>BAM</strong>
                                   </div>
                                   <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">Cuenta monetaria: 49-0112346-9</li>
+                                    <li class="list-group-item" style="font-size: 15px;">Cuenta monetaria: 49-0112346-9</li>
                                     <li class="list-group-item">A nombre de: Colegio Bilingüe El Castaño</li>
                                   </ul>
                                 </div>
@@ -197,7 +197,7 @@
                                 <h5 style="color: #3a3e7b"><strong>INSCRIPCIONES 2023</strong></h5>
                                 <div class="card text-center" style="width: 18rem;">
                                   <div class="card-header" style="background-color: #a4cb39; color:rgb(255, 255, 255)">
-                                    BAM
+                                    <strong>BAM</strong>
                                   </div>
                                   <ul class="list-group list-group-flush">
                                     <li class="list-group-item">Cuenta monetaria: 40-60023216</li>
@@ -209,7 +209,7 @@
                                 <h5 style="color:#3a3e7b"><strong>PAQUETES DIDÁCTICOS 2023</strong></h5>
                                 <div class="card text-center" style="width: 18rem;">
                                   <div class="card-header" style="background-color: #a4cb39; color:rgb(255, 255, 255)">
-                                    BAM
+                                    <strong>BAM</strong>
                                   </div>
                                   <ul class="list-group list-group-flush">
                                     <li class="list-group-item">Cuenta monetaria: 90-189310-7</li>
@@ -301,14 +301,14 @@
                 <div class="modal-dialog modal-dialog-centered">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
+                      <h5 class="modal-title" id="exampleModalToggleLabel2" style="color: #3a3e7b">Confirmación</h5>
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                       ¿Está seguro(a) que ingresó correctamente los datos solicitados? 
                     </div>
                     <div class="modal-footer">
-                      <button class="btn btn-pre2" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Regresar</button>
+                      <button class="btn btn-secondary" style="border-radius: 12px;" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Regresar</button>
                       <button type="button" class="btn btn-pre2" wire:click="update_comprobante_p()" data-bs-dismiss="modal">Guardar</button>
                     </div>
                   </div>
