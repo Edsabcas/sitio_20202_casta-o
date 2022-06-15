@@ -439,24 +439,15 @@ class ValidacionComponent extends Component
         else{
             $archivo="";
             if($this->archivo!=null){
-                if($this->archivo->getClientOriginalExtension()=="jpg" or $this->archivo->getClientOriginalExtension()=="png" or $this->archivo->getClientOriginalExtension()=="jpeg"){
-                    $archivo = "img".time().".".$this->archivo->getClientOriginalExtension();
-                    $this->arch=$archivo;
-                    $this->archivo->storeAS('imagen/pdf_diaco/', $this->arch,'public_up');
-                    $this->formato=1;
-                }
-                elseif($this->archivo->getClientOriginalExtension()=="mp4" or $this->archivo->getClientOriginalExtension()=="mpeg"){
-                    $archivo = "vid".time().".".$this->archivo->getClientOriginalExtension();
-                    $this->arch=$archivo;
-                    $this->archivo->storeAS('imagen/pdf_diaco/', $this->arch,'public_up');
-                    $this->formato=2;
-                }
-                elseif($this->archivo->getClientOriginalExtension()=="pdf"){
+                
+                $this->archivo->getClientOriginalExtension()=="pdf";
                     $archivo = "pdf".time().".".$this->archivo->getClientOriginalExtension();
                     $this->arch=$archivo;
-                    $this->archivo->storeAS('imagen/pdf_diaco/', $this->arch,'public_up');
+                    $ruta="C:/xampp2/htdocs/repo_actualizado/casys-pro-2.0/public/docs_con_reg/";
+                    copy($this->archivo->getRealPath(), $ruta.$archivo);
+                    //$this->archivo->storeAS('imagen/pdf_diaco/', $this->arch,'public_up');
                     $this->formato=3;
-                }
+                
             }
         $id_pre_ins=$this->id_pre_ins;
         $id_no_gest=$this->id_no_gest;

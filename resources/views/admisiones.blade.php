@@ -43,26 +43,6 @@
 </div>
 
 <div class="container">
-@if($mensaje!=null  && $mensaje==1)
-<br>
-<br><br>
-<br>
-<div class="row">
-  <div class="alert alert-success alert-dismissible fade show" role="alert">
-    <strong>Su gestión ha sido ingresada satisfactoriamente.</strong><br>
-    Puede validar el correo de encargado, y encontrará su gestión y los pasos a realizar.
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-  </div> 
-</div>
-
-@elseif($mensaje!=null && $mensaje==2)
-<div class="alert alert-danger d-flex align-items-center" role="alert">
-  <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg>
-  <div>
-    Intente en unos minutos, no se logro enviar su información.
-  </div>
-</div>
-@endif
 <div class="row">
 @if($val==null)
 
@@ -458,6 +438,16 @@
     Pendiente
     </div>
     @enderror
+    <div class="col-md">
+      <label for="inputApellidos" style="font-size: 15px; color:#000000;">Religión:</label>
+      <br>
+      <input type='text' placeholder=""  wire:model="religion_en" class="form-control" required>
+    </div>
+    @error('religion_en')
+    <div class="alert alert-warning" role="alert">
+    Pendiente
+    </div>
+    @enderror 
       </div>
     
     <div class="row g-3">
@@ -470,22 +460,11 @@
            Pendiente
           </div>
           @enderror
+        
           <div class="col-md">
-            <label for="inputApellidos" style="font-size: 15px; color:#000000;">Religión:</label>
-            <br>
-            <input type='text' placeholder=""  wire:model="religion_en" class="form-control" required>
-          </div>
-          @error('religion_en')
-          <div class="alert alert-warning" role="alert">
-          Pendiente
-          </div>
-          @enderror 
-
-          @error('religion_en')
-          <div class="alert alert-warning" role="alert">
-           Pendiente
-          </div>
-          @enderror
+            <label for="inputApellidos" style="font-size: 15px; color:#000000;">Segundo correo electronico (opcional):</label>
+            <input placeholder="" type="email2"  wire:model="correo_en2" class="form-control " required>
+        </div>
         
     </div>
     <br>
@@ -659,4 +638,24 @@
 
 
 </div>
+@if($mensaje!=null  && $mensaje==1)
+<br>
+<br><br>
+<br>
+<div class="row">
+  <div class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Su gestión ha sido ingresada satisfactoriamente.</strong><br>
+    Puede validar el correo de encargado, y encontrará su gestión y los pasos a realizar.
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div> 
+</div>
+
+@elseif($mensaje!=null && $mensaje==2)
+<div class="alert alert-danger d-flex align-items-center" role="alert">
+  <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+  <div>
+    Intente en unos minutos, no se logro enviar su información.
+  </div>
+</div>
+@endif
 </div>
