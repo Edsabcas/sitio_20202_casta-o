@@ -79,6 +79,7 @@ class ValidacionComponent extends Component
                     $this->op=$comp->ESTADO_PRE_INS;
                     $this->id_pre=$comp->ID_PRE;                    
                 }
+                session(['id_pre' => $this->id_pre]);
             }
             else{
                 $this->mensaje=1;

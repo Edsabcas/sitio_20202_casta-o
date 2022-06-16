@@ -14,8 +14,8 @@
         <p>Correlativo interno Contrato No. _____________ </p>
         <p> <strong>Aprobado y registrado según Resolución DIACO: _____________</strong> </p>
             <hr>
-        <p>En el municipio de Mixco, del departamento de Guatemala, el día __________ del mes de _____________________ 
-            del año dos mil ____________. NOSOTROS: Virginia Yomara Gonzalez Calderon de Siliezar, de____________
+        <p>En el municipio de Mixco, del departamento de Guatemala, el día <strong>{{$datos[2]}}</strong> del mes de <strong>{{$datos[1]}}</strong> 
+            del año <strong>{{$datos[0]}}</strong>. NOSOTROS: Virginia Yomara Gonzalez Calderon de Siliezar, de 59
             años de edad, Casada, guatemalteca, Licenciada en Administación Educativa, de este domicilio, que me identifico 
             con Documento Personal de Identificción, Código Único de Identificación número 2617 37260 0101 extendido por el 
             Registro Nacional de las Personas de la República de Guatemala, actuando en mi calidad de Propietaria del centro 
@@ -23,14 +23,14 @@
             este Municipio lo que acredito con Resolución: No. 005-95-EP., de fecha 9 de enero de 1995, emitida por Direcciòn 
             Tecnica Regional Metropolitana, . Y por la otra parte: </p>
         <p>(DATOS DEL PADRE DE FAMILIA O REPRESENTANTE LEGAL DEL EDUCANDO)</p>
-            <p><u><Strong>.........Nombres y Apellidos del encargado</Strong>........</u>, de <u><strong>....Años de edad, Nacionalidad, Estado civil.....</strong></u>
+            <p><u><Strong>.........Nombres y Apellidos del encargado</Strong>........</u>, de <u><strong>....Años de edad, {{$datos[5]}}, Estado civil.....</strong></u>
                 <u><strong>...Profesión u oficio..</strong></u>, de este domicilio, que me identifico con el <u><strong>...DPI...</strong></u></p>
             
 
-            <p>extendido por <u><strong>...Nombre del Colegio(?)</strong></u>, con residencia en: <u><strong>Dirección.....</strong></u>
+            <p>extendido en <u><strong>Mixco</strong></u>, con residencia en: <u><strong>Dirección.....</strong></u>
             con número de teléfono de casa <u><strong>Teléfono de casa</strong></u>, oficina <u><strong>Número Oficina...</strong></u>
          y celular <u><strong>Número de celular...</strong></u>, correo electrónico <u><strong>Correo Electrónico....</strong></u>
-        actuando en mi calidad de <u><strong>Título de encargado....</strong></u>, (en adelante relacionado como “el 
+        actuando en mi calidad de <u><strong>Encargado</strong></u>, (en adelante relacionado como “el 
         Representante del educando”) declarando que la información personal proporcionada es de carácter confidencial. 
         Los comparecientes aseguramos ser de los datos de identificación anotados, estar en el libre ejercicio de nuestros 
         derechos civiles y celebramos CONTRATO DE ADHESION POR PRESTACION DE SERVICIOS EDUCATIVOS, de 
@@ -53,7 +53,7 @@
             Legislación vigente.
             </p>
         <p> <strong>TERCERA. <u>DEL PLAZO.</u></strong> El servicio educativo convenido en este contrato será válido para el ciclo escolar del año 
-            dos mil ______________, durante su vigencia no puede ser modificada ninguna de sus cláusulas, las que se 
+            <strong>{{$datos[0]}}</strong>, durante su vigencia no puede ser modificada ninguna de sus cláusulas, las que se 
             deberán cumplir a cabalidad; así como con todo lo ofrecido a los padres de familia, tanto en la publicidad efectuada 
             en los medios de comunicación, información escrita o cualquier otro documento publicitario. El representante del 
             Educando y el Centro Educativo podrán suscribir un Nuevo Contrato para el ciclo escolar inmediato siguiente, en 
