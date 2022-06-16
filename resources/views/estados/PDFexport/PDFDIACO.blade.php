@@ -23,8 +23,8 @@
             este Municipio lo que acredito con Resolución: No. 005-95-EP., de fecha 9 de enero de 1995, emitida por Direcciòn 
             Tecnica Regional Metropolitana, . Y por la otra parte: </p>
         <p>(DATOS DEL PADRE DE FAMILIA O REPRESENTANTE LEGAL DEL EDUCANDO)</p>
-            <p><u><Strong>.........Nombres y Apellidos del encargado</Strong>........</u>, de <u><strong>....Años de edad, {{$datos[5]}}, Estado civil.....</strong></u>
-                <u><strong>...Profesión u oficio..</strong></u>, de este domicilio, que me identifico con el <u><strong>...DPI...</strong></u></p>
+            <p><u><Strong>.........Nombres y Apellidos del encargado</Strong>........</u>, de <u><strong>....{{$datos[0]}}, {{$datos[5]}}, {{$datos[6]}}.....</strong></u>
+                <u><strong>...Profesión u oficio..</strong></u>, de este domicilio, que me identifico con el <u><strong>DPI: {{$datos[7]}}</strong></u></p>
             
 
             <p>extendido en <u><strong>Mixco</strong></u>, con residencia en: <u><strong>Dirección.....</strong></u>
