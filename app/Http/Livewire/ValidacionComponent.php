@@ -79,7 +79,7 @@ class ValidacionComponent extends Component
                     $this->op=$comp->ESTADO_PRE_INS;
                     $this->id_pre=$comp->ID_PRE;                    
                 }
-                session(['id_pre' => $this->id_pre_ins=$estac]);
+                
             }
             else{
                 $this->mensaje=1;
@@ -429,6 +429,7 @@ class ValidacionComponent extends Component
                 $this->id_pre_ins=$estac->ID_PRE;
                 $this->id_no_gest=$estac->NO_GESTION;
             }
+            session(['id_pre' => $this->id_pre_ins]);
         }  
     }
 

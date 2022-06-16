@@ -212,6 +212,7 @@
                         Descargue el Reglamento</a>
                     </div>
                   </div>
+                  <p>{{$id_pre_ins}}</p>
                 
                     <br>
                     <div class="col-sm-12">
