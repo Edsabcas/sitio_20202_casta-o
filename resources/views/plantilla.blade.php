@@ -133,6 +133,8 @@
           -webkit-background-size: auto auto;
           background-size: auto auto;
         }
+
+
         .btn-editb:hover {
           border: 0px solid #c0d583;
           color:#ffffff; 
@@ -174,6 +176,39 @@
           background: -webkit-linear-gradient(-90deg,  #8b91e4 0,  #8b91e4 100%);
           background: -moz-linear-gradient(180deg,  #8b91e4 0,  #8b91e4 100%);
           background: linear-gradient(180deg, r #8b91e4 0,  #8b91e4 100%);
+          background-position: 50% 50%;
+          -webkit-background-origin: padding-box;
+          background-origin: padding-box;
+          -webkit-background-clip: border-box;
+          background-clip: border-box;
+          -webkit-background-size: auto auto;
+          background-size: auto auto;
+        }
+
+        .btn-lin {
+          border: 0px solid #f7d547;
+          -webkit-border-radius: 12px;
+          border-radius: 12px;
+          color:#ffffff;
+          background: -webkit-linear-gradient(-90deg,  #f7d547 0,  #f7d547 100%);
+          background: -moz-linear-gradient(180deg,  #f7d547 0,  #f7d547 100%);
+          background: linear-gradient(180deg, r #f7d547 0,  #f7d547 100%);
+          background-position: 50% 50%;
+          -webkit-background-origin: padding-box;
+          background-origin: padding-box;
+          -webkit-background-clip: border-box;
+          background-clip: border-box;
+          -webkit-background-size: auto auto;
+          background-size: auto auto;
+        }
+        .btn-lin:hover {
+          border: 0px solid #f7e189;
+          color:#000000; 
+          -webkit-border-radius: 12px;
+          border-radius: 12px;
+          background: -webkit-linear-gradient(-90deg,  #f7e189 0,  #f7e189 100%);
+          background: -moz-linear-gradient(180deg,  #f7e189 0,  #f7e189 100%);
+          background: linear-gradient(180deg, r #f7e189 0,  #f7e189 100%);
           background-position: 50% 50%;
           -webkit-background-origin: padding-box;
           background-origin: padding-box;
