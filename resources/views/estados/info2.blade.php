@@ -221,7 +221,7 @@
                           </div>
                           <br> 
                         <div class="row g-3">
-                          <div class="col-md">
+                          {{-- <div class="col-md">
                             <label for="fpago"><h5 style="color: #3a3e7b"><strong>FORMA DE PAGO</strong></h5></label>
                             <select class="form-select rounded-pill" wire:model="fpago" aria-label="Default select example">
                               <option selected>Seleccionar</option>
@@ -231,7 +231,7 @@
                                 @endforeach              
                               @endisset
                             </select>
-                          </div>
+                          </div> --}}
                           <div class="col-md">
                             <label for="exampleInputEmail1" class="form-label"><h5 style="color: #3a3e7b"><strong>MÉTODO DE PAGO</strong></h5></label>
                             <select class="form-select rounded-pill" aria-label="Default select example" wire:model="metodo">
