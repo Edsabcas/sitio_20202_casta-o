@@ -53,19 +53,22 @@
                          @enderror
                       
                       <ul class="list-group" style="border-radius: 60px 60px 60px 60px;">
-                        @foreach($grados as $grado)
-                        <li class="list-group-item list-group-item-action"  for="flexRadioGrado{{$grado->ID_GR}}">
-                          <input class="form-check-input me-1" type="radio" wire:click='insertar_grados_hermanos("{{$grado->ID_GR}}","{{$grado->GRADO}}")' name="grado" value="{{$grado->ID_GR}}" aria-label="..." id="flexRadioGrado{{$grado->ID_GR}}">
-                          <label class="form-check-label" for="flexRadioGrado{{$grado->ID_GR}}" style="font-size: 15px; color:#000000;">
-                        {{$grado->GRADO}}
-                          </label>
-                        </li>
-                        
-                        @endforeach
+                        <div class="mb-3">
+                          <label for="" class="form-label" style="font-size:20px; color: #3a3e7b"><strong>• Seleccione el grado </strong></label>
+                          <select class="form-select rounded-pill shadow-sm rounded" name="grado" style="border-radius: 70px 70px 70px 70px; border-color: #a4cb39" aria-label="Default select example" >
+                            <option selected >Elige el grado </option>
+                            @isset($grados)
+                            @foreach($grados as $grado)
+                            <option wire:click='insertar_grados_hermanos("{{$grado->ID_GR}}","{{$grado->GRADO}}")'>{{$grado->GRADO}} </option>
+                            @endforeach
+                            @endisset
+                  
+                          </select>
+                        </div>
                       
                       </ul>
                       <br>
-                      <h5>Grados escogidos {{$grados_mostrar}}</h5>
+                      <h5>Grados seleeccionados: {{$grados_mostrar}}</h5>
                       @endif  
                       
                       <br>
