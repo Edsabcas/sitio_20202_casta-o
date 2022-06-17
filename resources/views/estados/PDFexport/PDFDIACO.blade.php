@@ -11,7 +11,7 @@
         <center>
         <strong><p>CONTRATO DE ADHESION POR PRESTACION DE SERVICIOS EDUCATIVOS
             COLEGIO BILINGÜE "EL CASTAÑO"</p></strong></center>
-        <p>Correlativo interno Contrato No. <strong>{{$datos[16]}}</strong></p>
+        <p>Correlativo interno Contrato No. <strong>{{$datos[16]}}{{$datos[17]}}</strong></p>
         <p> <strong>Aprobado y registrado según Resolución DIACO: _____________</strong> </p>
             <hr>
         <p style="text-align: justify;">En el municipio de Mixco, del departamento de Guatemala, el día <strong>{{$datos[2]}}</strong> del mes de <strong>{{$datos[1]}}</strong> 
