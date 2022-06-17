@@ -72,7 +72,6 @@
                               
                               @endforeach
                             
-                            </ul>
                             <br>
                             <h5>Grados escogidos {{$grados_mostrar}}</h5>
                             @endif
