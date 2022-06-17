@@ -24,7 +24,7 @@ class ValidacionComponent extends Component
     public $poliza, $carneseguro, $carne_seguro, $tiene_alergia, $medicamento, $alimento, $archivo,$formato, $arch;
     public $religion_padre, $cargo_profesion_padre, $NIT_padre, $nombre_madre, $fechana_madre, $nacionalidad_madre, $lugar_nacimiento_madre, $DPI_madre, $telefono_madre, $celular_madre,$id_pre_ins,$id_no_gest,$mensaje_diaco,$mensaje_diaco1,$archivo_cdiaco,$id_pre_ins_arch,$id_no_gest_arch;
     public $prueba_ingreso, $validar_info, $entro_aca, $Especifique_alerg, $Especifique_medi, $Especifique_ali;
-    public $estado_elevado, $matricula_bus_aj, $validacionv;
+    public $estado_elevado, $matricula_bus_aj, $validacionv,$idgrado;
 
     public function render()
     {
@@ -101,10 +101,18 @@ class ValidacionComponent extends Component
 
     }
 
-    public function insertar_grados_hermanos($grado, $gradomostrar){
-        $this->grados_selecionados=$this->grados_selecionados.";".$grado;
-        $this->grados_mostrar=$this->grados_mostrar.";".$gradomostrar;
-        
+    public function insertar_grados_hermanos(){
+        if($this->idgrado!=null && $this->idgrado!=""){
+            $sql= 'SELECT * FROM tb_grados where ID_GR=?';
+            $grados2=DB::select($sql,array($this->idgrado));
+            $a="";
+            foreach($grados2 as $grados){
+                $a=$grados->GRADO;
+            }
+            $this->grados_selecionados=$this->grados_selecionados.";".$this->idgrado;
+            $this->grados_mostrar=$this->grados_mostrar.";".$a;
+            $this->idgrado="";
+        }
     }
 
     public function estado_civil_padre($estado_civil){
