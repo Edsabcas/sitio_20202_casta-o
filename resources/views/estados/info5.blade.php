@@ -204,11 +204,11 @@
                         <p><strong>A continuación se generará su contrato para rellenarlo.</strong></p>
                 </div>
                 <div class="row"><div class="col-md-6">
-                  <a href="/Descargar_constancia" target="_blank" type="button" class="btn btn-pre2" wire:click="ver_form_ins('1')" >
+                  <a href="/Descargar_constancia" target="_blank" type="button" class="btn btn-pre2">
                     Verifique el contrato</a>
                 </div>
                     <div class="col-md-6">
-                      <a href="/Descargar_reglamento" target="_blank" type="button" class="btn btn-pre2" wire:click="ver_form_ins('2')" >
+                      <a href="/Descargar_reglamento" target="_blank" type="button" class="btn btn-pre2">
                         Descargue el Reglamento</a>
                     </div>
                   </div>
