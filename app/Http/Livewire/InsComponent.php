@@ -10,7 +10,7 @@ class InsComponent extends Component
 {
     public $gradoin,$nombre_es,$f_nacimiento_es,$genero,$cui_es,$codigo_pe_es,$nac_es,$lug_nac_es,$tel_es,$cel_es,$direccion_es,$religion_es;
     public $nombre_en,$fnacimiento_en,$dpi_en,$extentido_en,$es_civil_en,$direccion_en,$tel_casa_en,$cel_en,$correo_en,$religion_en;
-    public $a,$mensaje,$gradose,$correo_en2;
+    public $a,$mensaje,$gradose,$correo_en2,$tipo;
     public $val,$val1,$gestion,$errorfecha;
     public function render()
     {
@@ -83,6 +83,17 @@ class InsComponent extends Component
             return  back()->withErrors(['mensaje'=>'Validar el input vacio']);
         }else{
             $this->a=2;
+        }
+    }
+    public function valmodalidad(){
+        if($this->validate([
+            'tipo' => 'required',
+            ])==false){
+            $mensaje="no encontrado";
+           session(['message' => 'no encontrado']);
+            return  back()->withErrors(['mensaje'=>'Validar el input vacio']);
+        }else{
+            $this->a=5;
         }
     }
     public function val3(){
@@ -173,6 +184,7 @@ class InsComponent extends Component
                     'NO_GESTION'=> $no_gestion,
                     'FECHA_REGISTRO'=>  date("Y-m-d H:i:s"),
                     'FECHA_CAMBIOS_REG'=>  date("Y-m-d H:i:s"),
+                    'MODALIDAD_EST'=> $this->tipo,
                 ]
             );
 
