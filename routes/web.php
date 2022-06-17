@@ -9,6 +9,7 @@ use App\Http\Controllers\Form1305Controller;
 use App\Http\Controllers\ResumenController;
 use App\Http\Controllers\ExportarController;
 use App\Http\Controllers\MensajesController;
+use App\Http\Controllers\PDFController;
 
 
 /*
@@ -56,3 +57,9 @@ Route::get('/soportecnico', [InstController::class, 'soportecnico']);
 Route::get('/restablecerusuario', [InstController::class, 'restablecerusuario']);
 
 Route::get('/estadoproceso', [InstController::class, 'estadoproceso']);
+
+//PDF descargable
+
+Route::get('/Descargar_constancia', [PDFController::class, 'PDF_export']);
+
+Route::get('/Descargar_reglamento', [PDFController::class, 'PDF_export2']);
