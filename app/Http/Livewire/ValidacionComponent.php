@@ -24,7 +24,7 @@ class ValidacionComponent extends Component
     public $poliza, $carneseguro, $carne_seguro, $tiene_alergia, $medicamento, $alimento, $archivo,$formato, $arch;
     public $religion_padre, $cargo_profesion_padre, $NIT_padre, $nombre_madre, $fechana_madre, $nacionalidad_madre, $lugar_nacimiento_madre, $DPI_madre, $telefono_madre, $celular_madre,$id_pre_ins,$id_no_gest,$mensaje_diaco,$mensaje_diaco1,$archivo_cdiaco,$id_pre_ins_arch,$id_no_gest_arch;
     public $prueba_ingreso, $validar_info, $entro_aca, $Especifique_alerg, $Especifique_medi, $Especifique_ali;
-    public $estado_elevado;
+    public $estado_elevado, $matricula_bus_aj;
 
     public function render()
     {
@@ -79,6 +79,7 @@ class ValidacionComponent extends Component
                     $this->op=$comp->ESTADO_PRE_INS;
                     $this->id_pre=$comp->ID_PRE;                    
                 }
+                
             }
             else{
                 $this->mensaje=1;
@@ -171,8 +172,7 @@ class ValidacionComponent extends Component
             'NIT_madre' =>'required',
             'poliza' => 'required',
             'carne_seguro' => 'required',
-            'codigo_fam' => 'required',
-            'nombre_fam' => 'required',
+
 
 
         ])==false){
@@ -231,8 +231,12 @@ class ValidacionComponent extends Component
         $this->nombreencargado=$this->nombre_encargado;
         $poliza=$this->poliza;
         $carneseguro=$this->carne_seguro;
-        $codigofam=$this->codigo_fam;
-        $nombrefam=$this->nombre_fam;
+        if($this->matricula_bus_aj==""){
+            $this->matricula_bus_aj=null;  
+        }
+        else{
+                $matricula_bus_aj=$this->matricula_bus_aj;
+    }
         if($this->Especifique_medi==""){
             $this->Especifique_medi=null;  
         }
@@ -304,8 +308,8 @@ class ValidacionComponent extends Component
                 'NOMBRE_ENCARGADO'=>$this->nombreencargado,
                 'SALIDA_BUS_COLEGIO'=>$this->bus_colegio,
                 'SALIDA_BUS_AJENO'=>$this->bus_no_colegio,
-                'CODIGO_FAMILIA'=>$this->codigo_fam,
-                'NOMBRE_FAMILIA'=>$this->nombre_fam,
+                'Matricula_bus_aj'=>$this->matricula_bus_aj,
+
             
                 ]
             );
@@ -425,6 +429,7 @@ class ValidacionComponent extends Component
                 $this->id_pre_ins=$estac->ID_PRE;
                 $this->id_no_gest=$estac->NO_GESTION;
             }
+            session(['id_pre' => $this->id_pre_ins]);
         }  
     }
 

@@ -1,8 +1,3 @@
-<section class="slider_section">
-    <div id="main_slider" class="carousel slide banner-main" data-ride="carousel">
-             <img class="first-slide" src="{{ asset('images/a.jpg') }}" alt="First slide">
-    </div>
-</section>
 <div class="d-flex justify-content-center">
 <div class="col-sm-10 border-0 shadow-lg my-5">
     <div class="container">
