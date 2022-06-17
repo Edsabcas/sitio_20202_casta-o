@@ -61,3 +61,5 @@ Route::get('/estadoproceso', [InstController::class, 'estadoproceso']);
 //PDF descargable
 
 Route::get('/Descargar_constancia', [PDFController::class, 'PDF_export']);
+
+Route::get('/Descargar_reglamento', [PDFController::class, 'PDF_export2']);
