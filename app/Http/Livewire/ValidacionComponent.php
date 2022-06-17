@@ -24,7 +24,8 @@ class ValidacionComponent extends Component
     public $poliza, $carneseguro, $carne_seguro, $tiene_alergia, $medicamento, $alimento, $archivo,$formato, $arch;
     public $religion_padre, $cargo_profesion_padre, $NIT_padre, $nombre_madre, $fechana_madre, $nacionalidad_madre, $lugar_nacimiento_madre, $DPI_madre, $telefono_madre, $celular_madre,$id_pre_ins,$id_no_gest,$mensaje_diaco,$mensaje_diaco1,$archivo_cdiaco,$id_pre_ins_arch,$id_no_gest_arch;
     public $prueba_ingreso, $validar_info, $entro_aca, $Especifique_alerg, $Especifique_medi, $Especifique_ali;
-    public $estado_elevado, $matricula_bus_aj, $validacionv;
+    public $idgrado;
+    public $estado_elevado, $matricula_bus_aj, $validacionv, $codigo_familia3, $fecha_codigo;
 
     public function render()
     {
@@ -101,10 +102,18 @@ class ValidacionComponent extends Component
 
     }
 
-    public function insertar_grados_hermanos($grado, $gradomostrar){
-        $this->grados_selecionados=$this->grados_selecionados.";".$grado;
-        $this->grados_mostrar=$this->grados_mostrar.";".$gradomostrar;
-        
+    public function insertar_grados_hermanos(){
+        if($this->idgrado!=null && $this->idgrado!=""){
+            $sql= 'SELECT * FROM tb_grados where ID_GR=?';
+            $grados2=DB::select($sql,array($this->idgrado));
+            $a="";
+            foreach($grados2 as $grados){
+                $a=$grados->GRADO;
+            }
+            $this->grados_selecionados=$this->grados_selecionados.";".$this->idgrado;
+            $this->grados_mostrar=$this->grados_mostrar.";".$a;
+            $this->idgrado="";
+        }
     }
 
     public function estado_civil_padre($estado_civil){
@@ -331,7 +340,21 @@ class ValidacionComponent extends Component
                 }
                 else{
                     $this->estado_elevado=0;
-                }
+                } 
+                $codigo=$this->id_pre_ins;
+                $sql='SELECT * FROM TB_PRE_INFO WHERE ID_PRE=?';
+                $codigo_familia=DB::select($sql, array($codigo)); 
+                foreach($codigo_familia as $cod)
+            {
+                $this->nombrepadre=$cod->NOMB_PADRE;
+                $this->nombre_madre=$cod->NOMB_MADRE;
+            }
+            $this->fecha_codigo=date('Y-m-d');
+            $codigo_familia1=explode(" ", $this->nombrepadre);
+            $codigo_familia2=explode(" ", $this->nombre_madre);
+            $fecha_codigo1=explode("-", $this->fecha_codigo);
+
+            $this->codigo_familia3=$codigo_familia1[2].".".$codigo_familia2[2].".".$fecha_codigo1[0];
             }
             else{
                 DB::rollback();

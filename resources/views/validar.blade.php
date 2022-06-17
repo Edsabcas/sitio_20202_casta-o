@@ -35,7 +35,7 @@
             @if($mensaje_diaco!=null)
             
             <div class="alert alert-success" role="alert">
-                Agregado Correctamente!
+                ¡Agregado Correctamente!
               </div>
             @endif
             @endisset
@@ -52,7 +52,7 @@
             @if($validar_info==1)
             
             <div class="alert alert-success" role="alert">
-                Agregado Correctamente!
+                ¡Agregado Correctamente!, su codigo de familia es es: {{$codigo_familia3}}
               </div>
             @endif
             @endisset
