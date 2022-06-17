@@ -116,6 +116,39 @@
               -o-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
               transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
             }
+
+            .btn-editb {
+          border: 0px solid #a4cb39;
+          -webkit-border-radius: 12px;
+          border-radius: 12px;
+          color:#ffffff;
+          background: -webkit-linear-gradient(-90deg,  #a4cb39 0,  #a4cb39 100%);
+          background: -moz-linear-gradient(180deg,  #a4cb39 0,  #a4cb39 100%);
+          background: linear-gradient(180deg, r #a4cb39 0,  #a4cb39 100%);
+          background-position: 50% 50%;
+          -webkit-background-origin: padding-box;
+          background-origin: padding-box;
+          -webkit-background-clip: border-box;
+          background-clip: border-box;
+          -webkit-background-size: auto auto;
+          background-size: auto auto;
+        }
+        .btn-editb:hover {
+          border: 0px solid #c0d583;
+          color:#ffffff; 
+          -webkit-border-radius: 12px;
+          border-radius: 12px;
+          background: -webkit-linear-gradient(-90deg,  #c0d583 0,  #c0d583 100%);
+          background: -moz-linear-gradient(180deg,  #c0d583 0,  #c0d583 100%);
+          background: linear-gradient(180deg, r #c0d583 0,  #c0d583 100%);
+          background-position: 50% 50%;
+          -webkit-background-origin: padding-box;
+          background-origin: padding-box;
+          -webkit-background-clip: border-box;
+          background-clip: border-box;
+          -webkit-background-size: auto auto;
+          background-size: auto auto;
+        }
             
             .btn-pre2 {
           border: 0px solid #3a3e7b;
@@ -351,6 +384,7 @@
             </div>
          </div>
       </div>
+      <br>
 
        <div class="copyright">
            <div class="row">
