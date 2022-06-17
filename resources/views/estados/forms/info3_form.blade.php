@@ -1,6 +1,6 @@
-
-      <!-- Modal -->
-<div wire:ignore.self class="modal fade" id="ModalInscripcion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  
+  <!-- Modal -->
+  <div wire:ignore.self class="modal fade" id="ModalInscripcion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl">
       <div class="modal-content">
         <div class="modal-header">
@@ -1002,11 +1002,22 @@
 
 <br>
 
+@if($validar_info==1)
+<div class="alert alert-success d-flex align-items-center rounded-pill" role="alert">
+  <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Info:"><use xlink:href="#info-fill"/></svg>
+  <div>
+    Información enviada con éxito 
+  </div>
+</div>
+@endif
 
 
       </form>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-pre2" wire:click='insertar_datos()' data-bs-dismiss="modal">Envíar Información</button>.
+      <div class="modal-footer">
+        <button type="button" class="btn btn-pre2" wire:click='validar_datos()'>Validar Información</button>.
+        @if($validacionv==1)
+        <button type="button" class="btn btn-pre2" wire:click='insertar_datos()' data-bs-dismiss="modal">Envíar Información</button>.
+        @endif
         </div>
       </div>
     </div>
