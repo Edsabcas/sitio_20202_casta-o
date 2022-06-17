@@ -52,18 +52,30 @@
                            </div> 
                            </div>
                            @enderror
-                        
-                        <ul class="list-group" style="border-radius: 60px 60px 60px 60px;">
-                          @foreach($grados as $grado)
-                          <li class="list-group-item list-group-item-action"  for="flexRadioGrado{{$grado->ID_GR}}">
-                            <input class="form-check-input me-1" type="radio" wire:click='insertar_grados_hermanos("{{$grado->ID_GR}}","{{$grado->GRADO}}")' name="grado" value="{{$grado->ID_GR}}" aria-label="..." id="flexRadioGrado{{$grado->ID_GR}}">
-                            <label class="form-check-label" for="flexRadioGrado{{$grado->ID_GR}}" style="font-size: 15px; color:#000000;">
-                          {{$grado->GRADO}}
-                            </label>
-                          </li>
-                          
-                          @endforeach
-                        
+                           <div class="col-md-6">
+                            <div class="alert alert-danger d-flex align-items-center" role="alert">
+                              <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
+                              
+                                <span>Debe seleccionar un grado</span>
+                               </div> 
+                               </div>
+                               @enderror
+                            
+                            <ul class="list-group" style="border-radius: 60px 60px 60px 60px;">
+                              @foreach($grados as $grado)
+                              <li class="list-group-item list-group-item-action"  for="flexRadioGrado{{$grado->ID_GR}}">
+                                <input class="form-check-input me-1" type="radio" wire:click='insertar_grados_hermanos("{{$grado->ID_GR}}","{{$grado->GRADO}}")' name="grado" value="{{$grado->ID_GR}}" aria-label="..." id="flexRadioGrado{{$grado->ID_GR}}">
+                                <label class="form-check-label" for="flexRadioGrado{{$grado->ID_GR}}" style="font-size: 15px; color:#000000;">
+                              {{$grado->GRADO}}
+                                </label>
+                              </li>
+                              
+                              @endforeach
+                            
+                            </ul>
+                            <br>
+                            <h5>Grados escogidos {{$grados_mostrar}}</h5>
+                            @endif
                         </ul>
                         <br>
                         <h5>Grados escogidos {{$grados_mostrar}}</h5>
