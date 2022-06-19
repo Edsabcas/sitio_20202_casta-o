@@ -16,16 +16,9 @@
   
   </script>
 
-<section class="slider_section">
-    <div id="main_slider" class="carousel slide banner-main" data-ride="carousel">
-             <img class="first-slide" src="{{ asset('images/a.jpg') }}" alt="First slide">
-    </div>
-</section>
 
-<br>
-<br>
-<div class="card o-hidden border-0 shadow-lg my-5">
-<section class="page-section" id="about">
+<div class="d-flex justify-content-center">
+    <div class="col-sm-10 border-0 shadow-lg my-5">
     <div class="container">
         <div class="text-center">
             <br>
@@ -120,7 +113,7 @@
                 <br>
                 <div class="timeline-panel">
                     <div class="timeline-heading">
-                        <h4 style="color: #3a3e7b"><strong>1. PRE-INSCRIPCIÓN</strong></h4>
+                        <h4 style="color: #3a3e7b; font-size: 16px;"><strong>1. PRE-INSCRIPCIÓN</strong></h4>
                     </div>
                     <div class="timeline-body">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#a4cb39" class="bi bi-pencil-square" viewBox="0 0 16 16">
@@ -129,7 +122,7 @@
                         </svg> 
                         <br> 
                         <br>                        
-                        <p><strong>Su pre-inscripción fue enviada con éxito.</strong></p>
+                        <p><strong style="font-size: 12px;">Su pre-inscripción fue enviada con éxito.</strong></p>
                     </div>
                 </div>
             </li>
@@ -148,7 +141,7 @@
                   <br>
                 <div class="timeline-panel">
                     <div class="timeline-heading">
-                        <h4 style="color: #3a3e7b"><strong>2. VALIDACIÓN DE PRE-INSCRIPCIÓN</strong></h4>
+                        <h4 style="color: #3a3e7b; font-size: 16px;"><strong>2. VALIDACIÓN DE PRE-INSCRIPCIÓN</strong></h4>
                     </div>
                     <div class="timeline-body">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#a4cb39" class="bi bi-clipboard-check" viewBox="0 0 16 16">
@@ -168,22 +161,22 @@
             <br>
 
             <li class="timeline">
-                <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" fill=" #a4cb39" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill=" #a4cb39" class="bi bi-circle-fill" viewBox="0 0 16 16">
                         <circle cx="8" cy="8" r="8"/>
                     </svg>
                 </div>
                   <br>
                 <div class="timeline-panel">
                     <div class="timeline-heading">
-                        <h4 style="color: #3a3e7b"><strong>3. PAGO</strong></h4>
+                        <h4 style="color: #3a3e7b; font-size: 16px;"><strong>3. PAGO</strong></h4>
                     </div>
                     <div class="timeline-body">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#a4cb39" class="bi bi-credit-card" viewBox="0 0 16 16">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="#a4cb39" class="bi bi-credit-card" viewBox="0 0 16 16">
                             <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1H2zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V7z"/>
                             <path d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1z"/>
                         </svg>
                         <br>
-                        <p><strong>Su pago de inscripción ha sido realizado correctamente.</strong></p>
+                        <p><strong style="font-size: 12px;">Su pago de inscripción ha sido realizado correctamente.</strong></p>
                     </div>
                 </div> 
 
@@ -241,6 +234,9 @@
                         </div>
                         <p>Ingrese los datos solicitados para la inscripción.</p>
                 </div>
+                <button type="button" class="btn btn-pre2" data-bs-toggle="modal" data-bs-target="#ModalInscripcion" wire:click="ver_form_ins('1')" >
+                    <strong> Formulario datos de inscripción</strong></button>
+                 @include('estados.forms.info3_form')
 
                 <div class="d-flex justify-content-center">
                     <hr class="text-center"style=" height:5vh; 
@@ -385,9 +381,7 @@
              </li>
 
 
-                <button type="button" class="btn btn-pre2" data-bs-toggle="modal" data-bs-target="#ModalInscripcion" wire:click="ver_form_ins('1')" >
-                   Formulario datos de inscripción</button>
-                @include('estados.forms.info3_form')
+                
 
             </li>
             <br>

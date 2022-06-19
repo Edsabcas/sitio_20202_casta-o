@@ -20,6 +20,7 @@ class PDFcontroller extends Controller
         $preinfo=DB::select($sql, array($id_pre));
         $año_en_curso=date('Y-m-d');
         $fecha_separada=explode("-", $año_en_curso);
+        $contrato_correlativo=($fecha_separada[0]+1)."-00";
         if($preins!=null){
             foreach($preins as $prein){   
                 $datos_padre=$prein->ESTADO_PRE_INS;
@@ -35,8 +36,8 @@ class PDFcontroller extends Controller
                 $datos_padre11=$prein->FEC_NAC_EN_ES;
                 $datos_padre12=$prein->NOMBRE_ENCARGADO_ES;
                 $datos_padre13=$prein->NOMBRE_ES;  
-                if($prein->NO_CORRELATIVO_P1==null){
-                    $contrato_correlativo=($fecha_separada[0]+1)."-00";
+                if($prein->NO_CORRELATIVO_P1==null or $prein->NO_CORRELATIVO_P1==""){
+                    
 
                     DB::beginTransaction();
                     $elevar=DB::table('TB_PRE_INS')
@@ -66,40 +67,55 @@ class PDFcontroller extends Controller
 
                    [
 
-                    'NO_CORRELATIVO_P1' => 1,
+                    'NO_CORRELATIVO_P2' => 1,
 
                    ]);
 
-                    $sql='SELECT MAX(TB_PRE_INS.NO_CORRELATIVO_P2+1) AS NO_CORRELATIVO_P2 FROM TB_PRE_INS';
-                    $consulta_val=DB::select($sql);
-
-                    foreach($consulta_val as $consulta_valor){
-                        $consulta_correlativa=$consulta_valor->NO_CORRELATIVO_P2;
-                    }
-
-                    DB::beginTransaction();
-                    $correlativo2=DB::table('TB_PRE_INS')
-                ->where('ID_PRE', $id_pre)
-                ->update(
-                    [
- 
-                     'NO_CORRELATIVO_P2' => $consulta_correlativa,
- 
-                    ]);
-                    if($correlativo2){
-                        DB::commit();
-                        $validar=1;
-                    }
-                    else{
-                        DB::rollback();
-                        $validar=2;
-                    }
                 }
+                
+
+                    
             } 
             
         }
-        if($preins!=null){
-            foreach($preins as $preinz){
+        $sql= 'SELECT * FROM  TB_PRE_INS WHERE ID_PRE=?';
+        $preinz=DB::select($sql, array($id_pre));
+        foreach($preinz as $preinzz){
+            if($preinzz->NO_CORRELATIVO_P2==1){
+
+                $sql='SELECT MAX(TB_PRE_INS.NO_CORRELATIVO_P2+1) AS NO_CORRELATIVO_P2 FROM TB_PRE_INS';
+                $consulta_val=DB::select($sql);
+    
+                foreach($consulta_val as $consulta_valor){
+                    $consulta_correlativa=$consulta_valor->NO_CORRELATIVO_P2;
+                }
+    
+                DB::beginTransaction();
+                $correlativo2=DB::table('TB_PRE_INS')
+            ->where('ID_PRE', $id_pre)
+            ->update(
+                [
+    
+                 'NO_CORRELATIVO_P2' => $consulta_correlativa,
+    
+                ]);
+                if($correlativo2){
+                    DB::commit();
+                    $validar=1;
+                }
+                else{
+                    DB::rollback();
+                    $validar=2;
+                }
+            
+            }
+        }
+        
+
+        $sql= 'SELECT * FROM  TB_PRE_INS WHERE ID_PRE=?';
+        $preinss=DB::select($sql, array($id_pre));
+        if($preinss!=null){
+            foreach($preinss as $preinz){
                 $datos_padre14=$preinz->NO_CORRELATIVO_P1;
                 $datos_padre15=$preinz->NO_CORRELATIVO_P2;
             }
