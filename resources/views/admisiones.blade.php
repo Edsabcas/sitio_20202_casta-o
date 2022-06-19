@@ -1,13 +1,15 @@
-<section class="slider_section">
+<center>
+  <section class="slider_section">
+    <div id="main_slider" class="carousel slide banner-main" data-ride="carousel">
+          <img class="first-slide" src="{{ asset('images/imgadmin.png') }}" alt="First slide">
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+  </section>
+</center>
 
-  <div id="main_slider" class="carousel slide banner-main" data-ride="carousel">
-        <img class="first-slide" src="{{ asset('images/imgadmin.png') }}" alt="First slide">
-  </div>
-  <br>
-  <br>
-  <br>
-  <br>
-</section>
 <div class="container col-12">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
@@ -147,7 +149,7 @@
           <ul class="list-group" style="border-radius: 60px 60px 60px 60px;">
             @foreach($grados as $grado)
             <li class="list-group-item list-group-item-action"  for="flexRadioGrado{{$grado->ID_GR}}">
-              <input class="form-check-input me-1" type="radio" wire:click='selgrado("{{$grado->ID_GR}}","{{$grado->GRADO}}")' name="grado" value="{{$grado->ID_GR}}" aria-label="..." id="flexRadioGrado{{$grado->ID_GR}}">
+              <input class="form-check-input me-1" type="radio" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" wire:click='selgrado("{{$grado->ID_GR}}","{{$grado->GRADO}}")' name="grado" value="{{$grado->ID_GR}}" aria-label="..." id="flexRadioGrado{{$grado->ID_GR}}">
               <label class="form-check-label" for="flexRadioGrado{{$grado->ID_GR}}" style="font-size: 15px; color:#000000;">
             {{$grado->GRADO}}
               </label>
@@ -163,6 +165,55 @@
   </div>
 </div>
   @if($gradoin!=null)
+
+  <div wire:ignore.self class="accordion" id="accordionPanelsStayOpenExample2">
+    <div style="border-radius: 60px 60px 60px 60px;" class="accordion-item">
+      <h2 style="border-radius: 60px 60px 60px 60px;" class="accordion-header" id="panelsStayOpen-headingmodalidad">
+        @if($a!=null && $a==5)
+        <button class="accordion-button collapsed" style="background-color:#d6e7a6; border:6px solid #a4cb39; border-radius: 60px 60px 60px 60px;" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapsemodalidad" aria-expanded="false" aria-controls="panelsStayOpen-collapsemodalidad">
+          <h4 class="font-weight-bolder">  <b>Modalidad de estudio en el ciclo escolar 2023: 
+          @if($tipo!=null)
+          {{$tipo}}
+          @endif  
+          </b>   </h4>
+        </button>
+        @else
+        <button class="accordion-button collapsed" style="background-color:#a6a8c3; border:6px solid #3a3e7b; border-radius: 60px 60px 60px 60px;" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapsemodalidad" aria-expanded="false" aria-controls="panelsStayOpen-collapsemodalidad">
+        <h4 class="font-weight-bolder">  <b>Modalidad de estudio en el ciclo escolar 2023.</b>   </h4>
+        </button>
+        @endif
+      </h2>
+      <div  wire:ignore.self id="panelsStayOpen-collapsemodalidad"style="border-radius: 60px 60px 60px 60px;" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingmodalidad">
+        <div  wire:ignore.self class="accordion-body" style="border-radius: 60px 60px 60px 60px;">
+        <div class="mb-3">
+              <li class="list-group-item list-group-item-action">
+               
+                  <input class="form-check-input me-1" wire:click='valmodalidad()' data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapsemodalidad" type="radio" wire:model="tipo" value="Presencial" aria-label="..."  id="flexRadioGradopre">
+                  <label class="form-check-label" for="flexRadioGradopre" style="font-size: 15px; color:#000000;">
+                      Presencial 
+                    </label>
+                  
+                </li>
+                <li class="list-group-item list-group-item-action">
+                  <input class="form-check-input me-1"  type="radio" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapsemodalidad" wire:model="tipo" value="Virtual" aria-label="..."  id="flexRadioGradvir">
+                  <label class="form-check-label" for="flexRadioGradvir" style="font-size: 15px; color:#000000;">
+                    Virtual
+                    </label>
+                
+                </li>
+                @error('tipo') 
+                      <div class="alert alert-danger d-flex align-items-center" role="alert">
+                        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
+                        
+                          <span>Debe de seleccionar</span>
+                         </div> @enderror
+      </div>
+      </div>
+    </div>
+  </div>
+
+
+
 <div wire:ignore.self class="accordion" id="accordionPanelsStayOpenExample2">
   <div style="border-radius: 60px 60px 60px 60px;" class="accordion-item">
     <h2 style="border-radius: 60px 60px 60px 60px;" class="accordion-header" id="panelsStayOpen-headingTwo">
@@ -338,7 +389,7 @@
     </h2>
     <div  wire:ignore.self id="panelsStayOpen-collapseThree" style="border-radius: 60px 60px 60px 60px;"class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingThree">
       <div  wire:ignore.self class="accordion-body" style="border-radius: 60px 60px 60px 60px;">
-        <div class="table-responsive">
+        <div class="container">
           <form wire:submit.prevent="val3()" class="form-floating">
             <div class="form-group col-xs-12">
               <label for="inputNombres" style="font-size: 15px; color:#000000;">Nombre Completo:</label>

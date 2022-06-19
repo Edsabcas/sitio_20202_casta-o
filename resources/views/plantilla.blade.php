@@ -16,7 +16,7 @@
       <link rel="stylesheet" href="{{ asset('css/responsive.css')}}">
       <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
       <!-- fevicon -->
-      <link rel="icon" href="{{ asset('images/fevicon.png" type="image/gif')}}" />
+      <link rel="icon" href="{{ asset('img/lo.png')}}"/>
       <!-- fonts -->
        <!-- bootstrap css -->
        <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css')}}">
@@ -116,6 +116,41 @@
               -o-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
               transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
             }
+
+            .btn-editb {
+          border: 0px solid #a4cb39;
+          -webkit-border-radius: 12px;
+          border-radius: 12px;
+          color:#ffffff;
+          background: -webkit-linear-gradient(-90deg,  #a4cb39 0,  #a4cb39 100%);
+          background: -moz-linear-gradient(180deg,  #a4cb39 0,  #a4cb39 100%);
+          background: linear-gradient(180deg, r #a4cb39 0,  #a4cb39 100%);
+          background-position: 50% 50%;
+          -webkit-background-origin: padding-box;
+          background-origin: padding-box;
+          -webkit-background-clip: border-box;
+          background-clip: border-box;
+          -webkit-background-size: auto auto;
+          background-size: auto auto;
+        }
+
+
+        .btn-editb:hover {
+          border: 0px solid #c0d583;
+          color:#ffffff; 
+          -webkit-border-radius: 12px;
+          border-radius: 12px;
+          background: -webkit-linear-gradient(-90deg,  #c0d583 0,  #c0d583 100%);
+          background: -moz-linear-gradient(180deg,  #c0d583 0,  #c0d583 100%);
+          background: linear-gradient(180deg, r #c0d583 0,  #c0d583 100%);
+          background-position: 50% 50%;
+          -webkit-background-origin: padding-box;
+          background-origin: padding-box;
+          -webkit-background-clip: border-box;
+          background-clip: border-box;
+          -webkit-background-size: auto auto;
+          background-size: auto auto;
+        }
             
             .btn-pre2 {
           border: 0px solid #3a3e7b;
@@ -141,6 +176,39 @@
           background: -webkit-linear-gradient(-90deg,  #8b91e4 0,  #8b91e4 100%);
           background: -moz-linear-gradient(180deg,  #8b91e4 0,  #8b91e4 100%);
           background: linear-gradient(180deg, r #8b91e4 0,  #8b91e4 100%);
+          background-position: 50% 50%;
+          -webkit-background-origin: padding-box;
+          background-origin: padding-box;
+          -webkit-background-clip: border-box;
+          background-clip: border-box;
+          -webkit-background-size: auto auto;
+          background-size: auto auto;
+        }
+
+        .btn-lin {
+          border: 0px solid #f7d547;
+          -webkit-border-radius: 12px;
+          border-radius: 12px;
+          color:#ffffff;
+          background: -webkit-linear-gradient(-90deg,  #f7d547 0,  #f7d547 100%);
+          background: -moz-linear-gradient(180deg,  #f7d547 0,  #f7d547 100%);
+          background: linear-gradient(180deg, r #f7d547 0,  #f7d547 100%);
+          background-position: 50% 50%;
+          -webkit-background-origin: padding-box;
+          background-origin: padding-box;
+          -webkit-background-clip: border-box;
+          background-clip: border-box;
+          -webkit-background-size: auto auto;
+          background-size: auto auto;
+        }
+        .btn-lin:hover {
+          border: 0px solid #f7e189;
+          color:#000000; 
+          -webkit-border-radius: 12px;
+          border-radius: 12px;
+          background: -webkit-linear-gradient(-90deg,  #f7e189 0,  #f7e189 100%);
+          background: -moz-linear-gradient(180deg,  #f7e189 0,  #f7e189 100%);
+          background: linear-gradient(180deg, r #f7e189 0,  #f7e189 100%);
           background-position: 50% 50%;
           -webkit-background-origin: padding-box;
           background-origin: padding-box;
@@ -351,6 +419,7 @@
             </div>
          </div>
       </div>
+      <br>
 
        <div class="copyright">
            <div class="row">

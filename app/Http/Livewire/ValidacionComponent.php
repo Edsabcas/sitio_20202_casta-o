@@ -24,7 +24,8 @@ class ValidacionComponent extends Component
     public $poliza, $carneseguro, $carne_seguro, $tiene_alergia, $medicamento, $alimento, $archivo,$formato, $arch;
     public $religion_padre, $cargo_profesion_padre, $NIT_padre, $nombre_madre, $fechana_madre, $nacionalidad_madre, $lugar_nacimiento_madre, $DPI_madre, $telefono_madre, $celular_madre,$id_pre_ins,$id_no_gest,$mensaje_diaco,$mensaje_diaco1,$archivo_cdiaco,$id_pre_ins_arch,$id_no_gest_arch;
     public $prueba_ingreso, $validar_info, $entro_aca, $Especifique_alerg, $Especifique_medi, $Especifique_ali;
-    public $estado_elevado;
+    public $idgrado;
+    public $estado_elevado, $matricula_bus_aj, $validacionv, $codigo_familia3, $fecha_codigo;
 
     public function render()
     {
@@ -79,6 +80,7 @@ class ValidacionComponent extends Component
                     $this->op=$comp->ESTADO_PRE_INS;
                     $this->id_pre=$comp->ID_PRE;                    
                 }
+                
             }
             else{
                 $this->mensaje=1;
@@ -100,10 +102,18 @@ class ValidacionComponent extends Component
 
     }
 
-    public function insertar_grados_hermanos($grado, $gradomostrar){
-        $this->grados_selecionados=$this->grados_selecionados.";".$grado;
-        $this->grados_mostrar=$this->grados_mostrar.";".$gradomostrar;
-        
+    public function insertar_grados_hermanos(){
+        if($this->idgrado!=null && $this->idgrado!=""){
+            $sql= 'SELECT * FROM tb_grados where ID_GR=?';
+            $grados2=DB::select($sql,array($this->idgrado));
+            $a="";
+            foreach($grados2 as $grados){
+                $a=$grados->GRADO;
+            }
+            $this->grados_selecionados=$this->grados_selecionados.";".$this->idgrado;
+            $this->grados_mostrar=$this->grados_mostrar.";".$a;
+            $this->idgrado="";
+        }
     }
 
     public function estado_civil_padre($estado_civil){
@@ -171,8 +181,7 @@ class ValidacionComponent extends Component
             'NIT_madre' =>'required',
             'poliza' => 'required',
             'carne_seguro' => 'required',
-            'codigo_fam' => 'required',
-            'nombre_fam' => 'required',
+
 
 
         ])==false){
@@ -231,8 +240,12 @@ class ValidacionComponent extends Component
         $this->nombreencargado=$this->nombre_encargado;
         $poliza=$this->poliza;
         $carneseguro=$this->carne_seguro;
-        $codigofam=$this->codigo_fam;
-        $nombrefam=$this->nombre_fam;
+        if($this->matricula_bus_aj==""){
+            $this->matricula_bus_aj=null;  
+        }
+        else{
+                $matricula_bus_aj=$this->matricula_bus_aj;
+    }
         if($this->Especifique_medi==""){
             $this->Especifique_medi=null;  
         }
@@ -304,8 +317,8 @@ class ValidacionComponent extends Component
                 'NOMBRE_ENCARGADO'=>$this->nombreencargado,
                 'SALIDA_BUS_COLEGIO'=>$this->bus_colegio,
                 'SALIDA_BUS_AJENO'=>$this->bus_no_colegio,
-                'CODIGO_FAMILIA'=>$this->codigo_fam,
-                'NOMBRE_FAMILIA'=>$this->nombre_fam,
+                'Matricula_bus_aj'=>$this->matricula_bus_aj,
+
             
                 ]
             );
@@ -327,7 +340,21 @@ class ValidacionComponent extends Component
                 }
                 else{
                     $this->estado_elevado=0;
-                }
+                } 
+                $codigo=$this->id_pre_ins;
+                $sql='SELECT * FROM TB_PRE_INFO WHERE ID_PRE=?';
+                $codigo_familia=DB::select($sql, array($codigo)); 
+                foreach($codigo_familia as $cod)
+            {
+                $this->nombrepadre=$cod->NOMB_PADRE;
+                $this->nombre_madre=$cod->NOMB_MADRE;
+            }
+            $this->fecha_codigo=date('Y-m-d');
+            $codigo_familia1=explode(" ", $this->nombrepadre);
+            $codigo_familia2=explode(" ", $this->nombre_madre);
+            $fecha_codigo1=explode("-", $this->fecha_codigo);
+
+            $this->codigo_familia3=$codigo_familia1[2].".".$codigo_familia2[2].".".$fecha_codigo1[0];
             }
             else{
                 DB::rollback();
@@ -425,6 +452,7 @@ class ValidacionComponent extends Component
                 $this->id_pre_ins=$estac->ID_PRE;
                 $this->id_no_gest=$estac->NO_GESTION;
             }
+            session(['id_pre' => $this->id_pre_ins]);
         }  
     }
 
@@ -504,5 +532,55 @@ class ValidacionComponent extends Component
                 $this->archivo_cdiaco=$estac->CONTRATO;
             }
         }  
+    }
+
+    public function validar_datos(){
+
+        if($this->validate([
+            'año_ingreso' => 'required',
+            'grado_primer_ingreso' => 'required',
+            'nombre_padre' => 'required',
+            'nacimiento_padre' => 'required',
+            'nacionalidad_padre' => 'required',
+            'lugar_nacimiento_padre' => 'required',
+            'DPI_padre' => 'required',
+            'celular_padre' => 'required',
+            'telefono_padre' => 'required',
+            'direccion_residencia' => 'required',
+            'correo_padre' => 'required',
+            'profesion_padre' => 'required',
+            'lugar_profesion_padre' => 'required',
+            'cargo_profesion_padre' => 'required',
+            'religion_padre' => 'required',
+            'NIT_padre' => 'required',
+            'nombre_madre' => 'required',
+            'fechana_madre' => 'required',
+            'nacionalidad_madre' => 'required',
+            'lugar_nacimiento_madre' => 'required',
+            'DPI_madre' => 'required',
+            'telefono_madre' => 'required',
+            'celular_madre' => 'required',
+            'direccion_residenciamadre'=> 'required',
+            'correo_madre'=> 'required',
+            'profesion_madre' =>'required',
+            'lugar_prof_madre' =>'required',
+            'cargo_madre' =>'required',
+            'religion_madre' =>'required',
+            'NIT_madre' =>'required',
+            'poliza' => 'required',
+            'carne_seguro' => 'required',
+
+
+
+        ])==false){
+            $error="no encontrado";
+            session(['validar'=> 1]);
+            session(['message'=>'no encontrado']);
+            return back()->withErrors(['error' => 'Validar el input vacio']);
+            
+        }
+        else{
+            $this->validacionv=1;
+        }
     }
 }
