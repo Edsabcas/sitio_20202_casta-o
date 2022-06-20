@@ -365,55 +365,77 @@ class ValidacionComponent extends Component
      
 
         public function update_comprobante_p(){
-            $ruta="C:/xampp/htdocs/repo_clon_casys/casys-pro-2.0/public/imagen/comprobantes2022/";
-            $archivo_comprobante="";
-            if($this->archivo_comprobante!=null){
-                if($this->archivo_comprobante->getClientOriginalExtension()=="jpg" or $this->archivo_comprobante->getClientOriginalExtension()=="png" or $this->archivo_comprobante->getClientOriginalExtension()=="jpeg"){
-                    $archivo_comprobante = "img".time().".".$this->archivo_comprobante->getClientOriginalExtension();
-                    $this->img=$archivo_comprobante;
-                    copy($this->archivo_comprobante->getRealPath(),$ruta.$this->img);
-/*                     $this->archivo_comprobante->storeAS('comprobantes/imagenes/', $this->img,'public_up');
- */                    $this->tipo=1;
+
+            if($this->validate([
+                'metodo' => 'required',
+              //  'observacion' => 'required',
+                'archivo_comprobante' => 'required',
+                ])==false){
+                $mensaje="no encontrado";
+               session(['message' => 'no encontrado']);
+                return  back()->withErrors(['mensaje'=>'Validar el input vacio']);
+            }else{
+                
+                $ruta="C:/xampp/htdocs/repo_casys_2022/casys-pro-2.0/public/imagen/comprobantes2022/";
+                $archivo_comprobante="";
+                if($this->archivo_comprobante!=null){
+                    if($this->archivo_comprobante->getClientOriginalExtension()=="jpg" or $this->archivo_comprobante->getClientOriginalExtension()=="png" or $this->archivo_comprobante->getClientOriginalExtension()=="jpeg" or $this->archivo_comprobante->getClientOriginalExtension()=="pdf"){
+                        $archivo_comprobante = "img".time().".".$this->archivo_comprobante->getClientOriginalExtension();
+                        $this->img=$archivo_comprobante;
+                        copy($this->archivo_comprobante->getRealPath(),$ruta.$this->img);
+    /*                     $this->archivo_comprobante->storeAS('comprobantes/imagenes/', $this->img,'public_up');
+     */                    $this->tipo=1;
+                    }
+                /*  elseif($this->archivo_comprobante->getClientOriginalExtension()=="pdf"){
+                        $archivo_comprobante = "pdf".time().".".$this->archivo_comprobante->getClientOriginalExtension();
+                        $this->img=$archivo_comprobante;
+                        $this->archivo_comprobante->storeAS('public/pdf/', $this->img,'public_up');
+                        $this->tipo=3;
+                        } */
                 }
-            /*  elseif($this->archivo_comprobante->getClientOriginalExtension()=="pdf"){
-                    $archivo_comprobante = "pdf".time().".".$this->archivo_comprobante->getClientOriginalExtension();
-                    $this->img=$archivo_comprobante;
-                    $this->archivo_comprobante->storeAS('public/pdf/', $this->img,'public_up');
-                    $this->tipo=3;
-                    } */
-            }
-            $id_pre=$this->id_pre;
-            $fpago=$this->fpago;
-            $metodo=$this->metodo;
-            $observacion=$this->observacion;
-
-
-            DB::beginTransaction();
+                $id_pre=$this->id_pre;
+                if($this->fpago!=null && $this->fpago!=""){
+                    $fpago=$this->fpago;
+                }else{
+                    $fpago=null;
+                }
+                
+                $metodo=$this->metodo;
+                if($this->observacion!=null && $this->observacion!=""){
+                    $observacion=$this->observacion;
+                }else{
+                    $observacion=".";
+                }
     
-            $comprobantes=DB::table('TB_PRE_INS')
-            ->where('ID_PRE',$id_pre)
-            ->update(
-                [
-                    'TIPO_PAGO'=>$metodo,
-                    'FORMA_PAGO'=>$fpago,
-                    'COMPROBANTE_PAGO'=>$archivo_comprobante,
-                    'FECHA_CAMBIOS_REG'=> date('y-m-d:h:m:s'),
-                    'ESTADO_PRE_INS'=>2,
-                    'OBSERVACION_COMP'=>$observacion
-                ]
-                );
-            if($comprobantes){
+                DB::beginTransaction();
+        
+                $comprobantes=DB::table('TB_PRE_INS')
+                ->where('ID_PRE',$id_pre)
+                ->update(
+                    [
+                        'TIPO_PAGO'=>$metodo,
+                        'FORMA_PAGO'=>$fpago,
+                        'COMPROBANTE_PAGO'=>$archivo_comprobante,
+                        'FECHA_CAMBIOS_REG'=> date('y-m-d:h:m:s'),
+                        'ESTADO_PRE_INS'=>2,
+                        'OBSERVACION_COMP'=>$observacion
+                    ]
+                    );
+                if($comprobantes){
+    
+                    DB::commit();
+                    $this->reset();
+                    unset($this->mensaje25);
+                    $this->mensaje24='Actualizado correctamente';
+                }
+                else{
+                    DB::rollback();
+                    unset($this->mensaje24);
+                    $this->mensaje25='No fue posible actualizar correctamente';
+                }
 
-                DB::commit();
-                $this->reset();
-                unset($this->mensaje25);
-                $this->mensaje24='Actualizado correctamente';
             }
-            else{
-                DB::rollback();
-                unset($this->mensaje24);
-                $this->mensaje25='No fue posible actualizar correctamente';
-            }
+           
         }
     
     
