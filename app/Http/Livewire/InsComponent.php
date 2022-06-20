@@ -27,9 +27,25 @@ class InsComponent extends Component
             }
            
         }
-        $sql="SELECT ID_GR,GRADO FROM tb_grados";
-        $grados=DB::select($sql);
+        if($this->tipo!=null && $this->tipo!="")
+        {
+            if($this->tipo=="Presencial"){
+                $sql="SELECT ID_GR,GRADO,JORNADA FROM tb_grados where JORNADA='1'";
+                $grados=DB::select($sql);
+                
+            }else{
+                $sql="SELECT ID_GR,GRADO,JORNADA FROM tb_grados where JORNADA='4'";
+                $grados=DB::select($sql);
+                
+            }
+
         return view('livewire.ins-component', compact('grados'));
+        }
+        else{
+
+            return view('livewire.ins-component');
+        }
+
     }
 
     public function valfecha(){
