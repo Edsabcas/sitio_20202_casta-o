@@ -243,6 +243,15 @@
                               </div>
                             </div>
                           </div>
+                          <h6>Monto Inscripción</h6>
+                        <p>{{$monto_ins}}</p>
+                        <br>
+                        <h6>Monto Mensualidad</h6>
+                        <p>{{$monto_men}}</p>
+                        <br>
+                        <h6>Total a cancelar</h6>
+                        <p>{{$monto_ins+$monto_men}}</p>
+                        <br>
                           <br> 
                         <div class="row g-3">
                           <div class="col-md">
@@ -630,6 +639,15 @@
                             </select>
                           </div>
                         </div>
+                        <br>
+                        <h6>Monto Inscripción</h6>
+                        <p>{{$monto_ins}}</p>
+                        <br>
+                        <h6>Monto Mensualidad</h6>
+                        <p>{{$monto_men}}</p>
+                        <br>
+                        <h6>Total a cancelar</h6>
+                        <p>{{$monto_ins+$monto_men}}</p>
                         <br>
                         <div class="row g-3">
                           <div class="col-md">
