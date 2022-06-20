@@ -243,7 +243,7 @@
                               </div>
                             </div>
                           </div>
-                          <h6>Monto Inscripción</h6>
+                        <h6>Monto Inscripción</h6>
                         <p>{{$monto_ins}}</p>
                         <br>
                         <h6>Monto Mensualidad</h6>

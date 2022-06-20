@@ -70,7 +70,7 @@
                           </select>
                         </div>
                       <br>
-                      <h5>Grados seleeccionados: {{$grados_mostrar}}</h5>
+                      <h5>Grados selecionados: {{$grados_mostrar}}</h5>
                       @endif  
                         
                       <br>
