@@ -10,7 +10,7 @@ class InsComponent extends Component
 {
     public $gradoin,$nombre_es,$f_nacimiento_es,$genero,$cui_es,$codigo_pe_es,$nac_es,$lug_nac_es,$tel_es,$cel_es,$direccion_es,$religion_es;
     public $nombre_en,$fnacimiento_en,$dpi_en,$extentido_en,$es_civil_en,$direccion_en,$tel_casa_en,$cel_en,$correo_en,$religion_en;
-    public $a,$mensaje,$gradose,$correo_en2,$tipo;
+    public $a,$mensaje,$gradose,$correo_en2,$tipo,$profesion_en;
     public $val,$val1,$gestion,$errorfecha;
     public function render()
     {
@@ -124,6 +124,7 @@ class InsComponent extends Component
             'cel_en' => 'required',
             'correo_en' => 'required',
             'religion_en' => 'required',
+            'profesion_en'=>'required',
             ])==false){
             $mensaje="no encontrado";
            session(['message' => 'no encontrado']);
@@ -156,6 +157,7 @@ class InsComponent extends Component
             'cel_en' => 'required',
             'correo_en' => 'required',
             'religion_en' => 'required',
+            'profesion_en'=> 'required',
             ])==false){
             $mensaje="no encontrado";
            session(['message' => 'no encontrado']);
@@ -201,6 +203,7 @@ class InsComponent extends Component
                     'FECHA_REGISTRO'=>  date("Y-m-d H:i:s"),
                     'FECHA_CAMBIOS_REG'=>  date("Y-m-d H:i:s"),
                     'MODALIDAD_EST'=> $this->tipo,
+                    'PROFESION_EN_ES'=> $this->profesion_en,
                 ]
             );
 

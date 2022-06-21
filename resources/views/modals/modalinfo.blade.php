@@ -21,10 +21,17 @@
                           
                         </thead>
                         <tbody>
-                          <th>Grado:</th>
+                          <tr>
+                            <th>Grado:</th>
+                            <th>
+                              <b>{{$gradose}}</b>
+                            </th>
+                          </tr>
+                          <th>Modalidad estudio:</th>
                           <th>
-                            <b>{{$gradose}}</b>
+                            <b>{{$tipo}}</b>
                           </th>
+                        </tr>
                         </tbody>
                       </table>
                     </div>
@@ -143,6 +150,10 @@
                               <td><b>{{$es_civil_en}}</b> </td>
                             </tr>
                             <tr>
+                              <td>Profesión:</td>
+                              <td><b>{{$profesion_en}}</b> </td>
+                            </tr>
+                            <tr>
                               <td>Direccion de residencia:</td>
                               <td> <b>{{$direccion_en}} </b> </td>
                             </tr>
@@ -156,6 +167,10 @@
                             </tr>
                             <tr>
                               <td>Correo Electronico: </td>
+                              <td><b>{{$correo_en}} </b></td>
+                            </tr>
+                            <tr>
+                              <td>2do. Correo Electronico (opcional): </td>
                               <td><b>{{$correo_en}} </b></td>
                             </tr>
                             <tr>

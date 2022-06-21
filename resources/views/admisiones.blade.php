@@ -438,23 +438,34 @@
           <div class="form-check form-check-inline">
             <input class="form-check-input"  type="radio" wire:model="es_civil_en" value="Casado" id="flexRadioEstado1">
             <label class="form-check-label" for="flexRadioEstado1" style="font-size: 15px; color:#000000;">
-            Casado
+            Casado(a)
             </label>
           </div>
           <div class="form-check form-check-inline">
             <input class="form-check-input" type="radio" wire:model="es_civil_en" value="Soltero" id="flexRadioEstado2">
             <label class="form-check-label" for="flexRadioEstado2" style="font-size: 15px; color:#000000;">
-              Soltero
+              Soltero(a)
             </label>
           </div>
           <div class="form-check form-check-inline">
             <input class="form-check-input" type="radio" wire:model="es_civil_en"  value="Viuda" id="flexRadioEstado3">
             <label class="form-check-label" for="flexRadioEstado3" style="font-size: 15px; color:#000000;">
-              Viuda/o
+              Viudo(a)
             </label>
           </div>
         </div>
         @error('es_civil_en')
+        <div class="alert alert-warning" role="alert">
+         Pendiente
+        </div>
+        @enderror
+        <div class="col-md">
+          <div class="form-group col-xs-12">
+            <label for="inputApellidos" style="font-size: 15px; color:#000000;">Profesión:</label>
+            <input type="text" placeholder="" type="text" wire:model="profesion_en" class="form-control " required>
+        </div>
+        </div>
+        @error('profesion_en')
         <div class="alert alert-warning" role="alert">
          Pendiente
         </div>
