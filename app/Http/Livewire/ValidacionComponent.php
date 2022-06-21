@@ -363,8 +363,14 @@ class ValidacionComponent extends Component
             $codigo_familia1=explode(" ", $this->nombrepadre);
             $codigo_familia2=explode(" ", $this->nombre_madre);
             $fecha_codigo1=explode("-", $this->fecha_codigo);
-
             $this->codigo_familia3=$codigo_familia1[2].".".$codigo_familia2[2].".".$fecha_codigo1[0];
+            $inscripcion_datos=DB::table('TB_PRE_INFO')->insert(
+                [
+                    "CODIGO_FAMILIA"=>$this->codigo_familia3,
+                    "NOMBRE_FAMILIA"=>$this->codigo_familia3,
+                ]
+                );
+
             }
             else{
                 DB::rollback();
