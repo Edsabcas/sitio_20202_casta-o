@@ -146,12 +146,12 @@
 
             <tr>            
             <td> <strong> a) INSCRIPCION POR EDUCANDO</strong> <br> (solo un pago anual) </td>
-            <td> <strong>Q.</strong></td>
+            <td> <strong>Q.{{$datos[18]}}</strong></td>
             </tr>
             
             <tr>
             <td> <strong>b) COLEGIATURA MENSUAL:</strong> <br> (10 Cuotas en los meses de Enero a Octubre)</td>
-            <td><strong>Q.</strong></td>            
+            <td><strong>Q.{{$datos[19]}}</strong></td>            
             </tr>
         
         </table>

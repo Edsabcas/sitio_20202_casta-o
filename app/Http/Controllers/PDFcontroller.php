@@ -120,10 +120,20 @@ class PDFcontroller extends Controller
                 $datos_padre15=$preinz->NO_CORRELATIVO_P2;
             }
         }
+
+        $sql = "SELECT * FROM cuentaestudiante where ID_PRE=?";
+                $cuentas= DB::select($sql,array($id_pre));
+        
+                foreach($cuentas as $cuenta){
+                    $monto=$cuenta->MONTO_INSCRIPCION;
+                    $monto2=$cuenta->MONTO_MENSUAL;
+                }
+                $monto_anual=$monto2*10;
         $nacimiento=explode("-", $datos_padre11);
         $nacimiento_total=$fecha_separada[0]-$nacimiento[0];
         $datos=array($fecha_separada[0],$fecha_separada[1],$fecha_separada[2], $datos_padre, $datos_padre2, $datos_padre3, $datos_padre4, $datos_padre5, 
-        $datos_padre6, $datos_padre7, $datos_padre8, $datos_padre9, $datos_padre10,$datos_padre12,$datos_padre13, $nacimiento_total, $datos_padre14, $datos_padre15);
+        $datos_padre6, $datos_padre7, $datos_padre8, $datos_padre9, $datos_padre10,$datos_padre12,$datos_padre13, $nacimiento_total, $datos_padre14, $datos_padre15,
+        $monto, $monto_anual);
         $pdf = PDF::loadView('estados.PDFexport.PDFDIACO', compact('datos'));
         return $pdf->stream();
         return view('estados.PDFexport.PDFDIACO');
