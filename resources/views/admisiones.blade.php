@@ -526,7 +526,7 @@
         
           <div class="col-md">
             <label for="inputApellidos" style="font-size: 15px; color:#000000;">Segundo correo electronico (opcional):</label>
-            <input placeholder="" type="email2"  wire:model="correo_en2" class="form-control " required>
+            <input placeholder="" type="email"  wire:model="correo_en2" class="form-control " required>
         </div>
         
     </div>
