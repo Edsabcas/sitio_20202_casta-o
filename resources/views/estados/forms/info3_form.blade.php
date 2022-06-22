@@ -1274,13 +1274,13 @@
             <center>
             <div style="width: 12rem;">
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="retirapor" id="retirapor1" wire:click="solo_por('1')">
+                <input class="form-check-input" type="radio" wire.model="retirapor" value="1" id="retirapor1" wire:click="solo_por('1')">
                 <label class="form-check-label" for="retirapor1">
                   Florida
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="retirapor" id="retirapor2" wire:click="solo_por('2')">
+                <input class="form-check-input" type="radio" wire.model="retirapor" value="2" id="retirapor2" wire:click="solo_por('2')">
                 <label class="form-check-label" for="retirapor1">
                   Monserrat
                 </label>
@@ -1360,13 +1360,13 @@
             <center>
             <div style="width: 12rem;">
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="buspor" id="buspor1" wire:click="bus_por('1')">
+                <input class="form-check-input" type="radio" wire.model="buspor" value="1" id="buspor1" wire:click="bus_por('1')">
                 <label class="form-check-label" for="buspor1">
                   Florida
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="buspor" id="buspor2" wire:click="buss_por('2')">
+                <input class="form-check-input" type="radio" wire.model="buspor" value="2" id="buspor2" wire:click="buss_por('2')">
                 <label class="form-check-label" for="buspor1">
                   Monserrat
                 </label>
@@ -1432,13 +1432,13 @@
 
     </form>
     <div class="modal-footer">
-      <button type="button" class="btn btn-pre2" wire:click='validar_datos()'>Validar</button>.
 
-      @if($validacionv==1)
-           @if($quien_encargado1==1)
-          <button type="button" class="btn btn-pre2" wire:click='insertar_datos()' data-bs-dismiss="modal">Envíar Información</button>.
+      <button type="button" class="btn btn-pre2" wire:click='validar_datos()'>Validar Información</button>.
+      @if($quien_encargado1==1)
+         @if($validacionv==1)
+       <button type="button" class="btn btn-pre2" wire:click='insertar_datos()' data-bs-dismiss="modal">Envíar Información</button>.
 
-          @elseif($quien_encargado1==2)
+       @elseif($quien_encargado1==2)
           <button type="button" class="btn btn-pre2" wire:click='insertar_datos2()' data-bs-dismiss="modal">Envíar Información</button>.
           
           @elseif($quien_encargado1==3)
