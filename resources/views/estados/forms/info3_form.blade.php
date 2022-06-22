@@ -1434,14 +1434,14 @@
     <div class="modal-footer">
 
       <button type="button" class="btn btn-pre2" wire:click='validar_datos()'>Validar Información</button>.
-      @if($quien_encargado1==1)
-         @if($validacionv==1)
-       <button type="button" class="btn btn-pre2" wire:click='insertar_datos()' data-bs-dismiss="modal">Envíar Información</button>.
+      @if($validacionv==1)
+          @if($quien_encargado1==1)
+          <button type="button" class="btn btn-pre2" wire:click='insertar_datos()' data-bs-dismiss="modal">Envíar Información1</button>.
           @elseif($quien_encargado1==2)
-          <button type="button" class="btn btn-pre2" wire:click='insertar_datos2()' data-bs-dismiss="modal">Envíar Información</button>.
+          <button type="button" class="btn btn-pre2" wire:click='insertar_datos2()' data-bs-dismiss="modal">Envíar Información2</button>.
           
           @elseif($quien_encargado1==3)
-          <button type="button" class="btn btn-pre2" wire:click='insertar_datos3()' data-bs-dismiss="modal">Envíar Información</button>.
+          <button type="button" class="btn btn-pre2" wire:click='insertar_datos3()' data-bs-dismiss="modal">Envíar Información3</button>.
           @endif
       
       @endif
