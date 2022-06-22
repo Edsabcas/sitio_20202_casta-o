@@ -7,7 +7,13 @@
     <title>Reglamento</title>
 </head>
 <body>
-    <center><strong><p>COLEGIO BILINGÜE “EL CASTAÑO” REGLAMENTO </p></strong></center>
+    <div class="row">
+        <img align="right" src="img/lo.png" height="80" weight="80" alt="...">
+        <br>
+        <center><strong><p>COLEGIO BILINGÜE “EL CASTAÑO” REGLAMENTO </p></strong></center>
+        
+    </div>
+    
     <p>La finalidad de este reglamento es promover y desarrollar en toda la comunidad educativa los principios y
         elementos que construyan una sana convivencia, formación, y funcionamiento de la institución que redunde en
         beneficio de los alumnos </p>
