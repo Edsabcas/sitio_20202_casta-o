@@ -133,7 +133,7 @@
                     <div class="tab">
                       <div class="row">
                           <div class="col-md-6">
-                              <strong><label  for="Labelnombrepadre" class="form-label">Nombre y Apellido Completo</label></strong>
+                              <strong><label  for="Labelnombrepadre" class="form-label">Nombres y Apellidos</label></strong>
                               <input  type="text" class="form-control"  wire:model="nombre_padre">
                             </div>
                             
@@ -426,7 +426,7 @@
                 <div class="tab">
                   <div class="row">
                   <div class="col-md-6">
-                    <strong><label  for="Labelnombrepadre" class="form-label">Nombre y Apellido Completo</label></strong>
+                    <strong><label  for="Labelnombrepadre" class="form-label">Nombres y Apellidos</label></strong>
                     <input  type="text" class="form-control"  wire:model="nombre_madre">
                   </div>
                   
