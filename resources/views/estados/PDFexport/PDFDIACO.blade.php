@@ -70,8 +70,6 @@
                 <td style="width:90mm">(DPI)</td>
                 </tr>
             </table> 
-            <p style="text-align: justify;"><u><Strong>{{$datos[13]}}</Strong></u>, de <u><strong>{{$datos[15]}} años, {{$datos[5]}}, {{$datos[6]}}, {{$datos[20]}}</strong></u>, de este domicilio, me identifico con el <u><strong>DPI: {{$datos[7]}}</strong></u></p>
-            
 
             <p style="text-align: justify;">con residencia en: <u><strong>{{$datos[8]}}</strong></u>
             con número de teléfono de casa <u><strong>{{$datos[9]}}</strong></u>, oficina <u><strong>{{$datos[10]}}</strong></u>
@@ -188,6 +186,11 @@
         <p style="text-align: justify;"><strong>SEPTIMA. <u>DE LAS CUOTAS.</u></strong>Como padre de familia o representante legal me comprometo a efectuar únicamente
         los siguientes pagos, sin necesidad de cobro ni requerimiento alguno: 
         </p>
+        <br>
+        <br>
+
+        <br>
+        <br>
         <table border="1px">
 
             <tr>
