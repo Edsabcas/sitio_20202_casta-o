@@ -363,7 +363,25 @@ class ValidacionComponent extends Component
             $codigo_familia1=explode(" ", $this->nombrepadre);
             $codigo_familia2=explode(" ", $this->nombre_madre);
             $fecha_codigo1=explode("-", $this->fecha_codigo);
-            $this->codigo_familia3=$codigo_familia1[2].".".$codigo_familia2[2].".".$fecha_codigo1[0];
+            $codigo_familia4= count($codigo_familia1);
+            $codigo_familia5= count($codigo_familia2);
+
+
+            if($codigo_familia4==3 && $codigo_familia5==3){
+                $this->codigo_familia3=$codigo_familia1[1].".".$codigo_familia2[1].".".$fecha_codigo1[0];
+
+            }
+
+            elseif($codigo_familia4==4 && $codigo_familia5==4 ){
+                $this->codigo_familia3=$codigo_familia1[2].".".$codigo_familia2[2].".".$fecha_codigo1[0];
+
+            }
+
+            elseif($codigo_familia4==5 && $codigo_familia5==5 ){
+                $this->codigo_familia3=$codigo_familia1[3].".".$codigo_familia2[3].".".$fecha_codigo1[0];
+            }
+
+
             $inscripcion_datos=DB::table('TB_PRE_INFO')->insert(
                 [
                     "CODIGO_FAMILIA"=>$this->codigo_familia3,
@@ -392,7 +410,7 @@ class ValidacionComponent extends Component
                 return  back()->withErrors(['mensaje'=>'Validar el input vacio']);
             }else{
                 
-                $ruta="C:/xampp/htdocs/repo_casys_2022/casys-pro-2.0/public/imagen/comprobantes2022/";
+                $ruta="C:/xampp/htdocs/repo_clon_casys/casys-pro-2.0/public/imagen/comprobantes2022";
                 $archivo_comprobante="";
                 if($this->archivo_comprobante!=null){
                     if($this->archivo_comprobante->getClientOriginalExtension()=="jpg" or $this->archivo_comprobante->getClientOriginalExtension()=="png" or $this->archivo_comprobante->getClientOriginalExtension()=="jpeg" or $this->archivo_comprobante->getClientOriginalExtension()=="pdf"){
