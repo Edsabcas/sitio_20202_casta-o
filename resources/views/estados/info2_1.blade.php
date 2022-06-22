@@ -17,7 +17,7 @@
         </div>
         <div class="card border-0">
             <div class="card-header text-center border-0">
-                <span style="color:black">Seguimiento de su proceso de pre-inscripción.</span>
+                <span style="color:black">Seguimiento de su proceso de inscripción.</span>
             </div>
         <div class="card-body">
             <div class="row">
@@ -90,7 +90,7 @@
                 <br>
                 <div class="timeline-panel">
                     <div class="timeline-heading">
-                        <h4 style="color: #3a3e7b; font-size: 16px;"><strong>1. PRE-INSCRIPCIÓN</strong></h4>
+                        <h4 style="color: #3a3e7b; font-size: 16px;"><strong>1. INSCRIPCIÓN</strong></h4>
                     </div>
                     <div class="timeline-body">
                         <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="#a4cb39" class="bi bi-pencil-square" viewBox="0 0 16 16">
@@ -99,7 +99,7 @@
                         </svg> 
                         <br> 
                         <br>                        
-                        <p><strong style="font-size: 12px;">Su pre-inscripción fue enviada con éxito.</strong></p>
+                        <p><strong style="font-size: 12px;">Su inscripción fue enviada con éxito.</strong></p>
                     </div>
                 </div>
             </li>
@@ -120,7 +120,7 @@
                   <br>
                 <div class="timeline-panel text-center">
                     <div class="timeline-heading">
-                        <h4 style="color: #3a3e7b; font-size: 16px;"><strong>2. VALIDACIÓN DE PRE-INSCRIPCIÓN</strong></h4>
+                        <h4 style="color: #3a3e7b; font-size: 16px;"><strong>2. VALIDACIÓN DE INSCRIPCIÓN</strong></h4>
                     </div>
                     <div class="timeline-body">
                         <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="#a4cb39" class="bi bi-clipboard-check" viewBox="0 0 16 16">
@@ -128,7 +128,7 @@
                             <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
                             <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
                         </svg>                       
-                        <p><strong style="font-size: 12px;">Su información fue recibida y validada con éxito, por favor realice el siguiente paso habilitado.</strong></p>
+                        <p><strong style="font-size: 12px;">Su información fue recibida, en la brevedad posible su información será procesada y se le notificará por medio de correo electrónico.</strong></p>
                     </div>
                 </div>
             </li>
@@ -207,7 +207,7 @@
                         <br>
                         
                         </div>
-                        <p><strong style="font-size: 12px;">Prendiente ingrese los datos solicitados para la inscripción</strong></p>
+                        <p><strong style="font-size: 12px;">Pendiente de ingresar los datos solicitados para la inscripción.</strong></p>
                 </div>                
             </li>
             <div class="d-flex justify-content-center">
@@ -264,7 +264,7 @@
                         </svg> 
                         <br>                                        
                         </div>
-                        <p><strong style="font-size: 12px;">Pendiente de generar su contrato para rellenarlo.</strong></p>
+                        <p><strong style="font-size: 12px;">Pendiente de generar su contrato para ingresar datos.</strong></p>
                 </div>
             </li>
             <div class="d-flex justify-content-center">
@@ -292,7 +292,7 @@
                         </svg> 
                         <br>                                        
                         </div>
-                        <p><strong style="font-size: 12px;">Su contrato será enviado y entrará en proceso de validación.</strong></p>
+                        <p><strong style="font-size: 12px;">Su contrato aun no ha sido recibido para el proceso de validación.</strong></p>
                 </div>
         </li>
         <div class="d-flex justify-content-center">
@@ -320,7 +320,7 @@
                       </svg>
                     <br>                                        
                     </div>
-                    <p><strong style="font-size: 12px;">Ceación de usuarios y envío por correo.</strong></p>
+                    <p><strong style="font-size: 12px;">Los usuarios aun no han sido creados.</strong></p>
             </div>
          </li>
          <div class="d-flex justify-content-center">

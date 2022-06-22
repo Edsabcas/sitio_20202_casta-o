@@ -11,7 +11,7 @@ class InsComponent extends Component
     public $gradoin,$nombre_es,$f_nacimiento_es,$genero,$cui_es,$codigo_pe_es,$nac_es,$lug_nac_es,$tel_es,$cel_es,$direccion_es,$religion_es;
     public $nombre_en,$fnacimiento_en,$dpi_en,$extentido_en,$es_civil_en,$direccion_en,$tel_casa_en,$cel_en,$correo_en,$religion_en;
     public $a,$mensaje,$gradose,$correo_en2,$tipo,$profesion_en;
-    public $val,$val1,$gestion,$errorfecha;
+    public $val,$val1,$gestion,$errorfecha,$tipo_ins;
     public function render()
     {
         if($this->f_nacimiento_es!=null)
@@ -112,6 +112,17 @@ class InsComponent extends Component
             $this->a=5;
         }
     }
+    public function valtipoins(){
+        if($this->validate([
+            'tipo_ins' => 'required',
+            ])==false){
+            $mensaje="no encontrado";
+           session(['message' => 'no encontrado']);
+            return  back()->withErrors(['mensaje'=>'Validar el input vacio']);
+        }else{
+            $this->a=6;
+        }
+    }
     public function val3(){
         if($this->validate([
             'nombre_en' => 'required',
@@ -158,6 +169,8 @@ class InsComponent extends Component
             'correo_en' => 'required',
             'religion_en' => 'required',
             'profesion_en'=> 'required',
+            'tipo_ins'=> 'required',
+            
             ])==false){
             $mensaje="no encontrado";
            session(['message' => 'no encontrado']);
@@ -204,6 +217,8 @@ class InsComponent extends Component
                     'FECHA_CAMBIOS_REG'=>  date("Y-m-d H:i:s"),
                     'MODALIDAD_EST'=> $this->tipo,
                     'PROFESION_EN_ES'=> $this->profesion_en,
+                    'TIPO_INS'=> $this->tipo_ins,
+                    
                 ]
             );
 

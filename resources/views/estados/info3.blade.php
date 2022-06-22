@@ -37,7 +37,7 @@
 
 <div class="card border-0">
     <div class="card-header text-center border-0">
-        <span style="color:black">Seguimiento de su proceso de pre-inscripción.</span>
+        <span style="color:black">Seguimiento de su proceso de inscripción.</span>
     </div>
     <div class="card-body">
         <div class="row">
@@ -113,7 +113,7 @@
                 <br>
                 <div class="timeline-panel">
                     <div class="timeline-heading">
-                        <h4 style="color: #3a3e7b; font-size: 16px;"><strong>1. PRE-INSCRIPCIÓN</strong></h4>
+                        <h4 style="color: #3a3e7b; font-size: 16px;"><strong>1. INSCRIPCIÓN</strong></h4>
                     </div>
                     <div class="timeline-body">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#a4cb39" class="bi bi-pencil-square" viewBox="0 0 16 16">
@@ -122,7 +122,7 @@
                         </svg> 
                         <br> 
                         <br>                        
-                        <p><strong style="font-size: 12px;">Su pre-inscripción fue enviada con éxito.</strong></p>
+                        <p><strong style="font-size: 12px;">Su inscripción fue enviada con éxito.</strong></p>
                     </div>
                 </div>
             </li>
@@ -141,7 +141,7 @@
                   <br>
                 <div class="timeline-panel">
                     <div class="timeline-heading">
-                        <h4 style="color: #3a3e7b; font-size: 16px;"><strong>2. VALIDACIÓN DE PRE-INSCRIPCIÓN</strong></h4>
+                        <h4 style="color: #3a3e7b; font-size: 16px;"><strong>2. VALIDACIÓN DE INSCRIPCIÓN</strong></h4>
                     </div>
                     <div class="timeline-body">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#a4cb39" class="bi bi-clipboard-check" viewBox="0 0 16 16">
@@ -166,7 +166,7 @@
                     </svg>
                 </div>
                   <br>
-                <div class="timeline-panel">
+                <div class="timeline-panel" style=" opacity: 0.8;">
                     <div class="timeline-heading">
                         <h4 style="color: #3a3e7b; font-size: 16px;"><strong>3. PAGO</strong></h4>
                     </div>
@@ -235,7 +235,7 @@
                         <p>Ingrese los datos solicitados para la inscripción.</p>
                 </div>
                 <button type="button" class="btn btn-pre2" data-bs-toggle="modal" data-bs-target="#ModalInscripcion" wire:click="ver_form_ins('1')" >
-                    <strong> Formulario datos de inscripción</strong></button>
+                    <strong> Datos de inscripción</strong></button>
                  @include('estados.forms.info3_form')
 
                 <div class="d-flex justify-content-center">
@@ -292,7 +292,7 @@
                             </svg> 
                             <br>                                        
                             </div>
-                            <p><strong style="font-size: 12px;">Pendiente de generar su contrato para rellenarlo.</strong></p>
+                            <p><strong style="font-size: 12px;">Pendiente de generar su contrato para ingresar datos.</strong></p>
                     </div>
                 </li>
                 <div class="d-flex justify-content-center">
@@ -320,7 +320,7 @@
                             </svg> 
                             <br>                                        
                             </div>
-                            <p><strong style="font-size: 12px;">Su contrato ha sido recibido y se encuentra en proceso de validación.</strong></p>
+                            <p><strong style="font-size: 12px;">Su contrato aun no ha sido recibido para el proceso de validación.</strong></p>
                     </div>
             </li>
             <div class="d-flex justify-content-center">
@@ -348,7 +348,7 @@
                           </svg>
                         <br>                                        
                         </div>
-                        <p><strong style="font-size: 12px;">Ceación de usuarios y envío por correo.</strong></p>
+                        <p><strong style="font-size: 12px;">Los usuarios aun no han sido creados.</strong></p>
                 </div>
              </li>
              <div class="d-flex justify-content-center">

@@ -23,40 +23,90 @@
             este Municipio lo que acredito con Resolución: No. 005-95-EP., de fecha 9 de enero de 1995, emitida por Direcciòn 
             Tecnica Regional Metropolitana, . Y por la otra parte: </p>
         <p>(DATOS DEL PADRE DE FAMILIA O REPRESENTANTE LEGAL DEL EDUCANDO)</p>
-            <p style="text-align: justify;"><u><Strong>{{$datos[13]}}</Strong></u>, de <u><strong>{{$datos[15]}} años, {{$datos[5]}}, {{$datos[6]}}, {{$datos[20]}}</strong></u>, de este domicilio, me identifico con el <u><strong>DPI: {{$datos[7]}}</strong></u></p>
-            
+        <table align="center">
+            <tr>
+                <td><u><Strong>{{$datos[13]}}</Strong></u></td>
+            </tr> 
+        </table> 
+        <hr>
+        <table align="center">
+            <tr>
+                <td>(Nombres)(Apellidos)</td>
+            </tr>
+        </table>
+        
+       <div class="container">
+        <center>
+        <table align="center">
+            <tr>
+                <th style="width:50mm">de <u><strong>{{$datos[15]}} años</th>
+                    <th style="width:70mm"><u><strong>{{$datos[6]}}</strong></u></th>
+                <th style="width:50mm"><u><strong>{{$datos[5]}}</strong></u></th>
+            </tr>
+              
+        </table> 
+    </center>
+       </div>
+       <hr>
+       <table align="center">
+        <tr>            
+            <td style="width:75mm">(Años de edad)</td>
+            <td style="width:70mm">(Estado civil)</td>
+            <td style="width:50mm">(Nacionalidad)</td>
+            </tr>
+       </table>
+    
+        <table align="center">
+            <tr>
+                <td style="width:90mm"><u><Strong>{{$datos[20]}}</strong></u></Strong></u></td> 
+                <td style="width:90mm"><u><strong>{{$datos[7]}}</strong></strong></u></td>
+            </tr>
+              
+        </table>
+        <hr>
+        <table align="center">
+            <tr>            
+                <td style="width:90mm">(profesión u oficio)</td>
+                <td style="width:90mm">(DPI)</td>
+                </tr>
+            </table> 
 
-            <p style="text-align: justify;">extendido en <u><strong>Mixco</strong></u>, con residencia en: <u><strong>{{$datos[8]}}</strong></u>
+            <p style="text-align: justify;">con residencia en: <u><strong>{{$datos[8]}}</strong></u>
             con número de teléfono de casa <u><strong>{{$datos[9]}}</strong></u>, oficina <u><strong>{{$datos[10]}}</strong></u>
-         y celular <u><strong>{{$datos[11]}}</strong></u>, correo electrónico <u><strong>{{$datos[12]}}</strong></u>
-        actuando en mi calidad de <u><strong>Encargado</strong></u>, (en adelante relacionado como “el 
-        Representante del educando”) declarando que la información personal proporcionada es de carácter confidencial. 
-        Los comparecientes aseguramos ser de los datos de identificación anotados, estar en el libre ejercicio de nuestros 
-        derechos civiles y celebramos CONTRATO DE ADHESION POR PRESTACION DE SERVICIOS EDUCATIVOS, de 
+         , celular <u><strong>{{$datos[11]}}</strong></u> y correo electrónico <u><strong>{{$datos[12]}}</strong></u>,
+         declarando que la información personal proporcionada es de carácter confidencial. Los comparecientes aseguramos ser responsables de los datos de identificación anotados, estar en el libre ejercicio de nuestros 
+        derechos civiles y la calidad que se ejercita es amplia y sufieciente para la celebración del CONTRATO DE ADHESION POR PRESTACION DE SERVICIOS EDUCATIVOS, de 
         conformidad con las siguientes cláusulas:</p>
             
         
         <strong><p>PRIMERA. <u>INFORMACION DEL EDUCANDO Y SERVICIO EDUCATIVO CONTRATADO</u></p></strong>
-        <p style="text-align: justify;"><u><strong>{{$datos[14]}}</strong></u> quien cursará el <u><strong>Grado de ingreso alumno</strong></u> grado, del nivel y/o carrera <u><strong>nombre carrera</strong></u>, 
-            jornada matutina, plan diario. Servicio educativo autorizado por el Ministerio de Educación según Resolución(es) No. 
-            005-95-EP. Con fecha 9 de enero de 1995, emitida por la Direcciòn Tecnica Regional Metropolitana; No. 0204-99-
+        <table align="center">
+            <tr>
+                <td><u><Strong><strong>{{$datos[14]}}</Strong></u></td> 
+            </tr>
+             
+        </table>
+        <hr> 
+        <table align="center">
+            <tr>            
+                <td>(Nombres) (Apellidos)</td>
+                </tr> 
+        </table>
+        <p style="text-align: justify;">quien cursará el grado de: <u><strong>{{$datos[21]}}</strong></u>, del nivel: <u><strong>{{$datos[22]}}</strong></u>, 
+            jornada <u><strong>{{$datos[23]}}</strong></u>. </p>
+        <p style="text-align: justify;">
+            Servicios educativos debidamente autorizados por el Ministerio de Educación, de conformidad con Resolución(es) a)No. 
+            005-95-EP. Con fecha 9 de enero de 1995, emitida por la Direcciòn Tecnica Regional Metropolitana; b)No. 0204-99-
             E.P. con fecha 13 de marzo de 1999 emitida por la Direcciòn Departamental de Guatemala, misma(s) que se tiene(n) 
             a la vista.</p>
         <p style="text-align: justify;"> <strong>SEGUNDA. <u>VOLUNTARIEDAD EN LA CONTRATACION DEL SERVICIO.</u> </strong> Manifiesta el Representante del 
             Educando, que conociendo la amplia oferta de instituciones privadas que prestan servicios educativos, de manera 
-            voluntaria y espontánea ha elegido al Centro Educativo para la educación académica del educando, pues a su juicio 
-            cumple con todos y cada uno de los requerimientos que necesita satisfacer para el efecto. Por tal razón el 
-            responsable del educando se obliga a cumplir la totalidad de las obligaciones contraídas en el presente Contrato bajo 
-            el entendido que de generarse cualquier incumplimiento, no solo por el Responsable del Educando sino además del 
-            Centro Educativo, genera las consecuencias indicadas en el presente Contrato, así como las determinadas por la 
-            Legislación vigente.
+            voluntaria y espontánea ha elegido al Centro Educativo para la educación académica del educando.
             </p>
-        <p style="text-align: justify;"> <strong>TERCERA. <u>DEL PLAZO.</u></strong> El servicio educativo convenido en este contrato será válido para el ciclo escolar del año 
+        <p style="text-align: justify;"> <strong>TERCERA. <u>PLAZO.</u></strong> El servicio educativo convenido en este contrato será válido para el ciclo escolar del año 
             <strong>{{$datos[0]}}</strong>, durante su vigencia no puede ser modificada ninguna de sus cláusulas, las que se 
-            deberán cumplir a cabalidad; así como con todo lo ofrecido a los padres de familia, tanto en la publicidad efectuada 
-            en los medios de comunicación, información escrita o cualquier otro documento publicitario. El representante del 
-            Educando y el Centro Educativo podrán suscribir un Nuevo Contrato para el ciclo escolar inmediato siguiente, en 
-            caso acuerden la continuidad del educando en el Centro Educativo.</p>
+            deberán cumplir a cabalidad. El representante del Educando y el Centro Educativo podrán suscribir un Nuevo Contrato para el ciclo escolar inmediato siguiente, en 
+            caso acuerden la continuidad del educando.</p>
         <p style="text-align: justify;"> <strong><p>CUARTA. <u>DERECHOS DEL EDUCANDO, PADRE DE FAMILIA O REPRESENTANTE LEGAL.</u></p></strong> Como usuarios del servicio educativo contratado en armonía con el Artículo 4 de la Ley de Protección al Consumidor y Usuario, tendrá 
             derecho a:</p>
             <ul>
@@ -112,11 +162,7 @@
                     exista una solución satisfactoria deberá interponer la queja correspondiente ante la DIACO quien procederá 
                     según corresponda</p></li>
             </ul>
-        <p style="text-align: justify;"><strong>QUINTA. <u>DEL DERECHO DE RETRACTO.</u></strong>El padre de familia o representante legal del educando tendrá derecho a 
-        retractarse dentro de un plazo no mayor de cinco días hábiles contados a partir de la firma del contrato, siempre que 
-        no hubiere hecho uso del bien o servicio. Si ejercita oportunamente este derecho, le serán restituidos en su totalidad 
-        los valores pagados.</p>
-        <p style="text-align: justify;"><strong>SEXTA. <u>OBLIGACIONES DEL PADRE DE FAMILIA O REPRESENTANTE LEGAL DEL EDUCANDO.</u></strong>En armonía 
+        <p style="text-align: justify;"><strong>QUINTA. <u>OBLIGACIONES DEL PADRE DE FAMILIA O REPRESENTANTE LEGAL DEL EDUCANDO.</u></strong>En armonía 
         con el Artículo 5 de la Ley de Protección al Consumidor y Usuario, tendrá las siguientes obligaciones:
         </p>
         <ul>
@@ -133,9 +179,10 @@
                 legales y reglamentarias vigentes, pues en caso contrario serán nulas y no obligarán al Representante del 
                 Educando.</li>
         </ul>
-        <p style="text-align: justify;"><strong>SEPTIMA. <u>DE LAS CUOTAS.</u></strong>Como padre de familia o representante legal me comprometo a efectuar únicamente
+        <p style="text-align: justify;"><strong>SEXTA. <u>DE LAS CUOTAS.</u></strong>Como padre de familia o representante legal me comprometo a efectuar únicamente
         los siguientes pagos, sin necesidad de cobro ni requerimiento alguno: 
         </p>
+        
         <table border="1px">
 
             <tr>
@@ -154,11 +201,15 @@
             </tr>
         
         </table>
+        <br>
+        <br>
 
             <p style="text-align: justify;">Cuotas autorizadas según Resolución(es) No. 0204-99-E.P. con fecha 13 de marzo de 1999; No. 707-2001-I.C. Con
                 fecha 20 de diciembre de 2001, emitidas por la Direcciòn Departamental de Guatemala, misma (s) que se tiene(n) a
                 la vista y se detallan a continuación.
             </p>
+
+            <h4 style="text-align: justify;"><u><strong>Jornada Matutina</strong></u></h4>
 
         <table border="1px">
             <tr>
@@ -190,79 +241,66 @@
             los primeros 5 días de cada mes.
             </p>
 
-        <p style="text-align: justify;"><strong>OCTAVA. <u>DEL INCUMPLIMIENTO DEL PAGO.</u></strong>En caso que el padre de familia o representante legal del educando
-        se atrase o incumpla en los pagos normados en la cláusula anterior, dará lugar al cobro de intereses moratorios los
-        que serán fijados de conformidad con la tasa de interés legal, de conformidad con lo establecido en los artículos 1946
-        y 1947 del Código Civil (Decreto Ley Número 106) o las disposiciones legales aplicables que se encuentren vigentes
-        al momento de la generación del cobro de dicho interés. 
+        <p style="text-align: justify;"><strong>SÉPTIMA. <u>DEL INCUMPLIMIENTO DEL PAGO.</u></strong>En caso que el padre de familia o representante legal del educando
+        se atrase o incumpla en los pagos normados en la cláusula anterior, el Centro educativo podrá exigir al Representante del educando el cumplimiento de las obligaciones contraídas en el presente contrato. 
         </p>
-        <p style="text-align: justify;">El cobro del interés moratorio será permitido siempre y cuando se hayan dejado de efectuar los pagos convenidos
-            por uno o más meses y no será motivo para establecer una cuota diaria o mensual por mora, sujetándose las
-            autoridades del centro educativo a las sanciones que correspondan.</p>
-        <p style="text-align: justify;"><strong>NOVENA. <u>DE LOS CHEQUES RECHAZADOS. </u></strong>Por concepto de cheques rechazados el centro educativo podrá
-        cobrar como máximo el valor que por tal motivo debita o cobra el Banco que rechazó el pago del mismo. 
-        </p>
-        <p style="text-align: justify;"><strong>DECIMA. <u>DEL TRASLADO O RETIRO DEL EDUCANDO. </u></strong>De conformidad con lo establecido por el artículo 38 del
+        
+        <p style="text-align: justify;"><strong>OCTAVA. <u>DERECHOS Y OBLIGACIONES DEL CENTRO EDUCATIVO. </u></strong> De conformidad con la lesgislación aplicable y lo establecido
+        en el presente contrato, tendrá los derechos siguientes: </p>
+        <ul>
+            <li style="text-align: justify;">a. Exigir al representante del educando el cumplimiento de los contratos válidamente celebrados.</li>
+            <li style="text-align: justify;">b. El libre acceso a los órganos administrativos y jucdiciales para la solución de conflictos que surjan por la presentación del sevicio educativo.</li>
+            <li>c. Los demás que establecen las leyes del país.</li>
+        </ul>
+        <p style="text-align: justify;"><u>El centro educativo deberá cumplir con lo siguiente: </u></p>
+        <ul>
+            <li style="text-align: justify;">a. Atender reclamos formulados por el representante del educando.</li>
+            <li style="text-align: justify;">b. Generar mecanismos para la información continua con el Representante del educando, así como crear espacios que promuevan el aprendizaje
+                de los educandos.
+            </li>
+            <li style="text-align: justify;">c. Asegurar un ambiente escolar que favorezca la autoestima, resolución pacífica de problemas, el reconocimiento de la dignidad humana, el respeto, y la valorarización de identidades 
+                étnicas y culturales, la equidad de género, la formación de valores y derechos humanos.
+            </li>
+            <li style="text-align: justify;">d. Cumplir con las leyes tributarias del país en lo aplicable.</li>
+            <li style="text-align: justify;">e. Las demás que establecen las leyes del país.</li>
+        </ul>
+        <p><strong>NOVENA. <u>CHEQUES RECHAZADOS. </u></strong>Por concepto de cheques rechazados el Centro Educativo podrá cobrar como máximo el valor que por tal motivo debita o cobra
+        el Banco que rechazó el pago del mismo.</p>
+        <p style="text-align: justify;"><strong>DÉCIMA. <u>DEL TRASLADO O RETIRO DEL EDUCANDO. </u></strong>De conformidad con lo establecido por el artículo 38 del
         Acuerdo Gubernativo número 52-2015 o cualquier otra disposición legal aplicable que se encuentre vigente en el
         país, el traslado o retiro de educandos o estudiantes podrá realizarse en cualquier momento del ciclo escolar a
         cualquier otro centro educativo ya sea privado, público o un centro educativo oficial, siempre y cuando cumpla con
         las regulaciones que para el efecto emita la autoridad competente. 
         </p>
-        <p style="text-align: justify;"><u>El traslado o retiro de educandos o estudiantes, podrá realizarse por parte del Centro Educativo, el padre de familia o
-            el representante legal del educando -este último de forma voluntaria y definitiva-, debiendo para el efecto cumplir las
-            partes con:</u>
+        <p style="text-align: justify;"><u>El representante del Educando debe cancelar la cuota mensual hasta el mes en que efectivamente sea retirado el educando del plantel educativo, sin que esto sea motivo o justificación para retener el expediente</u>
         </p>
         
-        <strong><p>1.  El Centro Educativo: </p></strong>
-        <ul>
-            <li style="text-align: justify;">a. El visto bueno de la autoridad distrital, para lo cual se deberán realizar las gestiones correspondientes que
-                estén establecidas; y,</li>
-            <li style="text-align: justify;">b. Cualquier otra regulación o disposición que en tal sentido emita la autoridad competente.</li>
-        </ul>
-        <strong><p>2.  El Padre de Familia o Representante del Educando: </p></strong>
-        <ul>
-            <li style="text-align: justify;">a. Enviar aviso por escrito a las autoridades del Centro Educativo; y,</li>
-            <li style="text-align: justify;">b. Pagar la cuota mensual hasta el mes en que efectivamente sea retirado el educando del plantel educativo.
-                Sin que esto sea motivo o justificación para retener el expediente.</li>
-        </ul>
         
-        <p style="text-align: justify;">En todo momento, el centro educativo deberá: (i) cumplir con las regulaciones que para el efecto emita la autoridad
-            competente; (ii) agotar los procedimientos conciliatorios y de mediación que tengan establecidos o puedan establecer
-            los Centros Educativos con los padres de familia o representantes del educando; y, (iii) respetar los derechos del
-            educando, garantizando su integridad física y psíquica en todo momento.</p>
+        <p style="text-align: justify;">El establecimiento  que recibe al estudiante queda obligado a informar sobre el traslado a la unidad de planificación de la Dirección Departamental
+        de Educación, manteniendo el mismo código personal del estudiante y dentro de los quince días siguientes de efectuado.</p>
         
-            <p><strong> EL TRASLADO O RETIRO DE UN EDUCANDO, NO LIBERARA AL RESPONSABLE DE ESTE DE LA
-            OBLIGACION DE EFECTUAR EL PAGO DE LAS COLEGIATURAS QUE ESTUVIEREN PENDIENTES</strong>, tal cual lo
-            regula el segundo párrafo del artículo 43 de la Ley de Protección Integral de la Niñez y Adolescencia o cualquier otra
-            disposición legal aplicable que se encuentre vigente.
-        </p>
-        <p style="text-align: justify;"> <strong>DECIMA PRIMERA. <u>DE LOS DERECHOS Y OBLIGACIONES DEL PROVEEDOR DEL SERVICIO EDUCATIVO.</u></strong>La
-            autoridad del centro educativo tendrá derecho a percibir las ganancias o utilidades que por la prestación del servicio
-            educativo le correspondan; asimismo exigir al padre de familia o representante legal del educando el cumplimiento
-            del presente contrato y también podrá cuando sea necesario, acudir a los órganos administrativos o judiciales para:
-            (i) la solución de conflictos que surjan por la prestación del servicio contratado; y, (ii) denunciar la violación de
-            cualesquiera de los derechos de sus educandos aun cuando los mismos sean producidos por sus padres,
-            responsables u otros menores.
-        </p>
-        <p style="text-align: justify;">El presente contrato constituirá título ejecutivo suficiente para realizar el cobro ante los órganos judiciales, en caso de
-            incumplimiento en el pago de las colegiaturas por parte del Responsable del educando, debiendo acompañar para el
-            efecto la certificación contable en la que conste el saldo adeudado, de conformidad con lo regulado en el artículo 327
-            del Código Procesal Civil y Mercantil (Decreto Ley Número 107) o cualquier otra disposición legal aplicable que se
-            encuentre vigente al momento de realizar la ejecución correspondiente.</p>
-        <p>Ambas partes acuerdan que la legalización de las firmas del presente contrato, correrán por cuenta del Centro
-            Educativo.
-        </p>
-        <p style="text-align: justify;"> <strong>DECIMA SEGUNDA. <u>DE LA COPIA DEL CONTRATO.</u></strong> Del presente contrato queda el original en poder de la
+        <p style="text-align: justify;"> <strong>DECIMA PRIMERA. <u>DE LA COPIA DEL CONTRATO.</u></strong> Del presente contrato queda el original en poder de la
             autoridad del centro educativo y se le entregará una copia fiel al padre de familia o representante legal, esto con el
             propósito de que cada parte esté enterada de sus derechos y obligaciones para que las ejercite y cumpla de
             conformidad con lo establecido en el presente contrato. La copia será entregada al padre de familia o representante
-            legal al momento de firmar el contrato. </p>
+            legal al momento de firmar el contrato. .
+        </p>
+        <p style="text-align: justify;"> <strong>DECIMA SEGUNDA. <u>DEL DERECHO DE RETRACTO.</u></strong>El padre de familia o representante legal del educando tendrá derecho a 
+            retractarse dentro de un plazo no mayor de cinco días hábiles contados a partir de la firma del contrato, siempre que 
+            no hubiere hecho uso del bien o servicio. Si ejercita oportunamente este derecho, le serán restituidos en su totalidad 
+            los valores pagados.</p>
             
-        <p style="text-align: justify;"> <strong>DECIMA TERCERA. DE LA ACEPTACION.</strong> Nosotros los comparecientes damos lectura al presente contrato,
+        <p style="text-align: justify;"> <strong>DECIMA TERCERA. <u>DE LA ACEPTACION.</u></strong> Nosotros los comparecientes damos lectura al presente contrato,
             quienes enterados de su contenido, objeto, validez y demás efectos legales, lo ratificamos, aceptamos y firmamos. </p>
 
-        <p> <strong>f)_____________________________</strong> <br> Virginia Yomara Gonzalez Calderon de Siliezar
-            Propietaria</p> <p> <strong>f)_____________________________ </strong> <br> Nombre
-                Padre de familia y/o Representante Legal del educando </p>
+            <table>
+                <tr>
+                    <td><p> <strong>f)_____________________________</strong> <br> Virginia Yomara Gonzalez Calderon de Siliezar
+                        Propietaria</p></td>
+                    <td><p> <strong>f)_____________________________ </strong> <br> Nombre
+                        Padre de familia y/o Representante Legal del educando </p></td>
+                </tr>
+            </table>
+         
         </body>
 </html>
