@@ -917,6 +917,8 @@
 
       <div  wire:ignore.self id="panelsStayOpen-salida" style="border-radius: 60px 60px 60px 60px;" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingOne">
         <div  wire:ignore.self class="accordion-body" style="border-radius: 60px 60px 60px 60px;">
+          <strong><p class="card-title" style="color:#3a3e7b;" >
+            Autorizo que mi hij@ se retire de la siguiente manera:</p></strong>
           <div class="tab">
             <strong><label for="exampleInputPassword1" class="form-label">¿El alumno se retira solo?</label></strong>
               <center>
@@ -935,6 +937,28 @@
           </div>
           </center>
         </div>
+
+        @if($solo_alumno==1)
+          <div class="tab">
+            <strong><label for="exampleInputPassword1" class="form-label">Se retira por:</label></strong>
+            <center>
+            <div style="width: 12rem;">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="retirapor" id="retirapor1" wire:click="solo_por('1')">
+                <label class="form-check-label" for="retirapor1">
+                  Florida
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="retirapor" id="retirapor2" wire:click="solo_por('2')">
+                <label class="form-check-label" for="retirapor1">
+                  Monserrat
+                </label>
+              </div>
+            </div>
+         </center>  
+          </div>
+        @endif
 
     @if($solo_alumno==2)
           <div class="tab">
@@ -957,9 +981,21 @@
          </center>
          @if($encargado_alumno==1)
          <center>
+        <div class="row">
+          <div class="col-md-6">
+            <strong><label  for="Labelnombremadre" class="form-label">Nombre del encargado<label></strong>
+            <input  type="text" class="form-control"  wire:model="nombre_encargado">
+          </div>
+          
+          <div class="col-md-6">
+            <strong><label  for="Labelnombremadre" class="form-label">Número del encargado<label></strong>
+            <input  type="number" class="form-control"  wire:model="n_encargado">
+          </div>
+        </div>
+
         <div class="col-md-6">
-          <strong><label  for="Labelnombrepadre" class="form-label">Nombre del encargado</label></strong>
-          <input  type="text" class="form-control"  wire:model="nombre_encargado">
+          <strong><label  for="Labelnombrepadre" class="form-label">DPI del encargado</label></strong>
+          <input  type="number" class="form-control"  wire:model="dpi_encar">
         </div>
        </center>
         @endif
@@ -988,12 +1024,52 @@
       </center>
       </div>
 
+      @if($bus_colegio==1)
+          <div class="tab">
+            <strong><label for="exampleInputPassword1" class="form-label">Se retira por:</label></strong>
+            <center>
+            <div style="width: 12rem;">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="buspor" id="buspor1" wire:click="bus_por('1')">
+                <label class="form-check-label" for="buspor1">
+                  Florida
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="buspor" id="buspor2" wire:click="buss_por('2')">
+                <label class="form-check-label" for="buspor1">
+                  Monserrat
+                </label>
+              </div>
+            </div>
+         </center>  
+          </div>
+        @endif
+
       @if($bus_colegio==2)
       <center>
+        <div class="row">
+          <div class="col-md-6">
+            <strong><label  for="Labelnombremadre" class="form-label">Nombre del conductor del bus ajeno al colegio<label></strong>
+            <input  type="text" class="form-control"  wire:model="nombre_encargado">
+          </div>
+
+          <div class="col-md-6">
+            <strong><label  for="Labelnombremadre" class="form-label">DPI del conductor del bus ajeno al colegio<label></strong>
+            <input  type="text" class="form-control"  wire:model="nombre_encargado">
+          </div>
+          
+          <div class="col-md-6">
+            <strong><label  for="Labelnombremadre" class="form-label">Número del conductor del bus ajeno al colegio<label></strong>
+            <input  type="number" class="form-control"  wire:model="n_encargado">
+          </div>
+
         <div class="col-md-6">
           <strong><label  for="Labelnombrepadre" class="form-label">Número de la matrícula del bus ajeno al Colegio</label></strong>
           <input  type="text" class="form-control"  wire:model="matricula_bus_aj">
         </div>
+      </div>
+
        </center>
       @endif
     @endif
