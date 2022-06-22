@@ -633,11 +633,10 @@ class ValidacionComponent extends Component
             session(['validar'=> 1]);
             session(['message'=>'no encontrado']);
             return back()->withErrors(['error' => 'Validar el input vacio']);
-            $this->validacionv = 2;
             
         }
         else{
-            $this->validacionv = 1;
+            $this->validacionv=1;
         }
     }
 }
