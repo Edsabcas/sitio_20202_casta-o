@@ -133,7 +133,7 @@
                     <div class="tab">
                       <div class="row">
                           <div class="col-md-6">
-                              <strong><label  for="Labelnombrepadre" class="form-label">Nombre completo</label></strong>
+                              <strong><label  for="Labelnombrepadre" class="form-label">Nombre y Apellido Completo</label></strong>
                               <input  type="text" class="form-control"  wire:model="nombre_padre">
                             </div>
                             
@@ -426,7 +426,7 @@
                 <div class="tab">
                   <div class="row">
                   <div class="col-md-6">
-                    <strong><label  for="Labelnombrepadre" class="form-label">Nombre Completo</label></strong>
+                    <strong><label  for="Labelnombrepadre" class="form-label">Nombre y Apellido Completo</label></strong>
                     <input  type="text" class="form-control"  wire:model="nombre_madre">
                   </div>
                   
@@ -1015,6 +1015,14 @@
 </div>
 @endif
 
+@if($validacionv==2)
+<div class="alert alert-danger d-flex align-items-center rounded-pill" role="alert">
+  <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Info:"><use xlink:href="#info-fill"/></svg>
+  <div>
+    Revisar, hay algunos campos vacíos 
+  </div>
+</div>
+@endif
 
     </form>
     <div class="modal-footer">
