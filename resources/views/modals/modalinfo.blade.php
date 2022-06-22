@@ -4,7 +4,7 @@
 <div wire:ignore.self id="valinfo" style="border-radius: 60px 60px 60px 60px;" class="modal fade" role="dialog" tabindex="-1" aria-labelledby="valinfo" aria-hidden="true">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
-        <div class="modal-header">
+        <div class="modal-header"  style="background:#a4cb39;color:rgba(255, 255, 255, 255.255)">
           <h5 class="modal-title text-center"  style="color:#3a3e7b;" id="staticBackdropLabel1">Verifique la información ingresada</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
@@ -21,10 +21,17 @@
                           
                         </thead>
                         <tbody>
-                          <th>Grado:</th>
+                          <tr>
+                            <th>Grado:</th>
+                            <th>
+                              <b>{{$gradose}}</b>
+                            </th>
+                          </tr>
+                          <th>Modalidad estudio:</th>
                           <th>
-                            <b>{{$gradose}}</b>
+                            <b>{{$tipo}}</b>
                           </th>
+                        </tr>
                         </tbody>
                       </table>
                     </div>
@@ -143,6 +150,10 @@
                               <td><b>{{$es_civil_en}}</b> </td>
                             </tr>
                             <tr>
+                              <td>Profesión:</td>
+                              <td><b>{{$profesion_en}}</b> </td>
+                            </tr>
+                            <tr>
                               <td>Direccion de residencia:</td>
                               <td> <b>{{$direccion_en}} </b> </td>
                             </tr>
@@ -156,6 +167,10 @@
                             </tr>
                             <tr>
                               <td>Correo Electronico: </td>
+                              <td><b>{{$correo_en}} </b></td>
+                            </tr>
+                            <tr>
+                              <td>2do. Correo Electronico (opcional): </td>
                               <td><b>{{$correo_en}} </b></td>
                             </tr>
                             <tr>

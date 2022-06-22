@@ -118,22 +118,45 @@ class PDFcontroller extends Controller
             foreach($preinss as $preinz){
                 $datos_padre14=$preinz->NO_CORRELATIVO_P1;
                 $datos_padre15=$preinz->NO_CORRELATIVO_P2;
+                $datos_padre16=$preinz->PROFESION_EN_ES;
+                $datos_padre17=$preinz->GRADO_ING_ES;
             }
         }
 
         $sql = "SELECT * FROM cuentaestudiante where ID_PRE=?";
                 $cuentas= DB::select($sql,array($id_pre));
-        
-                foreach($cuentas as $cuenta){
-                    $monto=$cuenta->MONTO_INSCRIPCION;
-                    $monto2=$cuenta->MONTO_MENSUAL;
+                $monto="";
+                $monto2="";
+                $monto_anual="";
+        if($cuentas!=null){
+            foreach($cuentas as $cuenta){
+                $monto=$cuenta->MONTO_INSCRIPCION;
+                $monto2=$cuenta->MONTO_MENSUAL;
+            }
+            $monto_anual=$monto2*10;
+        }
+
+        $sql = "SELECT * FROM tb_grados WHERE ID_GR=?";
+                $grados= DB::select($sql,array($datos_padre17));
+                foreach($grados as $grado){
+                    $datos_padre18=$grado->GRADO;
+                    $datos_padre19=$grado->NIVEL_ACADEMICO;
+
                 }
-                $monto_anual=$monto2*10;
+
+        $sql = "SELECT * FROM tb_nvlacademico WHERE ID_NVL=?";
+                $grados= DB::select($sql,array($datos_padre19));
+                foreach($grados as $grado){
+                    $datos_padre18=$grado->GRADO;
+                    $datos_padre19=$grado->NIVEL_ACADEMICO;
+
+                }    
+                
         $nacimiento=explode("-", $datos_padre11);
         $nacimiento_total=$fecha_separada[0]-$nacimiento[0];
         $datos=array($fecha_separada[0],$fecha_separada[1],$fecha_separada[2], $datos_padre, $datos_padre2, $datos_padre3, $datos_padre4, $datos_padre5, 
         $datos_padre6, $datos_padre7, $datos_padre8, $datos_padre9, $datos_padre10,$datos_padre12,$datos_padre13, $nacimiento_total, $datos_padre14, $datos_padre15,
-        $monto, $monto_anual);
+        $monto, $monto_anual, $datos_padre16, $datos_padre18);
         $pdf = PDF::loadView('estados.PDFexport.PDFDIACO', compact('datos'));
         return $pdf->stream();
         return view('estados.PDFexport.PDFDIACO');
