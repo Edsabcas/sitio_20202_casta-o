@@ -942,7 +942,7 @@
                   @enderror
                 <div class="col-md-6">
                     <strong><label  for="Labelnombreencargado" class="form-label">Lugar de trabajo</label></strong>
-                    <input  type="text" class="form-control"  wire:model="lugar_profesion_encargado2">
+                    <input  type="text" class="form-control"  wire:model="lugar_prof_encargado2">
                   </div>
                   
                   <div class="col-md-6">
@@ -950,7 +950,7 @@
                     <input  type="text" class="form-control"  wire:model="profesion_encargado2">
                   </div>
 
-                  @error('lugar_profesion_encargado2')
+                  @error('lugar_prof_encargado2')
                   <div class="col-md-6">
                   <div class="alert alert-danger d-flex align-items-center rounded-pill" role="alert">
                     <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
