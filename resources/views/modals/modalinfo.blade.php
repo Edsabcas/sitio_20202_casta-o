@@ -25,7 +25,7 @@
                               <b>{{$gradose}}</b>
                             </th>
                           </tr>
-                          <td>Modalidad estudio:</td>
+                          <td>Modalidad de estudio:</td>
                           <th>
                             <b>{{$tipo}}</b>
                           </th>
@@ -52,51 +52,47 @@
                           <th></th>
                           
                           <tr>
+                            <td>Nombre:</td>
                             <td>
-                              Nombre: 
-                            </td>
-                            <td>
-                              <b> {{$nombre_es}}</b>
+                              <b>{{$nombre_es}}</b>
                             </td>
                           </tr>
                             <tr>
-                              <td>
-                                Fecha Nacimiento:
-                              </td>
+                              <td>Fecha de Nacimiento:</td>
                               <td>
                                 <b>{{$f_nacimiento_es}} </b> 
                               </td>
                             </tr>
                             <tr>
-                              <td> Genero:</td>
+                              <td>Género:</td>
                               <td> <b>  {{$genero}}</b> </td>
                             </tr>
                             <tr>
                               <td>CUI:</td>
-                              <td> <b>{{$cui_es}}</b> </td>
+                              <td><b>{{$cui_es}}</b></td>
                             </tr>
                             <tr>
-                              <td>Codigo Estudiante (Mineduc):</td>
+                              <td>Código Estudiante (Mineduc):</td>
                               <td><b>{{$codigo_pe_es}}</b> </td>
                             </tr>
                             <tr>
-                              <td>  Nacionalidad:</td>
-                              <td> <b>{{$nac_es}} </b> </td>
+                              <td>Nacionalidad:</td>
+                              <td><b>{{$nac_es}}</b></td>
                             </tr>
                             <tr>
-                              <td>Lugar De Nacimiento: </td>
-                              <td> <b>{{$lug_nac_es}}</b></td>
+                              <td>Lugar De Nacimiento:</td>
+                              <td><b>{{$lug_nac_es}}</b></td>
                             </tr>
                             <tr>
                               <td>Celular:</td>
-                              <td> <b>{{$cel_es}}</b> </td>
+                              <td><b>{{$cel_es}}</b></td>
                             </tr>
                             <tr>
-                              <td>Direccion:</td>
-                              <td>   <b>{{$direccion_es}}  </b></td>
+                              <td>Dirección:</td>
+                              <td><b>{{$direccion_es}}</b></td>
                             </tr>
                             <tr>
-                              <td>  Religion: </td>
+                              <td>Religión:</td>
                               <td><b>{{$religion_es}} </b></td>
                             </tr>
                       </table>
@@ -148,7 +144,7 @@
                               <td><b>{{$profesion_en}}</b></td>
                             </tr>
                             <tr>
-                              <td>Direccion de residencia:</td>
+                              <td>Dirección de residencia:</td>
                               <td><b>{{$direccion_en}}</b></td>
                             </tr>
                             <tr>
@@ -160,11 +156,11 @@
                               <td><b>{{$cel_en}}</b></td>
                             </tr>
                             <tr>
-                              <td>Correo Electronico:</td>
+                              <td>Correo Electrónico:</td>
                               <td><b>{{$correo_en}} </b></td>
                             </tr>
                             <tr>
-                              <td>2do. Correo Electronico (opcional):</td>
+                              <td>2do. Correo Electrónico (opcional):</td>
                               <td><b>{{$correo_en}} </b></td>
                             </tr>
                             <tr>
