@@ -33,13 +33,13 @@
                       <center>
                       <div style="width: 12rem;">
                       <div class="form-check">
-                          <input class="form-check-input" type="radio" Wire.model="hermano" id="hermano1" wire:click="confirmar_hermano('1')">
+                          <input class="form-check-input" type="radio" Wire.model="hermano" value="1" id="hermano1" wire:click="confirmar_hermano('1')">
                           <label class="form-check-label" for="hermano1">
                             Si
                           </label>
                         </div>
                         <div class="form-check">
-                          <input class="form-check-input" type="radio" Wire.model="hermano" id="hermano2" wire:click="confirmar_hermano('0')">
+                          <input class="form-check-input" type="radio" Wire.model="hermano" value="0" id="hermano2" wire:click="confirmar_hermano('0')">
                           <label class="form-check-label" for="hermano1">
                             No
                           </label>
@@ -198,7 +198,7 @@
                               <strong><label  for="Labelnombrepadre" class="form-label">Estado civil</label></strong>
                               <div class="col-md-4">
                                   <div class="form-check">
-                                      <input class="form-check-input" type="radio" Wire.model="estadocivilp"  wire:click="estado_civil_padre('1')">
+                                      <input class="form-check-input" type="radio" Wire.model="estadocivilp" value="1" wire:click="estado_civil_padre('1')">
                                       <label class="form-check-label" for="estadocivilp1">
                                         Casado(a)
                                       </label>
@@ -206,7 +206,7 @@
                               </div>
                               <div class="col-md-4">
                                   <div class="form-check">
-                                      <input class="form-check-input" type="radio" Wire.model="estadocivilp"  wire:click="estado_civil_padre('2')">
+                                      <input class="form-check-input" type="radio" Wire.model="estadocivilp" value="2" wire:click="estado_civil_padre('2')">
                                       <label class="form-check-label" for="estadocivilp1">
                                         Separado(a)
                                       </label>
@@ -214,7 +214,7 @@
                               </div>
                               <div class="col-md-4">
                                   <div class="form-check">
-                                      <input class="form-check-input" type="radio" Wire.model="estadocivilp"  wire:click="estado_civil_padre('3')">
+                                      <input class="form-check-input" type="radio" Wire.model="estadocivilp"  value="3" wire:click="estado_civil_padre('3')">
                                       <label class="form-check-label" for="estadocivilp1">
                                         Soltero(a)
                                       </label>
@@ -385,7 +385,7 @@
                                   <div style="width: 12rem;">
                                   <div class="col-md-7">
                                       <div class="form-check">
-                                        <input class="form-check-input" type="radio" Wire.model="vivepadre"  wire:click="confirmar_vive_padre('1')">
+                                        <input class="form-check-input" type="radio" Wire.model="vivepadre" value="1" wire:click="confirmar_vive_padre('1')">
                                         <label class="form-check-label" for="vivepadre1">
                                             Si
                                           </label>
@@ -393,7 +393,7 @@
                                   </div>
                                   <div class="col-md-7">
                                       <div class="form-check">
-                                        <input class="form-check-input" type="radio" Wire.model="vivepadre"  wire:click="confirmar_vive_padre('2')">
+                                        <input class="form-check-input" type="radio" Wire.model="vivepadre" value="2"  wire:click="confirmar_vive_padre('2')">
                                         <label class="form-check-label" for="vivepadre1">
                                             No
                                           </label>
@@ -492,7 +492,7 @@
                         <strong><label  for="Labelnombrepadre" class="form-label">Estado civil</label></strong>
                         <div class="col-md-4">
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" Wire.model="estadocivilm"  wire:click="estado_civil_madre('1')">
+                                <input class="form-check-input" type="radio" Wire.model="estadocivilm"  value="1" wire:click="estado_civil_madre('1')">
                                 <label class="form-check-label" for="estadocivilm1">
                                   Casado(a)
                                 </label>
@@ -500,7 +500,7 @@
                         </div>
                         <div class="col-md-4">
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" Wire.model="estadocivilm"  wire:click="estado_civil_madre('2')">
+                                <input class="form-check-input" type="radio" Wire.model="estadocivilm" value="2" wire:click="estado_civil_madre('2')">
                                 <label class="form-check-label" for="estadocivilm1">
                                   Separado(a)
                                 </label>
@@ -508,7 +508,7 @@
                         </div>
                         <div class="col-md-4">
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" Wire.model="estadocivilm"  wire:click="estado_civil_madre('3')">
+                                <input class="form-check-input" type="radio" Wire.model="estadocivilm" value="3" wire:click="estado_civil_madre('3')">
                                 <label class="form-check-label" for="estadocivilm1">
                                   Soltero(a)
                                 </label>
@@ -684,7 +684,7 @@
                       <div style="width: 12rem;">
                       <div class="col-md-7">
                           <div class="form-check">
-                              <input class="form-check-input" type="radio" Wire.model="vivemadre"  wire:click="vive_con_la_madre('1')">
+                              <input class="form-check-input" type="radio" Wire.model="vivemadre" value="1"  wire:click="vive_con_la_madre('1')">
                               <label class="form-check-label" for="vivemadre1">
                                 Si
                               </label>
@@ -692,7 +692,7 @@
                       </div>
                       <div class="col-md-7">
                           <div class="form-check">
-                              <input class="form-check-input" type="radio" Wire.model="vivemadre"  wire:click="vive_con_la_madre('2')">
+                              <input class="form-check-input" type="radio" Wire.model="vivemadre" value="2"  wire:click="vive_con_la_madre('2')">
                               <label class="form-check-label" for="vivemadre1">
                                 No
                               </label>
@@ -727,23 +727,23 @@
                   <strong><label  for="Labelnombrepadre" class="form-label">¿Quien es el encargado?</label></strong>
                   <div class="col-md-4">
                       <div class="form-check">
-                          <input class="form-check-input" type="radio" Wire.model="quien_encargado"  wire:click="quien_encargado('1')">
+                          <input class="form-check-input" type="radio" Wire.model="quien_encargado"  value="1" wire:click="quien_encargado('1')">
                           <label class="form-check-label" for="qencargado1">
-                            La madre
+                            El padre
                           </label>
                         </div>
                   </div>
                   <div class="col-md-4">
                       <div class="form-check">
-                          <input class="form-check-input" type="radio" Wire.model="quien_encargado"  wire:click="quien_encargado('2')">
+                          <input class="form-check-input" type="radio" Wire.model="quien_encargado" value="2" wire:click="quien_encargado('2')">
                           <label class="form-check-label" for="qencargado1">
-                            El Padre      
+                            La madre      
                           </label>
                         </div>
                   </div>
                   <div class="col-md-4">
                       <div class="form-check">
-                          <input class="form-check-input" type="radio" Wire.model="qencargado"  wire:click="quien_encargado('3')">
+                          <input class="form-check-input" type="radio" Wire.model="quien_encargado"  value="3" wire:click="quien_encargado('3')">
                           <label class="form-check-label" for="qencargado1">
                             Otro encargado
                           </label>
@@ -821,7 +821,7 @@
                     <strong><label  for="Labelnombreencargado" class="form-label">Estado civil</label></strong>
                     <div class="col-md-4">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" Wire.model="estadocivilp"  wire:click="estado_civil_encargado('1')">
+                            <input class="form-check-input" type="radio" Wire.model="estadocivilp" value="1" wire:click="estado_civil_encargado('1')">
                             <label class="form-check-label" for="estadocivilp1">
                               Casado(a)
                             </label>
@@ -829,7 +829,7 @@
                     </div>
                     <div class="col-md-4">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" Wire.model="estadocivilp"  wire:click="estado_civil_encargado('2')">
+                            <input class="form-check-input" type="radio" Wire.model="estadocivilp" value="2"  wire:click="estado_civil_encargado('2')">
                             <label class="form-check-label" for="estadocivilp1">
                               Separado(a)
                             </label>
@@ -837,7 +837,7 @@
                     </div>
                     <div class="col-md-4">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" Wire.model="estadocivilp"  wire:click="estado_civil_encargado('3')">
+                            <input class="form-check-input" type="radio" Wire.model="estadocivilp" value="3" wire:click="estado_civil_encargado('3')">
                             <label class="form-check-label" for="estadocivilp1">
                               Soltero(a)
                             </label>
@@ -1059,13 +1059,13 @@
                 <center>
                 <div style="width: 12rem;">
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" Wire.model="alergia" id="alergia1" wire:click="tiene_alergia('1')">
+                    <input class="form-check-input" type="radio" Wire.model="alergia" value="1" id="alergia1" wire:click="tiene_alergia('1')">
                     <label class="form-check-label" for="alergia1">
                       Si
                     </label>
                 </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" Wire.model="alergia" id="alergia2" wire:click="tiene_alergia('0')">
+                    <input class="form-check-input" type="radio" Wire.model="alergia" value="2" id="alergia2" wire:click="tiene_alergia('0')">
                     <label class="form-check-label" for="alergia1">
                       No
                     </label>
@@ -1090,13 +1090,13 @@
             <center>
             <div style="width: 12rem;">
             <div class="form-check">
-                <input class="form-check-input" type="radio" Wire.model="medicamento" id="medicamento1" wire:click="medicamento('1')">
+                <input class="form-check-input" type="radio" Wire.model="medicamento" value="1" id="medicamento1" wire:click="medicamento('1')">
                 <label class="form-check-label" for="medicamento1">
                   Si
                 </label>
             </div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" Wire.model="medicamento" id="medicamento2" wire:click="medicamento('0')">
+                <input class="form-check-input" type="radio" Wire.model="medicamento" value="2" id="medicamento2" wire:click="medicamento('0')">
                 <label class="form-check-label" for="medicamento1">
                   No
                 </label>
@@ -1120,13 +1120,13 @@
         <center>
         <div style="width: 12rem;">
         <div class="form-check">
-            <input class="form-check-input" type="radio" Wire.model="alimento" id="alimento1" wire:click="alimento('1')">
+            <input class="form-check-input" type="radio" Wire.model="alimento" value="1" id="alimento1" wire:click="alimento('1')">
             <label class="form-check-label" for="alimento1">
               Si
             </label>
         </div>
           <div class="form-check">
-            <input class="form-check-input" type="radio" Wire.model="alimento" id="alimento2" wire:click="alimento('0')">
+            <input class="form-check-input" type="radio" Wire.model="alimento" value="2" id="alimento2" wire:click="alimento('0')">
             <label class="form-check-label" for="alimento1">
               No
             </label>
@@ -1149,13 +1149,13 @@
             <center>
               <div style="width: 12rem;">
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" Wire.model="vacunas" id="vacunas1" wire:click="vacunas('1')">
+                  <input class="form-check-input" type="radio" Wire.model="vacunas" value="1" id="vacunas1" wire:click="vacunas('1')">
                     <label class="form-check-label" for="vacunas1">
                       Si
                     </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" Wire.model="vacunas" id="vacunas2" wire:click="vacunas('0')">
+                  <input class="form-check-input" type="radio" Wire.model="vacunas" value="2" id="vacunas2" wire:click="vacunas('0')">
                     <label class="form-check-label" for="vacunas1">
                       No
                     </label>
@@ -1170,13 +1170,13 @@
             <center>
               <div style="width: 12rem;">
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" Wire.model="alumnoasegurado" id="alumnoasegurado1" wire:click="alumno_asegurado('1')">
+                  <input class="form-check-input" type="radio" Wire.model="alumnoasegurado" value="1" id="alumnoasegurado1" wire:click="alumno_asegurado('1')">
                     <label class="form-check-label" for="alumnoasegurado1">
                       Si
                     </label>
                 </div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" Wire.model="alumnoasegurado" id="alumnoasegurado2" wire:click="alumno_asegurado('0')">
+                <input class="form-check-input" type="radio" Wire.model="alumnoasegurado"  value="2" id="alumnoasegurado2" wire:click="alumno_asegurado('0')">
                   <label class="form-check-label" for="alumnoasegurado1">
                     No
                   </label>
@@ -1358,23 +1358,21 @@
     </form>
     <div class="modal-footer">
       <button type="button" class="btn btn-pre2" wire:click='validar_datos()'>Validar Información</button>.
-      @if($quien_encargado1==1)
-         @if($validacionv==1)
-       <button type="button" class="btn btn-pre2" wire:click='insertar_datos()' data-bs-dismiss="modal">Envíar Información</button>.
-         @endif
-      @endif
+      
 
-      @if($quien_encargado1==2)
-         @if($validacionv==1)
+      @if($validacionv==1)
+           @if($quien_encargado1==1)
+          <button type="button" class="btn btn-pre2" wire:click='insertar_datos()' data-bs-dismiss="modal">Envíar Información</button>.
+
+          @elseif($quien_encargado1==2)
           <button type="button" class="btn btn-pre2" wire:click='insertar_datos2()' data-bs-dismiss="modal">Envíar Información</button>.
-          @endif
-      @endif
-
-      @if($quien_encargado1==3)
-         @if($validacionv==1)
+          
+          @elseif($quien_encargado1==3)
           <button type="button" class="btn btn-pre2" wire:click='insertar_datos3()' data-bs-dismiss="modal">Envíar Información</button>.
           @endif
+      
       @endif
+
       
       </div>
     </div>
