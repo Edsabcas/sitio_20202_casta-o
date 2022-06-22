@@ -789,6 +789,21 @@ class ValidacionComponent extends Component
                     else{
                             $Especifique_ali=$this->Especifique_ali;
                 }
+                $nombre_encargado2=$this->nombre_encargado2;
+                $fechana_encargado2=$this->fechana_encargado2;
+                $nacionalidad_encargado2=$this->nacionalidad_encargado2;
+                $lugar_nacimiento_encargado2=$this->lugar_nacimiento_encargado2;
+                $estadocivilencargado2=$this->estadocivilencargado2;
+                $DPI_encargado2=$this->DPI_encargado2;
+                $telefono_encargado2=$this->telefono_encargado2;
+                $celular_encargado2=$this->celular_encargado2;
+                $direccion_residenciaencargado2=$this->direccion_residenciaencargado2;
+                $correo_encargado2=$this->correo_encargado2;
+                $profesion_encargado2=$this->profesion_encargado2;
+                $lugar_prof_encargado2=$this->lugar_prof_encargado2;
+                $religion_encargado2=$this->religion_encargado2;
+                $NIT_encargado=$this->NIT_encargado;
+                $vive_encargado2=$this->vive_encargado2;
                
                 
                 DB::beginTransaction();

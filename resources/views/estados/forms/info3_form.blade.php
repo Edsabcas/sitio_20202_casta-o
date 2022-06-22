@@ -1358,9 +1358,24 @@
     </form>
     <div class="modal-footer">
       <button type="button" class="btn btn-pre2" wire:click='validar_datos()'>Validar Información</button>.
-      @if($validacionv==1)
-      <button type="button" class="btn btn-pre2" wire:click='insertar_datos()' data-bs-dismiss="modal">Envíar Información</button>.
+      @if($quien_encargado1==1)
+         @if($validacionv==1)
+       <button type="button" class="btn btn-pre2" wire:click='insertar_datos()' data-bs-dismiss="modal">Envíar Información</button>.
+         @endif
       @endif
+
+      @if($quien_encargado1==2)
+         @if($validacionv==1)
+          <button type="button" class="btn btn-pre2" wire:click='insertar_datos2()' data-bs-dismiss="modal">Envíar Información</button>.
+          @endif
+      @endif
+
+      @if($quien_encargado1==3)
+         @if($validacionv==1)
+          <button type="button" class="btn btn-pre2" wire:click='insertar_datos3()' data-bs-dismiss="modal">Envíar Información</button>.
+          @endif
+      @endif
+      
       </div>
     </div>
   </div>
