@@ -33,13 +33,13 @@
                       <center>
                       <div style="width: 12rem;">
                       <div class="form-check">
-                          <input class="form-check-input" type="radio" name="hermano" id="hermano1" wire:click="confirmar_hermano('1')">
+                          <input class="form-check-input" type="radio" Wire.model="hermano" id="hermano1" wire:click="confirmar_hermano('1')">
                           <label class="form-check-label" for="hermano1">
                             Si
                           </label>
                         </div>
                         <div class="form-check">
-                          <input class="form-check-input" type="radio" name="hermano" id="hermano2" wire:click="confirmar_hermano('0')">
+                          <input class="form-check-input" type="radio" Wire.model="hermano" id="hermano2" wire:click="confirmar_hermano('0')">
                           <label class="form-check-label" for="hermano1">
                             No
                           </label>
@@ -198,7 +198,7 @@
                               <strong><label  for="Labelnombrepadre" class="form-label">Estado civil</label></strong>
                               <div class="col-md-4">
                                   <div class="form-check">
-                                      <input class="form-check-input" type="radio" name="estadocivilp"  wire:click="estado_civil_padre('1')">
+                                      <input class="form-check-input" type="radio" Wire.model="estadocivilp"  wire:click="estado_civil_padre('1')">
                                       <label class="form-check-label" for="estadocivilp1">
                                         Casado(a)
                                       </label>
@@ -206,7 +206,7 @@
                               </div>
                               <div class="col-md-4">
                                   <div class="form-check">
-                                      <input class="form-check-input" type="radio" name="estadocivilp"  wire:click="estado_civil_padre('2')">
+                                      <input class="form-check-input" type="radio" Wire.model="estadocivilp"  wire:click="estado_civil_padre('2')">
                                       <label class="form-check-label" for="estadocivilp1">
                                         Separado(a)
                                       </label>
@@ -214,7 +214,7 @@
                               </div>
                               <div class="col-md-4">
                                   <div class="form-check">
-                                      <input class="form-check-input" type="radio" name="estadocivilp"  wire:click="estado_civil_padre('3')">
+                                      <input class="form-check-input" type="radio" Wire.model="estadocivilp"  wire:click="estado_civil_padre('3')">
                                       <label class="form-check-label" for="estadocivilp1">
                                         Soltero(a)
                                       </label>
@@ -385,7 +385,7 @@
                                   <div style="width: 12rem;">
                                   <div class="col-md-7">
                                       <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="vivepadre"  wire:click="confirmar_vive_padre('1')">
+                                        <input class="form-check-input" type="radio" Wire.model="vivepadre"  wire:click="confirmar_vive_padre('1')">
                                         <label class="form-check-label" for="vivepadre1">
                                             Si
                                           </label>
@@ -393,7 +393,7 @@
                                   </div>
                                   <div class="col-md-7">
                                       <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="vivepadre"  wire:click="confirmar_vive_padre('2')">
+                                        <input class="form-check-input" type="radio" Wire.model="vivepadre"  wire:click="confirmar_vive_padre('2')">
                                         <label class="form-check-label" for="vivepadre1">
                                             No
                                           </label>
@@ -492,7 +492,7 @@
                         <strong><label  for="Labelnombrepadre" class="form-label">Estado civil</label></strong>
                         <div class="col-md-4">
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="estadocivilm"  wire:click="estado_civil_madre('1')">
+                                <input class="form-check-input" type="radio" Wire.model="estadocivilm"  wire:click="estado_civil_madre('1')">
                                 <label class="form-check-label" for="estadocivilm1">
                                   Casado(a)
                                 </label>
@@ -500,7 +500,7 @@
                         </div>
                         <div class="col-md-4">
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="estadocivilm"  wire:click="estado_civil_madre('2')">
+                                <input class="form-check-input" type="radio" Wire.model="estadocivilm"  wire:click="estado_civil_madre('2')">
                                 <label class="form-check-label" for="estadocivilm1">
                                   Separado(a)
                                 </label>
@@ -508,7 +508,7 @@
                         </div>
                         <div class="col-md-4">
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="estadocivilm"  wire:click="estado_civil_madre('3')">
+                                <input class="form-check-input" type="radio" Wire.model="estadocivilm"  wire:click="estado_civil_madre('3')">
                                 <label class="form-check-label" for="estadocivilm1">
                                   Soltero(a)
                                 </label>
@@ -684,7 +684,7 @@
                       <div style="width: 12rem;">
                       <div class="col-md-7">
                           <div class="form-check">
-                              <input class="form-check-input" type="radio" name="vivemadre"  wire:click="vive_con_la_madre('1')">
+                              <input class="form-check-input" type="radio" Wire.model="vivemadre"  wire:click="vive_con_la_madre('1')">
                               <label class="form-check-label" for="vivemadre1">
                                 Si
                               </label>
@@ -692,7 +692,7 @@
                       </div>
                       <div class="col-md-7">
                           <div class="form-check">
-                              <input class="form-check-input" type="radio" name="vivemadre"  wire:click="vive_con_la_madre('2')">
+                              <input class="form-check-input" type="radio" Wire.model="vivemadre"  wire:click="vive_con_la_madre('2')">
                               <label class="form-check-label" for="vivemadre1">
                                 No
                               </label>
@@ -708,6 +708,337 @@
             </div>
           </div>
         </div> 
+   <br>
+   <div wire:ignore.self class="accordion" id="accordionDatosdelencargado">
+    <div style="border-radius: 60px 60px 60px 60px;" class="accordion-item">
+      <h2 style="border-radius: 60px 60px 60px 60px;" class="accordion-header" id="panelsStayOpen-headingOnedatosencargado">
+        <button class="accordion-button collapsed" type="button" style="background-color:#d6e7a6; border:6px solid #a4cb39; border-radius: 60px 60px 60px 60px;" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-encargado" aria-expanded="false" aria-controls="panelsStayOpen-encargado">
+            <h4 class="font-weight-bolder">
+                DATOS DEL ENCARGADO
+              </h4>
+            </button>
+      </h2>
+      
+      <div  wire:ignore.self id="panelsStayOpen-encargado" style="border-radius: 60px 60px 60px 60px;" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingOne">
+        <div  wire:ignore.self class="accordion-body" style="border-radius: 60px 60px 60px 60px;">
+          <div class="tab">
+            <div class="row">
+              <div class="row">
+                  <strong><label  for="Labelnombrepadre" class="form-label">¿Quien es el encargado?</label></strong>
+                  <div class="col-md-4">
+                      <div class="form-check">
+                          <input class="form-check-input" type="radio" Wire.model="quien_encargado"  wire:click="quien_encargado('1')">
+                          <label class="form-check-label" for="qencargado1">
+                            La madre
+                          </label>
+                        </div>
+                  </div>
+                  <div class="col-md-4">
+                      <div class="form-check">
+                          <input class="form-check-input" type="radio" Wire.model="quien_encargado"  wire:click="quien_encargado('2')">
+                          <label class="form-check-label" for="qencargado1">
+                            El Padre      
+                          </label>
+                        </div>
+                  </div>
+                  <div class="col-md-4">
+                      <div class="form-check">
+                          <input class="form-check-input" type="radio" Wire.model="qencargado"  wire:click="quien_encargado('3')">
+                          <label class="form-check-label" for="qencargado1">
+                            Otro encargado
+                          </label>
+                        </div>
+                  </div>  
+              </div>
+              <br>
+              
+          </div>
+          @if($quien_encargado1==3)
+            <div class="row">
+                <div class="col-md-6">
+                    <strong><label  for="Labelnombreencargado" class="form-label">Nombre completo</label></strong>
+                    <input  type="text" class="form-control"  wire:model="nombre_encargado">
+                  </div>
+                  
+                  <div class="col-md-6">
+                    <strong><label  for="Labelnombreencargado" class="form-label">Fecha de nacimiento</label></strong>
+                    <input  type="date" class="form-control"  wire:model="nacimiento_encargado">
+                  </div>
+                  @error('nombre_encargado')
+                  <div class="col-md-6">
+                  <div class="alert alert-danger d-flex align-items-center rounded-pill" role="alert">
+                    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+                    <div>
+                        Es necesario que llenes este campo para envíar la información
+                    </div>
+                  </div>
+                  </div>
+                  @enderror
+                  @error('nacimiento_encargado')
+                  <div class="col-md-6">
+                  <div class="alert alert-danger d-flex align-items-center rounded-pill" role="alert">
+                    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+                    <div>
+                        Es necesario que llenes este campo para envíar la información
+                    </div>
+                  </div>
+                  </div>
+                  @enderror    
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <strong><label  for="Labelnombreencargado" class="form-label">Nacionalidad</label></strong>
+                    <input  type="text" class="form-control"  wire:model="nacionalidad_encargado">
+                  </div>
+                  
+                <div class="col-md-6">
+                    <strong><label  for="Labelnombreencargado" class="form-label">Lugar de nacimiento</label></strong>
+                    <input  type="text" class="form-control"  wire:model="lugar_nacimiento_encargado">
+                  </div>
+                  @error('nacionalidad_encargado')
+                  <div class="col-md-6">
+                  <div class="alert alert-danger d-flex align-items-center rounded-pill" role="alert">
+                    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+                    <div>
+                        Es necesario que llenes este campo para envíar la información
+                    </div>
+                  </div>
+                  </div>
+                  @enderror
+                  @error('lugar_nacimiento_encargado')
+                  <div class="col-md-6">
+                  <div class="alert alert-danger d-flex align-items-center rounded-pill" role="alert">
+                    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+                    <div>
+                        Es necesario que llenes este campo para envíar la información
+                    </div>
+                  </div>
+                  </div>
+                  @enderror
+            </div>
+            <div class="row">
+                <div class="row">
+                    <strong><label  for="Labelnombreencargado" class="form-label">Estado civil</label></strong>
+                    <div class="col-md-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" Wire.model="estadocivilp"  wire:click="estado_civil_encargado('1')">
+                            <label class="form-check-label" for="estadocivilp1">
+                              Casado(a)
+                            </label>
+                          </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" Wire.model="estadocivilp"  wire:click="estado_civil_encargado('2')">
+                            <label class="form-check-label" for="estadocivilp1">
+                              Separado(a)
+                            </label>
+                          </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" Wire.model="estadocivilp"  wire:click="estado_civil_encargado('3')">
+                            <label class="form-check-label" for="estadocivilp1">
+                              Soltero(a)
+                            </label>
+                          </div>
+                    </div>  
+                </div>
+                <br>
+                
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-6">
+                    <strong><label  for="Labelnombreencargado" class="form-label">Número de DPI</label></strong>
+                    <input  type="number" class="form-control"  wire:model="DPI_encargado">
+                  </div>
+  
+                <div class="col-md-6">
+                    <strong><label  for="Labelnombreencargado" class="form-label">Número de celular</label></strong>
+                    <input  type="number" class="form-control"  wire:model="celular_encargado">
+                  </div>
+
+                  @error('DPI_encargado')
+                  <div class="col-md-6">
+                  <div class="alert alert-danger d-flex align-items-center rounded-pill" role="alert">
+                    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+                    <div>
+                        Es necesario que llenes este campo para envíar la información
+                    </div>
+                  </div>
+                  </div> 
+                  @enderror
+                  @error('celular_encargado')
+                  <div class="col-md-6">
+                  <div class="alert alert-danger d-flex align-items-center rounded-pill" role="alert">
+                    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+                    <div>
+                        Es necesario que llenes este campo para envíar la información
+                    </div>
+                  </div>
+                  </div>
+                  @enderror
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <strong><label  for="Labelnombreencargado" class="form-label">Número de casa</label></strong>
+                    <input  type="number" class="form-control"  wire:model="telefono_encargado">
+                  </div>
+             
+                <div class="col-md-6">
+                    <strong><label  for="Labelnombreencargado" class="form-label">Dirección de la residencia</label></strong>
+                    <input  type="text" class="form-control"  wire:model="direccion_residencia_encargado">
+                  </div>
+                  @error('telefono_encargado')
+                  <div class="col-md-6">
+                  <div class="alert alert-danger d-flex align-items-center rounded-pill" role="alert">
+                    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+                    <div>
+                        Es necesario que llenes este campo para envíar la información
+                    </div>
+                  </div>
+                  </div>
+                  @enderror
+                  @error('direccion_residencia_encargado')
+                  <div class="col-md-6">
+                  <div class="alert alert-danger d-flex align-items-center rounded-pill" role="alert">
+                    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+                    <div>
+                        Es necesario que llenes este campo para envíar la información
+                    </div>
+                  </div>
+                  </div>
+                  @enderror
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <strong><label  for="Labelnombreencargado" class="form-label">Correo electrónico</label></strong>
+                    <input  type="text" class="form-control"  wire:model="correo_encargado">
+                  </div>
+                  
+                  <div class="col-md-6">
+                    <strong><label  for="Labelprofesionencargado" class="form-label">Profesión</label></strong>
+                    <input  type="text" class="form-control"  wire:model="profesion_encargado">
+                  </div>
+                  @error('correo_encargado')
+                  <div class="col-md-6">
+                  <div class="alert alert-danger d-flex align-items-center rounded-pill" role="alert">
+                    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+                    <div>
+                        Es necesario que llenes este campo para envíar la información
+                    </div>
+                  </div>
+                  </div>
+                  @enderror
+                  @error('profesion_encargado')
+                  <div class="col-md-6">
+                  <div class="alert alert-danger d-flex align-items-center rounded-pill" role="alert">
+                    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+                    <div>
+                      Es necesario que llenes este campo para envíar la información
+                    </div>
+                  </div>
+                  </div>
+                  @enderror
+                <div class="col-md-6">
+                    <strong><label  for="Labelnombreencargado" class="form-label">Lugar de trabajo</label></strong>
+                    <input  type="text" class="form-control"  wire:model="lugar_profesion_encargado">
+                  </div>
+                  
+                  <div class="col-md-6">
+                    <strong><label  for="Labelnombreencargado" class="form-label">Cargo de trabajo que ocupa</label></strong>
+                    <input  type="text" class="form-control"  wire:model="cargo_profesion_encargado">
+                  </div>
+
+                  @error('lugar_profesion_encargado')
+                  <div class="col-md-6">
+                  <div class="alert alert-danger d-flex align-items-center rounded-pill" role="alert">
+                    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+                    <div>
+                      Es necesario que llenes este campo para envíar la información
+                    </div>
+                  </div>
+                  </div>
+                  @enderror
+                  @error('cargo_profesion_encargado')
+                  <div class="col-md-6">
+                  <div class="alert alert-danger d-flex align-items-center rounded-pill" role="alert">
+                    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+                    <div>
+                      Es necesario que llenes este campo para envíar la información
+                    </div>
+                  </div>
+                  </div>
+                  @enderror
+                  <div class="col-md-6">
+                    <strong><label  for="Labelnombreencargado" class="form-label">Religión que profesa</label></strong>
+                    <input  type="text" class="form-control"  wire:model="religion_encargado">
+                  </div>
+                  
+                  <div class="col-md-6">
+                    <strong><label  for="Labelnombreencargado" class="form-label">NIT (no utilice guion)</label></strong>
+                    <input  type="number" class="form-control"  wire:model="NIT_encargado">
+
+                  @error('religion_encargado')
+                  <div class="col-md-6">
+                  <div class="alert alert-danger d-flex align-items-center rounded-pill" role="alert">
+                    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+                    <div>
+                      Es necesario que llenes este campo para envíar la información
+                    </div>
+                  </div>
+                  </div>
+                  @enderror
+                  @error('NIT_encargado')
+                  <div class="col-md-6">
+                  <div class="alert alert-danger d-flex align-items-center rounded-pill" role="alert">
+                    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+                    <div>
+                      Es necesario que llenes este campo para envíar la información
+                    </div>
+                  </div>
+                  </div>
+                  @enderror
+                </div>
+                  <center>
+                    <div class="col-md-6">
+                   <strong><label  for="Labelnombreencargado" class="form-label">¿Que relacion tiene el encargado con el alumno?</label></strong>
+                   <input  type="text" class="form-control"  wire:model="Especifique_rel">
+                   </div>
+                   </center>
+                  <center>
+                  <div class="row">
+                      <strong><label  for="Labelnombreencargado" class="form-label">¿El alumno vive con el encargado?</label></strong>
+                      <center>
+                        <div style="width: 12rem;">
+                      <div class="col-md-7">
+                          <div class="form-check">
+                              <input class="form-check-input" type="radio" Wire.model="vive_con_el_encargado"  wire:click="vive_con_el_encargado('1')">
+                              <label class="form-check-label" for="viveen1">
+                                Si
+                              </label>
+                            </div>
+                      </div>
+                      <div class="col-md-7">
+                          <div class="form-check">
+                              <input class="form-check-input" type="radio" Wire.model="viveen"  wire:click="vive_con_el_encargado('2')">
+                              <label class="form-check-label" for="viveen1">
+                                No
+                              </label>
+                            </div>
+                      </div>
+                  </div>
+                      </center>
+                      
+                </div>
+              </center>
+                @endif
+          </div>
+        </div>   
+        </div>
+      </div>
+      </div>
    <br>
 
 <div wire:ignore.self class="accordion" id="accordiondatosmedicos">
@@ -728,13 +1059,13 @@
                 <center>
                 <div style="width: 12rem;">
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="alergia" id="alergia1" wire:click="tiene_alergia('1')">
+                    <input class="form-check-input" type="radio" Wire.model="alergia" id="alergia1" wire:click="tiene_alergia('1')">
                     <label class="form-check-label" for="alergia1">
                       Si
                     </label>
                 </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="alergia" id="alergia2" wire:click="tiene_alergia('0')">
+                    <input class="form-check-input" type="radio" Wire.model="alergia" id="alergia2" wire:click="tiene_alergia('0')">
                     <label class="form-check-label" for="alergia1">
                       No
                     </label>
@@ -759,13 +1090,13 @@
             <center>
             <div style="width: 12rem;">
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="medicamento" id="medicamento1" wire:click="medicamento('1')">
+                <input class="form-check-input" type="radio" Wire.model="medicamento" id="medicamento1" wire:click="medicamento('1')">
                 <label class="form-check-label" for="medicamento1">
                   Si
                 </label>
             </div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="medicamento" id="medicamento2" wire:click="medicamento('0')">
+                <input class="form-check-input" type="radio" Wire.model="medicamento" id="medicamento2" wire:click="medicamento('0')">
                 <label class="form-check-label" for="medicamento1">
                   No
                 </label>
@@ -789,13 +1120,13 @@
         <center>
         <div style="width: 12rem;">
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="alimento" id="alimento1" wire:click="alimento('1')">
+            <input class="form-check-input" type="radio" Wire.model="alimento" id="alimento1" wire:click="alimento('1')">
             <label class="form-check-label" for="alimento1">
               Si
             </label>
         </div>
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="alimento" id="alimento2" wire:click="alimento('0')">
+            <input class="form-check-input" type="radio" Wire.model="alimento" id="alimento2" wire:click="alimento('0')">
             <label class="form-check-label" for="alimento1">
               No
             </label>
@@ -818,13 +1149,13 @@
             <center>
               <div style="width: 12rem;">
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="vacunas" id="vacunas1" wire:click="vacunas('1')">
+                  <input class="form-check-input" type="radio" Wire.model="vacunas" id="vacunas1" wire:click="vacunas('1')">
                     <label class="form-check-label" for="vacunas1">
                       Si
                     </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="vacunas" id="vacunas2" wire:click="vacunas('0')">
+                  <input class="form-check-input" type="radio" Wire.model="vacunas" id="vacunas2" wire:click="vacunas('0')">
                     <label class="form-check-label" for="vacunas1">
                       No
                     </label>
@@ -839,13 +1170,13 @@
             <center>
               <div style="width: 12rem;">
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="alumnoasegurado" id="alumnoasegurado1" wire:click="alumno_asegurado('1')">
+                  <input class="form-check-input" type="radio" Wire.model="alumnoasegurado" id="alumnoasegurado1" wire:click="alumno_asegurado('1')">
                     <label class="form-check-label" for="alumnoasegurado1">
                       Si
                     </label>
                 </div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="alumnoasegurado" id="alumnoasegurado2" wire:click="alumno_asegurado('0')">
+                <input class="form-check-input" type="radio" Wire.model="alumnoasegurado" id="alumnoasegurado2" wire:click="alumno_asegurado('0')">
                   <label class="form-check-label" for="alumnoasegurado1">
                     No
                   </label>
@@ -922,13 +1253,13 @@
               <center>
           <div style="width: 12rem;">
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="solo" id="solo1" wire:click="solo_alumno('1')">
+            <input class="form-check-input" type="radio" Wire.model="solo" id="solo1" wire:click="solo_alumno('1')">
               <label class="form-check-label" for="solo1">
                Si
               </label>
           </div>
           <div class="form-check">
-          <input class="form-check-input" type="radio" name="solo" id="solo2" wire:click="solo_alumno('2')">
+          <input class="form-check-input" type="radio" Wire.model="solo" id="solo2" wire:click="solo_alumno('2')">
             <label class="form-check-label" for="solo1">
               No
             </label>
@@ -942,13 +1273,13 @@
             <center>
             <div style="width: 12rem;">
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="encargado" id="encargado1" wire:click="encargado_alumno('1')">
+                <input class="form-check-input" type="radio" Wire.model="encargado" id="encargado1" wire:click="encargado_alumno('1')">
                 <label class="form-check-label" for="encargado1">
                   Si
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="encargado" id="encargado2" wire:click="encargado_alumno('2')">
+                <input class="form-check-input" type="radio" Wire.model="encargado" id="encargado2" wire:click="encargado_alumno('2')">
                 <label class="form-check-label" for="encargado1">
                   No
                 </label>
@@ -973,13 +1304,13 @@
           <center>
           <div style="width: 12rem;">
           <div class="form-check">
-              <input class="form-check-input" type="radio" name="buscolegio" id="buscolegio1" wire:click="bus_colegio('1')">
+              <input class="form-check-input" type="radio" Wire.model="buscolegio" id="buscolegio1" wire:click="bus_colegio('1')">
               <label class="form-check-label" for="buscolegio1">
                 Si
               </label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="buscolegio" id="buscolegio2" wire:click="bus_colegio('2')">
+              <input class="form-check-input" type="radio" Wire.model="buscolegio" id="buscolegio2" wire:click="bus_colegio('2')">
               <label class="form-check-label" for="buscolegio1">
                 No
               </label>
@@ -1027,9 +1358,24 @@
     </form>
     <div class="modal-footer">
       <button type="button" class="btn btn-pre2" wire:click='validar_datos()'>Validar Información</button>.
-      @if($validacionv==1)
-      <button type="button" class="btn btn-pre2" wire:click='insertar_datos()' data-bs-dismiss="modal">Envíar Información</button>.
+      @if($quien_encargado1==1)
+         @if($validacionv==1)
+       <button type="button" class="btn btn-pre2" wire:click='insertar_datos()' data-bs-dismiss="modal">Envíar Información</button>.
+         @endif
       @endif
+
+      @if($quien_encargado1==2)
+         @if($validacionv==1)
+          <button type="button" class="btn btn-pre2" wire:click='insertar_datos2()' data-bs-dismiss="modal">Envíar Información</button>.
+          @endif
+      @endif
+
+      @if($quien_encargado1==3)
+         @if($validacionv==1)
+          <button type="button" class="btn btn-pre2" wire:click='insertar_datos3()' data-bs-dismiss="modal">Envíar Información</button>.
+          @endif
+      @endif
+      
       </div>
     </div>
   </div>
