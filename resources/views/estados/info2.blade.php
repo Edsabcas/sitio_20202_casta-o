@@ -214,48 +214,6 @@
                                 </div>
                           </div>
                         </div>  
-
-                          {{-- <div class="container">
-                            <div class="row">
-                              <div class="col">
-                                <div class="card text-center" style="width: 18rem;">
-                                  <div class="card-header" style="background-color: #a4cb39; color:rgb(255, 255, 255)">
-                                    <strong>BANCO INDUSTRIAL</strong>
-                                  </div>
-                                  <ul class="list-group list-group-flush">
-                                    <li class="list-group-item"  style="font-size: 15px;">Cuenta monetaria: 027-007109-5</li>
-                                    <li class="list-group-item">A nombre de: Colegio Bilingüe El Castaño</li>
-                                  </ul>
-                                </div>
-                              </div>
-                              <div class="col">
-                                <div class="card text-center" style="width: 18rem;">
-                                  <div class="card-header" style="background-color: #a4cb39; color:rgb(255, 255, 255)">
-                                    <strong>BANRURAL</strong>
-                                  </div>
-                                  <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">Cuenta monetaria: 3445387086</li>
-                                    <li class="list-group-item">A nombre de: Colegio Bilingüe El Castaño</li>
-                                  </ul>
-                                </div>
-                              </div>                              
-                              <div class="col">
-                                <div class="card text-center" style="width: 18rem;">
-                                  <div class="card-header" style="background-color: #a4cb39; color:rgb(255, 255, 255)">
-                                    <strong>BAM</strong>
-                                  </div>
-                                  <ul class="list-group list-group-flush">
-                                    <li class="list-group-item" style="font-size: 15px;">Cuenta monetaria: 49-0112346-9</li>
-                                    <li class="list-group-item">A nombre de: Colegio Bilingüe El Castaño</li>
-                                  </ul>
-                                </div>
-                              </div>
-                            </div>
-                          </div> --}}
-
-
-
-
                             <br>
                           <div class="container">
                             <div class="row">
@@ -289,35 +247,6 @@
                           <br>
                           <hr>
                           <br>
-                          {{-- <div class="container">
-                            <div class="row">
-                              <div class="col">
-                                <h5 style="color: #3a3e7b"><strong>INSCRIPCIONES 2023</strong></h5>
-                                <div class="card text-center" style="width: 18rem;">
-                                  <div class="card-header" style="background-color: #a4cb39; color:rgb(255, 255, 255)">
-                                    <strong>BAM</strong>
-                                  </div>
-                                  <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">Cuenta monetaria: 40-60023216</li>
-                                    <li class="list-group-item">A nombre de: Colegio Bilingüe El Castaño</li>
-                                  </ul>
-                                </div>
-                              </div>
-                              <div class="col">
-                                <h5 style="color:#3a3e7b"><strong>PAQUETES DIDÁCTICOS 2023</strong></h5>
-                                <div class="card text-center" style="width: 18rem;">
-                                  <div class="card-header" style="background-color: #a4cb39; color:rgb(255, 255, 255)">
-                                    <strong>BAM</strong>
-                                  </div>
-                                  <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">Cuenta monetaria: 90-189310-7</li>
-                                    <li class="list-group-item">A nombre de: Colegio Bilingüe El Castaño</li>
-                                  </ul>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <br> --}}
                       <div class="container">
                         <div class="row">
                           <div class="col">
@@ -328,41 +257,53 @@
                               </div>
                             </div>
                           </div>
-
-                            <div class="col">
-                              <div class="card text-center">      
-                                <div class="card-body">
-                                  <h5 class="card-title"><strong>Monto Mensualidad</strong></h5>
-                                  <p class="card-text">Q. {{$monto_men}}</p>
-                                </div>
+                          <div class="col">
+                            <div class="card text-center">      
+                              <div class="card-body">
+                                <h5 class="card-title"><strong>Cuota Anual</strong></h5>
+                                <p class="card-text">Q. {{$monto_ins+$monto_men}}.00</p>
                               </div>
-                            </div>  
-                              <br>  
-                              <div class="col">
-                                <div class="card text-center">      
-                                  <div class="card-body">
-                                    <h5 class="card-title"><strong>Total a Cancelar</strong></h5>
-                                    <p class="card-text">Q. {{$monto_ins+$monto_men}}.00</p>
-                                  </div>
-                                </div> 
+                            </div> 
+                          </div>
+                          <div class="col">
+                            <div class="card text-center">      
+                              <div class="card-body">
+                                <h5 class="card-title"><strong>Monto Mensualidad</strong></h5>
+                                <p class="card-text">Q. {{$monto_men}}</p>
                               </div>
+                            </div>
+                          </div>  
                         </div>
                       </div>                               
                           <br> 
                         <div class="row g-3">
                           <div class="col-md">
+                            <label for="fpago"><h5 style="color: #3a3e7b"><strong>FORMA DE PAGO</strong></h5></label>
+                            <select class="form-select rounded-pill" wire:model="fpago" aria-label="Default select example">
+                              <option selected>Seleccionar</option>
+                              @isset($formasdepago)
+                                @foreach ($formasdepago as $forma)
+                                  <option value="{{$forma->ID_F_PAGO}}">{{$forma->DESCRIPCION}}</option>
+                                @endforeach              
+                              @endisset
+                            </select>
+                          </div>
+                          <div class="col-md">
                             <label for="exampleInputEmail1" class="form-label"><h5 style="color: #3a3e7b"><strong>MÉTODO DE PAGO</strong></h5></label>
                             <select class="form-select rounded-pill" aria-label="Default select example" wire:model="metodo">
                               <option selected>Seleccionar</option>
                                 @isset($metododepago)
-                                  @foreach ($metododepago as $metodo)
-                                    <option value="{{$metodo->ID_T_D_PAGO}}">{{$metodo->DESCRIPCION}}</option>
+                                  @foreach ($metododepago as $metodos)
+                                    <option value="{{$metodos->ID_T_D_PAGO}}">{{$metodos->DESCRIPCION}}</option>
                                   @endforeach              
                                 @endisset
                             </select>
                           </div>
                         </div>
                         <br>
+
+                        
+                        @if ($metodo==1)
                         <div class="row g-3">
                           <div class="col-md">
                             <div class="form-group row">
@@ -408,6 +349,9 @@
                               <textarea class="form-control" id="message-text" wire:model="observacion"></textarea>
                           </div>              
                         </div>  
+                        @else
+                            
+                        @endif
                     </div>
                     <div class="modal-footer">
                       <button class="btn btn-pre2" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Siguiente</button>
