@@ -533,7 +533,7 @@
     <br>
     <div class="row g-4" style="border-radius: 60px 60px 60px 60px;">
       
-    <a wire:click='val3' type="button" style="border-radius: 60px 60px 60px 60px;" class="btn btn-warning">Validar Información</a>
+    <a wire:click='val3' type="button" style="border-radius: 60px 60px 60px 60px;" class="btn btn-pre">Validar Información</a>
     </div>
     <br>
 
