@@ -232,6 +232,14 @@
                         
                         </div>
                         <p>Ingrese los datos solicitados para la inscripción.</p>
+
+                        <div>
+                            <button type="button" class="btn btn-pre2" id="Crear">
+                                Formulario datos de inscripción
+                                @include('estados.forms.info3_form')
+                            </button>
+                        </div>
+                        
                 </div>
                 
             </li>
@@ -338,10 +346,6 @@
                     </div>
                     <p><strong style="font-size: 12px;">Finalizado.</strong></p>
             </div>
-            <button type="button" class="btn btn-pre2" id="Crear">
-                   Formulario datos de inscripción</button>
-                @include('estados.forms.info3_form')
-
          </li>
             <br>
             <br>
