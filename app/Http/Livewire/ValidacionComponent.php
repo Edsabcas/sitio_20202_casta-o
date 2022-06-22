@@ -28,7 +28,7 @@ class ValidacionComponent extends Component
     public $estado_elevado, $matricula_bus_aj, $validacionv, $codigo_familia3, $fecha_codigo;
     public $nombre_encargado2, $fechana_encargado2, $nacionalidad_encargado2 , $lugar_nacimiento_encargado2 ,$estadocivilencargado2 , $DPI_encargado2 ,$telefono_encargado2 ,$celular_encargado2;
     public $direccion_residenciaencargado2 ,$correo_encargado2  ,$profesion_encargado2 ,$lugar_prof_encargado2 ,$religion_encargado2 ,$NIT_encargado2 ,$vive_encargado2, $quien_encargado1;
-
+    public $solo_por;
 
     public function render()
     {
@@ -279,6 +279,7 @@ class ValidacionComponent extends Component
             else{
                     $Especifique_ali=$this->Especifique_ali;
         }
+        $solo_por=$this->$solo_por;
 
         
         DB::beginTransaction();
@@ -1026,6 +1027,11 @@ class ValidacionComponent extends Component
     public function solo_alumno($solo_alumno){
         $this->solo_alumno=$solo_alumno;
     }
+
+    public function solo_por($solo_por){
+        $this->solo_por=$solo_por;
+    }
+
 
     public function encargado_alumno($encargado_alumno){
         $this->encargado_alumno=$encargado_alumno;
