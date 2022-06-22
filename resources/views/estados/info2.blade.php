@@ -177,10 +177,48 @@
                         <hr>
                         <br>
                         <h5 style="color: #3a3e7b"><strong>COLEGIATURAS 2023</strong></h5>
-                          <div class="container">
+
+                        <div class="container">
+                          <div class="row">
+                            <div class="col">
+                              <div class="card text-center">      
+                                <div class="card-body">
+                                  <h5 class="card-title"><strong>BANCO INDUSTRIAL</strong></h5>
+                                  <hr>
+                                  <p class="card-text">Cuenta monetaria: <strong>027-007109-5</strong></p>
+                                  <p class="card-text">A nombre de: Colegio Bilingüe El Castaño</p>
+                                </div>
+                              </div>
+                            </div>
+  
+                              <div class="col">
+                                <div class="card text-center">      
+                                  <div class="card-body">
+                                    <h5 class="card-title"><strong>BANRURAL</strong></h5>
+                                    <hr>
+                                    <p class="card-text">Cuenta monetaria: <strong>3445387086</strong></p>
+                                    <p class="card-text">A nombre de: Colegio Bilingüe El Castaño</p>
+                                  </div>
+                                </div>
+                              </div>  
+                                <br>  
+                                <div class="col">
+                                  <div class="card text-center">      
+                                    <div class="card-body">
+                                      <h5 class="card-title"><strong>BAM</strong></h5>
+                                      <hr>
+                                      <p class="card-text">Cuenta monetaria: <strong>49-0112346-9</strong></p>
+                                      <p class="card-text">A nombre de: Colegio Bilingüe El Castaño</p>
+                                    </div>
+                                  </div> 
+                                </div>
+                          </div>
+                        </div>  
+
+                          {{-- <div class="container">
                             <div class="row">
                               <div class="col">
-                                <div class="card" style="width: 18rem;">
+                                <div class="card text-center" style="width: 18rem;">
                                   <div class="card-header" style="background-color: #a4cb39; color:rgb(255, 255, 255)">
                                     <strong>BANCO INDUSTRIAL</strong>
                                   </div>
@@ -191,7 +229,7 @@
                                 </div>
                               </div>
                               <div class="col">
-                                <div class="card" style="width: 18rem;">
+                                <div class="card text-center" style="width: 18rem;">
                                   <div class="card-header" style="background-color: #a4cb39; color:rgb(255, 255, 255)">
                                     <strong>BANRURAL</strong>
                                   </div>
@@ -202,7 +240,7 @@
                                 </div>
                               </div>                              
                               <div class="col">
-                                <div class="card" style="width: 18rem;">
+                                <div class="card text-center" style="width: 18rem;">
                                   <div class="card-header" style="background-color: #a4cb39; color:rgb(255, 255, 255)">
                                     <strong>BAM</strong>
                                   </div>
@@ -213,9 +251,45 @@
                                 </div>
                               </div>
                             </div>
-                          </div>
-                          <br>
+                          </div> --}}
+
+
+
+
+                            <br>
                           <div class="container">
+                            <div class="row">
+                              <div class="col">
+                                <h5 style="color: #3a3e7b"><strong>INSCRIPCIONES 2023</strong></h5>   
+                                <div class="card text-center">  
+                                  <div class="card-body"> 
+                                    <h5 class="card-title"><strong>BAM</strong></h5>
+                                    <hr>
+                                    <p class="card-text">Cuenta monetaria: <strong>40-60023216</strong></p>
+                                    <p class="card-text">A nombre de: Colegio Bilingüe El Castaño</p>
+                                  </div>
+                                </div>
+                              </div>
+
+                                  <div class="col">
+                                    <h5 style="color:#3a3e7b"><strong>PAQUETES DIDÁCTICOS 2023</strong></h5> 
+                                    <div class="card text-center">     
+                                      <div class="card-body">
+                                        <h5 class="card-title"><strong>BAM</strong></h5>
+                                        <hr>
+                                        <p class="card-text">Cuenta monetaria: <strong>90-189310-7</strong></p>
+                                        <p class="card-text">A nombre de: Colegio Bilingüe El Castaño</p>
+                                      </div>
+                                    </div> 
+                                  </div>
+                            </div>
+                          </div>                              
+
+
+                          <br>
+                          <hr>
+                          <br>
+                          {{-- <div class="container">
                             <div class="row">
                               <div class="col">
                                 <h5 style="color: #3a3e7b"><strong>INSCRIPCIONES 2023</strong></h5>
@@ -243,28 +317,39 @@
                               </div>
                             </div>
                           </div>
-                        <h6>Monto Inscripción</h6>
-                        <p>{{$monto_ins}}</p>
-                        <br>
-                        <h6>Monto Mensualidad</h6>
-                        <p>{{$monto_men}}</p>
-                        <br>
-                        <h6>Total a cancelar</h6>
-                        <p>{{$monto_ins+$monto_men}}</p>
-                        <br>
+                          <br> --}}
+                      <div class="container">
+                        <div class="row">
+                          <div class="col">
+                            <div class="card text-center">      
+                              <div class="card-body">
+                                <h5 class="card-title"><strong>Monto Inscripción</strong></h5>
+                                <p class="card-text">Q. {{$monto_ins}}</p>
+                              </div>
+                            </div>
+                          </div>
+
+                            <div class="col">
+                              <div class="card text-center">      
+                                <div class="card-body">
+                                  <h5 class="card-title"><strong>Monto Mensualidad</strong></h5>
+                                  <p class="card-text">Q. {{$monto_men}}</p>
+                                </div>
+                              </div>
+                            </div>  
+                              <br>  
+                              <div class="col">
+                                <div class="card text-center">      
+                                  <div class="card-body">
+                                    <h5 class="card-title"><strong>Total a Cancelar</strong></h5>
+                                    <p class="card-text">Q. {{$monto_ins+$monto_men}}.00</p>
+                                  </div>
+                                </div> 
+                              </div>
+                        </div>
+                      </div>                               
                           <br> 
                         <div class="row g-3">
-                          <div class="col-md">
-                            <label for="fpago"><h5 style="color: #3a3e7b"><strong>FORMA DE PAGO</strong></h5></label>
-                            <select class="form-select rounded-pill" wire:model="fpago" aria-label="Default select example">
-                              <option selected>Seleccionar</option>
-                              @isset($formasdepago)
-                                @foreach ($formasdepago as $forma)
-                                  <option value="{{$forma->ID_F_PAGO}}">{{$forma->DESCRIPCION}}</option>
-                                @endforeach              
-                              @endisset
-                            </select>
-                          </div>
                           <div class="col-md">
                             <label for="exampleInputEmail1" class="form-label"><h5 style="color: #3a3e7b"><strong>MÉTODO DE PAGO</strong></h5></label>
                             <select class="form-select rounded-pill" aria-label="Default select example" wire:model="metodo">
