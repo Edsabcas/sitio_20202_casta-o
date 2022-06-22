@@ -23,40 +23,90 @@
             este Municipio lo que acredito con Resolución: No. 005-95-EP., de fecha 9 de enero de 1995, emitida por Direcciòn 
             Tecnica Regional Metropolitana, . Y por la otra parte: </p>
         <p>(DATOS DEL PADRE DE FAMILIA O REPRESENTANTE LEGAL DEL EDUCANDO)</p>
-            <p style="text-align: justify;"><u><Strong>{{$datos[13]}}</Strong></u>, de <u><strong>{{$datos[15]}} años, {{$datos[5]}}, {{$datos[6]}}, {{$datos[20]}}</strong></u>, de este domicilio, me identifico con el <u><strong>DPI: {{$datos[7]}}</strong></u></p>
-            
+        <table align="center">
+            <tr>
+                <td><u><Strong>{{$datos[13]}}</Strong></u></td>
+            </tr> 
+        </table> 
+        <hr>
+        <table align="center">
+            <tr>
+                <td>(Nombres)(Apellidos)</td>
+            </tr>
+        </table>
+        
+       <div class="container">
+        <center>
+        <table align="center">
+            <tr>
+                <th style="width:50mm">de <u><strong>{{$datos[15]}} años</th>
+                    <th style="width:70mm"><u><strong>{{$datos[6]}}</strong></u></th>
+                <th style="width:50mm"><u><strong>{{$datos[5]}}</strong></u></th>
+            </tr>
+              
+        </table> 
+    </center>
+       </div>
+       <hr>
+       <table align="center">
+        <tr>            
+            <td style="width:75mm">(Años de edad)</td>
+            <td style="width:70mm">(Estado civil)</td>
+            <td style="width:50mm">(Nacionalidad)</td>
+            </tr>
+       </table>
+    
+        <table align="center">
+            <tr>
+                <td style="width:90mm"><u><Strong>{{$datos[20]}}</strong></u></Strong></u></td> 
+                <td style="width:90mm"><u><strong>{{$datos[7]}}</strong></strong></u></td>
+            </tr>
+              
+        </table>
+        <hr>
+        <table align="center">
+            <tr>            
+                <td style="width:90mm">(profesión u oficio)</td>
+                <td style="width:90mm">(DPI)</td>
+                </tr>
+            </table> 
 
-            <p style="text-align: justify;">extendido en <u><strong>Mixco</strong></u>, con residencia en: <u><strong>{{$datos[8]}}</strong></u>
+            <p style="text-align: justify;">con residencia en: <u><strong>{{$datos[8]}}</strong></u>
             con número de teléfono de casa <u><strong>{{$datos[9]}}</strong></u>, oficina <u><strong>{{$datos[10]}}</strong></u>
-         y celular <u><strong>{{$datos[11]}}</strong></u>, correo electrónico <u><strong>{{$datos[12]}}</strong></u>
-        actuando en mi calidad de <u><strong>Encargado</strong></u>, (en adelante relacionado como “el 
-        Representante del educando”) declarando que la información personal proporcionada es de carácter confidencial. 
-        Los comparecientes aseguramos ser de los datos de identificación anotados, estar en el libre ejercicio de nuestros 
-        derechos civiles y celebramos CONTRATO DE ADHESION POR PRESTACION DE SERVICIOS EDUCATIVOS, de 
+         , celular <u><strong>{{$datos[11]}}</strong></u> y correo electrónico <u><strong>{{$datos[12]}}</strong></u>,
+         declarando que la información personal proporcionada es de carácter confidencial. Los comparecientes aseguramos ser responsables de los datos de identificación anotados, estar en el libre ejercicio de nuestros 
+        derechos civiles y la calidad que se ejercita es amplia y sufieciente para la celebración del CONTRATO DE ADHESION POR PRESTACION DE SERVICIOS EDUCATIVOS, de 
         conformidad con las siguientes cláusulas:</p>
             
         
         <strong><p>PRIMERA. <u>INFORMACION DEL EDUCANDO Y SERVICIO EDUCATIVO CONTRATADO</u></p></strong>
-        <p style="text-align: justify;"><u><strong>{{$datos[14]}}</strong></u> quien cursará el <u><strong>Grado de ingreso alumno</strong></u> grado, del nivel y/o carrera <u><strong>nombre carrera</strong></u>, 
-            jornada matutina, plan diario. Servicio educativo autorizado por el Ministerio de Educación según Resolución(es) No. 
-            005-95-EP. Con fecha 9 de enero de 1995, emitida por la Direcciòn Tecnica Regional Metropolitana; No. 0204-99-
+        <table align="center">
+            <tr>
+                <td><u><Strong><strong>{{$datos[14]}}</Strong></u></td> 
+            </tr>
+             
+        </table>
+        <hr> 
+        <table align="center">
+            <tr>            
+                <td>(Nombres) (Apellidos)</td>
+                </tr> 
+        </table>
+        <p style="text-align: justify;">quien cursará el grado de: <u><strong>{{$datos[21]}}</strong></u>, del nivel: <u><strong>{{$datos[22]}}</strong></u>, 
+            jornada <u><strong>{{$datos[23]}}</strong></u>. </p>
+        <p style="text-align: justify;">
+            Servicios educativos debidamente autorizados por el Ministerio de Educación, de conformidad con Resolución(es) a)No. 
+            005-95-EP. Con fecha 9 de enero de 1995, emitida por la Direcciòn Tecnica Regional Metropolitana; b)No. 0204-99-
             E.P. con fecha 13 de marzo de 1999 emitida por la Direcciòn Departamental de Guatemala, misma(s) que se tiene(n) 
             a la vista.</p>
         <p style="text-align: justify;"> <strong>SEGUNDA. <u>VOLUNTARIEDAD EN LA CONTRATACION DEL SERVICIO.</u> </strong> Manifiesta el Representante del 
             Educando, que conociendo la amplia oferta de instituciones privadas que prestan servicios educativos, de manera 
-            voluntaria y espontánea ha elegido al Centro Educativo para la educación académica del educando, pues a su juicio 
-            cumple con todos y cada uno de los requerimientos que necesita satisfacer para el efecto. Por tal razón el 
-            responsable del educando se obliga a cumplir la totalidad de las obligaciones contraídas en el presente Contrato bajo 
-            el entendido que de generarse cualquier incumplimiento, no solo por el Responsable del Educando sino además del 
-            Centro Educativo, genera las consecuencias indicadas en el presente Contrato, así como las determinadas por la 
-            Legislación vigente.
+            voluntaria y espontánea ha elegido al Centro Educativo para la educación académica del educando.
             </p>
-        <p style="text-align: justify;"> <strong>TERCERA. <u>DEL PLAZO.</u></strong> El servicio educativo convenido en este contrato será válido para el ciclo escolar del año 
+        <p style="text-align: justify;"> <strong>TERCERA. <u>PLAZO.</u></strong> El servicio educativo convenido en este contrato será válido para el ciclo escolar del año 
             <strong>{{$datos[0]}}</strong>, durante su vigencia no puede ser modificada ninguna de sus cláusulas, las que se 
-            deberán cumplir a cabalidad; así como con todo lo ofrecido a los padres de familia, tanto en la publicidad efectuada 
-            en los medios de comunicación, información escrita o cualquier otro documento publicitario. El representante del 
-            Educando y el Centro Educativo podrán suscribir un Nuevo Contrato para el ciclo escolar inmediato siguiente, en 
-            caso acuerden la continuidad del educando en el Centro Educativo.</p>
+            deberán cumplir a cabalidad. El representante del Educando y el Centro Educativo podrán suscribir un Nuevo Contrato para el ciclo escolar inmediato siguiente, en 
+            caso acuerden la continuidad del educando.</p>
         <p style="text-align: justify;"> <strong><p>CUARTA. <u>DERECHOS DEL EDUCANDO, PADRE DE FAMILIA O REPRESENTANTE LEGAL.</u></p></strong> Como usuarios del servicio educativo contratado en armonía con el Artículo 4 de la Ley de Protección al Consumidor y Usuario, tendrá 
             derecho a:</p>
             <ul>
@@ -136,6 +186,11 @@
         <p style="text-align: justify;"><strong>SEPTIMA. <u>DE LAS CUOTAS.</u></strong>Como padre de familia o representante legal me comprometo a efectuar únicamente
         los siguientes pagos, sin necesidad de cobro ni requerimiento alguno: 
         </p>
+        <br>
+        <br>
+
+        <br>
+        <br>
         <table border="1px">
 
             <tr>
