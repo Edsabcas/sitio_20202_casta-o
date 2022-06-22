@@ -17,7 +17,7 @@
         </div>
         <div class="card border-0">
           <div class="card-header text-center border-0">
-            <span style="color:black">Seguimiento de su proceso de pre-inscripción.</span>
+            <span style="color:black">Seguimiento de su proceso de inscripción.</span>
           </div>
 
   <div class="card-body">
@@ -92,7 +92,7 @@
               <br>
                 <div class="timeline-panel">
                     <div class="timeline-heading">
-                        <h4 style="color: #3a3e7b; font-size: 16px;"><strong>1. PRE-INSCRIPCIÓN</strong></h4>
+                        <h4 style="color: #3a3e7b; font-size: 16px;"><strong>1. INSCRIPCIÓN</strong></h4>
                     </div>
                     <div class="timeline-body">
                         <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="#a4cb39" class="bi bi-pencil-square" viewBox="0 0 16 16">
@@ -100,7 +100,7 @@
                             <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
                         </svg> 
                         <br>                        
-                        <p><strong style="font-size: 12px;">Su pre-inscripción fue enviada con éxito.</strong></p>
+                        <p><strong style="font-size: 12px;">Su inscripción fue enviada con éxito.</strong></p>
                     </div>
                 </div>
           </li>
@@ -119,7 +119,7 @@
                   <br>
                 <div class="timeline-panel text-center">
                     <div class="timeline-heading">
-                        <h4 style="color: #3a3e7b; font-size: 16px;"><strong>2. VALIDACIÓN DE PRE-INSCRIPCIÓN</strong></h4>
+                        <h4 style="color: #3a3e7b; font-size: 16px;"><strong>2. VALIDACIÓN DE INSCRIPCIÓN</strong></h4>
                     </div>
                     <div class="timeline-body">
                         <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="#a4cb39" class="bi bi-clipboard-check" viewBox="0 0 16 16">
@@ -129,7 +129,7 @@
                         </svg> 
                         <br> 
                         <br>                         
-                        <p><strong>Su información fue recibida y validada con éxito, por favor realice el siguiente paso habilitado.</strong></p>
+                        <p><strong>Su información fue recibida, en la brevedad posible su información será procesada y se le notificará por medio de correo electrónico.</strong></p>
                     </div>
                 </div>
             </li>
@@ -183,7 +183,7 @@
                             <div class="col">
                               <div class="card text-center">      
                                 <div class="card-body">
-                                  <h5 class="card-title"><strong>BANCO INDUSTRIAL</strong></h5>
+                                  <h5 class="card-title" ><strong>BANCO INDUSTRIAL</strong></h5>
                                   <hr>
                                   <p class="card-text">Cuenta monetaria: <strong>027-007109-5</strong></p>
                                   <p class="card-text">A nombre de: Colegio Bilingüe El Castaño</p>
@@ -458,7 +458,7 @@
                       </label>
                     </div>
                     <br>
-                      
+
                       </form>
                         @endif
                                             
@@ -571,7 +571,7 @@
                       <br>
                       
                       </div>
-                      <p><strong style="font-size: 12px;">Prendiente ingrese los datos solicitados para la inscripción</strong></p>
+                       <p><strong style="font-size: 12px;">Pendiente de ingresar los datos solicitados para la inscripción.</strong></p>
               </div>                
           </li>
           <div class="d-flex justify-content-center">
@@ -628,7 +628,7 @@
                       </svg> 
                       <br>                                        
                       </div>
-                      <p><strong style="font-size: 12px;">Pendiente de generar su contrato para rellenarlo.</strong></p>
+                      <p><strong style="font-size: 12px;">Pendiente de generar su contrato para ingresar datos.</strong></p>
               </div>
           </li>
           <div class="d-flex justify-content-center">
@@ -656,7 +656,7 @@
                       </svg> 
                       <br>                                        
                       </div>
-                      <p><strong style="font-size: 12px;">Su contrato será enviado y entrará en proceso de validación.</strong></p>
+                      <p><strong style="font-size: 12px;">Su contrato aun no ha sido recibido para el proceso de validación.</strong></p>
               </div>
       </li>
       <div class="d-flex justify-content-center">
@@ -684,7 +684,7 @@
                     </svg>
                   <br>                                        
                   </div>
-                  <p><strong style="font-size: 12px;">Ceación de usuarios y envío por correo.</strong></p>
+                  <p><strong style="font-size: 12px;">Los usuarios aun no han sido creados.</strong></p>
           </div>
        </li>
        <div class="d-flex justify-content-center">
@@ -716,174 +716,178 @@
           </div>
        </li>
 
+       <<<<<<< HEAD
 
-              <div wire:ignore.self class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-                <div class="modal-dialog modal-dialog-centered modal-xl">
-                  <div class="modal-content">
-                    <div class="modal-header text-center" style="background:#a4cb39;color:rgb(255, 255, 255)">
-                      <h5 class="modal-title text-center" style="color:rgb(255, 255, 255)"><strong>Generación de pagos</strong></h5>
-                      <button type="button" class="btn btn-close" style="color:rgb(255, 255, 255)"  data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body"> 
-                      <br>     
-                        <h3 style="color: #3a3e7b"><strong>CUENTAS BANCARIAS</strong></h3>
-                        <br>
-                        <hr>
-                        <br>
-                        <h5 style="color: #3a3e7b"><strong>COLEGIATURAS 2023</strong></h5>
-                          <div class="container">
-                            <div class="row">
-                              <div class="col">
-                                <div class="card" style="width: 18rem;">
-                                  <div class="card-header" style="background-color: #a4cb39; color:rgb(255, 255, 255)">
-                                    <strong>BANCO INDUSTRIAL</strong>
-                                  </div>
-                                  <ul class="list-group list-group-flush">
-                                    <li class="list-group-item"  style="font-size: 15px;">Cuenta monetaria: 027-007109-5</li>
-                                    <li class="list-group-item">A nombre de: Colegio Bilingüe El Castaño</li>
-                                  </ul>
-                                </div>
-                              </div>
-                              <div class="col">
-                                <div class="card" style="width: 18rem;">
-                                  <div class="card-header" style="background-color: #a4cb39; color:rgb(255, 255, 255)">
-                                    <strong>BANRURAL</strong>
-                                  </div>
-                                  <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">Cuenta monetaria: 3445387086</li>
-                                    <li class="list-group-item">A nombre de: Colegio Bilingüe El Castaño</li>
-                                  </ul>
-                                </div>
-                              </div>                              
-                              <div class="col">
-                                <div class="card" style="width: 18rem;">
-                                  <div class="card-header" style="background-color: #a4cb39; color:rgb(255, 255, 255)">
-                                    <strong>BAM</strong>
-                                  </div>
-                                  <ul class="list-group list-group-flush">
-                                    <li class="list-group-item" style="font-size: 15px;">Cuenta monetaria: 49-0112346-9</li>
-                                    <li class="list-group-item">A nombre de: Colegio Bilingüe El Castaño</li>
-                                  </ul>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <br>
-                          <div class="container">
-                            <div class="row">
-                              <div class="col">
-                                <h5 style="color: #3a3e7b"><strong>INSCRIPCIONES 2023</strong></h5>
-                                <div class="card text-center" style="width: 18rem;">
-                                  <div class="card-header" style="background-color: #a4cb39; color:rgb(255, 255, 255)">
-                                    <strong>BAM</strong>
-                                  </div>
-                                  <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">Cuenta monetaria: 40-60023216</li>
-                                    <li class="list-group-item">A nombre de: Colegio Bilingüe El Castaño</li>
-                                  </ul>
-                                </div>
-                              </div>
-                              <div class="col">
-                                <h5 style="color:#3a3e7b"><strong>PAQUETES DIDÁCTICOS 2023</strong></h5>
-                                <div class="card text-center" style="width: 18rem;">
-                                  <div class="card-header" style="background-color: #a4cb39; color:rgb(255, 255, 255)">
-                                    <strong>BAM</strong>
-                                  </div>
-                                  <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">Cuenta monetaria: 90-189310-7</li>
-                                    <li class="list-group-item">A nombre de: Colegio Bilingüe El Castaño</li>
-                                  </ul>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <br> 
-                        <div class="row g-3">
-                          {{-- <div class="col-md">
-                            <label for="fpago"><h5 style="color: #3a3e7b"><strong>FORMA DE PAGO</strong></h5></label>
-                            <select class="form-select rounded-pill" wire:model="fpago" aria-label="Default select example">
-                              <option selected>Seleccionar</option>
-                              @isset($formasdepago)
-                                @foreach ($formasdepago as $forma)
-                                  <option value="{{$forma->ID_F_PAGO}}">{{$forma->DESCRIPCION}}</option>
-                                @endforeach              
-                              @endisset
-                            </select>
-                          </div> --}}
-                          <div class="col-md">
-                            <label for="exampleInputEmail1" class="form-label"><h5 style="color: #3a3e7b"><strong>MÉTODO DE PAGO</strong></h5></label>
-                            <select class="form-select rounded-pill" aria-label="Default select example" wire:model="metodo">
-                              <option selected>Seleccionar</option>
-                                @isset($metododepago)
-                                  @foreach ($metododepago as $metodo)
-                                    <option value="{{$metodo->ID_T_D_PAGO}}">{{$metodo->DESCRIPCION}}</option>
-                                  @endforeach              
-                                @endisset
-                            </select>
-                          </div>
-                        </div>
-                        <br>
-                        <h6>Monto Inscripción</h6>
-                        <p>{{$monto_ins}}</p>
-                        <br>
-                        <h6>Monto Mensualidad</h6>
-                        <p>{{$monto_men}}</p>
-                        <br>
-                        <h6>Total a cancelar</h6>
-                        <p>{{$monto_ins+$monto_men}}</p>
-                        <br>
-                        <div class="row g-3">
-                          <div class="col-md">
-                            <div class="form-group row">
-                              <label for="exampleInputPassword1" class="form-label"><h5 style="color: #3a3e7b"><strong>SUBIR COMPROBANTE DE PAGO</strong></h5></label>
-                              <div class="mb-3">
-                                <input type="file" id="archivo"  wire:model="archivo_comprobante">
-                              </div> 
-                            </div>
-                          </div>
-                          
-                            <div class="mb-3">
-                              <div wire:loading wire:target="archivo_comprobante" class="alert alert-warning" role="alert">
-                                <strong class="font-bold">¡Imagen cargando!</strong>
-                                  <span class="block sm:inlone">Espere un momento hasta que la imagen se haya procesado completamente.</span>
-                                <div class="spinner-border text-warning" role="status">
-                                </div>
-                              </div>
-                              @if($tipo==1)
-                                <h3 class="form-label">Visualización de Imagen</h3>
-                                <img src="{{$archivo_comprobante->temporaryURL()}}" height="50" weight="50"  alt="...">
-                              @endif
-                              {{-- @if($tipo==3)
-                              <h3 class="form-label">Visualización de PDF</h3>
-                                <iframe width="400" height="400" src="/public/pdf/{{$img}}" frameborder="0"></iframe>
-                              @endif --}}
-                                          @if($mensaje24 != null)
-                                            <div class="alert alert-success d-flex align-items-center" role="alert">
-                                              <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
-                                              <div>{{$mensaje24}}
-                                              </div>
-                                            </div>
-                                          @endif
-                                          @if($mensaje25 != null)
-                                            <div class="alert alert-danger d-flex align-items-center" role="alert">
-                                              <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
-                                                <div>{{$mensaje25}}
-                                                </div>
-                                            </div>
-                                          @endif
-                            </div>
-                            <div class="col-md">
-                            <label for="message-text" class="col-form-label"><h5 style="color: #3a3e7b"><strong>OBSERVACIÓN</strong></h5></label>
-                              <textarea class="form-control" id="message-text" wire:model="observacion"></textarea>
-                          </div>              
-                        </div>  
-                    </div>
-                    <div class="modal-footer">
-                      <button class="btn btn-pre2" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Siguiente</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
+       <div wire:ignore.self class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+         <div class="modal-dialog modal-dialog-centered modal-xl">
+           <div class="modal-content">
+             <div class="modal-header text-center" style="background:#a4cb39;color:rgb(255, 255, 255)">
+               <h5 class="modal-title text-center" style="color:rgb(255, 255, 255)"><strong>Generación de pagos</strong></h5>
+               <button type="button" class="btn btn-close" style="color:rgb(255, 255, 255)"  data-bs-dismiss="modal" aria-label="Close"></button>
+             </div>
+             <div class="modal-body"> 
+               <br>     
+                 <h3 style="color: #3a3e7b"><strong>CUENTAS BANCARIAS</strong></h3>
+                 <br>
+                 <hr>
+                 <br>
+                 <h5 style="color: #3a3e7b"><strong>COLEGIATURAS 2023</strong></h5>
+                   <div class="container">
+                     <div class="row">
+                       <div class="col">
+                         <div class="card" style="width: 18rem;">
+                           <div class="card-header" style="background-color: #a4cb39; color:rgb(255, 255, 255)">
+                             <strong>BANCO INDUSTRIAL</strong>
+                           </div>
+                           <ul class="list-group list-group-flush">
+                             <li class="list-group-item"  style="font-size: 15px;">Cuenta monetaria: 027-007109-5</li>
+                             <li class="list-group-item">A nombre de: Colegio Bilingüe El Castaño</li>
+                           </ul>
+                         </div>
+                       </div>
+                       <div class="col">
+                         <div class="card" style="width: 18rem;">
+                           <div class="card-header" style="background-color: #a4cb39; color:rgb(255, 255, 255)">
+                             <strong>BANRURAL</strong>
+                           </div>
+                           <ul class="list-group list-group-flush">
+                             <li class="list-group-item">Cuenta monetaria: 3445387086</li>
+                             <li class="list-group-item">A nombre de: Colegio Bilingüe El Castaño</li>
+                           </ul>
+                         </div>
+                       </div>                              
+                       <div class="col">
+                         <div class="card" style="width: 18rem;">
+                           <div class="card-header" style="background-color: #a4cb39; color:rgb(255, 255, 255)">
+                             <strong>BAM</strong>
+                           </div>
+                           <ul class="list-group list-group-flush">
+                             <li class="list-group-item" style="font-size: 15px;">Cuenta monetaria: 49-0112346-9</li>
+                             <li class="list-group-item">A nombre de: Colegio Bilingüe El Castaño</li>
+                           </ul>
+                         </div>
+                       </div>
+                     </div>
+                   </div>
+                   <br>
+                   <div class="container">
+                     <div class="row">
+                       <div class="col">
+                         <h5 style="color: #3a3e7b"><strong>INSCRIPCIONES 2023</strong></h5>
+                         <div class="card text-center" style="width: 18rem;">
+                           <div class="card-header" style="background-color: #a4cb39; color:rgb(255, 255, 255)">
+                             <strong>BAM</strong>
+                           </div>
+                           <ul class="list-group list-group-flush">
+                             <li class="list-group-item">Cuenta monetaria: 40-60023216</li>
+                             <li class="list-group-item">A nombre de: Colegio Bilingüe El Castaño</li>
+                           </ul>
+                         </div>
+                       </div>
+                       <div class="col">
+                         <h5 style="color:#3a3e7b"><strong>PAQUETES DIDÁCTICOS 2023</strong></h5>
+                         <div class="card text-center" style="width: 18rem;">
+                           <div class="card-header" style="background-color: #a4cb39; color:rgb(255, 255, 255)">
+                             <strong>BAM</strong>
+                           </div>
+                           <ul class="list-group list-group-flush">
+                             <li class="list-group-item">Cuenta monetaria: 90-189310-7</li>
+                             <li class="list-group-item">A nombre de: Colegio Bilingüe El Castaño</li>
+                           </ul>
+                         </div>
+                       </div>
+                     </div>
+                   </div>
+                   <br> 
+                 <div class="row g-3">
+                   {{-- <div class="col-md">
+                     <label for="fpago"><h5 style="color: #3a3e7b"><strong>FORMA DE PAGO</strong></h5></label>
+                     <select class="form-select rounded-pill" wire:model="fpago" aria-label="Default select example">
+                       <option selected>Seleccionar</option>
+                       @isset($formasdepago)
+                         @foreach ($formasdepago as $forma)
+                           <option value="{{$forma->ID_F_PAGO}}">{{$forma->DESCRIPCION}}</option>
+                         @endforeach              
+                       @endisset
+                     </select>
+                   </div> --}}
+                   <div class="col-md">
+                     <label for="exampleInputEmail1" class="form-label"><h5 style="color: #3a3e7b"><strong>MÉTODO DE PAGO</strong></h5></label>
+                     <select class="form-select rounded-pill" aria-label="Default select example" wire:model="metodo">
+                       <option selected>Seleccionar</option>
+                         @isset($metododepago)
+                           @foreach ($metododepago as $metodo)
+                             <option value="{{$metodo->ID_T_D_PAGO}}">{{$metodo->DESCRIPCION}}</option>
+                           @endforeach              
+                         @endisset
+                     </select>
+                   </div>
+                 </div>
+                 <br>
+                 <h6>Monto Inscripción</h6>
+                 <p>{{$monto_ins}}</p>
+                 <br>
+                 <h6>Monto Mensualidad</h6>
+                 <p>{{$monto_men}}</p>
+                 <br>
+                 <h6>Total a cancelar</h6>
+                 <p>{{$monto_ins+$monto_men}}</p>
+                 <br>
+                 <div class="row g-3">
+                   <div class="col-md">
+                     <div class="form-group row">
+                       <label for="exampleInputPassword1" class="form-label"><h5 style="color: #3a3e7b"><strong>SUBIR COMPROBANTE DE PAGO</strong></h5></label>
+                       <div class="mb-3">
+                         <input type="file" id="archivo"  wire:model="archivo_comprobante">
+                       </div> 
+                     </div>
+                   </div>
+                   
+                     <div class="mb-3">
+                       <div wire:loading wire:target="archivo_comprobante" class="alert alert-warning" role="alert">
+                         <strong class="font-bold">¡Imagen cargando!</strong>
+                           <span class="block sm:inlone">Espere un momento hasta que la imagen se haya procesado completamente.</span>
+                         <div class="spinner-border text-warning" role="status">
+                         </div>
+                       </div>
+                       @if($tipo==1)
+                         <h3 class="form-label">Visualización de Imagen</h3>
+                         <img src="{{$archivo_comprobante->temporaryURL()}}" height="50" weight="50"  alt="...">
+                       @endif
+                       {{-- @if($tipo==3)
+                       <h3 class="form-label">Visualización de PDF</h3>
+                         <iframe width="400" height="400" src="/public/pdf/{{$img}}" frameborder="0"></iframe>
+                       @endif --}}
+                                   @if($mensaje24 != null)
+                                     <div class="alert alert-success d-flex align-items-center" role="alert">
+                                       <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
+                                       <div>{{$mensaje24}}
+                                       </div>
+                                     </div>
+                                   @endif
+                                   @if($mensaje25 != null)
+                                     <div class="alert alert-danger d-flex align-items-center" role="alert">
+                                       <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
+                                         <div>{{$mensaje25}}
+                                         </div>
+                                     </div>
+                                   @endif
+                     </div>
+                     <div class="col-md">
+                     <label for="message-text" class="col-form-label"><h5 style="color: #3a3e7b"><strong>OBSERVACIÓN</strong></h5></label>
+                       <textarea class="form-control" id="message-text" wire:model="observacion"></textarea>
+                   </div>              
+                 </div>  
+             </div>
+             <div class="modal-footer">
+               <button class="btn btn-pre2" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Siguiente</button>
+             </div>
+           </div>
+         </div>
+       </div>
+=======
+    
+>>>>>>> a97d40cb59a915ec93b3b5da8cb5057acfa04939
               <div wire:ignore.self class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
                 <div class="modal-dialog modal-dialog-centered">
                   <div class="modal-content">
