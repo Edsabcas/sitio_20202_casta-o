@@ -19,7 +19,7 @@
             </div>
             <div class="card border-0">
                 <div class="card-header text-center border-0">
-                    <span style="color:black">Seguimiento de su proceso de pre-inscripción.</span>
+                    <span style="color:black">Seguimiento de su proceso de inscripción.</span>
                 </div>
                 <div class="card-body">
                     <div class="row">
@@ -91,7 +91,7 @@
                                         <br>
                                         <div class="timeline-panel">
                                             <div class="timeline-heading">
-                                                <h4 style="color: #3a3e7b; font-size: 16px;"><strong>1. PRE-INSCRIPCIÓN</strong></h4>
+                                                <h4 style="color: #3a3e7b; font-size: 16px;"><strong>1. INSCRIPCIÓN</strong></h4>
                                             </div>
                                             <div class="timeline-body">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="#a4cb39" class="bi bi-pencil-square" viewBox="0 0 16 16">
@@ -99,7 +99,7 @@
                                                     <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
                                                 </svg> 
                                                 <br>                  
-                                                <p><strong style="font-size: 12px;">Su pre-inscripción fue enviada con éxito.</strong></p>
+                                                <p><strong style="font-size: 12px;">Su inscripción fue enviada con éxito.</strong></p>
                                             </div>
                                         </div>
                                     </li>
@@ -110,9 +110,6 @@
                                         color:#a4cb39;
                                         background-color:#a4cb39;">
                                     </div>
-                                    
-                                        <br>
-                                        <br>
                                         <li style=" opacity: 0.8;">
                                             <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill=" #a4cb39" class="bi bi-circle-fill" viewBox="0 0 16 16">
                                                 <circle cx="8" cy="8" r="8"/>
@@ -121,7 +118,7 @@
                                             <br>
                                             <div class="timeline-panel">
                                                 <div class="timeline-heading">
-                                                    <h4 style="color: #3a3e7b; font-size: 16px;"><strong>2. VALIDACIÓN DE PRE-INSCRIPCIÓN</strong></h4>
+                                                    <h4 style="color: #3a3e7b; font-size: 16px;"><strong>2. VALIDACIÓN DE INSCRIPCIÓN</strong></h4>
                                                 </div>
                                                 <div class="timeline-body">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="#a4cb39" class="bi bi-clipboard-check" viewBox="0 0 16 16">
@@ -130,7 +127,7 @@
                                                         <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
                                                     </svg>  
                                                     <br>                  
-                                                    <p><strong style="font-size: 12px;">Su información fue recibida y validada con éxito, por favor realice el siguiente paso habilitado.</strong></p>
+                                                    <p><strong style="font-size: 12px;">Su información fue recibida y validada con éxito.</strong></p>
                                                 </div>
                                             </div>
                                         </li>
@@ -184,7 +181,7 @@
                                                         <path d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1z"/>
                                                     </svg>
                                                     <br>
-                                                    <p><strong style="font-size: 12px;">Su pago fue recibido y validado con éxito, por favor realice el siguiente paso habilitado.</strong></p>
+                                                    <p><strong style="font-size: 12px;">Su pago fue recibido y validado con éxito.</strong></p>
                                                   </div>
                                             </div>
                                         </li>
@@ -215,10 +212,17 @@
                                                     </div>
                                                     <p><strong style="font-size: 12px;">Los datos de inscripción han sido enviados.</strong></p>
                                             </div>
+                                            <div class="d-flex justify-content-center">
+                                                <hr class="text-center"style=" height:5vh; 
+                                                width:.2vw;
+                                                border-width:0;
+                                                color:#a4cb39;
+                                                background-color:#a4cb39;">
+                                            </div>
 
                                             <li class="timeline text-center" style=" opacity: 0.8;">
                                                 <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#a4cb39" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
-                                                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
+                                                    <circle cx="8" cy="8" r="8"/>
                                                 </svg>
                                                 </div> 
                                                   <br>
@@ -234,7 +238,7 @@
                                                         </svg> 
                                                         <br>                                        
                                                         </div>
-                                                        <p><strong style="font-size: 12px;">Su información fue recibida y validada  con éxito, por favor realice el siguiente paso habilitado.</strong></p>
+                                                        <p><strong style="font-size: 12px;">Su información fue recibida y validada  con éxito.</strong></p>
                                                 </div>
                                         </li>
                                         <div class="d-flex justify-content-center">
@@ -247,7 +251,7 @@
                                             
                                             <li class="timeline text-center" style=" opacity: 0.8;">
                                                 <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#a4cb39" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
-                                                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
+                                                    <circle cx="8" cy="8" r="8"/>
                                                   </svg></div>
                                                   <br>
                                                 <div class="timeline-panel">
@@ -262,7 +266,7 @@
                                                         </svg> 
                                                         <br>                                        
                                                         </div>
-                                                        <p><strong style="font-size: 12px;">Pendiente de generar su contrato para rellenarlo.</strong></p>
+                                                        <p><strong style="font-size: 12px;">Su contrato fue enviado para la introducción de datos.</strong></p>
                                                 </div>
                                             </li>
 
@@ -275,7 +279,7 @@
                                             </div>
                                         <li class="timeline text-center" style=" opacity: 0.8;">
                                             <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#a4cb39" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
-                                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
+                                                <circle cx="8" cy="8" r="8"/>
                                             </svg>
                                             </div> 
                                               <br>
@@ -294,13 +298,6 @@
                                                     <p><strong style="font-size: 12px;">Contrato estudiantil DIACO validado.</strong></p>
                                             </div>
                                          </li>
-                                         <div class="d-flex justify-content-center">
-                                            <hr class="text-center"style=" height:5vh; 
-                                            width:.2vw;
-                                            border-width:0;
-                                            color:#a4cb39;
-                                            background-color:#a4cb39;">
-                                        </div>
                                         <div class="d-flex justify-content-center">
                                             <hr class="text-center"style=" height:5vh; 
                                             width:.2vw;
@@ -327,7 +324,7 @@
                                                 </svg> 
                                                 <br> 
                                                 <br>                       
-                                                <p><strong>Pendiente el envío de usuarios por parte de la institución.</strong></p>
+                                                <p><strong>La institución le enviará los usuarios en breve.</strong></p>
                                             </div>
                                         </div>
                                     </li>                                

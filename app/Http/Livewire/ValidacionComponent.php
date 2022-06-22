@@ -26,6 +26,9 @@ class ValidacionComponent extends Component
     public $prueba_ingreso, $validar_info, $entro_aca, $Especifique_alerg, $Especifique_medi, $Especifique_ali;
     public $idgrado,$monto_ins,$monto_men;
     public $estado_elevado, $matricula_bus_aj, $validacionv, $codigo_familia3, $fecha_codigo;
+    public $nombre_encargado2, $fechana_encargado2, $nacionalidad_encargado2 , $lugar_nacimiento_encargado2 ,$estadocivilencargado2 , $DPI_encargado2 ,$telefono_encargado2 ,$celular_encargado2;
+    public $direccion_residenciaencargado2 ,$correo_encargado2  ,$profesion_encargado2 ,$lugar_prof_encargado2 ,$religion_encargado2 ,$NIT_encargado2 ,$vive_encargado2, $quien_encargado1;
+    public $solo_por;
 
     public function render()
     {
@@ -143,6 +146,14 @@ class ValidacionComponent extends Component
         $this->vive_madre=$vive_con_madre;
     }
 
+    public function confirmar_vive_encargado($vive_encargado){
+        $this->vive_encargado=$vive_encargado;
+    }
+
+    public function quien_encargado($quien_encargado1){
+        $this->quien_encargad1=$quien_encargado1;
+    }
+
     public function tiene_alergia($tiene_alergias){
         $this->tiene_alergia=$tiene_alergias;
     }
@@ -191,8 +202,7 @@ class ValidacionComponent extends Component
             'NIT_madre' =>'required',
             'poliza' => 'required',
             'carne_seguro' => 'required',
-
-
+            'quien_encargado1'=> 'required',
 
         ])==false){
             $error="no encontrado";
@@ -235,6 +245,7 @@ class ValidacionComponent extends Component
         $this->vive_madre=$this->vive_madre;
         $NIT_madre=$this->NIT_madre;
         $this->tiene_alergia=$this->tiene_alergia;
+        $this->quien_encargado1=$this->quien_encargado1;
         if($this->Especifique_alerg==""){
             $this->Especifique_alerg=null;  
         }
@@ -268,6 +279,7 @@ class ValidacionComponent extends Component
             else{
                     $Especifique_ali=$this->Especifique_ali;
         }
+        $solo_por=$this->$solo_por;
 
         
         DB::beginTransaction();
@@ -328,8 +340,22 @@ class ValidacionComponent extends Component
                 'SALIDA_BUS_COLEGIO'=>$this->bus_colegio,
                 'SALIDA_BUS_AJENO'=>$this->bus_no_colegio,
                 'Matricula_bus_aj'=>$this->matricula_bus_aj,
-
-            
+                'ENCARGADO'=> $this->quien_encargado1,
+                'NOMB_ENCARGADO'=>$this->nombrepadre,
+                'FECHA_N_ENCARGADO'=>$this->nacimientopadre,
+                'NACIONALIDAD_ENCARGADO '=>$this->nacionalidadpadre,
+                'LUGAR_NACIMIENTO_ENCARGADO '=>$this->lugarnacimientopadre,
+                'ESTADO_CIVIL_E'=>$this->estadocivil,
+                'DPI_ENCARGADO'=>$this->DPIpadre,
+                'TELEFONO_ENCARGADO'=>$this->telefonopadre,
+                'CELULAR_ENCARGADO'=>$this->celularpadre,
+                'DIRECCION_RECIDENCIA_ENCARGADO'=>$this->direccionresidencia,
+                'CORREO_ENCARGADO'=>$this->correopadre,
+                'CARGO_ENCARGADO'=>$this->profesionpadre,
+                'LUGAR_TRABAJO_E '=>$this->lugar_profesion_padre,
+                'RELIGION_ENCARGADO'=>$this->religion_padre,
+                'NIT_ENCARGADO'=>$this->NIT_padre,
+                'VIVE_CON_EL_ENCARGADO'=>$this->vive_con_elpadre,
                 ]
             );
             if($inscripcion_datos){
@@ -396,6 +422,531 @@ class ValidacionComponent extends Component
             }
         }
         
+        public function insertar_datos2(){
+            $this->entro_aca=1;
+            if($this->validate([
+                'año_ingreso' => 'required',
+                'grado_primer_ingreso' => 'required',
+                'nombre_padre' => 'required',
+                'nacimiento_padre' => 'required',
+                'nacionalidad_padre' => 'required',
+                'lugar_nacimiento_padre' => 'required',
+                'DPI_padre' => 'required',
+                'celular_padre' => 'required',
+                'telefono_padre' => 'required',
+                'direccion_residencia' => 'required',
+                'correo_padre' => 'required',
+                'profesion_padre' => 'required',
+                'lugar_profesion_padre' => 'required',
+                'cargo_profesion_padre' => 'required',
+                'religion_padre' => 'required',
+                'NIT_padre' => 'required',
+                'nombre_madre' => 'required',
+                'fechana_madre' => 'required',
+                'nacionalidad_madre' => 'required',
+                'lugar_nacimiento_madre' => 'required',
+                'DPI_madre' => 'required',
+                'telefono_madre' => 'required',
+                'celular_madre' => 'required',
+                'direccion_residenciamadre'=> 'required',
+                'correo_madre'=> 'required',
+                'profesion_madre' =>'required',
+                'lugar_prof_madre' =>'required',
+                'cargo_madre' =>'required',
+                'religion_madre' =>'required',
+                'NIT_madre' =>'required',
+                'poliza' => 'required',
+                'carne_seguro' => 'required',
+                
+                
+            ])==false){
+                $error="no encontrado";
+                session(['message'=>'no encontrado']);
+                return back()->withErrors(['error' => 'Validar el input vacio']);
+            }
+            
+            $this->prueba_ingreso=1;
+            $añoingreso=$this->año_ingreso;
+            $gradoprimeringreso=$this->grado_primer_ingreso;
+            $nombrepadre = $this->nombre_padre;
+            $nacimientopadre =$this->nacimiento_padre;
+            $nacionalidadpadre=$this->nacionalidad_padre;
+            $lugarnacimientopadre=$this->lugar_nacimiento_padre;
+            $DPIpadre=$this->DPI_padre;
+            $celularpadre=$this->celular_padre;
+            $telefonopadre=$this->telefono_padre;
+            $direccionresidencia=$this->direccion_residencia;
+            $correopadre=$this->correo_padre;
+            $this->profesionpadre=$this->profesion_padre;
+            $lugar_profesion_padre=$this->lugar_profesion_padre;
+            $cargo_profesion_padre=$this->cargo_profesion_padre;
+            $religion_padre=$this->religion_padre;
+            $NIT_padre=$this->NIT_padre;
+            $this->vive_con_elpadre=$this->vive_con_elpadre;
+            $nombre_madre=$this->nombre_madre;
+            $fechana_madre=$this->fechana_madre;
+            $nacionalidad_madre=$this->nacionalidad_madre;
+            $lugar_nacimiento_madre=$this->lugar_nacimiento_madre;
+            $this->estadocivilma=$this->estadocivilma;
+            $DPI_madre=$this->DPI_madre;
+            $telefono_madre=$this->telefono_madre;
+            $celular_madre=$this->celular_madre;
+            $direccion_residenciamadre=$this->direccion_residenciamadre; 
+            $correo_madre=$this->correo_madre;
+            $rofesion_madre=$this->profesion_madre;
+            $lugar_prof_madre=$this->lugar_prof_madre;
+            $cargo_madre=$this->cargo_madre; 
+            $religion_madre=$this->religion_madre;
+            $this->vive_madre=$this->vive_madre;
+            $NIT_madre=$this->NIT_madre;
+            $this->tiene_alergia=$this->tiene_alergia;
+            if($this->Especifique_alerg==""){
+                $this->Especifique_alerg=null;  
+            }
+                else{
+                    $this->Especifique_alerg=$this->Especifique_alerg;
+            }
+            if($this->nombreaseguradora==""){
+                    $this->nombreaseguradora=null;  
+                }
+                else{
+                        $nombreaseguradora=$this->nombreaseguradora;
+            }
+            $this->nombreencargado=$this->nombre_encargado;
+            $poliza=$this->poliza;
+            $carneseguro=$this->carne_seguro;
+            if($this->matricula_bus_aj==""){
+                $this->matricula_bus_aj=null;  
+            }
+            else{
+                    $matricula_bus_aj=$this->matricula_bus_aj;
+        }
+            if($this->Especifique_medi==""){
+                $this->Especifique_medi=null;  
+            }
+                else{
+                    $Especifique_medi=$this->Especifique_medi;
+            }
+            if($this->Especifique_ali==""){
+                    $this->Especifique_ali=null;  
+                }
+                else{
+                        $Especifique_ali=$this->Especifique_ali;
+            }
+    
+            
+            DB::beginTransaction();
+    
+            $inscripcion_datos=DB::table('TB_PRE_INFO')->insert(
+                [
+                    'ID_PRE'=>$this->id_pre_ins,
+                    'HERMANOS_COLE'=>$this->confi,
+                    'GRADO_HERMANOS_COLE'=>$this->grados_selecionados,
+                    'AÑO_1R_INGRESO'=>$añoingreso,
+                    'GRADO_1R_INGRESO'=>$gradoprimeringreso,
+                    'NOMB_PADRE'=>$nombrepadre,
+                    'FECHA_N_PADRE'=>$nacimientopadre,
+                    'NACIONALIDAD_PADRE'=>$nacionalidadpadre,
+                    'LUGAR_NACIMIENTO_PADRE'=>$lugarnacimientopadre,
+                    'ESTADO_CIVIL_P'=> $this->estadocivil,
+                    'VIVE_CON_LA_MADRE'=> $this->vive_madre,
+                    'DPI_PADRE'=>$DPIpadre,
+                    'TELEFONO_PADRE'=>$telefonopadre,
+                    'CELULAR_PADRE'=>$celularpadre,
+                    'DIRECCION_RESIDENCIA_P'=>$direccionresidencia,
+                    'CORREO_PADRE'=>$correopadre,
+                    'PROFECION_PADRE'=>$this->profesionpadre,
+                    'LUGAR_TRABAJO_P'=>$lugar_profesion_padre,
+                    'CARGO_PADRE'=>$cargo_profesion_padre,
+                    'RELIGION_PADRE'=>$religion_padre,
+                    'NIT_PADRE'=>$NIT_padre,
+                    'VIVE_CON_EL_PADRE'=>$this->vive_con_elpadre,
+                    'NOMB_MADRE'=>$nombre_madre,
+                     'FECHA_N_MADRE'=>$fechana_madre,
+                    'NACIONALIDAD_MADRE'=>$nacionalidad_madre,
+                    'LUGAR_NACIMIENTO_MADRE'=>$lugar_nacimiento_madre,
+                    'ESTADO_CIVIL_M'=>$this->estadocivilma,
+                    'DPI_MADRE'=>$DPI_madre,
+                    'TELEFONO_MADRE'=>$telefono_madre,
+                    'CELULAR_MADRE'=>$celular_madre,
+                    'DIRECCION_RESIDENCIA_M'=>$direccion_residenciamadre, 
+                    'CORREO_MADRE'=>$correo_madre,
+                    'PROFECION_MADRE'=>$rofesion_madre,
+                    'LUGAR_TRABAJO_M'=>$lugar_prof_madre,
+                    'CARGO_MADRE'=>$cargo_madre,
+                    'ALERG_MEDICAMENTO'=>$this->medicamento,
+                    'ALERG_ALIMENTO'=>$this->alimento,
+                    'RELIGION_MADRE'=>$religion_madre,
+                    'NIT_MADRE'=>$NIT_madre,
+                    'ESPECIFICAR_ALERG_ME'=>$this->Especifique_medi,
+                    'ESPECIFICACION_ALERG_AL'=>$this->Especifique_ali,
+                    'ENFERMEDADES_ALERGIAS'=>$this->tiene_alergia,
+                    'ESPECIFICACION_ENF_O_ALERG'=>$this->Especifique_alerg,
+                    'VACUNAS'=>$this->vacunas,
+                    'ALUMNO_ASEGURADO'=>$this->alumno_asegurado,
+                    'ASEGURADORA'=>$this->nombre_aseguradora,
+                    'POLIZA_SEGURO'=>$poliza,
+                    'NO_CARNET_SEGURO'=>$this->carne_seguro,
+                    'SALIDA_SOLO'=>$this->solo_alumno,
+                    'SALIDA_CON_ENCARGADO'=>$this->encargado_alumno,
+                    'NOMBRE_ENCARGADO'=>$this->nombreencargado,
+                    'SALIDA_BUS_COLEGIO'=>$this->bus_colegio,
+                    'SALIDA_BUS_AJENO'=>$this->bus_no_colegio,
+                    'Matricula_bus_aj'=>$this->matricula_bus_aj,
+                    'ENCARGADO'=> $this->quien_encargado1,
+                'NOMB_ENCARGADO'=>$this->nombre_madre,
+                'FECHA_N_ENCARGADO'=>$this->fechana_madre,
+                'NACIONALIDAD_ENCARGADO '=>$this->nacionalidad_madre,
+                'LUGAR_NACIMIENTO_ENCARGADO '=>$this->lugar_nacimiento_madre,
+                'ESTADO_CIVIL_E'=>$this->estadocivilma,
+                'DPI_ENCARGADO'=>$this->DPI_madre,
+                'TELEFONO_ENCARGADO'=>$this->telefono_madre,
+                'CELULAR_ENCARGADO'=>$this->celular_madre,
+                'DIRECCION_RECIDENCIA_ENCARGADO'=>$this->direccion_residenciamadre,
+                'CORREO_ENCARGADO'=>$this->correo_madre,
+                'CARGO_ENCARGADO'=>$this->rofesion_madre,
+                'LUGAR_TRABAJO_E '=>$this->lugar_prof_madre,
+                'RELIGION_ENCARGADO'=>$this->religion_madre,
+                'NIT_ENCARGADO'=>$this->NIT_madre,
+                'VIVE_CON_EL_ENCARGADO'=>$this->vive_madre,
+    
+                
+                    ]
+                );
+                if($inscripcion_datos){
+                    DB::commit();
+                    $this->op=null;
+                    $nuevo_estado=4;
+                    $elevar=DB::table('TB_PRE_INS')
+                    ->where('ID_PRE', $this->id_pre_ins)
+                    ->update(
+                        [
+     
+                         'ESTADO_PRE_INS' => $nuevo_estado,
+     
+                        ]);
+                    $this->validar_info = 1;
+                    if($elevar){
+                        $this->estado_elevado=1;
+                    }
+                    else{
+                        $this->estado_elevado=0;
+                    } 
+                    $codigo=$this->id_pre_ins;
+                    $sql='SELECT * FROM TB_PRE_INFO WHERE ID_PRE=?';
+                    $codigo_familia=DB::select($sql, array($codigo)); 
+                    foreach($codigo_familia as $cod)
+                {
+                    $this->nombrepadre=$cod->NOMB_PADRE;
+                    $this->nombre_madre=$cod->NOMB_MADRE;
+                }
+                $this->fecha_codigo=date('Y-m-d');
+                $codigo_familia1=explode(" ", $this->nombrepadre);
+                $codigo_familia2=explode(" ", $this->nombre_madre);
+                $fecha_codigo1=explode("-", $this->fecha_codigo);
+                $codigo_familia4= count($codigo_familia1);
+                $codigo_familia5= count($codigo_familia2);
+    
+    
+                if($codigo_familia4==3 && $codigo_familia5==3){
+                    $this->codigo_familia3=$codigo_familia1[1].".".$codigo_familia2[1].".".$fecha_codigo1[0];
+    
+                }
+    
+                elseif($codigo_familia4==4 && $codigo_familia5==4 ){
+                    $this->codigo_familia3=$codigo_familia1[2].".".$codigo_familia2[2].".".$fecha_codigo1[0];
+    
+                }
+    
+                elseif($codigo_familia4==5 && $codigo_familia5==5 ){
+                    $this->codigo_familia3=$codigo_familia1[3].".".$codigo_familia2[3].".".$fecha_codigo1[0];
+                }
+    
+    
+                $inscripcion_datos=DB::table('TB_PRE_INFO')->insert(
+                    [
+                        "CODIGO_FAMILIA"=>$this->codigo_familia3,
+                        "NOMBRE_FAMILIA"=>$this->codigo_familia3,
+                    ]
+                    );
+    
+                }
+                else{
+                    DB::rollback();
+                    $this->validar_info = 0;
+                }
+            }
+
+            public function insertar_datos3(){
+
+                $this->entro_aca=1;
+                if($this->validate([
+                    'año_ingreso' => 'required',
+                    'grado_primer_ingreso' => 'required',
+                    'nombre_padre' => 'required',
+                    'nacimiento_padre' => 'required',
+                    'nacionalidad_padre' => 'required',
+                    'lugar_nacimiento_padre' => 'required',
+                    'DPI_padre' => 'required',
+                    'celular_padre' => 'required',
+                    'telefono_padre' => 'required',
+                    'direccion_residencia' => 'required',
+                    'correo_padre' => 'required',
+                    'profesion_padre' => 'required',
+                    'lugar_profesion_padre' => 'required',
+                    'cargo_profesion_padre' => 'required',
+                    'religion_padre' => 'required',
+                    'NIT_padre' => 'required',
+                    'nombre_madre' => 'required',
+                    'fechana_madre' => 'required',
+                    'nacionalidad_madre' => 'required',
+                    'lugar_nacimiento_madre' => 'required',
+                    'DPI_madre' => 'required',
+                    'telefono_madre' => 'required',
+                    'celular_madre' => 'required',
+                    'direccion_residenciamadre'=> 'required',
+                    'correo_madre'=> 'required',
+                    'profesion_madre' =>'required',
+                    'lugar_prof_madre' =>'required',
+                    'cargo_madre' =>'required',
+                    'religion_madre' =>'required',
+                    'NIT_madre' =>'required',
+                    'poliza' => 'required',
+                    'carne_seguro' => 'required',
+        
+        
+        
+                ])==false){
+                    $error="no encontrado";
+                    session(['message'=>'no encontrado']);
+                    return back()->withErrors(['error' => 'Validar el input vacio']);
+                }
+                
+                    $this->prueba_ingreso=1;
+                $añoingreso=$this->año_ingreso;
+                $gradoprimeringreso=$this->grado_primer_ingreso;
+                $nombrepadre = $this->nombre_padre;
+                $nacimientopadre =$this->nacimiento_padre;
+                $nacionalidadpadre=$this->nacionalidad_padre;
+                $lugarnacimientopadre=$this->lugar_nacimiento_padre;
+                $DPIpadre=$this->DPI_padre;
+                $celularpadre=$this->celular_padre;
+                $telefonopadre=$this->telefono_padre;
+                $direccionresidencia=$this->direccion_residencia;
+                $correopadre=$this->correo_padre;
+                $this->profesionpadre=$this->profesion_padre;
+                $lugar_profesion_padre=$this->lugar_profesion_padre;
+                $cargo_profesion_padre=$this->cargo_profesion_padre;
+                $religion_padre=$this->religion_padre;
+                $NIT_padre=$this->NIT_padre;
+                $this->vive_con_elpadre=$this->vive_con_elpadre;
+                $nombre_madre=$this->nombre_madre;
+                $fechana_madre=$this->fechana_madre;
+                $nacionalidad_madre=$this->nacionalidad_madre;
+                $lugar_nacimiento_madre=$this->lugar_nacimiento_madre;
+                $this->estadocivilma=$this->estadocivilma;
+                $DPI_madre=$this->DPI_madre;
+                $telefono_madre=$this->telefono_madre;
+                $celular_madre=$this->celular_madre;
+                $direccion_residenciamadre=$this->direccion_residenciamadre; 
+                $correo_madre=$this->correo_madre;
+                $rofesion_madre=$this->profesion_madre;
+                $lugar_prof_madre=$this->lugar_prof_madre;
+                $cargo_madre=$this->cargo_madre; 
+                $religion_madre=$this->religion_madre;
+                $this->vive_madre=$this->vive_madre;
+                $NIT_madre=$this->NIT_madre;
+                $this->tiene_alergia=$this->tiene_alergia;
+                if($this->Especifique_alerg==""){
+                    $this->Especifique_alerg=null;  
+                }
+                    else{
+                        $this->Especifique_alerg=$this->Especifique_alerg;
+                }
+                if($this->nombreaseguradora==""){
+                        $this->nombreaseguradora=null;  
+                    }
+                    else{
+                            $nombreaseguradora=$this->nombreaseguradora;
+                }
+                $this->nombreencargado=$this->nombre_encargado;
+                $poliza=$this->poliza;
+                $carneseguro=$this->carne_seguro;
+                if($this->matricula_bus_aj==""){
+                    $this->matricula_bus_aj=null;  
+                }
+                else{
+                        $matricula_bus_aj=$this->matricula_bus_aj;
+            }
+                if($this->Especifique_medi==""){
+                    $this->Especifique_medi=null;  
+                }
+                    else{
+                        $Especifique_medi=$this->Especifique_medi;
+                }
+                if($this->Especifique_ali==""){
+                        $this->Especifique_ali=null;  
+                    }
+                    else{
+                            $Especifique_ali=$this->Especifique_ali;
+                }
+                $nombre_encargado2=$this->nombre_encargado2;
+                $fechana_encargado2=$this->fechana_encargado2;
+                $nacionalidad_encargado2=$this->nacionalidad_encargado2;
+                $lugar_nacimiento_encargado2=$this->lugar_nacimiento_encargado2;
+                $estadocivilencargado2=$this->estadocivilencargado2;
+                $DPI_encargado2=$this->DPI_encargado2;
+                $telefono_encargado2=$this->telefono_encargado2;
+                $celular_encargado2=$this->celular_encargado2;
+                $direccion_residenciaencargado2=$this->direccion_residenciaencargado2;
+                $correo_encargado2=$this->correo_encargado2;
+                $profesion_encargado2=$this->profesion_encargado2;
+                $lugar_prof_encargado2=$this->lugar_prof_encargado2;
+                $religion_encargado2=$this->religion_encargado2;
+                $NIT_encargado=$this->NIT_encargado;
+                $vive_encargado2=$this->vive_encargado2;
+               
+                
+                DB::beginTransaction();
+        
+                $inscripcion_datos=DB::table('TB_PRE_INFO')->insert(
+                    [
+                        'ID_PRE'=>$this->id_pre_ins,
+                        'HERMANOS_COLE'=>$this->confi,
+                        'GRADO_HERMANOS_COLE'=>$this->grados_selecionados,
+                        'AÑO_1R_INGRESO'=>$añoingreso,
+                        'GRADO_1R_INGRESO'=>$gradoprimeringreso,
+                        'NOMB_PADRE'=>$nombrepadre,
+                        'FECHA_N_PADRE'=>$nacimientopadre,
+                        'NACIONALIDAD_PADRE'=>$nacionalidadpadre,
+                        'LUGAR_NACIMIENTO_PADRE'=>$lugarnacimientopadre,
+                        'ESTADO_CIVIL_P'=> $this->estadocivil,
+                        'VIVE_CON_LA_MADRE'=> $this->vive_madre,
+                        'DPI_PADRE'=>$DPIpadre,
+                        'TELEFONO_PADRE'=>$telefonopadre,
+                        'CELULAR_PADRE'=>$celularpadre,
+                        'DIRECCION_RESIDENCIA_P'=>$direccionresidencia,
+                        'CORREO_PADRE'=>$correopadre,
+                        'PROFECION_PADRE'=>$this->profesionpadre,
+                        'LUGAR_TRABAJO_P'=>$lugar_profesion_padre,
+                        'CARGO_PADRE'=>$cargo_profesion_padre,
+                        'RELIGION_PADRE'=>$religion_padre,
+                        'NIT_PADRE'=>$NIT_padre,
+                        'VIVE_CON_EL_PADRE'=>$this->vive_con_elpadre,
+                        'NOMB_MADRE'=>$nombre_madre,
+                        'FECHA_N_MADRE'=>$fechana_madre,
+                        'NACIONALIDAD_MADRE'=>$nacionalidad_madre,
+                        'LUGAR_NACIMIENTO_MADRE'=>$lugar_nacimiento_madre,
+                        'ESTADO_CIVIL_M'=>$this->estadocivilma,
+                        'DPI_MADRE'=>$DPI_madre,
+                        'TELEFONO_MADRE'=>$telefono_madre,
+                        'CELULAR_MADRE'=>$celular_madre,
+                        'DIRECCION_RESIDENCIA_M'=>$direccion_residenciamadre, 
+                        'CORREO_MADRE'=>$correo_madre,
+                        'PROFECION_MADRE'=>$rofesion_madre,
+                        'LUGAR_TRABAJO_M'=>$lugar_prof_madre,
+                        'CARGO_MADRE'=>$cargo_madre,
+                        'ALERG_MEDICAMENTO'=>$this->medicamento,
+                        'ALERG_ALIMENTO'=>$this->alimento,
+                        'RELIGION_MADRE'=>$religion_madre,
+                        'NIT_MADRE'=>$NIT_madre,
+                        'ESPECIFICAR_ALERG_ME'=>$this->Especifique_medi,
+                        'ESPECIFICACION_ALERG_AL'=>$this->Especifique_ali,
+                        'ENFERMEDADES_ALERGIAS'=>$this->tiene_alergia,
+                        'ESPECIFICACION_ENF_O_ALERG'=>$this->Especifique_alerg,
+                        'VACUNAS'=>$this->vacunas,
+                        'ALUMNO_ASEGURADO'=>$this->alumno_asegurado,
+                        'ASEGURADORA'=>$this->nombre_aseguradora,
+                        'POLIZA_SEGURO'=>$poliza,
+                        'NO_CARNET_SEGURO'=>$this->carne_seguro,
+                        'SALIDA_SOLO'=>$this->solo_alumno,
+                        'SALIDA_CON_ENCARGADO'=>$this->encargado_alumno,
+                        'NOMBRE_ENCARGADO'=>$this->nombreencargado,
+                        'SALIDA_BUS_COLEGIO'=>$this->bus_colegio,
+                        'SALIDA_BUS_AJENO'=>$this->bus_no_colegio,
+                        'Matricula_bus_aj'=>$this->matricula_bus_aj,
+                'NOMB_ENCARGADO'=>$this->nombre_encargado2,
+                'FECHA_N_ENCARGADO'=>$this->fechana_encargado2,
+                'NACIONALIDAD_ENCARGADO '=>$this->nacionalidad_encargado2,
+                'LUGAR_NACIMIENTO_ENCARGADO '=>$this->lugar_nacimiento_encargado2,
+                'ESTADO_CIVIL_E'=>$this->estadocivilencargado2,
+                'DPI_ENCARGADO'=>$this->DPI_encargado2,
+                'TELEFONO_ENCARGADO'=>$this->telefono_encargado2,
+                'CELULAR_ENCARGADO'=>$this->celular_encargado2,
+                'DIRECCION_RECIDENCIA_ENCARGADO'=>$this->direccion_residenciaencargado2,
+                'CORREO_ENCARGADO'=>$this->correo_encargado2,
+                'CARGO_ENCARGADO'=>$this->rofesion_encargado2,
+                'LUGAR_TRABAJO_E '=>$this->lugar_prof_encargado2,
+                'RELIGION_ENCARGADO'=>$this->religion_encargado2,
+                'NIT_ENCARGADO'=>$this->NIT_encargado,
+                'VIVE_CON_EL_ENCARGADO'=>$this->vive_encargado2,
+        
+                    
+                        ]
+                    );
+                    if($inscripcion_datos){
+                        DB::commit();
+                        $this->op=null;
+                        $nuevo_estado=4;
+                        $elevar=DB::table('TB_PRE_INS')
+                        ->where('ID_PRE', $this->id_pre_ins)
+                        ->update(
+                            [
+         
+                             'ESTADO_PRE_INS' => $nuevo_estado,
+         
+                            ]);
+                        $this->validar_info = 1;
+                        if($elevar){
+                            $this->estado_elevado=1;
+                        }
+                        else{
+                            $this->estado_elevado=0;
+                        } 
+                        $codigo=$this->id_pre_ins;
+                        $sql='SELECT * FROM TB_PRE_INFO WHERE ID_PRE=?';
+                        $codigo_familia=DB::select($sql, array($codigo)); 
+                        foreach($codigo_familia as $cod)
+                    {
+                        $this->nombrepadre=$cod->NOMB_PADRE;
+                        $this->nombre_madre=$cod->NOMB_MADRE;
+                    }
+                    $this->fecha_codigo=date('Y-m-d');
+                    $codigo_familia1=explode(" ", $this->nombrepadre);
+                    $codigo_familia2=explode(" ", $this->nombre_madre);
+                    $fecha_codigo1=explode("-", $this->fecha_codigo);
+                    $codigo_familia4= count($codigo_familia1);
+                    $codigo_familia5= count($codigo_familia2);
+        
+        
+                    if($codigo_familia4==3 && $codigo_familia5==3){
+                        $this->codigo_familia3=$codigo_familia1[1].".".$codigo_familia2[1].".".$fecha_codigo1[0];
+        
+                    }
+        
+                    elseif($codigo_familia4==4 && $codigo_familia5==4 ){
+                        $this->codigo_familia3=$codigo_familia1[2].".".$codigo_familia2[2].".".$fecha_codigo1[0];
+        
+                    }
+        
+                    elseif($codigo_familia4==5 && $codigo_familia5==5 ){
+                        $this->codigo_familia3=$codigo_familia1[3].".".$codigo_familia2[3].".".$fecha_codigo1[0];
+                    }
+        
+        
+                    $inscripcion_datos=DB::table('TB_PRE_INFO')->insert(
+                        [
+                            "CODIGO_FAMILIA"=>$this->codigo_familia3,
+                            "NOMBRE_FAMILIA"=>$this->codigo_familia3,
+                        ]
+                        );
+        
+                    }
+                    else{
+                        DB::rollback();
+                        $this->validar_info = 0;
+                    }
+                }
      
 
         public function update_comprobante_p(){
@@ -476,6 +1027,11 @@ class ValidacionComponent extends Component
     public function solo_alumno($solo_alumno){
         $this->solo_alumno=$solo_alumno;
     }
+
+    public function solo_por($solo_por){
+        $this->solo_por=$solo_por;
+    }
+
 
     public function encargado_alumno($encargado_alumno){
         $this->encargado_alumno=$encargado_alumno;
