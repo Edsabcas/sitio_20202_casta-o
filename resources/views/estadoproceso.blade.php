@@ -123,7 +123,7 @@
                         <p>Genera el pago de tu inscripción.</p></div>
                 </div>
             </li>
-
+            
             <br>
             <br>
 

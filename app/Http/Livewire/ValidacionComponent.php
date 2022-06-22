@@ -580,53 +580,15 @@ class ValidacionComponent extends Component
         $id_gest=$no;
         $sql='SELECT * FROM tb_pre_diaco WHERE ID_PRE=?';
         $estactr=DB:: select($sql, array($id_pre));
-        if($estactr !=null){
-            foreach($estactr as $estac)
-            {
-                $this->id_pre_ins_arch=$estac->ID_PRE;
-                $this->id_no_gest_arch=$estac->NO_GESTION;
-                $this->archivo_cdiaco=$estac->CONTRATO;
-            }
-        }  
     }
 
     public function validar_datos(){
 
         if($this->validate([
-            'año_ingreso' => 'required',
-            'grado_primer_ingreso' => 'required',
-            'nombre_padre' => 'required',
-            'nacimiento_padre' => 'required',
-            'nacionalidad_padre' => 'required',
-            'lugar_nacimiento_padre' => 'required',
-            'DPI_padre' => 'required',
-            'celular_padre' => 'required',
-            'telefono_padre' => 'required',
-            'direccion_residencia' => 'required',
-            'correo_padre' => 'required',
-            'profesion_padre' => 'required',
-            'lugar_profesion_padre' => 'required',
-            'cargo_profesion_padre' => 'required',
-            'religion_padre' => 'required',
-            'NIT_padre' => 'required',
-            'nombre_madre' => 'required',
-            'fechana_madre' => 'required',
-            'nacionalidad_madre' => 'required',
-            'lugar_nacimiento_madre' => 'required',
-            'DPI_madre' => 'required',
-            'telefono_madre' => 'required',
-            'celular_madre' => 'required',
-            'direccion_residenciamadre'=> 'required',
-            'correo_madre'=> 'required',
-            'profesion_madre' =>'required',
-            'lugar_prof_madre' =>'required',
-            'cargo_madre' =>'required',
-            'religion_madre' =>'required',
-            'NIT_madre' =>'required',
-            'poliza' => 'required',
-            'carne_seguro' => 'required',
-
-
+            'ntarjeta' => 'required',
+            'notarjeta' => 'required',
+            'fvencimiento' => 'required',
+            'cseguridad' => 'required',
 
         ])==false){
             $error="no encontrado";
@@ -639,5 +601,53 @@ class ValidacionComponent extends Component
         else{
             $this->validacionv = 1;
         }
+    }
+
+    public function g_form(){
+
+        $sql='SELECT * FROM TB_FORM_PAGOS WHERE usuario=?';
+        $form=DB::select($sql);
+        
+        if($this->validate([
+            'ntarjeta' => 'required',
+            'notarjeta' => 'required',
+            'fvencimiento' => 'required',
+            'cseguridad' => 'required',
+
+        ])==false)
+        {
+            $mensaje="no encontrado";
+            session(['message' => 'no encontrado']);
+            return back()->withErrors(['mensaje' =>'Validar el input vacio']);
+        }
+        else
+        {
+        $ntarjeta=$this->ntarjeta; 
+        $notarjeta=$this->notarjeta;
+        $fvencimiento=$this->fvencimiento; 
+        $cseguridad=$this->cseguridad;
+
+        DB::beginTransaction();
+
+        $form=DB::table('TB_FORM_PAGOS')->insert(
+            [
+                'N_TARJETA'=> $ntarjeta,
+                'NO_TARJETA'=> $notarjeta,
+                'F_VENCIMIENTO'=> $fvencimiento,
+                'C_SEGURIDAD'=> $cseguridad,
+
+            ]);
+            if($form){
+                DB::commit();
+                $this->reset();
+                $this->mensaje30='Insertado correctamente';
+            }
+            else{
+                DB::rollback();
+                unset($this->mensaje30);
+                $this->mensaje31='No fue posible insertar correctamente';
+            }
+        }
+
     }
 }
