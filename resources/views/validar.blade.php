@@ -35,7 +35,7 @@
             @if($mensaje_diaco!=null)
             
             <div class="alert alert-success" role="alert">
-                Agregado Correctamente!
+                ¡Agregado Correctamente!
               </div>
             @endif
             @endisset
@@ -52,7 +52,7 @@
             @if($validar_info==1)
             
             <div class="alert alert-success" role="alert">
-                Agregado Correctamente!
+                ¡Agregado Correctamente!, su codigo de familia es es: {{$codigo_familia3}}
               </div>
             @endif
             @endisset
@@ -110,14 +110,14 @@
 @isset($mensaje24)
 @if ($mensaje24!=null)
   <div class="alert alert-success" role="alert">
-    ¡Actualizado correctamente!
+    ¡su comprobante fue enviado, se notificara por correo cuando se confirme su pago!
   </div>
 @endif
 @endisset
 @isset($mensaje25)
 @if($mensaje25!=null)
   <div class="alert alert-danger" role="alert">
-    ¡No fue posible actualizar correctamente!
+    ¡No fue posible enviar su comprobante, intenta nuevamente!
   </div>
 @endif
 @endisset

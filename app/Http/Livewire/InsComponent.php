@@ -10,7 +10,7 @@ class InsComponent extends Component
 {
     public $gradoin,$nombre_es,$f_nacimiento_es,$genero,$cui_es,$codigo_pe_es,$nac_es,$lug_nac_es,$tel_es,$cel_es,$direccion_es,$religion_es;
     public $nombre_en,$fnacimiento_en,$dpi_en,$extentido_en,$es_civil_en,$direccion_en,$tel_casa_en,$cel_en,$correo_en,$religion_en;
-    public $a,$mensaje,$gradose,$correo_en2;
+    public $a,$mensaje,$gradose,$correo_en2,$tipo,$profesion_en;
     public $val,$val1,$gestion,$errorfecha;
     public function render()
     {
@@ -27,9 +27,25 @@ class InsComponent extends Component
             }
            
         }
-        $sql="SELECT ID_GR,GRADO FROM tb_grados";
-        $grados=DB::select($sql);
+        if($this->tipo!=null && $this->tipo!="")
+        {
+            if($this->tipo=="Presencial"){
+                $sql="SELECT ID_GR,GRADO,JORNADA FROM tb_grados where JORNADA='1'";
+                $grados=DB::select($sql);
+                
+            }else{
+                $sql="SELECT ID_GR,GRADO,JORNADA FROM tb_grados where JORNADA='4'";
+                $grados=DB::select($sql);
+                
+            }
+
         return view('livewire.ins-component', compact('grados'));
+        }
+        else{
+
+            return view('livewire.ins-component');
+        }
+
     }
 
     public function valfecha(){
@@ -85,6 +101,17 @@ class InsComponent extends Component
             $this->a=2;
         }
     }
+    public function valmodalidad(){
+        if($this->validate([
+            'tipo' => 'required',
+            ])==false){
+            $mensaje="no encontrado";
+           session(['message' => 'no encontrado']);
+            return  back()->withErrors(['mensaje'=>'Validar el input vacio']);
+        }else{
+            $this->a=5;
+        }
+    }
     public function val3(){
         if($this->validate([
             'nombre_en' => 'required',
@@ -97,6 +124,7 @@ class InsComponent extends Component
             'cel_en' => 'required',
             'correo_en' => 'required',
             'religion_en' => 'required',
+            'profesion_en'=>'required',
             ])==false){
             $mensaje="no encontrado";
            session(['message' => 'no encontrado']);
@@ -129,6 +157,7 @@ class InsComponent extends Component
             'cel_en' => 'required',
             'correo_en' => 'required',
             'religion_en' => 'required',
+            'profesion_en'=> 'required',
             ])==false){
             $mensaje="no encontrado";
            session(['message' => 'no encontrado']);
@@ -173,6 +202,8 @@ class InsComponent extends Component
                     'NO_GESTION'=> $no_gestion,
                     'FECHA_REGISTRO'=>  date("Y-m-d H:i:s"),
                     'FECHA_CAMBIOS_REG'=>  date("Y-m-d H:i:s"),
+                    'MODALIDAD_EST'=> $this->tipo,
+                    'PROFESION_EN_ES'=> $this->profesion_en,
                 ]
             );
 

@@ -24,7 +24,8 @@ class ValidacionComponent extends Component
     public $poliza, $carneseguro, $carne_seguro, $tiene_alergia, $medicamento, $alimento, $archivo,$formato, $arch;
     public $religion_padre, $cargo_profesion_padre, $NIT_padre, $nombre_madre, $fechana_madre, $nacionalidad_madre, $lugar_nacimiento_madre, $DPI_madre, $telefono_madre, $celular_madre,$id_pre_ins,$id_no_gest,$mensaje_diaco,$mensaje_diaco1,$archivo_cdiaco,$id_pre_ins_arch,$id_no_gest_arch;
     public $prueba_ingreso, $validar_info, $entro_aca, $Especifique_alerg, $Especifique_medi, $Especifique_ali;
-    public $estado_elevado, $matricula_bus_aj;
+    public $idgrado,$monto_ins,$monto_men;
+    public $estado_elevado, $matricula_bus_aj, $validacionv, $codigo_familia3, $fecha_codigo;
 
     public function render()
     {
@@ -79,8 +80,18 @@ class ValidacionComponent extends Component
                     $this->op=$comp->ESTADO_PRE_INS;
                     $this->id_pre=$comp->ID_PRE;                    
                 }
-                
+                $sql = "SELECT * FROM cuentaestudiante where ID_PRE=?";
+                $cuenta= DB::select($sql,array($this->id_pre));
+
+                foreach($cuenta as $cuen){
+                    $this->monto_ins=$cuen->MONTO_INSCRIPCION;
+                    $this->monto_men=$cuen->MONTO_MENSUAL;  
+
+                }
             }
+
+
+
             else{
                 $this->mensaje=1;
             }
@@ -101,10 +112,18 @@ class ValidacionComponent extends Component
 
     }
 
-    public function insertar_grados_hermanos($grado, $gradomostrar){
-        $this->grados_selecionados=$this->grados_selecionados.";".$grado;
-        $this->grados_mostrar=$this->grados_mostrar.";".$gradomostrar;
-        
+    public function insertar_grados_hermanos(){
+        if($this->idgrado!=null && $this->idgrado!=""){
+            $sql= 'SELECT * FROM tb_grados where ID_GR=?';
+            $grados2=DB::select($sql,array($this->idgrado));
+            $a="";
+            foreach($grados2 as $grados){
+                $a=$grados->GRADO;
+            }
+            $this->grados_selecionados=$this->grados_selecionados.";".$this->idgrado;
+            $this->grados_mostrar=$this->grados_mostrar.";".$a;
+            $this->idgrado="";
+        }
     }
 
     public function estado_civil_padre($estado_civil){
@@ -331,7 +350,45 @@ class ValidacionComponent extends Component
                 }
                 else{
                     $this->estado_elevado=0;
-                }
+                } 
+                $codigo=$this->id_pre_ins;
+                $sql='SELECT * FROM TB_PRE_INFO WHERE ID_PRE=?';
+                $codigo_familia=DB::select($sql, array($codigo)); 
+                foreach($codigo_familia as $cod)
+            {
+                $this->nombrepadre=$cod->NOMB_PADRE;
+                $this->nombre_madre=$cod->NOMB_MADRE;
+            }
+            $this->fecha_codigo=date('Y-m-d');
+            $codigo_familia1=explode(" ", $this->nombrepadre);
+            $codigo_familia2=explode(" ", $this->nombre_madre);
+            $fecha_codigo1=explode("-", $this->fecha_codigo);
+            $codigo_familia4= count($codigo_familia1);
+            $codigo_familia5= count($codigo_familia2);
+
+
+            if($codigo_familia4==3 && $codigo_familia5==3){
+                $this->codigo_familia3=$codigo_familia1[1].".".$codigo_familia2[1].".".$fecha_codigo1[0];
+
+            }
+
+            elseif($codigo_familia4==4 && $codigo_familia5==4 ){
+                $this->codigo_familia3=$codigo_familia1[2].".".$codigo_familia2[2].".".$fecha_codigo1[0];
+
+            }
+
+            elseif($codigo_familia4==5 && $codigo_familia5==5 ){
+                $this->codigo_familia3=$codigo_familia1[3].".".$codigo_familia2[3].".".$fecha_codigo1[0];
+            }
+
+
+            $inscripcion_datos=DB::table('TB_PRE_INFO')->insert(
+                [
+                    "CODIGO_FAMILIA"=>$this->codigo_familia3,
+                    "NOMBRE_FAMILIA"=>$this->codigo_familia3,
+                ]
+                );
+
             }
             else{
                 DB::rollback();
@@ -342,55 +399,77 @@ class ValidacionComponent extends Component
      
 
         public function update_comprobante_p(){
-            $ruta="C:/xampp/htdocs/repo_clon_casys/casys-pro-2.0/public/imagen/comprobantes2022/";
-            $archivo_comprobante="";
-            if($this->archivo_comprobante!=null){
-                if($this->archivo_comprobante->getClientOriginalExtension()=="jpg" or $this->archivo_comprobante->getClientOriginalExtension()=="png" or $this->archivo_comprobante->getClientOriginalExtension()=="jpeg"){
-                    $archivo_comprobante = "img".time().".".$this->archivo_comprobante->getClientOriginalExtension();
-                    $this->img=$archivo_comprobante;
-                    copy($this->archivo_comprobante->getRealPath(),$ruta.$this->img);
-/*                     $this->archivo_comprobante->storeAS('comprobantes/imagenes/', $this->img,'public_up');
- */                    $this->tipo=1;
+
+            if($this->validate([
+                'metodo' => 'required',
+              //  'observacion' => 'required',
+                'archivo_comprobante' => 'required',
+                ])==false){
+                $mensaje="no encontrado";
+               session(['message' => 'no encontrado']);
+                return  back()->withErrors(['mensaje'=>'Validar el input vacio']);
+            }else{
+                
+                $ruta="C:/xampp/htdocs/repo_clon_casys/casys-pro-2.0/public/imagen/comprobantes2022";
+                $archivo_comprobante="";
+                if($this->archivo_comprobante!=null){
+                    if($this->archivo_comprobante->getClientOriginalExtension()=="jpg" or $this->archivo_comprobante->getClientOriginalExtension()=="png" or $this->archivo_comprobante->getClientOriginalExtension()=="jpeg" or $this->archivo_comprobante->getClientOriginalExtension()=="pdf"){
+                        $archivo_comprobante = "img".time().".".$this->archivo_comprobante->getClientOriginalExtension();
+                        $this->img=$archivo_comprobante;
+                        copy($this->archivo_comprobante->getRealPath(),$ruta.$this->img);
+    /*                     $this->archivo_comprobante->storeAS('comprobantes/imagenes/', $this->img,'public_up');
+     */                    $this->tipo=1;
+                    }
+                /*  elseif($this->archivo_comprobante->getClientOriginalExtension()=="pdf"){
+                        $archivo_comprobante = "pdf".time().".".$this->archivo_comprobante->getClientOriginalExtension();
+                        $this->img=$archivo_comprobante;
+                        $this->archivo_comprobante->storeAS('public/pdf/', $this->img,'public_up');
+                        $this->tipo=3;
+                        } */
                 }
-            /*  elseif($this->archivo_comprobante->getClientOriginalExtension()=="pdf"){
-                    $archivo_comprobante = "pdf".time().".".$this->archivo_comprobante->getClientOriginalExtension();
-                    $this->img=$archivo_comprobante;
-                    $this->archivo_comprobante->storeAS('public/pdf/', $this->img,'public_up');
-                    $this->tipo=3;
-                    } */
-            }
-            $id_pre=$this->id_pre;
-            $fpago=$this->fpago;
-            $metodo=$this->metodo;
-            $observacion=$this->observacion;
-
-
-            DB::beginTransaction();
+                $id_pre=$this->id_pre;
+                if($this->fpago!=null && $this->fpago!=""){
+                    $fpago=$this->fpago;
+                }else{
+                    $fpago=null;
+                }
+                
+                $metodo=$this->metodo;
+                if($this->observacion!=null && $this->observacion!=""){
+                    $observacion=$this->observacion;
+                }else{
+                    $observacion=".";
+                }
     
-            $comprobantes=DB::table('TB_PRE_INS')
-            ->where('ID_PRE',$id_pre)
-            ->update(
-                [
-                    'TIPO_PAGO'=>$metodo,
-                    'FORMA_PAGO'=>$fpago,
-                    'COMPROBANTE_PAGO'=>$archivo_comprobante,
-                    'FECHA_CAMBIOS_REG'=> date('y-m-d:h:m:s'),
-                    'ESTADO_PRE_INS'=>2,
-                    'OBSERVACION_COMP'=>$observacion
-                ]
-                );
-            if($comprobantes){
+                DB::beginTransaction();
+        
+                $comprobantes=DB::table('TB_PRE_INS')
+                ->where('ID_PRE',$id_pre)
+                ->update(
+                    [
+                        'TIPO_PAGO'=>$metodo,
+                        'FORMA_PAGO'=>$fpago,
+                        'COMPROBANTE_PAGO'=>$archivo_comprobante,
+                        'FECHA_CAMBIOS_REG'=> date('y-m-d:h:m:s'),
+                        'ESTADO_PRE_INS'=>2,
+                        'OBSERVACION_COMP'=>$observacion
+                    ]
+                    );
+                if($comprobantes){
+    
+                    DB::commit();
+                    $this->reset();
+                    unset($this->mensaje25);
+                    $this->mensaje24='Actualizado correctamente';
+                }
+                else{
+                    DB::rollback();
+                    unset($this->mensaje24);
+                    $this->mensaje25='No fue posible actualizar correctamente';
+                }
 
-                DB::commit();
-                $this->reset();
-                unset($this->mensaje25);
-                $this->mensaje24='Actualizado correctamente';
             }
-            else{
-                DB::rollback();
-                unset($this->mensaje24);
-                $this->mensaje25='No fue posible actualizar correctamente';
-            }
+           
         }
     
     
@@ -509,5 +588,55 @@ class ValidacionComponent extends Component
                 $this->archivo_cdiaco=$estac->CONTRATO;
             }
         }  
+    }
+
+    public function validar_datos(){
+
+        if($this->validate([
+            'año_ingreso' => 'required',
+            'grado_primer_ingreso' => 'required',
+            'nombre_padre' => 'required',
+            'nacimiento_padre' => 'required',
+            'nacionalidad_padre' => 'required',
+            'lugar_nacimiento_padre' => 'required',
+            'DPI_padre' => 'required',
+            'celular_padre' => 'required',
+            'telefono_padre' => 'required',
+            'direccion_residencia' => 'required',
+            'correo_padre' => 'required',
+            'profesion_padre' => 'required',
+            'lugar_profesion_padre' => 'required',
+            'cargo_profesion_padre' => 'required',
+            'religion_padre' => 'required',
+            'NIT_padre' => 'required',
+            'nombre_madre' => 'required',
+            'fechana_madre' => 'required',
+            'nacionalidad_madre' => 'required',
+            'lugar_nacimiento_madre' => 'required',
+            'DPI_madre' => 'required',
+            'telefono_madre' => 'required',
+            'celular_madre' => 'required',
+            'direccion_residenciamadre'=> 'required',
+            'correo_madre'=> 'required',
+            'profesion_madre' =>'required',
+            'lugar_prof_madre' =>'required',
+            'cargo_madre' =>'required',
+            'religion_madre' =>'required',
+            'NIT_madre' =>'required',
+            'poliza' => 'required',
+            'carne_seguro' => 'required',
+
+
+
+        ])==false){
+            $error="no encontrado";
+            session(['validar'=> 1]);
+            session(['message'=>'no encontrado']);
+            return back()->withErrors(['error' => 'Validar el input vacio']);
+            
+        }
+        else{
+            $this->validacionv=1;
+        }
     }
 }

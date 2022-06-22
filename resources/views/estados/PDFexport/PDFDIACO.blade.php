@@ -11,7 +11,7 @@
         <center>
         <strong><p>CONTRATO DE ADHESION POR PRESTACION DE SERVICIOS EDUCATIVOS
             COLEGIO BILINGÜE "EL CASTAÑO"</p></strong></center>
-        <p>Correlativo interno Contrato No. <strong>{{$datos[16]}}</strong></p>
+        <p>Correlativo interno Contrato No. <strong>{{$datos[16]}}{{$datos[17]}}</strong></p>
         <p> <strong>Aprobado y registrado según Resolución DIACO: _____________</strong> </p>
             <hr>
         <p style="text-align: justify;">En el municipio de Mixco, del departamento de Guatemala, el día <strong>{{$datos[2]}}</strong> del mes de <strong>{{$datos[1]}}</strong> 
@@ -23,8 +23,7 @@
             este Municipio lo que acredito con Resolución: No. 005-95-EP., de fecha 9 de enero de 1995, emitida por Direcciòn 
             Tecnica Regional Metropolitana, . Y por la otra parte: </p>
         <p>(DATOS DEL PADRE DE FAMILIA O REPRESENTANTE LEGAL DEL EDUCANDO)</p>
-            <p style="text-align: justify;"><u><Strong>{{$datos[13]}}</Strong></u>, de <u><strong>{{$datos[15]}} años, {{$datos[5]}}, {{$datos[6]}} </strong></u>
-                <u><strong>...Profesión u oficio..</strong></u>, de este domicilio, me identifico con el <u><strong>DPI: {{$datos[7]}}</strong></u></p>
+            <p style="text-align: justify;"><u><Strong>{{$datos[13]}}</Strong></u>, de <u><strong>{{$datos[15]}} años, {{$datos[5]}}, {{$datos[6]}}, {{$datos[20]}}</strong></u>, de este domicilio, me identifico con el <u><strong>DPI: {{$datos[7]}}</strong></u></p>
             
 
             <p style="text-align: justify;">extendido en <u><strong>Mixco</strong></u>, con residencia en: <u><strong>{{$datos[8]}}</strong></u>
@@ -146,12 +145,12 @@
 
             <tr>            
             <td> <strong> a) INSCRIPCION POR EDUCANDO</strong> <br> (solo un pago anual) </td>
-            <td> <strong>Q.</strong></td>
+            <td> <strong>Q.{{$datos[18]}}</strong></td>
             </tr>
             
             <tr>
             <td> <strong>b) COLEGIATURA MENSUAL:</strong> <br> (10 Cuotas en los meses de Enero a Octubre)</td>
-            <td><strong>Q.</strong></td>            
+            <td><strong>Q.{{$datos[19]}}</strong></td>            
             </tr>
         
         </table>
