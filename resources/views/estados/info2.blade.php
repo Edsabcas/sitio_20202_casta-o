@@ -715,9 +715,6 @@
                   <p><strong style="font-size: 12px;">Finalizado.</strong></p>
           </div>
        </li>
-
-       <<<<<<< HEAD
-
        <div wire:ignore.self class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
          <div class="modal-dialog modal-dialog-centered modal-xl">
            <div class="modal-content">
@@ -885,9 +882,6 @@
            </div>
          </div>
        </div>
-=======
-    
->>>>>>> a97d40cb59a915ec93b3b5da8cb5057acfa04939
               <div wire:ignore.self class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
                 <div class="modal-dialog modal-dialog-centered">
                   <div class="modal-content">
