@@ -56,9 +56,9 @@
        <hr>
        <table align="center">
         <tr>            
-            <td style="width:75mm; font-size: 9px">(Años de edad)</td>
-            <td style="width:70mm; font-size: 9px">(Estado civil)</td>
-            <td style="width:50mm; font-size: 9px">(Nacionalidad)</td>
+            <td style="width:75mm; height:1mm; font-size: 9px">(Años de edad)</td>
+            <td style="width:70mm; height:1mm; font-size: 9px">(Estado civil)</td>
+            <td style="width:50mm; height:1mm; font-size: 9px">(Nacionalidad)</td>
             </tr>
        </table>
     
