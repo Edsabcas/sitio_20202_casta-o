@@ -28,7 +28,7 @@ class ValidacionComponent extends Component
     public $estado_elevado, $matricula_bus_aj, $validacionv, $codigo_familia3, $fecha_codigo;
     public $nombre_encargado2, $fechana_encargado2, $nacionalidad_encargado2 , $lugar_nacimiento_encargado2 ,$estadocivilencargado2 , $DPI_encargado2 ,$telefono_encargado2 ,$celular_encargado2;
     public $direccion_residenciaencargado2 ,$correo_encargado2  ,$profesion_encargado2 ,$lugar_prof_encargado2 ,$religion_encargado2 ,$NIT_encargado2 ,$vive_encargado2, $quien_encargado1;
-    public $solo_por, $n_encargado, $nencargado, $dpi_encar, $dpiencar, $bus_por, $nombreconductor, $nombre_conductor, $dpiconductor, $dpi_conductor, $n_conductor, $nconductor;
+    public $solo_por, $Especifique_rel2, $n_encargado, $nencargado, $dpi_encar, $dpiencar, $bus_por, $nombreconductor, $nombre_conductor, $dpiconductor, $dpi_conductor, $n_conductor, $nconductor;
 
     public function render()
     {
@@ -151,7 +151,14 @@ class ValidacionComponent extends Component
     }
 
     public function quien_encargado($quien_encargado1){
-        $this->quien_encargad1=$quien_encargado1;
+        $this->quien_encargado1=$quien_encargado1;
+    }
+
+    public function estado_civil_encargado($estadocivilencargado2){
+        $this->estadocivilencargado2=$estadocivilencargado2;
+    }
+    public function vive_con_el_encargado($vive_encargado2){
+        $this->vive_encargado2=$vive_encargado2;
     }
 
     public function tiene_alergia($tiene_alergias){
@@ -845,6 +852,8 @@ class ValidacionComponent extends Component
                 $religion_encargado2=$this->religion_encargado2;
                 $NIT_encargado=$this->NIT_encargado;
                 $vive_encargado2=$this->vive_encargado2;
+                $Especifique_rel2=$this->Especifique_rel2;
+
                
                 
                 DB::beginTransaction();
@@ -915,10 +924,11 @@ class ValidacionComponent extends Component
                 'CELULAR_ENCARGADO'=>$this->celular_encargado2,
                 'DIRECCION_RECIDENCIA_ENCARGADO'=>$this->direccion_residenciaencargado2,
                 'CORREO_ENCARGADO'=>$this->correo_encargado2,
-                'CARGO_ENCARGADO'=>$this->rofesion_encargado2,
+                'CARGO_ENCARGADO'=>$this->profesion_encargado2,
                 'LUGAR_TRABAJO_E '=>$this->lugar_prof_encargado2,
                 'RELIGION_ENCARGADO'=>$this->religion_encargado2,
                 'NIT_ENCARGADO'=>$this->NIT_encargado,
+                'REL_ENCARGADO'=>$this->Especifique_rel2,
                 'VIVE_CON_EL_ENCARGADO'=>$this->vive_encargado2,
         
                     
@@ -1232,11 +1242,10 @@ class ValidacionComponent extends Component
             session(['validar'=> 1]);
             session(['message'=>'no encontrado']);
             return back()->withErrors(['error' => 'Validar el input vacio']);
-            $this->validacionv = 2;
             
         }
         else{
-            $this->validacionv = 1;
+            $this->validacionv=1;
         }
     }
 }
