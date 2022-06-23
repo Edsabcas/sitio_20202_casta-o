@@ -207,8 +207,6 @@ class ValidacionComponent extends Component
             'cargo_madre' =>'required',
             'religion_madre' =>'required',
             'NIT_madre' =>'required',
-            'poliza' => 'required',
-            'carne_seguro' => 'required',
             'quien_encargado1'=> 'required',
 
         ])==false){
@@ -503,8 +501,6 @@ class ValidacionComponent extends Component
                 'cargo_madre' =>'required',
                 'religion_madre' =>'required',
                 'NIT_madre' =>'required',
-                'poliza' => 'required',
-                'carne_seguro' => 'required',
                 
                 
             ])==false){
@@ -797,8 +793,7 @@ class ValidacionComponent extends Component
                     'cargo_madre' =>'required',
                     'religion_madre' =>'required',
                     'NIT_madre' =>'required',
-                    'poliza' => 'required',
-                    'carne_seguro' => 'required',
+                   
         
         
         
