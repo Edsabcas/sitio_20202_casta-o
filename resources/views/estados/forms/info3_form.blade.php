@@ -1381,17 +1381,17 @@
         <div class="row">
           <div class="col-md-6">
             <strong><label  for="Labelnombremadre" class="form-label">Nombre del conductor del bus ajeno al colegio<label></strong>
-            <input  type="text" class="form-control"  wire:model="nombre_encargado">
+            <input  type="text" class="form-control"  wire:model="nombre_conductor">
           </div>
 
           <div class="col-md-6">
             <strong><label  for="Labelnombremadre" class="form-label">DPI del conductor del bus ajeno al colegio<label></strong>
-            <input  type="text" class="form-control"  wire:model="nombre_encargado">
+            <input  type="text" class="form-control"  wire:model="dpi_conductor">
           </div>
           
           <div class="col-md-6">
             <strong><label  for="Labelnombremadre" class="form-label">Número del conductor del bus ajeno al colegio<label></strong>
-            <input  type="number" class="form-control"  wire:model="n_encargado">
+            <input  type="number" class="form-control"  wire:model="n_conductor">
           </div>
 
         <div class="col-md-6">

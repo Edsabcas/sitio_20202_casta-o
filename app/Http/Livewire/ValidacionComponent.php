@@ -28,7 +28,7 @@ class ValidacionComponent extends Component
     public $estado_elevado, $matricula_bus_aj, $validacionv, $codigo_familia3, $fecha_codigo;
     public $nombre_encargado2, $fechana_encargado2, $nacionalidad_encargado2 , $lugar_nacimiento_encargado2 ,$estadocivilencargado2 , $DPI_encargado2 ,$telefono_encargado2 ,$celular_encargado2;
     public $direccion_residenciaencargado2 ,$correo_encargado2  ,$profesion_encargado2 ,$lugar_prof_encargado2 ,$religion_encargado2 ,$NIT_encargado2 ,$vive_encargado2, $quien_encargado1;
-    public $solo_por;
+    public $solo_por, $n_encargado, $nencargado, $dpi_encar, $dpiencar, $bus_por, $nombreconductor, $nombre_conductor, $dpiconductor, $dpi_conductor, $n_conductor, $nconductor;
 
     public function render()
     {
@@ -279,7 +279,39 @@ class ValidacionComponent extends Component
             else{
                     $Especifique_ali=$this->Especifique_ali;
         }
-        $solo_por=$this->$solo_por;
+        $solo_por=$this->solo_por;
+        if($this->n_encargado==""){
+            $this->n_encargado=null;  
+        }
+        else{
+                $n_encargado=$this->n_encargado;
+        }
+        if($this->dpi_encar==""){
+            $this->dpi_encar=null;  
+        }
+        else{
+                $dpi_encar=$this->dpi_encar;
+        }
+        $bus_por=$this->bus_por;
+        if($this->nombre_conductor==""){
+            $this->nombre_conductor=null;  
+        }
+        else{
+                $nombre_conductor=$this->nombre_conductor;
+        }
+        if($this->dpi_conductor==""){
+            $this->dpi_conductor=null;  
+        }
+        else{
+                $dpi_conductor=$this->dpi_conductor;
+        }
+        if($this->n_conductor==""){
+            $this->n_conductor=null;  
+        }
+        else{
+                $n_conductor=$this->n_conductor;
+        }
+
 
         
         DB::beginTransaction();
@@ -356,6 +388,14 @@ class ValidacionComponent extends Component
                 'RELIGION_ENCARGADO'=>$this->religion_padre,
                 'NIT_ENCARGADO'=>$this->NIT_padre,
                 'VIVE_CON_EL_ENCARGADO'=>$this->vive_con_elpadre,
+                'RETIRO_SOLO'=>$this->solo_por,
+                'RETIRO_N_EN'=>$this->n_encargado,
+                'RETIRO_DPI_EN'=>$this->n_encargado,
+                'RETIRO_BUS_COL'=>$this->bus_por,
+                'N_CONDUCTOR_AJ'=>$this->nombre_conductor,
+                'DPI_CONDUCTOR_AJ'=>$this->dpi_conductor,
+                'NUM_CONDUCTOR_AJ'=>$this->n_conductor,
+
                 ]
             );
             if($inscripcion_datos){
@@ -1032,6 +1072,9 @@ class ValidacionComponent extends Component
         $this->solo_por=$solo_por;
     }
 
+    public function bus_por($bus_por){
+        $this->bus_por=$bus_por;
+    }
 
     public function encargado_alumno($encargado_alumno){
         $this->encargado_alumno=$encargado_alumno;
