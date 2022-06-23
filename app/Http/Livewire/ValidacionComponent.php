@@ -391,7 +391,7 @@ class ValidacionComponent extends Component
                 'DIRECCION_RESIDENCIA_ENCARGADO'=>$this->direccionresidencia,
                 'CORREO_ENCARGADO'=>$this->correopadre,
                 'CARGO_ENCARGADO'=>$this->profesionpadre,
-                'LUGAR_TRABAJO_E '=>$this->lugar_profesion_padre,
+                'LUGAR_TRABAJO_E'=>$this->lugar_profesion_padre,
                 'RELIGION_ENCARGADO'=>$this->religion_padre,
                 'NIT_ENCARGADO'=>$this->NIT_padre,
                 'VIVE_CON_EL_ENCARGADO'=>$this->vive_con_elpadre,
