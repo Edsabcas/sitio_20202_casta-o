@@ -382,27 +382,24 @@
                           <span>¡Pendiente de ingresar!</span>
                       </div> 
                     @enderror
-
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                      <label class="form-check-label" for="flexRadioDefault1">
+                    <div> 
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                      <label class="form-check-label" for="defaultCheck1">
                         Recordar los datos de su tarjeta
                       </label>
                     </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                      <label class="form-check-label" for="flexRadioDefault2">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                      <label class="form-check-label" for="defaultCheck1">
                         No recordar los datos de su tarjeta
                       </label>
                     </div>
-                    <br>
+                  </div> 
 
                       </form>
                         @endif
                                             
-
-
-                        
                         
                         @if ($metodo==1)
                         <div class="row g-3">
