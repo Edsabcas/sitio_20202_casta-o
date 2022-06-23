@@ -45,9 +45,9 @@
         <center>
         <table align="center">
             <tr>
-                <th style="width:50mm; font-size: 12px">de <u><strong>{{$datos[15]}} años</th>
-                    <th style="width:70mm; font-size: 12px"><u><strong>{{$datos[6]}}</strong></u></th>
-                <th style="width:50mm; font-size: 12px"><u><strong>{{$datos[5]}}</strong></u></th>
+                <th style="width:50mm; height:1cm; font-size: 12px">de <u><strong>{{$datos[15]}} años</th>
+                    <th style="width:70mm; height:5mm; font-size: 12px"><u><strong>{{$datos[6]}}</strong></u></th>
+                <th style="width:50mm; height:5mm; font-size: 12px"><u><strong>{{$datos[5]}}</strong></u></th>
             </tr>
               
         </table> 
