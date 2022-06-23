@@ -24,7 +24,7 @@ class ValidacionComponent extends Component
     public $poliza, $carneseguro, $carne_seguro, $tiene_alergia, $medicamento, $alimento, $archivo,$formato, $arch;
     public $religion_padre, $cargo_profesion_padre, $NIT_padre, $nombre_madre, $fechana_madre, $nacionalidad_madre, $lugar_nacimiento_madre, $DPI_madre, $telefono_madre, $celular_madre,$id_pre_ins,$id_no_gest,$mensaje_diaco,$mensaje_diaco1,$archivo_cdiaco,$id_pre_ins_arch,$id_no_gest_arch;
     public $prueba_ingreso, $validar_info, $entro_aca, $Especifique_alerg, $Especifique_medi, $Especifique_ali;
-    public $idgrado,$monto_ins,$monto_men;
+    public $idgrado,$monto_ins,$monto_men,$cuota_r;
     public $estado_elevado, $matricula_bus_aj, $validacionv, $codigo_familia3, $fecha_codigo;
     public $nombre_encargado2, $fechana_encargado2, $nacionalidad_encargado2 , $lugar_nacimiento_encargado2 ,$estadocivilencargado2 , $DPI_encargado2 ,$telefono_encargado2 ,$celular_encargado2;
     public $direccion_residenciaencargado2 ,$correo_encargado2  ,$profesion_encargado2 ,$lugar_prof_encargado2 ,$religion_encargado2 ,$NIT_encargado2 ,$vive_encargado2, $quien_encargado1;
@@ -88,8 +88,8 @@ class ValidacionComponent extends Component
 
                 foreach($cuenta as $cuen){
                     $this->monto_ins=$cuen->MONTO_INSCRIPCION;
-                    $this->monto_men=$cuen->MONTO_MENSUAL;  
-
+                    $this->monto_men=$cuen->MONTO_MENSUAL;
+                    $this->cuota_r=$cuen->CUOTA_ANUAL;
                 }
             }
 
