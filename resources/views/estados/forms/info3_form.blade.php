@@ -1184,6 +1184,17 @@
               </center>
                 @if($alumno_asegurado==1)
               <center>
+                <div class="row">
+                  <div class="col-md-6">
+                    <strong><label  for="Labelpoliza" class="form-label">Póliza de seguro</label></strong>
+                      <input  type="text" class="form-control"  wire:model="poliza">
+                  </div>
+                          
+                  <div class="col-md-6">
+                      <strong><label  for="Labelcarneseguro" class="form-label">Número del carné de seguro</label></strong>
+                        <input  type="number" class="form-control"  wire:model="carne_seguro">
+                  </div>
+                </div>
                 <div class="col-md-6">
                   <strong><label  for="Labelnombreaseguradora" class="form-label">Nombre de la aseguradora</label></strong>
                     <input  type="text" class="form-control"  wire:model="nombre_aseguradora">
@@ -1192,46 +1203,12 @@
                 @endif
 
         </div>
-
-            
-    <div class="row">
-      <div class="col-md-6">
-        <strong><label  for="Labelpoliza" class="form-label">Póliza de seguro</label></strong>
-          <input  type="text" class="form-control"  wire:model="poliza">
-      </div>
-      
-                
-      <div class="col-md-6">
-          <strong><label  for="Labelcarneseguro" class="form-label">Número del carné de seguro</label></strong>
-            <input  type="number" class="form-control"  wire:model="carne_seguro">
-      </div>
-
-      @error('poliza')
-          <div class="col-md-6">
-          <div class="alert alert-danger d-flex align-items-center rounded-pill" role="alert">
-            <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
-             <div>
-              Es necesario que llene este campo para el envío de la información.
-             </div>
-          </div>
-          </div>
-        @enderror
-      @error('carne_seguro')
-          <div class="col-md-6">
-          <div class="alert alert-danger d-flex align-items-center rounded-pill" role="alert">
-            <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
-             <div>
-              Es necesario que llene este campo para el envío de la información.
-             </div>
-          </div>
-          </div>
-        @enderror
                 
     </div>
   </div>
  </div>
 </div>
-</div>
+
 
 <br>
 
@@ -1366,7 +1343,7 @@
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="buspor" value="2" id="buspor2" wire:click="buss_por('2')">
+                <input class="form-check-input" type="radio" name="buspor" value="2" id="buspor2" wire:click="bus_por('2')">
                 <label class="form-check-label" for="buspor1">
                   Monserrat
                 </label>
@@ -1381,17 +1358,17 @@
         <div class="row">
           <div class="col-md-6">
             <strong><label  for="Labelnombremadre" class="form-label">Nombre del conductor del bus ajeno al colegio<label></strong>
-            <input  type="text" class="form-control"  wire:model="nombre_encargado">
+            <input  type="text" class="form-control"  wire:model="nombre_conductor">
           </div>
 
           <div class="col-md-6">
             <strong><label  for="Labelnombremadre" class="form-label">DPI del conductor del bus ajeno al colegio<label></strong>
-            <input  type="text" class="form-control"  wire:model="nombre_encargado">
+            <input  type="text" class="form-control"  wire:model="dpi_conductor">
           </div>
           
           <div class="col-md-6">
             <strong><label  for="Labelnombremadre" class="form-label">Número del conductor del bus ajeno al colegio<label></strong>
-            <input  type="number" class="form-control"  wire:model="n_encargado">
+            <input  type="number" class="form-control"  wire:model="n_conductor">
           </div>
 
         <div class="col-md-6">
@@ -1434,14 +1411,14 @@
     <div class="modal-footer">
 
       <button type="button" class="btn btn-pre2" wire:click='validar_datos()'>Validar Información</button>.
-      @if($quien_encargado1==1)
-         @if($validacionv==1)
-       <button type="button" class="btn btn-pre2" wire:click='insertar_datos()' data-bs-dismiss="modal">Envíar Información</button>.
+      @if($validacionv==1)
+          @if($quien_encargado1==1)
+          <button type="button" class="btn btn-pre2" wire:click='insertar_datos()' data-bs-dismiss="modal">Envíar Información1</button>.
           @elseif($quien_encargado1==2)
-          <button type="button" class="btn btn-pre2" wire:click='insertar_datos2()' data-bs-dismiss="modal">Envíar Información</button>.
+          <button type="button" class="btn btn-pre2" wire:click='insertar_datos2()' data-bs-dismiss="modal">Envíar Información2</button>.
           
           @elseif($quien_encargado1==3)
-          <button type="button" class="btn btn-pre2" wire:click='insertar_datos3()' data-bs-dismiss="modal">Envíar Información</button>.
+          <button type="button" class="btn btn-pre2" wire:click='insertar_datos3()' data-bs-dismiss="modal">Envíar Información3</button>.
           @endif
       
       @endif

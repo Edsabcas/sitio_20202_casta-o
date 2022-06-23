@@ -28,7 +28,7 @@ class ValidacionComponent extends Component
     public $estado_elevado, $matricula_bus_aj, $validacionv, $codigo_familia3, $fecha_codigo;
     public $nombre_encargado2, $fechana_encargado2, $nacionalidad_encargado2 , $lugar_nacimiento_encargado2 ,$estadocivilencargado2 , $DPI_encargado2 ,$telefono_encargado2 ,$celular_encargado2;
     public $direccion_residenciaencargado2 ,$correo_encargado2  ,$profesion_encargado2 ,$lugar_prof_encargado2 ,$religion_encargado2 ,$NIT_encargado2 ,$vive_encargado2, $quien_encargado1;
-    public $solo_por, $Especifique_rel2;
+    public $solo_por, $Especifique_rel2, $n_encargado, $nencargado, $dpi_encar, $dpiencar, $bus_por, $nombreconductor, $nombre_conductor, $dpiconductor, $dpi_conductor, $n_conductor, $nconductor;
 
     public function render()
     {
@@ -207,8 +207,6 @@ class ValidacionComponent extends Component
             'cargo_madre' =>'required',
             'religion_madre' =>'required',
             'NIT_madre' =>'required',
-            'poliza' => 'required',
-            'carne_seguro' => 'required',
             'quien_encargado1'=> 'required',
 
         ])==false){
@@ -245,7 +243,7 @@ class ValidacionComponent extends Component
         $celular_madre=$this->celular_madre;
         $direccion_residenciamadre=$this->direccion_residenciamadre; 
         $correo_madre=$this->correo_madre;
-        $rofesion_madre=$this->profesion_madre;
+        $profesion_madre=$this->profesion_madre;
         $lugar_prof_madre=$this->lugar_prof_madre;
         $cargo_madre=$this->cargo_madre; 
         $religion_madre=$this->religion_madre;
@@ -273,7 +271,7 @@ class ValidacionComponent extends Component
         }
         else{
                 $matricula_bus_aj=$this->matricula_bus_aj;
-    }
+        }
         if($this->Especifique_medi==""){
             $this->Especifique_medi=null;  
         }
@@ -286,7 +284,39 @@ class ValidacionComponent extends Component
             else{
                     $Especifique_ali=$this->Especifique_ali;
         }
-        $solo_por=$this->$solo_por;
+        $solo_por=$this->solo_por;
+        if($this->n_encargado==""){
+            $this->n_encargado=null;  
+        }
+        else{
+                $n_encargado=$this->n_encargado;
+        }
+        if($this->dpi_encar==""){
+            $this->dpi_encar=null;  
+        }
+        else{
+                $dpi_encar=$this->dpi_encar;
+        }
+        $bus_por=$this->bus_por;
+        if($this->nombre_conductor==""){
+            $this->nombre_conductor=null;  
+        }
+        else{
+                $nombre_conductor=$this->nombre_conductor;
+        }
+        if($this->dpi_conductor==""){
+            $this->dpi_conductor=null;  
+        }
+        else{
+                $dpi_conductor=$this->dpi_conductor;
+        }
+        if($this->n_conductor==""){
+            $this->n_conductor=null;  
+        }
+        else{
+                $n_conductor=$this->n_conductor;
+        }
+
 
         
         DB::beginTransaction();
@@ -325,7 +355,7 @@ class ValidacionComponent extends Component
                 'CELULAR_MADRE'=>$celular_madre,
                 'DIRECCION_RESIDENCIA_M'=>$direccion_residenciamadre, 
                 'CORREO_MADRE'=>$correo_madre,
-                'PROFECION_MADRE'=>$rofesion_madre,
+                'PROFECION_MADRE'=>$profesion_madre,
                 'LUGAR_TRABAJO_M'=>$lugar_prof_madre,
                 'CARGO_MADRE'=>$cargo_madre,
                 'ALERG_MEDICAMENTO'=>$this->medicamento,
@@ -348,21 +378,30 @@ class ValidacionComponent extends Component
                 'SALIDA_BUS_AJENO'=>$this->bus_no_colegio,
                 'Matricula_bus_aj'=>$this->matricula_bus_aj,
                 'ENCARGADO'=> $this->quien_encargado1,
-                'NOMB_ENCARGADO'=>$this->nombrepadre,
-                'FECHA_N_ENCARGADO'=>$this->nacimientopadre,
-                'NACIONALIDAD_ENCARGADO '=>$this->nacionalidadpadre,
-                'LUGAR_NACIMIENTO_ENCARGADO '=>$this->lugarnacimientopadre,
+                'NOMB_ENCARGADO'=>$nombrepadre,
+                'FECHA_N_ENCARGADO'=>$nacimientopadre,
+                'NACIONALIDAD_ENCARGADO'=>$nacionalidadpadre,
+                'LUGAR_NACIMIENTO_ENCARGADO'=>$lugarnacimientopadre,
                 'ESTADO_CIVIL_E'=>$this->estadocivil,
-                'DPI_ENCARGADO'=>$this->DPIpadre,
-                'TELEFONO_ENCARGADO'=>$this->telefonopadre,
-                'CELULAR_ENCARGADO'=>$this->celularpadre,
-                'DIRECCION_RECIDENCIA_ENCARGADO'=>$this->direccionresidencia,
-                'CORREO_ENCARGADO'=>$this->correopadre,
-                'CARGO_ENCARGADO'=>$this->profesionpadre,
-                'LUGAR_TRABAJO_E '=>$this->lugar_profesion_padre,
-                'RELIGION_ENCARGADO'=>$this->religion_padre,
-                'NIT_ENCARGADO'=>$this->NIT_padre,
+                'DPI_ENCARGADO'=>$DPIpadre,
+                'TELEFONO_ENCARGADO'=>$telefonopadre,
+                'CELULAR_ENCARGADO'=>$celularpadre,
+                'DIRECCION_RESIDENCIA_ENCARGADO'=>$direccionresidencia,
+                'CORREO_ENCARGADO'=>$correopadre,
+                'PROFECION_ENCARGADO'=>$this->profesionpadre,
+                'CARGO_ENCARGADO'=>$this->cargo_profesion_padre,
+                'LUGAR_TRABAJO_E'=>$lugar_profesion_padre,
+                'RELIGION_ENCARGADO'=>$religion_padre,
+                'NIT_ENCARGADO'=>$NIT_padre,
                 'VIVE_CON_EL_ENCARGADO'=>$this->vive_con_elpadre,
+                'RETIRO_SOLO'=>$this->solo_por,
+                'RETIRO_N_EN'=>$this->n_encargado,
+                'RETIRO_DPI_EN'=>$this->n_encargado,
+                'RETIRO_BUS_COL'=>$this->bus_por,
+                'N_CONDUCTOR_AJ'=>$this->nombre_conductor,
+                'DPI_CONDUCTOR_AJ'=>$this->dpi_conductor,
+                'NUM_CONDUCTOR_AJ'=>$this->n_conductor,
+
                 ]
             );
             if($inscripcion_datos){
@@ -462,8 +501,6 @@ class ValidacionComponent extends Component
                 'cargo_madre' =>'required',
                 'religion_madre' =>'required',
                 'NIT_madre' =>'required',
-                'poliza' => 'required',
-                'carne_seguro' => 'required',
                 
                 
             ])==false){
@@ -500,7 +537,7 @@ class ValidacionComponent extends Component
             $celular_madre=$this->celular_madre;
             $direccion_residenciamadre=$this->direccion_residenciamadre; 
             $correo_madre=$this->correo_madre;
-            $rofesion_madre=$this->profesion_madre;
+            $profesion_madre=$this->profesion_madre;
             $lugar_prof_madre=$this->lugar_prof_madre;
             $cargo_madre=$this->cargo_madre; 
             $religion_madre=$this->religion_madre;
@@ -540,7 +577,38 @@ class ValidacionComponent extends Component
                 else{
                         $Especifique_ali=$this->Especifique_ali;
             }
-    
+            $solo_por=$this->solo_por;
+        if($this->n_encargado==""){
+            $this->n_encargado=null;  
+        }
+        else{
+                $n_encargado=$this->n_encargado;
+        }
+        if($this->dpi_encar==""){
+            $this->dpi_encar=null;  
+        }
+        else{
+                $dpi_encar=$this->dpi_encar;
+        }
+        $bus_por=$this->bus_por;
+        if($this->nombre_conductor==""){
+            $this->nombre_conductor=null;  
+        }
+        else{
+                $nombre_conductor=$this->nombre_conductor;
+        }
+        if($this->dpi_conductor==""){
+            $this->dpi_conductor=null;  
+        }
+        else{
+                $dpi_conductor=$this->dpi_conductor;
+        }
+        if($this->n_conductor==""){
+            $this->n_conductor=null;  
+        }
+        else{
+                $n_conductor=$this->n_conductor;
+        }
             
             DB::beginTransaction();
     
@@ -578,7 +646,7 @@ class ValidacionComponent extends Component
                     'CELULAR_MADRE'=>$celular_madre,
                     'DIRECCION_RESIDENCIA_M'=>$direccion_residenciamadre, 
                     'CORREO_MADRE'=>$correo_madre,
-                    'PROFECION_MADRE'=>$rofesion_madre,
+                    'PROFECION_MADRE'=>$profesion_madre,
                     'LUGAR_TRABAJO_M'=>$lugar_prof_madre,
                     'CARGO_MADRE'=>$cargo_madre,
                     'ALERG_MEDICAMENTO'=>$this->medicamento,
@@ -603,20 +671,27 @@ class ValidacionComponent extends Component
                     'ENCARGADO'=> $this->quien_encargado1,
                 'NOMB_ENCARGADO'=>$this->nombre_madre,
                 'FECHA_N_ENCARGADO'=>$this->fechana_madre,
-                'NACIONALIDAD_ENCARGADO '=>$this->nacionalidad_madre,
-                'LUGAR_NACIMIENTO_ENCARGADO '=>$this->lugar_nacimiento_madre,
+                'NACIONALIDAD_ENCARGADO'=>$this->nacionalidad_madre,
+                'LUGAR_NACIMIENTO_ENCARGADO'=>$this->lugar_nacimiento_madre,
                 'ESTADO_CIVIL_E'=>$this->estadocivilma,
                 'DPI_ENCARGADO'=>$this->DPI_madre,
                 'TELEFONO_ENCARGADO'=>$this->telefono_madre,
                 'CELULAR_ENCARGADO'=>$this->celular_madre,
-                'DIRECCION_RECIDENCIA_ENCARGADO'=>$this->direccion_residenciamadre,
+                'DIRECCION_RESIDENCIA_ENCARGADO'=>$this->direccion_residenciamadre,
                 'CORREO_ENCARGADO'=>$this->correo_madre,
-                'CARGO_ENCARGADO'=>$this->rofesion_madre,
-                'LUGAR_TRABAJO_E '=>$this->lugar_prof_madre,
+                'PROFECION_ENCARGADO'=>$profesion_madre,
+                'CARGO_ENCARGADO'=>$cargo_madre,
+                'LUGAR_TRABAJO_E'=>$this->lugar_prof_madre,
                 'RELIGION_ENCARGADO'=>$this->religion_madre,
                 'NIT_ENCARGADO'=>$this->NIT_madre,
                 'VIVE_CON_EL_ENCARGADO'=>$this->vive_madre,
-    
+                'RETIRO_SOLO'=>$this->solo_por,
+                'RETIRO_N_EN'=>$this->n_encargado,
+                'RETIRO_DPI_EN'=>$this->n_encargado,
+                'RETIRO_BUS_COL'=>$this->bus_por,
+                'N_CONDUCTOR_AJ'=>$this->nombre_conductor,
+                'DPI_CONDUCTOR_AJ'=>$this->dpi_conductor,
+                'NUM_CONDUCTOR_AJ'=>$this->n_conductor,
                 
                     ]
                 );
@@ -718,8 +793,7 @@ class ValidacionComponent extends Component
                     'cargo_madre' =>'required',
                     'religion_madre' =>'required',
                     'NIT_madre' =>'required',
-                    'poliza' => 'required',
-                    'carne_seguro' => 'required',
+                   
         
         
         
@@ -757,7 +831,7 @@ class ValidacionComponent extends Component
                 $celular_madre=$this->celular_madre;
                 $direccion_residenciamadre=$this->direccion_residenciamadre; 
                 $correo_madre=$this->correo_madre;
-                $rofesion_madre=$this->profesion_madre;
+                $profesion_madre=$this->profesion_madre;
                 $lugar_prof_madre=$this->lugar_prof_madre;
                 $cargo_madre=$this->cargo_madre; 
                 $religion_madre=$this->religion_madre;
@@ -810,10 +884,41 @@ class ValidacionComponent extends Component
                 $profesion_encargado2=$this->profesion_encargado2;
                 $lugar_prof_encargado2=$this->lugar_prof_encargado2;
                 $religion_encargado2=$this->religion_encargado2;
-                $NIT_encargado=$this->NIT_encargado;
+                $NIT_encargado2=$this->NIT_encargado2;
                 $vive_encargado2=$this->vive_encargado2;
                 $Especifique_rel2=$this->Especifique_rel2;
-
+                $solo_por=$this->solo_por;
+                if($this->n_encargado==""){
+                    $this->n_encargado=null;  
+                }
+                else{
+                        $n_encargado=$this->n_encargado;
+                }
+                if($this->dpi_encar==""){
+                    $this->dpi_encar=null;  
+                }
+                else{
+                        $dpi_encar=$this->dpi_encar;
+                }
+                $bus_por=$this->bus_por;
+                if($this->nombre_conductor==""){
+                    $this->nombre_conductor=null;  
+                }
+                else{
+                        $nombre_conductor=$this->nombre_conductor;
+                }
+                if($this->dpi_conductor==""){
+                    $this->dpi_conductor=null;  
+                }
+                else{
+                        $dpi_conductor=$this->dpi_conductor;
+                }
+                if($this->n_conductor==""){
+                    $this->n_conductor=null;  
+                }
+                else{
+                        $n_conductor=$this->n_conductor;
+                }
                
                 
                 DB::beginTransaction();
@@ -852,7 +957,7 @@ class ValidacionComponent extends Component
                         'CELULAR_MADRE'=>$celular_madre,
                         'DIRECCION_RESIDENCIA_M'=>$direccion_residenciamadre, 
                         'CORREO_MADRE'=>$correo_madre,
-                        'PROFECION_MADRE'=>$rofesion_madre,
+                        'PROFECION_MADRE'=>$profesion_madre,
                         'LUGAR_TRABAJO_M'=>$lugar_prof_madre,
                         'CARGO_MADRE'=>$cargo_madre,
                         'ALERG_MEDICAMENTO'=>$this->medicamento,
@@ -876,21 +981,27 @@ class ValidacionComponent extends Component
                         'Matricula_bus_aj'=>$this->matricula_bus_aj,
                 'NOMB_ENCARGADO'=>$this->nombre_encargado2,
                 'FECHA_N_ENCARGADO'=>$this->fechana_encargado2,
-                'NACIONALIDAD_ENCARGADO '=>$this->nacionalidad_encargado2,
-                'LUGAR_NACIMIENTO_ENCARGADO '=>$this->lugar_nacimiento_encargado2,
+                'NACIONALIDAD_ENCARGADO'=>$this->nacionalidad_encargado2,
+                'LUGAR_NACIMIENTO_ENCARGADO'=>$this->lugar_nacimiento_encargado2,
                 'ESTADO_CIVIL_E'=>$this->estadocivilencargado2,
                 'DPI_ENCARGADO'=>$this->DPI_encargado2,
                 'TELEFONO_ENCARGADO'=>$this->telefono_encargado2,
                 'CELULAR_ENCARGADO'=>$this->celular_encargado2,
-                'DIRECCION_RECIDENCIA_ENCARGADO'=>$this->direccion_residenciaencargado2,
+                'DIRECCION_RESIDENCIA_ENCARGADO'=>$this->direccion_residenciaencargado2,
                 'CORREO_ENCARGADO'=>$this->correo_encargado2,
                 'CARGO_ENCARGADO'=>$this->profesion_encargado2,
-                'LUGAR_TRABAJO_E '=>$this->lugar_prof_encargado2,
+                'LUGAR_TRABAJO_E'=>$this->lugar_prof_encargado2,
                 'RELIGION_ENCARGADO'=>$this->religion_encargado2,
-                'NIT_ENCARGADO'=>$this->NIT_encargado,
+                'NIT_ENCARGADO'=>$this->NIT_encargado2,
                 'REL_ENCARGADO'=>$this->Especifique_rel2,
                 'VIVE_CON_EL_ENCARGADO'=>$this->vive_encargado2,
-        
+                'RETIRO_SOLO'=>$this->solo_por,
+                'RETIRO_N_EN'=>$this->n_encargado,
+                'RETIRO_DPI_EN'=>$this->n_encargado,
+                'RETIRO_BUS_COL'=>$this->bus_por,
+                'N_CONDUCTOR_AJ'=>$this->nombre_conductor,
+                'DPI_CONDUCTOR_AJ'=>$this->dpi_conductor,
+                'NUM_CONDUCTOR_AJ'=>$this->n_conductor,
                     
                         ]
                     );
@@ -1042,6 +1153,9 @@ class ValidacionComponent extends Component
         $this->solo_por=$solo_por;
     }
 
+    public function bus_por($bus_por){
+        $this->bus_por=$bus_por;
+    }
 
     public function encargado_alumno($encargado_alumno){
         $this->encargado_alumno=$encargado_alumno;

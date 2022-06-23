@@ -45,9 +45,9 @@
         <center>
         <table align="center">
             <tr>
-                <th style="width:50mm; font-size: 12px">de <u><strong>{{$datos[15]}} años</th>
-                    <th style="width:70mm; font-size: 12px"><u><strong>{{$datos[6]}}</strong></u></th>
-                <th style="width:50mm; font-size: 12px"><u><strong>{{$datos[5]}}</strong></u></th>
+                <th style="width:50mm; height:1cm; font-size: 12px">de <u><strong>{{$datos[15]}} años</th>
+                    <th style="width:70mm; height:5mm; font-size: 12px"><u><strong>{{$datos[6]}}</strong></u></th>
+                <th style="width:50mm; height:5mm; font-size: 12px"><u><strong>{{$datos[5]}}</strong></u></th>
             </tr>
               
         </table> 
@@ -56,9 +56,9 @@
        <hr>
        <table align="center">
         <tr>            
-            <td style="width:75mm; font-size: 9px">(Años de edad)</td>
-            <td style="width:70mm; font-size: 9px">(Estado civil)</td>
-            <td style="width:50mm; font-size: 9px">(Nacionalidad)</td>
+            <td style="width:75mm; height:1mm; font-size: 9px">(Años de edad)</td>
+            <td style="width:70mm; height:1mm; font-size: 9px">(Estado civil)</td>
+            <td style="width:50mm; height:1mm; font-size: 9px">(Nacionalidad)</td>
             </tr>
        </table>
     
