@@ -797,7 +797,7 @@ class ValidacionComponent extends Component
                 $celular_madre=$this->celular_madre;
                 $direccion_residenciamadre=$this->direccion_residenciamadre; 
                 $correo_madre=$this->correo_madre;
-                $rofesion_madre=$this->profesion_madre;
+                $profesion_madre=$this->profesion_madre;
                 $lugar_prof_madre=$this->lugar_prof_madre;
                 $cargo_madre=$this->cargo_madre; 
                 $religion_madre=$this->religion_madre;
@@ -850,7 +850,7 @@ class ValidacionComponent extends Component
                 $profesion_encargado2=$this->profesion_encargado2;
                 $lugar_prof_encargado2=$this->lugar_prof_encargado2;
                 $religion_encargado2=$this->religion_encargado2;
-                $NIT_encargado=$this->NIT_encargado;
+                $NIT_encargado2=$this->NIT_encargado2;
                 $vive_encargado2=$this->vive_encargado2;
                 $Especifique_rel2=$this->Especifique_rel2;
 
@@ -927,7 +927,7 @@ class ValidacionComponent extends Component
                 'CARGO_ENCARGADO'=>$this->profesion_encargado2,
                 'LUGAR_TRABAJO_E'=>$this->lugar_prof_encargado2,
                 'RELIGION_ENCARGADO'=>$this->religion_encargado2,
-                'NIT_ENCARGADO'=>$this->NIT_encargado,
+                'NIT_ENCARGADO'=>$this->NIT_encargado2,
                 'REL_ENCARGADO'=>$this->Especifique_rel2,
                 'VIVE_CON_EL_ENCARGADO'=>$this->vive_encargado2,
         
