@@ -1225,7 +1225,7 @@
       <div  wire:ignore.self id="panelsStayOpen-salida" style="border-radius: 60px 60px 60px 60px;" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingOne">
         <div  wire:ignore.self class="accordion-body" style="border-radius: 60px 60px 60px 60px;">
           <strong><p class="card-title" style="color:#3a3e7b;" >
-            Autorizo que mi hij@ se retire de la siguiente manera:</p></strong>
+            Autorizo que mi hijo(a) se retire de la siguiente manera:</p></strong>
           <div class="tab">
             <strong><label for="exampleInputPassword1" class="form-label">¿El alumno se retira solo?</label></strong>
               <center>
@@ -1290,12 +1290,12 @@
          <center>
         <div class="row">
           <div class="col-md-6">
-            <strong><label  for="Labelnombremadre" class="form-label">Nombre del encargado<label></strong>
+            <strong><label  for="Labelnombremadre" class="form-label">Nombre del encargado</label></strong>
             <input  type="text" class="form-control"  wire:model="nombre_encargado">
           </div>
           
           <div class="col-md-6">
-            <strong><label  for="Labelnombremadre" class="form-label">Número del encargado<label></strong>
+            <strong><label  for="Labelnombremadre" class="form-label">Número del encargado</label></strong>
             <input  type="number" class="form-control"  wire:model="n_encargado">
           </div>
         </div>
@@ -1357,17 +1357,17 @@
       <center>
         <div class="row">
           <div class="col-md-6">
-            <strong><label  for="Labelnombremadre" class="form-label">Nombre del conductor del bus ajeno al colegio<label></strong>
+            <strong><label for="Labelnombremadre" class="form-label">Nombre del conductor del bus ajeno al colegio</label></strong>
             <input  type="text" class="form-control"  wire:model="nombre_conductor">
           </div>
 
           <div class="col-md-6">
-            <strong><label  for="Labelnombremadre" class="form-label">DPI del conductor del bus ajeno al colegio<label></strong>
+            <strong><label  for="Labelnombremadre" class="form-label">DPI del conductor del bus ajeno al colegio</label></strong>
             <input  type="text" class="form-control"  wire:model="dpi_conductor">
           </div>
           
           <div class="col-md-6">
-            <strong><label  for="Labelnombremadre" class="form-label">Número del conductor del bus ajeno al colegio<label></strong>
+            <strong><label  for="Labelnombremadre" class="form-label">Número del conductor del bus ajeno al colegio</label></strong>
             <input  type="number" class="form-control"  wire:model="n_conductor">
           </div>
 
@@ -1428,5 +1428,4 @@
     </div>
   </div>
   </div>
-</div>
 </div>
