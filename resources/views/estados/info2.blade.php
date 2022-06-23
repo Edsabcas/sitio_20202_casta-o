@@ -384,7 +384,11 @@
                                               </div>
                                             @endif
                               </div>
-                                           
+                              <div class="col-md">
+                                <label for="message-text" class="col-form-label"><h5 style="color: #3a3e7b"><strong>OBSERVACIÓN</strong></h5></label>
+                                  <textarea class="form-control" id="message-text" wire:model="observacion"></textarea>
+                              </div>              
+                            </div>              
                               
 
                           {{-- TRANSFERENCIA --}}
@@ -625,7 +629,7 @@
                                           <div class="col">
                                             <div class="mb-3">
                                               <label for="notarjeta" class="col-form-label">Numero de la tarjeta:</label>
-                                              <input type="text" class="form-control" id="notarjeta" wire:model="notarjeta">
+                                              <input type="number" class="form-control" id="notarjeta" wire:model="notarjeta">
                                             </div>
                                           </div>
                                       </div>
@@ -647,7 +651,7 @@
                                   <div class="col">
                                     <div class="mb-3">
                                       <label for="fvencimiento" class="col-form-label">Fecha de vencimiento:</label>
-                                        <input type="text" class="form-control" id="fvencimiento" wire:model="fvencimiento">
+                                        <input type="date" class="form-control" id="fvencimiento" wire:model="fvencimiento">
                                     </div>
                                   </div>
                                       @error('fvencimiento') 
@@ -664,7 +668,7 @@
                                     <div class="col">
                                       <div class="mb-3">
                                         <label for="cseguridad" class="col-form-label">Codigo de seguridad:</label>
-                                        <input type="text" class="form-control" id="cseguridad" wire:model="cseguridad">
+                                        <input type="number" class="form-control" id="cseguridad" wire:model="cseguridad">
                                       </div>
                                     </div>
                                 </div>
@@ -680,13 +684,13 @@
                                 @enderror
 
                                 <div class="form-check form-check-inline">
-                                  <input class="form-check-input" type="checkbox" wire:click="guardar_info()" value="" id="defaultCheck1">
+                                  <input class="form-check-input" wire:model="guardar_info" type="checkbox" {{-- wire:click="guardar_info()" --}} value="1" id="defaultCheck1">
                                   <label class="form-check-label" for="defaultCheck1">
                                     Recordar los datos de su tarjeta
                                   </label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                  <input class="form-check-input" type="checkbox" value="2" id="defaultCheck1">
                                   <label class="form-check-label" for="defaultCheck1">
                                     No recordar los datos de su tarjeta
                                   </label>

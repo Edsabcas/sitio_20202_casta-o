@@ -17,14 +17,14 @@ class ValidacionComponent extends Component
     public $nacimientopadre, $nacimiento_padre, $nacionalidadpadre, $nacionalidad_padre,$lugar_profesion_padre;
     public $lugar_nacimiento_padre, $lugarnacimientopadre, $estadocivil, $DPIpadre, $DPI_padre;
     public $celular_padre, $celularpadre, $telefono_padre, $telefonopadre, $direccion_residencia, $direccionresidencia;
-    public $id_pre,$metodo,$archivo_comprobante,$img,$tipo,$mensaje24,$mensaje25,$observacion,$fpago;
+    public $id_pre,$metodo,$archivo_comprobante,$img,$tipo,$mensaje24,$mensaje25,$observacion,$fpago,$mensaje30,$mensaje31;
     public $correo_padre, $correopadre, $profesionpadre, $profesion_padre, $grado_hermano, $gradohermano,$vive_con_elpadre,$estadocivilma;
     public $direccion_residenciamadre, $correo_madre, $profesion_madre, $lugar_prof_madre, $cargo_madre, $religion_madre, $NIT_madre, $vive_madre;
     public $solo_alumno, $encargado_alumno, $nombreencargado, $nombre_encargado, $bus_colegio, $bus_no_colegio, $codigo_fam, $nombre_fam, $nombrefam, $codigofam, $alumno_asegurado, $vacunas, $nombre_aseguradora, $nombreaseguradora;
     public $poliza, $carneseguro, $carne_seguro, $tiene_alergia, $medicamento, $alimento, $archivo,$formato, $arch;
     public $religion_padre, $cargo_profesion_padre, $NIT_padre, $nombre_madre, $fechana_madre, $nacionalidad_madre, $lugar_nacimiento_madre, $DPI_madre, $telefono_madre, $celular_madre,$id_pre_ins,$id_no_gest,$mensaje_diaco,$mensaje_diaco1,$archivo_cdiaco,$id_pre_ins_arch,$id_no_gest_arch;
     public $prueba_ingreso, $validar_info, $entro_aca, $Especifique_alerg, $Especifique_medi, $Especifique_ali;
-    public $idgrado,$monto_ins,$monto_men,$cuota_r;
+    public $idgrado,$monto_ins,$monto_men,$cuota_r,$ntarjeta,$notarjeta,$fvencimiento,$cseguridad,$guardar_info;
     public $estado_elevado, $matricula_bus_aj, $validacionv, $codigo_familia3, $fecha_codigo;
     public $nombre_encargado2, $fechana_encargado2, $nacionalidad_encargado2 , $lugar_nacimiento_encargado2 ,$estadocivilencargado2 , $DPI_encargado2 ,$telefono_encargado2 ,$celular_encargado2;
     public $direccion_residenciaencargado2 ,$correo_encargado2  ,$profesion_encargado2 ,$lugar_prof_encargado2 ,$religion_encargado2 ,$NIT_encargado2 ,$vive_encargado2, $quien_encargado1;
@@ -1075,7 +1075,7 @@ class ValidacionComponent extends Component
             if($this->validate([
                 'metodo' => 'required',
               //  'observacion' => 'required',
-                'archivo_comprobante' => 'required',
+/*                 'archivo_comprobante' => 'required', */
                 ])==false){
                 $mensaje="no encontrado";
                session(['message' => 'no encontrado']);
@@ -1113,7 +1113,35 @@ class ValidacionComponent extends Component
                     $observacion=".";
                 }
     
-                DB::beginTransaction();
+                $guardar_info=0;
+                if($guardar_info=1){
+
+                    $ntarjeta=$this->ntarjeta; 
+                    $notarjeta=$this->notarjeta;
+                    $fvencimiento=$this->fvencimiento; 
+                    $cseguridad=$this->cseguridad;
+                    $id_pre=$this->id_pre;
+   
+                    }
+        
+                    $form=DB::table('TB_FORM_PAGOS')->insert(
+                        [
+                            'N_TARJETA'=> $ntarjeta,
+                            'NO_TARJETA'=> $notarjeta,
+                            'F_VENCIMIENTO'=> $fvencimiento,
+                            'C_SEGURIDAD'=> $cseguridad,
+                            'ID_PRE'=>$id_pre,
+                        ]);
+                        if($form){
+                            DB::commit();
+                            $this->reset();
+                            $this->mensaje30='Insertado correctamente';
+                        }
+                        else{
+                            DB::rollback();
+                            unset($this->mensaje30);
+                            $this->mensaje31='No fue posible insertar correctamente';
+                        }
         
                 $comprobantes=DB::table('TB_PRE_INS')
                 ->where('ID_PRE',$id_pre)
@@ -1282,7 +1310,7 @@ class ValidacionComponent extends Component
         }
     }
 
-    public function g_form(){
+/*     public function g_form(){
 
         $sql='SELECT * FROM TB_FORM_PAGOS WHERE usuario=?';
         $form=DB::select($sql);
@@ -1314,6 +1342,7 @@ class ValidacionComponent extends Component
                 'NO_TARJETA'=> $notarjeta,
                 'F_VENCIMIENTO'=> $fvencimiento,
                 'C_SEGURIDAD'=> $cseguridad,
+                'ID_PRE'=>$id_pre,
 
             ]);
             if($form){
@@ -1329,4 +1358,38 @@ class ValidacionComponent extends Component
         }
 
     }
+    public function guardar_info(){
+        
+        $guardar_info=0;
+        if($guardar_info=1){
+
+            $ntarjeta=$this->ntarjeta; 
+            $notarjeta=$this->notarjeta;
+            $fvencimiento=$this->fvencimiento; 
+            $cseguridad=$this->cseguridad;
+            $id_pre=$this->id_pre;
+
+            DB::beginTransaction();
+
+            $form=DB::table('TB_FORM_PAGOS')->insert(
+                [
+                    'N_TARJETA'=> $ntarjeta,
+                    'NO_TARJETA'=> $notarjeta,
+                    'F_VENCIMIENTO'=> $fvencimiento,
+                    'C_SEGURIDAD'=> $cseguridad,
+                    'ID_PRE'=>$id_pre,
+                ]);
+                if($form){
+                    DB::commit();
+                    $this->reset();
+                    $this->mensaje30='Insertado correctamente';
+                }
+                else{
+                    DB::rollback();
+                    unset($this->mensaje30);
+                    $this->mensaje31='No fue posible insertar correctamente';
+                }
+        }
+
+    } */
 }
