@@ -25,7 +25,7 @@ class ValidacionComponent extends Component
     public $religion_padre, $cargo_profesion_padre, $NIT_padre, $nombre_madre, $fechana_madre, $nacionalidad_madre, $lugar_nacimiento_madre, $DPI_madre, $telefono_madre, $celular_madre,$id_pre_ins,$id_no_gest,$mensaje_diaco,$mensaje_diaco1,$archivo_cdiaco,$id_pre_ins_arch,$id_no_gest_arch;
     public $prueba_ingreso, $validar_info, $entro_aca, $Especifique_alerg, $Especifique_medi, $Especifique_ali;
     public $idgrado,$monto_ins,$monto_men,$cuota_r,$ntarjeta,$notarjeta,$fvencimiento,$cseguridad,$guardar_info;
-    public $estado_elevado, $matricula_bus_aj, $validacionv, $codigo_familia3, $fecha_codigo;
+    public $estado_elevado, $matricula_bus_aj, $validacionv, $codigo_familia3, $fecha_codigo, $validacionv2;
     public $nombre_encargado2, $fechana_encargado2, $nacionalidad_encargado2 , $lugar_nacimiento_encargado2 ,$estadocivilencargado2 , $DPI_encargado2 ,$telefono_encargado2 ,$celular_encargado2;
     public $direccion_residenciaencargado2 ,$correo_encargado2  ,$profesion_encargado2 ,$lugar_prof_encargado2 ,$religion_encargado2 ,$NIT_encargado2 ,$vive_encargado2, $quien_encargado1;
     public $solo_por, $Especifique_rel2, $n_encargado, $nencargado, $dpi_encar, $dpiencar, $bus_por, $nombreconductor, $nombre_conductor, $dpiconductor, $dpi_conductor, $n_conductor, $nconductor;
@@ -1288,6 +1288,51 @@ class ValidacionComponent extends Component
         $id_gest=$no;
         $sql='SELECT * FROM tb_pre_diaco WHERE ID_PRE=?';
         $estactr=DB:: select($sql, array($id_pre));
+    }
+
+    public function validar_datosF(){
+        if($this->validate([
+            'año_ingreso' => 'required',
+            'grado_primer_ingreso' => 'required',
+            'nombre_padre' => 'required',
+            'nacimiento_padre' => 'required',
+            'nacionalidad_padre' => 'required',
+            'lugar_nacimiento_padre' => 'required',
+            'DPI_padre' => 'required',
+            'celular_padre' => 'required',
+            'telefono_padre' => 'required',
+            'direccion_residencia' => 'required',
+            'correo_padre' => 'required',
+            'profesion_padre' => 'required',
+            'lugar_profesion_padre' => 'required',
+            'cargo_profesion_padre' => 'required',
+            'religion_padre' => 'required',
+            'NIT_padre' => 'required',
+            'nombre_madre' => 'required',
+            'fechana_madre' => 'required',
+            'nacionalidad_madre' => 'required',
+            'lugar_nacimiento_madre' => 'required',
+            'DPI_madre' => 'required',
+            'telefono_madre' => 'required',
+            'celular_madre' => 'required',
+            'direccion_residenciamadre'=> 'required',
+            'correo_madre'=> 'required',
+            'profesion_madre' =>'required',
+            'lugar_prof_madre' =>'required',
+            'cargo_madre' =>'required',
+            'religion_madre' =>'required',
+            'NIT_madre' =>'required',
+            
+        ])==false){
+            $error="no encontrado";
+            session(['validar'=> 1]);
+            session(['message'=>'no encontrado']);
+            return back()->withErrors(['error' => 'Validar el input vacio']);
+            
+        }
+        else{
+            $this->validacionv2=1;
+        }
     }
 
     public function validar_datos(){

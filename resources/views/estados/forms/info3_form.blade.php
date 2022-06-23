@@ -1038,6 +1038,7 @@
         </div>
       </div>
       </div>
+    </div>
    <br>
 
 <div wire:ignore.self class="accordion" id="accordiondatosmedicos">
@@ -1187,17 +1188,17 @@
                 <div class="row">
                   <div class="col-md-6">
                     <strong><label  for="Labelpoliza" class="form-label">Póliza de seguro</label></strong>
-                      <input  type="text" class="form-control"  wire:model="poliza">
+                      <input type="text" class="form-control"  wire:model="poliza">
                   </div>
                           
                   <div class="col-md-6">
                       <strong><label  for="Labelcarneseguro" class="form-label">Número del carné de seguro</label></strong>
-                        <input  type="number" class="form-control"  wire:model="carne_seguro">
+                        <input type="number" class="form-control"  wire:model="carne_seguro">
                   </div>
                 </div>
                 <div class="col-md-6">
                   <strong><label  for="Labelnombreaseguradora" class="form-label">Nombre de la aseguradora</label></strong>
-                    <input  type="text" class="form-control"  wire:model="nombre_aseguradora">
+                    <input type="text" class="form-control"  wire:model="nombre_aseguradora">
                 </div>
               </center>
                 @endif
@@ -1208,6 +1209,7 @@
   </div>
  </div>
 </div>
+
 
 
 <br>
@@ -1241,6 +1243,7 @@
             <label class="form-check-label" for="solo1">
               No
             </label>
+          </div>
           </div>
           </center>
         </div>
@@ -1290,12 +1293,12 @@
          <center>
         <div class="row">
           <div class="col-md-6">
-            <strong><label  for="Labelnombremadre" class="form-label">Nombre del encargado</label></strong>
+            <strong><label for="Labelnombremadre" class="form-label">Nombre del encargado</label></strong>
             <input  type="text" class="form-control"  wire:model="nombre_encargado">
           </div>
           
           <div class="col-md-6">
-            <strong><label  for="Labelnombremadre" class="form-label">Número del encargado</label></strong>
+            <strong><label for="Labelnombremadre" class="form-label">Número del encargado</label></strong>
             <input  type="number" class="form-control"  wire:model="n_encargado">
           </div>
         </div>
@@ -1398,7 +1401,7 @@
 </div>
 @endif
 
-@if($validacionv==2)
+@if($validacionv2==2)
 <div class="alert alert-danger d-flex align-items-center rounded-pill" role="alert">
   <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Info:"><use xlink:href="#info-fill"/></svg>
   <div>
@@ -1410,8 +1413,8 @@
     </form>
     <div class="modal-footer">
 
-      <button type="button" class="btn btn-pre2" wire:click='validar_datos()'>Validar Información</button>.
-      @if($validacionv==1)
+      <button type="button" class="btn btn-pre2" wire:click='validar_datosF()'>Validar Información</button>.
+      @if($validacionv2==1)
           @if($quien_encargado1==1)
           <button type="button" class="btn btn-pre2" wire:click='insertar_datos()' data-bs-dismiss="modal">Envíar Información1</button>.
           @elseif($quien_encargado1==2)
