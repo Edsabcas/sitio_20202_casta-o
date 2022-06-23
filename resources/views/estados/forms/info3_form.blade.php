@@ -1366,7 +1366,7 @@
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="buspor" value="2" id="buspor2" wire:click="buss_por('2')">
+                <input class="form-check-input" type="radio" name="buspor" value="2" id="buspor2" wire:click="bus_por('2')">
                 <label class="form-check-label" for="buspor1">
                   Monserrat
                 </label>
