@@ -273,7 +273,7 @@ class ValidacionComponent extends Component
         }
         else{
                 $matricula_bus_aj=$this->matricula_bus_aj;
-    }
+        }
         if($this->Especifique_medi==""){
             $this->Especifique_medi=null;  
         }
@@ -580,7 +580,38 @@ class ValidacionComponent extends Component
                 else{
                         $Especifique_ali=$this->Especifique_ali;
             }
-    
+            $solo_por=$this->solo_por;
+        if($this->n_encargado==""){
+            $this->n_encargado=null;  
+        }
+        else{
+                $n_encargado=$this->n_encargado;
+        }
+        if($this->dpi_encar==""){
+            $this->dpi_encar=null;  
+        }
+        else{
+                $dpi_encar=$this->dpi_encar;
+        }
+        $bus_por=$this->bus_por;
+        if($this->nombre_conductor==""){
+            $this->nombre_conductor=null;  
+        }
+        else{
+                $nombre_conductor=$this->nombre_conductor;
+        }
+        if($this->dpi_conductor==""){
+            $this->dpi_conductor=null;  
+        }
+        else{
+                $dpi_conductor=$this->dpi_conductor;
+        }
+        if($this->n_conductor==""){
+            $this->n_conductor=null;  
+        }
+        else{
+                $n_conductor=$this->n_conductor;
+        }
             
             DB::beginTransaction();
     
@@ -656,7 +687,13 @@ class ValidacionComponent extends Component
                 'RELIGION_ENCARGADO'=>$this->religion_madre,
                 'NIT_ENCARGADO'=>$this->NIT_madre,
                 'VIVE_CON_EL_ENCARGADO'=>$this->vive_madre,
-    
+                'RETIRO_SOLO'=>$this->solo_por,
+                'RETIRO_N_EN'=>$this->n_encargado,
+                'RETIRO_DPI_EN'=>$this->n_encargado,
+                'RETIRO_BUS_COL'=>$this->bus_por,
+                'N_CONDUCTOR_AJ'=>$this->nombre_conductor,
+                'DPI_CONDUCTOR_AJ'=>$this->dpi_conductor,
+                'NUM_CONDUCTOR_AJ'=>$this->n_conductor,
                 
                     ]
                 );
@@ -853,7 +890,38 @@ class ValidacionComponent extends Component
                 $NIT_encargado=$this->NIT_encargado;
                 $vive_encargado2=$this->vive_encargado2;
                 $Especifique_rel2=$this->Especifique_rel2;
-
+                $solo_por=$this->solo_por;
+                if($this->n_encargado==""){
+                    $this->n_encargado=null;  
+                }
+                else{
+                        $n_encargado=$this->n_encargado;
+                }
+                if($this->dpi_encar==""){
+                    $this->dpi_encar=null;  
+                }
+                else{
+                        $dpi_encar=$this->dpi_encar;
+                }
+                $bus_por=$this->bus_por;
+                if($this->nombre_conductor==""){
+                    $this->nombre_conductor=null;  
+                }
+                else{
+                        $nombre_conductor=$this->nombre_conductor;
+                }
+                if($this->dpi_conductor==""){
+                    $this->dpi_conductor=null;  
+                }
+                else{
+                        $dpi_conductor=$this->dpi_conductor;
+                }
+                if($this->n_conductor==""){
+                    $this->n_conductor=null;  
+                }
+                else{
+                        $n_conductor=$this->n_conductor;
+                }
                
                 
                 DB::beginTransaction();
@@ -930,7 +998,13 @@ class ValidacionComponent extends Component
                 'NIT_ENCARGADO'=>$this->NIT_encargado,
                 'REL_ENCARGADO'=>$this->Especifique_rel2,
                 'VIVE_CON_EL_ENCARGADO'=>$this->vive_encargado2,
-        
+                'RETIRO_SOLO'=>$this->solo_por,
+                'RETIRO_N_EN'=>$this->n_encargado,
+                'RETIRO_DPI_EN'=>$this->n_encargado,
+                'RETIRO_BUS_COL'=>$this->bus_por,
+                'N_CONDUCTOR_AJ'=>$this->nombre_conductor,
+                'DPI_CONDUCTOR_AJ'=>$this->dpi_conductor,
+                'NUM_CONDUCTOR_AJ'=>$this->n_conductor,
                     
                         ]
                     );
