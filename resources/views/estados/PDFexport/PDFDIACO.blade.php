@@ -81,7 +81,7 @@
             con número de teléfono de casa <u><strong>{{$datos[9]}}</strong></u>, oficina <u><strong>{{$datos[10]}}</strong></u>
          , celular <u><strong>{{$datos[11]}}</strong></u> y correo electrónico <u><strong>{{$datos[12]}}</strong></u>,
          declarando que la información personal proporcionada es de carácter confidencial. Los comparecientes aseguramos ser responsables de los datos de identificación anotados, estar en el libre ejercicio de nuestros 
-        derechos civiles y la calidad que se ejercita es amplia y sufieciente para la celebración del CONTRATO DE ADHESION POR PRESTACION DE SERVICIOS EDUCATIVOS, de 
+        derechos civiles y la calidad que se ejercita es amplia y suficiente para la celebración del CONTRATO DE ADHESION POR PRESTACION DE SERVICIOS EDUCATIVOS, de 
         conformidad con las siguientes cláusulas:</p>
             
         
@@ -141,7 +141,7 @@
                     exista una solución satisfactoria podrá interponer la queja correspondiente ante la Dirección de Atención al Consumidor -DIACO- quien procederá 
                     según corresponda.</li>
                 <li style="text-align: justify; font-size: 12px">E. <strong>Observancia de las leyes y reglamentos en materia educativa:</strong> El centro educativo deberá velar por el cumplimiento de las normas aplicables en materia educativa, respetando los valores
-                culturales y derechos inherentes del educando en su calidad de ser humano, a su vez proporcionar conocimientos científicos, técnicos y humanísticos a travpes de una metodología adecuada, 
+                culturales y derechos inherentes del educando en su calidad de ser humano, a su vez proporcionar conocimientos científicos, técnicos y humanísticos a través de una metodología adecuada, 
             así como evaluar con objetividad y justicia.</li>
             </ul>
         <p style="text-align: justify; font-size: 12px"><strong>QUINTA. <u>OBLIGACIONES DEL PADRE DE FAMILIA O REPRESENTANTE LEGAL DEL EDUCANDO.</u></strong> El representante del educando, en armonía con el artículo 5 de la ley de protección al consumidor y usuario, tendrá las siguientes obligaciones:
@@ -180,8 +180,8 @@
         </table>
         
 
-            <p style="text-align: justify; font-size: 12px">Cuotas autorizadas según Resoluciónnes <strong>a)</strong>No. 0204-99-E.P. con fecha 13 de marzo de 1999; <strong>b)</strong>No. 707-2001-I.C. Con
-                fecha 20 de diciembre de 2001, emitidas por la Direcciòn Departamental de Guatemala, valores que se informan a continuación:
+            <p style="text-align: justify; font-size: 12px">Cuotas autorizadas según Resoluciones <strong>a)</strong>No. 0204-99-E.P. con fecha 13 de marzo de 1999; <strong>b)</strong>No. 707-2001-I.C. Con
+                fecha 20 de diciembre de 2001, emitidas por la Dirección Departamental de Guatemala, valores que se informan a continuación:
             </p>
             <br>
 
@@ -193,7 +193,7 @@
                 <td style="font-size: 12px"> INSCRIPCIÓN <br>
                     (PAGO UNICO EN EL AÑO) </td>   
                 <td style="font-size: 12px"> COLEGIATURA MENSUAL <br>
-                    (10 Cuotas en los mese de Enero a
+                    (10 Cuotas en los meses de Enero a
                     Octubre)
                 </td>   
             </tr>
@@ -228,7 +228,7 @@
         en el presente contrato, tendrá los derechos siguientes: </p>
         <ul>
             <li style="text-align: justify; font-size: 12px">a. Exigir al representante del educando el cumplimiento de los contratos válidamente celebrados.</li>
-            <li style="text-align: justify; font-size: 12px">b. El libre acceso a los órganos administrativos y jucdiciales para la solución de conflictos que surjan por la presentación del sevicio educativo.</li>
+            <li style="text-align: justify; font-size: 12px">b. El libre acceso a los órganos administrativos y judiciales para la solución de conflictos que surjan por la presentación del sevicio educativo.</li>
             <li style="text-align: justify; font-size: 12px">c. Los demás que establecen las leyes del país.</li>
         </ul>
         <p style="text-align: justify; font-size: 12px"><u>El centro educativo deberá cumplir con lo siguiente: </u></p>
