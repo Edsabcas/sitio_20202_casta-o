@@ -23,7 +23,7 @@
         <p style="text-align: justify; font-size: 12px">En el municipio de Mixco, del departamento de Guatemala, el día <strong>{{$datos[2]}}</strong> del mes de <strong>{{$datos[1]}}</strong> 
             del año <strong>{{$datos[0]}}</strong>. NOSOTROS: Virginia Yomara Gonzalez Calderon de Siliezar, de 59
             años de edad, Casada, guatemalteca, Licenciada en Administación Educativa, de este domicilio, que me identifico 
-            con Documento Personal de Identificción, Código Único de Identificación número 2617 37260 0101 extendido por el 
+            con Documento Personal de Identificación, Código Único de Identificación número 2617 37260 0101 extendido por el 
             Registro Nacional de las Personas de la República de Guatemala, actuando en mi calidad de Propietaria del centro 
             educativo denominado COLEGIO BILINGÜE "EL CASTAÑO", ubicado en 0 Avenida "B" 1-45 Zona 4, Montserrat I, de 
             este Municipio lo que acredito con Resolución: No. 005-95-EP., de fecha 9 de enero de 1995, emitida por Direcciòn 
