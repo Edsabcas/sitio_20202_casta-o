@@ -31,7 +31,7 @@
         <p style="font-size: 15px">(DATOS DEL PADRE DE FAMILIA O REPRESENTANTE LEGAL DEL EDUCANDO)</p>
         <table align="center">
             <tr>
-                <td style="font-size: 12px"><u><Strong>{{$datos[13]}}</Strong></u></td>
+                <td style="font-size: 12px"><u><Strong>{{$datos2[0]}}</Strong></u></td>
             </tr> 
         </table> 
         <hr>
@@ -45,9 +45,9 @@
         <center>
         <table align="center">
             <tr>
-                <th style="width:50mm; height:1cm; font-size: 12px">de <u><strong>{{$datos[15]}} años</th>
-                    <th style="width:70mm; height:5mm; font-size: 12px"><u><strong>{{$datos[6]}}</strong></u></th>
-                <th style="width:50mm; height:5mm; font-size: 12px"><u><strong>{{$datos[5]}}</strong></u></th>
+                <th style="width:50mm; height:1cm; font-size: 12px">de <u><strong>{{$datos2[1]}} años</th>
+                    <th style="width:70mm; height:5mm; font-size: 12px"><u><strong>{{$datos2[3]}}</strong></u></th>
+                <th style="width:50mm; height:5mm; font-size: 12px"><u><strong>{{$datos2[2]}}</strong></u></th>
             </tr>
               
         </table> 
@@ -64,8 +64,8 @@
     
         <table align="center">
             <tr>
-                <td style="width:90mm; font-size: 12px"><u><Strong>{{$datos[20]}}</strong></u></Strong></u></td> 
-                <td style="width:90mm; font-size: 12px"><u><strong>{{$datos[7]}}</strong></strong></u></td>
+                <td style="width:90mm; font-size: 12px"><u><Strong>{{$datos2[9]}}</strong></u></Strong></u></td> 
+                <td style="width:90mm; font-size: 12px"><u><strong>{{$datos2[4]}}</strong></strong></u></td>
             </tr>
               
         </table>
@@ -77,9 +77,9 @@
                 </tr>
             </table> 
 
-            <p style="text-align: justify; font-size: 12px">con residencia en: <u><strong>{{$datos[8]}}</strong></u>
-            con número de teléfono de casa <u><strong>{{$datos[9]}}</strong></u>, oficina <u><strong>{{$datos[10]}}</strong></u>
-         , celular <u><strong>{{$datos[11]}}</strong></u> y correo electrónico <u><strong>{{$datos[12]}}</strong></u>,
+            <p style="text-align: justify; font-size: 12px">con residencia en: <u><strong>{{$datos2[7]}}</strong></u>
+            con número de teléfono de casa <u><strong>{{$datos2[5]}}</strong></u>, oficina <u><strong>{{$datos[10]}}</strong></u>
+         , celular <u><strong>{{$datos2[6]}}</strong></u> y correo electrónico <u><strong>{{$datos2[8]}}</strong></u>,
          declarando que la información personal proporcionada es de carácter confidencial. Los comparecientes aseguramos ser responsables de los datos de identificación anotados, estar en el libre ejercicio de nuestros 
         derechos civiles y la calidad que se ejercita es amplia y suficiente para la celebración del CONTRATO DE ADHESION POR PRESTACION DE SERVICIOS EDUCATIVOS, de 
         conformidad con las siguientes cláusulas:</p>
@@ -274,7 +274,7 @@
                 <tr>
                     <td><p style="font-size: 12px; width:90mm"> <strong>f)_____________________________</strong> <br> Virginia Yomara Gonzalez Calderon de Siliezar <br> <p style="font-size: 9px">Propietaria</p>
                         </p></td>
-                    <td><p style="font-size: 12px; width:90mm"> <strong>f)_____________________________ </strong> <br> {{$datos[13]}} <br> <p style="font-size: 9px">Padre de familia y/o Representante Legal del educando</p>
+                    <td><p style="font-size: 12px; width:90mm"> <strong>f)_____________________________ </strong> <br> {{$datos2[0]}} <br> <p style="font-size: 9px">Padre de familia y/o Representante Legal del educando</p>
                          </p></td>
                 </tr>
                 <tr>
