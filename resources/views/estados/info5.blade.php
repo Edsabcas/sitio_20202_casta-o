@@ -332,7 +332,7 @@
                                             <div class="card rounded shadow rounded w-80 p-3" style="border-color: #e4e4e4">
                                                 <div class="card-header" style="background-color: #a4cb29">
                                                     <br>
-                                                    <h4 style="color: #ffff"><strong>PDF DEL CONTRATO</strong></h4>
+                                                    <h4 style="color: #ffff"><strong>PDF CONTRATO DIACO</strong></h4>
                                                 </div>
                                                 <div class="card-body center">
                                                     <br>
