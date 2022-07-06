@@ -113,7 +113,7 @@
   <div wire:ignore.self class="accordion" id="accordionPanelsStayOpenExample2">
     <div style="border-radius: 60px 60px 60px 60px;" class="accordion-item">
       <h2 style="border-radius: 60px 60px 60px 60px;" class="accordion-header" id="panelsStayOpen-headingtipo">
-        @if($a!=null && $a==6)
+        @if($a!=null && $a>=5)
         <button class="accordion-button collapsed" style="background-color:#d6e7a6; border:6px solid #a4cb39; border-radius: 60px 60px 60px 60px;" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapsetipoins" aria-expanded="false" aria-controls="panelsStayOpen-collapsetipoins">
           <h4 class="font-weight-bolder">  <b>Inscripción: 
           @if($tipo_ins!=null &&  $tipo_ins==1)

@@ -255,7 +255,7 @@ class InsComponent extends Component
             $this->reset();
 
             $this->mensaje=1;
-            
+            unset($this->val);            
         }
         else{
             //$this->reset();
