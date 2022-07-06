@@ -721,7 +721,7 @@
       <div  wire:ignore.self id="panelsStayOpen-encargado" style="border-radius: 60px 60px 60px 60px;" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingOne">
         <div  wire:ignore.self class="accordion-body" style="border-radius: 60px 60px 60px 60px;">
           <div class="tab">
-            <div class="row">
+       
               <div class="row">
                   <strong><label  for="Labelnombrepadre" class="form-label">¿Quien es el encargado?</label></strong>
                   <div class="col-md-4">
@@ -748,12 +748,12 @@
                           </label>
                         </div>
                   </div>  
-              </div>
+              
               <br>
               
-          </div>
+    
           @if($quien_encargado1==3)
-            <div class="row">
+            
                 <div class="col-md-6">
                     <strong><label  for="Labelnombreencargado" class="form-label">Nombre completo</label></strong>
                     <input  type="text" class="form-control"  wire:model="nombre_encargado2">

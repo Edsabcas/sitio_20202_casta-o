@@ -161,7 +161,7 @@
                             </tr>
                             <tr>
                               <td>2do. Correo Electrónico (opcional):</td>
-                              <td><b>{{$correo_en}} </b></td>
+                              <td><b>{{$correo_en2}} </b></td>
                             </tr>
                             <tr>
                               <td>Religión:</td>

@@ -1,7 +1,7 @@
 <center>
   <section class="slider_section">
     <div id="main_slider" class="carousel slide banner-main" data-ride="carousel">
-          <img class="first-slide" src="{{ asset('images/imgadmin.png') }}" alt="First slide">
+          <img class="first-slide" src="{{ asset('images/banner-iniciopre (1).png') }}" alt="First slide">
     </div>
     <br>
     <br>
@@ -83,11 +83,10 @@
                 <h3 class="card-title" style="color:#3a3e7b;"><b>DATOS DEL ESTUDIANTE:</b></h3>
                 <p class="text-white">• Datos generales. <br>
                   • No. CUI. <br>
-                  • Código Personal.                    
-                        <a
-                        class="btn-pre text-white" style="background-color:#3a3e7b" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                  • Código Personal.
+                  <button class="btn-pre text-white" style="background-color:#3a3e7b" data-bs-toggle="modal" data-bs-target="#staticBackdrop" title="Para conocer su código personal de MINEDUC" data-toggle="popover" data-trigger="hover">
                                 ?
-                </a>
+                  </button>
                 </p>
               </div>
             </div>
@@ -104,6 +103,12 @@
 </div>
 </div>
 
+<script>
+  $(document).ready(function(){
+      $('[data-toggle="popover"]').popover();   
+  });
+  </script>
+
 @else
 <br>
 <h2 class="card-title" style="color:#3a3e7b;" data-aos="fade-up">
@@ -113,7 +118,7 @@
   <div wire:ignore.self class="accordion" id="accordionPanelsStayOpenExample2">
     <div style="border-radius: 60px 60px 60px 60px;" class="accordion-item">
       <h2 style="border-radius: 60px 60px 60px 60px;" class="accordion-header" id="panelsStayOpen-headingtipo">
-        @if($a!=null && $a==6)
+        @if($a!=null && $a>=5)
         <button class="accordion-button collapsed" style="background-color:#d6e7a6; border:6px solid #a4cb39; border-radius: 60px 60px 60px 60px;" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapsetipoins" aria-expanded="false" aria-controls="panelsStayOpen-collapsetipoins">
           <h4 class="font-weight-bolder">  <b>Inscripción: 
           @if($tipo_ins!=null &&  $tipo_ins==1)
@@ -348,8 +353,8 @@
                   <label for="inputInstitucion" style="font-size: 15px; color:#000000;">Código Personal (Mineduc):
       
                         <!-- Button trigger modal -->
-                      <a class="btn" type="button" style="background-color:#a4cb39" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                    <b>!</b>  
+          <a class="btn" class="btn-pre text-white" type="button" style="background-color:#a4cb39" data-bs-toggle="modal" data-bs-target="#staticBackdrop"  title="Para conocer su código personal de MINEDUC" data-toggle="popover" data-trigger="hover">
+                    <b>?</b>  
                       </a>
                   </label>
                   <input type='text' placeholder=""  wire:model="codigo_pe_es" class="form-control " required>
