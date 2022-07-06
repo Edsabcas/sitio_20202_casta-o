@@ -85,7 +85,7 @@
                   • No. CUI. <br>
                   • Código Personal.                    
                         <a
-                        class="btn-pre text-white" style="background-color:#3a3e7b" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        class="btn-pre text-white font-monospace" style="background-color:#3a3e7b" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                                 ?
                 </a>
                 </p>
@@ -348,8 +348,8 @@
                   <label for="inputInstitucion" style="font-size: 15px; color:#000000;">Código Personal (Mineduc):
       
                         <!-- Button trigger modal -->
-                      <a class="btn" type="button" style="background-color:#a4cb39" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                    <b>!</b>  
+                      <a class="btn font-monospace" type="button" style="background-color:#a4cb39" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    <b>?</b>  
                       </a>
                   </label>
                   <input type='text' placeholder=""  wire:model="codigo_pe_es" class="form-control " required>
