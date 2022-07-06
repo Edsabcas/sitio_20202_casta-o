@@ -207,7 +207,7 @@
                                   <div class="form-check">
                                       <input class="form-check-input" type="radio" name="estadocivilp" value="2" wire:click="estado_civil_padre('2')">
                                       <label class="form-check-label" for="estadocivilp1">
-                                        Separado(a)
+                                        Divorciado(a)
                                       </label>
                                     </div>
                               </div>
@@ -501,7 +501,7 @@
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" name="estadocivilm" value="2" wire:click="estado_civil_madre('2')">
                                 <label class="form-check-label" for="estadocivilm1">
-                                  Separado(a)
+                                  Divorciado(a)
                                 </label>
                               </div>
                         </div>
@@ -721,14 +721,14 @@
       <div  wire:ignore.self id="panelsStayOpen-encargado" style="border-radius: 60px 60px 60px 60px;" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingOne">
         <div  wire:ignore.self class="accordion-body" style="border-radius: 60px 60px 60px 60px;">
           <div class="tab">
-            <div class="row">
+       
               <div class="row">
                   <strong><label  for="Labelnombrepadre" class="form-label">¿Quien es el encargado?</label></strong>
                   <div class="col-md-4">
                       <div class="form-check">
                           <input class="form-check-input" type="radio" name="quien_encargado"  value="1" wire:click="quien_encargado('1')">
                           <label class="form-check-label" for="qencargado1">
-                            El padre
+                            Padre
                           </label>
                         </div>
                   </div>
@@ -736,7 +736,7 @@
                       <div class="form-check">
                           <input class="form-check-input" type="radio" name="quien_encargado" value="2" wire:click="quien_encargado('2')">
                           <label class="form-check-label" for="qencargado1">
-                            La madre      
+                            Madre      
                           </label>
                         </div>
                   </div>
@@ -748,12 +748,12 @@
                           </label>
                         </div>
                   </div>  
-              </div>
+              
               <br>
               
-          </div>
+    
           @if($quien_encargado1==3)
-            <div class="row">
+            
                 <div class="col-md-6">
                     <strong><label  for="Labelnombreencargado" class="form-label">Nombre completo</label></strong>
                     <input  type="text" class="form-control"  wire:model="nombre_encargado2">
@@ -830,7 +830,7 @@
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="estadocivilp" value="2"  wire:click="estado_civil_encargado('2')">
                             <label class="form-check-label" for="estadocivilp1">
-                              Separado(a)
+                              Divorciado(a)
                             </label>
                           </div>
                     </div>
@@ -947,7 +947,7 @@
                   
                   <div class="col-md-6">
                     <strong><label  for="Labelnombreencargado" class="form-label">Cargo de trabajo que ocupa</label></strong>
-                    <input  type="text" class="form-control"  wire:model="profesion_encargado2">
+                    <input  type="text" class="form-control"  wire:model="cargo_encargado2">
                   </div>
 
                   @error('lugar_prof_encargado2')
@@ -960,7 +960,7 @@
                   </div>
                   </div>
                   @enderror
-                  @error('profesion_encargado2')
+                  @error('cargo_encargado2')
                   <div class="col-md-6">
                   <div class="alert alert-danger d-flex align-items-center rounded-pill" role="alert">
                     <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
@@ -1002,7 +1002,7 @@
                 </div>
                   <center>
                     <div class="col-md-6">
-                   <strong><label  for="Labelnombreencargado" class="form-label">¿Que relacion tiene el encargado con el alumno?</label></strong>
+                   <strong><label  for="Labelnombreencargado" class="form-label">¿Que parentesco tiene con el alumno?</label></strong>
                    <input  type="text" class="form-control"  wire:model="Especifique_rel2">
                    </div>
                    </center>
@@ -1166,7 +1166,7 @@
           
     
         <div class="tab">
-          <strong><label for="exampleInputPassword1" class="form-label">¿El alumno esta asegurado?</label></strong>
+          <strong><label for="exampleInputPassword1" class="form-label">¿El alumno cuenta con segurado?</label></strong>
             <center>
               <div style="width: 12rem;">
                 <div class="form-check">

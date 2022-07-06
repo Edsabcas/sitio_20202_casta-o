@@ -28,7 +28,7 @@ class ValidacionComponent extends Component
     public $estado_elevado, $matricula_bus_aj, $validacionv, $codigo_familia3, $fecha_codigo, $validacionv2;
     public $nombre_encargado2, $fechana_encargado2, $nacionalidad_encargado2 , $lugar_nacimiento_encargado2 ,$estadocivilencargado2 , $DPI_encargado2 ,$telefono_encargado2 ,$celular_encargado2;
     public $direccion_residenciaencargado2 ,$correo_encargado2  ,$profesion_encargado2 ,$lugar_prof_encargado2 ,$religion_encargado2 ,$NIT_encargado2 ,$vive_encargado2, $quien_encargado1;
-    public $solo_por, $Especifique_rel2, $n_encargado, $nencargado, $dpi_encar, $dpiencar, $bus_por, $nombreconductor, $nombre_conductor, $dpiconductor, $dpi_conductor, $n_conductor, $nconductor;
+    public $solo_por, $Especifique_rel2, $n_encargado, $nencargado, $dpi_encar, $dpiencar, $bus_por, $nombreconductor, $nombre_conductor, $dpiconductor, $dpi_conductor, $n_conductor, $nconductor, $cargo_encargado2;
 
     public function render()
     {
@@ -881,6 +881,7 @@ class ValidacionComponent extends Component
                 $celular_encargado2=$this->celular_encargado2;
                 $direccion_residenciaencargado2=$this->direccion_residenciaencargado2;
                 $correo_encargado2=$this->correo_encargado2;
+                $cargo_encargado2=$this->cargo_encargado2;
                 $profesion_encargado2=$this->profesion_encargado2;
                 $lugar_prof_encargado2=$this->lugar_prof_encargado2;
                 $religion_encargado2=$this->religion_encargado2;
@@ -979,6 +980,7 @@ class ValidacionComponent extends Component
                         'SALIDA_BUS_COLEGIO'=>$this->bus_colegio,
                         'SALIDA_BUS_AJENO'=>$this->bus_no_colegio,
                         'Matricula_bus_aj'=>$this->matricula_bus_aj,
+                        'ENCARGADO'=> $this->quien_encargado1,
                 'NOMB_ENCARGADO'=>$this->nombre_encargado2,
                 'FECHA_N_ENCARGADO'=>$this->fechana_encargado2,
                 'NACIONALIDAD_ENCARGADO'=>$this->nacionalidad_encargado2,
@@ -989,7 +991,8 @@ class ValidacionComponent extends Component
                 'CELULAR_ENCARGADO'=>$this->celular_encargado2,
                 'DIRECCION_RESIDENCIA_ENCARGADO'=>$this->direccion_residenciaencargado2,
                 'CORREO_ENCARGADO'=>$this->correo_encargado2,
-                'CARGO_ENCARGADO'=>$this->profesion_encargado2,
+                'PROFECION_ENCARGADO'=>$this->profesion_encargado2,
+                'CARGO_ENCARGADO'=>$this->cargo_encargado2,
                 'LUGAR_TRABAJO_E'=>$this->lugar_prof_encargado2,
                 'RELIGION_ENCARGADO'=>$this->religion_encargado2,
                 'NIT_ENCARGADO'=>$this->NIT_encargado2,
@@ -1082,7 +1085,7 @@ class ValidacionComponent extends Component
                 return  back()->withErrors(['mensaje'=>'Validar el input vacio']);
             }else{
                 
-                $ruta="C:/xampp/htdocs/repo_clon_casys/casys-pro-2.0/public/imagen/comprobantes2022/";
+                $ruta="C:/xampp/htdocs/repo_casys_2022/casys-pro-2.0/public/imagen/comprobantes2022/";
                 $archivo_comprobante="";
                 if($this->archivo_comprobante!=null){
                     if($this->archivo_comprobante->getClientOriginalExtension()=="jpg" or $this->archivo_comprobante->getClientOriginalExtension()=="png" or $this->archivo_comprobante->getClientOriginalExtension()=="jpeg" or $this->archivo_comprobante->getClientOriginalExtension()=="pdf"){

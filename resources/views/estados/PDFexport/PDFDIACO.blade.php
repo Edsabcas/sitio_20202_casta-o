@@ -31,7 +31,7 @@
         <p style="font-size: 15px">(DATOS DEL PADRE DE FAMILIA O REPRESENTANTE LEGAL DEL EDUCANDO)</p>
         <table align="center">
             <tr>
-                <td style="font-size: 12px"><u><Strong>{{$datos2[0]}}</Strong></u></td>
+                <td style="font-size: 12px"><Strong>{{$datos2[0]}}</Strong></td>
             </tr> 
         </table> 
         <hr>
@@ -45,9 +45,9 @@
         <center>
         <table align="center">
             <tr>
-                <th style="width:50mm; height:1cm; font-size: 12px">de <u><strong>{{$datos2[1]}} años</th>
-                    <th style="width:70mm; height:5mm; font-size: 12px"><u><strong>{{$datos2[3]}}</strong></u></th>
-                <th style="width:50mm; height:5mm; font-size: 12px"><u><strong>{{$datos2[2]}}</strong></u></th>
+                <th style="width:50mm; height:1cm; font-size: 12px">de <strong>{{$datos2[1]}} años</th>
+                    <th style="width:70mm; height:5mm; font-size: 12px"><strong>{{$datos2[3]}}</strong></th>
+                <th style="width:50mm; height:5mm; font-size: 12px"><strong>{{$datos2[2]}}</strong></th>
             </tr>
               
         </table> 
@@ -64,8 +64,8 @@
     
         <table align="center">
             <tr>
-                <td style="width:90mm; font-size: 12px"><u><Strong>{{$datos2[9]}}</strong></u></Strong></u></td> 
-                <td style="width:90mm; font-size: 12px"><u><strong>{{$datos2[4]}}</strong></strong></u></td>
+                <td style="width:90mm; font-size: 12px"><Strong>{{$datos2[9]}}</strong></Strong></td> 
+                <td style="width:90mm; font-size: 12px"><strong>{{$datos2[4]}}</strong></strong></td>
             </tr>
               
         </table>
@@ -88,7 +88,7 @@
         <strong><p style="font-size: 12px">PRIMERA. <u>INFORMACION DEL EDUCANDO Y SERVICIO EDUCATIVO CONTRATADO</u></p></strong>
         <table align="center">
             <tr>
-                <td style="font-size: 12px"><u><Strong><strong>{{$datos[14]}}</Strong></u></td> 
+                <td style="font-size: 12px"><Strong><strong>{{$datos[14]}}</Strong></td> 
             </tr>
              
         </table>
