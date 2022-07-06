@@ -83,9 +83,8 @@
                 <h3 class="card-title" style="color:#3a3e7b;"><b>DATOS DEL ESTUDIANTE:</b></h3>
                 <p class="text-white">• Datos generales. <br>
                   • No. CUI. <br>
-                  • Código Personal.                    
-                        <a
-                        class="btn-pre text-white" style="background-color:#3a3e7b" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                  • Código Personal.
+                  <a class="btn-pre text-white" style="background-color:#3a3e7b" data-bs-toggle="modal" data-bs-target="#staticBackdrop" title="Para conocer su código personal de MINEDUC" data-toggle="popover" data-trigger="hover">
                                 ?
                 </a>
                 </p>
@@ -103,6 +102,12 @@
 </div>
 </div>
 </div>
+
+<script>
+  $(document).ready(function(){
+      $('[data-toggle="popover"]').popover();   
+  });
+  </script>
 
 @else
 <br>
@@ -348,7 +353,7 @@
                   <label for="inputInstitucion" style="font-size: 15px; color:#000000;">Código Personal (Mineduc):
       
                         <!-- Button trigger modal -->
-                      <a class="btn" type="button" style="background-color:#a4cb39" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+          <a class="btn" class="btn-pre text-white" type="button" style="background-color:#a4cb39" data-bs-toggle="modal" data-bs-target="#staticBackdrop"  title="Para conocer su código personal de MINEDUC" data-toggle="popover" data-trigger="hover">
                     <b>!</b>  
                       </a>
                   </label>
