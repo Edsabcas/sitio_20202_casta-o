@@ -1,7 +1,7 @@
 <center>
   <section class="slider_section">
     <div id="main_slider" class="carousel slide banner-main" data-ride="carousel">
-          <img class="first-slide" src="{{ asset('images/imgadmin.png') }}" alt="First slide">
+          <img class="first-slide" src="{{ asset('images/banner-iniciopre (1).png') }}" alt="First slide">
     </div>
     <br>
     <br>
@@ -84,9 +84,9 @@
                 <p class="text-white">• Datos generales. <br>
                   • No. CUI. <br>
                   • Código Personal.
-                  <a class="btn-pre text-white" style="background-color:#3a3e7b" data-bs-toggle="modal" data-bs-target="#staticBackdrop" title="Para conocer su código personal de MINEDUC" data-toggle="popover" data-trigger="hover">
+                  <button class="btn-pre text-white" style="background-color:#3a3e7b" data-bs-toggle="modal" data-bs-target="#staticBackdrop" title="Para conocer su código personal de MINEDUC" data-toggle="popover" data-trigger="hover">
                                 ?
-                </a>
+                  </button>
                 </p>
               </div>
             </div>
