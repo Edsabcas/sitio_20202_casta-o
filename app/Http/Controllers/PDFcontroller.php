@@ -178,6 +178,7 @@ class PDFcontroller extends Controller
 
             [
 
+             'ID_PRE'=>$id_pre,
              'NO_CORRELATIVO_P1'=>$datos_padre14,
              'NO_CORRELATIVO_P2'=>$datos_padre15,
              'ESTADO' => 0,
