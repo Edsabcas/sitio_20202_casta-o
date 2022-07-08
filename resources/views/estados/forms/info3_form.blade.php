@@ -29,6 +29,7 @@
                 <div  wire:ignore.self id="panelsStayOpen-datosvarios" style="border-radius: 60px 60px 60px 60px;" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingOne">
                   <div  wire:ignore.self class="accordion-body" style="border-radius: 60px 60px 60px 60px;">
                     <div class="tab">
+                      <div class="row">
                       <strong><label for="exampleInputPassword1" class="form-label">¿Tiene hermanos en colegio?</label></strong>
                       <center>
                       <div style="width: 12rem;">
@@ -46,6 +47,7 @@
                         </div>
                       </div>
                   </center>
+                </div>
                         @if($confi==1)
                       @error('confirmar_hermano') 
                       <div class="col-md-6">
@@ -192,18 +194,19 @@
                             </div>
                             @enderror
                       </div>
-                      <div class="row">
+                      <div class="container">
+                      <div class="row align-items-center">
                           <div class="row">
-                              <strong><label  for="Labelnombrepadre" class="form-label">Estado civil</label></strong>
-                              <div class="col-md-4">
+                              <strong><label  for="Labelnombrepadre" class="form-label">Estado civil</label></strong> 
+                              <div class="col align-self-center">
                                   <div class="form-check">
                                       <input class="form-check-input" type="radio" name="estadocivilp" value="1" wire:click="estado_civil_padre('1')">
                                       <label class="form-check-label" for="estadocivilp1">
                                         Casado(a)
                                       </label>
-                                    </div>
+                                    </div> 
                               </div>
-                              <div class="col-md-4">
+                              <div class="col align-self-center">
                                   <div class="form-check">
                                       <input class="form-check-input" type="radio" name="estadocivilp" value="2" wire:click="estado_civil_padre('2')">
                                       <label class="form-check-label" for="estadocivilp1">
@@ -211,7 +214,7 @@
                                       </label>
                                     </div>
                               </div>
-                              <div class="col-md-4">
+                              <div class="col align-self-center">
                                   <div class="form-check">
                                       <input class="form-check-input" type="radio" name="estadocivilp"  value="3" wire:click="estado_civil_padre('3')">
                                       <label class="form-check-label" for="estadocivilp1">
@@ -219,9 +222,11 @@
                                       </label>
                                     </div>
                               </div>  
+                            
                           </div>
                           <br>
-                          
+                        
+                      </div>
                       </div>
                       <br>
                       <div class="row">
@@ -486,10 +491,11 @@
                   </div>
                   </div>
                   @enderror
-                  <div class="row">
+                  <div class="container">
+                  <div class="row align-items-center">
                     <div class="row">
                         <strong><label  for="Labelnombrepadre" class="form-label">Estado civil</label></strong>
-                        <div class="col-md-4">
+                        <div class="col align-self-center">
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" name="estadocivilm"  value="1" wire:click="estado_civil_madre('1')">
                                 <label class="form-check-label" for="estadocivilm1">
@@ -497,7 +503,7 @@
                                 </label>
                               </div>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col align-self-center">
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" name="estadocivilm" value="2" wire:click="estado_civil_madre('2')">
                                 <label class="form-check-label" for="estadocivilm1">
@@ -505,7 +511,7 @@
                                 </label>
                               </div>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col align-self-center" >
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" name="estadocivilm" value="3" wire:click="estado_civil_madre('3')">
                                 <label class="form-check-label" for="estadocivilm1">
@@ -517,6 +523,7 @@
                     <br>
                     
                 </div>
+              </div>
                 <br>
                 <br>
                 <div class="col-md-6">
@@ -652,7 +659,7 @@
                 </div>
                 
                 <div class="col-md-6">
-                  <strong><label  for="Labelnombremadre" class="form-label">NIT (no utilice gion)<label></strong>
+                  <strong><label  for="Labelnombremadre" class="form-label">NIT (no utilice guion)<label></strong>
                   <input  type="number" class="form-control"  wire:model="NIT_madre">
                 </div>
                 @error('religion_madre')
@@ -815,10 +822,10 @@
                   </div>
                   @enderror
             </div>
-            <div class="row">
+            <div class="row align-items-center">
                 <div class="row">
                     <strong><label  for="Labelnombreencargado" class="form-label">Estado civil</label></strong>
-                    <div class="col-md-4">
+                    <div class="col align-self-center">
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="estadocivilp" value="1" wire:click="estado_civil_encargado('1')">
                             <label class="form-check-label" for="estadocivilp1">
@@ -826,7 +833,7 @@
                             </label>
                           </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col align-self-center">
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="estadocivilp" value="2"  wire:click="estado_civil_encargado('2')">
                             <label class="form-check-label" for="estadocivilp1">
@@ -834,7 +841,7 @@
                             </label>
                           </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col align-self-center">
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="estadocivilp" value="3" wire:click="estado_civil_encargado('3')">
                             <label class="form-check-label" for="estadocivilp1">
