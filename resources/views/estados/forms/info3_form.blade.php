@@ -199,7 +199,7 @@
                           <div class="row">
                               <strong><label  for="Labelnombrepadre" class="form-label">Estado civil</label></strong> 
                               <div class="col align-self-center">
-                                  <div class="form-check">
+                                  <div class="form-check form-check-inline">
                                       <input class="form-check-input" type="radio" name="estadocivilp" value="1" wire:click="estado_civil_padre('1')">
                                       <label class="form-check-label" for="estadocivilp1">
                                         Casado(a)
@@ -207,7 +207,7 @@
                                     </div> 
                               </div>
                               <div class="col align-self-center">
-                                  <div class="form-check">
+                                  <div class="form-check form-check-inline">
                                       <input class="form-check-input" type="radio" name="estadocivilp" value="2" wire:click="estado_civil_padre('2')">
                                       <label class="form-check-label" for="estadocivilp1">
                                         Divorciado(a)
@@ -215,7 +215,7 @@
                                     </div>
                               </div>
                               <div class="col align-self-center">
-                                  <div class="form-check">
+                                  <div class="form-check form-check-inline">
                                       <input class="form-check-input" type="radio" name="estadocivilp"  value="3" wire:click="estado_civil_padre('3')">
                                       <label class="form-check-label" for="estadocivilp1">
                                         Soltero(a)
@@ -496,7 +496,7 @@
                     <div class="row">
                         <strong><label  for="Labelnombrepadre" class="form-label">Estado civil</label></strong>
                         <div class="col align-self-center">
-                            <div class="form-check">
+                            <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="radio" name="estadocivilm"  value="1" wire:click="estado_civil_madre('1')">
                                 <label class="form-check-label" for="estadocivilm1">
                                   Casado(a)
@@ -504,7 +504,7 @@
                               </div>
                         </div>
                         <div class="col align-self-center">
-                            <div class="form-check">
+                            <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="radio" name="estadocivilm" value="2" wire:click="estado_civil_madre('2')">
                                 <label class="form-check-label" for="estadocivilm1">
                                   Divorciado(a)
@@ -512,7 +512,7 @@
                               </div>
                         </div>
                         <div class="col align-self-center" >
-                            <div class="form-check">
+                            <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="radio" name="estadocivilm" value="3" wire:click="estado_civil_madre('3')">
                                 <label class="form-check-label" for="estadocivilm1">
                                   Soltero(a)
@@ -732,7 +732,7 @@
               <div class="row">
                   <strong><label  for="Labelnombrepadre" class="form-label">¿Quien es el encargado?</label></strong>
                   <div class="col-md-4">
-                      <div class="form-check">
+                      <div class="form-check form-check-inline">
                           <input class="form-check-input" type="radio" name="quien_encargado"  value="1" wire:click="quien_encargado('1')">
                           <label class="form-check-label" for="qencargado1">
                             Padre
@@ -740,7 +740,7 @@
                         </div>
                   </div>
                   <div class="col-md-4">
-                      <div class="form-check">
+                      <div class="form-check form-check-inline">
                           <input class="form-check-input" type="radio" name="quien_encargado" value="2" wire:click="quien_encargado('2')">
                           <label class="form-check-label" for="qencargado1">
                             Madre      
@@ -748,7 +748,7 @@
                         </div>
                   </div>
                   <div class="col-md-4">
-                      <div class="form-check">
+                      <div class="form-check form-check-inline">
                           <input class="form-check-input" type="radio" name="quien_encargado"  value="3" wire:click="quien_encargado('3')">
                           <label class="form-check-label" for="qencargado1">
                             Otro encargado
@@ -826,7 +826,7 @@
                 <div class="row">
                     <strong><label  for="Labelnombreencargado" class="form-label">Estado civil</label></strong>
                     <div class="col align-self-center">
-                        <div class="form-check">
+                        <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="estadocivilp" value="1" wire:click="estado_civil_encargado('1')">
                             <label class="form-check-label" for="estadocivilp1">
                               Casado(a)
@@ -834,7 +834,7 @@
                           </div>
                     </div>
                     <div class="col align-self-center">
-                        <div class="form-check">
+                        <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="estadocivilp" value="2"  wire:click="estado_civil_encargado('2')">
                             <label class="form-check-label" for="estadocivilp1">
                               Divorciado(a)
@@ -842,7 +842,7 @@
                           </div>
                     </div>
                     <div class="col align-self-center">
-                        <div class="form-check">
+                        <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="estadocivilp" value="3" wire:click="estado_civil_encargado('3')">
                             <label class="form-check-label" for="estadocivilp1">
                               Soltero(a)
