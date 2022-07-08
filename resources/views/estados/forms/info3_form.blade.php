@@ -33,13 +33,13 @@
                       <strong><label for="exampleInputPassword1" class="form-label">¿Tiene hermanos en colegio?</label></strong>
                       <center>
                       <div style="width: 12rem;">
-                      <div class="form-check">
+                      <div class="form-check form-check-inline">
                           <input class="form-check-input" type="radio" name="hermano" value="1" id="hermano1" wire:click="confirmar_hermano('1')">
                           <label class="form-check-label" for="hermano1">
                             Si
                           </label>
                         </div>
-                        <div class="form-check">
+                        <div class="form-check form-check-inline">
                           <input class="form-check-input" type="radio" name="hermano" value="0" id="hermano2" wire:click="confirmar_hermano('0')">
                           <label class="form-check-label" for="hermano1">
                             No
@@ -388,7 +388,7 @@
                                   <center>
                                   <div style="width: 12rem;">
                                   <div class="col-md-7">
-                                      <div class="form-check">
+                                      <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" name="vivepadre" value="1" wire:click="confirmar_vive_padre('1')">
                                         <label class="form-check-label" for="vivepadre1">
                                             Si
@@ -396,7 +396,7 @@
                                         </div>
                                   </div>
                                   <div class="col-md-7">
-                                      <div class="form-check">
+                                      <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" name="vivepadre" value="2"  wire:click="confirmar_vive_padre('2')">
                                         <label class="form-check-label" for="vivepadre1">
                                             No
@@ -689,7 +689,7 @@
                       <center>
                       <div style="width: 12rem;">
                       <div class="col-md-7">
-                          <div class="form-check">
+                          <div class="form-check form-check-inline">
                               <input class="form-check-input" type="radio" name="vivemadre" value="1"  wire:click="vive_con_la_madre('1')">
                               <label class="form-check-label" for="vivemadre1">
                                 Si
@@ -697,7 +697,7 @@
                             </div>
                       </div>
                       <div class="col-md-7">
-                          <div class="form-check">
+                          <div class="form-check form-check-inline">
                               <input class="form-check-input" type="radio" name="vivemadre" value="2"  wire:click="vive_con_la_madre('2')">
                               <label class="form-check-label" for="vivemadre1">
                                 No
@@ -1019,7 +1019,7 @@
                       <center>
                         <div style="width: 12rem;">
                       <div class="col-md-7">
-                          <div class="form-check">
+                          <div class="form-check form-check-inline">
                               <input class="form-check-input" type="radio" name="vive_con_el_encargado"  wire:click="vive_con_el_encargado('1')">
                               <label class="form-check-label" for="viveen1">
                                 Si
@@ -1027,7 +1027,7 @@
                             </div>
                       </div>
                       <div class="col-md-7">
-                          <div class="form-check">
+                          <div class="form-check form-check-inline">
                               <input class="form-check-input" type="radio" name="viveen"  wire:click="vive_con_el_encargado('2')">
                               <label class="form-check-label" for="viveen1">
                                 No
@@ -1065,13 +1065,13 @@
                 <strong><label for="exampleInputPassword1" class="form-label">¿El alumno tiene alguna enfermedad o alergia?</label></strong>
                 <center>
                 <div style="width: 12rem;">
-                <div class="form-check">
+                <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="alergia" value="1" id="alergia1" wire:click="tiene_alergia('1')">
                     <label class="form-check-label" for="alergia1">
                       Si
                     </label>
                 </div>
-                  <div class="form-check">
+                  <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="alergia" value="2" id="alergia2" wire:click="tiene_alergia('0')">
                     <label class="form-check-label" for="alergia1">
                       No
@@ -1096,13 +1096,13 @@
             <strong><label for="exampleInputPassword1" class="form-label">¿El alumno es alérgico a un medicamento?</label></strong>
             <center>
             <div style="width: 12rem;">
-            <div class="form-check">
+            <div class="form-check form-check-inline">
                 <input class="form-check-input" type="radio" name="medicamento" value="1" id="medicamento1" wire:click="medicamento('1')">
                 <label class="form-check-label" for="medicamento1">
                   Si
                 </label>
             </div>
-              <div class="form-check">
+              <div class="form-check form-check-inline">
                 <input class="form-check-input" type="radio" name="medicamento" value="2" id="medicamento2" wire:click="medicamento('0')">
                 <label class="form-check-label" for="medicamento1">
                   No
@@ -1126,13 +1126,13 @@
         <strong><label for="exampleInputPassword1" class="form-label">¿El alumno es alérgico a un alimento?</label></strong>
         <center>
         <div style="width: 12rem;">
-        <div class="form-check">
+        <div class="form-check form-check-inline">
             <input class="form-check-input" type="radio" name="alimento" value="1" id="alimento1" wire:click="alimento('1')">
             <label class="form-check-label" for="alimento1">
               Si
             </label>
         </div>
-          <div class="form-check">
+          <div class="form-check form-check-inline">
             <input class="form-check-input" type="radio" name="alimento" value="2" id="alimento2" wire:click="alimento('0')">
             <label class="form-check-label" for="alimento1">
               No
@@ -1155,13 +1155,13 @@
           <strong><label for="exampleInputPassword1" class="form-label">¿El alumno tiene todas las vacunas?</label></strong>
             <center>
               <div style="width: 12rem;">
-                <div class="form-check">
+                <div class="form-check form-check-inline">
                   <input class="form-check-input" type="radio" name="vacunas" value="1" id="vacunas1" wire:click="vacunas('1')">
                     <label class="form-check-label" for="vacunas1">
                       Si
                     </label>
                 </div>
-                <div class="form-check">
+                <div class="form-check form-check-inline">
                   <input class="form-check-input" type="radio" name="vacunas" value="2" id="vacunas2" wire:click="vacunas('0')">
                     <label class="form-check-label" for="vacunas1">
                       No
@@ -1176,13 +1176,13 @@
           <strong><label for="exampleInputPassword1" class="form-label">¿El alumno cuenta con segurado?</label></strong>
             <center>
               <div style="width: 12rem;">
-                <div class="form-check">
+                <div class="form-check form-check-inline">
                   <input class="form-check-input" type="radio" name="alumnoasegurado" value="1" id="alumnoasegurado1" wire:click="alumno_asegurado('1')">
                     <label class="form-check-label" for="alumnoasegurado1">
                       Si
                     </label>
                 </div>
-              <div class="form-check">
+              <div class="form-check form-check-inline">
                 <input class="form-check-input" type="radio" name="alumnoasegurado"  value="2" id="alumnoasegurado2" wire:click="alumno_asegurado('0')">
                   <label class="form-check-label" for="alumnoasegurado1">
                     No
@@ -1239,13 +1239,13 @@
             <strong><label for="exampleInputPassword1" class="form-label">¿El alumno se retira solo?</label></strong>
               <center>
           <div style="width: 12rem;">
-          <div class="form-check">
+          <div class="form-check form-check-inline">
             <input class="form-check-input" type="radio" name="solo" id="solo1" wire:click="solo_alumno('1')">
               <label class="form-check-label" for="solo1">
                Si
               </label>
           </div>
-          <div class="form-check">
+          <div class="form-check form-check-inline">
           <input class="form-check-input" type="radio" name="solo" id="solo2" wire:click="solo_alumno('2')">
             <label class="form-check-label" for="solo1">
               No
@@ -1260,13 +1260,13 @@
             <strong><label for="exampleInputPassword1" class="form-label">Se retira por:</label></strong>
             <center>
             <div style="width: 12rem;">
-            <div class="form-check">
+            <div class="form-check form-check-inline">
                 <input class="form-check-input" type="radio" name="retirapor" value="1" id="retirapor1" wire:click="solo_por('1')">
                 <label class="form-check-label" for="retirapor1">
                   Florida
                 </label>
               </div>
-              <div class="form-check">
+              <div class="form-check form-check-inline">
                 <input class="form-check-input" type="radio" name="retirapor" value="2" id="retirapor2" wire:click="solo_por('2')">
                 <label class="form-check-label" for="retirapor1">
                   Monserrat
@@ -1282,13 +1282,13 @@
             <strong><label for="exampleInputPassword1" class="form-label">¿El alumno se retira con un encargado?</label></strong>
             <center>
             <div style="width: 12rem;">
-            <div class="form-check">
+            <div class="form-check form-check-inline">
                 <input class="form-check-input" type="radio" name="encargado" id="encargado1" wire:click="encargado_alumno('1')">
                 <label class="form-check-label" for="encargado1">
                   Si
                 </label>
               </div>
-              <div class="form-check">
+              <div class="form-check form-check-inline">
                 <input class="form-check-input" type="radio" name="encargado" id="encargado2" wire:click="encargado_alumno('2')">
                 <label class="form-check-label" for="encargado1">
                   No
@@ -1325,13 +1325,13 @@
           <strong><label for="exampleInputPassword1" class="form-label">¿El alumno se retira en bus del colegio?</label></strong>
           <center>
           <div style="width: 12rem;">
-          <div class="form-check">
+          <div class="form-check form-check-inline">
               <input class="form-check-input" type="radio" name="buscolegio" id="buscolegio1" wire:click="bus_colegio('1')">
               <label class="form-check-label" for="buscolegio1">
                 Si
               </label>
             </div>
-            <div class="form-check">
+            <div class="form-check form-check-inline">
               <input class="form-check-input" type="radio" name="buscolegio" id="buscolegio2" wire:click="bus_colegio('2')">
               <label class="form-check-label" for="buscolegio1">
                 No
@@ -1346,13 +1346,13 @@
             <strong><label for="exampleInputPassword1" class="form-label">Se retira por:</label></strong>
             <center>
             <div style="width: 12rem;">
-            <div class="form-check">
+            <div class="form-check form-check-inline">
                 <input class="form-check-input" type="radio" name="buspor" value="1" id="buspor1" wire:click="bus_por('1')">
                 <label class="form-check-label" for="buspor1">
                   Florida
                 </label>
               </div>
-              <div class="form-check">
+              <div class="form-check form-check-inline">
                 <input class="form-check-input" type="radio" name="buspor" value="2" id="buspor2" wire:click="bus_por('2')">
                 <label class="form-check-label" for="buspor1">
                   Monserrat
