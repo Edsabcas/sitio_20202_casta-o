@@ -58,7 +58,7 @@ class PDFcontroller extends Controller
                     }
                 }  
                 //otra correlativa
-                if($prein->NO_CORRELATIVO_P2==null){
+                if($prein->NO_CORRELATIVO_P2==null or $prein->NO_CORRELATIVO_P2==""){
                     $correlativo_valor=DB::table('TB_PRE_INS')
 
                ->where('ID_PRE', $id_pre)
@@ -172,6 +172,28 @@ class PDFcontroller extends Controller
                 $dato_encargado10 = $preee->FECHA_N_ENCARGADO;
 
             }
+        }
+
+        $correlativos_tabla=DB::table('CORRELATIVOS')->insert(
+
+            [
+
+             'ID_PRE'=>$id_pre,
+             'NO_CORRELATIVO_P1'=>$datos_padre14,
+             'NO_CORRELATIVO_P2'=>$datos_padre15,
+             'ESTADO' => 0,
+             
+
+             
+
+            ]);
+        if($correlativos_tabla){
+            $mensaje="Guardado correctamente";
+            
+
+        }
+        else{
+            $mensaje2="No se guardó correctamente";
         }
         
                 
