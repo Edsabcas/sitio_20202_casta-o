@@ -10,7 +10,6 @@
   </section>
 </center>
 
-<h4>{{$val}} a</h4>
 
 <div class="container col-12">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -48,176 +47,180 @@
 
 <div class="container">
 <div class="row">
-@if($val==null)
+  @if($val==null)
 
-<div class="col-md-25 offset-md-3">
-  <div class="col-md-6 col-sm-10 card text-center" style="background-color:#a4cb39">
-    <br>
-    <div class="text-center">
-      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="white" class="bi bi-exclamation-triangle-fill" viewBox="0 0 16 16">
-        <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/> 
-      </svg>
-      <div class="content">
-        <h2 class="category text-center text-white"><b>¡IMPORTANTE!</b></h2>
-        <h4 class="description py-3  font-size: 35px" style="color:white"> Toma en cuenta que debes tener los siguientes datos para iniciar tu proceso de pre-inscripción:</h4>
-        
-        <div class="row mx-auto justify-content-evenly">
-          <div class="col-sm-6">
-            <div class="card" style="border-color: #ffff; outline-color: transparent; background-color:transparent">
-              <div class="card-body">
-                <h3 class="card-title" style="color:#3a3e7b;"><b>DATOS DEL ENCARGADO:</b></h3>
-                <p class="card-text text-white">• DPI. <br>
-                  • Correo electrónico. <br>
-                  • No. de teléfono.</p>
+  <div class="col-md-25 offset-md-3">
+    <div class="col-md-6 col-sm-10 card text-center" style="background-color:#a4cb39">
+      <br>
+      <div class="text-center">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="white" class="bi bi-exclamation-triangle-fill" viewBox="0 0 16 16">
+          <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/> 
+        </svg>
+        <div class="content">
+          <h2 class="category text-center text-white"><b>¡IMPORTANTE!</b></h2>
+          <h4 class="description py-3  font-size: 35px" style="color:white"> Toma en cuenta que debes tener los siguientes datos para iniciar tu proceso de pre-inscripción:</h4>
+          
+          <div class="row mx-auto justify-content-evenly">
+            <div class="col-sm-6">
+              <div class="card" style="border-color: #ffff; outline-color: transparent; background-color:transparent">
+                <div class="card-body">
+                  <h3 class="card-title" style="color:#3a3e7b;"><b>DATOS DEL ENCARGADO:</b></h3>
+                  <p class="card-text text-white">• DPI. <br>
+                    • Correo electrónico. <br>
+                    • No. de teléfono.</p>
+                </div>
+              </div>
+            </div>
+            <script>
+                  var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+                  var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                    return new bootstrap.Tooltip(tooltipTriggerEl)
+                  })
+              </script>
+              
+            <div class="col-sm-6">
+              <div class="card" style="border-color: #ffff; outline-color: transparent; background-color:transparent">
+                <div class="card-body">
+                  <h3 class="card-title" style="color:#3a3e7b;"><b>DATOS DEL ESTUDIANTE:</b></h3>
+                  <p class="text-white">• Datos generales. <br>
+                    • No. CUI. <br>
+                    • Código Personal.<u>(MINEDUC)</u></a>
+                    <div class="alert alert-primary" role="alert">
+                      A simple primary alert—check it out!
+                    </div>
+                    <button class="btn-pre text-white" style="background-color:#3a3e7b" data-bs-toggle="modal" data-bs-target="#staticBackdrop" title="Para conocer su código personal de MINEDUC" data-toggle="popover" data-trigger="hover">
+                                  ?
+                    </button>
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-          <script>
-                var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-                var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-                  return new bootstrap.Tooltip(tooltipTriggerEl)
-                })
-            </script>
-            
-          <div class="col-sm-6">
-            <div class="card" style="border-color: #ffff; outline-color: transparent; background-color:transparent">
-              <div class="card-body">
-                <h3 class="card-title" style="color:#3a3e7b;"><b>DATOS DEL ESTUDIANTE:</b></h3>
-                <p class="text-white">• Datos generales. <br>
-                  • No. CUI. <br>
-                  • Código Personal.<u>(MINEDUC)</u></a>
-                  <div class="alert alert-primary" role="alert">
-                    A simple primary alert—check it out!
-                  </div>
-                  <button class="btn-pre text-white" style="background-color:#3a3e7b" data-bs-toggle="modal" data-bs-target="#staticBackdrop" title="Para conocer su código personal de MINEDUC" data-toggle="popover" data-trigger="hover">
-                                ?
-                  </button>
-                </p>
-              </div>
-            </div>
-          </div>
+      <div class="footer bg-transparent border-transparent">
+        <div class="d-grid gap-3 col-8 mx-auto">
+          <button class="btn btn-pre text-white" type="button" wire:click="va1l()">Pre-Inscribir</button>
         </div>
-    <div class="footer bg-transparent border-transparent">
-      <div class="d-grid gap-3 col-8 mx-auto">
-        <button class="btn btn-pre text-white" type="button" wire:click="va1l()">Pre-Inscribir</button>
       </div>
+      <br>
     </div>
-    <br>
   </div>
-</div>
-</div>
-</div>
+  </div>
+  </div>
+  
+  <script>
+    $(document).ready(function(){
+        $('[data-toggle="popover"]').popover();   
+    });
+    </script>
+  
+  
+  <br>
+  <h2 class="card-title" style="color:#3a3e7b;" data-aos="fade-up">
+    Ingrese la siguiente información importante para iniciar su proceso de inscripción</h2>
 
-<script>
-  $(document).ready(function(){
-      $('[data-toggle="popover"]').popover();   
-  });
-  </script>
-
-
-<br>
-<h2 class="card-title" style="color:#3a3e7b;" data-aos="fade-up">
-  Ingrese la siguiente información importante para iniciar su proceso de inscripción</h2>
-
-@elseif($val==1)
-  <div wire:ignore.self class="accordion" id="accordionPanelsStayOpenExample2">
-    <div style="border-radius: 60px 60px 60px 60px;" class="accordion-item">
-      <h2 style="border-radius: 60px 60px 60px 60px;" class="accordion-header" id="panelsStayOpen-headingtipo">
-        @if($a!=null && $a>=5)
-        <button class="accordion-button collapsed" style="background-color:#d6e7a6; border:6px solid #a4cb39; border-radius: 60px 60px 60px 60px;" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapsetipoins" aria-expanded="false" aria-controls="panelsStayOpen-collapsetipoins">
-          <h4 class="font-weight-bolder">  <b>Inscripción: 
-          @if($tipo_ins!=null &&  $tipo_ins==1)
-          Re-ingreso 
-          @elseif($tipo_ins!=null &&  $tipo_ins==2)
-          Nuevo ingreso
-          @endif  
-          </b>   </h4>
-        </button>
-        @else
-        <button class="accordion-button collapsed" style="background-color:#a6a8c3; border:6px solid #3a3e7b; border-radius: 60px 60px 60px 60px;" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapsetipoins" aria-expanded="false" aria-controls="panelsStayOpen-collapsetipoins">
-        <h4 class="font-weight-bolder">  <b>Inscripción</b>   </h4>
-        </button>
-        @endif
-      </h2>
-      <div  wire:ignore.self id="panelsStayOpen-collapsetipoins"style="border-radius: 60px 60px 60px 60px;" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingmodalidad">
-        <div  wire:ignore.self class="accordion-body" style="border-radius: 60px 60px 60px 60px;">
-        <div class="mb-3">
-              <li class="list-group-item list-group-item-action">
-               
-                  <input class="form-check-input me-1" wire:click='valtipoins()' data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapsetipoins" type="radio" wire:model="tipo_ins" value="1" aria-label="..."  id="flexRadioGradopre1">
-                  <label class="form-check-label" for="flexRadioGradopre1" style="font-size: 15px; color:#000000;">
-                      Re-ingreso 
-                    </label>
-                  
-                </li>
+    <div>
+       @elseif($val==1)
+    <div wire:ignore.self class="accordion" id="accordionPanelsStayOpenExample2">
+      <div style="border-radius: 60px 60px 60px 60px;" class="accordion-item">
+        <h2 style="border-radius: 60px 60px 60px 60px;" class="accordion-header" id="panelsStayOpen-headingtipo">
+          @if($a!=null && $a>=5)
+          <button class="accordion-button collapsed" style="background-color:#d6e7a6; border:6px solid #a4cb39; border-radius: 60px 60px 60px 60px;" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapsetipoins" aria-expanded="false" aria-controls="panelsStayOpen-collapsetipoins">
+            <h4 class="font-weight-bolder">  <b>Inscripción: 
+            @if($tipo_ins!=null &&  $tipo_ins==1)
+            Re-ingreso 
+            @elseif($tipo_ins!=null &&  $tipo_ins==2)
+            Nuevo ingreso
+            @endif  
+            </b>   </h4>
+          </button>
+          @else
+          <button class="accordion-button collapsed" style="background-color:#a6a8c3; border:6px solid #3a3e7b; border-radius: 60px 60px 60px 60px;" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapsetipoins" aria-expanded="false" aria-controls="panelsStayOpen-collapsetipoins">
+          <h4 class="font-weight-bolder">  <b>Inscripción</b>   </h4>
+          </button>
+          @endif
+        </h2>
+        <div  wire:ignore.self id="panelsStayOpen-collapsetipoins"style="border-radius: 60px 60px 60px 60px;" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingmodalidad">
+          <div  wire:ignore.self class="accordion-body" style="border-radius: 60px 60px 60px 60px;">
+          <div class="mb-3">
                 <li class="list-group-item list-group-item-action">
-                  <input class="form-check-input me-1"   wire:click='valtipoins()' type="radio" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapsetipoins" wire:model="tipo_ins" value="2" aria-label="..."  id="flexRadioGradvir2">
-                  <label class="form-check-label" for="flexRadioGradvir2" style="font-size: 15px; color:#000000;">
-                    Nuevo ingreso
-                    </label>
-                
-                </li>
-                @error('tipo_ins') 
-                      <div class="alert alert-danger d-flex align-items-center" role="alert">
-                        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
-                        
-                          <span>Debe de seleccionar</span>
-                         </div> @enderror
-      </div>
-      </div>
-    </div>
-  </div>
- </div>
-
-
-  @if($tipo_ins!=null)
-  <div wire:ignore.self class="accordion" id="accordionPanelsStayOpenExample2">
-    <div style="border-radius: 60px 60px 60px 60px;" class="accordion-item">
-      <h2 style="border-radius: 60px 60px 60px 60px;" class="accordion-header" id="panelsStayOpen-headingtipo">
-        @if($a!=null && $a>=6)
-        <button class="accordion-button collapsed" style="background-color:#d6e7a6; border:6px solid #a4cb39; border-radius: 60px 60px 60px 60px;" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapsemodalidad" aria-expanded="false" aria-controls="panelsStayOpen-collapsemodalidad">
-          <h4 class="font-weight-bolder">  <b>Modalidad de estudio en el ciclo escolar 2023: 
-          @if($tipo!=null)
-          {{$tipo}}
-          @endif  
-          </b>   </h4>
-        </button>
-        @else
-        <button class="accordion-button collapsed" style="background-color:#a6a8c3; border:6px solid #3a3e7b; border-radius: 60px 60px 60px 60px;" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapsemodalidad" aria-expanded="false" aria-controls="panelsStayOpen-collapsemodalidad">
-        <h4 class="font-weight-bolder">  <b>Modalidad de estudio en el ciclo escolar 2023.</b>   </h4>
-        </button>
-        @endif
-      </h2>
-      <div  wire:ignore.self id="panelsStayOpen-collapsemodalidad"style="border-radius: 60px 60px 60px 60px;" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingmodalidad">
-        <div  wire:ignore.self class="accordion-body" style="border-radius: 60px 60px 60px 60px;">
-        <div class="mb-3">
-              <li class="list-group-item list-group-item-action">
-               
-                  <input class="form-check-input me-1" wire:click='valmodalidad()' data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapsemodalidad" type="radio" wire:model="tipo" value="Presencial" aria-label="..."  id="flexRadioGradopre">
-                  <label class="form-check-label" for="flexRadioGradopre" style="font-size: 15px; color:#000000;">
-                      Presencial 
-                    </label>
+                 
+                    <input class="form-check-input me-1" wire:click='valtipoins()' data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapsetipoins" type="radio" wire:model="tipo_ins" value="1" aria-label="..."  id="flexRadioGradopre1">
+                    <label class="form-check-label" for="flexRadioGradopre1" style="font-size: 15px; color:#000000;">
+                        Re-ingreso 
+                      </label>
+                    
+                  </li>
+                  <li class="list-group-item list-group-item-action">
+                    <input class="form-check-input me-1"   wire:click='valtipoins()' type="radio" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapsetipoins" wire:model="tipo_ins" value="2" aria-label="..."  id="flexRadioGradvir2">
+                    <label class="form-check-label" for="flexRadioGradvir2" style="font-size: 15px; color:#000000;">
+                      Nuevo ingreso
+                      </label>
                   
-                </li>
-                <li class="list-group-item list-group-item-action">
-                  <input class="form-check-input me-1" wire:click='valmodalidad()'  type="radio" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapsemodalidad" wire:model="tipo" value="Virtual" aria-label="..."  id="flexRadioGradvir">
-                  <label class="form-check-label" for="flexRadioGradvir" style="font-size: 15px; color:#000000;">
-                    Virtual
-                    </label>
-                
-                </li>
-                @error('tipo') 
-                      <div class="alert alert-danger d-flex align-items-center" role="alert">
-                        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
-                        
-                          <span>Debe de seleccionar</span>
-                         </div> @enderror
-      </div>
+                  </li>
+                  @error('tipo_ins') 
+                        <div class="alert alert-danger d-flex align-items-center" role="alert">
+                          <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
+                          
+                            <span>Debe de seleccionar</span>
+                           </div> @enderror
+        </div>
+        </div>
       </div>
     </div>
+   </div>
+@endif
+
+@if($tipo_ins!=null)
+<div wire:ignore.self class="accordion" id="accordionPanelsStayOpenExample2">
+  <div style="border-radius: 60px 60px 60px 60px;" class="accordion-item">
+    <h2 style="border-radius: 60px 60px 60px 60px;" class="accordion-header" id="panelsStayOpen-headingtipo">
+      @if($a!=null && $a>=6)
+      <button class="accordion-button collapsed" style="background-color:#d6e7a6; border:6px solid #a4cb39; border-radius: 60px 60px 60px 60px;" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapsemodalidad" aria-expanded="false" aria-controls="panelsStayOpen-collapsemodalidad">
+        <h4 class="font-weight-bolder">  <b>Modalidad de estudio en el ciclo escolar 2023: 
+        @if($tipo!=null)
+        {{$tipo}}
+        @endif  
+        </b>   </h4>
+      </button>
+      @else
+      <button class="accordion-button collapsed" style="background-color:#a6a8c3; border:6px solid #3a3e7b; border-radius: 60px 60px 60px 60px;" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapsemodalidad" aria-expanded="false" aria-controls="panelsStayOpen-collapsemodalidad">
+      <h4 class="font-weight-bolder">  <b>Modalidad de estudio en el ciclo escolar 2023.</b>   </h4>
+      </button>
+      @endif
+    </h2>
+    <div  wire:ignore.self id="panelsStayOpen-collapsemodalidad"style="border-radius: 60px 60px 60px 60px;" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingmodalidad">
+      <div  wire:ignore.self class="accordion-body" style="border-radius: 60px 60px 60px 60px;">
+      <div class="mb-3">
+            <li class="list-group-item list-group-item-action">
+             
+                <input class="form-check-input me-1" wire:click='valmodalidad()' data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapsemodalidad" type="radio" wire:model="tipo" value="Presencial" aria-label="..."  id="flexRadioGradopre">
+                <label class="form-check-label" for="flexRadioGradopre" style="font-size: 15px; color:#000000;">
+                    Presencial 
+                  </label>
+                
+              </li>
+              <li class="list-group-item list-group-item-action">
+                <input class="form-check-input me-1" wire:click='valmodalidad()'  type="radio" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapsemodalidad" wire:model="tipo" value="Virtual" aria-label="..."  id="flexRadioGradvir">
+                <label class="form-check-label" for="flexRadioGradvir" style="font-size: 15px; color:#000000;">
+                  Virtual
+                  </label>
+              
+              </li>
+              @error('tipo') 
+                    <div class="alert alert-danger d-flex align-items-center" role="alert">
+                      <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
+                      
+                        <span>Debe de seleccionar</span>
+                       </div> @enderror
+    </div>
+    </div>
   </div>
- </div>
-   @endif
+</div>
+</div>
+ @endif
+    </div>
+   
+
 @if($tipo!=null && $tipo!="")
 <div wire:ignore.self class="accordion" id="accordionPanelsStayOpenExample">
   <div style="border-radius: 60px 60px 60px 60px;" class="accordion-item">
@@ -280,7 +283,7 @@
 <div wire:ignore.self class="accordion" id="accordionPanelsStayOpenExample2">
   <div style="border-radius: 60px 60px 60px 60px;" class="accordion-item">
     <h2 style="border-radius: 60px 60px 60px 60px;" class="accordion-header" id="panelsStayOpen-headingTwo">
-      @if($a!=null && $a==2)
+      @if($a!=null && $a>=7)
       <button class="accordion-button collapsed" style="background-color:#d6e7a6; border:6px solid #a4cb39; border-radius: 60px 60px 60px 60px;" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
         <h4 class="font-weight-bolder">  <b>Datos del Estudiante:</b>   </h4>
       </button>
@@ -437,7 +440,7 @@
   @endif
 
 
-  @if($gradoin!=null && $a==2)
+  @if($gradoin!=null && $a>=7)
   <div class="accordion" id="accordionPanelsStayOpenExample3">
   <div style="border-radius: 60px 60px 60px 60px;" class="accordion-item">
     <h2  style="border-radius: 60px 60px 60px 60px;" class="accordion-header" id="panelsStayOpen-headingThree">
@@ -619,7 +622,7 @@
 
 
   @endif
-  @endif
+  
 </div>
 
 

@@ -98,7 +98,7 @@ class InsComponent extends Component
            session(['message' => 'no encontrado']);
             return  back()->withErrors(['mensaje'=>'Validar el input vacio']);
         }else{
-            $this->a=2;
+            $this->a=7;
         }
     }
     public function valmodalidad(){
