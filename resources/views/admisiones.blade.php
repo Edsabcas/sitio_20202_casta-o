@@ -10,6 +10,8 @@
   </section>
 </center>
 
+<h4>{{$val}} a</h4>
+
 <div class="container col-12">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
@@ -22,7 +24,7 @@
   $('#valpedidos').modal('show');
   });
   </script>
-
+</div>
 <!-- Modal -->
 <div  wire:ignore.self class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
 <div class="modal-dialog modal-lg">
@@ -109,12 +111,12 @@
   });
   </script>
 
-@else
+
 <br>
 <h2 class="card-title" style="color:#3a3e7b;" data-aos="fade-up">
   Ingrese la siguiente información importante para iniciar su proceso de inscripción</h2>
 
-  
+@elseif($val==1)
   <div wire:ignore.self class="accordion" id="accordionPanelsStayOpenExample2">
     <div style="border-radius: 60px 60px 60px 60px;" class="accordion-item">
       <h2 style="border-radius: 60px 60px 60px 60px;" class="accordion-header" id="panelsStayOpen-headingtipo">
@@ -162,14 +164,14 @@
       </div>
     </div>
   </div>
-</div>
+ </div>
 
 
-@if($tipo_ins!=null)
+  @if($tipo_ins!=null)
   <div wire:ignore.self class="accordion" id="accordionPanelsStayOpenExample2">
     <div style="border-radius: 60px 60px 60px 60px;" class="accordion-item">
       <h2 style="border-radius: 60px 60px 60px 60px;" class="accordion-header" id="panelsStayOpen-headingtipo">
-        @if($a!=null && $a==5)
+        @if($a!=null && $a>=6)
         <button class="accordion-button collapsed" style="background-color:#d6e7a6; border:6px solid #a4cb39; border-radius: 60px 60px 60px 60px;" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapsemodalidad" aria-expanded="false" aria-controls="panelsStayOpen-collapsemodalidad">
           <h4 class="font-weight-bolder">  <b>Modalidad de estudio en el ciclo escolar 2023: 
           @if($tipo!=null)
@@ -211,7 +213,7 @@
       </div>
     </div>
   </div>
-</div>
+ </div>
    @endif
 @if($tipo!=null && $tipo!="")
 <div wire:ignore.self class="accordion" id="accordionPanelsStayOpenExample">
@@ -314,6 +316,7 @@
                        </div>
                     
                       @endif
+                  </div>
                   </div>
                   
                   <div class="col-md">
@@ -613,9 +616,10 @@
 
 
   @endif
+  @endif
 </div>
 
-@endif
+
 
 <hr>
 <style type="text/css">
