@@ -84,12 +84,12 @@
                 <p class="text-white">• Datos generales. <br>
                   • No. CUI. <br>
                   • Código Personal.<u>(MINEDUC)</u></a>
-                  <div class="alert alert-primary" role="alert">
-                    A simple primary alert—check it out!
-                  </div>
                   <button class="btn-pre text-white" style="background-color:#3a3e7b" data-bs-toggle="modal" data-bs-target="#staticBackdrop" title="Para conocer su código personal de MINEDUC" data-toggle="popover" data-trigger="hover">
                                 ?
                   </button>
+                  <div class="alert alert-currentColor text-light rounded" style="background-color: #93b92b" role="alert">
+                    Presiona "?" para obtener tu código único personal del Ministerio de Educación (MINEDUC)
+                  </div>
                 </p>
               </div>
             </div>
@@ -361,6 +361,9 @@
                       </a>
                   </label>
                   <input type='text' placeholder=""  wire:model="codigo_pe_es" class="form-control " required>
+                  <div class="alert alert-currentColor text-light rounded" style="background-color: #a4cb39a4" role="alert">
+                    Presiona "?" para obtener tu código único personal del Ministerio de Educación (MINEDUC)
+                  </div>
                   @error('codigo_pe_es')
                   <div class="alert alert-warning" role="alert">
                     Pendiente
