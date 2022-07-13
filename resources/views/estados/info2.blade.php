@@ -261,7 +261,7 @@
                             <div class="card text-center">      
                               <div class="card-body">
                                 <h5 class="card-title"><strong>Cuota Anual</strong></h5>
-                                <p class="card-text">Q. {{$monto_ins+$monto_men}}.00</p>
+                                <p class="card-text">Q. {{$cuota_r}}</p>
                               </div>
                             </div> 
                           </div>
@@ -289,7 +289,7 @@
                             </select>
                           </div>
                           <div class="col-md">
-                            <label for="exampleInputEmail1" class="form-label"><h5 style="color: #3a3e7b"><strong>MÉTODO DE PAGO</strong></h5></label>
+                            <label for="metodo"><h5 style="color: #3a3e7b"><strong>MÉTODO DE PAGO</strong></h5></label>
                             <select class="form-select rounded-pill" aria-label="Default select example" wire:model="metodo">
                               <option selected>Seleccionar</option>
                                 @isset($metododepago)
@@ -302,78 +302,406 @@
                         </div>
                         <br>
 
-                        {{-- FORMULARIO --}}
-                        @if($metodo==4)
-                        <form>
-                                
-                        {{-- Nombre en la tarjeta --}}
-                        <div class="container">
-                          <div class="row"> 
-                            <div class="col">
-                              <div class="mb-3">
-                                <label for="ncompleto" class="col-form-label">Nombre en la tarjeta:</label>
-                                  <input type="text" class="form-control" id="ntarjeta" wire:model="ntarjeta">
+                        {{-- EFECTIVO --}}
+                        @if ($metodo==1)
+
+                              @if ($fpago==1)
+                              
+                                  <div class="card text-center">      
+                                    <div class="card-body">
+                                      <h5 class="card-title"><strong>Total a pagar:</strong></h5>
+                                      <p class="card-text">Q. {{$monto_ins+($monto_men)}}</p>
+                                    </div>
+                                  </div>                              
+
+                              @elseif($fpago==2)
+                              
+                                  <div class="card text-center">      
+                                    <div class="card-body">
+                                      <h5 class="card-title"><strong>Total a pagar:</strong></h5>
+                                      <p class="card-text">Q. {{$monto_ins}}</p>
+                                    </div>
+                                  </div>
+
+                              @elseif($fpago==3)
+
+                                  <div class="card text-center">      
+                                    <div class="card-body">
+                                      <h5 class="card-title"><strong>Total a pagar:</strong></h5>
+                                      <p class="card-text">Q. {{$monto_ins+($monto_men)+($cuota_r)}}</p>
+                                    </div>
+                                  </div>
+
+                              @elseif($fpago==4)
+
+                                  <div class="card text-center">      
+                                    <div class="card-body">
+                                      <h5 class="card-title"><strong>Total a pagar:</strong></h5>
+                                      <p class="card-text">Q. {{$monto_ins+($cuota_r)}}</p>
+                                    </div>
+                                  </div>
+
+                              @endif  
+
+                              <br>
+                              <div class="row g-3">
+                            <div class="col-md">
+                              <div class="form-group row">
+                                <label for="exampleInputPassword1" class="form-label"><h5 style="color: #3a3e7b"><strong>SUBIR COMPROBANTE DE PAGO</strong></h5></label>
+                                <div class="mb-3">
+                                  <input type="file" id="archivo"  wire:model="archivo_comprobante">
+                                </div> 
                               </div>
                             </div>
-                                @error('ntarjeta') 
-                                  <div class="alert alert-danger d-flex align-items-center" role="alert">
-                                      <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
-                                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">
-                                      <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-                                      </svg>
-                                      <span>¡Pendiente de ingresar!</span>
-                                    </div>                                   
-                                @enderror
+                            
+                              <div class="mb-3">
+                                <div wire:loading wire:target="archivo_comprobante" class="alert alert-warning" role="alert">
+                                  <strong class="font-bold">¡Imagen cargando!</strong>
+                                    <span class="block sm:inlone">Espere un momento hasta que la imagen se haya procesado completamente.</span>
+                                  <div class="spinner-border text-warning" role="status">
+                                  </div>
+                                </div>
+                                @if($tipo==1)
+                                  <h3 class="form-label">Visualización de Imagen</h3>
+                                  <img src="{{$archivo_comprobante->temporaryURL()}}" height="50" weight="50"  alt="...">
+                                @endif
+                                {{-- @if($tipo==3)
+                                <h3 class="form-label">Visualización de PDF</h3>
+                                  <iframe width="400" height="400" src="/public/pdf/{{$img}}" frameborder="0"></iframe>
+                                @endif --}}
+                                            @if($mensaje24 != null)
+                                              <div class="alert alert-success d-flex align-items-center" role="alert">
+                                                <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
+                                                <div>{{$mensaje24}}
+                                                </div>
+                                              </div>
+                                            @endif
+                                            @if($mensaje25 != null)
+                                              <div class="alert alert-danger d-flex align-items-center" role="alert">
+                                                <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
+                                                  <div>{{$mensaje25}}
+                                                  </div>
+                                              </div>
+                                            @endif
+                              </div>
+                              <div class="col-md">
+                                <label for="message-text" class="col-form-label"><h5 style="color: #3a3e7b"><strong>OBSERVACIÓN</strong></h5></label>
+                                  <textarea class="form-control" id="message-text" wire:model="observacion"></textarea>
+                              </div>              
+                            </div>              
+                              
 
-                              {{-- Número de la tarjeta --}}
-                              <div class="col">
+                          {{-- TRANSFERENCIA --}}
+                        @elseif($metodo==2)
+                              @if ($fpago==1)
+                              
+                                  <div class="card text-center">      
+                                    <div class="card-body">
+                                      <h5 class="card-title"><strong>Total a pagar:</strong></h5>
+                                      <p class="card-text">Q. {{$monto_ins+($monto_men)}}</p>
+                                    </div>
+                                  </div>                              
+
+                              @elseif($fpago==2)
+                              
+                                  <div class="card text-center">      
+                                    <div class="card-body">
+                                      <h5 class="card-title"><strong>Total a pagar:</strong></h5>
+                                      <p class="card-text">Q. {{$monto_ins}}</p>
+                                    </div>
+                                  </div>
+
+                              @elseif($fpago==3)
+
+                                  <div class="card text-center">      
+                                    <div class="card-body">
+                                      <h5 class="card-title"><strong>Total a pagar:</strong></h5>
+                                      <p class="card-text">Q. {{$monto_ins+($monto_men)+($cuota_r)}}</p>
+                                    </div>
+                                  </div>
+
+                              @elseif($fpago==4)
+
+                                  <div class="card text-center">      
+                                    <div class="card-body">
+                                      <h5 class="card-title"><strong>Total a pagar:</strong></h5>
+                                      <p class="card-text">Q. {{$monto_ins+($cuota_r)}}</p>
+                                    </div>
+                                  </div>
+
+                              @endif  
+                              <br>
+                          <div class="row g-3">
+                            <div class="col-md">
+                              <div class="form-group row">
+                                <label for="exampleInputPassword1" class="form-label"><h5 style="color: #3a3e7b"><strong>SUBIR COMPROBANTE DE PAGO</strong></h5></label>
                                 <div class="mb-3">
-                                  <label for="notarjeta" class="col-form-label">Numero de la tarjeta:</label>
-                                  <input type="text" class="form-control" id="notarjeta" wire:model="notarjeta">
+                                  <input type="file" id="archivo"  wire:model="archivo_comprobante">
+                                </div> 
+                              </div>
+                            </div>
+                            
+                              <div class="mb-3">
+                                <div wire:loading wire:target="archivo_comprobante" class="alert alert-warning" role="alert">
+                                  <strong class="font-bold">¡Imagen cargando!</strong>
+                                    <span class="block sm:inlone">Espere un momento hasta que la imagen se haya procesado completamente.</span>
+                                  <div class="spinner-border text-warning" role="status">
+                                  </div>
+                                </div>
+                                @if($tipo==1)
+                                  <h3 class="form-label">Visualización de Imagen</h3>
+                                  <img src="{{$archivo_comprobante->temporaryURL()}}" height="50" weight="50"  alt="...">
+                                @endif
+                                {{-- @if($tipo==3)
+                                <h3 class="form-label">Visualización de PDF</h3>
+                                  <iframe width="400" height="400" src="/public/pdf/{{$img}}" frameborder="0"></iframe>
+                                @endif --}}
+                                            @if($mensaje24 != null)
+                                              <div class="alert alert-success d-flex align-items-center" role="alert">
+                                                <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
+                                                <div>{{$mensaje24}}
+                                                </div>
+                                              </div>
+                                            @endif
+                                            @if($mensaje25 != null)
+                                              <div class="alert alert-danger d-flex align-items-center" role="alert">
+                                                <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
+                                                  <div>{{$mensaje25}}
+                                                  </div>
+                                              </div>
+                                            @endif
+                              </div>
+                              <div class="col-md">
+                              <label for="message-text" class="col-form-label"><h5 style="color: #3a3e7b"><strong>OBSERVACIÓN</strong></h5></label>
+                                <textarea class="form-control" id="message-text" wire:model="observacion"></textarea>
+                            </div>              
+                          </div>  
+
+                          {{-- TARJETA (COLEGIO) --}}
+                        @elseif($metodo==3)
+                          @if ($fpago==1)
+                                
+                              <div class="card text-center">      
+                                <div class="card-body">
+                                  <h5 class="card-title"><strong>Total a pagar:</strong></h5>
+                                  <p class="card-text">Q. {{$monto_ins+($monto_men)}}</p>
+                                </div>
+                              </div>                              
+
+                          @elseif($fpago==2)
+                          
+                              <div class="card text-center">      
+                                <div class="card-body">
+                                  <h5 class="card-title"><strong>Total a pagar:</strong></h5>
+                                  <p class="card-text">Q. {{$monto_ins}}</p>
                                 </div>
                               </div>
+
+                          @elseif($fpago==3)
+
+                              <div class="card text-center">      
+                                <div class="card-body">
+                                  <h5 class="card-title"><strong>Total a pagar:</strong></h5>
+                                  <p class="card-text">Q. {{$monto_ins+($monto_men)+($cuota_r)}}</p>
+                                </div>
+                              </div>
+
+                          @elseif($fpago==4)
+
+                              <div class="card text-center">      
+                                <div class="card-body">
+                                  <h5 class="card-title"><strong>Total a pagar:</strong></h5>
+                                  <p class="card-text">Q. {{$monto_ins+($cuota_r)}}</p>
+                                </div>
+                              </div>
+
+                          @endif  
+                          <br>
+                          <div class="row g-3">
+                            <div class="col-md">
+                              <div class="form-group row">
+                                <label for="exampleInputPassword1" class="form-label"><h5 style="color: #3a3e7b"><strong>SUBIR COMPROBANTE DE PAGO</strong></h5></label>
+                                <div class="mb-3">
+                                  <input type="file" id="archivo"  wire:model="archivo_comprobante">
+                                </div> 
+                              </div>
+                            </div>
+                            
+                              <div class="mb-3">
+                                <div wire:loading wire:target="archivo_comprobante" class="alert alert-warning" role="alert">
+                                  <strong class="font-bold">¡Imagen cargando!</strong>
+                                    <span class="block sm:inlone">Espere un momento hasta que la imagen se haya procesado completamente.</span>
+                                  <div class="spinner-border text-warning" role="status">
+                                  </div>
+                                </div>
+                                @if($tipo==1)
+                                  <h3 class="form-label">Visualización de Imagen</h3>
+                                  <img src="{{$archivo_comprobante->temporaryURL()}}" height="50" weight="50"  alt="...">
+                                @endif
+                                {{-- @if($tipo==3)
+                                <h3 class="form-label">Visualización de PDF</h3>
+                                  <iframe width="400" height="400" src="/public/pdf/{{$img}}" frameborder="0"></iframe>
+                                @endif --}}
+                                            @if($mensaje24 != null)
+                                              <div class="alert alert-success d-flex align-items-center" role="alert">
+                                                <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
+                                                <div>{{$mensaje24}}
+                                                </div>
+                                              </div>
+                                            @endif
+                                            @if($mensaje25 != null)
+                                              <div class="alert alert-danger d-flex align-items-center" role="alert">
+                                                <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
+                                                  <div>{{$mensaje25}}
+                                                  </div>
+                                              </div>
+                                            @endif
+                              </div>
+                              <div class="col-md">
+                              <label for="message-text" class="col-form-label"><h5 style="color: #3a3e7b"><strong>OBSERVACIÓN</strong></h5></label>
+                                <textarea class="form-control" id="message-text" wire:model="observacion"></textarea>
+                            </div>              
+                          </div>  
+
+                        {{-- PAGO EN LINEA --}}
+                        @elseif($metodo==4)
+
+                        @if ($fpago==1)
+                              
+                        <div class="card text-center">      
+                          <div class="card-body">
+                            <h5 class="card-title"><strong>Total a pagar:</strong></h5>
+                            <p class="card-text">Q. {{$monto_ins+($monto_men)}}</p>
                           </div>
-                        </div>
-                            @error('notarjeta') 
-                            <div class="alert alert-danger d-flex align-items-center" role="alert">
-                              <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
-                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">
-                                <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-                              </svg>
-                                <span>¡Pendiente de ingresar!</span>
-                            </div> 
-                          @enderror
+                        </div>                              
+
+                        @elseif($fpago==2)
+                        
+                            <div class="card text-center">      
+                              <div class="card-body">
+                                <h5 class="card-title"><strong>Total a pagar:</strong></h5>
+                                <p class="card-text">Q. {{$monto_ins}}</p>
+                              </div>
+                            </div>
+
+                        @elseif($fpago==3)
+
+                            <div class="card text-center">      
+                              <div class="card-body">
+                                <h5 class="card-title"><strong>Total a pagar:</strong></h5>
+                                <p class="card-text">Q. {{$monto_ins+($monto_men)+($cuota_r)}}</p>
+                              </div>
+                            </div>
+
+                        @elseif($fpago==4)
+
+                            <div class="card text-center">      
+                              <div class="card-body">
+                                <h5 class="card-title"><strong>Total a pagar:</strong></h5>
+                                <p class="card-text">Q. {{$monto_ins+($cuota_r)}}</p>
+                              </div>
+                            </div>
+
+                        @endif  
+                        <br>
+                                    <form>
+                                            
+                                    {{-- Nombre en la tarjeta --}}
+                                    <div class="container">
+                                      <div class="row"> 
+                                        <div class="col">
+                                          <div class="mb-3">
+                                            <label for="ncompleto" class="col-form-label">Nombre en la tarjeta:</label>
+                                              <input type="text" class="form-control" id="ntarjeta" wire:model="ntarjeta">
+                                          </div>
+                                        </div>
+                                            @error('ntarjeta') 
+                                              <div class="alert alert-danger d-flex align-items-center" role="alert">
+                                                  <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
+                                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">
+                                                  <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                                                  </svg>
+                                                  <span>¡Pendiente de ingresar!</span>
+                                                </div>                                   
+                                            @enderror
+
+                                          {{-- Número de la tarjeta --}}
+                                          <div class="col">
+                                            <div class="mb-3">
+                                              <label for="notarjeta" class="col-form-label">Numero de la tarjeta:</label>
+                                              <input type="number" class="form-control" id="notarjeta" wire:model="notarjeta">
+                                            </div>
+                                          </div>
+                                      </div>
+                                    </div>
+                                        @error('notarjeta') 
+                                        <div class="alert alert-danger d-flex align-items-center" role="alert">
+                                          <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">
+                                            <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                                          </svg>
+                                            <span>¡Pendiente de ingresar!</span>
+                                        </div> 
+                                      @enderror
+                              
+
+                              {{-- Nombre en la tarjeta --}}
+                              <div class="container">
+                                <div class="row"> 
+                                  <div class="col">
+                                    <div class="mb-3">
+                                      <label for="fvencimiento" class="col-form-label">Fecha de vencimiento:</label>
+                                        <input type="date" class="form-control" id="fvencimiento" wire:model="fvencimiento">
+                                    </div>
+                                  </div>
+                                      @error('fvencimiento') 
+                                        <div class="alert alert-danger d-flex align-items-center" role="alert">
+                                            <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">
+                                            <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                                            </svg>
+                                            <span>¡Pendiente de ingresar!</span>
+                                          </div>                                   
+                                      @enderror
+
+                                    {{-- Número de la tarjeta --}}
+                                    <div class="col">
+                                      <div class="mb-3">
+                                        <label for="cseguridad" class="col-form-label">Codigo de seguridad:</label>
+                                        <input type="number" class="form-control" id="cseguridad" wire:model="cseguridad">
+                                      </div>
+                                    </div>
+                                </div>
+                              </div>
+                                @error('cseguridad') 
+                                  <div class="alert alert-danger d-flex align-items-center" role="alert">
+                                    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">
+                                      <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                                    </svg>
+                                      <span>¡Pendiente de ingresar!</span>
+                                  </div> 
+                                @enderror
+
+                                <div class="form-check form-check-inline">
+                                  <input class="form-check-input" wire:model="guardar_info" type="checkbox" {{-- wire:click="guardar_info()" --}} value="1" id="defaultCheck1">
+                                  <label class="form-check-label" for="defaultCheck1">
+                                    Recordar los datos de su tarjeta
+                                  </label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="checkbox" value="2" id="defaultCheck1">
+                                  <label class="form-check-label" for="defaultCheck1">
+                                    No recordar los datos de su tarjeta
+                                  </label>
+                                </div>
+                                  <br>
+
+                                  </form>
+                        @endif
+                        
                   
-
-                  {{-- Nombre en la tarjeta --}}
-                  <div class="container">
-                    <div class="row"> 
-                      <div class="col">
-                        <div class="mb-3">
-                          <label for="fvencimiento" class="col-form-label">Fecha de vencimiento:</label>
-                            <input type="text" class="form-control" id="fvencimiento" wire:model="fvencimiento">
-                        </div>
-                      </div>
-                          @error('fvencimiento') 
-                            <div class="alert alert-danger d-flex align-items-center" role="alert">
-                                <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">
-                                <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-                                </svg>
-                                <span>¡Pendiente de ingresar!</span>
-                              </div>                                   
-                          @enderror
-
-                        {{-- Número de la tarjeta --}}
-                        <div class="col">
-                          <div class="mb-3">
-                            <label for="cseguridad" class="col-form-label">Codigo de seguridad:</label>
-                            <input type="text" class="form-control" id="cseguridad" wire:model="cseguridad">
-                          </div>
-                        </div>
-                    </div>
-                  </div>
-                      @error('cseguridad') 
+                      {{-- @error('cseguridad') 
                       <div class="alert alert-danger d-flex align-items-center" role="alert">
                         <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">
@@ -399,57 +727,7 @@
 
                       </form>
                         @endif
-                                            
-                        
-                        @if ($metodo==1)
-                        <div class="row g-3">
-                          <div class="col-md">
-                            <div class="form-group row">
-                              <label for="exampleInputPassword1" class="form-label"><h5 style="color: #3a3e7b"><strong>SUBIR COMPROBANTE DE PAGO</strong></h5></label>
-                              <div class="mb-3">
-                                <input type="file" id="archivo"  wire:model="archivo_comprobante">
-                              </div> 
-                            </div>
-                          </div>
-                          
-                            <div class="mb-3">
-                              <div wire:loading wire:target="archivo_comprobante" class="alert alert-warning" role="alert">
-                                <strong class="font-bold">¡Imagen cargando!</strong>
-                                  <span class="block sm:inlone">Espere un momento hasta que la imagen se haya procesado completamente.</span>
-                                <div class="spinner-border text-warning" role="status">
-                                </div>
-                              </div>
-                              @if($tipo==1)
-                                <h3 class="form-label">Visualización de Imagen</h3>
-                                <img src="{{$archivo_comprobante->temporaryURL()}}" height="50" weight="50"  alt="...">
-                              @endif
-                              {{-- @if($tipo==3)
-                              <h3 class="form-label">Visualización de PDF</h3>
-                                <iframe width="400" height="400" src="/public/pdf/{{$img}}" frameborder="0"></iframe>
-                              @endif --}}
-                                          @if($mensaje24 != null)
-                                            <div class="alert alert-success d-flex align-items-center" role="alert">
-                                              <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
-                                              <div>{{$mensaje24}}
-                                              </div>
-                                            </div>
-                                          @endif
-                                          @if($mensaje25 != null)
-                                            <div class="alert alert-danger d-flex align-items-center" role="alert">
-                                              <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
-                                                <div>{{$mensaje25}}
-                                                </div>
-                                            </div>
-                                          @endif
-                            </div>
-                            <div class="col-md">
-                            <label for="message-text" class="col-form-label"><h5 style="color: #3a3e7b"><strong>OBSERVACIÓN</strong></h5></label>
-                              <textarea class="form-control" id="message-text" wire:model="observacion"></textarea>
-                          </div>              
-                        </div>  
-                        @else
-                            
-                        @endif
+                                           --}}  
                     </div>
                     <div class="modal-footer">
                       <button class="btn btn-pre2" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Siguiente</button>

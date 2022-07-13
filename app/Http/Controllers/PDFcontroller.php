@@ -58,7 +58,7 @@ class PDFcontroller extends Controller
                     }
                 }  
                 //otra correlativa
-                if($prein->NO_CORRELATIVO_P2==null){
+                if($prein->NO_CORRELATIVO_P2==null or $prein->NO_CORRELATIVO_P2==""){
                     $correlativo_valor=DB::table('TB_PRE_INS')
 
                ->where('ID_PRE', $id_pre)
@@ -157,13 +157,57 @@ class PDFcontroller extends Controller
                 foreach($gradoss as $grados){
                     $datos_padre20=$grados->NIVEL_ACADEMICO;
                 }    
+
+        if($preins != null){
+            foreach($preinfo as $preee){
+                $dato_encargado = $preee->NOMB_ENCARGADO;
+                $dato_encargado2 = $preee->NACIONALIDAD_ENCARGADO;
+                $dato_encargado3 = $preee->ESTADO_CIVIL_E;
+                $dato_encargado4 = $preee->DPI_ENCARGADO;
+                $dato_encargado5 = $preee->TELEFONO_ENCARGADO;
+                $dato_encargado6 = $preee->CELULAR_ENCARGADO;
+                $dato_encargado7 = $preee->DIRECCION_RESIDENCIA_ENCARGADO;
+                $dato_encargado8 = $preee->CORREO_ENCARGADO;
+                $dato_encargado9 = $preee->PROFECION_ENCARGADO;
+                $dato_encargado10 = $preee->FECHA_N_ENCARGADO;
+
+            }
+        }
+
+        $correlativos_tabla=DB::table('CORRELATIVOS')->insert(
+
+            [
+
+             'ID_PRE'=>$id_pre,
+             'NO_CORRELATIVO_P1'=>$datos_padre14,
+             'NO_CORRELATIVO_P2'=>$datos_padre15,
+             'ESTADO' => 0,
+             
+
+             
+
+            ]);
+        if($correlativos_tabla){
+            $mensaje="Guardado correctamente";
+            
+
+        }
+        else{
+            $mensaje2="No se guardó correctamente";
+        }
+        
                 
         $nacimiento=explode("-", $datos_padre11);
         $nacimiento_total=$fecha_separada[0]-$nacimiento[0];
         $datos=array($fecha_separada[0],$fecha_separada[1],$fecha_separada[2], $datos_padre, $datos_padre2, $datos_padre3, $datos_padre4, $datos_padre5, 
         $datos_padre6, $datos_padre7, $datos_padre8, $datos_padre9, $datos_padre10,$datos_padre12,$datos_padre13, $nacimiento_total, $datos_padre14, $datos_padre15,
         $monto, $monto_anual, $datos_padre16, $datos_padre18, $datos_padre20, $jornada);
-        $pdf = PDF::loadView('estados.PDFexport.PDFDIACO', compact('datos'));
+
+        $nacimiento2=explode("-", $dato_encargado10);
+        $nacimiento_total2=$fecha_separada[0]-$nacimiento2[0]; 
+        $datos2=array($dato_encargado, $nacimiento_total2, $dato_encargado2, $dato_encargado3, $dato_encargado4, $dato_encargado5, $dato_encargado6, $dato_encargado7,
+        $dato_encargado8, $dato_encargado9);
+        $pdf = PDF::loadView('estados.PDFexport.PDFDIACO', compact('datos', 'datos2'));
         return $pdf->stream();
         return view('estados.PDFexport.PDFDIACO');
     }

@@ -109,7 +109,7 @@ class InsComponent extends Component
            session(['message' => 'no encontrado']);
             return  back()->withErrors(['mensaje'=>'Validar el input vacio']);
         }else{
-            $this->a=5;
+            $this->a=6;
         }
     }
     public function valtipoins(){
@@ -120,7 +120,7 @@ class InsComponent extends Component
            session(['message' => 'no encontrado']);
             return  back()->withErrors(['mensaje'=>'Validar el input vacio']);
         }else{
-            $this->a=6;
+            $this->a=5;
         }
     }
     public function val3(){
@@ -255,7 +255,8 @@ class InsComponent extends Component
             $this->reset();
 
             $this->mensaje=1;
-            
+            $this->val=null;
+            $this->a=null;            
         }
         else{
             //$this->reset();

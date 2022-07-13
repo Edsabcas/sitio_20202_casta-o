@@ -17,18 +17,18 @@ class ValidacionComponent extends Component
     public $nacimientopadre, $nacimiento_padre, $nacionalidadpadre, $nacionalidad_padre,$lugar_profesion_padre;
     public $lugar_nacimiento_padre, $lugarnacimientopadre, $estadocivil, $DPIpadre, $DPI_padre;
     public $celular_padre, $celularpadre, $telefono_padre, $telefonopadre, $direccion_residencia, $direccionresidencia;
-    public $id_pre,$metodo,$archivo_comprobante,$img,$tipo,$mensaje24,$mensaje25,$observacion,$fpago;
+    public $id_pre,$metodo,$archivo_comprobante,$img,$tipo,$mensaje24,$mensaje25,$observacion,$fpago,$mensaje30,$mensaje31;
     public $correo_padre, $correopadre, $profesionpadre, $profesion_padre, $grado_hermano, $gradohermano,$vive_con_elpadre,$estadocivilma;
     public $direccion_residenciamadre, $correo_madre, $profesion_madre, $lugar_prof_madre, $cargo_madre, $religion_madre, $NIT_madre, $vive_madre;
     public $solo_alumno, $encargado_alumno, $nombreencargado, $nombre_encargado, $bus_colegio, $bus_no_colegio, $codigo_fam, $nombre_fam, $nombrefam, $codigofam, $alumno_asegurado, $vacunas, $nombre_aseguradora, $nombreaseguradora;
     public $poliza, $carneseguro, $carne_seguro, $tiene_alergia, $medicamento, $alimento, $archivo,$formato, $arch;
     public $religion_padre, $cargo_profesion_padre, $NIT_padre, $nombre_madre, $fechana_madre, $nacionalidad_madre, $lugar_nacimiento_madre, $DPI_madre, $telefono_madre, $celular_madre,$id_pre_ins,$id_no_gest,$mensaje_diaco,$mensaje_diaco1,$archivo_cdiaco,$id_pre_ins_arch,$id_no_gest_arch;
     public $prueba_ingreso, $validar_info, $entro_aca, $Especifique_alerg, $Especifique_medi, $Especifique_ali;
-    public $idgrado,$monto_ins,$monto_men;
-    public $estado_elevado, $matricula_bus_aj, $validacionv, $codigo_familia3, $fecha_codigo;
+    public $idgrado,$monto_ins,$monto_men,$cuota_r,$ntarjeta,$notarjeta,$fvencimiento,$cseguridad,$guardar_info;
+    public $estado_elevado, $matricula_bus_aj, $validacionv, $codigo_familia3, $fecha_codigo, $validacionv2;
     public $nombre_encargado2, $fechana_encargado2, $nacionalidad_encargado2 , $lugar_nacimiento_encargado2 ,$estadocivilencargado2 , $DPI_encargado2 ,$telefono_encargado2 ,$celular_encargado2;
     public $direccion_residenciaencargado2 ,$correo_encargado2  ,$profesion_encargado2 ,$lugar_prof_encargado2 ,$religion_encargado2 ,$NIT_encargado2 ,$vive_encargado2, $quien_encargado1;
-    public $solo_por, $Especifique_rel2, $n_encargado, $nencargado, $dpi_encar, $dpiencar, $bus_por, $nombreconductor, $nombre_conductor, $dpiconductor, $dpi_conductor, $n_conductor, $nconductor;
+    public $solo_por, $Especifique_rel2, $n_encargado, $nencargado, $dpi_encar, $dpiencar, $bus_por, $nombreconductor, $nombre_conductor, $dpiconductor, $dpi_conductor, $n_conductor, $nconductor, $cargo_encargado2;
 
     public function render()
     {
@@ -88,8 +88,8 @@ class ValidacionComponent extends Component
 
                 foreach($cuenta as $cuen){
                     $this->monto_ins=$cuen->MONTO_INSCRIPCION;
-                    $this->monto_men=$cuen->MONTO_MENSUAL;  
-
+                    $this->monto_men=$cuen->MONTO_MENSUAL;
+                    $this->cuota_r=$cuen->CUOTA_ANUAL;
                 }
             }
 
@@ -881,6 +881,7 @@ class ValidacionComponent extends Component
                 $celular_encargado2=$this->celular_encargado2;
                 $direccion_residenciaencargado2=$this->direccion_residenciaencargado2;
                 $correo_encargado2=$this->correo_encargado2;
+                $cargo_encargado2=$this->cargo_encargado2;
                 $profesion_encargado2=$this->profesion_encargado2;
                 $lugar_prof_encargado2=$this->lugar_prof_encargado2;
                 $religion_encargado2=$this->religion_encargado2;
@@ -979,6 +980,7 @@ class ValidacionComponent extends Component
                         'SALIDA_BUS_COLEGIO'=>$this->bus_colegio,
                         'SALIDA_BUS_AJENO'=>$this->bus_no_colegio,
                         'Matricula_bus_aj'=>$this->matricula_bus_aj,
+                        'ENCARGADO'=> $this->quien_encargado1,
                 'NOMB_ENCARGADO'=>$this->nombre_encargado2,
                 'FECHA_N_ENCARGADO'=>$this->fechana_encargado2,
                 'NACIONALIDAD_ENCARGADO'=>$this->nacionalidad_encargado2,
@@ -989,7 +991,8 @@ class ValidacionComponent extends Component
                 'CELULAR_ENCARGADO'=>$this->celular_encargado2,
                 'DIRECCION_RESIDENCIA_ENCARGADO'=>$this->direccion_residenciaencargado2,
                 'CORREO_ENCARGADO'=>$this->correo_encargado2,
-                'CARGO_ENCARGADO'=>$this->profesion_encargado2,
+                'PROFECION_ENCARGADO'=>$this->profesion_encargado2,
+                'CARGO_ENCARGADO'=>$this->cargo_encargado2,
                 'LUGAR_TRABAJO_E'=>$this->lugar_prof_encargado2,
                 'RELIGION_ENCARGADO'=>$this->religion_encargado2,
                 'NIT_ENCARGADO'=>$this->NIT_encargado2,
@@ -1075,14 +1078,14 @@ class ValidacionComponent extends Component
             if($this->validate([
                 'metodo' => 'required',
               //  'observacion' => 'required',
-                'archivo_comprobante' => 'required',
+/*                 'archivo_comprobante' => 'required', */
                 ])==false){
                 $mensaje="no encontrado";
                session(['message' => 'no encontrado']);
                 return  back()->withErrors(['mensaje'=>'Validar el input vacio']);
             }else{
                 
-                $ruta="C:/xampp/htdocs/repo_clon_casys/casys-pro-2.0/public/imagen/comprobantes2022";
+                $ruta="C:/xampp/htdocs/repo_casys_2022/casys-pro-2.0/public/imagen/comprobantes2022/";
                 $archivo_comprobante="";
                 if($this->archivo_comprobante!=null){
                     if($this->archivo_comprobante->getClientOriginalExtension()=="jpg" or $this->archivo_comprobante->getClientOriginalExtension()=="png" or $this->archivo_comprobante->getClientOriginalExtension()=="jpeg" or $this->archivo_comprobante->getClientOriginalExtension()=="pdf"){
@@ -1113,7 +1116,35 @@ class ValidacionComponent extends Component
                     $observacion=".";
                 }
     
-                DB::beginTransaction();
+                $guardar_info=0;
+                if($guardar_info=1){
+
+                    $ntarjeta=$this->ntarjeta; 
+                    $notarjeta=$this->notarjeta;
+                    $fvencimiento=$this->fvencimiento; 
+                    $cseguridad=$this->cseguridad;
+                    $id_pre=$this->id_pre;
+   
+                    }
+        
+                    $form=DB::table('TB_FORM_PAGOS')->insert(
+                        [
+                            'N_TARJETA'=> $ntarjeta,
+                            'NO_TARJETA'=> $notarjeta,
+                            'F_VENCIMIENTO'=> $fvencimiento,
+                            'C_SEGURIDAD'=> $cseguridad,
+                            'ID_PRE'=>$id_pre,
+                        ]);
+                        if($form){
+                            DB::commit();
+                            $this->reset();
+                            $this->mensaje30='Insertado correctamente';
+                        }
+                        else{
+                            DB::rollback();
+                            unset($this->mensaje30);
+                            $this->mensaje31='No fue posible insertar correctamente';
+                        }
         
                 $comprobantes=DB::table('TB_PRE_INS')
                 ->where('ID_PRE',$id_pre)
@@ -1262,6 +1293,51 @@ class ValidacionComponent extends Component
         $estactr=DB:: select($sql, array($id_pre));
     }
 
+    public function validar_datosF(){
+        if($this->validate([
+            'año_ingreso' => 'required',
+            'grado_primer_ingreso' => 'required',
+            'nombre_padre' => 'required',
+            'nacimiento_padre' => 'required',
+            'nacionalidad_padre' => 'required',
+            'lugar_nacimiento_padre' => 'required',
+            'DPI_padre' => 'required',
+            'celular_padre' => 'required',
+            'telefono_padre' => 'required',
+            'direccion_residencia' => 'required',
+            'correo_padre' => 'required',
+            'profesion_padre' => 'required',
+            'lugar_profesion_padre' => 'required',
+            'cargo_profesion_padre' => 'required',
+            'religion_padre' => 'required',
+            'NIT_padre' => 'required',
+            'nombre_madre' => 'required',
+            'fechana_madre' => 'required',
+            'nacionalidad_madre' => 'required',
+            'lugar_nacimiento_madre' => 'required',
+            'DPI_madre' => 'required',
+            'telefono_madre' => 'required',
+            'celular_madre' => 'required',
+            'direccion_residenciamadre'=> 'required',
+            'correo_madre'=> 'required',
+            'profesion_madre' =>'required',
+            'lugar_prof_madre' =>'required',
+            'cargo_madre' =>'required',
+            'religion_madre' =>'required',
+            'NIT_madre' =>'required',
+            
+        ])==false){
+            $error="no encontrado";
+            session(['validar'=> 1]);
+            session(['message'=>'no encontrado']);
+            return back()->withErrors(['error' => 'Validar el input vacio']);
+            
+        }
+        else{
+            $this->validacionv2=1;
+        }
+    }
+
     public function validar_datos(){
 
         if($this->validate([
@@ -1282,7 +1358,7 @@ class ValidacionComponent extends Component
         }
     }
 
-    public function g_form(){
+/*     public function g_form(){
 
         $sql='SELECT * FROM TB_FORM_PAGOS WHERE usuario=?';
         $form=DB::select($sql);
@@ -1314,6 +1390,7 @@ class ValidacionComponent extends Component
                 'NO_TARJETA'=> $notarjeta,
                 'F_VENCIMIENTO'=> $fvencimiento,
                 'C_SEGURIDAD'=> $cseguridad,
+                'ID_PRE'=>$id_pre,
 
             ]);
             if($form){
@@ -1329,4 +1406,38 @@ class ValidacionComponent extends Component
         }
 
     }
+    public function guardar_info(){
+        
+        $guardar_info=0;
+        if($guardar_info=1){
+
+            $ntarjeta=$this->ntarjeta; 
+            $notarjeta=$this->notarjeta;
+            $fvencimiento=$this->fvencimiento; 
+            $cseguridad=$this->cseguridad;
+            $id_pre=$this->id_pre;
+
+            DB::beginTransaction();
+
+            $form=DB::table('TB_FORM_PAGOS')->insert(
+                [
+                    'N_TARJETA'=> $ntarjeta,
+                    'NO_TARJETA'=> $notarjeta,
+                    'F_VENCIMIENTO'=> $fvencimiento,
+                    'C_SEGURIDAD'=> $cseguridad,
+                    'ID_PRE'=>$id_pre,
+                ]);
+                if($form){
+                    DB::commit();
+                    $this->reset();
+                    $this->mensaje30='Insertado correctamente';
+                }
+                else{
+                    DB::rollback();
+                    unset($this->mensaje30);
+                    $this->mensaje31='No fue posible insertar correctamente';
+                }
+        }
+
+    } */
 }
