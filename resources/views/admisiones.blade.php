@@ -84,7 +84,7 @@
                 <p class="text-white">• Datos generales. <br>
                   • No. CUI. <br>
                   • Código Personal.<u>(MINEDUC)</u></a>
-                  <button class="btn-pre text-white" style="background-color:#3a3e7b" data-bs-toggle="modal" data-bs-target="#staticBackdrop" title="Para conocer su código personal de MINEDUC" data-toggle="popover" data-trigger="hover">
+                  <button class="btn-pre text-white font-monospace" style="background-color:#3a3e7b" data-bs-toggle="modal" data-bs-target="#staticBackdrop" title="Para conocer su código personal de MINEDUC" data-toggle="popover" data-trigger="hover">
                                 ?
                   </button>
                   <div class="alert alert-currentColor text-light rounded" style="background-color: #93b92b" role="alert">
