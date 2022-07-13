@@ -88,7 +88,7 @@
                                 ?
                   </button>
                   <div class="alert alert-currentColor text-light rounded" style="background-color: #93b92b" role="alert">
-                    Presiona "?" para obtener tu código único personal del Ministerio de Educación (MINEDUC)
+                    Presiona <b class="font-monospace text-light">"?"</b> para obtener tu código único personal del Ministerio de Educación (MINEDUC)
                   </div>
                 </p>
               </div>
