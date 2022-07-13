@@ -389,7 +389,7 @@
                         Recordar los datos de su tarjeta
                       </label>
                     </div>
-                    <div class="form-check form-check-inline">
+                    <div class="form-check form-check-inlinegiy">
                       <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
                       <label class="form-check-label" for="defaultCheck1">
                         No recordar los datos de su tarjeta
@@ -791,7 +791,7 @@
                          <h3 class="form-label">Visualización de Imagen</h3>
                          <img src="{{$archivo_comprobante->temporaryURL()}}" height="50" weight="50"  alt="...">
                        @endif
-                       {{-- @if($tipo==3)
+                     {{--   @if($tipo==3)
                        <h3 class="form-label">Visualización de PDF</h3>
                          <iframe width="400" height="400" src="/public/pdf/{{$img}}" frameborder="0"></iframe>
                        @endif --}}
