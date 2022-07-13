@@ -85,7 +85,10 @@
                 <h3 class="card-title" style="color:#3a3e7b;"><b>DATOS DEL ESTUDIANTE:</b></h3>
                 <p class="text-white">• Datos generales. <br>
                   • No. CUI. <br>
-                  • Código Personal.
+                  • Código Personal.<u>(MINEDUC)</u></a>
+                  <div class="alert alert-primary" role="alert">
+                    A simple primary alert—check it out!
+                  </div>
                   <button class="btn-pre text-white" style="background-color:#3a3e7b" data-bs-toggle="modal" data-bs-target="#staticBackdrop" title="Para conocer su código personal de MINEDUC" data-toggle="popover" data-trigger="hover">
                                 ?
                   </button>
