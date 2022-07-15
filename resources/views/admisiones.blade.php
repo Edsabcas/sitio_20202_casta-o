@@ -83,13 +83,17 @@
                 <h3 class="card-title" style="color:#3a3e7b;"><b>DATOS DEL ESTUDIANTE:</b></h3>
                 <p class="text-white">• Datos generales. <br>
                   • No. CUI. <br>
-                  • Código Personal.
-                  <button class="btn-pre text-white" style="background-color:#3a3e7b" data-bs-toggle="modal" data-bs-target="#staticBackdrop" title="Para conocer su código personal de MINEDUC" data-toggle="popover" data-trigger="hover">
+                  • Código Personal.<u>(MINEDUC)</u></a>
+                  <button class="btn-pre text-white font-monospace" style="background-color:#3a3e7b" data-bs-toggle="modal" data-bs-target="#staticBackdrop" title="Para conocer su código personal de MINEDUC" data-toggle="popover" data-trigger="hover">
                                 ?
                   </button>
                 </p>
               </div>
             </div>
+          </div>
+          <div class="alert alert-dismissible alert-currentColor text-currentColor rounded" style="background-color: #90b134; color:#ffff" role="alert">
+            <strong>Presiona</strong> <b class="font-monospace text-currentColor" style="color:#ffff">"?"</b> <strong>para obtener tu código único personal del Ministerio de Educación (MINEDUC)</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
           </div>
         </div>
     <div class="footer bg-transparent border-transparent">
@@ -358,6 +362,9 @@
                       </a>
                   </label>
                   <input type='text' placeholder=""  wire:model="codigo_pe_es" class="form-control " required>
+                  <div class="alert alert-currentColor text-light rounded" style="background-color: #a4cb39" role="alert">
+                    Presiona "?" para obtener tu código único personal del Ministerio de Educación (MINEDUC)
+                  </div>
                   @error('codigo_pe_es')
                   <div class="alert alert-warning" role="alert">
                     Pendiente
