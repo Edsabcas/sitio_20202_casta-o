@@ -425,11 +425,6 @@ class ValidacionComponent extends Component
                 else{
                     $this->estado_elevado=0;
                 } 
-                
-
-           
-
-           
         
             }
             else{
@@ -687,19 +682,6 @@ class ValidacionComponent extends Component
                         $this->estado_elevado=0;
                     } 
                    
-                
-               
-    
-               
-
-                
-    
-    
-                $inscripcion_datos=DB::table('TB_PRE_INFO')->insert(
-                    [
-                        
-                    ]
-                    );
     
                 }
                 else{
@@ -1252,6 +1234,7 @@ class ValidacionComponent extends Component
             $this->quien_encargado($this->quien_encargado1);
 
             $this->validacionv2=1;
+
             
             if($this->quien_encargado1==1){
                 $codigo=$this->id_pre_ins;
