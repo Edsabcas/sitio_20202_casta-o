@@ -10,7 +10,7 @@ class InsComponent extends Component
 {
     public $gradoin,$nombre_es,$f_nacimiento_es,$genero,$cui_es,$codigo_pe_es,$nac_es,$lug_nac_es,$tel_es,$cel_es,$direccion_es,$religion_es;
     public $nombre_en,$fnacimiento_en,$dpi_en,$extentido_en,$es_civil_en,$direccion_en,$tel_casa_en,$cel_en,$correo_en,$religion_en;
-    public $a,$mensaje,$gradose,$correo_en2,$tipo,$profesion_en;
+    public $a,$mensaje,$gradose,$correo_en2,$tipo,$profesion_en,$acordeones;
     public $val,$val1,$gestion,$errorfecha,$tipo_ins;
     public function render()
     {
@@ -53,6 +53,7 @@ class InsComponent extends Component
     }
     public function va1l(){
         $this->val=1;
+        $this->acordeones=1;
         unset($this->mensaje);
     }
     public function selgrado($id,$gra){
@@ -223,6 +224,7 @@ class InsComponent extends Component
             );
 
                    if($pre){
+                     
 
              
             $subject = "No responder (Notificación Pre-Ins.Castaño)";
@@ -256,7 +258,11 @@ class InsComponent extends Component
 
             $this->mensaje=1;
             $this->val=null;
-            $this->a=null;            
+            $this->a=null;
+            $this->tipo_ins=null;
+            $this->acordeones=2;
+            
+                    
         }
         else{
             //$this->reset();
