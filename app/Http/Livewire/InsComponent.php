@@ -255,14 +255,7 @@ class InsComponent extends Component
             }
             DB::commit();  
             $this->reset();
-
             $this->mensaje=1;
-            $this->val=null;
-            $this->a=null;
-            $this->tipo_ins=null;
-            $this->acordeones=2;
-            
-                    
         }
         else{
             //$this->reset();

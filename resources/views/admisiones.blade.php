@@ -120,7 +120,7 @@ v:{{$val}}
 <h2 class="card-title" style="color:#3a3e7b;" data-aos="fade-up">
   Ingrese la siguiente información importante para iniciar su proceso de inscripción</h2>
 
-@if($acordeones==1)
+@if($acordeones!=null && $acordeones!="" && $acordeones==1)
 <div>
   <div wire:ignore.self class="accordion" id="accordionPanelsStayOpenExample2">
     <div style="border-radius: 60px 60px 60px 60px;" class="accordion-item">
