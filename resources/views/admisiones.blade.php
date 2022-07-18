@@ -9,9 +9,10 @@
     <br>
   </section>
 </center>
-
-<h4>{{$val}} a</h4>
-
+<h5> a:{{$a }} <br>
+c:{{$acordeones}} <br>
+v:{{$val}}
+</h5>
 <div class="container col-12">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
@@ -24,7 +25,7 @@
   $('#valpedidos').modal('show');
   });
   </script>
-</div>
+
 <!-- Modal -->
 <div  wire:ignore.self class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
 <div class="modal-dialog modal-lg">
@@ -86,15 +87,16 @@
                 <p class="text-white">• Datos generales. <br>
                   • No. CUI. <br>
                   • Código Personal.<u>(MINEDUC)</u></a>
-                  <div class="alert alert-primary" role="alert">
-                    A simple primary alert—check it out!
-                  </div>
-                  <button class="btn-pre text-white" style="background-color:#3a3e7b" data-bs-toggle="modal" data-bs-target="#staticBackdrop" title="Para conocer su código personal de MINEDUC" data-toggle="popover" data-trigger="hover">
+                  <button class="btn-pre text-white font-monospace" style="background-color:#3a3e7b" data-bs-toggle="modal" data-bs-target="#staticBackdrop" title="Para conocer su código personal de MINEDUC" data-toggle="popover" data-trigger="hover">
                                 ?
                   </button>
                 </p>
               </div>
             </div>
+          </div>
+          <div class="alert alert-dismissible alert-currentColor text-currentColor rounded" style="background-color: #90b134; color:#ffff" role="alert">
+            <strong>Presiona</strong> <b class="font-monospace text-currentColor" style="color:#ffff">"?"</b> <strong>para obtener tu código único personal del Ministerio de Educación (MINEDUC)</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
           </div>
         </div>
     <div class="footer bg-transparent border-transparent">
@@ -114,12 +116,13 @@
   });
   </script>
 
-
+@else
 <br>
 <h2 class="card-title" style="color:#3a3e7b;" data-aos="fade-up">
   Ingrese la siguiente información importante para iniciar su proceso de inscripción</h2>
 
-@elseif($val==1)
+@if($acordeones==1)
+<div>
   <div wire:ignore.self class="accordion" id="accordionPanelsStayOpenExample2">
     <div style="border-radius: 60px 60px 60px 60px;" class="accordion-item">
       <h2 style="border-radius: 60px 60px 60px 60px;" class="accordion-header" id="panelsStayOpen-headingtipo">
@@ -170,7 +173,7 @@
  </div>
 
 
-  @if($tipo_ins!=null)
+ @if($tipo_ins!=null)
   <div wire:ignore.self class="accordion" id="accordionPanelsStayOpenExample2">
     <div style="border-radius: 60px 60px 60px 60px;" class="accordion-item">
       <h2 style="border-radius: 60px 60px 60px 60px;" class="accordion-header" id="panelsStayOpen-headingtipo">
@@ -218,6 +221,11 @@
   </div>
  </div>
    @endif
+</div>
+@elseif($acordeones==2)
+<h1>funciono</h1>
+@endif
+
 @if($tipo!=null && $tipo!="")
 <div wire:ignore.self class="accordion" id="accordionPanelsStayOpenExample">
   <div style="border-radius: 60px 60px 60px 60px;" class="accordion-item">
@@ -280,7 +288,7 @@
 <div wire:ignore.self class="accordion" id="accordionPanelsStayOpenExample2">
   <div style="border-radius: 60px 60px 60px 60px;" class="accordion-item">
     <h2 style="border-radius: 60px 60px 60px 60px;" class="accordion-header" id="panelsStayOpen-headingTwo">
-      @if($a!=null && $a==2)
+      @if($a!=null && $a>=7)
       <button class="accordion-button collapsed" style="background-color:#d6e7a6; border:6px solid #a4cb39; border-radius: 60px 60px 60px 60px;" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
         <h4 class="font-weight-bolder">  <b>Datos del Estudiante:</b>   </h4>
       </button>
@@ -319,7 +327,6 @@
                        </div>
                     
                       @endif
-                  </div>
                   </div>
                   
                   <div class="col-md">
@@ -364,6 +371,9 @@
                       </a>
                   </label>
                   <input type='text' placeholder=""  wire:model="codigo_pe_es" class="form-control " required>
+                  <div class="alert alert-currentColor text-light rounded" style="background-color: #a4cb39" role="alert">
+                    Presiona "?" para obtener tu código único personal del Ministerio de Educación (MINEDUC)
+                  </div>
                   @error('codigo_pe_es')
                   <div class="alert alert-warning" role="alert">
                     Pendiente
@@ -437,7 +447,7 @@
   @endif
 
 
-  @if($gradoin!=null && $a==2)
+  @if($gradoin!=null && $a==7)
   <div class="accordion" id="accordionPanelsStayOpenExample3">
   <div style="border-radius: 60px 60px 60px 60px;" class="accordion-item">
     <h2  style="border-radius: 60px 60px 60px 60px;" class="accordion-header" id="panelsStayOpen-headingThree">
@@ -619,10 +629,9 @@
 
 
   @endif
-  @endif
 </div>
 
-
+@endif
 
 <hr>
 <style type="text/css">
