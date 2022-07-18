@@ -9,7 +9,10 @@
     <br>
   </section>
 </center>
-
+<h5> a:{{$a }} <br>
+c:{{$acordeones}} <br>
+v:{{$val}}
+</h5>
 <div class="container col-12">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
@@ -117,7 +120,8 @@
 <h2 class="card-title" style="color:#3a3e7b;" data-aos="fade-up">
   Ingrese la siguiente información importante para iniciar su proceso de inscripción</h2>
 
-  
+@if($acordeones==1)
+<div>
   <div wire:ignore.self class="accordion" id="accordionPanelsStayOpenExample2">
     <div style="border-radius: 60px 60px 60px 60px;" class="accordion-item">
       <h2 style="border-radius: 60px 60px 60px 60px;" class="accordion-header" id="panelsStayOpen-headingtipo">
@@ -165,14 +169,14 @@
       </div>
     </div>
   </div>
-</div>
+ </div>
 
 
-@if($tipo_ins!=null)
+ @if($tipo_ins!=null)
   <div wire:ignore.self class="accordion" id="accordionPanelsStayOpenExample2">
     <div style="border-radius: 60px 60px 60px 60px;" class="accordion-item">
       <h2 style="border-radius: 60px 60px 60px 60px;" class="accordion-header" id="panelsStayOpen-headingtipo">
-        @if($a!=null && $a==5)
+        @if($a!=null && $a>=6)
         <button class="accordion-button collapsed" style="background-color:#d6e7a6; border:6px solid #a4cb39; border-radius: 60px 60px 60px 60px;" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapsemodalidad" aria-expanded="false" aria-controls="panelsStayOpen-collapsemodalidad">
           <h4 class="font-weight-bolder">  <b>Modalidad de estudio en el ciclo escolar 2023: 
           @if($tipo!=null)
@@ -214,8 +218,13 @@
       </div>
     </div>
   </div>
-</div>
+ </div>
    @endif
+</div>
+@elseif($acordeones==2)
+<h1>funciono</h1>
+@endif
+
 @if($tipo!=null && $tipo!="")
 <div wire:ignore.self class="accordion" id="accordionPanelsStayOpenExample">
   <div style="border-radius: 60px 60px 60px 60px;" class="accordion-item">
@@ -278,7 +287,7 @@
 <div wire:ignore.self class="accordion" id="accordionPanelsStayOpenExample2">
   <div style="border-radius: 60px 60px 60px 60px;" class="accordion-item">
     <h2 style="border-radius: 60px 60px 60px 60px;" class="accordion-header" id="panelsStayOpen-headingTwo">
-      @if($a!=null && $a==2)
+      @if($a!=null && $a>=7)
       <button class="accordion-button collapsed" style="background-color:#d6e7a6; border:6px solid #a4cb39; border-radius: 60px 60px 60px 60px;" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
         <h4 class="font-weight-bolder">  <b>Datos del Estudiante:</b>   </h4>
       </button>
@@ -437,7 +446,7 @@
   @endif
 
 
-  @if($gradoin!=null && $a==2)
+  @if($gradoin!=null && $a==7)
   <div class="accordion" id="accordionPanelsStayOpenExample3">
   <div style="border-radius: 60px 60px 60px 60px;" class="accordion-item">
     <h2  style="border-radius: 60px 60px 60px 60px;" class="accordion-header" id="panelsStayOpen-headingThree">
