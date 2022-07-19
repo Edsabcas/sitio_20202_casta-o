@@ -9,10 +9,6 @@
     <br>
   </section>
 </center>
-<h5> a:{{$a }} <br>
-c:{{$acordeones}} <br>
-v:{{$val}}
-</h5>
 <div class="container col-12">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
@@ -118,12 +114,12 @@ v:{{$val}}
 
 @else
 <br>
-<h2 class="card-title" style="color:#3a3e7b;" data-aos="fade-up">
+<h2 class="card-title" style="color:#3a3e7b;">
   Ingrese la siguiente información importante para iniciar su proceso de inscripción</h2>
 
 @if($acordeones!=null && $acordeones!="" && $acordeones==1)
 <div>
-  <div wire:ignore.self class="accordion" id="accordionPanelsStayOpenExample2">
+  <div wire:ignore.self class="accordion" id="accordionPanelsStayOpenExample8">
     <div style="border-radius: 60px 60px 60px 60px;" class="accordion-item">
       <h2 style="border-radius: 60px 60px 60px 60px;" class="accordion-header" id="panelsStayOpen-headingtipo">
         @if($a!=null && $a>=5)
@@ -165,7 +161,8 @@ v:{{$val}}
                         <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
                         
                           <span>Debe de seleccionar</span>
-                         </div> @enderror
+                         </div>
+               @enderror
       </div>
       </div>
     </div>
@@ -174,7 +171,7 @@ v:{{$val}}
 
 
  @if($tipo_ins!=null && $tipo_ins!="")
-  <div wire:ignore.self class="accordion" id="accordionPanelsStayOpenExample2">
+  <div wire:ignore.self class="accordion" id="accordionPanelsStayOpenExample9">
     <div style="border-radius: 60px 60px 60px 60px;" class="accordion-item">
       <h2 style="border-radius: 60px 60px 60px 60px;" class="accordion-header" id="panelsStayOpen-headingtipo">
         @if($a!=null && $a>=6)
