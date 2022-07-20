@@ -57,7 +57,7 @@
       </svg>
       <div class="content">
         <h2 class="category text-center text-white"><b>¡IMPORTANTE!</b></h2>
-        <h4 class="description py-3  font-size: 35px" style="color:white"> Toma en cuenta que debes tener los siguientes datos para iniciar tu proceso de pre-inscripción:</h4>
+        <h4 class="description py-3  font-size: 35px" style="color:white"> Tome en cuenta que debe tener los siguientes datos para iniciar su proceso de inscripción:</h4>
         
         <div class="row mx-auto justify-content-evenly">
           <div class="col-sm-6">
@@ -88,7 +88,7 @@
                                 ?
                   </button>
                   <div class="alert alert-currentColor text-light rounded" style="background-color: #93b92b" role="alert">
-                    Presiona "?" para obtener tu código único personal del Ministerio de Educación (MINEDUC)
+                    Presione "?" para obtener su código único personal del Ministerio de Educación (MINEDUC)
                   </div>
                 </p>
               </div>
@@ -97,7 +97,7 @@
         </div>
     <div class="footer bg-transparent border-transparent">
       <div class="d-grid gap-3 col-8 mx-auto">
-        <button class="btn btn-pre text-white" type="button" wire:click="va1l()">Pre-Inscribir</button>
+        <button class="btn btn-pre text-white" type="button" wire:click="va1l()">Inscribir</button>
       </div>
     </div>
     <br>
@@ -343,8 +343,12 @@
       
                   <div class="row g-3">
                     <div class="col-md">
+                      <br>
                     <label for="inputDireccion" style="font-size: 15px; color:#000000;">CUI:</label>
                     <input type='number' placeholder=""  wire:model="cui_es" class="form-control " required>
+                    <div class="alert alert-currentColor text-light rounded" style="background-color: #a4cb39" role="alert">
+                      Su CUI o código único de identificación se encuentra en la parte superior de su partida de nacimiento.
+                    </div>
                     @error('cui_es')
                     <div class="alert alert-warning" role="alert">
                      Pendiente
@@ -361,8 +365,8 @@
                       </a>
                   </label>
                   <input type='text' placeholder=""  wire:model="codigo_pe_es" class="form-control " required>
-                  <div class="alert alert-currentColor text-light rounded" style="background-color: #a4cb39a4" role="alert">
-                    Presiona "?" para obtener tu código único personal del Ministerio de Educación (MINEDUC)
+                  <div class="alert alert-currentColor text-light rounded" style="background-color: #a4cb39" role="alert">
+                    Presione "?" para obtener su código único personal del Ministerio de Educación (MINEDUC)
                   </div>
                   @error('codigo_pe_es')
                   <div class="alert alert-warning" role="alert">

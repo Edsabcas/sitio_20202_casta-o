@@ -68,10 +68,10 @@
                       <a class="nav-item nav-link enojoy2-css2" href="/adm" style="font-size: 20px; color: #000000" style="font-family: Century Gothic"><b>Admisiones 2023</b></a>
                       <li class="nav-item dropdown enojoy2-css2">
                          <a class="nav-item nav-link dropdown-toggle enojoy2-css2" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-size: 20px; color: #000000" style="font-family: Century Gothic">
-                          <b>Validar Gestión</b>
+                          <b>Validar</b>
                          </a>
                          <ul class="dropdown-menu btn-outline-light enojoy2-css2"  aria-labelledby="navbarDropdown">
-                           <li><a class="dropdown-item enojoy2-css2" href="{{ url('/val') }}" style="color: #a000000" style="font-family: Century Gothic">Pre-Inscripción</a></li>
+                           <li><a class="dropdown-item enojoy2-css2" href="{{ url('/val') }}" style="color: #a000000" style="font-family: Century Gothic">Inscripción</a></li>
                            <li><a class="dropdown-item enojoy2-css2" href="{{ url('/conducta') }}" style="color: #a000000" style="font-family: Century Gothic">Carta de Conducta</a></li>
                            <li><a class="dropdown-item enojoy2-css2" href="{{ url('/soportecnico') }}" style="color: #a000000" style="font-family: Century Gothic">Soporte Técnico</a></li>
                            <li><a class="dropdown-item enojoy2-css2" href="{{ url('/restablecerusuario') }}" style="color: #a000000" style="font-family: Century Gothic">Restablecer Usuario</a></li>
