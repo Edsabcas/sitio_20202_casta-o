@@ -401,6 +401,8 @@ class ValidacionComponent extends Component
                 'N_CONDUCTOR_AJ'=>$this->nombre_conductor,
                 'DPI_CONDUCTOR_AJ'=>$this->dpi_conductor,
                 'NUM_CONDUCTOR_AJ'=>$this->n_conductor,
+                "CODIGO_FAMILIA"=>$this->codigo_familia3,
+                "NOMBRE_FAMILIA"=>$this->codigo_familia3,
 
                 ]
             );
@@ -423,44 +425,7 @@ class ValidacionComponent extends Component
                 else{
                     $this->estado_elevado=0;
                 } 
-                $codigo=$this->id_pre_ins;
-                $sql='SELECT * FROM TB_PRE_INFO WHERE ID_PRE=?';
-                $codigo_familia=DB::select($sql, array($codigo)); 
-                foreach($codigo_familia as $cod)
-            {
-                $this->nombrepadre=$cod->NOMB_PADRE;
-                $this->nombre_madre=$cod->NOMB_MADRE;
-            }
-            $this->fecha_codigo=date('Y-m-d');
-            $codigo_familia1=explode(" ", $this->nombrepadre);
-            $codigo_familia2=explode(" ", $this->nombre_madre);
-            $fecha_codigo1=explode("-", $this->fecha_codigo);
-            $codigo_familia4= count($codigo_familia1);
-            $codigo_familia5= count($codigo_familia2);
-
-
-            if($codigo_familia4==3 && $codigo_familia5==3){
-                $this->codigo_familia3=$codigo_familia1[1].".".$codigo_familia2[1].".".$fecha_codigo1[0];
-
-            }
-
-            elseif($codigo_familia4==4 && $codigo_familia5==4 ){
-                $this->codigo_familia3=$codigo_familia1[2].".".$codigo_familia2[2].".".$fecha_codigo1[0];
-
-            }
-
-            elseif($codigo_familia4==5 && $codigo_familia5==5 ){
-                $this->codigo_familia3=$codigo_familia1[3].".".$codigo_familia2[3].".".$fecha_codigo1[0];
-            }
-
-
-            $inscripcion_datos=DB::table('TB_PRE_INFO')->insert(
-                [
-                    "CODIGO_FAMILIA"=>$this->codigo_familia3,
-                    "NOMBRE_FAMILIA"=>$this->codigo_familia3,
-                ]
-                );
-
+        
             }
             else{
                 DB::rollback();
@@ -692,6 +657,8 @@ class ValidacionComponent extends Component
                 'N_CONDUCTOR_AJ'=>$this->nombre_conductor,
                 'DPI_CONDUCTOR_AJ'=>$this->dpi_conductor,
                 'NUM_CONDUCTOR_AJ'=>$this->n_conductor,
+                "CODIGO_FAMILIA"=>$this->codigo_familia3,
+                "NOMBRE_FAMILIA"=>$this->codigo_familia3,
                 
                     ]
                 );
@@ -714,43 +681,7 @@ class ValidacionComponent extends Component
                     else{
                         $this->estado_elevado=0;
                     } 
-                    $codigo=$this->id_pre_ins;
-                    $sql='SELECT * FROM TB_PRE_INFO WHERE ID_PRE=?';
-                    $codigo_familia=DB::select($sql, array($codigo)); 
-                    foreach($codigo_familia as $cod)
-                {
-                    $this->nombrepadre=$cod->NOMB_PADRE;
-                    $this->nombre_madre=$cod->NOMB_MADRE;
-                }
-                $this->fecha_codigo=date('Y-m-d');
-                $codigo_familia1=explode(" ", $this->nombrepadre);
-                $codigo_familia2=explode(" ", $this->nombre_madre);
-                $fecha_codigo1=explode("-", $this->fecha_codigo);
-                $codigo_familia4= count($codigo_familia1);
-                $codigo_familia5= count($codigo_familia2);
-    
-    
-                if($codigo_familia4==3 && $codigo_familia5==3){
-                    $this->codigo_familia3=$codigo_familia1[1].".".$codigo_familia2[1].".".$fecha_codigo1[0];
-    
-                }
-    
-                elseif($codigo_familia4==4 && $codigo_familia5==4 ){
-                    $this->codigo_familia3=$codigo_familia1[2].".".$codigo_familia2[2].".".$fecha_codigo1[0];
-    
-                }
-    
-                elseif($codigo_familia4==5 && $codigo_familia5==5 ){
-                    $this->codigo_familia3=$codigo_familia1[3].".".$codigo_familia2[3].".".$fecha_codigo1[0];
-                }
-    
-    
-                $inscripcion_datos=DB::table('TB_PRE_INFO')->insert(
-                    [
-                        "CODIGO_FAMILIA"=>$this->codigo_familia3,
-                        "NOMBRE_FAMILIA"=>$this->codigo_familia3,
-                    ]
-                    );
+                   
     
                 }
                 else{
@@ -1005,7 +936,8 @@ class ValidacionComponent extends Component
                 'N_CONDUCTOR_AJ'=>$this->nombre_conductor,
                 'DPI_CONDUCTOR_AJ'=>$this->dpi_conductor,
                 'NUM_CONDUCTOR_AJ'=>$this->n_conductor,
-                    
+                "CODIGO_FAMILIA"=>$this->codigo_familia3,
+                "NOMBRE_FAMILIA"=>$this->codigo_familia3,
                         ]
                     );
                     if($inscripcion_datos){
@@ -1027,43 +959,8 @@ class ValidacionComponent extends Component
                         else{
                             $this->estado_elevado=0;
                         } 
-                        $codigo=$this->id_pre_ins;
-                        $sql='SELECT * FROM TB_PRE_INFO WHERE ID_PRE=?';
-                        $codigo_familia=DB::select($sql, array($codigo)); 
-                        foreach($codigo_familia as $cod)
-                    {
-                        $this->nombrepadre=$cod->NOMB_PADRE;
-                        $this->nombre_madre=$cod->NOMB_MADRE;
-                    }
-                    $this->fecha_codigo=date('Y-m-d');
-                    $codigo_familia1=explode(" ", $this->nombrepadre);
-                    $codigo_familia2=explode(" ", $this->nombre_madre);
-                    $fecha_codigo1=explode("-", $this->fecha_codigo);
-                    $codigo_familia4= count($codigo_familia1);
-                    $codigo_familia5= count($codigo_familia2);
-        
-        
-                    if($codigo_familia4==3 && $codigo_familia5==3){
-                        $this->codigo_familia3=$codigo_familia1[1].".".$codigo_familia2[1].".".$fecha_codigo1[0];
-        
-                    }
-        
-                    elseif($codigo_familia4==4 && $codigo_familia5==4 ){
-                        $this->codigo_familia3=$codigo_familia1[2].".".$codigo_familia2[2].".".$fecha_codigo1[0];
-        
-                    }
-        
-                    elseif($codigo_familia4==5 && $codigo_familia5==5 ){
-                        $this->codigo_familia3=$codigo_familia1[3].".".$codigo_familia2[3].".".$fecha_codigo1[0];
-                    }
-        
-        
-                    $inscripcion_datos=DB::table('TB_PRE_INFO')->insert(
-                        [
-                            "CODIGO_FAMILIA"=>$this->codigo_familia3,
-                            "NOMBRE_FAMILIA"=>$this->codigo_familia3,
-                        ]
-                        );
+                       
+                
         
                     }
                     else{
@@ -1334,7 +1231,123 @@ class ValidacionComponent extends Component
             
         }
         else{
+            $this->quien_encargado($this->quien_encargado1);
+
             $this->validacionv2=1;
+
+            
+            if($this->quien_encargado1==1){
+                $codigo=$this->id_pre_ins;
+                $sql='SELECT * FROM TB_PRE_INFO WHERE ID_PRE=?';
+                $codigo_familia=DB::select($sql, array($codigo)); 
+                foreach($codigo_familia as $cod)
+            {
+                $this->nombrepadre=$cod->NOMB_PADRE;
+            }
+            $this->fecha_codigo=date('Y-m-d');
+            $codigo_familia1=explode(" ", $this->nombrepadre);
+            $fecha_codigo1=explode("-", $this->fecha_codigo);
+            $codigo_familia4= count($codigo_familia1);
+
+
+            if($codigo_familia4==6 ){
+                $this->codigo_familia3=$codigo_familia1[4].".".$codigo_familia1[5].".".$fecha_codigo1[0];
+            }
+
+            elseif($codigo_familia4==5 ){
+                $this->codigo_familia3=$codigo_familia1[3].".".$codigo_familia1[4].".".$fecha_codigo1[0];
+            }
+
+            elseif($codigo_familia4==4 ){
+                $this->codigo_familia3=$codigo_familia1[2].".".$codigo_familia1[3].".".$fecha_codigo1[0];
+
+            }
+
+            elseif($codigo_familia4==3 ){
+                $this->codigo_familia3=$codigo_familia1[1].".".$codigo_familia1[2].".".$fecha_codigo1[0];
+
+            }
+            elseif($codigo_familia4==2){
+                $this->codigo_familia3=$codigo_familia1[0].".".$codigo_familia1[1].".".$fecha_codigo1[0];
+
+            }
+            }
+        
+            elseif($this->quien_encargado1==2){
+                $codigo=$this->id_pre_ins;
+                $sql='SELECT * FROM TB_PRE_INFO WHERE ID_PRE=?';
+                $codigo_familia=DB::select($sql, array($codigo)); 
+                foreach($codigo_familia as $cod)
+            {
+                $this->nombre_madre=$cod->NOMB_MADRE;
+            }
+            $this->fecha_codigo=date('Y-m-d');
+            $codigo_familia2=explode(" ", $this->nombre_madre);
+            $fecha_codigo1=explode("-", $this->fecha_codigo);
+            $codigo_familia5= count($codigo_familia2);
+
+        
+            if($codigo_familia5==6 ){
+                $this->codigo_familia3=$codigo_familia2[4].".".$codigo_familia2[5].".".$fecha_codigo1[0];
+            }
+
+            elseif($codigo_familia5==5 ){
+                $this->codigo_familia3=$codigo_familia2[3].".".$codigo_familia2[4].".".$fecha_codigo1[0];
+            }
+
+            elseif($codigo_familia5==4){
+                $this->codigo_familia3=$codigo_familia2[2].".".$codigo_familia2[3].".".$fecha_codigo1[0];
+
+            }
+
+            elseif($codigo_familia5==3){
+                $this->codigo_familia3=$codigo_familia2[1].".".$codigo_familia2[2].".".$fecha_codigo1[0];
+
+            }
+            elseif($codigo_familia5==2){
+                $this->codigo_familia3=$codigo_familia2[0].".".$codigo_familia2[1].".".$fecha_codigo1[0];
+
+            }
+            }
+            
+            elseif($this->quien_encargado1==3){
+                $codigo=$this->id_pre_ins;
+                $sql='SELECT * FROM TB_PRE_INFO WHERE ID_PRE=?';
+                $codigo_familia=DB::select($sql, array($codigo)); 
+                foreach($codigo_familia as $cod)
+            {
+                $this->nombre_encargado2=$cod->NOMB_ENCARGADO;
+            }
+            $this->fecha_codigo=date('Y-m-d');
+            $codigo_familia1=explode(" ", $this->nombre_encargado2);
+            $fecha_codigo1=explode("-", $this->fecha_codigo);
+            $codigo_familia4= count($codigo_familia1);
+
+            if($codigo_familia4==6 ){
+                $this->codigo_familia3=$codigo_familia1[4].".".$codigo_familia1[5].".".$fecha_codigo1[0];
+            }
+
+            elseif($codigo_familia4==5 ){
+                $this->codigo_familia3=$codigo_familia1[3].".".$codigo_familia1[4].".".$fecha_codigo1[0];
+            }
+
+            elseif($codigo_familia4==4 ){
+                $this->codigo_familia3=$codigo_familia1[2].".".$codigo_familia1[3].".".$fecha_codigo1[0];
+
+            }
+
+            elseif($codigo_familia4==3 ){
+                $this->codigo_familia3=$codigo_familia1[1].".".$codigo_familia1[2].".".$fecha_codigo1[0];
+
+            }
+            elseif($codigo_familia4==2 ){
+                $this->codigo_familia3=$codigo_familia1[0].".".$codigo_familia1[1].".".$fecha_codigo1[0];
+
+            }
+
+
+            }
+
         }
     }
 
