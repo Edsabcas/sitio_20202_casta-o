@@ -263,7 +263,7 @@
                       </div>
                       <div class="row">
                           <div class="col-md-6">
-                              <strong><label  for="Labelnombrepadre" class="form-label">Número de casa</label></strong>
+                              <strong><label  for="Labelnombrepadre" class="form-label">Teléfono o celular de casa</label></strong>
                               <input  type="number" class="form-control"  wire:model="telefono_padre">
                             </div>
                            
@@ -532,7 +532,7 @@
                 </div>
                 
                 <div class="col-md-6">
-                  <strong><label  for="Labelnombrepadre" class="form-label">Número de casa</label></strong>
+                  <strong><label  for="Labelnombrepadre" class="form-label">Teléfono o celular de casa</label></strong>
                   <input  type="number" class="form-control"  wire:model="telefono_madre">
                 </div>
 
@@ -888,7 +888,7 @@
             </div>
             <div class="row">
                 <div class="col-md-6">
-                    <strong><label  for="Labelnombreencargado" class="form-label">Número de casa</label></strong>
+                    <strong><label  for="Labelnombreencargado" class="form-label">Teléfono o celular de casa</label></strong>
                     <input  type="number" class="form-control"  wire:model="telefono_encargado2">
                   </div>
              
@@ -1173,7 +1173,7 @@
           
     
         <div class="tab">
-          <strong><label for="exampleInputPassword1" class="form-label">¿El alumno cuenta con segurado?</label></strong>
+          <strong><label for="exampleInputPassword1" class="form-label">¿El alumno cuenta con seguro médico?</label></strong>
             <center>
               <div style="width: 12rem;">
                 <div class="form-check form-check-inline">
@@ -1200,7 +1200,7 @@
                           
                   <div class="col-md-6">
                       <strong><label  for="Labelcarneseguro" class="form-label">Número del carné de seguro</label></strong>
-                        <input type="number" class="form-control"  wire:model="carne_seguro">
+                        <input type="text" class="form-control"  wire:model="carne_seguro">
                   </div>
                 </div>
                 <div class="col-md-6">
