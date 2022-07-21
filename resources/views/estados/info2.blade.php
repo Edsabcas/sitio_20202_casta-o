@@ -1112,7 +1112,7 @@
                     </div>
                     <div class="modal-footer">
                       <button class="btn btn-secondary" style="border-radius: 12px;" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Regresar</button>
-                      <button type="button" class="btn btn-pre2" wire:click="update_comprobante_p()" data-bs-dismiss="modal">Guardar</button>
+                      <button type="button" class="btn btn-pre2" wire:click="update_comprobante_p()" data-bs-dismiss="modal">Si</button>
                     </div>
                   </div>
                 </div>
