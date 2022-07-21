@@ -1,7 +1,7 @@
 <center>
   <section class="slider_section">
     <div id="main_slider" class="carousel slide banner-main" data-ride="carousel">
-          <img class="first-slide" src="{{ asset('images/banner-iniciopre (1).png') }}" alt="First slide">
+          <img class="first-slide" src="{{asset('images/inicioinscrip.png')}}" alt="First slide">
     </div>
     <br>
     <br>
@@ -86,9 +86,6 @@
                   <button class="btn-pre text-white font-monospace" style="background-color:#3a3e7b" data-bs-toggle="modal" data-bs-target="#staticBackdrop" title="Para conocer su código personal de MINEDUC" data-toggle="popover" data-trigger="hover">
                                 ?
                   </button>
-                  <div class="alert alert-currentColor text-light rounded" style="background-color: #93b92b" role="alert">
-                    Presione "?" para obtener su código único personal del Ministerio de Educación (MINEDUC)
-                  </div>
                 </p>
               </div>
             </div>
