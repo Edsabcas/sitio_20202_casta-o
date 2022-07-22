@@ -55,12 +55,20 @@ class ValidacionComponent extends Component
                 $this->img=$archivo_comprobante;
                 $this->archivo_comprobante->storeAS('images/temporalpdf/', $this->img,'public_up');
             }
+            elseif($this->archivo_comprobante->getClientOriginalExtension()=="docx" ){
+                $archivo_comprobante = "docx".time().".".$this->archivo_comprobante->getClientOriginalExtension();
+                $this->img=$archivo_comprobante;
+                $this->archivo_comprobante->storeAS('images/comprobante2022/', $this->img,'public_up');
+            }
 
             if($this->archivo_comprobante->getClientOriginalExtension()=="jpg" or $this->archivo_comprobante->getClientOriginalExtension()=="png" or $this->archivo_comprobante->getClientOriginalExtension()=="jpeg"){
                 $this->tipo=1;
             }
             elseif($this->archivo_comprobante->getClientOriginalExtension()=="pdf"){
                 $this->tipo=2;
+            }
+            elseif($this->archivo_comprobante->getClientOriginalExtension()=="docx"){
+                $this->tipo=3;
             }
         }
 
@@ -1035,7 +1043,8 @@ class ValidacionComponent extends Component
             }else{
                 
                 $ruta="C:/xampp/htdocs/repo_clon_casys/casys-pro-2.0/public/imagen/comprobantes2022/";
-                $rutapdf="C:/xampp/htdocs/repo_clon_casys/casys-pro-2.0/public/imagen/comprobantes2022 ";
+                $rutapdf="C:/xampp/htdocs/repo_clon_casys/casys-pro-2.0/public/imagen/comprobantes2022/";
+                $rutadocx="C:/xampp/htdocs/repo_clon_casys/casys-pro-2.0/public/imagen/comprobantes2022/";
                 $archivo_comprobante="";
                 if($this->archivo_comprobante!=null){
                     if($this->archivo_comprobante->getClientOriginalExtension()=="jpg" or $this->archivo_comprobante->getClientOriginalExtension()=="png" or $this->archivo_comprobante->getClientOriginalExtension()=="jpeg"){
@@ -1050,6 +1059,12 @@ class ValidacionComponent extends Component
                         copy($this->archivo_comprobante->getRealPath(),$rutapdf.$this->img);
                         $this->tipo=2;
                         }
+                        elseif($this->archivo_comprobante->getClientOriginalExtension()=="docx"){
+                            $archivo_comprobante = "docx".time().".".$this->archivo_comprobante->getClientOriginalExtension();
+                            $this->img=$archivo_comprobante;
+                            copy($this->archivo_comprobante->getRealPath(),$rutadocx.$this->img);
+                            $this->tipo=3;
+                            }
                 }
                 $id_pre=$this->id_pre;
                 if($this->fpago!=null && $this->fpago!=""){
