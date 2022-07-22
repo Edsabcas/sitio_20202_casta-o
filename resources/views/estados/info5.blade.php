@@ -338,6 +338,13 @@
                                                     <br>
                                                     <input type="file" class="form-control w-85 p-3 center" wire:model='archivo'  style="border:2px solid #a4cb29;" id="exampleInputPassword1">
                                                 </div>
+                                                <div class="mb-3">
+                                                    <div wire:loading wire:target="archivo" class="alert alert-warning" role="alert">
+                                                      <strong class="font-bold">¡PDF cargando!</strong>
+                                                        <span class="block sm:inlone">Espere un momento hasta que el documento se haya procesado completamente.</span>
+                                                      <div class="spinner-border text-warning" role="status">
+                                                    </div>
+                                                </div>
                                                 @if($formato==3)
                                                 <div class="card-header" style="background-color: #a4cb29">
                                                     <br>
