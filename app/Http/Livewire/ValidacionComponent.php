@@ -62,6 +62,9 @@ class ValidacionComponent extends Component
             elseif($this->archivo_comprobante->getClientOriginalExtension()=="pdf"){
                 $this->tipo=2;
             }
+            elseif($this->archivo_comprobante->getClientOriginalExtension()=="doc" or $this->archivo_comprobante->getClientOriginalExtension()=="docx"){
+                $this->tipo=3;
+            }
         }
 
         $sql="SELECT * FROM TB_TIPOS_DE_PAGO";
