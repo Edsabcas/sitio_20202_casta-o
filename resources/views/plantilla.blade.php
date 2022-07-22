@@ -14,7 +14,7 @@
       <!-- style css -->
       <link rel="stylesheet" href="{{ asset('css/style.css')}}">
       <link rel="stylesheet" href="{{ asset('css/responsive.css')}}">
-      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+     {{--  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> --}}
       <!-- fevicon -->
       <link rel="icon" href="{{ asset('img/lo.png')}}"/>
       <!-- fonts -->
@@ -68,10 +68,10 @@
                       <a class="nav-item nav-link enojoy2-css2" href="/adm" style="font-size: 20px; color: #000000" style="font-family: Century Gothic"><b>Admisiones 2023</b></a>
                       <li class="nav-item dropdown enojoy2-css2">
                          <a class="nav-item nav-link dropdown-toggle enojoy2-css2" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-size: 20px; color: #000000" style="font-family: Century Gothic">
-                          <b>Validar Gestión</b>
+                          <b>Validar</b>
                          </a>
                          <ul class="dropdown-menu btn-outline-light enojoy2-css2"  aria-labelledby="navbarDropdown">
-                           <li><a class="dropdown-item enojoy2-css2" href="{{ url('/val') }}" style="color: #a000000" style="font-family: Century Gothic">Pre-Inscripción</a></li>
+                           <li><a class="dropdown-item enojoy2-css2" href="{{ url('/val') }}" style="color: #a000000" style="font-family: Century Gothic">Inscripción</a></li>
                            <li><a class="dropdown-item enojoy2-css2" href="{{ url('/conducta') }}" style="color: #a000000" style="font-family: Century Gothic">Carta de Conducta</a></li>
                            <li><a class="dropdown-item enojoy2-css2" href="{{ url('/soportecnico') }}" style="color: #a000000" style="font-family: Century Gothic">Soporte Técnico</a></li>
                            <li><a class="dropdown-item enojoy2-css2" href="{{ url('/restablecerusuario') }}" style="color: #a000000" style="font-family: Century Gothic">Restablecer Usuario</a></li>
@@ -370,22 +370,9 @@
       <script src="{{ asset('js/custom.js') }}"></script>
       {{-- <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script> --}}
       <br>
-   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+      <script src="assets/vendor/aos/aos.js"></script>
    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-  <script>
-   <link rel="stylesheet" href=
-"https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src=
-"https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
-    </script>
-  </script>
-  <script>
-   var exampleEl = document.getElementById('popover1')
-   var popover = new bootstrap.Popover(exampleEl, options)
-   myPopover.enable()
-   </script>
-   
    @livewireScripts
    </body>
    <footer>

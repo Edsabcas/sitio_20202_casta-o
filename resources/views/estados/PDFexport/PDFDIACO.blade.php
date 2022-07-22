@@ -65,8 +65,14 @@
     
         <table align="center">
             <tr>
-                <td style="width:90mm; font-size: 13px"><Strong>{{$datos2[9]}}</strong></Strong></td> 
-                <td style="width:90mm; font-size: 13px"><strong>{{$datos2[4]}}</strong></strong></td>
+                <td style="width:90mm; font-size: 13px"><Strong>{{$datos2[9]}}</strong></Strong></td>
+                @if($datos2[4]==1)
+                <td style="width:90mm; font-size: 13px"><strong>Casado</strong></strong></td>
+                @elseif($datos2[4]==2)
+                <td style="width:90mm; font-size: 13px"><strong>Divorciado</strong></strong></td>
+                @elseif($datos2[4]==3)
+                <td style="width:90mm; font-size: 13px"><strong>Soltero</strong></strong></td>
+                @endif
             </tr>
               
         </table>
