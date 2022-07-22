@@ -53,6 +53,10 @@ class ValidacionComponent extends Component
             if($this->archivo_comprobante->getClientOriginalExtension()=="jpg" or $this->archivo_comprobante->getClientOriginalExtension()=="png" or $this->archivo_comprobante->getClientOriginalExtension()=="jpeg"){
                 $this->tipo=1;
             }
+
+            elseif($this->archivo_anuncio->getClientOriginalExtension()=="pdf"){
+                $this->tipo=3;
+            }
         }
         $sql="SELECT * FROM TB_TIPOS_DE_PAGO";
         $metododepago=DB::select($sql);

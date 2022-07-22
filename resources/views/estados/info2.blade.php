@@ -365,10 +365,10 @@
                                   <h3 class="form-label">Visualización de Imagen</h3>
                                   <img src="{{$archivo_comprobante->temporaryURL()}}" height="50" weight="50"  alt="...">
                                 @endif
-                                {{-- @if($tipo==3)
+                                @if($tipo==3)
                                 <h3 class="form-label">Visualización de PDF</h3>
-                                  <iframe width="400" height="400" src="/public/pdf/{{$img}}" frameborder="0"></iframe>
-                                @endif --}}
+                                  <iframe width="400" height="400" src="/public/pdf/{{$archivo_comprobante}}" frameborder="0"></iframe>
+                                @endif
                                             @if($mensaje24 != null)
                                               <div class="alert alert-success d-flex align-items-center" role="alert">
                                                 <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
