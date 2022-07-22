@@ -374,7 +374,7 @@
 
                                   @if($tipo==3)
                                   <h3 class="form-label">Visualización de archivo</h3>
-                                    <iframe width="400" height="400" src="/images/temporaldocx/{{$img}}" frameborder="0"></iframe>
+                                    <iframe width="400" height="400" src="/images/temporalpdf/{{$img}}" frameborder="0"></iframe>
                                   @endif
 
                                             @if($mensaje24 != null)
