@@ -245,8 +245,9 @@ class ValidacionComponent extends Component
         $telefonopadre=$this->telefono_padre;
         $direccionresidencia=$this->direccion_residencia;
         $correopadre=$this->correo_padre;
-        if(false !== strpos($this->correopadre, "@") && false !== strpos($this->correopadre, ".")){
-            $correopadre=$this->correo_padre;
+        if(false !== strpos($this->correo_padre, "@") && false !== strpos($this->correo_padre, ".")){
+            $correo_padre=$this->correo_padre;
+            $this->mensajecorreo=2;
         }
         else{
             $this->mensajecorreo=1;
@@ -267,11 +268,12 @@ class ValidacionComponent extends Component
         $celular_madre=$this->celular_madre;
         $direccion_residenciamadre=$this->direccion_residenciamadre;
         $correo_madre=$this->correo_madre;
-        if(false !== strpos($this->correo_madre, "@") && false !== strpos($this->correo_madre, ".")){
-        $correo_madre=$this->correo_madre;
+        if(false !== strpos($this->correopadre, "@") && false !== strpos($this->correopadre, ".")){
+            $correopadre=$this->correo_padre;
+            $this->mensajecorreo=2;
         }
         else{
-            $this->mensajecorreo2=1;
+            $this->mensajecorreo=1;
         }
         $profesion_madre=$this->profesion_madre;
         $lugar_prof_madre=$this->lugar_prof_madre;
@@ -518,6 +520,7 @@ class ValidacionComponent extends Component
             $correopadre=$this->correo_padre;
         if(false !== strpos($this->correopadre, "@") && false !== strpos($this->correopadre, ".")){
             $correopadre=$this->correo_padre;
+            $this->mensajecorreo=2;
         }
         else{
             $this->mensajecorreo=1;
@@ -540,6 +543,7 @@ class ValidacionComponent extends Component
             $correo_madre=$this->correo_madre;
         if(false !== strpos($this->correo_madre, "@") && false !== strpos($this->correo_madre, ".")){
         $correo_madre=$this->correo_madre;
+        $this->mensajecorreo2=2;
         }
         else{
             $this->mensajecorreo2=1;
@@ -790,6 +794,7 @@ class ValidacionComponent extends Component
                 $correopadre=$this->correo_padre;
         if(false !== strpos($this->correopadre, "@") && false !== strpos($this->correopadre, ".")){
             $correopadre=$this->correo_padre;
+                        $this->mensajecorreo=2;
         }
         else{
             $this->mensajecorreo=1;
@@ -812,6 +817,8 @@ class ValidacionComponent extends Component
                 $correo_madre=$this->correo_madre;
         if(false !== strpos($this->correo_madre, "@") && false !== strpos($this->correo_madre, ".")){
         $correo_madre=$this->correo_madre;
+            $this->mensajecorreo2=2;
+
         }
         else{
             $this->mensajecorreo2=1;
@@ -868,6 +875,8 @@ class ValidacionComponent extends Component
                 $correo_encargado2=$this->correo_encargado2;              
         if(false !== strpos($this->correo_encargado2, "@") && false !== strpos($this->correo_encargado2, ".")){
             $correo_encargado2=$this->correo_encargado2;
+                        $this->mensajecorreo3=2;
+
         }
         else{
             $this->mensajecorreo3=1;
@@ -1299,8 +1308,10 @@ class ValidacionComponent extends Component
         }
         else{
 
-            if(false !== strpos($this->correopadre, "@") && false !== strpos($this->correopadre, ".")){
-                $correopadre=$this->correo_padre;
+            if(false !== strpos($this->correo_padre, "@") && false !== strpos($this->correo_padre, ".")){
+                $correo_padre=$this->correo_padre;
+                $this->mensajecorreo=2;
+
             }
             else{
                 $this->mensajecorreo=1;
@@ -1308,12 +1319,16 @@ class ValidacionComponent extends Component
 
             if(false !== strpos($this->correo_madre, "@") && false !== strpos($this->correo_madre, ".")){
                 $correo_madre=$this->correo_madre;
+                $this->mensajecorreo2=2;
+
             }
             else{
                 $this->mensajecorreo2=1;
             }
             if(false !== strpos($this->correo_encargado2, "@") && false !== strpos($this->correo_encargado2, ".")){
                 $correo_encargado2=$this->correo_encargado2;
+                $this->mensajecorreo3=2;
+
             }
             else{
                 $this->mensajecorreo3=1;

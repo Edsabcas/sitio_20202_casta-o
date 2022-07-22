@@ -313,6 +313,7 @@
                             </div>
                             @enderror
                             @if($mensajecorreo==1)
+
                             <div class="col-md-6">
                               <div class="alert alert-danger d-flex align-items-center rounded-pill" role="alert">
                                 <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
@@ -321,6 +322,8 @@
                                 </div>
                               </div>
                               </div>
+                              @elseif($mensajecorreo==2)
+
                             @endif
                             @error('profesion_padre')
                             <div class="col-md-6">
@@ -621,6 +624,7 @@
                 </div>
                 @enderror
                 @if($mensajecorreo2==1)
+
                 <div class="col-md-6">
                   <div class="alert alert-danger d-flex align-items-center rounded-pill" role="alert">
                     <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
@@ -629,6 +633,8 @@
                     </div>
                   </div>
                   </div>
+                  @elseif($mensajecorreo2==2)
+
                 @endif
 
                 @error('profesion_madre')
@@ -966,6 +972,8 @@
                       </div>
                     </div>
                     </div>
+                    @elseif($mensajecorreo3==2)
+
                     @endif
                   @error('profesion_encargado2')
                   <div class="col-md-6">
@@ -1453,6 +1461,18 @@
     <div class="modal-footer">
 
       <button type="button" class="btn btn-pre2" wire:click='validar_datosF()'>Validar Información</button>.
+      @if($mensajecorreo==1 && $mensajecorreo2==1 or $mensajecorreo==1 or $mensajecorreo2==1 or $mensajecorreo3=1)                  
+      <div class="col-md-6">
+        <div class="alert alert-danger d-flex align-items-center rounded-pill" role="alert">
+          <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+          <div>
+            Por favor verifique que los correos estan escritos correctamente
+          </div>
+        </div>
+        </div>
+        
+
+      @elseif($mensajecorreo==2 && $mensajecorreo2==2)
       @if($validacionv2==1)
           @if($quien_encargado1==1)
           <button type="button" class="btn btn-pre2" wire:click='insertar_datos()' data-bs-dismiss="modal">Envíar Información1</button>.
@@ -1462,8 +1482,10 @@
           @elseif($quien_encargado1==3)
           <button type="button" class="btn btn-pre2" wire:click='insertar_datos3()' data-bs-dismiss="modal">Envíar Información3</button>.
           @endif
-      
       @endif
+      
+    @endif
+
 
       
       </div>
