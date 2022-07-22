@@ -312,6 +312,16 @@
                             </div>
                             </div>
                             @enderror
+                            @if($mensajecorreo==1)
+                            <div class="col-md-6">
+                              <div class="alert alert-danger d-flex align-items-center rounded-pill" role="alert">
+                                <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+                                <div>
+                                  Escriba un correo valido
+                                </div>
+                              </div>
+                              </div>
+                            @endif
                             @error('profesion_padre')
                             <div class="col-md-6">
                             <div class="alert alert-danger d-flex align-items-center rounded-pill" role="alert">
@@ -610,6 +620,16 @@
                 </div>
                 </div>
                 @enderror
+                @if($mensajecorreo2==1)
+                <div class="col-md-6">
+                  <div class="alert alert-danger d-flex align-items-center rounded-pill" role="alert">
+                    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+                    <div>
+                      Escriba un correo valido
+                    </div>
+                  </div>
+                  </div>
+                @endif
 
                 @error('profesion_madre')
                 <div class="col-md-6">
@@ -937,6 +957,16 @@
                   </div>
                   </div>
                   @enderror
+                  @if($mensajecorreo3==1)
+                  <div class="col-md-6">
+                    <div class="alert alert-danger d-flex align-items-center rounded-pill" role="alert">
+                      <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+                      <div>
+                          Ingrese un correo valido
+                      </div>
+                    </div>
+                    </div>
+                    @endif
                   @error('profesion_encargado2')
                   <div class="col-md-6">
                   <div class="alert alert-danger d-flex align-items-center rounded-pill" role="alert">
