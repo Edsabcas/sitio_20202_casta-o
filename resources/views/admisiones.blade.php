@@ -90,10 +90,7 @@
               </div>
             </div>
           </div>
-          <div class="alert alert-dismissible alert-currentColor text-currentColor rounded" style="background-color: #90b134; color:#ffff" role="alert">
-            <strong>Presiona</strong> <b class="font-monospace text-currentColor" style="color:#ffff">"?"</b> <strong>para obtener tu código único personal del Ministerio de Educación (MINEDUC)</strong>
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-          </div>
+    
         </div>
     <div class="footer bg-transparent border-transparent">
       <div class="d-grid gap-3 col-8 mx-auto">
