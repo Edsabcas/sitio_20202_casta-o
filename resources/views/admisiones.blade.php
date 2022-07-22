@@ -89,8 +89,16 @@
                 </p>
               </div>
             </div>
+            </div>
           </div>
-    
+
+          <!--ALERTA BOTÓN MINEDUC-->
+          <div class="alert alert-currentColor alert-dismissible fade show text-light rounded" role="alert" style="background-color: #89b315" >
+            Presione <strong>"?"</strong> para obtener su código único personal del Ministerio de Educación (MINEDUC)
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+          <!--FIN-->
+
         </div>
     <div class="footer bg-transparent border-transparent">
       <div class="d-grid gap-3 col-8 mx-auto">
