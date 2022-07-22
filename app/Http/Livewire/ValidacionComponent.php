@@ -21,7 +21,7 @@ class ValidacionComponent extends Component
     public $correo_padre, $correopadre, $profesionpadre, $profesion_padre, $grado_hermano, $gradohermano,$vive_con_elpadre,$estadocivilma;
     public $direccion_residenciamadre, $correo_madre, $profesion_madre, $lugar_prof_madre, $cargo_madre, $religion_madre, $NIT_madre, $vive_madre;
     public $solo_alumno, $encargado_alumno, $nombreencargado, $nombre_encargado, $bus_colegio, $bus_no_colegio, $codigo_fam, $nombre_fam, $nombrefam, $codigofam, $alumno_asegurado, $vacunas, $nombre_aseguradora, $nombreaseguradora;
-    public $poliza, $carneseguro, $carne_seguro, $tiene_alergia, $medicamento, $alimento, $archivo,$formato, $arch;
+    public $poliza, $carneseguro, $carne_seguro, $tiene_alergia, $medicamento, $alimento, $archivo,$formato, $arch ;
     public $religion_padre, $cargo_profesion_padre, $NIT_padre, $nombre_madre, $fechana_madre, $nacionalidad_madre, $lugar_nacimiento_madre, $DPI_madre, $telefono_madre, $celular_madre,$id_pre_ins,$id_no_gest,$mensaje_diaco,$mensaje_diaco1,$archivo_cdiaco,$id_pre_ins_arch,$id_no_gest_arch;
     public $prueba_ingreso, $validar_info, $entro_aca, $Especifique_alerg, $Especifique_medi, $Especifique_ali;
     public $idgrado,$monto_ins,$monto_men,$cuota_r,$ntarjeta,$notarjeta,$fvencimiento,$cseguridad,$guardar_info;
@@ -47,13 +47,26 @@ class ValidacionComponent extends Component
             elseif($this->archivo->getClientOriginalExtension()=="pdf"){
                 $this->formato=3;
             }
-
+            
         }
         if($this->archivo_comprobante!=null){
+            if($this->archivo_comprobante->getClientOriginalExtension()=="pdf" ){
+                $archivo_comprobante = "pdf".time().".".$this->archivo_comprobante->getClientOriginalExtension();
+                $this->img=$archivo_comprobante;
+                $this->archivo_comprobante->storeAS('images/temporalpdf/', $this->img,'public_up');
+            }
+
             if($this->archivo_comprobante->getClientOriginalExtension()=="jpg" or $this->archivo_comprobante->getClientOriginalExtension()=="png" or $this->archivo_comprobante->getClientOriginalExtension()=="jpeg"){
                 $this->tipo=1;
             }
+            elseif($this->archivo_comprobante->getClientOriginalExtension()=="pdf"){
+                $this->tipo=2;
+            }
+            elseif($this->archivo_comprobante->getClientOriginalExtension()=="doc" or $this->archivo_comprobante->getClientOriginalExtension()=="docx"){
+                $this->tipo=3;
+            }
         }
+
         $sql="SELECT * FROM TB_TIPOS_DE_PAGO";
         $metododepago=DB::select($sql);
         $sql="SELECT * FROM TB_FORMAS_DE_PAGO";
@@ -985,19 +998,20 @@ class ValidacionComponent extends Component
                 $ruta="C:/xampp/htdocs/repo_clon_casys/casys-pro-2.0/public/imagen/comprobantes2022/";
                 $archivo_comprobante="";
                 if($this->archivo_comprobante!=null){
-                    if($this->archivo_comprobante->getClientOriginalExtension()=="jpg" or $this->archivo_comprobante->getClientOriginalExtension()=="png" or $this->archivo_comprobante->getClientOriginalExtension()=="jpeg" or $this->archivo_comprobante->getClientOriginalExtension()=="pdf"){
+                    if($this->archivo_comprobante->getClientOriginalExtension()=="jpg" or $this->archivo_comprobante->getClientOriginalExtension()=="png" or $this->archivo_comprobante->getClientOriginalExtension()=="jpeg"){
                         $archivo_comprobante = "img".time().".".$this->archivo_comprobante->getClientOriginalExtension();
                         $this->img=$archivo_comprobante;
                         copy($this->archivo_comprobante->getRealPath(),$ruta.$this->img);
-    /*                     $this->archivo_comprobante->storeAS('comprobantes/imagenes/', $this->img,'public_up');
-     */                    $this->tipo=1;
+                  $this->tipo=1;
                     }
-                /*  elseif($this->archivo_comprobante->getClientOriginalExtension()=="pdf"){
-                        $archivo_comprobante = "pdf".time().".".$this->archivo_comprobante->getClientOriginalExtension();
+                    elseif($this->archivo_comprobante->getClientOriginalExtension()=="pdf"){
+                        $archivo_comprobante = "img".time().".".$this->archivo_comprobante->getClientOriginalExtension();
                         $this->img=$archivo_comprobante;
-                        $this->archivo_comprobante->storeAS('public/pdf/', $this->img,'public_up');
-                        $this->tipo=3;
-                        } */
+                        copy($this->archivo_comprobante->getRealPath(),$ruta.$this->img);
+                  $this->tipo=2;
+                    }
+              
+                    
                 }
                 $id_pre=$this->id_pre;
                 if($this->fpago!=null && $this->fpago!=""){
