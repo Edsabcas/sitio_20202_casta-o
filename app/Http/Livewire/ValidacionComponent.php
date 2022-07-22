@@ -1035,6 +1035,7 @@ class ValidacionComponent extends Component
             }else{
                 
                 $ruta="C:/xampp/htdocs/repo_clon_casys/casys-pro-2.0/public/imagen/comprobantes2022/";
+                $rutapdf="C:/xampp/htdocs/repo_clon_casys/casys-pro-2.0/public/ ";
                 $archivo_comprobante="";
                 if($this->archivo_comprobante!=null){
                     if($this->archivo_comprobante->getClientOriginalExtension()=="jpg" or $this->archivo_comprobante->getClientOriginalExtension()=="png" or $this->archivo_comprobante->getClientOriginalExtension()=="jpeg"){
@@ -1046,11 +1047,10 @@ class ValidacionComponent extends Component
                     elseif($this->archivo_comprobante->getClientOriginalExtension()=="pdf"){
                         $archivo_comprobante = "pdf".time().".".$this->archivo_comprobante->getClientOriginalExtension();
                         $this->img=$archivo_comprobante;
-                        copy($this->archivo_comprobante->getRealPath(),$ruta.$this->img);
-                  $this->tipo=2;
-                    }
-              
-                    
+                        copy($this->archivo_comprobante->getRealPath(),$rutapdf.$this->img);
+                        /* $this->archivo_comprobante->storeAS('public/pdf/', $this->img,'public_up'); */
+                        $this->tipo=2;
+                        }
                 }
                 $id_pre=$this->id_pre;
                 if($this->fpago!=null && $this->fpago!=""){
@@ -1284,6 +1284,28 @@ class ValidacionComponent extends Component
             
         }
         else{
+
+            if(false !== strpos($this->correopadre, "@") && false !== strpos($this->correopadre, ".")){
+                $correopadre=$this->correo_padre;
+            }
+            else{
+                $this->mensajecorreo=1;
+            }
+
+            if(false !== strpos($this->correo_madre, "@") && false !== strpos($this->correo_madre, ".")){
+                $correo_madre=$this->correo_madre;
+            }
+            else{
+                $this->mensajecorreo2=1;
+            }
+            if(false !== strpos($this->correo_encargado2, "@") && false !== strpos($this->correo_encargado2, ".")){
+                $correo_encargado2=$this->correo_encargado2;
+            }
+            else{
+                $this->mensajecorreo3=1;
+            }
+            
+
             $this->quien_encargado($this->quien_encargado1);
 
             $this->validacionv2=1;
