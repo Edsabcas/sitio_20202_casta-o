@@ -29,7 +29,7 @@
                                 <div class="content">
                                     <h3 class="description text-justify"><b>Importante</b></h3>
                                     <p class="description text-left">
-                                        Tome en cuenta tener los siguientes datos para iniciar tu proceso de pre-inscripción.
+                                        Tome en cuenta tener los siguientes datos para iniciar tu proceso de inscripción.
                                     </p>
     
                                   </div>
