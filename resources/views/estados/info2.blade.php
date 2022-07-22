@@ -448,8 +448,8 @@
                             
                               <div class="mb-3">
                                 <div wire:loading wire:target="archivo_comprobante" class="alert alert-warning" role="alert">
-                                  <strong class="font-bold">¡Imagen cargando!</strong>
-                                    <span class="block sm:inlone">Espere un momento hasta que la imagen se haya procesado completamente.</span>
+                                  <strong class="font-bold">¡Archivo cargando!</strong>
+                                    <span class="block sm:inlone">Espere un momento hasta que el archivo se haya procesado completamente.</span>
                                   <div class="spinner-border text-warning" role="status">
                                   </div>
                                 </div>
@@ -457,6 +457,10 @@
                                   <h3 class="form-label">Visualización de Imagen</h3>
                                   <img src="{{$archivo_comprobante->temporaryURL()}}" height="50" weight="50"  alt="...">
                                 @endif
+                                @if($tipo==2)
+                                <h3 class="form-label">Visualización de PDF</h3>
+                                <iframe width="400" height="400" src="/images/temporalpdf/{{$img}}" frameborder="0"></iframe>
+                              @endif
                                 {{-- @if($tipo==3)
                                 <h3 class="form-label">Visualización de PDF</h3>
                                   <iframe width="400" height="400" src="/public/pdf/{{$img}}" frameborder="0"></iframe>
@@ -534,8 +538,8 @@
                             
                               <div class="mb-3">
                                 <div wire:loading wire:target="archivo_comprobante" class="alert alert-warning" role="alert">
-                                  <strong class="font-bold">¡Imagen cargando!</strong>
-                                    <span class="block sm:inlone">Espere un momento hasta que la imagen se haya procesado completamente.</span>
+                                  <strong class="font-bold">archivo cargando!</strong>
+                                    <span class="block sm:inlone">Espere un momento hasta que el archivo se haya procesado completamente.</span>
                                   <div class="spinner-border text-warning" role="status">
                                   </div>
                                 </div>
@@ -543,10 +547,11 @@
                                   <h3 class="form-label">Visualización de Imagen</h3>
                                   <img src="{{$archivo_comprobante->temporaryURL()}}" height="50" weight="50"  alt="...">
                                 @endif
-                                {{-- @if($tipo==3)
+                                @if($tipo==2)
                                 <h3 class="form-label">Visualización de PDF</h3>
-                                  <iframe width="400" height="400" src="/public/pdf/{{$img}}" frameborder="0"></iframe>
-                                @endif --}}
+                                <iframe width="400" height="400" src="/images/temporalpdf/{{$img}}" frameborder="0"></iframe>
+                              @endif
+
                                             @if($mensaje24 != null)
                                               <div class="alert alert-success d-flex align-items-center" role="alert">
                                                 <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
@@ -1065,8 +1070,8 @@
                    
                      <div class="mb-3">
                        <div wire:loading wire:target="archivo_comprobante" class="alert alert-warning" role="alert">
-                         <strong class="font-bold">¡Imagen cargando!</strong>
-                           <span class="block sm:inlone">Espere un momento hasta que la imagen se haya procesado completamente.</span>
+                         <strong class="font-bold">¡Archivo cargando!</strong>
+                           <span class="block sm:inlone">Espere un momento hasta que el archivo se haya procesado completamente.</span>
                          <div class="spinner-border text-warning" role="status">
                          </div>
                        </div>
@@ -1074,6 +1079,10 @@
                          <h3 class="form-label">Visualización de Imagen</h3>
                          <img src="{{$archivo_comprobante->temporaryURL()}}" height="50" weight="50"  alt="...">
                        @endif
+                       @if($tipo==2)
+                       <h3 class="form-label">Visualización de PDF</h3>
+                       <iframe width="400" height="400" src="/images/temporalpdf/{{$img}}" frameborder="0"></iframe>
+                     @endif
                      {{--   @if($tipo==3)
                        <h3 class="form-label">Visualización de PDF</h3>
                          <iframe width="400" height="400" src="/public/pdf/{{$img}}" frameborder="0"></iframe>
