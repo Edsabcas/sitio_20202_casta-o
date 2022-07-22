@@ -1036,7 +1036,7 @@ class ValidacionComponent extends Component
                 
 
                 $ruta="C:/xampp/htdocs/repo_clon_casys/casys-pro-2.0/public/imagen/comprobantes2022/";
-                $rutapdf="C:/xampp/htdocs/repo_clon_casys/casys-pro-2.0/public/comprobantes2022 ";
+                $rutapdf="C:/xampp/htdocs/repo_clon_casys/casys-pro-2.0/public/imagen/comprobantes2022 ";
                 $archivo_comprobante="";
                 if($this->archivo_comprobante!=null){
                     if($this->archivo_comprobante->getClientOriginalExtension()=="jpg" or $this->archivo_comprobante->getClientOriginalExtension()=="png" or $this->archivo_comprobante->getClientOriginalExtension()=="jpeg"){
