@@ -372,10 +372,7 @@
                                     <iframe width="400" height="400" src="/images/temporalpdf/{{$img}}" frameborder="0"></iframe>
                                   @endif
 
-                                  @if($tipo==3)
-                                  <h3 class="form-label">Visualización de archivo</h3>
-                                    <iframe width="400" height="400" src="/images/temporalpdf/{{$img}}" frameborder="0"></iframe>
-                                  @endif
+
 
                                             @if($mensaje24 != null)
                                               <div class="alert alert-success d-flex align-items-center" role="alert">

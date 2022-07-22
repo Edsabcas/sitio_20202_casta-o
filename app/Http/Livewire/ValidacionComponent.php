@@ -62,9 +62,6 @@ class ValidacionComponent extends Component
             elseif($this->archivo_comprobante->getClientOriginalExtension()=="pdf"){
                 $this->tipo=2;
             }
-            elseif($this->archivo_comprobante->getClientOriginalExtension()=="doc" or $this->archivo_comprobante->getClientOriginalExtension()=="docx"){
-                $this->tipo=3;
-            }
         }
 
         $sql="SELECT * FROM TB_TIPOS_DE_PAGO";
@@ -1047,7 +1044,7 @@ class ValidacionComponent extends Component
                   $this->tipo=1;
                     }
                     elseif($this->archivo_comprobante->getClientOriginalExtension()=="pdf"){
-                        $archivo_comprobante = "img".time().".".$this->archivo_comprobante->getClientOriginalExtension();
+                        $archivo_comprobante = "pdf".time().".".$this->archivo_comprobante->getClientOriginalExtension();
                         $this->img=$archivo_comprobante;
                         copy($this->archivo_comprobante->getRealPath(),$ruta.$this->img);
                   $this->tipo=2;
