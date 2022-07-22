@@ -1038,6 +1038,7 @@ class ValidacionComponent extends Component
             }else{
                 
                 $ruta="C:/xampp/htdocs/repo_clon_casys/casys-pro-2.0/public/imagen/comprobantes2022/";
+                $rutapdf="C:/xampp/htdocs/repo_clon_casys/casys-pro-2.0/public/ ";
                 $archivo_comprobante="";
                 if($this->archivo_comprobante!=null){
                     if($this->archivo_comprobante->getClientOriginalExtension()=="jpg" or $this->archivo_comprobante->getClientOriginalExtension()=="png" or $this->archivo_comprobante->getClientOriginalExtension()=="jpeg"){
@@ -1047,13 +1048,12 @@ class ValidacionComponent extends Component
                   $this->tipo=1;
                     }
                     elseif($this->archivo_comprobante->getClientOriginalExtension()=="pdf"){
-                        $archivo_comprobante = "img".time().".".$this->archivo_comprobante->getClientOriginalExtension();
+                        $archivo_comprobante = "pdf".time().".".$this->archivo_comprobante->getClientOriginalExtension();
                         $this->img=$archivo_comprobante;
-                        copy($this->archivo_comprobante->getRealPath(),$ruta.$this->img);
-                  $this->tipo=2;
-                    }
-              
-                    
+                        copy($this->archivo_comprobante->getRealPath(),$rutapdf.$this->img);
+                        /* $this->archivo_comprobante->storeAS('public/pdf/', $this->img,'public_up'); */
+                        $this->tipo=2;
+                        }
                 }
                 $id_pre=$this->id_pre;
                 if($this->fpago!=null && $this->fpago!=""){
