@@ -1287,6 +1287,28 @@ class ValidacionComponent extends Component
             
         }
         else{
+
+            if(false !== strpos($this->correopadre, "@") && false !== strpos($this->correopadre, ".")){
+                $correopadre=$this->correo_padre;
+            }
+            else{
+                $this->mensajecorreo=1;
+            }
+
+            if(false !== strpos($this->correo_madre, "@") && false !== strpos($this->correo_madre, ".")){
+                $correo_madre=$this->correo_madre;
+            }
+            else{
+                $this->mensajecorreo2=1;
+            }
+            if(false !== strpos($this->correo_encargado2, "@") && false !== strpos($this->correo_encargado2, ".")){
+                $correo_encargado2=$this->correo_encargado2;
+            }
+            else{
+                $this->mensajecorreo3=1;
+            }
+            
+
             $this->quien_encargado($this->quien_encargado1);
 
             $this->validacionv2=1;
