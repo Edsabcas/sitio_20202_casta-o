@@ -1034,12 +1034,8 @@ class ValidacionComponent extends Component
                 return  back()->withErrors(['mensaje'=>'Validar el input vacio']);
             }else{
                 
-<<<<<<< HEAD
-                $ruta="C:/xampp/htdocs/repo_casys_2022/casys-pro-2.0/public/imagen/comprobantes2022/";
-=======
                 $ruta="C:/xampp/htdocs/repo_clon_casys/casys-pro-2.0/public/imagen/comprobantes2022/";
-                $rutapdf="C:/xampp/htdocs/repo_clon_casys/casys-pro-2.0/public/comprobantes2022 ";
->>>>>>> 882075e0c47bc71ea8de585c21569ff63df3474f
+                $rutapdf="C:/xampp/htdocs/repo_clon_casys/casys-pro-2.0/public/imagen/comprobantes2022 ";
                 $archivo_comprobante="";
                 if($this->archivo_comprobante!=null){
                     if($this->archivo_comprobante->getClientOriginalExtension()=="jpg" or $this->archivo_comprobante->getClientOriginalExtension()=="png" or $this->archivo_comprobante->getClientOriginalExtension()=="jpeg"){
