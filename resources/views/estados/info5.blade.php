@@ -363,7 +363,8 @@
                                                 @enderror
                                                 <br>
                                                 <div>
-                                                    <button type="submit" class="btn btn-pre2" wire:click="ins_contrato()"> Enviar</button>
+                                                    <button type="submit" class="btn btn-pre2" data-bs-toggle="modal" data-bs-target="#modalconfirmacont"> Validar </button>
+                                                    @include('modals.modalvalcont')
                                                 </div>
                                             </div>     
                                         </div>

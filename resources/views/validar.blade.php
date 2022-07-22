@@ -52,7 +52,7 @@
             @if($validar_info==1)
             
             <div class="alert alert-success" role="alert">
-                ¡Agregado Correctamente!, su codigo de familia es: {{$codigo_familia3}}
+              Su información ha sido enviada correctamente, se le informará por correo electrónico cuando su información haya sido validada, su código de familia será:<strong> {{$codigo_familia3}}</strong> 
               </div>
             @endif
             @endisset
