@@ -15,13 +15,13 @@ class ValidacionComponent extends Component
     public $nogestion, $dpi, $fehencargado,$mensaje, $gradoprimeringreso, $grado_primer_ingreso, $nombrepadre;
     public $validar1, $confi, $val, $grados_selecionados, $grados_mostrar, $año_ingreso, $añoingreso, $nombre_padre;
     public $nacimientopadre, $nacimiento_padre, $nacionalidadpadre, $nacionalidad_padre,$lugar_profesion_padre;
-    public $lugar_nacimiento_padre, $lugarnacimientopadre, $estadocivil, $DPIpadre, $DPI_padre;
+    public $lugar_nacimiento_padre, $lugarnacimientopadre, $estadocivil, $DPIpadre, $DPI_padre,$mensajecorreo,$mensajecorreo2, $mensajecorreo3;
     public $celular_padre, $celularpadre, $telefono_padre, $telefonopadre, $direccion_residencia, $direccionresidencia;
     public $id_pre,$metodo,$archivo_comprobante,$img,$tipo,$mensaje24,$mensaje25,$observacion,$fpago,$mensaje30,$mensaje31;
     public $correo_padre, $correopadre, $profesionpadre, $profesion_padre, $grado_hermano, $gradohermano,$vive_con_elpadre,$estadocivilma;
     public $direccion_residenciamadre, $correo_madre, $profesion_madre, $lugar_prof_madre, $cargo_madre, $religion_madre, $NIT_madre, $vive_madre;
     public $solo_alumno, $encargado_alumno, $nombreencargado, $nombre_encargado, $bus_colegio, $bus_no_colegio, $codigo_fam, $nombre_fam, $nombrefam, $codigofam, $alumno_asegurado, $vacunas, $nombre_aseguradora, $nombreaseguradora;
-    public $poliza, $carneseguro, $carne_seguro, $tiene_alergia, $medicamento, $alimento, $archivo,$formato, $arch;
+    public $poliza, $carneseguro, $carne_seguro, $tiene_alergia, $medicamento, $alimento, $archivo,$formato, $arch ;
     public $religion_padre, $cargo_profesion_padre, $NIT_padre, $nombre_madre, $fechana_madre, $nacionalidad_madre, $lugar_nacimiento_madre, $DPI_madre, $telefono_madre, $celular_madre,$id_pre_ins,$id_no_gest,$mensaje_diaco,$mensaje_diaco1,$archivo_cdiaco,$id_pre_ins_arch,$id_no_gest_arch;
     public $prueba_ingreso, $validar_info, $entro_aca, $Especifique_alerg, $Especifique_medi, $Especifique_ali;
     public $idgrado,$monto_ins,$monto_men,$cuota_r,$ntarjeta,$notarjeta,$fvencimiento,$cseguridad,$guardar_info;
@@ -47,13 +47,23 @@ class ValidacionComponent extends Component
             elseif($this->archivo->getClientOriginalExtension()=="pdf"){
                 $this->formato=3;
             }
-
+            
         }
         if($this->archivo_comprobante!=null){
+            if($this->archivo_comprobante->getClientOriginalExtension()=="pdf" ){
+                $archivo_comprobante = "pdf".time().".".$this->archivo_comprobante->getClientOriginalExtension();
+                $this->img=$archivo_comprobante;
+                $this->archivo_comprobante->storeAS('images/temporalpdf/', $this->img,'public_up');
+            }
+
             if($this->archivo_comprobante->getClientOriginalExtension()=="jpg" or $this->archivo_comprobante->getClientOriginalExtension()=="png" or $this->archivo_comprobante->getClientOriginalExtension()=="jpeg"){
                 $this->tipo=1;
             }
+            elseif($this->archivo_comprobante->getClientOriginalExtension()=="pdf"){
+                $this->tipo=2;
+            }
         }
+
         $sql="SELECT * FROM TB_TIPOS_DE_PAGO";
         $metododepago=DB::select($sql);
         $sql="SELECT * FROM TB_FORMAS_DE_PAGO";
@@ -227,6 +237,12 @@ class ValidacionComponent extends Component
         $telefonopadre=$this->telefono_padre;
         $direccionresidencia=$this->direccion_residencia;
         $correopadre=$this->correo_padre;
+        if(false !== strpos($this->correopadre, "@") && false !== strpos($this->correopadre, ".")){
+            $correopadre=$this->correo_padre;
+        }
+        else{
+            $this->mensajecorreo=1;
+        }
         $this->profesionpadre=$this->profesion_padre;
         $lugar_profesion_padre=$this->lugar_profesion_padre;
         $cargo_profesion_padre=$this->cargo_profesion_padre;
@@ -241,8 +257,14 @@ class ValidacionComponent extends Component
         $DPI_madre=$this->DPI_madre;
         $telefono_madre=$this->telefono_madre;
         $celular_madre=$this->celular_madre;
-        $direccion_residenciamadre=$this->direccion_residenciamadre; 
+        $direccion_residenciamadre=$this->direccion_residenciamadre;
         $correo_madre=$this->correo_madre;
+        if(false !== strpos($this->correo_madre, "@") && false !== strpos($this->correo_madre, ".")){
+        $correo_madre=$this->correo_madre;
+        }
+        else{
+            $this->mensajecorreo2=1;
+        }
         $profesion_madre=$this->profesion_madre;
         $lugar_prof_madre=$this->lugar_prof_madre;
         $cargo_madre=$this->cargo_madre; 
@@ -486,6 +508,12 @@ class ValidacionComponent extends Component
             $telefonopadre=$this->telefono_padre;
             $direccionresidencia=$this->direccion_residencia;
             $correopadre=$this->correo_padre;
+        if(false !== strpos($this->correopadre, "@") && false !== strpos($this->correopadre, ".")){
+            $correopadre=$this->correo_padre;
+        }
+        else{
+            $this->mensajecorreo=1;
+        }
             $this->profesionpadre=$this->profesion_padre;
             $lugar_profesion_padre=$this->lugar_profesion_padre;
             $cargo_profesion_padre=$this->cargo_profesion_padre;
@@ -502,6 +530,12 @@ class ValidacionComponent extends Component
             $celular_madre=$this->celular_madre;
             $direccion_residenciamadre=$this->direccion_residenciamadre; 
             $correo_madre=$this->correo_madre;
+        if(false !== strpos($this->correo_madre, "@") && false !== strpos($this->correo_madre, ".")){
+        $correo_madre=$this->correo_madre;
+        }
+        else{
+            $this->mensajecorreo2=1;
+        }
             $profesion_madre=$this->profesion_madre;
             $lugar_prof_madre=$this->lugar_prof_madre;
             $cargo_madre=$this->cargo_madre; 
@@ -746,6 +780,12 @@ class ValidacionComponent extends Component
                 $telefonopadre=$this->telefono_padre;
                 $direccionresidencia=$this->direccion_residencia;
                 $correopadre=$this->correo_padre;
+        if(false !== strpos($this->correopadre, "@") && false !== strpos($this->correopadre, ".")){
+            $correopadre=$this->correo_padre;
+        }
+        else{
+            $this->mensajecorreo=1;
+        }
                 $this->profesionpadre=$this->profesion_padre;
                 $lugar_profesion_padre=$this->lugar_profesion_padre;
                 $cargo_profesion_padre=$this->cargo_profesion_padre;
@@ -762,6 +802,12 @@ class ValidacionComponent extends Component
                 $celular_madre=$this->celular_madre;
                 $direccion_residenciamadre=$this->direccion_residenciamadre; 
                 $correo_madre=$this->correo_madre;
+        if(false !== strpos($this->correo_madre, "@") && false !== strpos($this->correo_madre, ".")){
+        $correo_madre=$this->correo_madre;
+        }
+        else{
+            $this->mensajecorreo2=1;
+        }
                 $profesion_madre=$this->profesion_madre;
                 $lugar_prof_madre=$this->lugar_prof_madre;
                 $cargo_madre=$this->cargo_madre; 
@@ -811,7 +857,13 @@ class ValidacionComponent extends Component
                 $telefono_encargado2=$this->telefono_encargado2;
                 $celular_encargado2=$this->celular_encargado2;
                 $direccion_residenciaencargado2=$this->direccion_residenciaencargado2;
-                $correo_encargado2=$this->correo_encargado2;
+                $correo_encargado2=$this->correo_encargado2;              
+        if(false !== strpos($this->correo_encargado2, "@") && false !== strpos($this->correo_encargado2, ".")){
+            $correo_encargado2=$this->correo_encargado2;
+        }
+        else{
+            $this->mensajecorreo3=1;
+        }
                 $cargo_encargado2=$this->cargo_encargado2;
                 $profesion_encargado2=$this->profesion_encargado2;
                 $lugar_prof_encargado2=$this->lugar_prof_encargado2;
@@ -983,21 +1035,21 @@ class ValidacionComponent extends Component
             }else{
                 
                 $ruta="C:/xampp/htdocs/repo_clon_casys/casys-pro-2.0/public/imagen/comprobantes2022/";
+                $rutapdf="C:/xampp/htdocs/repo_clon_casys/casys-pro-2.0/public/comprobantes2022 ";
                 $archivo_comprobante="";
                 if($this->archivo_comprobante!=null){
-                    if($this->archivo_comprobante->getClientOriginalExtension()=="jpg" or $this->archivo_comprobante->getClientOriginalExtension()=="png" or $this->archivo_comprobante->getClientOriginalExtension()=="jpeg" or $this->archivo_comprobante->getClientOriginalExtension()=="pdf"){
+                    if($this->archivo_comprobante->getClientOriginalExtension()=="jpg" or $this->archivo_comprobante->getClientOriginalExtension()=="png" or $this->archivo_comprobante->getClientOriginalExtension()=="jpeg"){
                         $archivo_comprobante = "img".time().".".$this->archivo_comprobante->getClientOriginalExtension();
                         $this->img=$archivo_comprobante;
                         copy($this->archivo_comprobante->getRealPath(),$ruta.$this->img);
-    /*                     $this->archivo_comprobante->storeAS('comprobantes/imagenes/', $this->img,'public_up');
-     */                    $this->tipo=1;
+                  $this->tipo=1;
                     }
-                /*  elseif($this->archivo_comprobante->getClientOriginalExtension()=="pdf"){
+                    elseif($this->archivo_comprobante->getClientOriginalExtension()=="pdf"){
                         $archivo_comprobante = "pdf".time().".".$this->archivo_comprobante->getClientOriginalExtension();
                         $this->img=$archivo_comprobante;
-                        $this->archivo_comprobante->storeAS('public/pdf/', $this->img,'public_up');
-                        $this->tipo=3;
-                        } */
+                        copy($this->archivo_comprobante->getRealPath(),$rutapdf.$this->img);
+                        $this->tipo=2;
+                        }
                 }
                 $id_pre=$this->id_pre;
                 if($this->fpago!=null && $this->fpago!=""){
@@ -1231,6 +1283,28 @@ class ValidacionComponent extends Component
             
         }
         else{
+
+            if(false !== strpos($this->correopadre, "@") && false !== strpos($this->correopadre, ".")){
+                $correopadre=$this->correo_padre;
+            }
+            else{
+                $this->mensajecorreo=1;
+            }
+
+            if(false !== strpos($this->correo_madre, "@") && false !== strpos($this->correo_madre, ".")){
+                $correo_madre=$this->correo_madre;
+            }
+            else{
+                $this->mensajecorreo2=1;
+            }
+            if(false !== strpos($this->correo_encargado2, "@") && false !== strpos($this->correo_encargado2, ".")){
+                $correo_encargado2=$this->correo_encargado2;
+            }
+            else{
+                $this->mensajecorreo3=1;
+            }
+            
+
             $this->quien_encargado($this->quien_encargado1);
 
             $this->validacionv2=1;
