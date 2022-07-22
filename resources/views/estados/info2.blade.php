@@ -356,8 +356,11 @@
                             
                               <div class="mb-3">
                                 <div wire:loading wire:target="archivo_comprobante" class="alert alert-warning" role="alert">
+                                  
                                   <strong class="font-bold">archivo cargando!</strong>
-                                    <span class="block sm:inlone">Espere un momento hasta que el archivo se haya procesado completamente.</span>
+                                    
+                                  <span class="block sm:inlone">Espere un momento hasta que el archivo se haya procesado completamente.</span>
+                                  
                                   <div class="spinner-border text-warning" role="status">
                                   </div>
                                 </div>
@@ -538,8 +541,11 @@
                             
                               <div class="mb-3">
                                 <div wire:loading wire:target="archivo_comprobante" class="alert alert-warning" role="alert">
+                                  
                                   <strong class="font-bold">archivo cargando!</strong>
-                                    <span class="block sm:inlone">Espere un momento hasta que el archivo se haya procesado completamente.</span>
+                                   
+                                  <span class="block sm:inlone">Espere un momento hasta que el archivo se haya procesado completamente.</span>
+                                  
                                   <div class="spinner-border text-warning" role="status">
                                   </div>
                                 </div>
